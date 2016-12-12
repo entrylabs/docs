@@ -19,7 +19,7 @@ port:                 5000
 
 author:
   name:               'kimorkim'
-  url:                http://www.playentry.org
+  url:                https://www.playentry.org
 
 github:
   repo:                   https://github.com/entrylabs

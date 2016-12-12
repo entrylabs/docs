@@ -1,4 +1,5 @@
 # Dependencies
+timezone:             Asia/Seoul
 markdown:             kramdown
 kramdown:
   input:              GFM
@@ -22,7 +23,7 @@ author:
   url:                https://www.playentry.org
 
 github:
-  repo:                   https://github.com/entrylabs
+  repo:               https://github.com/entrylabs
 
 paginate:             5
 paginate_path:        "/posts/page:num/"

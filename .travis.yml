@@ -1,13 +1,14 @@
 language: ruby
 cache: bundler
 rvm:
-- 2.1
+  - 2.1
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - secure: KeEd7x4OYegti0UWRr147njGftCFENxeupX9aiXN9HeTc+usltPxQp0csITyvdMuLwCK+nlCyDAN8vdwGb+9s5tgyf0ntMzX95R5o8iu1Jokd1EP8Q3pvo8ZenSC5XgO6b2XxSyM8tib1o17lRplDC1lRqQ2rUPxQ6j1I0NFWeviZSbXF57OngANoLBd3LawGLreUyfx+izssTGBZLlnCheUYBxnm+cXyurhC8GEddfqjjaXqUbxZG3HxW4KvByszpJ60CZHXDk5Dm0hdB3rLf0okn+0hldjJgcaNAAZMdd/4IDCsa0sBvF69RQnC3BcQyfkOKIc5ysZKZIvznRK2gg8Hsi4zGo3KlEuRvJJPhwxSeBAMQDmRWDQqauRtKO17rQ+IR1NEbQrkcBJJCSkH97IyTZK4r2MU39hAiMP56SV77Ylij2ihEIBZNnDOaf3thTErfMHPfVHsSIRVmx3c551Z1vsvIEJtRqTMaXEP1gQKPzrsJCVyMAzXk8OMHfC/fSUP+/Q3no/ruy30U+VrLga+TiQJIHqDRgyLfdt4v/AfqlUlxJTk8rRdm5UnYP4l9kEqsUxxJ2c5AdBQ89gFpUxKekAwncL2Q3p2yIlrWgu3vzb0prJw/llikc6e+X+SDe1jEcq+9EvMnf66tJT2TJtyZHvCFyx2a1CwkPAgQs=
-  - GH_REF: github.com/entrylabs/docs.git
-  - GH_REPO: https://github.com/entrylabs/docs.git
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+    - GH_REF: github.com/entrylabs/docs.git
+    - GH_REPO: 'https://github.com/entrylabs/docs.git'
+    - secure: >-
+        nA4wNQyLGVCImbv9L6++RaLdkNwcltdpKkpSPukuFnBcy3g4r9aF2iKxKgLYZG5OGLwMq9kyfInGwR27q3BRETsC8dDbZA4UCYlm/KKyT3rZ5o0by6zTPdLHgRLDYpaju9WpODx1sTBPS1nVcxCwcIWhB0xZS/zotFldQrtgmfzYC0yp1P5biaHV1vU7j67MwJ5AXMsYxkeqo5clsUzeL4VvZM0yRQteirI9RsqBr5b+zx2wz1HXjrom++W63/wbVheMadYahIQeKwzJ9v3i1I8wVEAYmY/vF13HBfEgCCRJ6Ja0Xa4EqrUWHogFwJAkishIdk0l7VfLIa0xf2KktjRKDqAqsfdEWP+M1dVknClcDGUNL2prv/1tovGRA7rKEDLOP3B1PRRvQPfJBTzf8wEJ5+VMjLXVOMKF29sdHpaU/elk/UGFereQwUKtkfaeDmoi3mhPCtz0/RlGl3MGopH8mfN3x7JxryDLEYSYiaVirHL1zRiF1U5HvKPM4u38pDUbuZ7BMhTJBWqY3QjvhNK4w0Uof2q2/ujoRW1d1xb8e+8ft9QE/rF4ZeUyyKE2fdS3AQdc6NQ/78cQf3Hyamy9U/0OGKmxKLEHm9nrT1PQEwnurSj9rhLzsZ47AAi1qvSkKj1di4nBAAFryRyJHBEZUHQGBgdekMW6uqCfGtQ=
 branches:
   only:
     - master
@@ -15,5 +16,5 @@ before_script:
   - chmod +x ./script/cibuild
   - chmod +x ./script/cideploy
 script:
-  - "./script/cibuild"
-  - "./script/cideploy"
+  - ./script/cibuild
+  - ./script/cideploy

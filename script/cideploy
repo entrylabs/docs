@@ -5,5 +5,5 @@ cd _site
 git config user.name "JY KIM"
 git config user.email "kimorkim@gmail.com"
 git add .
-git commit -m "Entry-HW Document Update"
+git commit -m "Entry Document Update"
 git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" gh-pages

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+	<head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>
+         문서들 &middot; Entry Docs 
+    </title>
+    <!-- CSS -->
+    <!--
+  <link rel="stylesheet" href="/docs/public/css/hyde.css">
+  -->
+    <link rel="stylesheet" href="/docs/public/css/flux.css">
+    <link rel="stylesheet" href="/docs/public/css/flux-extend.css">
+    <link rel="stylesheet" href="/docs/public/css/syntax.css">
+    <link rel="stylesheet" href="/docs/public/css/poole.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/docs/public/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/docs/public/favicon.ico">
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+	<body>
+		<div class="container">
+			<div class="nav-main">
+    <div class="wrap">
+        <a href="/docs/" class="nav-home">
+            <img src="/docs/public/image/logo_v2.png"/>
+            <span>
+                Entry Docs
+            </span>
+        </a>
+        <ul class="nav-site">
+            <li>
+                <a class="active">
+                    DOCS
+                </a>
+            </li>
+            <li>
+                <a class="">
+                    SUPPORT
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/entrylabs" target="_blank">
+                    GITHUB
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+			<div class="content wrap documentationContent">
+				
+					<div class="nav-docs posts">
+    <div class="nav-docs-section">
+        <h3>Quick Start</h3>
+        <ul>
+            
+            
+                
+                    
+                
+            
+                
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+        </ul>
+    </div>
+    <div class="nav-docs-section">
+        <h3>하드웨어 모듈 개발</h3>
+        <ul>
+            
+                
+            
+        </ul>
+    </div>
+    <div class="nav-docs-section">
+        <h3>엔트리 블록 개발</h3>
+        <ul>
+            
+            
+                
+            
+        </ul>
+    </div>
+    <div class="nav-docs-section">
+        <h3>Tip & Tech</h3>
+        <ul>
+            
+                
+            
+        </ul>
+    </div>
+    
+</div>
+
+				
+				<div class="inner-content">
+
+					<div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/docs/entry_mini/2016/12/12/get_start/">
+        시작하기
+      </a>
+    </h1>
+
+    <span class="post-date">12 Dec 2016</span>
+
+    <h3 id="entryjs로-개발하기">Entryjs로 개발하기</h3>
+<p>기존의 하드웨어 블록을 개발하기 위하여 entryjs/example/example.js를 지원해 왔습니다. 실과형(엔트리 미니)에서는 entryjs/example/example_mini.js를 제공하고 있습니다.</p>
+
+<p>이 문서는 기존적으로 엔트리 하드웨어 블록생성 및 하드웨어를 추가하는 가이드를 숙지 했다는 가정하에 설명을 진행합니다.</p>
+
+<p>혹시 하드웨어 가이드를 보고 싶으신 분은 <a href="https://entrylabs.github.io/entry-hw/">이쪽</a>을 이용해 주시기 바랍니다.</p>
+
+<p>fork 및 repository clone에 대해서는 기존 하드웨어 개발 가이드를 참고하세요.</p>
+
+<hr />
+
+<h4 id="1-branch-checkout">1. branch checkout</h4>
+<p>현재 offline_mini는 feature/offline_mini에 관리되고 있습니다. git 터미널에서 다음과 같이 명령어를 실행합니다.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git checkout -b feature/offline-mini origin/feature/offline-mini
+</code></pre>
+</div>
+
+<blockquote>
+  <p>GUI툴을 사용하시면 기존에 사용하셨던 방법 그대로 feature/offline-mini 브랜치를 checkout하시기 바랍니다.</p>
+</blockquote>
+
+<hr />
+
+<h4 id="2-npm-install--build">2. npm install &amp; build</h4>
+<p>의존성 모듈 설치를 위하여 npm install 을 수행합니다.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>npm install 또는 npm i
+</code></pre>
+</div>
+
+<p>빌드는 기존과 같이 grunt를 이용해서 빌드 합니다. 다만, 최신 closure-compiler 가 compiler.jar에 날짜를 붙이고 있어서 곧바로 수행이 되지 않는 경우가 있습니다. 이경우 node_modules/closurecompiler/compiler/compiler(날짜).jar 파일을 compiler.jar 로 파일 명칭을 수동 변경해 주시기 바랍니다.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>grunt
+// 빌드 수행완료시 dist 폴더에 entry.js entry.min.js entry.css가 생성됨
+// 이미 생성된 entry.js entry.min.js entry.css가 포함되어 있으며 
+// 수정 이후 빌드가 필요한 경우 grunt 수행해야함.
+</code></pre>
+</div>
+
+<hr />
+
+<h4 id="3-example_minihtml-실행">3. example_mini.html 실행</h4>
+<p>기본적으로 기존 example.html 사용법과 같습니다. 그래그앤 드랍 또는 더블릭으로 chrome 브라우저에서 실행하시면 됩니다.<br />
+<img src="/docs/public/image/entry_mini/2016-12-12_15-56-59.gif" alt="크롬에서 실행하기" /></p>
+
+<hr />
+
+<h4 id="4-블록-생성하기">4. 블록 생성하기</h4>
+<p>블록 생성방법은 기존 하드웨어 가이드 문서에 작성된 가이드와 동일 합니다. 다만 관리와 기존 Entry Workspace와의 분리를 위하여 작성하는 파일이 위치만 변경되었습니다.</p>
+
+<blockquote>
+  <p>블록 개발 가이드는 <a href="https://entrylabs.github.io/entry-hw">하드웨어 개발 가이드</a>를 참고해 주세요.</p>
+</blockquote>
+
+<p>먼저 블록의 위치는 entryjs/src/workspace/block_entry_mini.js 입니다. block_entry.js 파일에도 수정하면 내용이 반영되나 git PR merge시에 reject사유가 될 수 있으니 작업은 block_entry_mini.js에 부탁드립니다.</p>
+
+<p>또한 isNotFor 요소가 중요하게 사용되오니 꼭 작성 부탁드립니다.</p>
+
+<hr />
+
+<h4 id="5-블록-등록하기">5. 블록 등록하기</h4>
+<p>블록생성 종료 되었으면 실제 Workspace에 포함시켜야 합니다. 기존에는 entryjs/extern/util/static.js 의 arudino 카테고리에 포함시켰는데 실과형(Entry-mini)에서는 entryjs/extern/util/static_mini.js 에 작성하고 arduino카테고리가 아닌 성격에 맞는 카테고리에 포함시키고 있습니다.</p>
+
+<p><img src="/docs/public/image/entry_mini/2016-12-12_16-20-37.png" alt="사용되는 카테고리" />  <br />
+<img src="/docs/public/image/entry_mini/2016-12-12_16-23-32.png" alt="사용되는 카테고리2" /></p>
+
+<p>현재 사용되는 있는 카테고리는 위와 같으며, 현재로선 다른 카테고리를 허용하지는 않습니다. 다만 다른카테고리가 필요하신경우 엔트리에 문의 부탁드립니다.</p>
+
+<hr />
+
+<h4 id="6-실과형-로봇-등록하기">6. 실과형 로봇 등록하기</h4>
+<p>실과형에서는 실과형인지 기존의 하드웨어인지 구분하는 1가지 옵션이 추가로 생겼습니다. static_mini.js에 추가되어 있으며 명칭은 hwMiniSupportList입니다.  <br />
+hwMiniSupportList는 Array로 되어 있으며 하드웨어의 명칭을 추가 하시면 자동으로 Mini에서 사용되는 하드웨어로 취급되어 정상적으로 카테고리가 동작하게 됩니다.  <br />
+해당 속성이 빠져 있을경우 기존의 하드웨어 블록이 그대로 사용되니 이점 주의 부탁드립니다.</p>
+
+<hr />
+
+<p>추가 문의 사항 및 오류 건의는 메일 또는 댓글로 남겨 주시면 답변 드리도록 하겠습니다. 이상입니다.</p>
+
+  </div>
+  
+</div>
+
+<div class="pagination">
+  
+    <span class="pagination-item older">이전</span>
+  
+  
+    <span class="pagination-item newer">다음</span>
+  
+</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

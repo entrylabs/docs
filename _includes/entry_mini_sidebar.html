@@ -1,0 +1,12 @@
+<div class="nav-docs posts">
+    <div class="nav-docs-section">
+        <h3>오프라인 미니 개발</h3>
+        <ul>
+            {% for post in site.posts %}
+                {% if post.category == "entry_mini" %}
+                    <li><a class="{% if page.url == post.url %}active{% endif %}" href="{{site.base-link-url}}{{ post.url }}">{{ post.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</div>

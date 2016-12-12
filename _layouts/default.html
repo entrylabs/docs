@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+	{% include head.html %}
+	<body>
+		<div class="container">
+			{% include title.html %}
+			<div class="content wrap documentationContent">
+				{% if page.category == 'entry_mini' %}
+					{% include entry_mini_sidebar.html %}
+				{% else %}
+					{% include sidebar.html %}
+				{% endif %}
+				<div class="inner-content">
+
+					{{ content }}
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -17,31 +17,32 @@ Entry-HW는 1.5.0 부터 [Electron](https://github.com/electron/electron/tree/ma
 
 #### 클론  
 ```
-git clone https://github.com/entrylabs/entry-hw.git
+$ git clone https://github.com/entrylabs/entry-hw.git
 ```
 
 #### 의존설 모듈 설치  
 ```bash
-npm install
+$ npm install
 //Electron을 사용하기 위해 아래 패키지를 -g 옵션으로 설치.
-npm install -g electron-prebuilt
+$ npm install -g electron-prebuilt
+// 이제는 electron으로도 똑같이 설치할 수 있습니다.
+$ npm install -g electron
 ```
 
 #### 실행  
 ```bash
-//디버그 모드로 실행됨.
-npm start
+//디버그 모드로 실행됨 (추천)
+$ npm start
 
 //또는 
-electron -d app
+$ electron -d app
 
 //-d 옵션을 제거하면 디버그 모드 없이 실행가능
 ```
 
 #### Nwjs -> Electron 변경  
 기존의 Nw.js 환경에서 Electron 환경으로 변경함.  
-프레임워크 교체에 따라 초기 실행 및 소스 세팅등의 일부 사항이 변경되었으나 기본적인 개발방식인  
-모듈추가는 기존과 똑같이 되도록 변경하였음.  
+프레임워크 교체에 따라 초기 실행 및 소스 세팅등의 일부 사항이 변경되었으나 기본적인 개발방식인 모듈추가는 기존과 똑같이 되도록 변경하였음.  
 
 ### 써드파티 라이브러리
  * jQuery : http://jquery.com/download/ (MIT)
@@ -108,24 +109,29 @@ module.exports = new Module();
         "en": "English Name",
         "ko": "한글명"
     },
-    "icon" : "이미지(.png | .jpg | .gif ...)",
+    "platform": ["사용 할 운영체제(win32 | darwin)", "복수 선택 가능"],
+    "icon" : "이미지(.png(권장) | .jpg | .gif ...)",
     "module": "모듈(.js)",
     "driver": {
-        "win32-ia32": "윈도우32비트 하드웨어 드라이버",
-        "win32-x64": "윈도우64비트 하드웨어 드라이버"
+        "win32-ia32": "윈도우32비트 하드웨어 드라이버(여러 드라이버 등록가능)",
+        "win32-x64": "윈도우64비트 하드웨어 드라이버(여러 드라이버 등록가능)",
+        "darwin-x64": "맥(Osx) 64비트 하드웨어 드라이버(여러 드라이버 등록가능)"
     },
+    "url": "회사 홈페이지",
+    "email": "고객센터 Email(필수)",
     "reconnect" : "재접속 시도여부 (true | false)",
-    "firmware": "펌웨어(board)",
+    "firmware": "펌웨어(board) 여러 펌웨어 등록 가능",
+    "select_com_port": "Com Port 선택창 여부 (true | false)",
     "entry": {
         "protocol": "데이터규격(json)"
     },
     "hardware": {
-        "type": "타입(serial)",
+        "type": "타입(serial | bluetooth)",
         "control": "동작방식(slave | master)",
-        "duration": "duration(32 ...)",
-        "vendor": "하드웨어 벤더명(ex.Arduino)",
+        "duration": "slave 사용시 duration(32 ...)",
+        "vendor": ["하드웨어 벤더명(ex.Arduino)"],
         "firmwarecheck": "펌웨어 자동체크여부 (true | false)",
-        "baudRate": "baudRate(115200, 57600, 38400, 19200, 9600, 4800, 2400, 1800, 1200, 600, 300, 200, 150, 134, 110, 75, 50)",
+        "baudRate": "baudRate(115200(최대), 57600, 38400, 19200, 9600, 4800, 2400, 1800, 1200, 600, 300, 200, 150, 134, 110, 75, 50)",
         "parity" : "parity('none', 'even', 'mark', 'odd', 'space')",
         "dataBits" : "dataBits(8, 7, 6, 5)",
         "stopBits" : "stopBits(1, 2)",

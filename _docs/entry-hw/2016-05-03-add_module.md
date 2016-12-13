@@ -25,25 +25,29 @@ order: 4
         "en": "English Name",
         "ko": "한글명"
     },
-    "icon" : "이미지(.png | .jpg | .gif ...)",
+    "platform": ["사용 할 운영체제(win32 | darwin)", "복수 선택 가능"],
+    "icon" : "이미지(.png(권장) | .jpg | .gif ...)",
     "module": "모듈(.js)",
     "driver": {
-        "win32-ia32": "윈도우32비트 하드웨어 드라이버",
-        "win32-x64": "윈도우64비트 하드웨어 드라이버"
+        "win32-ia32": "윈도우32비트 하드웨어 드라이버(여러 드라이버 등록가능)",
+        "win32-x64": "윈도우64비트 하드웨어 드라이버(여러 드라이버 등록가능)",
+        "darwin-x64": "맥(Osx) 64비트 하드웨어 드라이버(여러 드라이버 등록가능)"
     },
+    "url": "회사 홈페이지",
+    "email": "고객센터 Email(필수)",
     "reconnect" : "재접속 시도여부 (true | false)",
-    "firmware": "펌웨어(board)",
-    "firmwareBaudRate": "Flash baud rate(57600 ...)",
+    "firmware": "펌웨어(board) 여러 펌웨어 등록 가능",
+    "select_com_port": "Com Port 선택창 여부 (true | false)",
     "entry": {
         "protocol": "데이터규격(json)"
     },
     "hardware": {
-        "type": "타입(serial)",
+        "type": "타입(serial | bluetooth)",
         "control": "동작방식(slave | master)",
-        "duration": "duration(32 ...)",
-        "vendor": "하드웨어 벤더명(ex.Arduino)",
+        "duration": "slave 사용시 duration(32 ...)",
+        "vendor": ["하드웨어 벤더명(ex.Arduino)"],
         "firmwarecheck": "펌웨어 자동체크여부 (true | false)",
-        "baudRate": "baudRate(115200, 57600, 38400, 19200, 9600, 4800, 2400, 1800, 1200, 600, 300, 200, 150, 134, 110, 75, 50)",
+        "baudRate": "baudRate(115200(최대), 57600, 38400, 19200, 9600, 4800, 2400, 1800, 1200, 600, 300, 200, 150, 134, 110, 75, 50)",
         "parity" : "parity('none', 'even', 'mark', 'odd', 'space')",
         "dataBits" : "dataBits(8, 7, 6, 5)",
         "stopBits" : "stopBits(1, 2)",

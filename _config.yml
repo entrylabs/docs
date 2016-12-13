@@ -9,12 +9,13 @@ kramdown:
 permalink:            pretty
 
 # Setup
-title:                Entry Docs
+#logo: /siteicon.png
+title:                'Entry Docs'
 tagline:              'Entry Docs'
 description:          '엔트리 개발 가이드'
 url:                  https://entrylabs.github.io
-baseurl:              /docs/
-imageurl:             /docs/public/image/
+baseurl:              /docs
+imageurl:             /docs/images/
 base-link-url:        /docs
 port:                 5000
 
@@ -32,6 +33,48 @@ paginate_path:        "/posts/page:num/"
 version:              1.0.0
 
 # Gems
-gems: [jekyll-paginate, jekyll-gist]
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-paginate
 
-exclude: [vendor]
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+  
+collections:
+  docs:
+    title: Documentation
+    permalink: /:path/
+    output: true
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+  -
+    scope:
+      path: ""
+      type: "docs"
+    values:
+      seo:
+        type: Article
+      _comments:
+        category: Group navigation links with this field
+        order: Used to sort links in the navigation
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      _comments:
+        type: Marks the impact of this release
+
+types:
+  - minor
+  - major

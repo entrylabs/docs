@@ -13,8 +13,8 @@ branches:
   only:
     - master
 before_script:
-  - chmod +x ./script/cibuild
-  - chmod +x ./script/cideploy
+  - chmod +x ./scripts/cibuild
+  - chmod +x ./scripts/cideploy
 script:
   - ./script/cibuild
   - ./script/cideploy

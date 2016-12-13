@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 시작하기
-category: entry_mini
+category: 'Entry Mini'
 order: 1
 ---
 
@@ -49,7 +49,7 @@ $ grunt
   
 #### 3. example_mini.html 실행
 기본적으로 기존 example.html 사용법과 같습니다. 그래그앤 드랍 또는 더블릭으로 chrome 브라우저에서 실행하시면 됩니다.
-![크롬에서 실행하기](/docs/public/image/entry_mini/2016-12-12_15-56-59.gif)
+![크롬에서 실행하기](/docs/images/entry_mini/2016-12-12_15-56-59.gif)
 
   
 --- 
@@ -68,8 +68,8 @@ $ grunt
 #### 5. 블록 등록하기  
 블록생성 종료 되었으면 실제 Workspace에 포함시켜야 합니다. 기존에는 entryjs/extern/util/static.js 의 arudino 카테고리에 포함시켰는데 실과형(Entry-mini)에서는 entryjs/extern/util/static_mini.js 에 작성하고 arduino카테고리가 아닌 성격에 맞는 카테고리에 포함시키고 있습니다.
 
-![사용되는 카테고리](/docs/public/image/entry_mini/2016-12-12_16-20-37.png)  
-![사용되는 카테고리2](/docs/public/image/entry_mini/2016-12-12_16-23-32.png)  
+![사용되는 카테고리](/docs/images/entry_mini/2016-12-12_16-20-37.png)  
+![사용되는 카테고리2](/docs/images/entry_mini/2016-12-12_16-23-32.png)  
 
 현재 사용되는 있는 카테고리는 위와 같으며, 현재로선 다른 카테고리를 허용하지는 않습니다. 다만 다른카테고리가 필요하신경우 엔트리에 문의 부탁드립니다.  
   

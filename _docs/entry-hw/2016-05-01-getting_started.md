@@ -24,8 +24,6 @@ $ git clone https://github.com/entrylabs/entry-hw.git
 ```bash
 $ npm install
 //Electron을 사용하기 위해 아래 패키지를 -g 옵션으로 설치.
-$ npm install -g electron-prebuilt
-// 이제는 electron으로도 똑같이 설치할 수 있습니다.
 $ npm install -g electron
 ```
 

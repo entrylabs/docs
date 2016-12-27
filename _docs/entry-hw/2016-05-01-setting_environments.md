@@ -6,7 +6,7 @@ order: 2
 ---
 
 ## 기본 환경 세팅  
-엔트리 하드웨어 프로그램을 개발하기 위해 기본적으로 [node.js](https://nodejs.org/en/)가 설치되어 있어야 하며, npm을 통하여 grunt, grunt-cli, Electron-prebuilt가 설치되어야 합니다. 또한, 필요에의해 라이브러리들을 컴파일을 수행하기 위에 visual studio와 python의 설치가 필요할수 있습니다.  
+엔트리 하드웨어 프로그램을 개발하기 위해 기본적으로 [node.js](https://nodejs.org/en/)가 설치되어 있어야 하며, npm을 통하여 grunt, grunt-cli, Electron이 설치되어야 합니다. 또한, 필요에의해 라이브러리들을 컴파일을 수행하기 위에 visual studio와 python의 설치가 필요할수 있습니다.  
 
 
 ### Node.js의 설치  
@@ -36,12 +36,13 @@ Grunt의 Command Line Interface 까지 설치를 해줘야 본격적으로 `grun
 
 
 
-### Electron-prebuilt 설치
+### Electron 설치
 Entry-HW(또는 Entry-Offline)프로그램은 현재 [Electron](http://electron.atom.io/) 기반으로 작성되어져 있습니다. Electron은 기본적으로 HTML5기술을 사용하여 크로스 플렛폼에 대응하여 데스크톱 어플리케이션을 제작할수 있도록 제공하는 오픈소스 프레임워크 입니다. Entry-HW를 개발하기 위해서는 필수적으로 설치해야 할 프레임워크입니다. 설치는 간단하게 `npm`으로 수행합니다.  
 
 #### 공통설치(NPM 사용)  
 {% highlight bash %}
-$ npm install -g electron-prebuilt
+//곧 지원이 중단됩니다. electron으로 설치하세요.
+$ npm install -g electron-prebuilt 
 // electron도 설치 가능하도록 변경됨
 $ npm install -g electron
 {% endhighlight %}  
@@ -52,7 +53,9 @@ npm start를 사용할경우에는 -g옵션으로 설치된 글로벌 electron-p
 npm start로 실행시키실경우에는 -g옵션을 이용해서 글로벌 설치를 진행하지 않으셔도 됩니다.  
 (2016년 11월 25일 현재 electron 1.4.5버전을 사용하고 있습니다.)
 
-
+> 기존에 사용하던 electron-prebuilt의 지원이 중단됩니다. electron-prebuilt 대신 electron을 설치해 주세요.  
+자세한 내용은 다음과 같습니다.  
+Note As of version 1.3.1, this package is published to npm under two names: electron and electron-prebuilt. You can currently use either name, but electron is recommended, as the electron-prebuilt name is deprecated, and will only be published until the end of 2016.  
 
 ### Git 설치하기
 Git은 소스코드를 관리하기 위한 버전관리 도구 입니다. 일반적으로 많은 오픈소스들이 [Github](https://www.github.com)를 통해서 소스가 공개되어 지고 관리가 되고 있습니다. 저희의 Entry-HW와 EntryJS의 경우에도 Github를 통해서 관리되고 있는 상태입니다. Github의 소스를 다운받고 수정한 소스를 반영하기위해서 Git Client 설치가 필수적입니다.
@@ -133,7 +136,7 @@ Fork를 통하여 본인 계정으로 해당 Repository를 복사합니다. 복�
   
 
 ### Entry-HW의 의존성모듈 설치
-Entry-HW를 실행하고 빌드 하기 위한 의존성 모듈을 설치가 필요합니다. 해당 의존설을 설치하면 굳이 electron-prebuilt를 글로벌 설치 하지 않으셔도 하드웨어 연결프로그램을 실행시킬수 있습니다.
+Entry-HW를 실행하고 빌드 하기 위한 의존성 모듈을 설치가 필요합니다. 해당 의존설을 설치하면 굳이 electron를 글로벌 설치 하지 않으셔도 하드웨어 연결프로그램을 실행시킬수 있습니다.
 {% highlight bash %}
 $ npm install
 // app폴더 안에도 추가로 설치해야할 의존성 모듈이 있습니다.
@@ -146,12 +149,12 @@ $ npm install
 ### Entry-HW 실행하기
 Entry-HW는 Electron기반으로 프로그램이 작성되어 있습니다. 가장 최상위 폴더는 Application을 빌드와 실행 및 프로젝트를 관리하는 위치이고 실질적인 소스코드는 app폴더에 들어있습니다. 실행은 가장최상위 위치에서 `electron app`을 콘솔에서 수행하면 됩니다.
 {% highlight bash %}
-// 글로벌로 설치된 electron-prebuilt를 사용할 경우
+// 글로벌로 설치된 electron를 사용할 경우
 $ electron app
 // 디버그 모드가 사용하고 싶다면.
 $ electron -d app
 
-// npm install 로 설치한 electron-prebuilt로 실행할 경우 (권장)
+// npm install 로 설치한 electron로 실행할 경우 (권장)
 $ npm start
 {% endhighlight %}  
 

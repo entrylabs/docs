@@ -2,104 +2,114 @@
 layout: null
 ---
 (function () {
-	function getQueryVariable(variable) {
-		var query = window.location.search.substring(1),
-			vars = query.split("&");
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1),
+            vars = query.split("&");
 
-		for (var i = 0; i < vars.length; i++) {
-			var pair = vars[i].split("=");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
 
-			if (pair[0] === variable) {
-				return pair[1];
-			}
-		}
-	}
+            if (pair[0] === variable) {
+                return pair[1];
+            }
+        }
+    }
 
-	function getPreview(query, content, previewLength) {
-		previewLength = previewLength || (content.length * 2);
+    function trimmerEnKo(token) {
+        return token.replace(/^[^\w가-힣]+/, '').replace(/[^\w가-힣]+$/, '');
+    };
 
-		var parts = query.split(" "),
-			match = content.toLowerCase().indexOf(query.toLowerCase()),
-			matchLength = query.length,
-			preview;
+    function getPreview(query, content, previewLength) {
+        previewLength = previewLength || (content.length * 2);
 
-		// Find a relevant location in content
-		for (var i = 0; i < parts.length; i++) {
-			if (match >= 0) {
-				break;
-			}
+        var parts = query.split(" "),
+            match = content.toLowerCase().indexOf(query.toLowerCase()),
+            matchLength = query.length,
+            preview;
 
-			match = content.toLowerCase().indexOf(parts[i].toLowerCase());
-			matchLength = parts[i].length;
-		}
+        // Find a relevant location in content
+        for (var i = 0; i < parts.length; i++) {
+            if (match >= 0) {
+                break;
+            }
 
-		// Create preview
-		if (match >= 0) {
-			var start = match - (previewLength / 2),
-				end = start > 0 ? match + matchLength + (previewLength / 2) : previewLength;
+            match = content.toLowerCase().indexOf(parts[i].toLowerCase());
+            matchLength = parts[i].length;
+        }
 
-			preview = content.substring(start, end).trim();
+        // Create preview
+        if (match >= 0) {
+            var start = match - (previewLength / 2),
+                end = start > 0 ? match + matchLength + (previewLength / 2) : previewLength;
 
-			if (start > 0) {
-				preview = "..." + preview;
-			}
+            preview = content.substring(start, end).trim();
 
-			if (end < content.length) {
-				preview = preview + "...";
-			}
+            if (start > 0) {
+                preview = "..." + preview;
+            }
 
-			// Highlight query parts
-			preview = preview.replace(new RegExp("(" + parts.join("|") + ")", "gi"), "<strong>$1</strong>");
-		} else {
-			// Use start of content if no match found
-			preview = content.substring(0, previewLength).trim() + (content.length > previewLength ? "..." : "");
-		}
+            if (end < content.length) {
+                preview = preview + "...";
+            }
 
-		return preview;
-	}
+            // Highlight query parts
+            preview = preview.replace(new RegExp("(" + parts.join("|") + ")", "gi"), "<strong>$1</strong>");
+        } else {
+            // Use start of content if no match found
+            preview = content.substring(0, previewLength).trim() + (content.length > previewLength ? "..." : "");
+        }
 
-	function displaySearchResults(results, query) {
-		var searchResultsEl = document.getElementById("search-results"),
-			searchProcessEl = document.getElementById("search-process");
+        return preview;
+    }
 
-		if (results.length) {
-			var resultsHTML = "";
-			results.forEach(function (result) {
-				var item = window.data[result.ref],
-					contentPreview = getPreview(query, item.content, 170),
-					titlePreview = getPreview(query, item.title);
+    function displaySearchResults(results, query) {
+        var searchResultsEl = document.getElementById("search-results"),
+            searchProcessEl = document.getElementById("search-process");
 
-				resultsHTML += "<li><h4><a href='{{ site.baseurl }}" + item.url.trim() + "'>" + titlePreview + "</a></h4><p><small>" + contentPreview + "</small></p></li>";
-			});
+        if (results.length) {
+            var resultsHTML = "";
+            results.forEach(function (result) {
+                var item = window.data[result.ref],
+                    contentPreview = getPreview(query, item.content, 170),
+                    titlePreview = getPreview(query, item.title);
 
-			searchResultsEl.innerHTML = resultsHTML;
-			searchProcessEl.innerText = "Showing";
-		} else {
-			searchResultsEl.style.display = "none";
-			searchProcessEl.innerText = "No";
-		}
-	}
+                resultsHTML += "<li><h4><a href='{{ site.baseurl }}" + item.url.trim() + "'>" + titlePreview + "</a></h4><p><small>" + contentPreview + "</small></p></li>";
+            });
 
-	window.index = lunr(function () {
-		this.field("id");
-		this.field("title", {boost: 10});
-		this.field("category");
-		this.field("url");
-		this.field("content");
-	});
+            searchResultsEl.innerHTML = resultsHTML;
+            searchProcessEl.innerText = "Showing";
+        } else {
+            searchResultsEl.style.display = "none";
+            searchProcessEl.innerText = "No";
+        }
+    }
 
-	var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20")),
-		searchQueryContainerEl = document.getElementById("search-query-container"),
-		searchQueryEl = document.getElementById("search-query"),
-		searchInputEl = document.getElementById("search-input");
+    window.index = lunr(function () {
+        this.pipeline.reset();
+        this.pipeline.add(
+            trimmerEnKo,
+            lunr.stopWordFilter,
+            lunr.stemmer
+        );
+        this.field("id");
+        this.field("title", {boost: 10});
+        this.field("category");
+        this.field("url");
+        this.field("content");
+    });
 
-	searchInputEl.value = query;
-	searchQueryEl.innerText = query;
-	searchQueryContainerEl.style.display = "inline";
+    var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20")),
+        searchQueryContainerEl = document.getElementById("search-query-container"),
+        searchQueryEl = document.getElementById("search-query"),
+        searchInputEl = document.getElementById("search-input");
 
-	for (var key in window.data) {
-		window.index.add(window.data[key]);
-	}
+    searchInputEl.value = query;
+    searchQueryEl.innerText = query;
+    searchQueryContainerEl.style.display = "inline";
 
-	displaySearchResults(window.index.search(query), query); // Hand the results off to be displayed
+    for (var key in window.data) {
+        window.index.add(window.data[key]);
+    }
+
+    displaySearchResults(window.index.search(query), query); // Hand the results off to be displayed
 })();

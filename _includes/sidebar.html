@@ -15,6 +15,9 @@
             {% assign home = site.html_pages | where: 'url', '/' | first %}
             <a href="{{ site.baseurl }}/">{{ home.title }}</a>
         </li>
+        <li class="nav-item top-level {% if page.url == '/notice/' %}current{% endif %}">
+            <a href="{{ site.baseurl }}/notice/">공지사항</a>
+        </li>
     </ul>
 
     <ul>

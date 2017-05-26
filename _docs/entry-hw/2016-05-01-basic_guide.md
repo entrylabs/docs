@@ -5,13 +5,6 @@ category: 'Entry Hw'
 order: 3
 ---
 
-#### 엔트리 하드웨어 추가 순서
-1. 엔트리에 문의하여 하드웨어 ID발급 받기
-2. 엔트리 하드웨어 프로그램에 해당 하드웨어 모듈 추가하기
-3. 엔트리 서비스에 해당 블록 만들기
-4. 실행하여 테스트 하기
-
-
 #### 엔트리 하드웨어 연결프로그램에 하드웨어 추가
 * [Git Fork](https://github.com/entrylabs/entry-hw/wiki/Git-Fork-%EB%B0%A9%EB%B2%95) (https://github.com/entrylabs/entry-hw)
 * System Dependencies 추가

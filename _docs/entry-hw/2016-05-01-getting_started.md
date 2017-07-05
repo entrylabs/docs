@@ -12,11 +12,11 @@ entry-hw는 엔트리 교육연구소에서 개발한 엔트리와 하드웨어�
 #### 엔트리 하드웨어 추가 순서
 
 1. 하드웨어 등록 신청서 작성 및 제출([상세안내](https://entrylabs.github.io/docs/entry-hw/2017-05-16-enroll_entry-hw/))
-2. 하드웨어 ID 발급 받기
-3. 엔트리 하드웨어 프로그램에 하드웨어 모듈 추가하기
-4. 하드웨어와 연동되는 엔트리 블록 만들기
-5. 실행하여 테스트하기
-6. 테스트코드 GitHub의 Pull Request로 전달하기
+2. [하드웨어 모듈 추가하기](https://entrylabs.github.io/docs/entry-hw/2016-05-03-add_module/)
+3. 하드웨어와 연동되는 [엔트리 블록 만들기](https://entrylabs.github.io/docs/entryjs/2016-05-22-add_new_blocks/)
+4. 실행하여 테스트하기
+5. 테스트코드 [GitHub의 Pull Request로 전달](https://entrylabs.github.io/docs/etc/2016-05-03-git_fork/)하기
+6. 하드웨어 ID 발급 받기
 7. 엔트리 서비스 정기 반영을 통한 하드웨어 추가
 
 

@@ -18,6 +18,8 @@ order: 4
 ![모듈의 구성](https://raw.githubusercontent.com/entrylabs/entry-hw/gh-pages/wiki-image/module/default.PNG)
 
 ##### 모듈명.json 구조
+하드웨어 ID의 경우 반영 전 발급을 원칙으로 하고 있습니다.  
+따라서 테스트 단계에서는 테스트용 ID인 999999를 활용해주시길 바랍니다.
 ```json
 {
     "id": "하드웨어ID(엔트리와 사전규약 필요. ex.'010101')",

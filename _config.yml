@@ -1,81 +1,95 @@
-# Dependencies
-timezone:             Asia/Seoul
-markdown:             kramdown
-kramdown:
-  input:              GFM
-  syntax_highlighter: rouge
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
 
-# Permalinks
-permalink:            pretty
+# Site
+title: Entry Docs
+subtitle:
+description: 엔트리 개발 가이드
+author: Entrylabs
+language: ko
+timezone: Asia/Tokyo
 
-# Setup
-#logo: /siteicon.png
-title:                'Entry Docs'
-tagline:              'Entry Docs'
-description:          '엔트리 개발 가이드'
-url:                  https://entrylabs.github.io
-baseurl:              /docs
-imageurl:             /docs/images/
-base-link-url:        /docs
-port:                 5000
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://entrylabs.github.io
+root: /docs
+permalink: :year/:month/:day/:title/
+permalink_defaults:
 
-author:
-  name:               'kimorkim'
-  url:                https://www.playentry.org
+port: 5000
 
-github:
-  repo:               https://github.com/entrylabs
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
 
-paginate:             5
-paginate_path:        "/posts/page:num/"
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: false
+  auto_detect: true
+  tab_replace:
 
-# Custom vars
-version:              1.0.0
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
 
-# Gems
-gems:
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-feed
-  - jekyll-paginate
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - LICENCE
-  - vendor
-  
-collections:
-  docs:
-    title: Documentation
-    permalink: /:path/
-    output: true
-  
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: default
-  -
-    scope:
-      path: ""
-      type: "docs"
-    values:
-      seo:
-        type: Article
-      _comments:
-        category: Group navigation links with this field
-        order: Used to sort links in the navigation
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      _comments:
-        type: Marks the impact of this release
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
 
-types:
-  - minor
-  - major
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Markdown
+## https://github.com/chjj/marked
+markdown:
+  gfm: true
+  pedantic: false
+  sanitize: false
+  tables: true
+  breaks: true
+  smartLists: true
+  smartypants: true
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+#theme: landscape
+theme: vue
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: https://github.com/entrylabs/docs.git

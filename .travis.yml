@@ -20,10 +20,10 @@ branches:
 before_script:
   - git config --global user.name 'JY kim'
   - git config --global user.email 'kimorkim@gmail.com'
-  - chmod +x ./scripts/cideploy
+  - chmod +x ./cideploy
 install:
 - yarn
 script:
   - npm run build
 after_success:
-  - ./scripts/cideploy
+  - ./cideploy

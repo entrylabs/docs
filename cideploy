@@ -5,7 +5,7 @@ DATEFMT=`date +%Y-%m-%d:%H:%M:%S`
 
 mkdir .deploy
 cd .deploy
-git clone -b gh-pages "${GH_REPO}" gh-pages
+git clone -b gh-pages "${GH_REPO}" .
 rm -rf ./*
 cp -r ../public/* .
 git add -A .

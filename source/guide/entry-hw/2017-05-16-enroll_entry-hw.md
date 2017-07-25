@@ -3,7 +3,7 @@ layout: page
 title: 하드웨어 등록 서비스 신청하기
 type: guide
 category: 'Entry Hw'
-order: 4
+order: 5
 ---
 
 ## 하드웨어 등록 서비스란?

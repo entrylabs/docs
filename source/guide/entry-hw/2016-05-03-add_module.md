@@ -1,21 +1,19 @@
 ---
 layout: page
-title: 모듈 추가 방법
+title: 하드웨어 모듈 추가하기
 type: guide
 category: 'Entry Hw'
 order: 3
 ---
 
-## 모듈
-엔트리에 하드웨어를 추가하기 위해서 수반되는 가장 기본적인 단계 입니다.
+엔트리에 하드웨어를 추가하기 위한 가장 기본적인 단계 입니다. 하드웨어 모듈을 추가 함으로써 엔트리와 통신할수 있게 됩니다.
 
 ## 모듈의 위치
-엔트리가 Electron이 적용됨에 따라 모듈의 위치도 변경되었습니다.  
-기존 상위폴더/modules에서 상위폴더/app/modules로 변경되었습니다.
+`(your path)/app/modules/`밑에 해당 모듈들이 추가되야 합니다. `(your path)/app/next_modules/`의 경우에는 시험적인 하드웨어 모듈 또는 차기 버전에 적용될 하드웨어 모듈이 들어 있습니다. `next_modules`안에 있는 모듈은 실제로 동작하지는 않습니다.
 
 ## 모듈의 구성
-모듈은 모듈명.js, 모듈명.json, 모듈명.png의 3가지로 구성됩니다.  
-![모듈의 구성](https://raw.githubusercontent.com/entrylabs/entry-hw/gh-pages/wiki-image/module/default.PNG)
+모듈은 `모듈명.js`, `모듈명.json`, `모듈명.png`의 3가지로 구성됩니다.  
+![모듈의 구성](../../images/entry-hw/modules.png)
 
 ## 모듈 추가하기
 하드웨어를 추가하는 기본적인 과정은 다음과 같습니다.
@@ -64,7 +62,7 @@ Module.prototype.requestRemoteData = function(handler) {
 Module.prototype.reset = function() {
 };
 
-// 이외 필요한 모듈이 있을경우 임의로 추가 가능
+// 이외 필요한 함수가 있을경우 임의로 추가 가능
 ...
 
 module.exports = new Module();

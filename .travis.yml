@@ -17,6 +17,9 @@ cache:
 branches:
   only:
     - master
+before_script:
+  - git config --global user.name 'JY kim'
+  - git config --global user.email 'kimorkim@gmail.com'
 install:
 - yarn
 script:

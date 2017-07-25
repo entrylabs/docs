@@ -6,67 +6,51 @@ category: 'Entry Hw'
 order: 1
 ---
 
-entry-hw는 엔트리 교육연구소에서 개발한 엔트리와 하드웨어를 연동하기 위한 프로그램입니다.
-엔트리 사이트에 접속하시면 엔트리를 사용한 블록코딩 환경과 하드웨어를 연동하는 모습을 확인해 볼 수 있으며,
-엔트리에 신규 하드웨어를 등록하기 위해서는 entry-hw 에 하드웨어 모듈을 추가함으로써 가능합니다.
+Entry Hardware는 엔트리 교육연구소에서 개발한 엔트리와 하드웨어를 연동하기 위한 프로그램입니다. 엔트리 사이트에 접속하시면 엔트리를 사용한 블록코딩 환경과 하드웨어를 연동하는 모습을 확인해 볼 수 있으며, 엔트리에 신규 하드웨어를 등록하기 위해서는 Entry Hardware 에 하드웨어 모듈을 추가함으로써 가능합니다.
 
-#### 엔트리 하드웨어 추가 순서
-
-1. 하드웨어 등록 신청서 작성 및 제출([상세안내](https://entrylabs.github.io/docs/entry-hw/2017-05-16-enroll_entry-hw/))
-2. [하드웨어 모듈 추가하기](https://entrylabs.github.io/docs/entry-hw/2016-05-03-add_module/)
-3. 하드웨어와 연동되는 [엔트리 블록 만들기](https://entrylabs.github.io/docs/entryjs/2016-05-22-add_new_blocks/)
+## 엔트리 하드웨어 추가 순서
+1. 하드웨어 등록 신청서 작성 및 제출([상세안내](./2017-05-16-enroll_entry-hw.html))
+2. [하드웨어 모듈 추가하기](.//2016-05-03-add_module.html)
+3. 하드웨어와 연동되는 [엔트리 블록 만들기](..//entryjs/2016-05-22-add_new_blocks.html)
 4. 실행하여 테스트하기
-5. 테스트코드 [GitHub의 Pull Request로 전달](https://entrylabs.github.io/docs/etc/2016-05-03-git_fork/)하기
+5. 테스트코드 [GitHub의 Pull Request로 전달](../etc/2016-05-03-git_fork.html)하기
 6. 하드웨어 ID 발급 받기
 7. 엔트리 서비스 정기 반영을 통한 하드웨어 추가
 
+Entry Hardware는 1.5.0 부터 [Electron](https://electron.atom.io/)기반으로 동작 합니다. 정확한 사용법은 Electron 사이트를 참조 하시기 바랍니다. 현재 엔트리 하드웨어 연결 프로그램은 Windows와 macOS를 지원합니다.
 
----
-
-Entry-HW는 1.5.0 부터 [Electron](https://github.com/electron/electron/tree/master/docs-translations/ko-KR)기반으로 동작 합니다.  
-정확한 사용법은 Electron 사이트를 참조 하시기 바랍니다.  
-현재 엔트리 하드웨어 연결 프로그램은 Windows와 macOS를 지원합니다.
-
-#### 클론  
+## 클론
+클론을 먼저 하기 전에 Git Fork기능으로 현재 Entrylabs의 Repository를 복사하여 자신의 Repository를 만듭니다. 이후 `Git Clone`을 수행하여 자신의 로컬에 해당 소스를 받습니다.
 ``` bash
-$ git clone https://github.com/entrylabs/entry-hw.git
+$ git clone https://github.com/(본인의 Repository)/entry-hw.git
 ```
 
-#### 의존설 모듈 설치  
+## 의존설 모듈 설치  
 ``` bash
 $ npm install
-//Electron을 사용하기 위해 아래 패키지를 -g 옵션으로 설치.
-$ npm install -g electron
+// yarn으로도 똑같이 설치가 가능합니다.
+$ yarn
 ```
 
-#### 실행  
+## 실행  
 ``` bash
-//디버그 모드로 실행됨 (추천)
+// 디버그 모드로 실행됨 (추천)
 $ npm start
-
-//또는
-$ electron -d app
-
-//-d 옵션을 제거하면 디버그 모드 없이 실행가능
 ```
 
-#### Nwjs -> Electron 변경  
-기존의 Nw.js 환경에서 Electron 환경으로 변경함.  
-프레임워크 교체에 따라 초기 실행 및 소스 세팅등의 일부 사항이 변경되었으나 기본적인 개발방식인 모듈추가는 기존과 똑같이 되도록 변경하였음.  
+> Nwjs -> Electron 변경  
+기존의 Nw.js 환경에서 Electron 환경으로 변경 하였습니다.
+프레임워크 교체에 따라 초기 실행 및 소스 세팅등의 일부 사항이 변경되었으나 기본적인 개발방식인 모듈추가는 기존과 똑같이 되도록 변경하였습니다.
 
-### 써드파티 라이브러리
- * jQuery : http://jquery.com/download/ (MIT)
- * Node Serialport : https://github.com/voodootikigod/node-serialport (MIT)
- * WebSocket : https://github.com/theturtle32/WebSocket-Node (Apacahe 2.0)
- * Node localize : https://github.com/dfellis/node-localize (MIT)
+## 하드웨어 추가하기
+하드웨어를 추가하는 기본적인 과정은 다음과 같습니다.
+1. .js 파일생성
+1. .json 파일생성
+1. 이미지 삽입
+1. 필요에 따라 드라이버 및 펌웨어 추가
 
-### 하드웨어 추가하기
-    1. .js 파일생성
-    2. .json 파일생성
-    3. 이미지 삽입
-    4. 실행
-
-#### `.js` 파일생성  
+알맞게 파일이 생성되면 실제 하드웨어 화면에 추가한 하드웨어가 표시되어 테스트가능 상태가 됩니다. 하드웨어 모듈은 [ArduinoExt 모듈 소스](https://github.com/entrylabs/entry-hw/tree/master/app/modules)를 참고하시고 작성하시면 좋습니다.
+### `.js` 파일생성  
 ``` js
 // 모듈 생성
 function Module() {
@@ -111,7 +95,7 @@ Module.prototype.reset = function() {
 module.exports = new Module();
 ```
 
-#### `.json` 파일생성  
+### `.json` 파일생성  
 ``` json
 {
     "id": "하드웨어ID(엔트리와 사전규약 필요. ex.'010101')",
@@ -131,6 +115,7 @@ module.exports = new Module();
     "email": "고객센터 Email(필수)",
     "reconnect" : "재접속 시도여부 (true | false)",
     "firmware": "펌웨어(board) 여러 펌웨어 등록 가능",
+    "firmwareBaudRate" : "펌웨어 업로드시 동작할 Baud Rate 값",
     "select_com_port": "Com Port 선택창 여부 (true | false)",
     "entry": {
         "protocol": "데이터규격(json)"
@@ -151,3 +136,14 @@ module.exports = new Module();
     }
 }
 ```
+
+### 이미지 삽입
+이미지는 찌그러짐을 방지하기 위하여 정사각형의 이미지 이어야 하며 배경색이 투명색한 `.png` 파일이어야 합니다. 또한, 용량문제 때문에 너무 큰 이미지는 사용을 자제해 주시고, 적당한 크기의 이미지를 최대한 압축 및 최적화 후 넣어 주시면 됩니다.
+
+> https://tinypng.com/ 사이트 에서 간단하게 무료로 `.png`파일을 최적화 할 수 있습니다.
+
+### 펌웨어 추가
+`모듈.json`파일에서 등록한 펌웨어이름와 똑같은 `.hex`파일을 `(your path)/app/custom_modules/flasher/` 위치에 넣어 주면 이후에 하드웨어 프로그램에서 자동적으로 해당 펌웨어를 업로드 합니다. 현재 펌웨어는 업로드는 아두이노 계열인 `UNO`와 `NANO`보드만 지원하고 있습니다. `NANO`보드에 펌웨어를 올리기 위해선 `firmwareBaudRate`속성의 값을 `57600`으로 설정해야 정상적으로 업로드가 가능합니다.
+
+### 드라이버 추가
+드라이버는 기본적으로 운영체제 별로 따로 설정하도록 되어 있으며, 해당 운영체제에 맞는 드라이버가 없는경우 드라이버 설치 버튼이 표시되지 않습니다. 드라이버 옵션에 작성한 경로에 맞추어 `(your path)/app/drivers/`폴더에 드라이버를 넣어 주면 됩니다.

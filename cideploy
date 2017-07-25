@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 set -e # 에러 발생 시 스크립트 중단
 
+DATEFMT=`date +%Y-%m-%d:%H:%M:%S`
+
 mkdir .deploy
 cd .deploy
 git clone --depth 1 --branch gh-pages --single-branch "https://${GH_TOKEN}@${GH_REF}"
 rm -rf ./*
 cp -r ../public/* .
 git add -A .
-git commit -m "Entry Document Update"
+git commit -m "Entry Document Update $DATEFMT"
 git branch -m gh-pages
 git push -q -u origin gh-pages

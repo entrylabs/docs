@@ -7,13 +7,15 @@ order: 1
 ---
 
 ## 이 문서는 무엇인가요?
-이 문서는 오픈소스로 되어 있는 Entry Js, Entry Hardware 등을 보다 개발하는데 도움이 되기 위하여 작성한 문서입니다. 하지만 이 문서는 Entry의 모든 기능을 구현하기 위한 내용을 담고 있지 않고, 최대한 하드웨어 모듈을 어떻게 개발하는지와 개발된 모듈을 엔트리와 어떻게 연동하는지에 초점이 맞춰져 있습니다. 이 문서는 100% 최신 사항을 반영하고 있지 않기 때문에 실제와 다른 부분이 있을 수 있습니다. 혹시 이상한 점이 발견되면 [이슈 리포트](https://github.com/entrylabs/docs/issues) 또는 엔트리 개발자에게 문의 바랍니다.
+이 문서는 오픈소스로 되어 있는 Entry Js, Entry Hardware 등을 보다 쉽게 개발하는데 도움이 되기 위하여 작성한 문서입니다. 하지만 이 문서는 Entry의 모든 기능을 구현하기 위한 내용을 담고 있지 않고, 최대한 하드웨어 모듈을 어떻게 개발하는지와 개발된 모듈을 엔트리와 어떻게 연동하는지에 초점이 맞춰져 있습니다. 이 문서는 100% 최신 사항을 반영하고 있지 않기 때문에 실제와 다른 부분이 있을 수 있습니다. 혹시 이상한 점이 발견되면 [이슈 리포트](https://github.com/entrylabs/docs/issues) 또는 엔트리 개발자에게 문의 바랍니다.
 
 ## 기본 개발 절차
 엔트리 하드웨어 개발을 위해서는 기본적으로 Entry Hardware 프로그램에 모듈을 추가 하고 Entry Js에 이에 대응하는 블록을 개발하여 적용하는 것으로 개발이 완료됩니다. 또한, 개발 전반에 걸쳐 소스의 공유와 개발 그리고 반영에 이르기 까지 모든 절차에 [GitHub](https://www.github.com)을 사용합니다. 그러기 때문에 개발하기 전에 먼저 깃 사용법을 익히고 개발을 진행 하는 것을 권장합니다.
 
+> [Git 사용방법 문서로 이동](/docs/guide/etc/2016-05-03-git_fork.html)
+
 ### 엔트리 하드웨어 연결프로그램에 하드웨어 추가
-가장먼저 Entry Hardware 소스를 [Git Fork](https://github.com/entrylabs/entry-hw/wiki/Git-Fork-%EB%B0%A9%EB%B2%95)를 수행합니다.
+가장먼저 Entry Hardware 소스를 Git Fork를 수행합니다.
 > 주소: https://github.com/entrylabs/entry-hw  
 
 이후에 System Dependencies를 추가 합니다. Dependencies 정보는 아래와 같습니다.

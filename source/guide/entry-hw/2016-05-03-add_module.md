@@ -3,23 +3,74 @@ layout: page
 title: 모듈 추가 방법
 type: guide
 category: 'Entry Hw'
-order: 4
+order: 3
 ---
 
-#### 모듈추가
+## 모듈
 엔트리에 하드웨어를 추가하기 위해서 수반되는 가장 기본적인 단계 입니다.
 
-#### 모듈의 위치
+## 모듈의 위치
 엔트리가 Electron이 적용됨에 따라 모듈의 위치도 변경되었습니다.  
 기존 상위폴더/modules에서 상위폴더/app/modules로 변경되었습니다.
 
-#### 모듈의 구성
+## 모듈의 구성
 모듈은 모듈명.js, 모듈명.json, 모듈명.png의 3가지로 구성됩니다.  
 ![모듈의 구성](https://raw.githubusercontent.com/entrylabs/entry-hw/gh-pages/wiki-image/module/default.PNG)
 
-##### 모듈명.json 구조
-하드웨어 ID의 경우 반영 전 발급을 원칙으로 하고 있습니다.  
-따라서 테스트 단계에서는 테스트용 ID인 999999를 활용해주시길 바랍니다.
+## 모듈 추가하기
+하드웨어를 추가하는 기본적인 과정은 다음과 같습니다.
+1. .js 파일생성
+1. .json 파일생성
+1. 이미지 삽입
+1. 필요에 따라 드라이버 및 펌웨어 추가
+
+알맞게 파일이 생성되면 실제 하드웨어 화면에 추가한 하드웨어가 표시되어 테스트가능 상태가 됩니다. 하드웨어 모듈은 [ArduinoExt 모듈 소스](https://github.com/entrylabs/entry-hw/tree/master/app/modules)를 참고하시고 작성하시면 좋습니다.
+### `.js` 파일생성  
+``` js
+// 모듈 생성
+function Module() {
+    //초기설정
+}
+
+// 초기설정
+Module.prototype.init = function(handler, config) {
+};
+
+// 초기 송신데이터(필수)
+Module.prototype.requestInitialData = function() {
+};
+
+// 초기 수신데이터 체크(필수)
+Module.prototype.checkInitialData = function(data, config) {
+};
+
+// 하드웨어에 전달할 데이터
+Module.prototype.requestLocalData = function() {
+};
+
+// 하드웨어 데이터 처리
+Module.prototype.handleLocalData = function(data) {
+};
+
+// Web Socket 데이터 처리
+Module.prototype.handleRemoteData = function(handler) {
+};
+
+// Web Socket(엔트리)에 전달할 데이터
+Module.prototype.requestRemoteData = function(handler) {
+};
+
+// Web Socket 종료후 처리
+Module.prototype.reset = function() {
+};
+
+// 이외 필요한 모듈이 있을경우 임의로 추가 가능
+...
+
+module.exports = new Module();
+```
+
+### `.json` 파일생성  
 ``` json
 {
     "id": "하드웨어ID(엔트리와 사전규약 필요. ex.'010101')",
@@ -39,6 +90,7 @@ order: 4
     "email": "고객센터 Email(필수)",
     "reconnect" : "재접속 시도여부 (true | false)",
     "firmware": "펌웨어(board) 여러 펌웨어 등록 가능",
+    "firmwareBaudRate" : "펌웨어 업로드시 동작할 Baud Rate 값",
     "select_com_port": "Com Port 선택창 여부 (true | false)",
     "entry": {
         "protocol": "데이터규격(json)"
@@ -60,47 +112,13 @@ order: 4
 }
 ```
 
-##### 모듈명.js의 구조  
-``` js
-function Module() {
-//모듈의 constructor
-}
+### 이미지 삽입
+이미지는 찌그러짐을 방지하기 위하여 정사각형의 이미지 이어야 하며 배경색이 투명색한 `.png` 파일이어야 합니다. 또한, 용량문제 때문에 너무 큰 이미지는 사용을 자제해 주시고, 적당한 크기의 이미지를 최대한 압축 및 최적화 후 넣어 주시면 됩니다.
 
-//필요시 Handler Data 초기값 설정
-Module.prototype.init = function(handler, config) {
-};
+> https://tinypng.com/ 사이트 에서 간단하게 무료로 `.png`파일을 최적화 할 수 있습니다.
 
-//필요시 연결직후 Hardware에 보내는 초기값 설정
-Module.prototype.requestInitialData = function() {
-};
+### 펌웨어 추가
+`모듈.json`파일에서 등록한 펌웨어이름와 똑같은 `.hex`파일을 `(your path)/app/custom_modules/flasher/` 위치에 넣어 주면 이후에 하드웨어 프로그램에서 자동적으로 해당 펌웨어를 업로드 합니다. 현재 펌웨어는 업로드는 아두이노 계열인 `UNO`와 `NANO`보드만 지원하고 있습니다. `NANO`보드에 펌웨어를 올리기 위해선 `firmwareBaudRate`속성의 값을 `57600`으로 설정해야 정상적으로 업로드가 가능합니다.
 
-//연결직후 Hardware에서보내는 Inital데이터의 Vaildation
-Module.prototype.checkInitialData = function(data, config) {
-};
-
-//Hardware에서 보내는 모든 데이터의 Vaildation
-Module.prototype.validateLocalData = function(data) {
-};
-
-// 서버에서 보내온 데이터 세팅
-Module.prototype.handleRemoteData = function(handler) {
-};
-
-// Hardware에서 보내온 데이터 세팅
-Module.prototype.handleLocalData = function(data) { // data: Native Buffer
-};
-
-// 서버에 보낼 데이터 세팅
-Module.prototype.requestRemoteData = function(handler) {
-};
-
-// Hardware에 보낼 데이터 세팅
-Module.prototype.requestLocalData = function() {
-};
-
-// 서버 Connect 종료시 값 세팅
-Module.prototype.reset = function() {
-};
-
-module.exports = new Module();
-```
+### 드라이버 추가
+드라이버는 기본적으로 운영체제 별로 따로 설정하도록 되어 있으며, 해당 운영체제에 맞는 드라이버가 없는경우 드라이버 설치 버튼이 표시되지 않습니다. 드라이버 옵션에 작성한 경로에 맞추어 `(your path)/app/drivers/`폴더에 드라이버를 넣어 주면 됩니다.

@@ -58,15 +58,8 @@ $ npm install
 ### Entry Hardware 실행하기
 Entry Hardware는 Electron기반으로 프로그램이 작성되어 있습니다. 가장 최상위 폴더는 Application을 빌드와 실행 및 프로젝트를 관리하는 위치이고 실질적인 소스코드는 app폴더에 들어있습니다. 실행은 가장최상위 위치에서 `npm start`를 콘솔에서 수행하면 됩니다.
 ``` bash
-// 글로벌로 설치된 electron를 사용할 경우
-$ electron app
-// 디버그 모드가 사용하고 싶다면.
-$ electron -d app
-
-// npm install 로 설치한 electron로 실행할 경우 (권장)
 $ npm start
 ```
-
 
 ## 마무리
 위와 같은 과정을 거치면 Entry-HW의 모듈을 추가하는 환경과 EntryJS의 블록을 추가하는 개발환경을 구성할수 있다.

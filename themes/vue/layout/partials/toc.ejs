@@ -1,0 +1,28 @@
+<ul class="menu-root">
+    <%
+        function makeList(category) {
+        %>
+            <% type !== 'api' && site.pages.find({type: type, category: category}).sort('order').each(function (p) { %>
+                <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
+                <% if (type === 'guide') { %>
+                    <%
+                        if (p.category != nowCategory) {
+                            nowCategory = p.category;
+                    %>
+                        <li><h3><%- p.category%></h3></li>
+                    <% } %>
+                <% } %>
+                <li>
+                    <a href="<%- url_for(p.path) %>" class="sidebar-link<%- page.path === p.path ? ' current' : '' %><%- p.is_new ? ' new' : '' %>"><%- p.title %></a>
+                </li>
+            <% }) %>
+        <%
+        }
+    %>
+    <% var nowCategory = ''; %>
+    <% makeList('START'); %>
+    <% makeList('Entry Hw'); %>
+    <% makeList('Entryjs'); %>
+    <% makeList('Entry Mini'); %>
+    <% makeList('Etc.'); %>
+</ul>

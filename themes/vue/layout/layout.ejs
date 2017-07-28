@@ -62,7 +62,7 @@
     <body class="<%- isIndex ? '' : 'docs' -%>">
         <div id="mobile-bar" <%- isIndex ? 'class="top"' : '' %>>
             <a class="menu-button"></a>
-            <a class="logo" href="/"></a>
+            <a class="logo" href="<%- url_for("/") %>"></a>
         </div>
         <%- partial('partials/header') %>
         <% if (!isIndex) { %>
@@ -104,7 +104,7 @@
                 })
             })
         </script>
-        
+
         <!-- fastclick -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
         <script>

@@ -3,69 +3,66 @@ layout: page
 title: 시작하기
 type: guide
 category: 'Entry Offline'
-order: 2
+order: 1
 ---
 
-## Entryjs로 개발하기  
+엔트리 오프라인은 엔트리의 만들기 부분을 오프라인 환경에서도 사용할 수 있도록 제작된 프로그램입니다. 엔트리 오프라인은 Electron을 기반으로 하고 있으며, 전반적인 개발을 위해서 Node.js가 필요합니다.
 
-기존의 하드웨어 블록을 개발하기 위하여 entryjs/example/example.js를 지원해 왔습니다. 실과형(엔트리 미니)에서는 entryjs/example/example_mini.js를 제공하고 있습니다. 이 문서는 기존적으로 엔트리 하드웨어 블록생성 및 하드웨어를 추가하는 가이드를 숙지 했다는 가정하에 설명을 진행합니다. 이 문서를 보시기 전에 하드웨어 가이드 및 블록 개발 가이드를 보시고 진행하시길 바랍니다. fork 및 repository clone에 대해서는 Etc. 가이드를 참고하세요.
+## 개발 환경 세팅
 
+### 필수 프로그램 설치
+#### 1. Node.js
+Node.js는 개발 전반을 위해 반드시 설치가 되어야하는 Framework입니다. 작업전 가장 먼저 설치합니다.
 
-### branch checkout
+> 사이트 : https://nodejs.org
 
-현재 offline_mini는 feature/offline_mini에 관리되고 있습니다. git 터미널에서 다음과 같이 명령어를 실행합니다.
+#### 2. Yarn
+엔트리 오프라인에서는 기존의 `npm`을 이용해서도 작업을 진행 할 수 있지만 `yarn`의 사용을 권장 합니다.
+> 사이트 : https://yarnpkg.com
 
-``` bash
-$ git checkout -b feature/offline-mini origin/feature/offline-mini
-```
-> GUI툴을 사용하시면 기존에 사용하셨던 방법 그대로 feature/offline-mini 브랜치를 checkout하시기 바랍니다.
+#### 3. Bower
+엔트리 오프라인에서 정적 라이브러리들은 `bower`를 통해 관리 합니다. `npm` 또는 `yarn`이 설치 되었다면 아래와 같이 설치가 가능합니다.
 
-### npm install & build
+```bash
+# if npm
+npm install -g bower
 
-의존성 모듈 설치를 위하여 npm install 을 수행합니다.
-
-``` bash
-$ npm install 또는 npm i
-```
-
-빌드는 기존과 같이 grunt를 이용해서 빌드 합니다. 다만, 최신 closure-compiler 가 compiler.jar에 날짜를 붙이고 있어서 곧바로 수행이 되지 않는 경우가 있습니다. 이경우 node_modules/closurecompiler/compiler/compiler(날짜).jar 파일을 compiler.jar 로 파일 명칭을 수동 변경해 주시기 바랍니다.
-
-``` bash
-$ grunt
-// 빌드 수행완료시 dist 폴더에 entry.js entry.min.js entry.css가 생성됨
-// 이미 생성된 entry.js entry.min.js entry.css가 포함되어 있으며
-// 수정 이후 빌드가 필요한 경우 grunt 수행해야함.
+# or yarn
+yarn global add bower
 ```
 
-### example_mini.html 실행
+> 사이트 : https://yarnpkg.com
 
-기본적으로 기존 example.html 사용법과 같습니다. 그래그앤 드랍 또는 더블릭으로 chrome 브라우저에서 실행하시면 됩니다.
-![크롬에서 실행하기](/docs/images/entry_mini/2016-12-12_15-56-59.gif)
+#### 3. c++ compiler & 파이선
+엔트리 오프라인을 최종적으로 빌드 하기 위해서는 컴파일 과정이 수행되어야 합니다. 이 과정에서 파이선과 C++ 컴파일러가 필요하게 됩니다.
 
-### 블록 생성하기
+### 소스코드 다운로드
+```bash
+# create a directory of your choice, and copy template using curl
+mkdir entry-offline && cd entry-offline
+curl -fsSL https://github.com/entrylabs/entry-offline/archive/master.tar.gz | tar -xz --strip-components 1
 
-블록 생성방법은 기존 하드웨어 가이드 문서에 작성된 가이드와 동일 합니다. 다만 관리와 기존 Entry Workspace와의 분리를 위하여 작성하는 파일이 위치만 변경되었습니다.
+# or copy template using git clone
+git clone https://github.com/entrylabs/entry-offline.git
+cd entry-offline
 
-> 블록 개발 가이드는 [Entry JS 개발 가이드](../entryjs/2016-12-26-setting_environments.html)를 참고해 주세요.
+# install dependencies
+yarn
+bower install
+```
 
-먼저 블록의 위치는 entryjs/src/workspace/block_entry_mini.js 입니다. block_entry.js 파일에도 수정하면 내용이 반영되나 git PR merge시에 reject사유가 될 수 있으니 작업은 block_entry_mini.js에 부탁드립니다. 또한 isNotFor 요소가 중요하게 사용되오니 꼭 작성 부탁드립니다.
+엔트리 오프라인은 소스코드를 직접 다운받아서 개발하거나 Git을 통하여 개발을 시작할 수 있습니다. 
+만약에 Git을 통해 개발을 시작한다면 Fork 작업을 먼저 하시고 작업을 진행하시는 것을 추천 드립니다.
+소스코드가 다운로드되고 난뒤 `yarn`과 `bower`를 이용하여 의존성 패키지를 설치합니다.
 
-### 블록 등록하기
+## 실행
+```bash
+# if npm
+npm start
 
-블록생성 종료 되었으면 실제 Workspace에 포함시켜야 합니다. 기존에는 entryjs/extern/util/static.js 의 arudino 카테고리에 포함시켰는데 실과형(Entry-mini)에서는 entryjs/extern/util/static_mini.js 에 작성하고 arduino카테고리가 아닌 성격에 맞는 카테고리에 포함시키고 있습니다.
+# or yarn
+yarn start
+```
+기본적인 환경 구성과 의존성 패키지들이 정상적으로 설치되었다면 실행 화면을 볼 수 있다.
 
-![사용되는 카테고리](/docs/images/entry_mini/2016-12-12_16-20-37.png)  
-![사용되는 카테고리2](/docs/images/entry_mini/2016-12-12_16-23-32.png)  
-
-현재 사용되는 있는 카테고리는 위와 같으며, 현재로선 다른 카테고리를 허용하지는 않습니다. 다만 다른카테고리가 필요하신경우 엔트리에 문의 부탁드립니다.
-
-### 실과형 로봇 등록하기
-
-실과형에서는 실과형인지 기존의 하드웨어인지 구분하는 1가지 옵션이 추가로 생겼습니다. static_mini.js에 추가되어 있으며 명칭은 hwMiniSupportList입니다.  
-hwMiniSupportList는 Array로 되어 있으며 하드웨어의 명칭을 추가 하시면 자동으로 Mini에서 사용되는 하드웨어로 취급되어 정상적으로 카테고리가 동작하게 됩니다.  
-해당 속성이 빠져 있을경우 기존의 하드웨어 블록이 그대로 사용되니 이점 주의 부탁드립니다.
-
-### 실과서버 확인
-실과 서버는 임시적으로 http://textbook.playentry.org/ 주소에 반영되고 있습니다. 수정하신 코드가 머지가 되고나면 해당 사이트에서 정상적으로 작동하는지 최종적으로 확인해 보시면 됩니다.
-
-추가 문의 사항 및 오류 건의는 메일 주시면 답변 드리도록 하겠습니다.
+![실행화면](../../images/entry_offline/2017-12-21_18_19_51.gif)  

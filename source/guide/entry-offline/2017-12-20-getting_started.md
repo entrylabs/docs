@@ -8,6 +8,12 @@ order: 1
 
 엔트리 오프라인은 엔트리의 만들기 부분을 오프라인 환경에서도 사용할 수 있도록 제작된 프로그램입니다. 엔트리 오프라인은 Electron을 기반으로 하고 있으며, 전반적인 개발을 위해서 Node.js가 필요합니다.
 
+## 시작하기 전에...
+엔트리 오프라인은 [Electron](https://electronjs.org/) 기반으로 되어 있습니다. Electron은 github에서 Atom IDE를 만들기 위해 만들어졌으며 현재 수많은 프로젝트들이 Electron 프레임워크 위에서 구동되고 있습니다. Electron은 Node.js를 기반으로 하고 있기 때문에 엔트리 오프라인 개발을 위해서는 Node.js의 기본적인 사용방법과 Javascript의 언어를 이해해야 작업을 진행할 수 있습니다. 또, 엔트리 오프라인은 보다 원활한 개발 환경을 위해 Electron을 바로 사용한 것이 아니고 [Electron-Forge](https://github.com/electron-userland/electron-forge)이라고 하는 도구를 사용하여 개발을 진행하였습니다. 엔트리 오프라인을 개발하고 싶으시다면 먼저 Electron과 Electron-Forge에 대한 문서를 읽고 시작해 주세요.
+
+Electron 개발문서 : https://electronjs.org/docs
+Electron-Forge 개발문서 : https://electronforge.io/
+
 ## 개발 환경 세팅
 
 ### 필수 프로그램 설치

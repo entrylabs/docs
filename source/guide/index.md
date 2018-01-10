@@ -79,9 +79,9 @@ $ grunt
 엔트리 하드웨어를 대응하는 블록을 개발하기 위해 필요한 내용을 알려드립니다.
 [엔트리 블록 개발 가이드](/docs/guide/entryjs/2016-12-26-setting_environments.html)
 
-## Entry Mini
-엔트리 실과버전 개발을 위해 필요한 내용을 알려드립니다.
-[엔트리 오프라인 미니 개발 가이드](/docs/guide/entry-mini/2016-12-12-getting_started.html)
+## Entry Offline
+엔트리 오프라인 프로그램 개발을 위해 필요한 내용을 알려드립니다.
+[엔트리 오프라인 개발 가이드](/docs/guide/entry-mini/2016-12-12-getting_started.html)
 
 ## 기타
 저희 소스를 개발하기 이전에 알아두셔야할 내용을 간단하게 정리하였습니다. 실제 개발하기 이전에 한번 문서를 읽어보고 진행하시면 개발하시는데 도움이 많이 되실겁니다.

@@ -53,6 +53,8 @@ Entry Js도 Entry Hardware와 마찬 가지로 Github의 Repository를 Fork하�
 
 빌드까지 완료 되었다면 최종적으로 테스트를 수행해야 합니다. 확인은 `(your path)/example/example.html`을 크롬으로 실행해서 확인 가능합니다. `example.html`은 오직 블록 테스트를 위한 파일이므로 하드웨어 블록 테스트 이외의 목적으로 활용 하시기 힘듭니다. 하지만 하드웨어 블록 동작 테스트 용도로는 기능상 큰 문제없이 제공 가능합니다.
 
+> Chrome 65부터 example.html파일을 바로 확인이 불가능해 졌습니다. CROS문제로 인해 하드웨어 프로그램에 접속이 안되는 문제가 발견되었습니다. 테스트는 [하드웨어 블록 테스트하기](/docs/guide/entryjs/2018-03-23-test_hardware.html)문서를 참고해 주세요.
+
 ## Entry Hardware
 엔트리 하드웨어를 개발하기 위해 필요한 내용을 알려드립니다.
 [엔트리 하드웨어 개발 가이드](/docs/guide/entry-hw/2016-05-01-getting_started.html)

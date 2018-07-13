@@ -27,12 +27,13 @@ yarn build'''
 
         script {
           try {
-              sh '''git config --global user.name \'Entry Dev\'
-      git config --global user.email \'entrydev@nts-corp.com\'
-      chmod +x ./cideploy
-      ./cideploy'''
+            sh '''git config --global user.name \'Entry Dev\'
+git config --global user.email \'entrydev@nts-corp.com\'
+chmod +x ./cideploy
+./cideploy'''
+          } catch(e) {
+            currentBuild.result = 'SUCCESS'
           } finally {
-            currentBuild.result = "SUCCESS"
             echo 'end deploy'
           }
         }

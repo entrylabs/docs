@@ -8,12 +8,20 @@ pipeline {
   }
   stages {
     stage('Build') {
+      when {
+        beforeAgent true
+        branch 'master'
+      }
       steps {
         sh '''yarn
 yarn build'''
       }
     }
     stage('deploy') {
+      when {
+        beforeAgent true
+        branch 'master'
+      }
       steps {
         try {
           sh '''git config --global user.name \'Entry Dev\'

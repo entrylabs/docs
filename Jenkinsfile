@@ -18,19 +18,15 @@ yarn build'''
       }
     }
     stage('deploy') {
-      parallel {
-        stage('deploy') {
-          when {
-            beforeAgent true
-            branch 'master'
-          }
-          steps {
-            sh '''git config --global user.name \'Entry Dev\'
+      when {
+        beforeAgent true
+        branch 'master'
+      }
+      steps {
+        sh '''git config --global user.name \'Entry Dev\'
 git config --global user.email \'entrydev@nts-corp.com\'
 chmod +x ./cideploy
 ./cideploy'''
-          }
-        }
       }
     }
   }

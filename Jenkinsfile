@@ -8,6 +8,10 @@ pipeline {
   }
   stages {
     stage('Build') {
+      when {
+        beforeAgent true
+        branch 'master'
+      }
       steps {
         sh '''yarn
 yarn build'''
@@ -28,6 +32,9 @@ chmod +x ./cideploy
           }
         }
         stage('PR Check') {
+          when {
+            changeRequest()
+          }
           steps {
             echo 'is PR!!!'
           }

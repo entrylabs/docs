@@ -3,6 +3,7 @@ set -e # 에러 발생 시 스크립트 중단
 
 DATEFMT=`date +%Y-%m-%d:%H:%M:%S`
 
+rm -rf .deploy
 mkdir .deploy
 cd .deploy
 git clone -b gh-pages "${GH_REPO}" .

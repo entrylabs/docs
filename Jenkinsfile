@@ -9,8 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''echo "${text} 1"
-echo "${env.text} 2"'''
+        sh 'echo "${env.okpts} 1"'
       }
     }
   }

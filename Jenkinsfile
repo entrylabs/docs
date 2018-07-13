@@ -14,9 +14,6 @@ yarn build'''
       }
     }    
     stage('PR Check') {
-      when {
-        changeRequest()
-      }
       steps {
         echo 'Is PR!!!',
       }

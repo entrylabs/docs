@@ -12,11 +12,6 @@ pipeline {
         sh '''yarn
 yarn build'''
       }
-    }    
-    stage('PR Check') {
-      steps {
-        echo 'Is PR!!!',
-      }
     }
     stage('deploy') {
       when {

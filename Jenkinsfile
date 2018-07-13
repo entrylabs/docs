@@ -9,21 +9,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''yarn
-yarn build'''
-      }
-    }
-    stage('deploy') {
-      environment {
-        GH_TOKEN = 'credentials(\'GITHUB_TOKEN\')'
-      }
-      steps {
-        echo ' echo "${text} 1"'
-        echo ' echo "${env.text} 2"'
-        echo 'echo "${env.JMETER_HOME}"'
-        sh '''git config --global user.name \'Entry\'
-git config --global user.email \'entrydev@nts-corp.com\'
-yarn deploy'''
+        sh '''echo "${text} 1"
+echo "${env.text} 2"'''
       }
     }
   }

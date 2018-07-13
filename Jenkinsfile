@@ -14,9 +14,17 @@ yarn build'''
       }
     }
     stage('deploy') {
+      environment {
+        GH_TOKEN = 'credentials(\'GITHUB_TOKEN\')'
+      }
       steps {
-        sh 'yarn deploy'
+        sh '''git config --global user.name \'Entry\'
+git config --global user.email \'entrydev@nts-corp.com\'
+yarn deploy'''
       }
     }
+  }
+  environment {
+    GH_TOKEN = ''
   }
 }

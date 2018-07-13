@@ -24,15 +24,15 @@ yarn build'''
       }
       steps {
         echo 'start deploy'
-        
+
         script {
           try {
               sh '''git config --global user.name \'Entry Dev\'
       git config --global user.email \'entrydev@nts-corp.com\'
       chmod +x ./cideploy
       ./cideploy'''
-          } catch(exc) {
-            echo exc
+          } finally {
+            echo 'end deploy'
           }
         }
       }

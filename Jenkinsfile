@@ -18,11 +18,11 @@ yarn build'''
         GH_TOKEN = 'credentials(\'GITHUB_TOKEN\')'
       }
       steps {
+        echo ' echo "${text} 1"'
+        echo ' echo "${env.text} 2"'
+        echo 'echo "${env.JMETER_HOME}"'
         sh '''git config --global user.name \'Entry\'
 git config --global user.email \'entrydev@nts-corp.com\'
-echo "${env.JMETER_HOME}"
-echo "${text} 1"
-echo "${env.text} 2"
 yarn deploy'''
       }
     }

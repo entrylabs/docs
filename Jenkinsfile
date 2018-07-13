@@ -15,8 +15,8 @@ yarn build'''
     }
     stage('deploy') {
       steps {
-        sh '''git config --global user.name \'JY kim\'
-git config --global user.email \'kimorkim@gmail.com\'
+        sh '''git config --global user.name \'Entry Dev\'
+git config --global user.email \'entrydev@nts-corp.com\'
 chmod +x ./cideploy
 ./cideploy'''
       }

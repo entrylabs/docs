@@ -31,14 +31,6 @@ chmod +x ./cideploy
 ./cideploy'''
           }
         }
-        stage('PR Check') {
-          when {
-            changeRequest()
-          }
-          steps {
-            echo 'is PR!!!'
-          }
-        }
       }
     }
   }

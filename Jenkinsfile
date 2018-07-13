@@ -32,6 +32,7 @@ yarn build'''
       chmod +x ./cideploy
       ./cideploy'''
           } finally {
+            currentBuild.result = "SUCCESS"
             echo 'end deploy'
           }
         }

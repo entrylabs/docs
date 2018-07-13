@@ -22,15 +22,19 @@ yarn build'''
         beforeAgent true
         branch 'master'
       }
-      try {
-        steps {
-            sh '''git config --global user.name \'Entry Dev\'
-    git config --global user.email \'entrydev@nts-corp.com\'
-    chmod +x ./cideploy
-    ./cideploy'''
+      steps {
+        echo 'start deploy'
+        
+        script {
+          try {
+              sh '''git config --global user.name \'Entry Dev\'
+      git config --global user.email \'entrydev@nts-corp.com\'
+      chmod +x ./cideploy
+      ./cideploy'''
+          } catch(exc) {
+            echo exc
+          }
         }
-      } catch(exc) {
-        echo exc
       }
     }
   }

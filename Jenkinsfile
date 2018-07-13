@@ -13,5 +13,10 @@ pipeline {
 yarn build'''
       }
     }
+    stage('deploy') {
+      steps {
+        sh 'yarn deploy'
+      }
+    }
   }
 }

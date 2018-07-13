@@ -18,19 +18,19 @@ yarn build'''
       }
     }
     stage('deploy') {
-      when {
-        beforeAgent true
-        branch 'master'
-      }
-      steps {
-        try {
-          sh '''git config --global user.name \'Entry Dev\'
-  git config --global user.email \'entrydev@nts-corp.com\'
-  chmod +x ./cideploy
-  ./cideploy'''
-        } catch(exc) {
-          echo exc
+      try {
+        when {
+          beforeAgent true
+          branch 'master'
         }
+        steps {
+            sh '''git config --global user.name \'Entry Dev\'
+    git config --global user.email \'entrydev@nts-corp.com\'
+    chmod +x ./cideploy
+    ./cideploy'''
+        }
+      } catch(exc) {
+        echo exc
       }
     }
   }

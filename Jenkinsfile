@@ -43,5 +43,6 @@ chmod +x ./cideploy
   environment {
     GH_REPO = 'https://github.com/entrylabs/docs.git'
     GH_REF = 'github.com/entrylabs/docs.git'
+    CI = true
   }
 }

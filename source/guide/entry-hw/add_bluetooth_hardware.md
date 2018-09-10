@@ -3,7 +3,7 @@ layout: page
 title: 블루투스 하드웨어 추가하기
 type: guide
 category: 'Entry Hw'
-order: 4
+order: 3
 ---
 
 먼저 엔트리에서는 블루투스 프로파일중 Serial Port Profile(이하 SPP)만 지원합니다. Bluetooth Low Energy(이하 BLE) 타입의 블루투스는 현재로선 지원하지 않습니다.

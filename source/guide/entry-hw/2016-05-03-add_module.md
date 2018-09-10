@@ -3,7 +3,7 @@ layout: page
 title: 하드웨어 모듈 추가하기
 type: guide
 category: 'Entry Hw'
-order: 3
+order: 2
 ---
 
 엔트리에 하드웨어를 추가하기 위한 가장 기본적인 단계 입니다. 하드웨어 모듈을 추가 함으로써 엔트리와 통신할수 있게 됩니다.

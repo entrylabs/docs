@@ -6,39 +6,29 @@ category: 'Entryjs'
 order: 4
 ---
 
-기존에는 `static.js`에 `EntryStatic.getAllBlocks`와 `EntryStatic.blockInfo`두 가지를 설정해야 했지만 `blockInfo`의 경우 블록정보에 포함 되도록 변경되었습니다. 이제 `getAllBlocks`에만 사용 할 블록을 등록하면 해당 블록이 나오게 되어있습니다. 작성 방법은 기존과 같습니다.
+## 블록 등록
 
-## 하드웨어 블록 등록
-하드웨어 블록은 `EntryStatic.getAllBlocks`에 작성한 블록의 명칭을 등록하면 됩니다. 하드웨어 블록은 `arduino`카테고리에 포함됩니다.  
+엔트리는 현재 EntryStatic.getAllBlocks() 를 통해 모든 블록정보를 가져온 후, 
+해당 정보를 활용해 실제 블록을 만들어내는 프로세스를 가지고 있습니다.  
+블록을 만들었다고 하더라도 이 위치에 구현한 블록명을 등록하지 않으면 블록이 보여지지 않습니다.
 
-예)
-``` js
+해당 파일의 위치는 extern/util/static.js 입니다.  
 
-// 블록명세
-Entry.block = {
-    "sample_block": {
-        "parent": "",
-        "color": "",
-        "fontColor": "",
-        "skeleton": "",
-        "statement": [],
-        "params": [],
-        "events": {},
-        "def": {},
-        "paramsKeyMap": {},
-        "class": "",
-        "isNotFor": [],
-        "func": function() {}
-    }
-}
+**블록의 기록 순서는 실제 블록의 순서에 영향을 줍니다. (동일한 순서입니다.)**    
 
-// static.js 내용
-{
-    type: guide
-    category: "arduino",
-    blocks: [
-        //... 기존 존재하는 블록
-        "sample_block"
+> 하드웨어 블록의 경우, category 명은 arduino 입니다.  
+> 기존 등록된 블록의 형태를 참고하시고 추가하시기 바랍니다.
+
+```js
+EntryStatic.getAllBlocks = function() {
+    return [
+        {
+            category: 'start',
+            blocks: [
+                'when_run_button_click',
+                // ...
+            ]
+        }
     ]
 }
 ```

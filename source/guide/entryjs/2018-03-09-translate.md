@@ -6,13 +6,19 @@ category: 'Entryjs'
 order: 7
 ---
 
-기존에는 `(root)/extern/lang/` 밑에 있는 `ko.js`, `en.js` 등을 수정해서 다국어를 적용 하였습니다. 이제 하드웨어 블록은 각 하드웨어 블록 파일에서 적용 하도록 변경 되었습니다.
-
 ## 다국어 추가하기
-일단 하드웨어 별로 다국어는 `(root)/src/playground/blocks/block_(하드웨어명).js` 파일에 추가합니다.
 
-예)
+엔트리 사이트의 언어별 리소스는 내부 프로젝트에 의해 관리되고 있습니다.  
+이 언어 리소스는 entryjs 개발을 위한 자체실행에서 사용할 수 있도록 extern/lang 아래에 다국어 데이터를 삽입해두었습니다.
 
+하지만 이 리소스는 entryjs 에서 수정되어도 실제로 반영되지 않습니다. 즉, 개발시에만 사용되는 파일입니다.  
+하드웨어의 언어 작업은 `src/playground/blocks/block_(하드웨어명).js` 의 setLanguage() 로직을 통해 추가합니다.
+
+setLanguage 에서, ko.template 과 en.template 는 필수입니다.
+
+> 추가적으로 블럭의 도움말을 설정하고자 하는 경우, ko.Helper.(블럭명) 의 형태로 추가하시면 됩니다. 
+
+예)  
 ``` js
 'use strict';
 
@@ -41,5 +47,3 @@ Entry.SAMPLE.setLanguage = function () {
     }
 };
 ```
-
-이렇게 작업을 수행하고 기존에 추가하던 `(root)/extern/lang/` 밑에 있는 `ko.js`, `en.js`는 따로 수정하지 않습니다.

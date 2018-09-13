@@ -90,7 +90,6 @@ if (!script.isStart) {
     delete script.timeFlag;
     Entry.engine.isContinue = false;
     // 종료 신호 요청
-    return script.callReturn();
 }
 ```
 

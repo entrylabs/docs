@@ -94,8 +94,6 @@ Entry.SAMPLE.getBlocks = function () {
 function (sprite, script) {
     // Port 라는 key에 '1'이라는 데이터를 하드웨어 프로그램에 보냄.
     Entry.hw.sendQueue['Port'] = '1';
-    // 다음 블록으로 진행
-    return script.callRetrurn();
 }
 ```
 

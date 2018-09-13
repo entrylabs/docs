@@ -112,7 +112,7 @@ Entry.block = {
     ```
 
 10. `paramsKeyMap` : `params`에 정의한 `parameter`에 대한 `key`값을 지정합니다. `key` 는 0부터 시작되는 index 값입니다.  
-    아래는 그 예입니다. 예의 경우에는 params 의 첫번째 값이 VALUE 라는 `key`로 매핑되는 경우입니다.
+    아래 예의 경우에는 params 의 첫번째 값이 VALUE 라는 `key`로 매핑되는 경우입니다.
     ```json
         paramsKeyMap: {
             VALUE: 0,

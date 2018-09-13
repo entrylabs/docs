@@ -12,7 +12,8 @@ order: 7
 이 언어 리소스는 entryjs 개발을 위한 자체실행에서 사용할 수 있도록 extern/lang 아래에 다국어 데이터를 삽입해두었습니다.
 
 하지만 이 리소스는 entryjs 에서 수정되어도 실제로 반영되지 않습니다. 즉, 개발시에만 사용되는 파일입니다.  
-하드웨어의 언어 작업은 `src/playground/blocks/block_(하드웨어명).js` 의 setLanguage() 로직을 통해 추가합니다.
+하드웨어 개발시에는 해당 리소스에 접근할 수 없으므로, 하드웨어 블록에 언어 리소스를 추가할 수 있도록 구현되어있습니다.  
+하드웨어의 언어 작업은 `src/playground/blocks/block_(하드웨어명).js` 의 setLanguage() 로직을 통해 추가할 수 있습니다.
 
 setLanguage 에서, ko.template 과 en.template 는 필수입니다.
 

@@ -26,7 +26,7 @@ order: 3
   - block_expansion_weather.js : 날씨 API 블록
   
 > 하드웨어 블록은 `src/playground/blocks/block_(하드웨어명).js` 파일에서 관리 됩니다.  
-> 이에 따른 블록 생성정보는 [하드웨어별 블록생성 하기](./add_new_blocks5.html) 문서를 참고해 주세요.
+> 이에 따른 블록 생성정보는 [하드웨어 블록 개발](/docs/guide/entryjs/2016-07-08-add_new_blocks4.html#하드웨어-블록-개발) 문서를 참고해 주세요.
 
 ### 블록 생성 위치
 

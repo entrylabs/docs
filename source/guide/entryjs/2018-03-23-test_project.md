@@ -1,21 +1,22 @@
 ---
 layout: page
-title: 하드웨어 블록 테스트하기
+title: 프로젝트 테스트하기
 type: guide
 category: 'Entryjs'
-order: 8
+order: 9
 ---
-
-기존 테스트 방법은 단순하게 `(your path)/example/example.html`파일을 브라우저에 실행하여 테스트 하는 방식이었습니다. 현재 크롬이 새버전이 나오면서 보안문제로 local file의 html 파일에서는 CORS문제로 socket 통신이 불가능해 졌습니다. 이에 따라 테스트 방법을 수정하였습니다.
 
 ## 테스트 진행
 
-테스트는 `package.json`의 `script`에 정의된 `serve`에 따라 테스트 서버를 실행하여 테스트를 진행하도록 하였습니다.
+entryjs 는 브라우저 내의 특정 div 를 기준으로 workspace 를 생성하고, 해당 DOM 위에서 실행되는 형태입니다.  
+간단한 테스트를 위해서 위와 같은 방법은 번거롭기 때문에, 테스트를 위한 페이지를 실행하는 방법이 구현되어있습니다.
+
+terminal 을 실행 후 entryjs 프로젝트 경로에서 아래 명령어를 입력합니다.
 
 ``` bash
-$ yarn serve
-// 또는
 $ npm run serve
+// 또는 yarn 라이브러리가 설치되어 있는 경우
+$ yarn serve
 ```
 
 위와 같이 실행하면 브라우저가 자동실행되면서 테스트 가능한 페이지가 열리고 자동으로 `entry.js`가 빌드 됩니다. `entry.js`빌드가 완전히 진행되야 수정하신 내용이 반영되므로 빌드 이후에 새로고침을 한번 하시기 바랍니다.

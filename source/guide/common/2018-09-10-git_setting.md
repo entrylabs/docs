@@ -10,7 +10,7 @@ order: 2
 > 연관 페이지 : [git 사용방법](/docs/guide/etc/2016-05-03-git_fork.html)
 
 엔트리의 오픈소스 프로젝트는 Git을 사용하여 관리합니다.
-Git을 사용하여 코드를 기록하고 오픈소스에 반영하므로 반드시 Git을 설치해야 합니다.
+Git을 사용하여 코드를 기록하고 반영하므로 반드시 Git을 설치해야 합니다.
 
 * macOS, Windows 사용자는 [Git - Downloads](https://git-scm.com/downloads)에서 Git 설치 파일을 다운로드하여 실행합니다.
 * Linux 사용자는 [Git - Git 설치](https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%84%A4%EC%B9%98)를 참고하여 Git을 설치합니다.

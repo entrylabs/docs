@@ -89,11 +89,7 @@ if (!script.isStart) {
     delete script.isStart;
     delete script.timeFlag;
     Entry.engine.isContinue = false;
-    Entry.hw.sendQueue[port] = {
-        id: Math.floor(Math.random() * 100000, 0),
-        type: Entry.EV3.motorMovementTypes.Power,
-        power: 0,
-    };
+    // 종료 신호 요청
     return script.callReturn();
 }
 ```
@@ -133,7 +129,7 @@ func: async function(sprite, script) {
 
 기존에 정의된 값만을 반환하는 블록입니다. 유사 블록으로는 초시계, 소리값 이 있습니다.
 
- `skeleton`은 미리 정의된 블록 모양을 정하는 프로퍼티입니다.  이 예제에서는 `basic_string_field` 를 사용하였습니다.
+`skeleton`은 미리 정의된 블록 모양을 정하는 프로퍼티입니다. 이 예제에서는 `basic_string_field` 를 사용하였습니다.
 `fontColor`를 통해 블록 내 글자색을 변경할 수 있습니다.
 `template`프로퍼티로 블록이 보여지는 명칭을 변경할 수 있습니다.
 

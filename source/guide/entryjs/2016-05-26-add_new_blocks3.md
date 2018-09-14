@@ -5,118 +5,6 @@ type: guide
 category: 'Entryjs'
 order: 5
 ---
-## 비동기 블록 처리
-
-### 왜 추가되었나?
-
-------
-
-기존의 엔트리 블럭은 값이 정상적으로 처리될때까지 기다릴 수 없었습니다.
-
-그래서 n초간 동작해야 하는 블럭, 혹은 데이터가 정상적으로 돌아왔는지 기다려야 하는 경우에는 특정 플래그를 만들고, 블럭을 계속 동작시키면서 확인하였습니다.
-
-이와 같이 '모든 코드가 비동기로 동작하는 동안, 특정 로직을 기다려야 하는 경우' 에 대해 효율적으로 처리하게끔 만들기 위해 비동기 블록 처리 방식이 추가되었습니다.
-
-### 비동기 블록 적용 방법 
-------
-변경된 코드에서는 async, await 이라는 키워드를 사용합니다. async, await 그리고 promise 를 통한 개발방식은 이해가 어려울 수 있으므로
-
-[async/await](https://www.zerocho.com/category/ECMAScript/post/58d142d8e6cda10018195f5a) 블로그 포스트를 참고해주세요.
-
-#### 값 블록
-
-코드의 수정이 필요한 부분은 아래와 같습니다.
-
-- 블록의 func: 에 아래의 함수가 하나 이상 포함된 경우
-  - getValue()
-  - getStringValue()
-  - getNumberValue()
-  - getBooleanValue()
-
-해당 함수가 포함된 경우, 아래와 같은 형태로 코드를 변경해주셔야 합니다.
-
-- 하나의 값블록이 포함된 경우
-
-```javascript
-// 함수는 비동기를 뜻하는 async 키워드가 붙습니다
-func: async function (sprite, script) {
-    // get(...)Value 함수는 블록에서 데이터를 가져올때 씁니다.
-    // get(...)Value 의 앞은 await 을 붙이게 됩니다.
-    const value = await script.getNumberValue("LEFTHAND", script);
-    return value;
-}
-```
-
-- 두개 이상의 값블록이 포함된 경우
-
-```javascript
-func: async function (sprite, script) {
-    const [value1, value2] = await Promise.all([
-        script.getNumberValue("VALUE1", script),
-        script.getNumberValue("VALUE2", script)
-    ]);
-    ...
-}
-```
-
-> await Promise.all([]) 은 여러개의 비동기 코드를 동시에 실행시키고, 결과가 전부 완료될때까지 기다립니다.
->
-> 만약 Promise.all을 사용하지 않고 각 위치에서 getValue() 를 실행하면, 해당 위치마다 데이터를 기다리게 됩니다.
-
-#### 대기가 필요한 로직
-
-코드를 작성하다보면 'n 초간 30 의 값으로 출력' 등으로 해당 블록이 일정 시간 대기를 해야 하는 로직이 필요할 수 있습니다.
-
-이와 같은 경우 기존에 실질적으로 사용되던 로직은 아래와 같습니다.
-
-```javascript
-func: ...
-
-if (!script.isStart) {
-    script.isStart = true;
-    script.timeFlag = 1;
-    // 시작 로직
-    var timer = setTimeout(function() {
-        script.timeFlag = 0;
-        removeTimeout(timer);
-    }, timeValue);
-    return script;
-} else if (script.timeFlag == 1) {
-    // 아직 데이터가 끝나지 않은 경우 현재 블록 계속 반복
-    return script;
-} else {
-    // n 초가 끝난 후 종료 로직
-    delete script.isStart;
-    delete script.timeFlag;
-    Entry.engine.isContinue = false;
-    // 종료 신호 요청
-}
-```
-
-변경된 로직은 아래와 같습니다. 더이상 플래그를 사용하지 않습니다.
-
-```javascript
-//파일 최상단에 해당 코드를 작성
-const PromiseManager = require('@core/promiseManager');
-const pm = new PromiseManager();
-
-...
-func: async function(sprite, script) {
-    //시작 로직
-    let [time, value] = await Promise.all([
-        script.getValue('TIME', script),
-        script.getValue('VALUE', script),
-    ]);
-    ...
-    
-    // await 을 붙여주어야 합니다.
-    // 블록은 반복하지 않고, 해당 코드에서 멈춥니다.
-    await pm.sleep(time * 1000);
-    
-    // 종료 로직.
-    ...
-},
-```
 
 ## 값 블록
 
@@ -255,14 +143,12 @@ Entry.block = {
             RIGHTHAND: 1
         },
         class: "test",
-        func: async function (sprite, script) {
+        func: function (sprite, script) {
             // type이 Block의 경우에는 Field가 아닌 Value로 취급해서 가져 옵니다.
             // 일반적으로는 getValue로 값을 가져오고
             // 명시적으로 숫자형으로 가져오고 싶을때에는 getNumberValue를 사용합니다.
-            const [leftValue, rightValue] = await Promise.all([
-                script.getNumberValue("LEFTHAND", script),
-                script.getNumberValue("RIGHTHAND", script) 
-            ]);
+            const leftValue = script.getNumberValue("LEFTHAND", script);
+            const rightValue = script.getNumberValue("RIGHTHAND", script);
             return leftValue + rightValue;
         }
     }
@@ -325,11 +211,11 @@ Entry.block = {
             RIGHTHAND: 1
         },
         class: "test",
-        func: async function (sprite, script) {
+        func: function (sprite, script) {
             // Dropdown의 경우 getField로 값을 가져오고
             // 명식적으로 숫자형으로 가져올땐 getNumberField를 사용해서 가져 옵니다.
             // 가져온 데이터는 Dropdown Option설정시에 지정하였던 Value값 입니다.
-            const leftValue = await script.getNumberValue("LEFTHAND", script);
+            const leftValue = script.getNumberValue("LEFTHAND", script);
             const rightValue = script.getNumberField("RIGHTHAND", script);
             
             return leftValue * rightValue;
@@ -414,11 +300,10 @@ Entry.block = {
             RIGHTHAND: 1
         },
         class: "test",
-        func: async function (sprite, script) {
-            const [leftValue, rightValue] = await Promise.all([
-                script.getNumberValue("LEFTHAND", script),
-                script.getNumberValue("RIGHTHAND", script) 
-            ]);
+        func: function (sprite, script) {
+            const leftValue = script.getNumberValue("LEFTHAND", script);
+            const rightValue = script.getNumberValue("RIGHTHAND", script);  
+            
             return (leftValue === rightValue);
         }
     }
@@ -554,8 +439,8 @@ Entry.block = {
         paramsKeyMap: {
             VALUE: 0
         },
-        func: async function (sprite, script) {
-            const value = await script.getNumberValue("VALUE", script);
+        func: function (sprite, script) {
+            const value = script.getNumberValue("VALUE", script);
             Entry.test.A += value;
         }
     }

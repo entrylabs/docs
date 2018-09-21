@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Node.js 개발 환경 세팅
+title: Node.js 개발 환경 설정
 type: guide
 category: 'Common'
 order: 1

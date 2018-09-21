@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Git 개발 환경 세팅
+title: Git 개발 환경 설정
 type: guide
 category: 'Common'
 order: 2
@@ -20,7 +20,7 @@ Git을 사용하여 코드를 기록하고 반영하므로 반드시 Git을 설�
 Git CLI 사용이 익숙치 않은 사용자들을 위해 GUI 툴 또한 다양합니다.
 아래의 툴을 통해 좀 더 쉽게 Git 작업을 하실 수 있습니다.
 
-> [Github Desktop](https://desktop.github.com/)  
+> [Github Desktop](https://desktop.github.com/)
 > [SourceTree](https://www.sourcetreeapp.com/)
 
 #### Github 가입

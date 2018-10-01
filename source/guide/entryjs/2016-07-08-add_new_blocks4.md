@@ -17,7 +17,7 @@ order: 6
 Entry.SAMPLE = {
     name: 'SAMPLE', // isNotFor 속성과 대소문자까지 정확하게 매치되어야 합니다.
     url: 'http://www.arduino.cc/', // 생략 가능합니다. 엔트리 사이트에서 홍보시 사용됩니다.
-    imageName: 'arduino.png', // images/hw 폴더 내에 존재하는 이미지입니다. 엔트리 사이트에서 홍보시 사용됩니다.
+    imageName: 'arduino.png', // images/hardware 폴더 내에 존재하는 이미지입니다. 엔트리 사이트에서 홍보시 사용됩니다.
     title: {
         "ko": "하드웨어명",
         "en": "HardwareName"

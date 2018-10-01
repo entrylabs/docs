@@ -80,7 +80,8 @@ Entry.SAMPLE.getBlocks = function () {
 
 ![about01](/docs/images/entryjs/about01.png)
 
-하드웨어 블록파일의 프로퍼티에는 imageName, url 이 있습니다. 이 정보는 엔트리의 '엔트리는?' 페이지(상단 참조) 의 '연결되는 하드웨어' 리스트 추가용으로 사용됩니다.  
+하드웨어 블록파일의 프로퍼티에는 imageName, url 이 있습니다.  
+이 정보는 엔트리의 '엔트리는?' 페이지(상단 참조) 의 '연결되는 하드웨어' 리스트 추가용으로 사용됩니다.  
 그러므로 처음 하드웨어를 추가요청 하실 경우, entryjs/images/hardware 아래에 imageName 과 동일한 명칭의 이미지 파일을 추가해 주시기 바랍니다.
 
 ### 블록색상 고정

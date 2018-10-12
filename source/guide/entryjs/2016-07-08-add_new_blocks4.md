@@ -19,8 +19,8 @@ Entry.SAMPLE = {
     url: 'http://www.arduino.cc/', // 생략 가능합니다. 엔트리 사이트에서 홍보시 사용됩니다.
     imageName: 'arduino.png', // images/hardware 폴더 내에 존재하는 이미지입니다. 엔트리 사이트에서 홍보시 사용됩니다.
     title: {
-        "ko": "하드웨어명",
-        "en": "HardwareName"
+        'ko': '하드웨어명',
+        'en': 'HardwareName'
     },
     setZero: function () {
         // 엔트리 정지시 하드웨어 초기화 로직
@@ -33,13 +33,13 @@ Entry.SAMPLE.setLanguage = function () {
         ko: {
             // ko.js에 작성하던 내용
             template: {
-                sample_block: "%1",
+                sample_block: '%1',
             }
         },
         en: {
             // en.js에 작성하던 내용
             template: {
-                sample_block: "%1",
+                sample_block: '%1',
             }
         }
     }
@@ -49,23 +49,24 @@ Entry.SAMPLE.setLanguage = function () {
 Entry.SAMPLE.getBlocks = function () {
     return {
         sample_block: {
-            color: "#FFD974",
-            skeleton: "basic_string_field",
+            color: '#FFD974',
+            skeleton: 'basic_string_field',
+            fontColor: '#fff',
             params: [
                 {
-                    type: "TextInput",
+                    type: 'TextInput',
                     value: 0
                 }
             ],
             def: {
-                type: "sample_block"
+                type: 'sample_block'
             },
             paramsKeyMap: {
                 VALUE: 0
             },
-            class: "test",
+            class: 'test',
             func: function (sprite, script) {
-                return script.getField("VALUE", script);
+                return script.getField('VALUE', script);
             }
         }
     }
@@ -138,8 +139,8 @@ Entry.Arduino = {
     url: 'http://www.arduino.cc/',
     imageName: 'arduino.png',
     title: {
-        "ko": "아두이노",
-        "en": "Arduino"
+        'ko': '아두이노',
+        'en': 'Arduino'
     },
     setZero: function() {
         Entry.hw.sendQueue.readablePorts = [];

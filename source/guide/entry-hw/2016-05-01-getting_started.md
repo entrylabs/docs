@@ -35,7 +35,8 @@ Entry Hardware는 1.5.0 부터 [Electron](https://electron.atom.io/)기반으로
 Fork를 통하여 본인 계정으로 해당 Repository를 복사합니다. 복사한 레포지토리를 git clone으로 내 로컬 컴퓨터에 다운 받아 개발 가능한 상태로 만듭니다.
 
 ### 클론
-클론을 먼저 하기 전에 Git Fork기능으로 현재 Entrylabs의 Repository를 복사하여 자신의 Repository를 만듭니다. 이후 `Git Clone`을 수행하여 자신의 로컬에 해당 소스를 받습니다.
+
+fork 를 통해 원격 저장소를 복사하였으면, 로컬로 저장소를 가져와야 합니다. `git clone`을 수행하여 로컬에 해당 소스를 받습니다.
 ``` bash
 $ git clone https://github.com/(본인의 Repository)/entry-hw.git
 ```

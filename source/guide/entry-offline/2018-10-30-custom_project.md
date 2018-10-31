@@ -13,7 +13,7 @@ order: 6
 
 이에 관련하여 이 문서에서는 자신이 개발한 entryjs 혹은 entry-hw 버전으로 교체하여 오프라인 프로젝트를 빌드하는 방법을 작성하였습니다.
 
-### 연동 구조
+## 연동 구조
  
 엔트리 오프라인은 렌더러 프로세스에서 entryjs, entry-hw 프로젝트를 가져오는 구조입니다.
  
@@ -37,14 +37,14 @@ entry-hw 는 직접 github 에서 데이터를 가져오며, entryjs 는 bower �
 > entry-hw 의 경우 : ht<span>tps://github.co</span>m/[자신의 ID]/entry-hw.git#master
 > entryjs 의 경우 : ht<span>tps://github.co</span>m/[자신의 ID]/entryjs.git#master
 
-### 반영 절차
+## 반영 절차
 
-#### 각 프로젝트 fork 하기
+### 각 프로젝트 fork 하기
 
 반영하고자 하는 프로젝트를 먼저 fork 합니다. fork 방법은 각 가이드문서([entryjs](/docs/guide/entryjs/2018-03-09-getting_started.html), [entry-hw](/docs/guide/entry-hw/2016-05-01-getting_started.html))
 를 참고해주세요.
 
-#### entryjs 반영하기
+### entryjs 반영하기
 
 > entryjs 에서의 개발은 해당 카테고리를 참고해주세요.
 
@@ -73,12 +73,12 @@ bash script 이므로 windows 에서는 git bash 등의 쉘을 사용하셔야 �
 
 > 이에 관해서는 편의성을 위해 추후 스크립트 개선 혹은 구조 변경이 있을 수 있습니다.
 
-#### entry-hw 반영하기
+### entry-hw 반영하기
 
 entry-hw 는 특별한 빌드 방법 없이 bower.json 의 주소를 자신의 repository 로 변경 한 후 설치된 파일 그대로 사용합니다.
 
 특별히 dependency 를 설치해주지 않아도 됩니다.
 
-#### 실행해보기
+### 실행해보기
 
 위와 같은 작업이 끝나면, `npm run start` 로 정상적으로 실행되는지 확인할 수 있습니다.

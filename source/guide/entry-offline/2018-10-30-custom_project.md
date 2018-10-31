@@ -34,8 +34,8 @@ entry-hw 는 직접 github 에서 데이터를 가져오며, entryjs 는 bower �
 
 만약 자신이 작업한 entry, entry-hw 를 오프라인 프로젝트에 반영하고자 한다면, 이를 수정하여 적용할 수 있습니다.
   
-> entry-hw 의 경우 : https://github.com/[자신의 ID]/entry-hw.git#master
-> entryjs 의 경우 : https://github.com/[자신의 ID]/entryjs.git#master
+> entry-hw 의 경우 : ht<span>tps://github.co</span>m/[자신의 ID]/entry-hw.git#master
+> entryjs 의 경우 : ht<span>tps://github.co</span>m/[자신의 ID]/entryjs.git#master
 
 ### 반영 절차
 

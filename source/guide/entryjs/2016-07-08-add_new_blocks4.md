@@ -7,14 +7,15 @@ order: 6
 ---
 ## 하드웨어 블록 개발
 
-하드웨어 블록은 `src/playground/blocks/block_(하드웨어명).js` 의 명칭으로 파일을 만드셔야 합니다.  
-하드웨어 블록 파일은 아래와 같은 구성요소를 가집니다. 실제 코드는 `src/playground/blocks/block_arduino.js` 를 참고하는 것을 추천드립니다.
+하드웨어 블록은 `src/playground/blocks/hardware/block_(하드웨어명).js` 의 명칭으로 파일을 만드셔야 합니다.  
+하드웨어 블록 파일은 아래와 같은 구성요소를 가집니다. 실제 코드는 `src/playground/blocks/hardware/block_arduino.js` 를 참고하는 것을 추천드립니다.
 
 예)
 ``` js
 'use strict';
 
 Entry.SAMPLE = {
+    id: '1.1', // 엔트리에서 발급받은 하드웨어 번호를 기술합니다.
     name: 'SAMPLE', // isNotFor 속성과 대소문자까지 정확하게 매치되어야 합니다.
     url: 'http://www.arduino.cc/', // 생략 가능합니다. 엔트리 사이트에서 홍보시 사용됩니다.
     imageName: 'arduino.png', // images/hardware 폴더 내에 존재하는 이미지입니다. 엔트리 사이트에서 홍보시 사용됩니다.
@@ -45,11 +46,17 @@ Entry.SAMPLE.setLanguage = function () {
     }
 };
 
+// 엔트리에 등록할 블록들의 블록명 작성
+Entry.SAMPLE.blockMenuBlocks = [
+    'sample_block',
+];
+
 // 블록 생성
 Entry.SAMPLE.getBlocks = function () {
     return {
         sample_block: {
-            color: '#FFD974',
+            color: '#00CFCA',
+            outerLine: '#04B5B0',
             skeleton: 'basic_string_field',
             fontColor: '#fff',
             params: [
@@ -71,11 +78,47 @@ Entry.SAMPLE.getBlocks = function () {
         }
     }
 };
+
+// 엔트리에서 하드웨어 블록 클래스를 인식할 수 있도록 내보내기
+module.exports = Entry.SAMPLE;
 ```
 
 ## 하드웨어 개발시 유의사항
 
 하드웨어 블록은 기본적으로 일반 블록과 생성 및 사용법이 같으나 몇가지 특징이 있습니다.
+
+### id 속성
+
+하드웨어는 엔트리에 등록하기 전 하드웨어 고유번호를 발급 받습니다.
+이전에는 blocks/index.js 에 직접 추가해야 했으나, 수정되는 파일의 범위를 줄이기 위해 블록 파일 내에서 추가하도록 변경하였습니다.
+
+id 의 경우 직접 개발한 하드웨어 블록 모듈이 아닌, 아두이노와 같은 기존에 작성된 파일을 사용하고자 하는 경우에는 아래와 같이 수정합니다.
+
+> 하나의 ID만 사용하는 경우 `id : '1.1'`  
+> 복수의 ID가 사용되는 경우 `id : [1.1, 2.2, 4.4]`
+
+### blockMenuBlocks 
+
+일반적인 블록 등록시에는 static.js 파일에 블록명을 추가하여야 했습니다.
+다양한 하드웨어 개발사에서 단일 파일을 수정하면서 충돌이 자주 발생하였습니다.
+
+그러므로 아래와 같이 하드웨어 블록 파일에서 필요한 부분만 작성할 수 있도록 개선하였습니다.
+
+```js
+Entry.SAMPLE.blockMenuBlocks = [
+    'sample_block',
+    'sample_block2',
+];
+```
+
+### module.exports
+
+하드웨어의 자동등록을 위해 엔트리에서 해당 파일을 인식할 수 있도록 module.exports 구문을 추가해주어야 합니다.
+기본적으로는 하나의 파일에 하나의 모듈이 작성되지만, 복수의 모듈이 포함되어있는 경우 아래와 같이 작성합니다.
+
+> 하나의 모듈만 사용하는 경우 `module.exports = Entry.SAMPLE;` 
+> 복수의 모듈이 사용되는 경우 `module.exports = [Entry.SAMPLE, Entry.SAMPLE2];`
+ 
 
 ### 하드웨어 첫 등록시 홍보용 이미지 추가
 
@@ -87,7 +130,7 @@ Entry.SAMPLE.getBlocks = function () {
 
 ### 블록색상 고정
 
-하드웨어 블록은 현재는 `#00979D`로 고정해서 사용하도록 강제하고 있습니다. 이점 양해부탁드리며 앞으로 소스 개발시 해당 부분 변동 없이 처리 부탁드립니다.
+하드웨어 블록은 현재 컬러:`#00CFCA`, 경계선:`#04B5B0`로 고정해서 사용하도록 강제하고 있습니다. 이점 양해부탁드립니다.
 
 ### 하드웨어 연결프로그램에 값 읽고 쓰기
 
@@ -129,12 +172,13 @@ function (sprite, script) {
 
 #### Entry.(하드웨어명).setZero
 
-`src/playground/blocks/block_(하드웨어명).js` 위치에 setZero를 정의하도록 합니다. 실제 코드는 `block_arduino.js` 를 참고하시기 바랍니다.  
+`src/playground/blocks/hardware/block_(하드웨어명).js` 위치에 setZero를 정의하도록 합니다. 실제 코드는 `block_arduino.js` 를 참고하시기 바랍니다.  
 해당 소스에는 `Entry.hw.sendQueue`에 초기값을로 동작할 데이터를 세팅 하고 `Entry.hw.update()`를 실행시켜서 하드웨어쪽으로 데이터를 보내도록 정의하면 됩니다.
 
 block_arduino.js 를 통한 예)
 ``` js
 Entry.Arduino = {
+    id: '1.1'
     name: 'arduino',
     url: 'http://www.arduino.cc/',
     imageName: 'arduino.png',

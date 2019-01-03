@@ -16,8 +16,6 @@ order: 4
 
 **블록의 기록 순서는 실제 블록의 순서에 영향을 줍니다. (동일한 순서입니다.)**    
 
-> 하드웨어 블록의 경우, category 명은 arduino 입니다.  
-> 기존 등록된 블록의 형태를 참고하시고 추가하시기 바랍니다.
 
 ```js
 EntryStatic.getAllBlocks = function() {
@@ -32,3 +30,26 @@ EntryStatic.getAllBlocks = function() {
     ]
 }
 ```
+
+
+## 하드웨어 블록 등록
+
+하드웨어 블록도 동일하게 static.js 파일을 수정하는 것으로 블록을 등록하였었습니다.  
+하지만 각 개발사들이 같은 파일을 수정하면서 충돌이 잦아, 각 하드웨어 블록 파일에서 수정할 수 있도록 개선하였습니다.
+
+```js
+Entry.Arduino.blockMenuBlocks = [
+    'arduino_get_number_sensor_value',
+    'arduino_get_digital_value',
+    'arduino_toggle_led',
+    'arduino_toggle_pwm',
+    'arduino_convert_scale',
+];
+
+Entry.Arduino.getBlocks = function() {
+    return {
+        arduino_text: {
+        //...
+```
+
+Entry.하드웨어명.blockMenuBlocks = [] 에 등록하고자 하는 블록명을 차례대로 작성해 주시면 됩니다.

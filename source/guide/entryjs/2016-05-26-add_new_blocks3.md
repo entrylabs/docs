@@ -27,8 +27,10 @@ order: 5
 ``` js
 Entry.block = {
     default_value: {
-        //블록 생상
-        color: "#FFD974",
+        //블록 색상
+        color: "#00CFCA",
+        //경계선 색상
+        outerLine: "#04B5B0",
         // 폰트색상 basic_string_field는 기본 색상이 검정색(#000) 입니다.
         fontColor: "#000",
         // 블록 모양 정의

@@ -18,7 +18,7 @@ Entry.SAMPLE = {
     id: '1.1', // 엔트리에서 발급받은 하드웨어 번호를 기술합니다.
     name: 'SAMPLE', // isNotFor 속성과 대소문자까지 정확하게 매치되어야 합니다.
     url: 'http://www.arduino.cc/', // 생략 가능합니다. 엔트리 사이트에서 홍보시 사용됩니다.
-    imageName: 'arduino.png', // images/hardware 폴더 내에 존재하는 이미지입니다. 엔트리 사이트에서 홍보시 사용됩니다.
+    imageName: 'arduino.png', // images/hardware, images/hw 폴더 내에 존재하는 이미지입니다.
     title: {
         'ko': '하드웨어명',
         'en': 'HardwareName'
@@ -55,18 +55,29 @@ Entry.SAMPLE.blockMenuBlocks = [
 Entry.SAMPLE.getBlocks = function () {
     return {
         sample_block: {
-            color: '#00CFCA',
-            outerLine: '#04B5B0',
+            color: EntryStatic.colorSet.block.default.HARDWARE,
+            outerLine: EntryStatic.colorSet.block.darken.HARDWARE,
             skeleton: 'basic_string_field',
             fontColor: '#fff',
             params: [
                 {
-                    type: 'TextInput',
-                    value: 0
-                }
+                    type: 'Dropdown',
+                    options: [
+                        ['1', '1'],
+                        ['2', '2'],
+                        ['3', '3'],
+                        ['4', '4'],
+                        ['5', '5'],
+                        ['6', '6'],
+                    ],
+                    value: '4',
+                    fontSize: 11,
+                    bgColor: EntryStatic.colorSet.block.darken.HARDWARE,
+                    arrowColor: EntryStatic.colorSet.arrow.default.HARDWARE,
+                },
             ],
             def: {
-                type: 'sample_block'
+                params: [null],
             },
             paramsKeyMap: {
                 VALUE: 0
@@ -130,7 +141,9 @@ Entry.SAMPLE.blockMenuBlocks = [
 
 ### 블록색상 고정
 
-하드웨어 블록은 현재 컬러:`#00CFCA`, 경계선:`#04B5B0`로 고정해서 사용하도록 강제하고 있습니다. 이점 양해부탁드립니다.
+하드웨어 블록은 현재  
+컬러:`EntryStatic.colorSet.block.default.HARDWARE`,  
+경계선:`EntryStatic.colorSet.block.darken.HARDWARE` 로 고정해서 사용하도록 강제하고 있습니다. 이점 양해부탁드립니다.
 
 ### 하드웨어 연결프로그램에 값 읽고 쓰기
 
@@ -202,7 +215,7 @@ Entry.Arduino = {
 
 `isNotFor`와 `Class`는 사용자에게 블록을 알맞게 보여주는 역할을 합니다.
 
-#### Class  
+#### Class
 
 `Class`의 경우에는 블록들간의 구분선을 보여주는 역할을 합니다.  
 예를 들어 `센서 데이터 읽기`, `센서 데이터 쓰기` 등으로 블럭을 구분짓고 싶을 때 활용하실 수 있습니다.

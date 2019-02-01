@@ -84,7 +84,7 @@ Entry.block = {
             VALUE: 0
         },
         class: "test",
-        func: function (sprite, script) {            
+        func: function (sprite, script) {
             // 해당 값을 getField로 가져오고
             // 가져 올때 paramsKeyMap에서
             // 정의한 VALUE라는 키값으로 데이터를 가져옵니다.
@@ -98,9 +98,9 @@ Entry.block = {
 
 ![기본 블록](/docs/images/entryjs/block_create/default_multi_input_value.png)
 
-자료 계산시 또는 하드웨어 아날로그 값을 처리할때 많이 사용하는 블록 형태 입니다. 
+자료 계산시 또는 하드웨어 아날로그 값을 처리할때 많이 사용하는 블록 형태 입니다.
 
-해당 블록에서 핵심은 단일 입력 블록을 만들 때와는 다르게 `type: "Block"`를 사용해서 값을 가져오는 것과 `def > params`를 통해 초기값을 세팅한다는 점을 꼼꼼히 봐야 합니다.
+해당 블록에서 핵심은 단일 입력 블록을 만들 때와는 다르게 `type: "Block"`를 사용해서 값을 가져오는 것과 `def > params`를 통해 초기값을 설정한다는 점을 꼼꼼히 봐야 합니다.
 
 ``` js
 Entry.block = {
@@ -163,7 +163,7 @@ Entry.block = {
 
 사용자 키보드 타이핑 입력이 아닌 정해진 값을 선택해서 입력받는 방식으로 드롭다운 블록을 이용할 수 있습니다.
 
-기본적으로 드롭다운은 `Key`, `Value`방식으로 동작하고 `Key`는 사용자 에게 보여주는 값이며, `Value`는 내부적으로 사용되는 값 입니다.  
+기본적으로 드롭다운은 `Key`, `Value`방식으로 동작하고 `Key`는 사용자 에게 보여주는 값이며, `Value`는 내부적으로 사용되는 값 입니다.
 
 ``` js
 Entry.block = {
@@ -203,7 +203,7 @@ Entry.block = {
                     type: "number",
                     params: [ "2" ]
                 },
-                // Dropdown 값의 경우 Value를 세팅하면 초기값이 처리 됩니다.
+                // Dropdown 값의 경우 Value를 설정하면 초기값이 처리 됩니다.
                 "1"
             ],
             type: "test1"
@@ -219,14 +219,14 @@ Entry.block = {
             // 가져온 데이터는 Dropdown Option설정시에 지정하였던 Value값 입니다.
             const leftValue = script.getNumberValue("LEFTHAND", script);
             const rightValue = script.getNumberField("RIGHTHAND", script);
-            
+
             return leftValue * rightValue;
         }
     }
 }
 ```
 
-## 판단 블록  
+## 판단 블록
 
 판단 블록은 육각형 형태의 블록으로 다른블록에 끼워 넣어서 사용하는 블록입니다. 들어가는 값은 `TRUE`, `FLASE`의 `Boolean`값이 들어가게 됩니다.
 
@@ -304,8 +304,8 @@ Entry.block = {
         class: "test",
         func: function (sprite, script) {
             const leftValue = script.getNumberValue("LEFTHAND", script);
-            const rightValue = script.getNumberValue("RIGHTHAND", script);  
-            
+            const rightValue = script.getNumberValue("RIGHTHAND", script);
+
             return (leftValue === rightValue);
         }
     }
@@ -407,7 +407,7 @@ Entry.block = {
 }
 ```
 
-### 사용자 입력 순차 블록  
+### 사용자 입력 순차 블록
 
 ![사용자 입력 순차 블록](/docs/images/entryjs/block_create/default_input_block.png)
 

@@ -41,6 +41,14 @@ fork 를 통해 원격 저장소를 복사하였으면, 로컬로 저장소를 �
 $ git clone https://github.com/(본인의 Repository)/entry-hw.git
 ```
 
+### node.js native addon build 환경 설정
+
+entry-hw 의 시리얼포트 통신을 담당하는 라이브러리는 시스템 환경에 종속되므로, 설치시 추가적인 빌드가 필요합니다.  
+빌드에 대한 자세한 사항은 [node-gyp](https://github.com/nodejs/node-gyp#installation) 을 참고해주세요.
+
+windows os 는 관리자모드로 cmd 혹은 powershell 에서 아래의 명령어로 쉽게 환경설정이 가능합니다.  
+`npm install --global --production windows-build-tools`
+
 ### 의존성 모듈 설치  
 ``` bash
 $ npm install

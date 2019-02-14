@@ -103,6 +103,7 @@ module.exports = new [모듈명]();
         "en": "English Name",
         "ko": "한글명"
     },
+    "category": "해당 기기의 카테고리 분류(robot, module, board)"
     "platform": ["사용 할 운영체제(win32 | darwin)", "복수 선택 가능"],
     "icon" : "이미지(.png(권장) | .jpg | .gif ...)",
     "module": "모듈(.js)",
@@ -123,7 +124,7 @@ module.exports = new [모듈명]();
     "hardware": {
         "type": "타입(serial | bluetooth)",
         "control": "동작방식(slave | master)",
-        "duration": "slave 사용시 duration(32 ...)",
+        "duration": "slave 모드일 경우 통신이 끊겼을 경우 재접속을 시도할 ms (32 ...)",
         "vendor": ["하드웨어 벤더명(ex.Arduino)"],
         "firmwarecheck": "펌웨어 자동체크여부 (true | false)",
         "baudRate": "baudRate(115200(최대), 57600, 38400, 19200, 9600, 4800, 2400, 1800, 1200, 600, 300, 200, 150, 134, 110, 75, 50)",

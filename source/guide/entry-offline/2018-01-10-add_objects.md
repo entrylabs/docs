@@ -13,29 +13,30 @@ order: 4
 
 엔트리 오프라인에서 오브젝트들은 아래와 같이 관리되고 있습니다.
 
-- `src/renderer/resource_map` 내의 `json` 파일들로 **오브젝트 메타데이터**를 관리합니다.
-- `src/renderer/lang` 에서 **오브젝트의 명칭**을 관리합니다.
-- `src/renderer/node_modules/uploads` 에서 **실제 파일**을 관리합니다.
+- `src/renderer/resources/db` 내의 `json` 파일들로 **오브젝트 메타데이터**를 관리합니다.
+- `src/renderer/resources/lang` 에서 **오브젝트의 명칭**을 관리합니다.
+- `src/renderer/resources/uploads` 에서 **실제 파일**을 관리합니다.
 
 오브젝트를 추가하는 방법은 아래와 같습니다.
 
 1. 추가할 `오브젝트` 파일을 `uploads`에 추가 (추가시 파일명은 난수값이며, 폴더 구조도 이와 연관이 있습니다.)
-1. `resource_map` 하위의 `json`파일에 오브젝트 메타데이터 추가
+1. `db` 하위의 `json`파일에 오브젝트 메타데이터 추가
 1. `json`에 추가된 오브젝트에 맞추어 `lang`밑에 있는 영어 언어 추가
 
 ## 파일명칭 만들기
 
 폴더 및 파일명 엔트리 전역에서 사용되는 난수값으로 처리되어있습니다.  
-오브젝트의 파일명은 `native_controll.js`의 `createFileId`라는 함수에서 정해진 규칙으로 만들 수 있습니다.
+오브젝트의 파일명은 `mainUtils.js`의 `createFileId`라는 함수에서 정해진 규칙으로 만들 수 있습니다.
 
 ```javascript
-var createFileId = function() {
-  var randomStr = (Math.random().toString(16) + "000000000").substr(2, 8);
-  return require("crypto")
-    .createHash("md5")
-    .update(randomStr)
-    .digest("hex");
-};
+import crypto from 'crypto';
+function createFileId() {
+    const randomStr = `${Math.random().toString(16)}000000000`.substr(2, 8);
+    return crypto
+        .createHash('md5')
+        .update(randomStr)
+        .digest('hex');
+}
 ```
 
 위의 함수를 실행하면 `c10d9264e94cf57451b45a13ca6db1cc` 와 같은 32 자리 텍스트가 만들어 지게 됩니다. 

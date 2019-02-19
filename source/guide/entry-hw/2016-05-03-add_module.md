@@ -103,7 +103,7 @@ module.exports = new [모듈명]();
         "en": "English Name",
         "ko": "한글명"
     },
-    "category": "해당 기기의 카테고리 분류(robot, module, board)"
+    "category": "해당 기기의 카테고리 분류(robot, module, board)",
     "platform": ["사용 할 운영체제(win32 | darwin)", "복수 선택 가능"],
     "icon" : "이미지(.png(권장) | .jpg | .gif ...)",
     "module": "모듈(.js)",

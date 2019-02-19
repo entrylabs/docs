@@ -41,22 +41,30 @@ fork 를 통해 원격 저장소를 복사하였으면, 로컬로 저장소를 �
 $ git clone https://github.com/(본인의 Repository)/entry-hw.git
 ```
 
-### node.js native addon build 환경 설정
+#### Node-gyp 설치
 
-entry-hw 의 시리얼포트 통신을 담당하는 라이브러리는 시스템 환경에 종속되므로, 설치시 추가적인 빌드가 필요합니다.  
-빌드에 대한 자세한 사항은 [node-gyp](https://github.com/nodejs/node-gyp#installation) 을 참고해주세요.
+엔트리 하드웨어는 시리얼포트 통신을 위해 [node-serialport](https://github.com/node-serialport/node-serialport) 라이브러리를 사용합니다.
+해당 라이브러리를 사용하기 위해서는 C++, python 빌드 환경과 [node-gyp](https://github.com/nodejs/node-gyp) 라이브러리가 필요합니다.  
+빌드에 대한 자세한 사항은 [node-gyp#installation](https://github.com/nodejs/node-gyp#installation) 을 참고해 주세요.
 
-windows os 는 관리자모드로 cmd 혹은 powershell 에서 아래의 명령어로 쉽게 환경설정이 가능합니다.  
-`npm install --global --production windows-build-tools`
+이 글에선 윈도우를 기준으로 설명하도록 하겠습니다.
+
+먼저 빌드 환경 구성을 위해 아래의 명령어로 파이썬, 윈도우 C++ 관련 툴을 설치해주세요. (관리자 모드 프롬프트에서 입력하세요)
+```bash
+npm install --global --production windows-build-tools
+```
+
+그 다음 빌드 라이브러리인 node-gyp 을 설치해주세요.
+```bash
+npm install --global node-gyp
+``` 
 
 ### 의존성 모듈 설치  
 ``` bash
-$ npm install
-// yarn으로도 똑같이 설치가 가능합니다.
-$ yarn
+$ npm install || yarn
 ```
 
 ### 실행  
 ``` bash
-$ npm start
+$ npm run start || yarn start
 ```

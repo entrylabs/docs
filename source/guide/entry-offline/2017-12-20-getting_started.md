@@ -26,6 +26,7 @@ Node.js 는 개발 전반을 위해 반드시 설치가 되어야하는 프레�
 ```bash
 npm install --global yarn
 ```
+> 사이트 : https://yarnpkg.com
 
 #### Bower
 엔트리 오프라인의 정적 라이브러리들은 `bower` 를 통해 관리 합니다.
@@ -49,7 +50,8 @@ npm install --global --production windows-build-tools
 npm install --global node-gyp
 ```
 
-> 사이트 : https://yarnpkg.com
+> 만약 하드웨어 선택시 프로그램이 멈춘다면,
+> `npx electron-build` 명령으로 재빌드 해보시길 바랍니다.
 
 ### node.js native addon build 환경 설정
 

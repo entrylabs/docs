@@ -59,6 +59,9 @@ npm install --global --production windows-build-tools
 npm install --global node-gyp
 ``` 
 
+> 만약 하드웨어 선택시 프로그램이 멈춘다면,
+> `npx electron-build` 명령으로 재빌드 해보시길 바랍니다.
+
 ### 의존성 모듈 설치  
 ``` bash
 $ npm install || yarn

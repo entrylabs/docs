@@ -19,6 +19,11 @@ Entry.Testino = {
     },
 };
 
+Entry.Testino.blockMenuBlocks = [
+    "testino_on_digital_value", // 작성한 블록의 이름을 추가합니다.
+    "testino_off_digital_value"
+];
+
 Entry.Testino.setLanguage = () => {
 	return {
 		ko: {
@@ -133,4 +138,6 @@ Entry.Testino.getBlocks = () => {
             }, 
         },
     }
-}
+};
+
+module.exports = Entry.Testino;

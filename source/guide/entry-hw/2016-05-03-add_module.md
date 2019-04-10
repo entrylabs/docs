@@ -50,7 +50,11 @@ class [모듈명] extends BaseModule {
         // ...
     }
     
-    // 초기 설정
+    /*
+    최초에 커넥션이 이루어진 후의 초기 설정.
+    handler 는 워크스페이스와 통신하 데이터를 json 화 하는 오브젝트입니다. (datahandler/json 참고)
+    config 은 module.json 오브젝트입니다.
+    */
     init(handler, config) {
         this.handler = handler;
         this.config = config;
@@ -66,7 +70,7 @@ class [모듈명] extends BaseModule {
         // return true;
     }
     
-    // optional. 하드웨어에서 받은 데이터의 검증이 필요한 경우 사용합니다.
+    // optional. 주기적으로 하드웨어에서 받은 데이터의 검증이 필요한 경우 사용합니다.
     validateLocalData(data) {
         // return true;
     }
@@ -113,30 +117,59 @@ module.exports = new [모듈명]();
         "darwin-x64": "맥(Osx) 64비트 하드웨어 드라이버(여러 드라이버 등록가능)"
     },
     "url": "회사 홈페이지",
-    "email": "고객센터 Email(필수)",
-    "reconnect" : "재접속 시도여부 (true | false)",
-    "firmware": "펌웨어(board) 여러 펌웨어 등록 가능",
-    "firmwareBaudRate" : "펌웨어 업로드시 동작할 Baud Rate 값",
+    "email": "고객센터 Email",
+    "reconnect": "연결 lost시 재접속 시도여부 (true | false)",
+    "firmware": "아두이노 hex 혹은 hex 파일 업로드 타입 전용. 해당 펌웨어 명",
+    "firmwareBaudRate" : "펌웨어 업로드시 동작할 Baud Rate 값 기본 115200",
+    "firmwareMCUType" : "펌웨어 업로드시 동작할 MCUType. 기본 m328p",
+    "tryFlahserNumber" : "펌웨어 업로드 실패시 재시도 회수. 기본 10",
     "select_com_port": "Com Port 선택창 여부 (true | false)",
     "entry": {
-        "protocol": "데이터규격(json)"
+        "protocol": "json"
     },
     "hardware": {
         "type": "타입(serial | bluetooth)",
         "control": "동작방식(slave | master)",
-        "duration": "slave 모드일 경우 통신이 끊겼을 경우 재접속을 시도할 ms (32 ...)",
-        "vendor": ["하드웨어 벤더명(ex.Arduino)"],
-        "firmwarecheck": "펌웨어 자동체크여부 (true | false)",
+        "duration": "slave 모드일 경우 통신이 끊겼을 경우 재접속을 시도할 ms. 기본 1000",
+        "comName": "['COMPortName'] 존재하는 경우 해당 속성이 일치하는 COMPort 선택",
+        "vendor": "['하드웨어 벤더명(ex.Arduino)'] 존재하는 경우 해당 속성이 일치하는 COMPort 선택",
+        "pnpId": "['pnpId'] 존재하는 경우 해당 속성이 일치하는 COMPort 선택",
+        "scanType": "deprecated 되었습니다.", 
+        "firmwarecheck": "checkInitialData 3초간 실패시 펌웨어 자동 업로드여부 (true | false)",
+        "lostTimer": "연결 성사 후 일정시간동안 통신이 없는 경우 lost 처리할 ms. 기본 500",
+        "advertise": "{number} 하단 참고",
+        "softwareReset: "{boolean} 하단 참고",
         "baudRate": "baudRate(115200(최대), 57600, 38400, 19200, 9600, 4800, 2400, 1800, 1200, 600, 300, 200, 150, 134, 110, 75, 50)",
         "parity" : "parity('none', 'even', 'mark', 'odd', 'space')",
         "dataBits" : "dataBits(8, 7, 6, 5)",
         "stopBits" : "stopBits(1, 2)",
         "bufferSize" : "bufferSize(255 ...)",
-        "delimiter" : "delimiter(ex '\r')",
-        "flowControl" : "flowControl(ex. 'hardware')"
+        "flowControl" : "flowControl('hardware' | 'software')"
+        "delimiter" : "{string} delimiter(ex '\r')",
+        "byteDelimiter" : "{string|number[]} delimiter(ex '\r')",
     }
 }
 ```
+
+몇가지 속성에 대해 추가 설명 드립니다.
+
+- comName, vendor, pnpId : COMPort 스캔시 사용되는 속성입니다. 해당 속성과 매치되는 경우 바로 해당 COMPort 를 선택합니다.
+- control : slave, master 중 하나를 선택해야 합니다. 이 둘은 통신방식이 다릅니다.  
+  - 최초 checkInitialData & requestInitialData (HandShake) 시
+    - master : 마스터 속성인 경우 기기쪽에서 먼저 데이터가 올때까지 기다립니다.
+    - slave : duration 속성만큼의 간격으로 기기쪽으로 먼저 데이터를 보냅니다.
+  - 연결 성사 후 데이터 통신시
+    - master : 기기에서 데이터를 받으면 그다음 기기로 requestLocalData 송신
+    - slave : requestLocalData 를 duration 속성만큼 주기적으로 전송
+ - advertise : 연결 성사 후 마지막으로 handler 에 작성한 데이터(엔트리로 전송할 데이터) 를 변경없이 advertise 속성 만큼의 간격으로 서버에 전송합니다.
+ - softwareReset : true 인 경우, 최초 연결 후 시리얼포트에 dtr 플래그를 1초간 off 합니다. 그 후 다시 flag on 합니다.
+ 
+ SerialPort 관련
+ - baudRate ~ bufferSize : 시리얼포트 라이브러리 오픈시 필요한 옵션입니다. 자세한 사항은 [Serialport Docs](https://serialport.io/docs/en/api-stream#openoptions) 를 참고해주세요.  
+ - flowControl : hardware, software 로 나뉩니다. hardware 선택시 rtscts 플래그 / software 시 xon, xoff 플래그가 on 입니다.
+ - delimiter | byteDelimiter : 둘중 한 프로퍼티만 적용됩니다. 기기에서 전달받는 데이터의 파서를 선택합니다.  
+ delimiter 인 경우 결과값을 string 으로, byteDelimiter 의 경우 byteArray(ex. [255, 83, 13, 10]) 로 전달받습니다.
+ byteDelimiter 는 해당 delimiter 를 포함한 결과값을 받게 됩니다.
 
 ### 이미지 삽입
 이미지는 찌그러짐을 방지하기 위하여 정사각형의 이미지 이어야 하며 배경색이 투명색한 `.png` 파일이어야 합니다. 또한, 용량문제 때문에 너무 큰 이미지는 사용을 자제해 주시고, 적당한 크기의 이미지를 최대한 압축 및 최적화 후 넣어 주시면 됩니다.

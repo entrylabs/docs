@@ -47,9 +47,7 @@ $ git clone https://github.com/(본인의 Repository)/entry-hw.git
 해당 라이브러리를 사용하기 위해서는 C++, python 빌드 환경과 [node-gyp](https://github.com/nodejs/node-gyp) 라이브러리가 필요합니다.  
 빌드에 대한 자세한 사항은 [node-gyp#installation](https://github.com/nodejs/node-gyp#installation) 을 참고해 주세요.
 
-이 글에선 윈도우를 기준으로 설명하도록 하겠습니다.
-
-먼저 빌드 환경 구성을 위해 아래의 명령어로 파이썬, 윈도우 C++ 관련 툴을 설치해주세요. (관리자 모드 프롬프트에서 입력하세요)
+윈도우의 경우는 아래의 명령을 통해 파이썬, 윈도우 C++ 관련 툴을 설치해주세요. (관리자 모드 프롬프트에서 입력하세요)
 ```bash
 npm install --global --production windows-build-tools
 ```
@@ -57,17 +55,17 @@ npm install --global --production windows-build-tools
 그 다음 빌드 라이브러리인 node-gyp 을 설치해주세요.
 ```bash
 npm install --global node-gyp
-``` 
+```
 
 > 만약 하드웨어 선택시 프로그램이 멈춘다면,
 > `npx electron-build` 명령으로 재빌드 해보시길 바랍니다.
 
 ### 의존성 모듈 설치  
 ``` bash
-$ npm install || yarn
+$ npm install
 ```
 
 ### 실행  
 ``` bash
-$ npm run start || yarn start
+$ npm run start
 ```

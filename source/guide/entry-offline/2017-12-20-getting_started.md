@@ -53,15 +53,6 @@ npm install --global node-gyp
 > 만약 하드웨어 선택시 프로그램이 멈춘다면,
 > `npx electron-build` 명령으로 재빌드 해보시길 바랍니다.
 
-### node.js native addon build 환경 설정
-
-엔트리 오프라인은 엔트리 하드웨어를 포함합니다.  
-엔트리 하드웨어의 시리얼포트 통신을 담당하는 라이브러리는 시스템 환경에 종속되므로, 설치시 추가적인 빌드가 필요합니다.  
-빌드에 대한 자세한 사항은 [node-gyp](https://github.com/nodejs/node-gyp#installation) 을 참고해주세요.
-
-windows os 는 관리자모드로 cmd 혹은 powershell 에서 아래의 명령어로 쉽게 환경설정이 가능합니다.  
-`npm install --global --production windows-build-tools`
-
 ### 소스코드 다운로드
 엔트리 오프라인은 소스코드를 직접 다운받아서 개발하거나 Git을 통하여 개발을 시작할 수 있습니다.
 만약에 Git을 통해 개발을 시작한다면 Fork 작업을 먼저 하시고 작업을 진행하시는 것을 추천 드립니다.
@@ -76,9 +67,9 @@ cd entry-offline
 ```
 
 ### 의존성 라이브러리 설치
-소스코드가 다운로드되고 난뒤 `yarn`과 `bower`를 이용하여 의존성 패키지를 설치합니다.
+소스코드가 다운로드되고 난뒤 `yarn 혹은 npm`과 `bower`를 이용하여 의존성 패키지를 설치합니다.
 ```bash
-npm install || yarn
+npm install
 bower install
 ```
 

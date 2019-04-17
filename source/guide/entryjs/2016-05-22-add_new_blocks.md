@@ -23,7 +23,7 @@ order: 3
   - block_calc.js : 계산 블록
   - block_variable.js : 자료 블록
   - block_func.js : 함수 생성 관련
-  - block_expansion_weather.js : 날씨 API 블록
+  - block_expansion_*.js : 확장블록 관련 블록
   
 > 하드웨어 블록은 `src/playground/blocks/hardware/block_(하드웨어명).js` 파일에서 관리 됩니다.  
 > 이에 따른 블록 생성정보는 [하드웨어 블록 개발](/docs/guide/entryjs/2016-07-08-add_new_blocks4.html#하드웨어-블록-개발) 문서를 참고해 주세요.
@@ -82,7 +82,14 @@ Entry.block = {
     }
     ```
 
-3. `color` : 블록의 색상을 RGB 코드로 지정 합니다. 하드웨어 블록은 기본적으로 `#00979D` 색상 값을 사용합니다.  
+3. `color` : 블록의 색상을 RGB 코드로 지정 합니다.  
+  하드웨어 블록의 경우 아래와 같은 블록 색상으로 고정입니다.
+  ```javascript
+  {
+    color: EntryStatic.colorSet.block.default.HARDWARE,
+    outerLine: EntryStatic.colorSet.block.darken.HARDWARE, 
+  }
+  ```
 
 4. `fontColor` : 블록의 글자 색상을 지정 합니다. 생략가능합니다.
 

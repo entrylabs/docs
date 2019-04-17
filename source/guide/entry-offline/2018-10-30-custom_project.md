@@ -54,7 +54,8 @@ entry-hw 는 직접 github 에서 데이터를 가져오며, entryjs 는 bower �
 구조는 아래와 같습니다.
 
 ```text
-entry-offline/
+entryjs/
+ ...
 ├─ dist/
 │  ├─ entry.css
 │  ├─ entry.js
@@ -70,6 +71,10 @@ entry-offline/
 
 아래와 같은 구조를 위해 직접 파일을 옮겨도 되나, 기존 배포구조 빌드의 경우 `entryjs/script/build.sh` 를 따르고 있습니다.  
 bash script 이므로 windows 에서는 git bash 등의 쉘을 사용하셔야 할 수 있습니다.
+
+이와 같은 파일 구조를 entry-offline/src/renderer/bower_components/entry-js 에 복사하시면 됩니다.
+
+> 위의 구조를 어떤 방식으로든 만든다음 entry-offline 내 디렉토리에 위치만 시키면 됩니다.
 
 > 이에 관해서는 편의성을 위해 추후 스크립트 개선 혹은 구조 변경이 있을 수 있습니다.
 

@@ -108,12 +108,16 @@ id 의 경우 직접 개발한 하드웨어 블록 모듈이 아닌, 아두이�
 > 하나의 ID만 사용하는 경우 `id : '1.1'`  
 > 복수의 ID가 사용되는 경우 `id : [1.1, 2.2, 4.4]`
 
+발급받은 하드웨어 번호가 'FF0101' 인 경우, id 속성의 값은 'FF.1' 과 같은 방식으로 작성하시면 됩니다. 
+
 ### blockMenuBlocks 
 
 일반적인 블록 등록시에는 static.js 파일에 블록명을 추가하여야 했습니다.
 다양한 하드웨어 개발사에서 단일 파일을 수정하면서 충돌이 자주 발생하였습니다.
 
 그러므로 아래와 같이 하드웨어 블록 파일에서 필요한 부분만 작성할 수 있도록 개선하였습니다.
+
+해당 프로퍼티 내에는 블록메뉴에 표시될 블록명들을 순서대로 적어주시면 됩니다.
 
 ```js
 Entry.SAMPLE.blockMenuBlocks = [
@@ -142,8 +146,13 @@ Entry.SAMPLE.blockMenuBlocks = [
 ### 블록색상 고정
 
 하드웨어 블록은 현재  
-컬러:`EntryStatic.colorSet.block.default.HARDWARE`,  
-경계선:`EntryStatic.colorSet.block.darken.HARDWARE` 로 고정해서 사용하도록 강제하고 있습니다. 이점 양해부탁드립니다.
+```javascript
+{
+    color: EntryStatic.colorSet.block.default.HARDWARE,
+    outerLine: EntryStatic.colorSet.block.darken.HARDWARE,
+}
+```
+로 고정해서 사용하도록 강제하고 있습니다. 이점 양해부탁드립니다.
 
 ### 하드웨어 연결프로그램에 값 읽고 쓰기
 

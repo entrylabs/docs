@@ -6,7 +6,7 @@ category: 'Entry Hw'
 order: 1
 ---
 
-Entry Hardware는 엔트리에서 개발한 엔트리와 하드웨어를 연동하기 위한 프로그램입니다.  
+Entry Hardware 는 엔트리에서 개발한 엔트리와 하드웨어를 연동하기 위한 프로그램입니다.  
 엔트리에 신규 하드웨어를 등록하기 위해서는 Entry Hardware 에 하드웨어 모듈을 추가해야합니다.
 
 ## 엔트리 하드웨어 추가 순서
@@ -18,7 +18,10 @@ Entry Hardware는 엔트리에서 개발한 엔트리와 하드웨어를 연동�
 6. 하드웨어 ID 발급 받기
 7. 엔트리 서비스 정기 반영을 통한 하드웨어 추가
 
-Entry Hardware는 1.5.0 부터 [Electron](https://electron.atom.io/)기반으로 동작 합니다. 정확한 사용법은 Electron 사이트를 참조 하시기 바랍니다.
+엔트리 하드웨어의 개발 환경 및 버전은 아래와 같습니다.
+[Electron](https://electronjs.org): 7.x.x
+[Node-Serialport](https://serialport.io): 8.x.x
+
 
 ## 개발환경 세팅
 
@@ -41,7 +44,7 @@ fork 를 통해 원격 저장소를 복사하였으면, 로컬로 저장소를 �
 $ git clone https://github.com/(본인의 Repository)/entry-hw.git
 ```
 
-#### Node-gyp 설치
+### Node-gyp 설치
 
 엔트리 하드웨어는 시리얼포트 통신을 위해 [node-serialport](https://github.com/node-serialport/node-serialport) 라이브러리를 사용합니다.
 해당 라이브러리를 사용하기 위해서는 C++, python 빌드 환경과 [node-gyp](https://github.com/nodejs/node-gyp) 라이브러리가 필요합니다.  
@@ -57,12 +60,19 @@ npm install --global --production windows-build-tools
 npm install --global node-gyp
 ```
 
-> 만약 하드웨어 선택시 프로그램이 멈춘다면,
-> `npx electron-build` 명령으로 재빌드 해보시길 바랍니다.
-
 ### 의존성 모듈 설치  
+
 ``` bash
 $ npm install
+```
+
+### Electron Rebuild
+
+엔트리 하드웨어가 디바이스와 통신하기 위한 라이브러리는 C++ 로 개발되어있기 때문에, Native Addon 사용을 위한 빌드가 필요합니다.
+의존성 모듈 설치시 자동으로 실행되나, 명시적으로 실행하고자 하는 경우 아래의 명령어를 입력합니다.
+
+```
+$ npm rebuild
 ```
 
 ### 실행  

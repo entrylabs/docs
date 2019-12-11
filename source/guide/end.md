@@ -22,8 +22,8 @@ order: 1
 
 `base fork`가 `entrylabs/entryjs`이고 `head fork`가 `본인계정/entryjs`이어야 합니다. 반대가 되지 않도록 주의합니다. 또한 `base`에는 pull request를 생성할 브랜치를 지정하고 `compare`에는 작업한 브랜치명을 지정해야 합니다. 반드시 작업한 브랜치명을 정확히 지정해야 합니다. 잘못된 브랜치를 지정한 경우 정상적으로 소스를 머지할 수 없습니다.
 
-> Entry JS 저장소는 기본 브랜치가 `develop`이기 때문에 `develop`을 `base`로 지정하여 pull request를 생성하는 경우가 많습니다. 엔트리 하드웨어 개발용 브랜치는 `develop-hw`이므로 `develop-hw`로 pull request를 생성해야 합니다.
-반면, Entry Hardware 저장소는 별도의 브랜치가 없으므로 `master`로 pull request를 생성합니다.
+> Entry JS 저장소는 기본 브랜치가 `develop`이기 때문에 `develop`을 `base`로 지정하여 pull request를 생성하는 경우가 많습니다.
+> 엔트리 하드웨어 개발용 브랜치는 `develop-hw`이므로 `develop-hw`로 pull request를 생성해야 합니다.
 
 브랜치를 지정한 후에는 간단한 제목과 수정 사항을 작성하고 **Create pull request** 버튼을 클릭합니다.
 

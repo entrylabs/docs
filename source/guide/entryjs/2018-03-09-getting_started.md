@@ -26,7 +26,7 @@ order: 1
 fork 를 통해 원격 저장소를 복사하였으면, 로컬로 저장소를 가져와야 합니다.  
 `git clone` 을 수행하여 로컬에 해당 소스를 받습니다. 기본 브랜치인 `develop-hw` 를 기본브랜치로 가져오기 위해선 아래와 같이 입력합니다.
 ``` bash
-$ git clone -b develop-hw https://github.com/(본인의 Repository)/entryjs.git
+$ git clone -b develop-hw https://github.com/(본인의 계정)/entryjs.git
 ```
 
 ### 브랜치 변경

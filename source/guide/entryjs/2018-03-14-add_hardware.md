@@ -2,7 +2,7 @@
 layout: page
 title: 하드웨어 블록 추가하기
 type: guide
-category: 'Entryjs'
+category: 'Entry JS'
 order: 8
 ---
 

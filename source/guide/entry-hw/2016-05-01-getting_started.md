@@ -2,7 +2,7 @@
 layout: page
 title: 시작하기
 type: guide
-category: 'Entry Hw'
+category: 'Entry HW'
 order: 1
 ---
 

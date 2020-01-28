@@ -2,7 +2,7 @@
 layout: page
 title: 블루투스 하드웨어 추가하기
 type: guide
-category: 'Entry Hw'
+category: 'Entry HW'
 order: 3
 ---
 

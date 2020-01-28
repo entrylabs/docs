@@ -2,7 +2,7 @@
 layout: page
 title: 블록 사용 등록
 type: guide
-category: 'Entryjs'
+category: 'Entry JS'
 order: 4
 ---
 

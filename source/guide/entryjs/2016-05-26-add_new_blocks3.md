@@ -2,7 +2,7 @@
 layout: page
 title: 블록 모양별 개발 방법
 type: guide
-category: 'Entryjs'
+category: 'Entry JS'
 order: 5
 ---
 

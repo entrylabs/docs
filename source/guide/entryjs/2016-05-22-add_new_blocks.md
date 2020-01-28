@@ -2,7 +2,7 @@
 layout: page
 title: 블록 명세 작성
 type: guide
-category: 'Entryjs'
+category: 'Entry JS'
 order: 3
 ---
 ## 블록 명세 작성  

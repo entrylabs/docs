@@ -2,7 +2,7 @@
 layout: page
 title: 프로젝트 테스트하기
 type: guide
-category: 'Entryjs'
+category: 'Entry JS'
 order: 9
 ---
 

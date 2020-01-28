@@ -2,7 +2,7 @@
 layout: page
 title: 시작하기
 type: guide
-category: 'Entryjs'
+category: 'Entry JS'
 order: 1
 ---
 

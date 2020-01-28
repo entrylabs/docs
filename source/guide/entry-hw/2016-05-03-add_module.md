@@ -2,7 +2,7 @@
 layout: page
 title: 하드웨어 모듈 추가하기
 type: guide
-category: 'Entry Hw'
+category: 'Entry HW'
 order: 2
 ---
 

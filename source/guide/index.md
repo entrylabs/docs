@@ -2,7 +2,7 @@
 layout: page
 title: 시작하기
 type: guide
-category: 'START'
+category: 'Quick Start'
 order: 1
 ---
 

@@ -14,7 +14,7 @@ order: 3
 
 이 문서의 내용을 이해하고 정상적으로 작업했다면 자신의 GitHub 저장소에 작업된 소스가 올라가 있습니다. 이 상태를 기준으로 설명하겠습니다.
 
-![Entry JS Pull Request](../../images/pullrequest.png)
+![Entry JS Pull Request](/docs/images/pullrequest.png)
 
 먼저 위의 그림처럼 자신의 브랜치로 이동하여 페이지 왼쪽에 있는 **New Pull Request** 버튼을 클릭합니다.
 

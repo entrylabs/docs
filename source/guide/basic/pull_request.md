@@ -3,7 +3,7 @@ layout: page
 title: PR 요청하기
 type: guide
 category: 'Basic'
-order: 3
+order: 2
 ---
 
 엔트리의 하드웨어 모듈과 블록 개발을 완료했다면 이제 반영하는 과정만 남았습니다.

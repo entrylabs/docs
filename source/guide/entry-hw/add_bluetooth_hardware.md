@@ -9,7 +9,8 @@ order: 3
 엔트리에서는 블루투스 프로파일중 Serial Port Profile(이하 SPP)만 지원합니다.  
 Bluetooth Low Energy(이하 BLE) 타입의 블루투스는 현재로선 지원하지 않습니다.
 
-> BLE를 지원하지 않는 이유는 윈도우에서 BLE를 사용했을때 사용자가 편하게 연결할 방법이 현재로선 없기 때문입니다. 혹시라도 이와 관련해 아이디어 또는 제안사항이 있으시다면 엔트리 팀에 의견을 주시기 바랍니다.
+> BLE 는 현재 개발중 단계이며, 업체의 개발은 아직 허용되지 않았습니다.
+> 만약 필요하신 경우, [develop#BLE](https://github.com/entrylabs/entry-hw/tree/develop/app/src/main/core/ble) 를 를 참고해주세요. 
 
 ## 모듈에 블루투스 설정하기
 

@@ -47,7 +47,7 @@ $ git clone -b develop-hw https://github.com/(본인의 계정)/entry-hw.git
 
 ``` bash
 $ npm install
-$ npx electron-rebuild -f # 만약 시리얼포트 빌드 간 문제가 있는 경우 재 빌드
+$ npm run rebuild # 만약 시리얼포트 빌드 간 문제가 있는 경우 재 빌드
 ```
 
 ### 실행

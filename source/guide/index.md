@@ -12,7 +12,7 @@ order: 1
 
 - [Entry JS](https://github.com/entrylabs/entryjs): 엔트리 워크스페이스와 블록을 개발할 수 있는 라이브러리
 - [Entry Hardware](https://github.com/entrylabs/entry-hw): 엔트리에 아두이노 등 여러 하드웨어를 연결할 수 있도록 도와주는 프로그램
-- [Entry Offline]((https://github.com/entrylabs/entry-offline)): 엔트리를 오프라인 환경에서 사용할 수 있도록 만들어진 프로그램
+- [Entry Offline](https://github.com/entrylabs/entry-offline): 엔트리를 오프라인 환경에서 사용할 수 있도록 만들어진 프로그램
 
 이 문서는 엔트리 오픈소스 프로젝트를 이용하여 원하는 기능을 개발하는 데 도움을 주기 위하여 작성되었으며, 주로 하드웨어 모듈의 개발 및 연동 절차를 설명하는 데 초점이 맞춰져 있습니다.
 현재 엔트리의 모든 기능을 다루고 있지는 않으며 점차 내용을 추가할 예정입니다.

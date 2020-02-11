@@ -51,7 +51,7 @@ npm install --global node-gyp
 ```
 
 > 만약 하드웨어 선택시 프로그램이 멈춘다면,
-> `npx electron-build` 명령으로 재빌드 해보시길 바랍니다.
+> `npx electron-rebuild -f` 명령으로 재빌드 해보시길 바랍니다.
 
 ### 소스코드 다운로드
 엔트리 오프라인은 소스코드를 직접 다운받아서 개발하거나 Git을 통하여 개발을 시작할 수 있습니다.

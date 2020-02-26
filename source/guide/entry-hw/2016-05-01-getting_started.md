@@ -41,7 +41,7 @@ $ git clone -b develop-hw https://github.com/(본인의 계정)/entry-hw.git
 
 ### Node-gyp 설치
 
-[SerialPort 라이브러리 빌드 환경 설치](http://localhost:5000/docs/guide/basic/setting_environment.html#SerialPort-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EB%B9%8C%EB%93%9C-%ED%99%98%EA%B2%BD-%EC%84%A4%EC%B9%98) 를 참고해주세요.
+[SerialPort 라이브러리 빌드 환경 설치](/docs/guide/basic/setting_environment.html#SerialPort-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EB%B9%8C%EB%93%9C-%ED%99%98%EA%B2%BD-%EC%84%A4%EC%B9%98) 를 참고해주세요.
 
 ### 의존성 모듈 설치  
 

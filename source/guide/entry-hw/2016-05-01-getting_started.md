@@ -47,7 +47,14 @@ $ git clone -b develop-hw https://github.com/(본인의 계정)/entry-hw.git
 
 ``` bash
 $ npm install
-$ npm run rebuild # 만약 시리얼포트 빌드 간 문제가 있는 경우 재 빌드
+```
+
+### 웹팩 번들링
+
+시리얼포트 라이브러리 빌드 및 webpack 번들링을 합니다. 각 명령어를 따로 실행해도 되지만 `npm run setting` 으로 한번에 실행하실 수도 있습니다.
+
+```bash
+$ npm run setting # npm run rebuild && npm run webpack:dev
 ```
 
 ### 실행

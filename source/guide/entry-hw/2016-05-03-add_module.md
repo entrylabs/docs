@@ -136,9 +136,6 @@ module.exports = new [모듈명]();
     "firmwareMCUType" : "펌웨어 업로드시 동작할 MCUType. 기본 m328p",
     "tryFlahserNumber" : "펌웨어 업로드 실패시 재시도 회수. 기본 10",
     "select_com_port": "Com Port 선택창 여부 (true | false)",
-    "entry": {
-        "protocol": "json"
-    },
     "hardware": {
         "type": "타입(serial | bluetooth)",
         "control": "동작방식(slave | master)",

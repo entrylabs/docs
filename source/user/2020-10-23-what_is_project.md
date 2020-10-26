@@ -2,8 +2,8 @@
 layout: page
 title: 작품이란
 date: 2020-10-23 13:30:00
-type: user
-category: "For User"
+type: userGuide
+category: "화면의 구성 요소"
 order: 2
 ---
 

@@ -2,8 +2,8 @@
 layout: page
 title: 시작 블록
 date: 2020-10-23 13:34:00
-type: user
-category: "For User"
+type: userGuide
+category: "블록"
 order: 3
 ---
 

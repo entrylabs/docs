@@ -4,7 +4,7 @@
         %>
             <% type !== 'api' && site.pages.find({type: type, category: category}).sort('order').each(function (p) { %>
                 <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
-                <% if (type === 'guide' || type==="user") { %>
+                <% if (type === 'guide' || type==="userGuide") { %>
                     <%
                         if (p.category != nowCategory) {
                             nowCategory = p.category;
@@ -25,6 +25,8 @@
     <% makeList('Entry JS'); %>
     <% makeList('Entry HW'); %>
     <% makeList('Entry Offline'); %>
-    <% makeList('For User'); %>
+    <% makeList('작품'); %>
+    <% makeList('화면의 구성 요소'); %>
+    <% makeList('블록'); %>
     <% makeList('Etc.'); %>
 </ul>

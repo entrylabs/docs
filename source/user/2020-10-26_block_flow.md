@@ -1,12 +1,16 @@
-## 흐름
+---
+layout: page
+title: 흐름 블록
+date: 2020-10-26 17:36:00
+type: userGuide
+category: "블록"
+---
+
+## 1. `(2)` 초 기다리기
 
 
 
-#### 1. `(2)` 초 기다리기
-
-
-
-![block-flow](images/block-flow-01.png)
+![block-flow](source/images/user/block-flow-01.png)
 
 
 
@@ -16,15 +20,13 @@
 
 
 
------
+
+
+## 2. `(10)` 번 반복하기
 
 
 
-#### 2. `(10)` 번 반복하기
-
-
-
-![block-flow](images/block-flow-02.png)
+![block-flow](source/images/user/block-flow-02.png)
 
 
 
@@ -34,15 +36,13 @@
 
 
 
------
+
+
+## 3. 계속 반복하기
 
 
 
-#### 3. 계속 반복하기
-
-
-
-![block-flow](images/block-flow-03.png)
+![block-flow](source/images/user/block-flow-03.png)
 
 
 
@@ -52,15 +52,13 @@
 
 
 
------
+
+
+## 4. `<참>` `[이 될 때까지]` 반복하기
 
 
 
-#### 4. `<참>` `[이 될 때까지]` 반복하기
-
-
-
-![block-flow](images/block-flow-04.png)
+![block-flow](source/images/user/block-flow-04.png)
 
 
 
@@ -74,31 +72,27 @@
 
 
 
------
+
+
+## 5. 반복 중단하기
 
 
 
-#### 5. 반복 중단하기
-
-
-
-![block-flow](images/block-flow-05.png)
+![block-flow](source/images/user/block-flow-05.png)
 
 
 
 이 블록을 감싼 가장 가까운 반복 블록을 **즉시** 멈춥니다.
 
-이 블록이 조립되어 있는 블록 중 가장 가까이에 있는 반복 블록이 멈추게 됩니다. 
+이 블록이 조립되어 있는 블록 중 가장 가까이에 있는 반복 블록이 멈추게 됩니다.
 
 
 
------
 
 
+## 6. 만일 `<참>` 이라면
 
-#### 6. 만일 `<참>` 이라면
-
-![block-flow](images/block-flow-06.png)
+![block-flow](source/images/user/block-flow-06.png)
 
 
 
@@ -106,15 +100,13 @@
 
 
 
------
+
+
+## 7. 만일 `<참>` (이)라면 아니면
 
 
 
-#### 7. 만일 `<참>` (이)라면 아니면
-
-
-
-![block-flow](images/block-flow-07.png)
+![block-flow](source/images/user/block-flow-07.png)
 
 
 
@@ -124,15 +116,13 @@
 
 
 
------
+
+
+## 8. `<참>` 이(가) 될 때까지 기다리기
 
 
 
-#### 8. `<참>` 이(가) 될 때까지 기다리기
-
-
-
-![block-flow](images/block-flow-08.png)
+![block-flow](source/images/user/block-flow-08.png)
 
 
 
@@ -140,15 +130,13 @@
 
 
 
------
+
+
+## 9. `[모든]` 코드 멈추기
 
 
 
-#### 9. `[모든]` 코드 멈추기
-
-
-
-![block-flow](images/block-flow-09.png)
+![block-flow](source/images/user/block-flow-09.png)
 
 
 
@@ -166,15 +154,13 @@
 
 
 
------
+
+
+## 10. 처음부터 다시 실행하기
 
 
 
-#### 10. 처음부터 다시 실행하기
-
-
-
-![block-flow](images/block-flow-10.png)
+![block-flow](source/images/user/block-flow-10.png)
 
 
 
@@ -184,15 +170,13 @@
 
 
 
------
+
+
+## 11. 복제본이 처음 생성되었을 때
 
 
 
-#### 11. 복제본이 처음 생성되었을 때
-
-
-
-![block-flow](images/block-flow-11.png)
+![block-flow](source/images/user/block-flow-11.png)
 
 
 
@@ -202,15 +186,13 @@
 
 
 
------
+
+
+## 12. `[자신]` 의 복제본 만들기
 
 
 
-#### 12. `[자신]` 의 복제본 만들기
-
-
-
-![block-flow](images/block-flow-12.png)
+![block-flow](source/images/user/block-flow-12.png)
 
 
 
@@ -220,15 +202,13 @@
 
 
 
------
+
+
+## 13. 이 복제본 삭제하기
 
 
 
-#### 13. 이 복제본 삭제하기
-
-
-
-![block-flow](images/block-flow-13.png)
+![block-flow](source/images/user/block-flow-13.png)
 
 
 
@@ -236,15 +216,13 @@
 
 
 
------
+
+
+## 14. 모든 복제본 삭제하기
 
 
 
-#### 14. 모든 복제본 삭제하기
-
-
-
-![block-flow](images/block-flow-14.png)
+![block-flow](source/images/user/block-flow-14.png)
 
 
 

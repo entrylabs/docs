@@ -16,7 +16,7 @@ category: "작품"
 
 
 
-![work-window](source/images/user/window/work-window.png)
+![work-window](/source/images/user/window/work-window.png)
 
 
 
@@ -28,7 +28,7 @@ category: "작품"
 
 # 작품 실행 화면
 
-# ![work-start-window](source/images/user/window/work-start-window.png)
+# ![work-start-window](/source/images/user/window/work-start-window.png)
 
 
 
@@ -44,7 +44,7 @@ category: "작품"
 
 
 
-![work-window-edit](source/images/user/window/work-window-edit.png)
+![work-window-edit](/source/images/user/window/work-window-edit.png)
 
 
 
@@ -52,7 +52,7 @@ category: "작품"
 
 
 
-![work-edit](source/images/user/window/work-edit.png)
+![work-edit](/source/images/user/window/work-edit.png)
 
 
 
@@ -88,7 +88,7 @@ category: "작품"
 
 ##### ③ 공개 범위
 
-![work-share-where](source/images/user/window/work-share-where.png)
+![work-share-where](/source/images/user/window/work-share-where.png)
 
 
 
@@ -100,7 +100,7 @@ category: "작품"
 
 
 
-![work-share-2](source/images/user/window/work-share-2.png)
+![work-share-2](/source/images/user/window/work-share-2.png)
 
 
 
@@ -108,7 +108,7 @@ category: "작품"
 
 
 
-![work-policy-agree-popup](source/images/user/window/work-policy-agree-popup.png)
+![work-policy-agree-popup](/source/images/user/window/work-policy-agree-popup.png)
 
 이 팝업 창의 목록 상자에서 작품을 비공개하거나 공유할 범위를 선택할 수 있어요.
 
@@ -118,7 +118,7 @@ category: "작품"
 
 
 
-![work-explain](source/images/user/window/work-explain.png)
+![work-explain](/source/images/user/window/work-explain.png)
 
 
 
@@ -132,7 +132,7 @@ category: "작품"
 
 
 
-![work-policy-agree](source/images/user/window/work-policy-agree.png)
+![work-policy-agree](/source/images/user/window/work-policy-agree.png)
 
 
 
@@ -148,7 +148,7 @@ category: "작품"
 
 # 나의 작품
 
-![work-my](source/images/user/window/work-my.png)
+![work-my](/source/images/user/window/work-my.png)
 
 
 
@@ -160,7 +160,7 @@ category: "작품"
 
 # 관심 작품
 
-![work-favorite](source/images/user/window/work-favorite.png)
+![work-favorite](/source/images/user/window/work-favorite.png)
 
 
 
@@ -170,7 +170,7 @@ category: "작품"
 
 
 
-![work-select-favorite-before](source/images/user/window/work-select-favorite-before.png)
+![work-select-favorite-before](/source/images/user/window/work-select-favorite-before.png)
 
 
 

@@ -10,7 +10,7 @@ category: "블록"
 
 
 
-![block-flow](source/images/user/block-flow-01.png)
+![block-flow](/source/images/user/block-flow-01.png)
 
 
 
@@ -26,7 +26,7 @@ category: "블록"
 
 
 
-![block-flow](source/images/user/block-flow-02.png)
+![block-flow](/source/images/user/block-flow-02.png)
 
 
 
@@ -42,7 +42,7 @@ category: "블록"
 
 
 
-![block-flow](source/images/user/block-flow-03.png)
+![block-flow](/source/images/user/block-flow-03.png)
 
 
 
@@ -58,7 +58,7 @@ category: "블록"
 
 
 
-![block-flow](source/images/user/block-flow-04.png)
+![block-flow](/source/images/user/block-flow-04.png)
 
 
 
@@ -78,7 +78,7 @@ category: "블록"
 
 
 
-![block-flow](source/images/user/block-flow-05.png)
+![block-flow](/source/images/user/block-flow-05.png)
 
 
 
@@ -92,7 +92,7 @@ category: "블록"
 
 ## 6. 만일 `<참>` 이라면
 
-![block-flow](source/images/user/block-flow-06.png)
+![block-flow](/source/images/user/block-flow-06.png)
 
 
 
@@ -106,7 +106,7 @@ category: "블록"
 
 
 
-![block-flow](source/images/user/block-flow-07.png)
+![block-flow](/source/images/user/block-flow-07.png)
 
 
 
@@ -122,7 +122,7 @@ category: "블록"
 
 
 
-![block-flow](source/images/user/block-flow-08.png)
+![block-flow](/source/images/user/block-flow-08.png)
 
 
 
@@ -136,7 +136,7 @@ category: "블록"
 
 
 
-![block-flow](source/images/user/block-flow-09.png)
+![block-flow](/source/images/user/block-flow-09.png)
 
 
 
@@ -160,7 +160,7 @@ category: "블록"
 
 
 
-![block-flow](source/images/user/block-flow-10.png)
+![block-flow](/source/images/user/block-flow-10.png)
 
 
 
@@ -176,7 +176,7 @@ category: "블록"
 
 
 
-![block-flow](source/images/user/block-flow-11.png)
+![block-flow](/source/images/user/block-flow-11.png)
 
 
 
@@ -192,7 +192,7 @@ category: "블록"
 
 
 
-![block-flow](source/images/user/block-flow-12.png)
+![block-flow](/source/images/user/block-flow-12.png)
 
 
 
@@ -208,7 +208,7 @@ category: "블록"
 
 
 
-![block-flow](source/images/user/block-flow-13.png)
+![block-flow](/source/images/user/block-flow-13.png)
 
 
 
@@ -222,7 +222,7 @@ category: "블록"
 
 
 
-![block-flow](source/images/user/block-flow-14.png)
+![block-flow](/source/images/user/block-flow-14.png)
 
 
 

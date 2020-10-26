@@ -8,7 +8,7 @@ category: "블록"
 
 ## 1. 시작하기 버튼을 클릭했을 때
 
-![block-start-01](/source/images/user/block-start-01.png)
+![block-start-01](/docs/source/images/user/block-start-01.png)
 
 시작하기 버튼을 클릭하면 아래의 블록이 동작합니다.
 
@@ -17,7 +17,7 @@ category: "블록"
 
 ## 2. `[q]` 키를 눌렀을 때
 
-![block-start-02](/source/images/user/block-start-02.png)
+![block-start-02](/docs/source/images/user/block-start-02.png)
 
 키를 누르면 아래의 블록이 동작합니다.
 
@@ -29,7 +29,7 @@ category: "블록"
 
 ## 3. 마우스를 클릭했을 때
 
-![block-start-03](/source/images/user/block-start-03.png)
+![block-start-03](/docs/source/images/user/block-start-03.png)
 
 실행 화면에서 마우스를 클릭했을 때 아래의 블록이 동작합니다.
 
@@ -38,14 +38,14 @@ category: "블록"
 
 ## 4. 마우스 클릭을 해제했을 때
 
-![block-start-04](/source/images/user/block-start-04.png)
+![block-start-04](/docs/source/images/user/block-start-04.png)
 
 실행 화면에서 마우스 클릭을 해제했을 때 아래의 블록이 동작합니다.
 
 
 ## 5. 오브젝트를 클릭했을 때
 
-![block-start-05](/source/images/user/block-start-05.png)
+![block-start-05](/docs/source/images/user/block-start-05.png)
 
 실행 화면에서 이 오브젝트를 클릭했을 때 아래의 블록이 동작합니다.
 
@@ -54,7 +54,7 @@ category: "블록"
 
 ## 6. 오브젝트 클릭을 해제했을 때
 
-![block-start-06](/source/images/user/block-start-06.png)
+![block-start-06](/docs/source/images/user/block-start-06.png)
 
 실행 화면에서 이 오브젝트 클릭을 해제했을 때 아래의 블록이 동작합니다.
 
@@ -63,7 +63,7 @@ category: "블록"
 
 ## 7. `[신호]` 신호를 받았을 때
 
-![block-start-07](/source/images/user/block-start-07.png)
+![block-start-07](/docs/source/images/user/block-start-07.png)
 
 신호를 받으면 아래의 블록이 동작합니다. 다시 말해서, 어디선가 이 신호를 보내면 이 시작 블록이 동작합니다.
 
@@ -72,7 +72,7 @@ category: "블록"
 
 ## 8. `[신호]` 신호 보내기
 
-![block-start-08](/source/images/user/block-start-08.png)
+![block-start-08](/docs/source/images/user/block-start-08.png)
 
 신호를 보냅니다.
 
@@ -81,7 +81,7 @@ category: "블록"
 
 ## 9. `[신호]` 신호 보내고 기다리기
 
-![block-start-09](/source/images/user/block-start-09.png)
+![block-start-09](/docs/source/images/user/block-start-09.png)
 
 신호를 보내고, 해당 신호를 받은 모든 블록의 실행이 끝날 때 까지 기다린 후에 다음 블록이 동작합니다.
 
@@ -90,7 +90,7 @@ category: "블록"
 
 ## 10. 장면이 시작되었을 때
 
-![block-start-10](/source/images/user/block-start-10.png)
+![block-start-10](/docs/source/images/user/block-start-10.png)
 
 장면이 시작되면 아래의 블록이 동작합니다.
 
@@ -99,7 +99,7 @@ category: "블록"
 
 ## 11. `[장면 1]` 시작하기
 
-![block-start-11](/source/images/user/block-start-11.png)
+![block-start-11](/docs/source/images/user/block-start-11.png)
 
 장면을 시작합니다.
 
@@ -110,7 +110,7 @@ category: "블록"
 
 ## 12. `[다음]` 장면 시작하기
 
-![block-start-12](/source/images/user/block-start-12.png)
+![block-start-12](/docs/source/images/user/block-start-12.png)
 
 이전 또는 다음 장면을 시작합니다.
 

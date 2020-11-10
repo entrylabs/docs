@@ -1,10 +1,13 @@
 ---
 layout: page
-title: 작품이란?
+title: 작품
 date: 2020-10-26 17:36:00
 type: userGuide
-category: "작품"
+category: “작품”
+order: 2
 ---
+
+# 작품이란?
 
 엔트리에서 **작품**이란, 작품 만들기 화면에서 그림을 그리거나 업로드하고, 그 그림을 움직이거나 모양을 바꾸는 등 다양하게 동작하도록 여러가지 블록을 조립한 결과물을 말해요.
 
@@ -16,7 +19,7 @@ category: "작품"
 
 
 
-![work-window](/source/images/user/window/work-window.png)
+![work-window](images/window/work-window.png)
 
 
 
@@ -28,7 +31,7 @@ category: "작품"
 
 # 작품 실행 화면
 
-# ![work-start-window](/source/images/user/window/work-start-window.png)
+# ![work-start-window](images/window/work-start-window.png)
 
 
 
@@ -36,7 +39,7 @@ category: "작품"
 
 가운데의 작품 실행하기 버튼을 클릭하면 작품을 실행할 수 있어요.
 
-오른쪽 위의 각 그림과 숫자는 작품을 만들 때 사용한 블록(<img src="source/images/user/window/work-use-block.png" alt="work-use-block" style="zoom: 50%;" />), 모양(<img src="source/images/user/window/work-use-shape.png" alt="work-use-shape" style="zoom: 50%;" />), 소리(<img src="source/images/user/window/work-use-music.png" alt="work-use-music" style="zoom: 50%;" />)의 개수입니다.
+오른쪽 위의 각 그림과 숫자는 작품을 만들 때 사용한 블록(<img src="images/window/work-use-block.png" alt="work-use-block" style="zoom: 50%;" />), 모양(<img src="images/window/work-use-shape.png" alt="work-use-shape" style="zoom: 50%;" />), 소리(<img src="images/window/work-use-music.png" alt="work-use-music" style="zoom: 50%;" />)의 개수입니다.
 
 
 
@@ -44,7 +47,7 @@ category: "작품"
 
 
 
-![work-window-edit](/source/images/user/window/work-window-edit.png)
+![work-window-edit](images/window/work-window-edit.png)
 
 
 
@@ -52,7 +55,7 @@ category: "작품"
 
 
 
-![work-edit](/source/images/user/window/work-edit.png)
+![work-edit](images/window/work-edit.png)
 
 
 
@@ -60,9 +63,9 @@ category: "작품"
 
 
 
-##### ① 카테고리
+#### ① 카테고리
 
-<img src="source/images/user/window/work-categori.png" alt="work-categori" style="zoom:80%;" />
+<img src="images/window/work-categori.png" alt="work-categori" style="zoom:80%;" />
 
 
 
@@ -76,9 +79,9 @@ category: "작품"
 
 
 
-##### ② 제목
+#### ② 제목
 
-<img src="source/images/user/window/work-title.png" alt="work-title" style="zoom:80%;" />
+<img src="images/window/work-title.png" alt="work-title" style="zoom:80%;" />
 
 
 
@@ -86,9 +89,9 @@ category: "작품"
 
 
 
-##### ③ 공개 범위
+#### ③ 공개 범위
 
-![work-share-where](/source/images/user/window/work-share-where.png)
+![work-share-where](images/window/work-share-where.png)
 
 
 
@@ -100,7 +103,7 @@ category: "작품"
 
 
 
-![work-share-2](/source/images/user/window/work-share-2.png)
+![work-share-2](images/window/work-share-2.png)
 
 
 
@@ -108,17 +111,17 @@ category: "작품"
 
 
 
-![work-policy-agree-popup](/source/images/user/window/work-policy-agree-popup.png)
+![work-policy-agree-popup](images/window/work-policy-agree-popup.png)
 
 이 팝업 창의 목록 상자에서 작품을 비공개하거나 공유할 범위를 선택할 수 있어요.
 
 
 
-##### ④ 작품 설명
+#### ④ 작품 설명
 
 
 
-![work-explain](/source/images/user/window/work-explain.png)
+![work-explain](images/window/work-explain.png)
 
 
 
@@ -132,7 +135,7 @@ category: "작품"
 
 
 
-![work-policy-agree](/source/images/user/window/work-policy-agree.png)
+![work-policy-agree](images/window/work-policy-agree.png)
 
 
 
@@ -148,7 +151,7 @@ category: "작품"
 
 # 나의 작품
 
-![work-my](/source/images/user/window/work-my.png)
+![work-my](images/window/work-my.png)
 
 
 
@@ -160,7 +163,7 @@ category: "작품"
 
 # 관심 작품
 
-![work-favorite](/source/images/user/window/work-favorite.png)
+![work-favorite](images/window/work-favorite.png)
 
 
 
@@ -170,7 +173,7 @@ category: "작품"
 
 
 
-![work-select-favorite-before](/source/images/user/window/work-select-favorite-before.png)
+![work-select-favorite-before](images/window/work-select-favorite-before.png)
 
 
 
@@ -178,7 +181,7 @@ category: "작품"
 
 
 
-<img src="source/images/user/window/work-select-favorite-after.png" alt="work-select-favorite-after" style="zoom:110%;" />
+<img src="images/window/work-select-favorite-after.png" alt="work-select-favorite-after" style="zoom:110%;" />
 
 
 
@@ -188,7 +191,7 @@ category: "작품"
 
 # 작품 공유
 
-<img src="source/images/user/window/work-share-link.png" alt="work-share-link" style="zoom:68%;" />
+<img src="images/window/work-share-link.png" alt="work-share-link" style="zoom:68%;" />
 
 
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 인공지능 블록 > AI 활용: 읽어주기
-date: 2020-11-10 16:01:00
+date: 2020-11-10 16:19:00
 type: userGuide
 category: "블록"
 order: 27

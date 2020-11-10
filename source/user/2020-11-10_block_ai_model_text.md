@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 인공지능 블록 > 분류 모델: 텍스트
-date: 2020-11-10 16:06:00
+date: 2020-11-10 16:18:00
 type: userGuide
 category: "블록"
 order: 32

@@ -20,7 +20,7 @@
       <h1><%- page.title %><%- page.type === 'examples' ? ' Example' : '' %></h1>
     <% } %>
     <%- page.content %>
-    <% if (page.type === 'guide') { %>
+    <% if (page.type === 'guide' || page.type==="user") { %>
       <div class="guide-links">
         <% site.pages.find({ type: page.type, category: page.category, order: page.order - 1 }).each(function (page) { %>
           <span>← <a href="<%- url_for(page.path) %>"><%- page.title %></a></span>

@@ -4,7 +4,10 @@
   </form>
 </li>
 <li>
-    <a href="<%- url_for("/guide/") %>" class="nav-link<%- page.path.match(/guide/) ? ' current' : '' %>">Guide</a>
+  <a href="<%- url_for("/guide/") %>" class="nav-link<%- page.path.match(/guide/) ? ' current' : '' %>">Dev Guide</a>
+</li>
+<li>
+    <a href="<%- url_for("/user/") %>" class="nav-link<%- page.path.match(/user/) ? ' current' : '' %>">User Guide</a>
 </li>
 <li>
   <a href="http://github.com/entrylabs/" target="_blank" class="nav-link">GitHub</a>

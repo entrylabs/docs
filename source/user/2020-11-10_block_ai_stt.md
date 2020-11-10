@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 인공지능 블록 > AI 활용: 오디오 감지
+title: 인공지능 블록 > AI 활용 - 오디오 감지
 date: 2020-11-10 16:18:00
 type: userGuide
 category: "블록"

@@ -3,7 +3,7 @@ layout: page
 title: 자료 블록
 date: 2020-10-26 17:14:00
 type: userGuide
-category: “블록”
+category: "블록"
 order: 22
 ---
 

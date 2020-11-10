@@ -3,7 +3,7 @@ layout: page
 title: 데이터 분석 블록
 date: 2020-10-26 16:11:00
 type: userGuide
-category: “블록”
+category: "블록"
 order: 24
 ---
 

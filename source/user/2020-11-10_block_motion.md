@@ -3,7 +3,7 @@ layout: page
 title: 움직임 블록
 date: 2020-10-26 17:00:00
 type: userGuide
-category: “블록”
+category: "블록"
 order: 15
 ---
 

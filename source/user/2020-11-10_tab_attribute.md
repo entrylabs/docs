@@ -3,7 +3,7 @@ layout: page
 title: 속성 탭
 date: 2020-10-27 10:36:00
 type: userGuide
-category: “화면의 구성 요소”
+category: "화면의 구성 요소"
 order: 9
 ---
 

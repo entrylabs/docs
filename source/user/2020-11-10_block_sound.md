@@ -3,7 +3,7 @@ layout: page
 title: 소리 블록
 date: 2020-10-26 16:57:00
 type: userGuide
-category: “블록”
+category: "블록"
 order: 19
 ---
 

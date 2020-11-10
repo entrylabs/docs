@@ -1,13 +1,13 @@
 ---
 layout: page
 title: 확장 블록
-date: 2020-10-26 17:36:00
+date: 2020-11-10 15:43:00
 type: userGuide
 category: "블록"
-order: 26
+order: 27
 ---
 
-# 확장 블록 팝업
+### 확장 블록 팝업
 
 
 

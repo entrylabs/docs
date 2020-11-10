@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 하드웨어 블록
-date: 2020-10-26 16:17:00
+date: 2020-11-10 15:43:00
 type: userGuide
 category: "블록"
-order: 27
+order: 28
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 확장 블록
-date: 2020-11-12 15:23:00
+date: 2020-11-12 15:25:00
 type: userGuide
 category: "블록"
 order: 35
@@ -24,9 +24,8 @@ order: 35
 + **자연재난 국민행동요령** : 자연재난 발생 시 국민이 지켜야 하는 기본적인 행동요령에 대한 블록 모음입니다. [국민안전처 제공]
 + **행사** : 국내 지역별 다양한 행사 및 축제와 관련된 블록 모음입니다. [한국관광공사 제공]
 
-```markdown
+
 \
-```
 
 # 날씨
 
@@ -133,9 +132,7 @@ order: 35
 
 목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;" />)를 클릭하면 지역과 시간대를 선택할 수 있어요.
 
-```markdown
 \
-```
 
 #  생활안전 국민행동요령
 
@@ -184,9 +181,7 @@ order: 35
 
 목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;" />)를 클릭하면 생활 속 문제와 행동요령을 선택할 수 있어요.
 
-```markdown
 \
-```
 
 # 자연재난 국민행동요령
 
@@ -235,9 +230,7 @@ order: 35
 
 목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;" />)를 클릭하면 자연재해와 상황을 선택할 수 있어요.
 
-```markdown
 \
-```
 
 # 행사
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 확장 블록
-date: 2020-11-12 15:25:00
+date: 2020-11-12 15:42:00
 type: userGuide
 category: "블록"
 order: 35
@@ -22,18 +22,13 @@ order: 35
 + **날씨** : 기온, 강수량, 미세먼지 농도 등 한국의 날씨와 관련된 블록 모음입니다. [웨더아이 제공]
 + **생활안전 국민행동요령** : 생활 속 안전을 위해 국민이 지켜야 하는 행동요령에 대한 블록 모음입니다. [국민안전처 제공]
 + **자연재난 국민행동요령** : 자연재난 발생 시 국민이 지켜야 하는 기본적인 행동요령에 대한 블록 모음입니다. [국민안전처 제공]
-+ **행사** : 국내 지역별 다양한 행사 및 축제와 관련된 블록 모음입니다. [한국관광공사 제공]
-
-
-\
-
++ **행사** : 국내 지역별 다양한 행사 및 축제와 관련된 블록 모음입니다. [한국관광공사 제공]  
+　
+---
+　
 # 날씨
 
-
-
 ![extention-select-weather](images/window/extention-select-weather.jpg)
-
-
 
 기온, 강수량, 미세먼지 농도 등 한국의 날씨와 관련된 블록 모음입니다. [웨더아이 제공]
 
@@ -49,9 +44,6 @@ order: 35
   + `맑음`, `구름조금`, `구름많음`, `흐림`, `비`, `진눈깨비`, `눈`
 + **정보**
   + `최저기온(ºc)`, `최고기온(ºc)`, `습도(%)`, `강수량(mm)`, `강수확률(%)`, `풍속(m/s)`
-
-
-
 
 
 ## 1. <`[오늘]` `[서울]` `[전체]` 의 날씨가 `[맑음]` 인가?>
@@ -130,10 +122,10 @@ order: 35
 
 선택한 지역에서 오늘의 시간대별 기온을 가져오는 값 블록입니다.
 
-목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;" />)를 클릭하면 지역과 시간대를 선택할 수 있어요.
-
-\
-
+목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;" />)를 클릭하면 지역과 시간대를 선택할 수 있어요.  
+　
+---
+　
 #  생활안전 국민행동요령
 
 ![extention-select-lifesafety](images/window/extention-select-lifesafety.jpg)
@@ -150,15 +142,10 @@ order: 35
   + 선택한 생활 속 문제에 따라 달라집니다.
 
 
-
-
-
-## 6. [응급처치]` 에서 `[화상 처치]` 방법의 수
-
+## 6. `[응급처치]` 에서 `[화상 처치]` 방법의 수
 
 
 ![block-extension-lifesafety](images/block-extension-lifesafety-01.png)
-
 
 
 선택한 생활 속 문제에서 해야 할 행동요령의 수를 가져오는 값 블록입니다.
@@ -169,7 +156,7 @@ order: 35
 
 
 
-## 7. [응급처치]` 에서 `[화상 처치]` 방법 `(1)` 번째 항목
+## 7. `[응급처치]` 에서 `[화상 처치]` 방법 `(1)` 번째 항목
 
 
 
@@ -179,10 +166,10 @@ order: 35
 
 선택한 생활 속 문제에서 해야 할 행동요령 중 입력한 순서(<img src="images/icon/value.png" alt="value" style="zoom:50%;" />)에 맞는 것을 가져오는 값 블록입니다.
 
-목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;" />)를 클릭하면 생활 속 문제와 행동요령을 선택할 수 있어요.
-
-\
-
+목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;" />)를 클릭하면 생활 속 문제와 행동요령을 선택할 수 있어요.  
+　
+---
+　
 # 자연재난 국민행동요령
 
 
@@ -228,10 +215,10 @@ order: 35
 
 선택한 자연재난에서 해야 할 행동요령 중 입력한 순서(<img src="images/icon/value.png" alt="value" style="zoom:50%;" />)에 맞는 것을 가져오는 값 블록입니다.
 
-목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;" />)를 클릭하면 자연재해와 상황을 선택할 수 있어요.
-
-\
-
+목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;" />)를 클릭하면 자연재해와 상황을 선택할 수 있어요.  
+　
+---
+　
 # 행사
 
 

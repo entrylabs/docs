@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 움직임 블록
-date: 2020-10-26 17:00:00
+date: 2020-11-12 17:39:00
 type: userGuide
 category: "블록"
 order: 15
@@ -15,10 +15,9 @@ order: 15
 
 
 
-### 1) 움직이기(바꾸기)  vs  이동하기
+## POINT: 움직이기(바꾸기)  vs  이동하기
 
-##### 	① '움직이기(바꾸기)' 블록
-
+**① '움직이기(바꾸기)' 블록**
 
 
 <img src="images/block-motion-01.png" alt="block-motion" style="zoom:67%;" /> <img src="images/block-motion-05.png" alt="block-motion" style="zoom:67%;" /> <img src="images/block-motion-03.png" alt="block-motion" style="zoom:67%;" /> <img src="images/block-motion-19.png" alt="block-motion" style="zoom:67%;" />
@@ -31,7 +30,7 @@ order: 15
 
 
 
-##### 	② 이동하기 블록
+**② '이동하기' 블록**
 
 
 
@@ -45,7 +44,7 @@ order: 15
 
 
 
-### 2) **`(2)`초 동안**
+## POINT: ~초 동안
 
 입력한 시간 동안 움직이는 블록과 그렇지 않은 블록들은 오브젝트의 움직임에 차이가 있습니다.
 

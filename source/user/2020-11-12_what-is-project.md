@@ -1,13 +1,13 @@
 ---
 layout: page
 title: 작품
-date: 2020-10-26 17:36:00
+date: 2020-11-12 17:34:00
 type: userGuide
 category: "작품"
 order: 2
 ---
 
-# 작품이란?
+## 작품이란?
 
 엔트리에서 **작품**이란, 작품 만들기 화면에서 그림을 그리거나 업로드하고, 그 그림을 움직이거나 모양을 바꾸는 등 다양하게 동작하도록 여러가지 블록을 조립한 결과물을 말해요.
 
@@ -29,7 +29,7 @@ order: 2
 
 
 
-# 작품 실행 화면
+## 작품 실행 화면
 
 # ![work-start-window](images/window/work-start-window.png)
 
@@ -43,7 +43,7 @@ order: 2
 
 
 
-# 작품 관리
+## 작품 관리
 
 
 
@@ -131,7 +131,7 @@ order: 2
 
 
 
-# 저작권 동의
+## 저작권 동의
 
 
 
@@ -149,7 +149,7 @@ order: 2
 
 
 
-# 나의 작품
+## 나의 작품
 
 ![work-my](images/window/work-my.png)
 
@@ -161,7 +161,7 @@ order: 2
 
 
 
-# 관심 작품
+## 관심 작품
 
 ![work-favorite](images/window/work-favorite.png)
 
@@ -189,7 +189,7 @@ order: 2
 
 
 
-# 작품 공유
+## 작품 공유
 
 <img src="images/window/work-share-link.png" alt="work-share-link" style="zoom:68%;" />
 

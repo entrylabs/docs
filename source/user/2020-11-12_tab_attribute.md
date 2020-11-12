@@ -1,15 +1,14 @@
 ---
 layout: page
 title: 속성 탭
-date: 2020-10-27 10:36:00
+date: 2020-11-12 15:51:00
 type: userGuide
 category: "화면의 구성 요소"
 order: 9
 ---
 
+## 속성 목록
 
-
-# 속성 목록
 
 <img src="images/window/main-attribute.png" alt="main-attribute" style="zoom: 50%;" />
 

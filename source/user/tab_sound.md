@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 소리 탭
-date: 2020-11-12 15:53:00
+date: 2020-11-13 10:29:00
 type: userGuide
 category: "화면의 구성 요소"
 order: 8
@@ -21,7 +21,7 @@ order: 8
 
 
 
-![sound_tap_list](images\window\sound_tap_list_example.png)
+![sound_tab_list](images/window/sound_tab_list_example.png)
 
 
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 움직임 블록
-date: 2020-11-12 17:39:00
+date: 2020-11-13 10:36:00
 type: userGuide
 category: "블록"
 order: 15
@@ -58,7 +58,7 @@ order: 15
 
 <img src="images/block-motion-08.png" alt="block-motion" style="zoom:67%;" />
 
-![motion-teleport](images\window\motion-teleport.gif)
+![motion-teleport](images/window/motion-teleport.gif)
 
 
 
@@ -70,7 +70,7 @@ order: 15
 
 <img src="images/block-motion-09.png" alt="block-motion" style="zoom:67%;" />
 
-![motion-glide](images\window\motion-glide.gif)
+![motion-glide](images/window/motion-glide.gif)
 
 
 
@@ -114,7 +114,7 @@ order: 15
 
 
 
-![motion-bounce](images\window\motion-bounce.gif)
+![motion-bounce](images/window/motion-bounce.gif)
 
 
 

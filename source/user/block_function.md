@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 함수 블록
-date: 2020-11-12 17:41:00
+date: 2020-11-13 10:36:00
 type: userGuide
 category: "블록"
 order: 23
@@ -115,7 +115,7 @@ order: 23
 
 
 
-![function-drag-example](images\window\function-drag-example.gif)
+![function-drag-example](images/window/function-drag-example.gif)
 
 
 

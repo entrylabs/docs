@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 함수 블록
-date: 2020-11-13 10:36:00
+date: 2020-11-18 16:38:00
 type: userGuide
 category: "블록"
 order: 23
@@ -21,9 +21,9 @@ order: 23
 함수 블록 조립소에는 함수를 정의할 수 있는 '리본 블록'을 볼 수 있어요.
 
 + **리본 블록**
-  + 함수 이름 블록(![block-function-02](images/block-function-02.png))
-  + 함수 값 블록(![block-function-03](images/block-function-03.png))
-  + 함수 판단 블록(![block-function-04](images/block-function-04.png))
+  + 함수 이름 블록 ![block-function-02](images/block-function-02.png)
+  + 함수 값 블록 ![block-function-03](images/block-function-03.png)
+  + 함수 판단 블록 ![block-function-04](images/block-function-04.png)
 
 
 
@@ -109,7 +109,7 @@ order: 23
 
 
 
-값 블록(![block-function-03](images/block-function-03.png)) 부분을 드래그하면 해당 순서의 문자/숫자 값 블록(<img src="images/icon/value.png" alt="value" style="zoom:50%;" />)을 복사할 수 있습니다. 복사된 값 블록은 일반 블록과 결합하여 사용할 수 있어요.
+값 블록(<img src="images/block-function-03.png" alt="block-function-03" style="zoom:90%;" />)부분을 드래그하면 해당 순서의 문자/숫자 값 블록(<img src="images/icon/value.png" alt="value" style="zoom:50%;" />)을 복사할 수 있습니다. 복사된 값 블록은 일반 블록과 결합하여 사용할 수 있어요.
 
 예를 들어, 함수 값 리본 블록 중  문자/숫자값1(<img src="images/block-function-03-1-example-0-1.png" alt="block-function-03-1-example-0-1" style="zoom:90%;" />)에 입력된 문자/숫자 값은 일반 블록에 결합된 문자/숫자값1 값 블록 (<img src="images/block-function-03-1-example-0-2.png" alt="block-function-03-1-example-0-2" style="zoom:90%;" />) 자리에 들어가서 작동하게 됩니다.
 

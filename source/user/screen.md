@@ -29,9 +29,9 @@ order: 4
 
 작품이 실행 중이라면 작품 일시정지 버튼과 작품 중지하기 버튼이 나타나요.
 
-+ **작품 일시정지 버튼** ![ic-player-pause](images\icon\ic-player-pause.png) : 작품을 잠시동안 정지합니다. 시작하기 버튼 ![ic-player-play](images\icon\ic-player-play.png)을 다시 누르면 작품이 정지된 곳부터 시작해요.
++ **작품 일시정지 버튼** ![ic-player-pause](images/icon/ic-player-pause.png) : 작품을 잠시동안 정지합니다. 시작하기 버튼 ![ic-player-play](images/icon/ic-player-play.png)을 다시 누르면 작품이 정지된 곳부터 시작해요.
 
-+ **작품 중지하기 버튼** ![ic-player-stop](images\icon\ic-player-stop.png) : 작품을 완전히 정지하고 처음 상태로 되돌립니다. 단축키 `ctrl` + `r` 을 눌러서 중지할 수도 있습니다.
++ **작품 중지하기 버튼** ![ic-player-stop](images/icon/ic-player-stop.png) : 작품을 완전히 정지하고 처음 상태로 되돌립니다. 단축키 `ctrl` + `r` 을 눌러서 중지할 수도 있습니다.
 
 
 

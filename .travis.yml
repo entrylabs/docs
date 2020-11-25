@@ -20,7 +20,7 @@ before_script:
   - git config --global user.email 'kimorkim@gmail.com'
   - chmod +x ./cideploy
 install:
-- yarn
+- yarn --ignore-engines
 script:
   - npm run build
 after_success:

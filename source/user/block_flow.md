@@ -4,7 +4,7 @@ title: 흐름 블록
 date: 2020-10-26 17:36:00
 type: userGuide
 category: "블록"
-order: 13
+order: 12
 ---
 
 ## 1. `(2)` 초 기다리기

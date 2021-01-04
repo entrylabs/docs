@@ -4,7 +4,7 @@ title: 인공지능 블록 > 모델 학습이란?
 date: 2020-11-10 16:18:00
 type: userGuide
 category: "블록"
-order: 29
+order: 28
 ---
 
 AI 활용 블록을 사용해 봤다면, 이제 직접 인공지능 모델을 한 번 만들어볼까요?

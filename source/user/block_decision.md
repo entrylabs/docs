@@ -4,7 +4,7 @@ title: 판단 블록
 date: 2020-10-26 17:21:00
 type: userGuide
 category: "블록"
-order: 19
+order: 18
 ---
 
 

@@ -4,7 +4,7 @@ title: 데이터 분석 블록
 date: 2021-01-04 16:39:00
 type: userGuide
 category: "블록"
-order: 23
+order: 22
 ---
 
 ## 테이블 불러오기 

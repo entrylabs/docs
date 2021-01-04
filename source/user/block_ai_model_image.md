@@ -4,7 +4,7 @@ title: 인공지능 블록 > 분류 모델 - 이미지
 date: 2020-11-12 16:46:00
 type: userGuide
 category: "블록"
-order: 30
+order: 29
 ---
 
 ![ai-block-learning-image](images/window/ai-block-learning-image.png)

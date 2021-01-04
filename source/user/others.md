@@ -4,7 +4,7 @@ title: 기타
 date: 2020-11-12 17:30:00
 type: userGuide
 category: "화면의 구성 요소"
-order: 11
+order: 10
 ---
 
 ## 나의 보관함

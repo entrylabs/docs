@@ -4,7 +4,7 @@ title: 인공지능 블록 > 분류 모델 - 텍스트
 date: 2020-11-10 16:18:00
 type: userGuide
 category: "블록"
-order: 32
+order: 31
 ---
 
 ![ai-block-learning-text](images/window/ai-block-learning-text.png)

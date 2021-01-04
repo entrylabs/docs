@@ -4,7 +4,7 @@ title: 인공지능 블록 > 분류 모델 - 음성
 date: 2020-11-10 16:18:00
 type: userGuide
 category: "블록"
-order: 33
+order: 32
 ---
 
 ![ai-block-learning-voice](images/window/ai-block-learning-voice.png)

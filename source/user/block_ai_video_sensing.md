@@ -4,7 +4,7 @@ title: 인공지능 블록 > AI 활용 - 비디오 감지
 date: 2020-11-10 16:19:00
 type: userGuide
 category: "블록"
-order: 29
+order: 28
 ---
 
 # AI 블록 > 비디오 감지

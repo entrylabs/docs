@@ -4,7 +4,7 @@ title: 글상자 블록
 date: 2020-11-10 15:01:00
 type: userGuide
 category: "블록"
-order: 18
+order: 17
 ---
 
 ## 1. 글상자 `[글상자]` 의 내용

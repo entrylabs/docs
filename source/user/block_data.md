@@ -22,7 +22,7 @@ order: 23
 
 
 
-<img src="/Users/oyster/Documents/wiki/docs/source/user/images/window/table2/table-list.png" alt="table-list" style="zoom:50%;" />
+<img src="images/window/table2/table-list.png" alt="table-list" style="zoom:50%;" />
 
 
 
@@ -36,7 +36,7 @@ order: 23
 #### 테이블 편집 영역
 
 
-![table-tab_edit-all](file:///Users/oyster/Documents/wiki/docs/source/user/images/window/table2/tab_edit-all.png)
+![table-tab_edit-all](images/window/table2/tab_edit-all.png)
 
 
 
@@ -48,7 +48,7 @@ order: 23
 
 #### ① 테이블 탭
 
-![tab_edit](/Users/oyster/Documents/wiki/docs/source/user/images/window/table2/tab_edit.png)
+![tab_edit](images/window/table2/tab_edit.png)
 
 
 
@@ -62,14 +62,14 @@ order: 23
   속성의 이름은 1행에 들어있는 경우가 일반적입니다.
 - 마우스 왼쪽 버튼을 눌러 셀을 선택합니다. (커서를 표시합니다.)
   커서가 표시된 상태에서 내용을 입력하면 셀의 내용을 (바로) 수정합니다.
-  <img src="/Users/oyster/Documents/wiki/docs/source/user/images/window/table2/tab_edit_editing.png" alt="tab_edit_editing" style="zoom:67%;" />
+  <img src="images/window/table2/tab_edit_editing.png" alt="tab_edit_editing" style="zoom:67%;" />
 - 각 셀을 클릭하거나 방향키로 이동하면 커서를 움직일 수 있습니다. 
 
 - 방향키 외에도 Tab키와 Enter키를 눌러 셀 사이를 이동할 수 있습니다.
   Tab은 바로 오른쪽 셀로, Enter키는 바로 아래 셀로 이동하고 
   Tab키로 이동하던 도중 Enter키를 누르면 Tab키를 누른 맨 처음 위치의 바로 아래로 이동합니다.
 - 마우스 오른쪽 버튼을 누르면 툴팁 메뉴가 표시됩니다. 툴팁 메뉴에서 잘라내기/복사, 붙여넣기, 셀 내용 삭제가 가능합니다.
-  <img src="/Users/oyster/Documents/wiki/docs/source/user/images/window/table2/tab_edit-cell-tooltip.png" alt="tab_edit-cell-tooltip" style="zoom:50%;" />
+  <img src="images/window/table2/tab_edit-cell-tooltip.png" alt="tab_edit-cell-tooltip" style="zoom:50%;" />
 - 마우스를 드래그하면 여러 셀을 한꺼번에 선택할 수 있습니다. 
   이렇게 다중 선택한 셀을 잘라내기/복사해 다른 위치에 붙여 넣을 수 있습니다.
 
@@ -77,7 +77,7 @@ order: 23
 
 #### ② 차트 탭
 
-![tab_chart-none](/Users/oyster/Documents/wiki/docs/source/user/images/window/table2/tab_chart-none.png)
+![tab_chart-none](images/window/table2/tab_chart-none.png)
 
 
 
@@ -89,7 +89,7 @@ order: 23
 
 
 
-<img src="/Users/oyster/Documents/wiki/docs/source/user/images/window/table2/add-chart.png" alt="add-chart" style="zoom:50%;" />
+<img src="images/window/table2/add-chart.png" alt="add-chart" style="zoom:50%;" />
 
 
 
@@ -171,7 +171,7 @@ order: 23
 
 #### ③ 정보 탭
 
-![tab_info](/Users/oyster/Documents/wiki/docs/source/user/images/window/table2/tab_info.png)
+![tab_info](images/window/table2/tab_info.png)
 
 
 
@@ -179,7 +179,7 @@ order: 23
 
 - **요약**: 테이블에 대한 간략한 설명입니다.
 - **테이블**: 테이블의 각 속성(열)에 대한 기초 통계량입니다.
-  ![table-tab_info-stat](file:///Users/oyster/Documents/wiki/docs/source/user/images/window/table2/tab_info-stat.png)
+  ![table-tab_info-stat](images/window/table2/tab_info-stat.png)
   - **평균**: 각 속성에 있는 모든 데이터의 평균입니다.
   - **표준 편차**: 각 속성의 모든 데이터가 평균에서 얼마나 떨어져 있는지 보여줍니다.
   - **최댓값**: 각 속성의 데이터 중 가장 큰 수입니다.

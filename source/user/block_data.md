@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 데이터 분석 블록
-date: 2021-01-04 16:39:00
+date: 2021-01-05 10:14:00
 type: userGuide
 category: "블록"
 order: 22
@@ -17,7 +17,6 @@ order: 22
 #### 테이블 목록
 
 작품에서 사용할 테이블을 추가하거나 삭제하는 등 테이블을 관리할 수 있는 영역입니다.
-
 '테이블 추가하기' 버튼을 통해 원하는 테이블을 이 목록에 추가할 수 있어요.
 
 
@@ -41,7 +40,6 @@ order: 22
 
 
 테이블을 분석하고 데이터나 차트를 추가하거나 편집할 수 있는 영역입니다.
-
 영역이 좁아서 불편하신가요? '◀︎' 버튼을 클릭해 테이블 목록을 접으면 테이블 편집 영역을 더 넓게 볼 수 있습니다.
 
 
@@ -53,12 +51,12 @@ order: 22
 
 
 테이블의 데이터를 편집할 수 있는 영역입니다.
-
-테이블은 **행**과 **열**, 그리고 각각의 행과 열에 해당하는 데이터(**셀**)를 담는 표예요. 이렇게 여러 데이터들이 테이블에 모이면 의미있는 정보가 됩니다.
+테이블은 **행**과 **열**, 그리고 각각의 행과 열에 해당하는 데이터(**셀**)를 담는 표를 의미합니다. 
+이렇게 데이터 하나하나가 테이블의 형태로 만들어지면 의미있는 정보로 활용할 수 있어요.
 
 - **행**(가로줄)은 항목, **열**(세로줄)은 속성이라고도 부릅니다. 행은 숫자, 열은 알파벳으로 그 순서를 나타내지요.
 - 속성은 같은 의미의 데이터가 들어가는 자리라는 뜻이고, 항목은 각각 다른 개별 데이터가 들어가는 자리라는 뜻입니다.
-  예를 들면 '연도'라는 속성에는 '1973', '1974', '1975' 등의 개별 데이터가 들어갑니다.
+  예를 들면 '연도'라는 속성에는 '1973', '1974', '1975' 등의 개별 데이터, 즉 항목이 들어갑니다.
   속성의 이름은 1행에 들어있는 경우가 일반적입니다.
 - 마우스 왼쪽 버튼을 눌러 셀을 선택합니다. (커서를 표시합니다.)
   커서가 표시된 상태에서 내용을 입력하면 셀의 내용을 (바로) 수정합니다.
@@ -82,10 +80,8 @@ order: 22
 
 
 테이블의 차트를 추가하고 편집하는 영역입니다.
-
-차트는 테이블의 행과 열의 배열로 기록된 데이터 사이의 관계를 그림으로 표현해, 데이터를 직관적으로 이해할 수 있도록 돕습니다.
-
-이를 데이터를 시각화한다고 말합니다.
+차트는 테이블에 담긴 데이터 사이의 관계를 그림으로 표현해, 데이터를 직관적으로 이해할 수 있도록 돕습니다.
+이는 다르게 표현해서, 데이터를 시각화한다고도 말합니다.
 
 
 
@@ -93,79 +89,47 @@ order: 22
 
 
 
-왼쪽 위의 + 표시를 클릭해서 추가할 차트의 모양을 선택할 수 있습니다. 차트는 최대 10 개까지 추가할 수 있어요.
-
-테이블을 가장 잘 설명할 수 있는 차트를 골라보세요.
-
+왼쪽 위의 + 표시를 클릭해서 추가할 차트의 모양을 선택할 수 있습니다. 차트는 최대 10개까지 추가할 수 있어요.
+테이블의 데이터를 가장 잘 설명할 수 있는 차트를 골라보세요.
 만든 차트를 클릭하면 차트 표시 영역에서 선택한 차트를 볼 수 있습니다.
 
 
 
-- **막대  차트**
+- **막대 차트**
 
-  ![table-chart-bar](file:///Users/oyster/Documents/wiki/docs/source/user/images/window/table-chart-bar.gif?lastModify=1609742284)
+  ![tab_chart-bar](images/window/table2/tab_chart-bar.gif)
 
   여러 데이터의 크기를 단순히 비교하며 분석할 때 좋은 차트예요.
-
-  그래프의 가로축과 세로축, 표현값의 속성을 선택하면 막대 차트를 그려요. 세로축은 수로 이루어진 속성만 선택할 수 있습니다.
-
+그래프의 가로축과 계열에 해당하는 속성을 선택하면 막대 차트를 그려요. 
   막대에 마우스를 올리면 해당 막대의 데이터 정보를 보여주는 상자가 나타납니다.
 
-
-
-  ![table-chart-bar-info](file:///Users/oyster/Documents/wiki/docs/source/user/images/window/table-chart-bar-info.png?lastModify=1609742284)
-
-
-
-
+  
 
 - **선 차트**
 
-  ![table-chart-graph](file:///Users/oyster/Documents/wiki/docs/source/user/images/window/table-chart-graph.gif?lastModify=1609742284)
+  ![tab_chart-line](images/window/table2/tab_chart-line.gif)
 
   시간의 흐름 또는 순서에 따라 달라지는 데이터를 분석할 때 좋은 차트예요.
-
-  그래프의 가로축과 세로축, 표현값의 속성을 선택하면 선 차트를 그려요. 세로축은 수로 이루어진 속성만 선택할 수 있습니다.
-
+그래프의 가로축과 계열의 속성을 선택하면 선 차트를 그려요. 
   선의 점에 마우스를 올리면 해당 점의 데이터 정보를 보여주는 상자가 나타납니다.
-
-
-
-  ![table-chart-bar-info](file:///Users/oyster/Documents/wiki/docs/source/user/images/window/table-chart-bar-info.png?lastModify=1609742284)
 
 
 
 - **원 차트**
 
-  ![table-chart-circle](file:///Users/oyster/Documents/wiki/docs/source/user/images/window/table-chart-circle.gif?lastModify=1609742284)
+  ![tab_chart-pie](images/window/table2/tab_chart-pie.gif)
 
-  전체 중에서 어떤 데이터가 차지하는 정도를 분석할 때 좋은 차트예요. 그래프의 열 이름(속성), 표현값의 속성을 선택하면 원 차트를 그려요.
-
-  원 조각에 마우스를 올리거나 터치를 유지하면 해당 조각의 데이터 정보를 보여주는 상자가 나타납니다.
-
-
-
-  ![table-chart-bar-info1](file:///Users/oyster/Documents/wiki/docs/source/user/images/window/table-chart-bar-info1.png?lastModify=1609742284)
-
-
+  전체 중에서 어떤 데이터가 차지하는 정도를 분석할 때 좋은 차트예요. 그래프의 계열, 값의 속성을 선택하면 원 차트를 그려요.
+원 조각에 마우스를 올리거나 터치를 유지하면 해당 조각의 데이터 정보를 보여주는 상자가 나타납니다.
 
 
 
 - **점 차트**
 
-  ![table-chart-dot](file:///Users/oyster/Documents/wiki/docs/source/user/images/window/table-chart-dot.gif?lastModify=1609742284)
-
-
-
-  두 가지 속성 간의 관계를 분석할 때 좋은 차트예요. 그래프의 가로축과 세로축, 표현값의 속성을 선택하면 점 차트를 그려요.
-
-  세로축은 수로 이루어진 속성만 선택할 수 있습니다. 
-
+  ![tab_chart-scatter](/Users/oyster/Documents/wiki/docs/source/user/images/window/table2/tab_chart-scatter.gif)
+  두 가지 속성 간의 관계를 분석할 때 좋은 차트예요. 그래프의 가로축과 세로축, 계열의 속성을 선택하면 점 차트를 그려요.
+  가로축과 세로축은 수로 이루어진 속성만 선택할 수 있습니다. 
   점에 마우스를 올리거나 터치를 유지하면 해당 점의 데이터 정보를 보여주는 상자가 나타납니다.
-
-
-
-  ![table-chart-bar-info2](file:///Users/oyster/Documents/wiki/docs/source/user/images/window/table-chart-bar-info2.png?lastModify=1609742284)
 
 
 
@@ -186,6 +150,8 @@ order: 22
   - **중간값**: 각 속성의 데이터를 크기에 따라 순서를 정할 때, 가운데 순서의 수입니다. 평균과 달리 순서만 고려합니다.
   - **최솟값**: 각 속성의 데이터 중 가장 작은 수입니다.
 - **차트**: 테이블에서 추가한 차트의 모습을 모아서 보여줍니다. 
+
+
 
 
 

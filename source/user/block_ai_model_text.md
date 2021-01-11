@@ -1,13 +1,13 @@
 ---
 layout: page
 title: 인공지능 블록 > 분류 모델 - 텍스트
-date: 2020-11-10 16:18:00
+date: 2021-01-08 13:38:00
 type: userGuide
 category: "블록"
 order: 30
 ---
 
-![ai-block-learning-text](images/window/ai-block-learning-text.png)
+![model_classification_text](images/window/model/model_classification_text.png)
 
 학습 데이터로 입력한 텍스트를 클래스로 직접 분류하고 학습시키면 새롭게 입력되는 텍스트를 분류할 수 있는 모델을 만들 수 있습니다. 텍스트의 모양이 얼마나 유사한지를 기준으로 분류하는 모델이에요.
 

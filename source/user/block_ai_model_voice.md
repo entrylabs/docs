@@ -1,13 +1,13 @@
 ---
 layout: page
 title: 인공지능 블록 > 분류 모델 - 음성
-date: 2020-11-10 16:18:00
+date: 2021-01-08 13:38:00
 type: userGuide
 category: "블록"
 order: 31
 ---
 
-![ai-block-learning-voice](images/window/ai-block-learning-voice.png)
+![model_classification_voice](images/window/model/model_classification_voice.png)
 
 학습 데이터로 입력한 음성을 클래스로 직접 분류하고 학습시키면 새롭게 입력되는 음성을 분류할 수 있는 모델을 만들 수 있습니다. 음성의 파형이 얼마나 유사한지를 기준으로 분류하는 모델이에요.
 

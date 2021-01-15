@@ -4,7 +4,7 @@ title: 계산 블록
 date: 2020-11-10 15:04:00
 type: userGuide
 category: "블록"
-order: 21
+order: 19
 ---
 
 ## 1. `(10)` `[+]` `(10)`　

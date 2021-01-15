@@ -4,7 +4,7 @@ title: 소리 블록
 date: 2020-10-26 16:57:00
 type: userGuide
 category: "블록"
-order: 19
+order: 17
 ---
 
 ## 1. 소리 `([소리])` 재생하기

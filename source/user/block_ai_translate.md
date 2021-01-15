@@ -4,7 +4,7 @@ title: 인공지능 블록 > AI 활용 - 번역
 date: 2020-11-10 16:18:00
 type: userGuide
 category: "블록"
-order: 26
+order: 24
 ---
 
 ![ai-block-translate](images/window/ai-block-translate.png)

@@ -4,7 +4,7 @@ title: 움직임 블록
 date: 2020-11-13 10:36:00
 type: userGuide
 category: "블록"
-order: 15
+order: 13
 ---
 
 

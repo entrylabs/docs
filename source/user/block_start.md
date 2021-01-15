@@ -4,7 +4,7 @@ title: 시작 블록
 date: 2020-11-12 17:29:00
 type: userGuide
 category: "블록"
-order: 13
+order: 11
 ---
 
 ## 1. 시작하기 버튼을 클릭했을 때

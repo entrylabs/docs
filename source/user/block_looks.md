@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 생김새 블록
-date: 2020-10-26 17:04:00
+date: 2020-12-22 15:45:00
 type: userGuide
 category: "블록"
-order: 16
+order: 14
 ---
 
 
@@ -65,7 +65,7 @@ order: 16
 
 오브젝트가 입력한 내용(<img src="images/icon/value.png" alt="value" style="zoom:50%;" />)을 말풍선으로 보여줍니다.
 
-다른 블록을 사용하거나 말풍선은 지우면 말하던 내용은 사라집니다.
+다른 블록을 사용하거나 말풍선을 지우면 말하던 내용은 사라집니다.
 
 <img src="images/block-looks-03.png" alt="block-looks" style="zoom:60%;" />과 달리 다음 블록이 바로 동작해요.
 

@@ -4,7 +4,7 @@ title: 붓 블록
 date: 2020-10-26 17:36:00
 type: userGuide
 category: "블록"
-order: 17
+order: 15
 ---
 
 ## 1. 도장 찍기

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 인공지능 블록 > 예측 모델 - 숫자
-date: 2021-01-15 12:45:00
+date: 2021-01-18 15:00:00
 type: userGuide
 category: "블록"
 order: 33
@@ -9,8 +9,8 @@ order: 33
 
 ![model_prediction_number](images/window/model/model_prediction_number.png)
 
-+ 모델이 학습할 숫자를 테이블로 업로드하거나 직접 작성해 데이터로 입력하고, 입력한 데이터의 **몇몇 속성을 바탕으로 하나의 속성을 예측**하는 모델을 학습합니다.
-  + 예측: 숫자 모델을 학습하려먼 **먼저 데이터로 삼을 테이블을 추가해야 합니다**. 학습하기 전에 데이터 분석 카테고리에서 [테이블 불러오기]를 통해, 기본 테이블, 파일 업로드, 새로 만들기의 방법으로 테이블을 추가 해주세요.
+모델이 학습할 숫자를 테이블로 업로드하거나 직접 작성해 데이터로 입력하고, 입력한 데이터의 **몇몇 속성을 바탕으로 하나의 속성을 예측**하는 모델을 학습합니다.
++ 예측: 숫자 모델을 학습하려먼 **먼저 데이터로 삼을 테이블을 추가해야 합니다**. 학습하기 전에 데이터 분석 카테고리에서 [테이블 불러오기]를 통해, 기본 테이블, 파일 업로드, 새로 만들기의 방법으로 테이블을 추가 해주세요.
 
 예측: 숫자 모델을 선택하면 아래와 같이 모델 학습하기 창이 나타납니다.
 
@@ -32,7 +32,7 @@ order: 33
 
 
 
-![window_train_prdc_3](/Users/oyster/Documents/wiki/docs/source/user/images/window/model/window_train_prdc_3.png)
+![window_train_prdc_3](images/window/model/window_train_prdc_3.png)
 
 + **핵심 속성**: 핵심 속성은 속성 중에서 '원인'에 해당하는 속성을 말합니다. 조금 어렵게 말하면 '독립 변수' 또는 '설명 변수'를 의미합니다. 
   모델이 학습할 때 어떤 속성을 원인으로 삼을 것인지를 선택하는 부분이에요.
@@ -79,7 +79,7 @@ order: 33
 
 학습 조건을 기본값으로 두거나, 조건을 변경한 후 [모델 학습하기] 버튼을 클릭하면 모델 학습이 시작됩니다.
 
-![window_train_prdc_6](/Users/oyster/Documents/wiki/docs/source/user/images/window/model/window_train_prdc_6.png)![window_train_prdc_7](/Users/oyster/Documents/wiki/docs/source/user/images/window/model/window_train_prdc_7.png)
+![window_train_prdc_6](images/window/model/window_train_prdc_6.png)![window_train_prdc_7](images/window/model/window_train_prdc_7.png)
 
 이렇게 학습을 모두 완료했다면, [차트] 버튼을 클릭해 학습한 과정을 그래프로도 확인할 수 있어요. 이 때, 예측 모델에서 보여주는 그래프는 모델의 정확도가 아니라 **평균 제곱 오차**(MSE)입니다. 평균 제곱 오차는 정확도와는 반대로 작으면 작을 수록 모델이 정확하다는 뜻이에요.
 
@@ -98,7 +98,7 @@ order: 33
 
 + 그어진 회귀선이 데이터를 가장 잘 표현하는 직선인지 확인해 보세요!
 
-핵심 속성을 2개이상 설정했다면 모델이 만든 회귀식을 확인할 수 있습니다. 단, 2차원에서 표현할 수 없기 때문에 차트는 표시되지 않습니다.
+핵심 속성을 2개 이상 설정했다면 모델이 만든 회귀식을 확인할 수 있습니다. 단, 2차원에서 표현할 수 없기 때문에 차트는 표시되지 않습니다.
 
 ![window_train_prdc_8_1](images/window/model/window_train_prdc_8_1.png)
 
@@ -134,7 +134,7 @@ order: 33
 
 모델의 학습 상태를 표시하는 창을 실행 화면에 보이게 하거나 숨깁니다.
 
-목록 상자(<img src="/Users/oyster/Documents/wiki/docs/source/user/images/icon/dropdown-ai.png" style="zoom:50%;" />)를 클릭해서 보이기/숨기기를 선택할 수 있어요.
+목록 상자(<img src="images/icon/dropdown-ai.png" style="zoom:50%;" />)를 클릭해서 보이기/숨기기를 선택할 수 있어요.
 
 
 
@@ -146,7 +146,7 @@ order: 33
 
 핵심 속성이 2개 이상인 경우 모델의 차트를 2차원 좌표평면 위에 그릴 수 없기 때문에, 이 블록은 표시되지 않습니다. 
 
-목록 상자(<img src="/Users/oyster/Documents/wiki/docs/source/user/images/icon/dropdown-ai.png" style="zoom:50%;" />)를 클릭해서 열기/닫기를 선택할 수 있어요.
+목록 상자(<img src="images/icon/dropdown-ai.png" style="zoom:50%;" />)를 클릭해서 열기/닫기를 선택할 수 있어요.
 
 
 

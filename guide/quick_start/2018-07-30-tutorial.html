@@ -1,0 +1,689 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>엔트리 하드웨어 개발 튜토리얼 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - Entry 개발 가이드">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="엔트리 하드웨어 개발 튜토리얼 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - Entry 개발 가이드">
+        <meta property="og:image" content="https://entrylabs.github.io/docs/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="엔트리 하드웨어 개발 튜토리얼 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - Entry 개발 가이드">
+        <meta name="twitter:image" content="https://entrylabs.github.io/docs/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/docs/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/docs/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/docs/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/docs/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/docs/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/docs/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/docs/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/docs/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/docs/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/docs/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/docs/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/docs/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/docs/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Dosis:500' rel='stylesheet' type='text/css'>
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/docs/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "guide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    <meta name="generator" content="Hexo 4.2.0"></head>
+    <body class="docs">
+        <div id="mobile-bar" >
+            <a class="menu-button"></a>
+            <a class="logo" href="/docs/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/docs/">
+    <img src="/docs/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/docs/guide/" class="nav-link current">Dev Guide</a>
+</li>
+<li>
+    <a href="/docs/user/" class="nav-link">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/docs/guide/" class="nav-link current">Dev Guide</a>
+</li>
+<li>
+    <a href="/docs/user/" class="nav-link">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+                
+                
+                    
+                        <li><h3>Quick Start</h3></li>
+                    
+                
+                <li>
+                    <a href="/docs/guide/index.html" class="sidebar-link">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/quick_start/2018-07-30-tutorial.html" class="sidebar-link current">엔트리 하드웨어 개발 튜토리얼</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Basic</h3></li>
+                    
+                
+                <li>
+                    <a href="/docs/guide/basic/setting_environment.html" class="sidebar-link">개발 환경 세팅</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/basic/pull_request.html" class="sidebar-link">PR 요청하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/basic/2016-07-07-faq.html" class="sidebar-link">자주 하는 질문</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry JS</h3></li>
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2018-03-09-getting_started.html" class="sidebar-link">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2016-05-22-add_new_blocks.html" class="sidebar-link">블록 명세 작성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2016-05-26-add_new_blocks2.html" class="sidebar-link">블록 사용 등록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2016-05-26-add_new_blocks3.html" class="sidebar-link">블록 모양별 개발 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2016-07-08-add_new_blocks4.html" class="sidebar-link">하드웨어 블록 만들기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2018-03-09-translate.html" class="sidebar-link">하드웨어 블록 번역작업</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2018-03-14-add_hardware.html" class="sidebar-link">하드웨어 블록 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2018-03-23-test_project.html" class="sidebar-link">프로젝트 테스트하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry HW</h3></li>
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-hw/2016-05-01-getting_started.html" class="sidebar-link">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-hw/2016-05-03-add_module.html" class="sidebar-link">하드웨어 모듈 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-hw/add_bluetooth_hardware.html" class="sidebar-link">블루투스 하드웨어 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-hw/cli_test_hardware.html" class="sidebar-link">하드웨어 연결 테스트하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-hw/2017-05-16-enroll_entry-hw.html" class="sidebar-link">하드웨어 등록 서비스 신청하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry Offline</h3></li>
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-offline/2017-12-20-getting_started.html" class="sidebar-link">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-offline/2017-12-21-project_structure.html" class="sidebar-link">프로젝트 구조</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-offline/2017-12-27-develop.html" class="sidebar-link">개발하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-offline/2018-01-10-add_objects.html" class="sidebar-link">오브젝트 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-offline/2017-12-28-translate.html" class="sidebar-link">다국어 작업하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-offline/2018-10-30-custom_project.html" class="sidebar-link">커스텀 프로젝트 빌드</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-offline/2018-01-09-build.html" class="sidebar-link">빌드하기</a>
+                </li>
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Etc.</h3></li>
+                    
+                
+                <li>
+                    <a href="/docs/guide/etc/2016-05-03-git_fork.html" class="sidebar-link">Git 사용 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/etc/2020-06-24-doc_contribution.html" class="sidebar-link">문서 기여하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/etc/2019-12-11-updates.html" class="sidebar-link">문서 업데이트 내역</a>
+                </li>
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar 2018-07-30-tutorial-guide">
+    
+      
+    
+    
+      <h1>엔트리 하드웨어 개발 튜토리얼</h1>
+    
+    <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><p>이 페이지는 엔트리 하드웨어 개발을 위해 Docs 를 보시는 분들이 많다는 것을 감안해 최상단 페이지에 만들어진 튜토리얼입니다.</p>
+<p>엔트리 하드웨어 개발은 아래와 같은 순서로 진행됩니다.</p>
+<blockquote>
+<ol>
+<li>Entry Js를 이용하여 블록을 작성</li>
+<li>Entry Hardware를 이용하여 하드웨어 조작 모듈 작성</li>
+<li>정상적으로 구성된 코드를 Git을 통해 반영 요청</li>
+</ol>
+</blockquote>
+<p>엔트리 코드를 작성하는 과정에서 Git과 JavaScript를 사용하기 때문에 이를 먼저 익히는 것을 권장합니다. (<a href="/docs/guide/etc/2016-05-03-git_fork.html">Git 사용 방법</a>)</p>
+<h2 id="하드웨어-등록-신청하기"><a href="#하드웨어-등록-신청하기" class="headerlink" title="하드웨어 등록 신청하기"></a>하드웨어 등록 신청하기</h2><blockquote>
+<p>연관 페이지: <a href="/docs/guide/entry-hw/2017-05-16-enroll_entry-hw.html">하드웨어 등록 서비스 신청하기</a></p>
+</blockquote>
+<p>엔트리에 하드웨어를 등록하려면 하드웨어 등록 서비스를 신청하고 하드웨어 아이디를 발급받아야 합니다.<br>그러나 <strong>개발 단계에서는 하드웨어 아이디가 필요하지 않으므로 이 페이지에서는 더미값을 사용합니다.</strong></p>
+<h2 id="개발-환경-설정"><a href="#개발-환경-설정" class="headerlink" title="개발 환경 설정"></a>개발 환경 설정</h2><h3 id="Git-설치-및-GitHub-회원-가입"><a href="#Git-설치-및-GitHub-회원-가입" class="headerlink" title="Git 설치 및 GitHub 회원 가입"></a>Git 설치 및 GitHub 회원 가입</h3><h4 id="Git-설치"><a href="#Git-설치" class="headerlink" title="Git 설치"></a>Git 설치</h4><blockquote>
+<p>연관 페이지: <a href="/docs/guide/etc/2016-05-03-git_fork.html">Git 사용 방법</a></p>
+</blockquote>
+<p>엔트리의 오픈소스 프로젝트는 Git을 사용하여 관리합니다. Git을 사용하여 코드를 기록하고 오픈소스에 반영하므로 반드시 Git을 설치해야 합니다.</p>
+<ul>
+<li>macOS, Windows 사용자는 <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git - Downloads</a>에서 Git 설치 파일을 다운로드하여 실행합니다.</li>
+<li>Linux 사용자는 <a href="https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%84%A4%EC%B9%98" target="_blank" rel="noopener">Git - Git 설치</a>를 참고하여 Git을 설치합니다.</li>
+</ul>
+<hr>
+<h4 id="GitHub-회원-가입"><a href="#GitHub-회원-가입" class="headerlink" title="GitHub 회원 가입"></a>GitHub 회원 가입</h4><p><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>은 Git을 사용해 관리할 수 있는 원격 저장소입니다.<br>엔트리 프로젝트 또한 GitHub에 저장소가 있습니다.<br>다음과 같은 정보를 입력하여 쉽게 GitHub에 회원 가입할 수 있습니다.</p>
+<p><img src="/docs/images/tutorial/tutorial01.png" alt="tutorial01"></p>
+<h3 id="개발-환경-설정-1"><a href="#개발-환경-설정-1" class="headerlink" title="개발 환경 설정"></a>개발 환경 설정</h3><hr>
+<h4 id="Node-js-설치"><a href="#Node-js-설치" class="headerlink" title="Node.js 설치"></a>Node.js 설치</h4><p>Node.js를 설치하려면 <a href="https://nodejs.org/ko/" target="_blank" rel="noopener">Node.js</a>에서 설치 파일을 다운로드하여 실행합니다.</p>
+<blockquote>
+<p>버전은 개발 시 크게 상관 없으며, LTS 버전을 설치하시면 됩니다.</p>
+</blockquote>
+<p>Node.js를 설치하면 npm이 함께 설치됩니다.<br>npm을 이용하여 라이브러리를 설치하고 관리할 수 있습니다.</p>
+<p>설치가 완료되면 명령 프롬프트 창에서 다음 명령어를 입력해 정상적으로 설치되었는지 확인합니다.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm --version</span><br><span class="line">node --version</span><br></pre></td></tr></table></figure>
+
+<p>정상적으로 설치되었다면 다음과 같은 결과가 출력됩니다. 버전은 다를 수 있습니다.</p>
+<p><img src="/docs/images/tutorial/tutorial03.png" alt="tutorial03"></p>
+<hr>
+<h4 id="Yarn-설치-optional"><a href="#Yarn-설치-optional" class="headerlink" title="Yarn 설치 (optional)"></a>Yarn 설치 (optional)</h4><p>엔트리 팀은 패키지 매니저로 yarn 을 사용합니다. 그러므로 yarn 을 통해 의존성 관리를 하는 것을 추천드립니다.<br>필수사항은 아니므로 넘어가도 상관없습니다.</p>
+<p>yarn 을 설치한 경우, <code>npm install</code> 및 <code>npm run</code> 명령어는 <code>yarn</code> 으로 대체됩니다.<br>(<code>npm install -&gt; yarn</code>, <code>npm run start -&gt; yarn start</code>)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --global yarn</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h4 id="Node-gyp-설치"><a href="#Node-gyp-설치" class="headerlink" title="Node-gyp 설치"></a>Node-gyp 설치</h4><p>엔트리 하드웨어는 시리얼포트 통신을 위해 <a href="https://github.com/node-serialport/node-serialport" target="_blank" rel="noopener">node-serialport</a> 라이브러리를 사용합니다.<br>해당 라이브러리를 사용하기 위해서는 C++, python 빌드 환경과 <a href="https://github.com/nodejs/node-gyp" target="_blank" rel="noopener">node-gyp</a> 라이브러리가 필요합니다.<br>빌드에 대한 자세한 사항은 <a href="https://github.com/nodejs/node-gyp#installation" target="_blank" rel="noopener">node-gyp#installation</a> 을 참고해 주세요.</p>
+<p><strong>윈도우의 경우</strong>는 아래의 명령을 통해 파이썬, 윈도우 C++ 관련 툴을 설치해주세요. (관리자 모드 프롬프트에서 입력하세요)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --global --production windows-build-tools</span><br></pre></td></tr></table></figure>
+
+<p>그 다음 빌드 라이브러리인 node-gyp 을 설치해주세요.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --global node-gyp</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="엔트리-프로젝트-설치"><a href="#엔트리-프로젝트-설치" class="headerlink" title="엔트리 프로젝트 설치"></a>엔트리 프로젝트 설치</h3><hr>
+<h4 id="원격-저장소의-데이터를-자신의-원격-저장소에-복사"><a href="#원격-저장소의-데이터를-자신의-원격-저장소에-복사" class="headerlink" title="원격 저장소의 데이터를 자신의 원격 저장소에 복사"></a>원격 저장소의 데이터를 자신의 원격 저장소에 복사</h4><p>엔트리 하드웨어 개발에는 다음과 같은 엔트리 프로젝트가 필요합니다.</p>
+<ul>
+<li><a href="https://github.com/entrylabs/entryjs" target="_blank" rel="noopener">Entry Js</a>: 엔트리 워크스페이스와 블록을 개발할 수 있는 라이브러리</li>
+<li><a href="https://github.com/entrylabs/entry-hw" target="_blank" rel="noopener">Entry Hardware</a>: 엔트리에 아두이노 등 여러 하드웨어를 연결할 수 있도록 도와주는 프로그램</li>
+</ul>
+<p>엔트리 하드웨어 개발은 두 개의 프로젝트를 자신의 원격 저장소에 그대로 복사(fork)하여 작업한 후 작업 내역을 합병 요청하는 방식으로 이루어집니다.</p>
+<p>두 저장소에 접속한 후 오른쪽 위의 <strong>Fork</strong>를 클릭하여 자신의 원격 저장소로 복사합니다.</p>
+<p><img src="/docs/images/tutorial/tutorial04.png" alt="tutorial04"></p>
+<hr>
+<h4 id="자신의-원격-저장소-데이터를-자신의-컴퓨터로-복사"><a href="#자신의-원격-저장소-데이터를-자신의-컴퓨터로-복사" class="headerlink" title="자신의 원격 저장소 데이터를 자신의 컴퓨터로 복사"></a>자신의 원격 저장소 데이터를 자신의 컴퓨터로 복사</h4><p>다음 명령어를 실행하여 자신의 원격 저장소 데이터를 자신의 컴퓨터로 복사(clone)합니다. 이 명령은 명령 프롬프트 또는 Git Bash에서 실행할 수 있습니다.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/[사용자명]/entry-hw.git</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/[사용자명]/entryjs.git</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h4 id="브랜치-변경"><a href="#브랜치-변경" class="headerlink" title="브랜치 변경"></a>브랜치 변경</h4><p>하드웨어 블록을 개발하는 경우 <strong><code>develop-hw</code></strong>라는 브랜치를 사용해야 합니다.<br>develop-hw 브랜치는 하드웨어 관련 PR 이 모여서, 배포전에 develop 에 merge 되는 용도로 사용 중입니다.<br>(<strong>develop 브랜치는 엔트리 개발팀에서 이슈 처리를 하는 브랜치 입니다.</strong>) </p>
+<blockquote>
+<p>Git은 작업 내역을 분할/관리하기 위해 브랜치라는 개념을 사용합니다.<br>자세한 설명은 <a href="https://git-scm.com/book/ko/v1/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%3F" target="_blank" rel="noopener">Git - 브랜치란 무엇인가?</a>를 참고하세요.</p>
+</blockquote>
+<p>각 프로젝트의 디렉토리에서 다음 명령어를 실행하여 develop-hw 브랜치를 사용하게 설정합니다.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout develop-hw</span><br></pre></td></tr></table></figure>
+
+<p>브랜치를 변경하면 다음과 같은 결과가 출력됩니다.</p>
+<p><img src="/docs/images/tutorial/tutorial15.png" alt="tutorial15"></p>
+<blockquote>
+<p>결론적으로는,<br>entryjs, entry-hw 모두 develop-hw 브랜치에서 작업하시면 됩니다.</p>
+</blockquote>
+<hr>
+<h4 id="의존성-라이브러리-설치하기"><a href="#의존성-라이브러리-설치하기" class="headerlink" title="의존성 라이브러리 설치하기"></a>의존성 라이브러리 설치하기</h4><p>엔트리 프로젝트를 실행하려면 추가 라이브러리가 필요합니다. npm을 이용하여 필요한 라이브러리를 설치할 수 있습니다.</p>
+<blockquote>
+<p>entryjs 디렉터리에서 다음 명령어를 실행합니다.</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>entry-hw 디렉터리에서 다음 명령어를 실행합니다.</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br><span class="line">npm run setting</span><br></pre></td></tr></table></figure>
+
+<p>각 명령어를 실행하면 다음과 같은 화면이 출력됩니다.</p>
+<p><img src="/docs/images/tutorial/tutorial16.png" alt="tutorial16"></p>
+<h3 id="실행-테스트"><a href="#실행-테스트" class="headerlink" title="실행 테스트"></a>실행 테스트</h3><p>entryjs 디렉터리에서 다음 명령어를 실행합니다.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run serve</span><br></pre></td></tr></table></figure>
+
+<p>명령어를 실행하면 다음과 같은 화면이 출력됩니다.</p>
+<p><img src="/docs/images/tutorial/tutorial06.png" alt="tutorial06"></p>
+<p><code>npm run serve</code>는 개발 테스트 시에 사용하는 명령어로, 실시간으로 코드가 반영되는 환경에서 테스트할 수 있습니다.</p>
+<p>entry-hw 디렉터리에서 다음 명령어를 실행합니다.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run start</span><br></pre></td></tr></table></figure>
+
+<p>명령어를 실행하면 하드웨어가 정상적으로 연결된 경우 다음과 같은 화면이 출력됩니다.</p>
+<p><img src="/docs/images/tutorial/tutorial07.png" alt="tutorial07"></p>
+<p>하드웨어가 정상적으로 연결되지 않은 경우에는 <strong>하드웨어 연결하기</strong>를 클릭합니다.</p>
+<h2 id="블록-개발"><a href="#블록-개발" class="headerlink" title="블록 개발"></a>블록 개발</h2><blockquote>
+<p>연관 페이지: <a href="/docs/guide/entryjs/2016-05-22-add_new_blocks.html">블록 명세 작성</a>, <a href="/docs/guide/entryjs/2018-03-09-translate.html">하드웨어 블록 번역작업</a></p>
+</blockquote>
+<p>이 튜토리얼에서는 ‘Testino’라는 하드웨어의 특정 디지털 포트의 값을 on/off 설정하는 ‘testino_on_digital_value’라는 블록을 개발합니다.</p>
+<p><strong>편리한 개발을 위해 <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a> 편집기 사용을 추천합니다.</strong></p>
+<h3 id="블록-작성하기"><a href="#블록-작성하기" class="headerlink" title="블록 작성하기"></a>블록 작성하기</h3><blockquote>
+<p>연관 페이지: <a href="/docs/guide/entryjs/2016-07-08-add_new_blocks4.html#%ED%95%98%EB%93%9C%EC%9B%A8%EC%96%B4-%EC%97%B0%EA%B2%B0%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%97%90-%EA%B0%92-%EC%9D%BD%EA%B3%A0-%EC%93%B0%EA%B8%B0">하드웨어 블록 만들기 - 값 읽고 쓰기</a></p>
+<p>Entry.hw.sendQueue: 하드웨어에 보낼 값<br>Entry.hw.portData: 하드웨어에서 보낸 값<br>Entry.hw.update(): 하드웨어로 데이터를 바로 보냄</p>
+</blockquote>
+<p>하드웨어를 사용하는 블록은 [entryjs 경로]/src/playground/blocks/hardware/ 디렉터리에 block_하드웨어명.js 파일로 작성해야 합니다. 여기에서는 block_testino.js 파일에 작성합니다.</p>
+<hr>
+<h4 id="기본-명세"><a href="#기본-명세" class="headerlink" title="기본 명세"></a>기본 명세</h4><p>블록 모듈파일은 기본적인 프로퍼티와 메소드명을 준수하여 개발하셔야 합니다.<br>엔트리는 정해진 프로퍼티를 읽어와 로직을 수행합니다.<br>기본적인 프로퍼티는 아래와 같습니다.<br>id 프로퍼티의 경우, 엔트리에서 하드웨어 고유번호를 발급받아야 하지만 여기서는 테스트용으로 더미 ID 를 사용하였습니다.</p>
+<p>blockMenuBlocks 프로퍼티에 대한 자세한 설명은 <a href="/docs/guide/entryjs/2016-05-26-add_new_blocks2.html">블록 사용 등록</a> 을 참고해주세요.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Testino</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>() &#123;</span><br><span class="line">        <span class="keyword">this</span>.id = <span class="string">'FF.FF'</span>;</span><br><span class="line">        <span class="keyword">this</span>.url = <span class="string">'http://www.my-company.org/'</span>;</span><br><span class="line">        <span class="keyword">this</span>.name = <span class="string">'Testino'</span>;</span><br><span class="line">        <span class="keyword">this</span>.imageName = <span class="string">'testino.png'</span>; <span class="comment">//thumbnail</span></span><br><span class="line">        <span class="keyword">this</span>.title = &#123;</span><br><span class="line">            ko: <span class="string">'테스트이노'</span>,</span><br><span class="line">            en: <span class="string">'testino'</span>,</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 블록메뉴에 표기될 블록명을 추가합니다. 이곳에 추가하지 않으면 블록이 표기되지 않습니다.  </span></span><br><span class="line">        <span class="keyword">this</span>.blockMenuBlocks = [<span class="string">'testino_on_digital_value'</span>, <span class="string">'testino_off_digital_value'</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="엔트리-정지시-데이터-정리-로직-추가"><a href="#엔트리-정지시-데이터-정리-로직-추가" class="headerlink" title="엔트리 정지시 데이터 정리 로직 추가"></a>엔트리 정지시 데이터 정리 로직 추가</h4><p>엔트리 프로젝트가 정지될 때, 엔트리는 하드웨어 블록모듈의 setZero 라는 이름의 함수를 호출합니다.<br>이곳에서 포트 상태를 초기화 하거나, 특정 패킷을 보내 디바이스를 리셋하는데 사용할 수 있습니다. </p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Testino</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>() &#123; <span class="comment">/* ... */</span>&#125;</span><br><span class="line">    setZero() &#123;</span><br><span class="line">        <span class="comment">// 엔트리 실행이 정지되었을 때 보낼 신호(reset 명령을 보냄)</span></span><br><span class="line">        <span class="comment">// 2번부터 13번 포트를 0으로 초기화</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">2</span> ; i &lt;= <span class="number">13</span> ; i++) &#123;</span><br><span class="line">            Entry.hw.sendQueue.PORT[i] = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Entry.hw.update(); <span class="comment">// 하드웨어에 명시적으로 정보를 보냄.</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="다국어-명세"><a href="#다국어-명세" class="headerlink" title="다국어 명세"></a>다국어 명세</h4><blockquote>
+<p>연관 페이지: <a href="/docs/guide/entryjs/2018-03-09-translate.html">하드웨어 블록 번역작업</a></p>
+</blockquote>
+<p>블록이 다국어를 지원하도록 <code>setLanguage</code> 함수를 작성해야 합니다. 한국어(ko)와 영어(en)는 반드시 작성해야 합니다. 블록에 표시될 문구를 언어별로 작성합니다.</p>
+<p>파라미터값을 문구에 넣으려면 <code>%1</code>, <code>%2</code>와 같은 값을 사용합니다. 파라미터값이 다국어를 지원하게 하려면 <code>template:{}</code>과 동일한 수준의 <code>Blocks:{}</code> 안에 파라미터값과 해당하는 문구를 작성합니다. 여기에서는 파라미터값으로 숫자만 사용하기 때문에 <code>Blocks:{}</code>는 작성하지 않았습니다.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Testino</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>() &#123; <span class="comment">/* ... */</span>&#125;</span><br><span class="line">    setZero() &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">    setLanguage() &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            ko: &#123;</span><br><span class="line">                template: &#123;</span><br><span class="line">                    testino_on_digital_value: <span class="string">'디지털 핀 %1 번을 켜기 %2'</span>,</span><br><span class="line">                    testino_off_digital_value: <span class="string">'디지털 핀 %1 번을 끄기 %2'</span>,</span><br><span class="line">                &#125;,</span><br><span class="line">            &#125;,</span><br><span class="line">            en: &#123;</span><br><span class="line">                template: &#123;</span><br><span class="line">                    testino_on_digital_value: <span class="string">'turn on digital pin %1 %2'</span>,</span><br><span class="line">                    testino_off_digital_value: <span class="string">'turn off digital pin %1 %2'</span>,</span><br><span class="line">                &#125;,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="블록-명세"><a href="#블록-명세" class="headerlink" title="블록 명세"></a>블록 명세</h4><blockquote>
+<p>연관 페이지: <a href="/docs/guide/entryjs/2016-05-22-add_new_blocks.html">블록 명세 작성</a>, <a href="/docs/guide/entryjs/2016-05-26-add_new_blocks3.html">블록 모양별 개발 방법</a></p>
+</blockquote>
+<p>실제 블록을 작성하는 부분입니다. <code>getBlocks</code> 함수를 템플릿에 맞춰 작성합니다.</p>
+<p>여기에서는 가장 기초적인 부분만을 설명하므로 실제 개발 시에는 기존에 개발된 블록 코드를 참고하시는 것이 좋습니다. arduino_ext, EV3 등 블록 관련 기존 코드는 [entryjs 경로]/src/playground/blocks 디렉터리에 있습니다.</p>
+<ul>
+<li><code>isNotFor</code> 속성은 해당 하드웨어가 연결된 경우에만 블록을 표시한다는 의미입니다. <code>isNotFor</code> 속성값은 기본 명세의 <code>name</code> 속성값과 같아야 합니다. 이 값이 다르면 코드가 승인되지 않습니다.</li>
+<li><code>color</code> 속성값은 하드웨어 블록의 경우 <code>EntryStatic.colorSet.block.default.HARDWARE</code>만을 사용해야 합니다. 다른 색상을 사용하면 규정상 승인되지 않습니다.</li>
+<li><code>skeleton</code> 속성값은 블록 모양을 나타냅니다. 사용할 수 있는 값은 <a href="/docs/guide/entryjs/2016-05-22-add_new_blocks.html">블록 명세 작성</a>을 참고하세요.</li>
+<li><code>func</code>의 <code>async</code>/<code>await</code> 키워드 관련 자세한 설명은 <a href="/docs/guide/entryjs/2016-05-26-add_new_blocks3.html">블록 모양별 개발 방법</a>을 참고하세요.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Testino</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>() &#123; <span class="comment">/* ... */</span>&#125;</span><br><span class="line">    setZero() &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">    setLanguage() &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">    getBlocks() &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            testino_on_digital_value: &#123;</span><br><span class="line">                color: EntryStatic.colorSet.block.default.HARDWARE,</span><br><span class="line">                outerLine: EntryStatic.colorSet.block.darken.HARDWARE,</span><br><span class="line">                fontColor: <span class="string">'#ffffff'</span>,</span><br><span class="line">                skeleton: <span class="string">'basic'</span>, <span class="comment">// 블록 모양 템플릿. 자세한 목록은 docs 를 참고해주세요</span></span><br><span class="line">                statements: [],</span><br><span class="line">                params: [</span><br><span class="line">                    <span class="comment">//입력될 파라미터들의 속성을 정의</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        type: <span class="string">'Block'</span>,</span><br><span class="line">                        accept: <span class="string">'string'</span>, <span class="comment">//숫자만 들어가도 string 입니다. 엔트리엔 이를 구분하지 않습니다.</span></span><br><span class="line">                    &#125;,</span><br><span class="line">                    <span class="comment">// basic skeleton 의 마지막엔 인디케이터를 추가해주셔야 합니다.</span></span><br><span class="line">                    &#123; <span class="attr">type</span>: <span class="string">'Indicator'</span>, <span class="attr">img</span>: <span class="string">'block_icon/hardware_icon.svg'</span>, <span class="attr">size</span>: <span class="number">12</span> &#125;,</span><br><span class="line">                ],</span><br><span class="line">                def: &#123;</span><br><span class="line">                    params: [</span><br><span class="line">                        <span class="comment">//파라미터에 들어갈 기본 값.</span></span><br><span class="line">                        &#123;</span><br><span class="line">                            type: <span class="string">'number'</span>,</span><br><span class="line">                            params: [<span class="number">2</span>],</span><br><span class="line">                        &#125;,</span><br><span class="line">                    ],</span><br><span class="line">                    type: <span class="string">'testino_on_digital_value'</span>, <span class="comment">// 블록 상속과 관련된 값입니다. 블록명과 동일하게 해주면 됩니다.</span></span><br><span class="line">                &#125;,</span><br><span class="line">                paramsKeyMap: &#123;</span><br><span class="line">                    <span class="comment">// 실제 블록의 로직인 func 에서 해당 인덱스의 파라미터를 가져올때 쓸 key 값</span></span><br><span class="line">                    PORT: <span class="number">0</span>,</span><br><span class="line">                &#125;,</span><br><span class="line">                events: &#123;&#125;,</span><br><span class="line">                class: 'TestinoBlock', // 블록을 묶어서 보여줄 단위값. 이 값이 바뀌면 사이에 가로줄이 생깁니다.</span><br><span class="line">                isNotFor: [<span class="string">'Testino'</span>], <span class="comment">// 하드웨어가 연결되었을 경우만 블록을 보여주겠다는 판단값입니다. name 과 동일해야 합니다.</span></span><br><span class="line">                func: <span class="function">(<span class="params">sprite, script</span>) =&gt;</span> &#123;</span><br><span class="line">                    <span class="comment">// paramsKeyMap 에서 PORT 는 파라미터의 0번 인덱스 값이었습니다.</span></span><br><span class="line">                    <span class="keyword">const</span> portNumber = script.getNumberValue(<span class="string">'PORT'</span>);</span><br><span class="line">                    Entry.hw.sendQueue[portNumber] = <span class="number">1</span>;</span><br><span class="line">                    <span class="comment">// 값을 반환해야하는 경우는 return 할 수 있습니다.</span></span><br><span class="line">                &#125;,</span><br><span class="line">                syntax: &#123;</span><br><span class="line">                    <span class="comment">// 파이썬 문법 변환에 사용되고 있습니다.</span></span><br><span class="line">                    js: [],</span><br><span class="line">                    py: [</span><br><span class="line">                        &#123;</span><br><span class="line">                            syntax: <span class="string">'Testino.turnOnDigitalPort(%1)'</span>,</span><br><span class="line">                            blockType: <span class="string">'param'</span>,</span><br><span class="line">                            textParams: [</span><br><span class="line">                                &#123;</span><br><span class="line">                                    type: <span class="string">'Block'</span>,</span><br><span class="line">                                    accept: <span class="string">'string'</span>,</span><br><span class="line">                                &#125;,</span><br><span class="line">                            ],</span><br><span class="line">                        &#125;,</span><br><span class="line">                    ],</span><br><span class="line">                &#125;,</span><br><span class="line">            &#125;,</span><br><span class="line">            testino_off_digital_value: &#123;</span><br><span class="line">                color: EntryStatic.colorSet.block.default.HARDWARE,</span><br><span class="line">                outerLine: EntryStatic.colorSet.block.darken.HARDWARE,</span><br><span class="line">                fontColor: <span class="string">'#ffffff'</span>,</span><br><span class="line">                skeleton: <span class="string">'basic'</span>,</span><br><span class="line">                statements: [],</span><br><span class="line">                params: [</span><br><span class="line">                    &#123;</span><br><span class="line">                        type: <span class="string">'Block'</span>,</span><br><span class="line">                        accept: <span class="string">'string'</span>,</span><br><span class="line">                    &#125;,</span><br><span class="line">                    &#123; <span class="attr">type</span>: <span class="string">'Indicator'</span>, <span class="attr">img</span>: <span class="string">'block_icon/hardware_icon.svg'</span>, <span class="attr">size</span>: <span class="number">12</span> &#125;,</span><br><span class="line">                ],</span><br><span class="line">                def: &#123;</span><br><span class="line">                    params: [</span><br><span class="line">                        &#123;</span><br><span class="line">                            type: <span class="string">'number'</span>,</span><br><span class="line">                            params: [<span class="number">2</span>],</span><br><span class="line">                        &#125;,</span><br><span class="line">                    ],</span><br><span class="line">                    type: <span class="string">'testino_off_digital_value'</span>,</span><br><span class="line">                &#125;,</span><br><span class="line">                paramsKeyMap: &#123;</span><br><span class="line">                    PORT: <span class="number">0</span>,</span><br><span class="line">                &#125;,</span><br><span class="line">                events: &#123;&#125;,</span><br><span class="line">                class: 'TestinoBlock',</span><br><span class="line">                isNotFor: [<span class="string">'Testino'</span>],</span><br><span class="line">                func: <span class="function">(<span class="params">sprite, script</span>) =&gt;</span> &#123;</span><br><span class="line">                    <span class="keyword">const</span> portNumber = script.getNumberValue(<span class="string">'PORT'</span>);</span><br><span class="line">                    Entry.hw.sendQueue[portNumber] = <span class="number">0</span>;</span><br><span class="line">                &#125;,</span><br><span class="line">                syntax: &#123;</span><br><span class="line">                    js: [],</span><br><span class="line">                    py: [</span><br><span class="line">                        &#123;</span><br><span class="line">                            syntax: <span class="string">'Testino.turnOffDigitalPort(%1)'</span>,</span><br><span class="line">                            blockType: <span class="string">'param'</span>,</span><br><span class="line">                            textParams: [</span><br><span class="line">                                &#123;</span><br><span class="line">                                    type: <span class="string">'Block'</span>,</span><br><span class="line">                                    accept: <span class="string">'string'</span>,</span><br><span class="line">                                &#125;,</span><br><span class="line">                            ],</span><br><span class="line">                        &#125;,</span><br><span class="line">                    ],</span><br><span class="line">                &#125;,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="하드웨어-블록-모듈-등록"><a href="#하드웨어-블록-모듈-등록" class="headerlink" title="하드웨어 블록 모듈 등록"></a>하드웨어 블록 모듈 등록</h3><p>entryjs 에서 작성한 블록 모듈을 코드에서 export 해주면 entryjs 에서 자동으로 모듈을 인식하여 블록을 등록하게 됩니다.</p>
+<p>파일 맨 아래에 아래와 같이 입력합니다.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Entry.Testino = <span class="keyword">new</span> Testino();</span><br><span class="line"><span class="built_in">module</span>.exports = Entry.Testino;</span><br></pre></td></tr></table></figure>
+
+<p>이 코드를 참고하여 testino_off_digital_value 블록을 작성해 보세요(<a href="/docs/files/block_testino.js">결과 파일 다운로드</a>).</p>
+<h3 id="임시-블록-테스트"><a href="#임시-블록-테스트" class="headerlink" title="임시 블록 테스트"></a>임시 블록 테스트</h3><p>하드웨어를 연결하기 전, 블록이 정상적으로 만들어졌는지 테스트합니다.</p>
+<p><code>isNotFor</code> 속성값에 따라 해당 하드웨어가 연결된 경우에만 블록을 보여주므로, 하드웨어가 연결되지 않은 상태에서도 블록을 확인할 수 있도록 다음과 같이 주석 처리하겠습니다.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// isNotFor: ['Testino'], // 하드웨어가 연결되었을 경우만 블록을 보여주겠다는 판단값입니다. 기본 명세의 name값과 동일해야합니다.</span></span><br></pre></td></tr></table></figure>
+
+<p>entryjs 디렉터리에서 <code>npm run serve</code>를 실행하면 다음과 같이 블록이 표시되는 것을 확인할 수 있습니다.</p>
+<p><img src="/docs/images/tutorial/tutorial08.png" alt="tutorial08"></p>
+<p>확인 후에는 <code>isNotFor</code> 속성을 다시 주석 처리 해제합니다.</p>
+<h2 id="하드웨어-모듈-개발"><a href="#하드웨어-모듈-개발" class="headerlink" title="하드웨어 모듈 개발"></a>하드웨어 모듈 개발</h2><p>지금까지 Entry Js를 이용하여 블록이 하드웨어 연결 프로그램과 통신하는 부분을 작성했습니다. 이제 Entry Hardware를 이용하여, 블록이 보낸 정보를 수신하고 가공하여 아두이노를 조작하는 방법을 알아보겠습니다.</p>
+<h3 id="하드웨어-모듈-구성"><a href="#하드웨어-모듈-구성" class="headerlink" title="하드웨어 모듈 구성"></a>하드웨어 모듈 구성</h3><blockquote>
+<p>연관 페이지: <a href="/docs/guide/entry-hw/2016-05-03-add_module.html">하드웨어 모듈 추가하기</a></p>
+</blockquote>
+<p>하드웨어 모듈에는 파일이 세 개 필요합니다. 세 파일은 모두 이름이 같아야 합니다. 여기에서는 testino라고 하겠습니다. 다음과 같은 세 파일을 [entry-hw 경로]/app/modules 디렉터리에 작성합니다.</p>
+<ul>
+<li>testino.js: 실제 동작 로직이 들어있는 파일</li>
+<li>testino.json: 하드웨어 동작 방식과 이름 등의 명세 파일</li>
+<li>testino.png: 하드웨어 연결 프로그램에 표시될 섬네일 이미지</li>
+</ul>
+<p>이 밖에 드라이버나 펌웨어가 필요할 수 있습니다.</p>
+<hr>
+<h4 id="이미지-파일-추가"><a href="#이미지-파일-추가" class="headerlink" title="이미지 파일 추가"></a>이미지 파일 추가</h4><p>다음과 같은 testino.png 파일을 추가합니다.</p>
+<p><img src="/docs/images/tutorial/tutorial09.png" alt="tutorial09"></p>
+<p>파일 크기가 너무 크거나 직사각형이면 문제가 발생할 수 있습니다. 이미지 파일에 대한 자세한 내용은 <a href="/docs/guide/entry-hw/2016-05-03-add_module.html#%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%82%BD%EC%9E%85">이미지 삽입</a>을 참고하세요.</p>
+<hr>
+<h4 id="하드웨어-명세-추가"><a href="#하드웨어-명세-추가" class="headerlink" title="하드웨어 명세 추가"></a>하드웨어 명세 추가</h4><blockquote>
+<p>연관 페이지: <a href="/docs/guide/entry-hw/2016-05-03-add_module.html#json-%ED%8C%8C%EC%9D%BC%EC%83%9D%EC%84%B1">.json 파일 생성</a></p>
+</blockquote>
+<p>하드웨어의 드라이버나 펌웨어, 통신 방식 등 다양한 하드웨어 관련 명세를 작성하는 파일입니다. 속성에 대한 자세한 설명은 연관 페이지를 참고하세요.</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"id"</span>: <span class="string">"FFFF01"</span>,</span><br><span class="line">    <span class="attr">"name"</span>: &#123;</span><br><span class="line">        <span class="attr">"en"</span>: <span class="string">"Testino"</span>,</span><br><span class="line">        <span class="attr">"ko"</span>: <span class="string">"테스트이노"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"category"</span>: <span class="string">"board"</span>, <span class="comment">//board, robot, module 중 하나</span></span><br><span class="line">    <span class="attr">"platform"</span>: [<span class="string">"win32"</span>, <span class="string">"darwin"</span>],</span><br><span class="line">    <span class="attr">"icon"</span>: <span class="string">"testino.png"</span>,</span><br><span class="line">    <span class="attr">"module"</span>: <span class="string">"testino.js"</span>,</span><br><span class="line">    <span class="attr">"url"</span>: <span class="string">"http://playentry.org"</span>,</span><br><span class="line">    <span class="attr">"driver"</span>: &#123; <span class="comment">// 기존 아두이노 데이터를 활용</span></span><br><span class="line">        <span class="attr">"win32-ia32"</span>: <span class="string">"arduino/dpinst-x86.exe"</span>,</span><br><span class="line">        <span class="attr">"win32-x64"</span>: <span class="string">"arduino/dpinst-amd64.exe"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"reconnect"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"firmware"</span>: <span class="string">"board2"</span>, <span class="comment">// 기존 아두이노 데이터를 활용</span></span><br><span class="line">    <span class="attr">"hardware"</span>: &#123; <span class="comment">// 기존 아두이노 데이터를 활용</span></span><br><span class="line">        <span class="attr">"type"</span>: <span class="string">"serial"</span>, <span class="comment">// serial or bluetooth</span></span><br><span class="line">        <span class="attr">"control"</span>: <span class="string">"slave"</span>, <span class="comment">// master or slave. 일반적으로는 slave 입니다.</span></span><br><span class="line">        <span class="attr">"duration"</span>: <span class="number">32</span>, <span class="comment">// slave 모드일때 기기에 데이터를 요청하는 ms 간격</span></span><br><span class="line">        <span class="attr">"vendor"</span>: <span class="string">"Arduino"</span>, <span class="comment">// usb vendor 가 동일한 경우 바로 연결합니다.</span></span><br><span class="line">        <span class="attr">"baudRate"</span>: <span class="number">9600</span>,</span><br><span class="line">        <span class="attr">"firmwarecheck"</span>: <span class="literal">true</span> <span class="comment">// 펌웨어가 없어서 연결이 안되는 경우 자동으로 펌웨어 업데이트 로직으로 이동할지 여부</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="하드웨어-로직-추가"><a href="#하드웨어-로직-추가" class="headerlink" title="하드웨어 로직 추가"></a>하드웨어 로직 추가</h4><blockquote>
+<p>연관 페이지: <a href="/docs/guide/entry-hw/2016-05-03-add_module.html#js-%ED%8C%8C%EC%9D%BC%EC%83%9D%EC%84%B1">.js 파일 생성</a></p>
+</blockquote>
+<p>엔트리 블록 뭉치 실행이 전부 끝나면 엔트리에서 설정된 데이터 요청 map이 하드웨어에 전송됩니다. 각 블록이 실행될 때마다 엔트리와 하드웨어 간 데이터가 송수신되는 방식이 아니므로 주의하시기 바랍니다.</p>
+<p>바이트 버퍼의 내용은 하드웨어 구현 방식에 종속되어 벤더별로 다릅니다. 이 정보는 엔트리에서 제공하지 않습니다. 이 코드는 단순히 디지털 신호를 아두이노에 보내는 역할만을 합니다.</p>
+<p>모듈 내부의 코드는 전적으로 하드웨어 개발자에 의해 결정됩니다. 아래의 코드는 참고만 하시기 바랍니다. 하드웨어와 정상적인 통신이 가능하며 엔트리에 지장을 주지 않는 경우에 한해 자유롭게 작성하시면 됩니다.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> BaseModule = <span class="built_in">require</span>(<span class="string">'./baseModule'</span>);</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Module</span> <span class="keyword">extends</span> <span class="title">BaseModule</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>() &#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.sp = <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">this</span>.digitalPin = [];</span><br><span class="line">        <span class="keyword">this</span>.sendBuffers = [];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    init(handler, config) &#123;</span><br><span class="line">        <span class="comment">// 엔트리 브라우저와 연결되었을때 호출됨</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    setSerialPort(sp) &#123;</span><br><span class="line">        <span class="comment">// 최초 연결시도(handshake) 성공 후에 호출됨</span></span><br><span class="line">        <span class="keyword">this</span>.sp = sp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    requestInitialData() &#123;</span><br><span class="line">        <span class="comment">// 최초 연결시도시 디바이스에 보낼 데이터. checkInitialData 가 선언되어있다면 필수</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    checkInitialData(data, config) &#123;</span><br><span class="line">        <span class="comment">// 최초 연결시도에서 디바이스의 데이터를 받아, 원하는 데이터가 맞는지 판단하는 로직</span></span><br><span class="line">        <span class="comment">// requestInitialData 가 선언되어있다면 필수</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// deprecated</span></span><br><span class="line">    afterConnect(connector, cb) &#123;</span><br><span class="line">        <span class="comment">// handshake 종료 후 정상 연결상태로 진입전에 호출됨. connector 와 UI state 를 강제변경할 수 있으나 비추천</span></span><br><span class="line">        connector.connected = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (cb) &#123;</span><br><span class="line">            cb(<span class="string">'connected'</span>); <span class="comment">// 해당 string state 로 UI state 를 강제변경하나 문제를 일으킬 수 있습니다.</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    validateLocalData(data) &#123;</span><br><span class="line">        <span class="comment">// 해당 함수가 존재하면, 디바이스에서 데이터를 받아온 후 validate 를 거친다. 없으면 그대로 처리로직으로 진행한다.</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    requestRemoteData(handler) &#123;</span><br><span class="line">        <span class="comment">// 디바이스에서 데이터를 받아온 후, 브라우저로 데이터를 보내기 위해 호출되는 로직. handler 를 세팅하는 것으로 값을 보낼 수 있다.</span></span><br><span class="line">        <span class="comment">// handler.write(key, value) 로 세팅한 값은 Entry.hw.portData 에서 받아볼 수 있다.</span></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    handleRemoteData(handler) &#123;</span><br><span class="line">        <span class="comment">// 엔트리 브라우저에서 온 데이터를 처리한다. handler.read 로 브라우저의 데이터를 읽어올 수 있다.</span></span><br><span class="line">        <span class="comment">// handler 의 값은 Entry.hw.sendQueue 에 세팅한 값과 같다.</span></span><br><span class="line">        <span class="keyword">let</span> buffer = <span class="keyword">new</span> Buffer([]);</span><br><span class="line">        <span class="keyword">const</span> digitalPin = <span class="keyword">this</span>.digitalPin;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span> ; i &lt; <span class="number">14</span> ; i++) &#123;</span><br><span class="line">            digitalPin[i] = handler.read(i);</span><br><span class="line"></span><br><span class="line">            buffer = Buffer.concat([</span><br><span class="line">                buffer,</span><br><span class="line">                <span class="keyword">this</span>.makeOutputBuffer(<span class="number">1</span>, i, digitalPin[i] === <span class="number">1</span> ? <span class="number">255</span> : <span class="number">0</span>),</span><br><span class="line">            ]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (buffer.length) &#123;</span><br><span class="line">            <span class="keyword">this</span>.sendBuffers.push(buffer);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    requestLocalData() &#123;</span><br><span class="line">        <span class="comment">// 디바이스로 데이터를 보내는 로직. control: slave 인 경우 duration 주기에 맞춰 디바이스에 데이터를 보낸다.</span></span><br><span class="line">        <span class="comment">// return 값으로 버퍼를 반환하면 디바이스로 데이터를 보내나, 아두이노의 경우 레거시 코드를 따르고 있다.</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.sendBuffers.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">this</span>.sp.write(<span class="keyword">this</span>.sendBuffers.shift(), () =&gt; &#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="keyword">this</span>.sp) &#123;</span><br><span class="line">                    <span class="keyword">this</span>.sp.drain(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                        <span class="keyword">this</span>.isDraing = <span class="literal">false</span>;</span><br><span class="line">                    &#125;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    handleLocalData(data) &#123;</span><br><span class="line">        <span class="comment">// 디바이스에서 온 데이터를 처리하는 로직. 여기서는 처리할 데이터가 없어 스킵하였음.</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    disconnect(connector) &#123;</span><br><span class="line">        <span class="comment">// 커넥터가 연결해제될 때 호출되는 로직, 스캔 정지 혹은 디바이스 연결 해제시 호출된다.</span></span><br><span class="line">        connector.close();</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.sp) &#123;</span><br><span class="line">            <span class="keyword">delete</span> <span class="keyword">this</span>.sp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    reset() &#123;</span><br><span class="line">        <span class="comment">// 엔트리 브라우저와의 소켓 연결이 끊어졌을 때 발생하는 로직.</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 이 아래로는 자유롭게 선언하여 사용한 함수입니다.</span></span><br><span class="line">    makeOutputBuffer(device, port, data) &#123;</span><br><span class="line">        <span class="keyword">let</span> buffer;</span><br><span class="line">        <span class="keyword">const</span> value = <span class="keyword">new</span> Buffer(<span class="number">2</span>);</span><br><span class="line">        <span class="keyword">const</span> dummy = <span class="keyword">new</span> Buffer([<span class="number">10</span>]);</span><br><span class="line"></span><br><span class="line">        value.writeInt16LE(data);</span><br><span class="line">        buffer = <span class="keyword">new</span> Buffer([</span><br><span class="line">            <span class="number">255</span>,</span><br><span class="line">            <span class="number">85</span>,</span><br><span class="line">            <span class="number">6</span>,</span><br><span class="line">            <span class="number">0</span>, <span class="comment">// sensorIdx</span></span><br><span class="line">            <span class="number">2</span>,</span><br><span class="line">            device,</span><br><span class="line">            port,</span><br><span class="line">        ]);</span><br><span class="line">        buffer = Buffer.concat([buffer, value, dummy]);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> buffer;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    getDataByBuffer(buffer) &#123;</span><br><span class="line">        <span class="keyword">const</span> datas = [];</span><br><span class="line">        <span class="keyword">let</span> lastIndex = <span class="number">0</span>;</span><br><span class="line">        buffer.forEach(<span class="function">(<span class="params">value, idx</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (value == <span class="number">13</span> &amp;&amp; buffer[idx + <span class="number">1</span>] == <span class="number">10</span>) &#123;</span><br><span class="line">                datas.push(buffer.subarray(lastIndex, idx));</span><br><span class="line">                lastIndex = idx + <span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> datas;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="keyword">new</span> Module();</span><br></pre></td></tr></table></figure>
+
+<h2 id="최종-확인"><a href="#최종-확인" class="headerlink" title="최종 확인"></a>최종 확인</h2><p>entryjs 디렉터리에서 <code>npm run serve</code> 명령을 실행합니다.</p>
+<p><img src="/docs/images/tutorial/tutorial17.png" alt="tutorial17"></p>
+<p><strong>하드웨어 선택</strong> 창에 다음과 같이 테스트이노가 표시됩니다.</p>
+<p><img src="/docs/images/tutorial/tutorial10.png" alt="tutorial10"></p>
+<p>테스트이노를 클릭하면 하드웨어가 연결됩니다. 연결되지 않는 경우 드라이버를 설치합니다.</p>
+<p><img src="/docs/images/tutorial/tutorial11.png" alt="tutorial11"></p>
+<p>하드웨어가 연결되면 작성한 블록이 표시됩니다.</p>
+<p><img src="/docs/images/tutorial/tutorial12.png" alt="tutorial12"></p>
+<p><strong>디지털 핀 4 번을 켜기</strong> 블록을 추가합니다.</p>
+<p><img src="/docs/images/tutorial/tutorial18.png" alt="tutorial18"></p>
+<p>블록을 추가하고 엔트리를 실행하면 디지털 핀 번호에 해당하는 LED 램프가 켜지는 것을 확인할 수 있습니다.</p>
+<p><img src="/docs/images/tutorial/tutorial13.png" alt="tutorial12"></p>
+<h3 id="최종-산출물"><a href="#최종-산출물" class="headerlink" title="최종 산출물"></a>최종 산출물</h3><p>최종 산출물은 다음과 같습니다.</p>
+<ul>
+<li>entryjs &gt; <a href="/docs/files/block_testino.js">block_testino.js</a></li>
+<li>entry-hw &gt; <a href="/docs/files/testino_module.zip">testino.js, testino.json, testino.png</a></li>
+</ul>
+<h2 id="코드-기록하기"><a href="#코드-기록하기" class="headerlink" title="코드 기록하기"></a>코드 기록하기</h2><p>작업이 완료되면 해당 작업을 Git에 기록(commit)하고, 기록한 작업을 원격 저장소에 업로드(push)합니다.<br>Git 사용에 익숙한 사용자는 <a href="https://www.sourcetreeapp.com/" target="_blank" rel="noopener">Sourcetree</a>나 IDE의 버전 관리 기능을 활용할 수 있습니다.<br>익숙하지 않은 경우 다음 명령어를 실행하면 코드를 자신의 컴퓨터에 기록하고 자신의 원격 저장소에 업로드할 수 있습니다.</p>
+<ul>
+<li><p>entryjs 디렉터리에서 다음 명령어 실행</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull</span><br><span class="line">git add src/playground/blocks/hardware/block_[하드웨어명].js</span><br><span class="line"><span class="comment"># 최초 커밋시에는 imageName 에 작성한 이미지 포함</span></span><br><span class="line"><span class="comment"># git add images/hardware/[imageName].png</span></span><br><span class="line">git commit -m <span class="string">"[커밋 메시지]"</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>entry-hw 디렉터리에서 다음 명령어 실행</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull</span><br><span class="line">git add app/modules/[하드웨어명].js</span><br><span class="line">git add app/modules/[하드웨어명].json</span><br><span class="line">git add app/modules/[하드웨어명].png</span><br><span class="line">git commit -m <span class="string">"[커밋 메시지]"</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="반영하기"><a href="#반영하기" class="headerlink" title="반영하기"></a>반영하기</h2><p>이 튜토리얼에서 작성한 코드는 실제로 반영하지 않으므로 이 페이지에서는 반영 방법을 설명하지 않습니다.<br>반영 방법은 <a href="/docs/guide/basic/pull_request.html">반영하기</a>를 참고하세요.</p>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/docs/guide/index.html">시작하기</a></span>
+        
+        
+      </div>
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/guide/quick_start/2018-07-30-tutorial.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/guide/quick_start/2018-07-30-tutorial.md" target="_blank">
+        Edit this page on Github!
+      </a>
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://entryhw.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/docs/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/docs/js/css.escape.js"></script>
+        <script src="/docs/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

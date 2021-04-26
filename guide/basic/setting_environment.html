@@ -60,7 +60,7 @@
             ga('create', 'UA-103554573-1', 'auto');
             ga('send', 'pageview');
         </script>
-    <meta name="generator" content="Hexo 4.2.0"></head>
+    <meta name="generator" content="Hexo 5.4.0"></head>
     <body class="docs">
         <div id="mobile-bar" >
             <a class="menu-button"></a>
@@ -398,22 +398,22 @@
 </blockquote>
 <p>엔트리의 오픈소스 프로젝트는 Git을 사용하여 관리합니다.<br>Git을 사용하여 코드를 기록하고 반영하므로 반드시 Git을 설치해야 합니다.</p>
 <ul>
-<li>macOS, Windows 사용자는 <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git - Downloads</a>에서 Git 설치 파일을 다운로드하여 실행합니다.</li>
-<li>Linux 사용자는 <a href="https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%84%A4%EC%B9%98" target="_blank" rel="noopener">Git - Git 설치</a>를 참고하여 Git을 설치합니다.</li>
+<li>macOS, Windows 사용자는 <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git - Downloads</a>에서 Git 설치 파일을 다운로드하여 실행합니다.</li>
+<li>Linux 사용자는 <a target="_blank" rel="noopener" href="https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%84%A4%EC%B9%98">Git - Git 설치</a>를 참고하여 Git을 설치합니다.</li>
 </ul>
 <hr>
 <p>Git 사용이 익숙치 않다면, Git GUI 도구를 사용하는 것도 좋습니다. (선택사항)<br>아래의 도구를 사용하여 좀 더 쉽게 Git 작업을 하실 수 있습니다.</p>
 <blockquote>
-<p><a href="https://desktop.github.com/" target="_blank" rel="noopener">Github Desktop</a><br><a href="https://www.sourcetreeapp.com/" target="_blank" rel="noopener">SourceTree</a></p>
+<p><a target="_blank" rel="noopener" href="https://desktop.github.com/">Github Desktop</a><br><a target="_blank" rel="noopener" href="https://www.sourcetreeapp.com/">SourceTree</a></p>
 </blockquote>
-<h2 id="NodeJS-설치"><a href="#NodeJS-설치" class="headerlink" title="NodeJS 설치"></a>NodeJS 설치</h2><p>엔트리 프로젝트를 개발하기 위해 기본적으로 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>가 설치되어 있어야 합니다.</p>
+<h2 id="NodeJS-설치"><a href="#NodeJS-설치" class="headerlink" title="NodeJS 설치"></a>NodeJS 설치</h2><p>엔트리 프로젝트를 개발하기 위해 기본적으로 <a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node.js</a>가 설치되어 있어야 합니다.</p>
 <p>Node.js와 함께 설치되는 라이브러리 관리 도구인 npm을 사용하면 엔트리 구동에 필요한 라이브러리를 설치할 수 있습니다.</p>
 <p>설치가 완료되면 명령 프롬프트 창에서 다음 명령어를 입력해 정상적으로 설치되었는지 확인합니다.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm --version</span><br><span class="line">node --version</span><br></pre></td></tr></table></figure>
 
 <p>정상적으로 설치되었다면 다음과 같은 결과가 출력됩니다. 버전은 다를 수 있습니다.</p>
 <p><img src="/docs/images/tutorial/tutorial03.png" alt="tutorial03"></p>
-<h2 id="SerialPort-라이브러리-빌드-환경-설치"><a href="#SerialPort-라이브러리-빌드-환경-설치" class="headerlink" title="SerialPort 라이브러리 빌드 환경 설치"></a>SerialPort 라이브러리 빌드 환경 설치</h2><p>엔트리 하드웨어는 시리얼포트 통신을 위해 <a href="https://github.com/node-serialport/node-serialport" target="_blank" rel="noopener">node-serialport</a> 라이브러리를 사용합니다.<br>해당 라이브러리를 사용하기 위해서는 C++, python 빌드 환경과 <a href="https://github.com/nodejs/node-gyp" target="_blank" rel="noopener">node-gyp</a> 라이브러리가 필요합니다.<br>빌드에 대한 자세한 사항은 <a href="https://github.com/nodejs/node-gyp#installation" target="_blank" rel="noopener">node-gyp#installation</a> 을 참고해 주세요.</p>
+<h2 id="SerialPort-라이브러리-빌드-환경-설치"><a href="#SerialPort-라이브러리-빌드-환경-설치" class="headerlink" title="SerialPort 라이브러리 빌드 환경 설치"></a>SerialPort 라이브러리 빌드 환경 설치</h2><p>엔트리 하드웨어는 시리얼포트 통신을 위해 <a target="_blank" rel="noopener" href="https://github.com/node-serialport/node-serialport">node-serialport</a> 라이브러리를 사용합니다.<br>해당 라이브러리를 사용하기 위해서는 C++, python 빌드 환경과 <a target="_blank" rel="noopener" href="https://github.com/nodejs/node-gyp">node-gyp</a> 라이브러리가 필요합니다.<br>빌드에 대한 자세한 사항은 <a target="_blank" rel="noopener" href="https://github.com/nodejs/node-gyp#installation">node-gyp#installation</a> 을 참고해 주세요.</p>
 <p>C++ 빌드 라이브러리인 node-gyp 을 설치해주세요.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --global node-gyp</span><br></pre></td></tr></table></figure>
 
@@ -453,7 +453,7 @@
         (d.head || d.body).appendChild(s);
       })();
       </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 </div>
 

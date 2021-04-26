@@ -60,7 +60,7 @@
             ga('create', 'UA-103554573-1', 'auto');
             ga('send', 'pageview');
         </script>
-    <meta name="generator" content="Hexo 4.2.0"></head>
+    <meta name="generator" content="Hexo 5.4.0"></head>
     <body class="docs">
         <div id="mobile-bar" >
             <a class="menu-button"></a>
@@ -394,13 +394,13 @@
       <h1>시작하기</h1>
     
     <p><code>Entry JS</code> 는 엔트리에 사용되는 블록과 워크스페이스를 만들기위한 라이브러리 입니다.<br>하드웨어 업체에서는 하드웨어 블록을 추가하는 용도로 사용됩니다.</p>
-<h2 id="개발-환경-세팅"><a href="#개발-환경-세팅" class="headerlink" title="개발 환경 세팅"></a>개발 환경 세팅</h2><h3 id="프로젝트-포크"><a href="#프로젝트-포크" class="headerlink" title="프로젝트 포크"></a>프로젝트 포크</h3><p>엔트리 개발시 엔트리의 원본 프로젝트에 직접 작업은 허용되지 않습니다.<br>그러므로 프로젝트를 복사하는 <code>fork</code> 작업을 거쳐야 합니다.<br>먼저, <a href="https://github.com/entrylabs/entryjs" target="_blank" rel="noopener">EntryJS GitHub 페이지</a>에 접속 합니다.  </p>
+<h2 id="개발-환경-세팅"><a href="#개발-환경-세팅" class="headerlink" title="개발 환경 세팅"></a>개발 환경 세팅</h2><h3 id="프로젝트-포크"><a href="#프로젝트-포크" class="headerlink" title="프로젝트 포크"></a>프로젝트 포크</h3><p>엔트리 개발시 엔트리의 원본 프로젝트에 직접 작업은 허용되지 않습니다.<br>그러므로 프로젝트를 복사하는 <code>fork</code> 작업을 거쳐야 합니다.<br>먼저, <a target="_blank" rel="noopener" href="https://github.com/entrylabs/entryjs">EntryJS GitHub 페이지</a>에 접속 합니다.  </p>
 <p>사이트 접속 후 우측 상단에 있는 Fork 버튼을 클릭합니다.<br><img src="/docs/images/entry-hw/fork.png" alt="Fork">  </p>
 <p>이후, 복사한 레포지토리를 git clone으로 내 로컬 컴퓨터에 다운 받아 개발 가능한 상태로 만듭니다.  </p>
 <h3 id="클론"><a href="#클론" class="headerlink" title="클론"></a>클론</h3><p>fork 를 통해 원격 저장소를 복사하였으면, 로컬로 저장소를 가져와야 합니다.<br><code>git clone</code> 을 수행하여 로컬에 해당 소스를 받습니다. 기본 브랜치인 <code>develop-hw</code> 를 기본브랜치로 가져오기 위해선 아래와 같이 입력합니다.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> -b develop-hw https://github.com/(본인의 계정)/entryjs.git</span><br></pre></td></tr></table></figure>
 
-<h3 id="브랜치-변경"><a href="#브랜치-변경" class="headerlink" title="브랜치 변경"></a>브랜치 변경</h3><p>EntryJS 는 브랜치를 통해 작업내역을 관리중입니다.<br>자세한 설명은 <a href="https://git-scm.com/book/ko/v1/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%3F" target="_blank" rel="noopener">Git - 브랜치란 무엇인가?</a>를 참고하세요.  </p>
+<h3 id="브랜치-변경"><a href="#브랜치-변경" class="headerlink" title="브랜치 변경"></a>브랜치 변경</h3><p>EntryJS 는 브랜치를 통해 작업내역을 관리중입니다.<br>자세한 설명은 <a target="_blank" rel="noopener" href="https://git-scm.com/book/ko/v1/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%3F">Git - 브랜치란 무엇인가?</a>를 참고하세요.  </p>
 <p>엔트리 팀 내부에서 개발 시 사용되는 브랜치는 develop 입니다.<br><strong>하드웨어 개발시</strong> 사용되는 브랜치는 <code>develop-hw</code> 입니다.</p>
 <p>기본 브랜치를 먼저 <code>develop-hw</code> 로 수정해주세요. 현재 브랜치가 <code>develop-hw</code> 라면 수정할 필요 없습니다.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git checkout develop-hw</span><br></pre></td></tr></table></figure>
@@ -443,7 +443,7 @@
         (d.head || d.body).appendChild(s);
       })();
       </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 </div>
 

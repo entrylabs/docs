@@ -60,7 +60,7 @@
             ga('create', 'UA-103554573-1', 'auto');
             ga('send', 'pageview');
         </script>
-    <meta name="generator" content="Hexo 4.2.0"></head>
+    <meta name="generator" content="Hexo 5.4.0"></head>
     <body class="docs">
         <div id="mobile-bar" >
             <a class="menu-button"></a>
@@ -401,12 +401,12 @@
 <p>resource 파일이 상당히 많기 때문에 빌드 시간이 꽤나 오래 걸리게 됩니다.</p>
 </blockquote>
 <p>일렉트론의 경우 64 비트 환경에서 32 비트로 빌드하고 사운드 파일을 처리할때 크래시가 발생할 수 있어 타겟에 맞는 빌드가 필요합니다. 해당 빌드가 완료되면 <code>out</code> 폴더 밑에 실행파일이 만들어 집니다.</p>
-<h3 id="Windows-설치파일-만들기"><a href="#Windows-설치파일-만들기" class="headerlink" title="Windows 설치파일 만들기"></a>Windows 설치파일 만들기</h3><p>윈도우의 경우, 인스톨러 전 패키징된 파일들로만 만들어지게 됩니다.<br><code>Windows</code>용 설치파일을 만들기 위해선 먼저 <a href="http://nsis.sourceforge.net/Download" target="_blank" rel="noopener">NSIS</a>설치가 필요합니다. <code>NSIS</code>설치가 완료되고 나면 /build 의 <code>nsi</code>스크립트를 실행시켜 설치파일로 만들수 있습니다.</p>
-<p><code>nsi</code>의 스크립트 내용은 <a href="http://nsis.sourceforge.net/Docs/" target="_blank" rel="noopener">NSIS Document</a>를 참고하시기 바랍니다.</p>
+<h3 id="Windows-설치파일-만들기"><a href="#Windows-설치파일-만들기" class="headerlink" title="Windows 설치파일 만들기"></a>Windows 설치파일 만들기</h3><p>윈도우의 경우, 인스톨러 전 패키징된 파일들로만 만들어지게 됩니다.<br><code>Windows</code>용 설치파일을 만들기 위해선 먼저 <a target="_blank" rel="noopener" href="http://nsis.sourceforge.net/Download">NSIS</a>설치가 필요합니다. <code>NSIS</code>설치가 완료되고 나면 /build 의 <code>nsi</code>스크립트를 실행시켜 설치파일로 만들수 있습니다.</p>
+<p><code>nsi</code>의 스크립트 내용은 <a target="_blank" rel="noopener" href="http://nsis.sourceforge.net/Docs/">NSIS Document</a>를 참고하시기 바랍니다.</p>
 <h2 id="OSX-Mac-빌드"><a href="#OSX-Mac-빌드" class="headerlink" title="OSX(Mac) 빌드"></a>OSX(Mac) 빌드</h2><h3 id="OSX-설치파일-만들기"><a href="#OSX-설치파일-만들기" class="headerlink" title="OSX 설치파일 만들기"></a>OSX 설치파일 만들기</h3><p>OSX 의 경우에는 아래의 명령어를 통해 <code>app 패키징</code> 과 <code>dmg 빌드</code> 가 한번에 수행됩니다.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn dist:mac</span><br></pre></td></tr></table></figure>
 
-<p><code>electron-builder</code>에서 알아서 <code>.app</code>파일과 <code>.dmg</code>파일을 제작하게 됩니다. 결과물은 <code>out</code>폴더에 생성이 되며, <code>.dmg</code>파일로 설치를 진행하면 됩니다. 자세한 설치파일 생성 옵션은 <a href="https://electronforge.io/" target="_blank" rel="noopener">Electron-Forge 문서</a> 사이트와 <a href="https://github.com/electron-userland/electron-forge" target="_blank" rel="noopener">README.md</a>를 읽어 보시기 바랍니다.</p>
+<p><code>electron-builder</code>에서 알아서 <code>.app</code>파일과 <code>.dmg</code>파일을 제작하게 됩니다. 결과물은 <code>out</code>폴더에 생성이 되며, <code>.dmg</code>파일로 설치를 진행하면 됩니다. 자세한 설치파일 생성 옵션은 <a target="_blank" rel="noopener" href="https://electronforge.io/">Electron-Forge 문서</a> 사이트와 <a target="_blank" rel="noopener" href="https://github.com/electron-userland/electron-forge">README.md</a>를 읽어 보시기 바랍니다.</p>
 <h2 id="Codesign-서명"><a href="#Codesign-서명" class="headerlink" title="Codesign(서명)"></a>Codesign(서명)</h2><p>서명이란, 해당 프로그램이 자신이 만든 파일이라는 것을 입증하는 절차입니다. 실제 사용자에게 문제없이 프로그램을 전달하고 실행되기 위해선 이 과정이 필요합니다.<br>서명이 없다면 불법 프로그램으로 인식되거나, Windows 의 경우 매번 <code>Windows Smart Screen</code> 이 뜨는 번거로움이 있을 수 있습니다.</p>
 <p>하지만 개발용으로 사용시 따로 서명이 필요하지 않기 때문에, 이 문서에서는 <code>Codesign</code>에 대해서는 다루지 않습니다.</p>
 
@@ -442,7 +442,7 @@
         (d.head || d.body).appendChild(s);
       })();
       </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 </div>
 

@@ -60,7 +60,7 @@
             ga('create', 'UA-103554573-1', 'auto');
             ga('send', 'pageview');
         </script>
-    <meta name="generator" content="Hexo 4.2.0"></head>
+    <meta name="generator" content="Hexo 5.4.0"></head>
     <body class="docs">
         <div id="mobile-bar" >
             <a class="menu-button"></a>
@@ -398,7 +398,7 @@
 <p>Entry Docs 는 github project 이므로, 기본적으로는 git 을 사용하실 수 있어야 합니다.</p>
 <h2 id="기여-방법"><a href="#기여-방법" class="headerlink" title="기여 방법"></a>기여 방법</h2><h3 id="Repository-클론"><a href="#Repository-클론" class="headerlink" title="Repository 클론"></a>Repository 클론</h3><p>먼저 repository 를 가져옵니다.</p>
 <blockquote>
-<p>git clone <a href="https://github.com/entrylabs/docs" target="_blank" rel="noopener">https://github.com/entrylabs/docs</a></p>
+<p>git clone <a target="_blank" rel="noopener" href="https://github.com/entrylabs/docs">https://github.com/entrylabs/docs</a></p>
 </blockquote>
 <h3 id="작업용-브랜치-추가하기"><a href="#작업용-브랜치-추가하기" class="headerlink" title="작업용 브랜치 추가하기"></a>작업용 브랜치 추가하기</h3><p>Entry Docs 는 두개의 브랜치를 운영에 사용하고있습니다.  </p>
 <ul>
@@ -421,20 +421,20 @@
 </ul>
 <h4 id="문서-작성-방법"><a href="#문서-작성-방법" class="headerlink" title="문서 작성 방법"></a>문서 작성 방법</h4><h5 id="문서-파일명"><a href="#문서-파일명" class="headerlink" title="문서 파일명"></a>문서 파일명</h5><p>문서 파일은 YYYY-MM-DD-문서명.md 로 작성해주시면 됩니다.</p>
 <h5 id="문서-메타데이터-작성"><a href="#문서-메타데이터-작성" class="headerlink" title="문서 메타데이터 작성"></a>문서 메타데이터 작성</h5><p>프로젝트는 문서의 메타데이터를 통해 카테고리 및 순서등을 결정합니다.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; ---</span><br><span class="line">layout: page</span><br><span class="line">title: [문서 제목]</span><br><span class="line">type: guide</span><br><span class="line">category: [카테고리명은 다른 문서와 겹쳐야 합니다. 공백이 있는경우 &#39;&#39; 으로 감싸주세요.]</span><br><span class="line">[order: 1 &#x2F;&#x2F; 순서는 생략가능합니다]</span><br><span class="line">&gt; ---</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&gt; ---</span><br><span class="line">layout: page</span><br><span class="line">title: [문서 제목]</span><br><span class="line">type: guide</span><br><span class="line">category: [카테고리명은 다른 문서와 겹쳐야 합니다. 공백이 있는경우 &#x27;&#x27; 으로 감싸주세요.]</span><br><span class="line">[order: 1 // 순서는 생략가능합니다]</span><br><span class="line">&gt; ---</span><br></pre></td></tr></table></figure>
 
 <h5 id="문서-작성"><a href="#문서-작성" class="headerlink" title="문서 작성"></a>문서 작성</h5><p>문서는 자유롭게 작성하시면 됩니다.<br>이미지 첨부는 <code>[alt 값](/docs/images/...)</code> 와 같은 형태로 작성하시면 됩니다.</p>
 <h4 id="문서-로컬-테스트하기"><a href="#문서-로컬-테스트하기" class="headerlink" title="문서 로컬 테스트하기"></a>문서 로컬 테스트하기</h4><p>Entry Docs 에 반영 요청전 로컬 PC 에서 문서가 어떻게 나올지 테스트하실 수 있습니다.</p>
 <p>먼저 프로젝트의 종속성 라이브러리를 설치한 후, start script 로 실행해보실 수 있습니다.</p>
 <blockquote>
-<p>npm install<br>npm run start<br>이후 <a href="http://localhost:5000" target="_blank" rel="noopener">http://localhost:5000</a> 에서 docs 를 확인하실 수 있습니다. </p>
+<p>npm install<br>npm run start<br>이후 <a target="_blank" rel="noopener" href="http://localhost:5000">http://localhost:5000</a> 에서 docs 를 확인하실 수 있습니다. </p>
 </blockquote>
 <h4 id="PR-요청"><a href="#PR-요청" class="headerlink" title="PR 요청"></a>PR 요청</h4><p>PR 요청 전 작업하신 브랜치를 github 에 올려주세요.</p>
 <blockquote>
 <p>git add .<br>git commit -m ‘커밋시 메세지’<br>git push origin -u [브랜치명]</p>
 </blockquote>
 <p>이후 PR 을 작성해주시면 됩니다.<br>Github PR 에 관해서는 <a href="/docs/guide/basic/pull_request.html">Basic#PR 요청하기</a> 파트를 참고해주세요.</p>
-<p><a href="https://github.com/entrylabs/docs/pulls" target="_blank" rel="noopener">Entry Docs PR</a> 의 <code>New pull request</code> 버튼을 통해 PR을 생성하실 수 있습니다.</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/entrylabs/docs/pulls">Entry Docs PR</a> 의 <code>New pull request</code> 버튼을 통해 PR을 생성하실 수 있습니다.</p>
 
     
       <div class="guide-links">
@@ -470,7 +470,7 @@
         (d.head || d.body).appendChild(s);
       })();
       </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 </div>
 

@@ -23,6 +23,5 @@ install:
 - yarn
 script:
   - npm run build
-  - npm run deploy
 after_success:
   - ./cideploy

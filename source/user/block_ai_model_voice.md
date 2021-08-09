@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 인공지능 블록 > 분류 모델 - 음성
-date: 2021-05-11 16:29:00
+date: 2021-08-09 11:20:00
 type: userGuide
 category: "블록"
 order: 31
@@ -90,7 +90,7 @@ order: 31
 
 ![block-ai-model-01](images/block-ai-model-01.png)
 
-데이터 입력 팝업 창을 열고, 입력한 데이터를 학습한 모델로 인식합니다.
+데이터 입력 팝업 창을 열고, 입력한 데이터를 학습한 모델로 분류합니다.
 
 <img src="images/window/voice-model-input.png" alt="voice-model-input" style="zoom:50%;" />
 

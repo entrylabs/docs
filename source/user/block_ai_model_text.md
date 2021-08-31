@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 인공지능 블록 > 분류 모델 - 텍스트
-date: 2021-01-11 10:04:00
+date: 2021-08-09 10:11:00
 type: userGuide
 category: "블록"
 order: 30
@@ -60,7 +60,7 @@ order: 30
 
 ## 2. `(엔트리)` 을(를) 학습한 모델로 분류하기
 
-![block-ai-model-02](images/block-ai-model-02.png)
+![block-ai-model-txt-02](images/block-ai-model-txt-02.png)
 
 이 블록의 값 블록(<img src="images/icon/value.png" alt="value" style="zoom:50%;" />)에 입력한 텍스트를 학습한 모델로 분류합니다.
 

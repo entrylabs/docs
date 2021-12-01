@@ -1,0 +1,77 @@
+<div class="sidebar">
+  <div class="sidebar-inner-index">
+    <ul class="main-menu">
+      <%- partial('partials/main_menu', { context: 'sidebar' }) %>
+    </ul>
+  </div>
+</div>
+
+<div id="hero">
+  <div class="inner">
+    <div class="left">
+      <img class="hero-logo" src="<%- url_for("/images/main.png") %>">
+    </div>
+    <div class="right">
+      <h2 class="vue">Entry Docs</h2>
+      <h1>
+        엔트리는 누구나 무료로 소프트웨어 교육을 받을 수 있게 개발된 소프트웨어 교육 플랫폼입니다.
+      </h1>
+      <p>
+        <a class="button" href="<%- url_for("/guide/") %>">시작하기</a>
+        <a class="button" href="<%- url_for("/user/") %>">사용자 위키</a>
+        <a class="button white" href="https://github.com/entrylabs/" target="_blank">GITHUB</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="highlights">
+  <div class="inner">
+    <div class="point">
+      <h2>Entry Js</h2>
+      <p>엔트리 워크스페이스와 블록을
+        <br>개발 할 수 있는 라이브러리 입니다.</p>
+    </div>
+
+    <div class="point">
+      <h2>Entry Hardware</h2>
+      <p>엔트리에 아두이노 등
+        <br>여러 하드웨어를 연결 할 수 있도록
+        <br>도와주는 프로그램 입니다.</p>
+    </div>
+
+    <div class="point">
+      <h2>Entry Offline</h2>
+      <p>
+        엔트리를 오프라인 환경에서
+        <br> 사용 할수 있도록 만들어진
+        <br> 프로그램 입니다.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="footer">
+  <a href="https://www.playentry.org" target="_blank">
+    <img src="<%- url_for("/images/logo_white.png") %>" style="width:120px">
+  </a>
+  <p>Released under the
+    <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>
+    <br>
+    ©
+    <a href="http://blog.naver.com/connect_org" target="_blank">Connect Foundation.</a>
+  </p>
+</div>
+
+<script>
+  var topScrolled = false
+  window.addEventListener('scroll', function () {
+    if (window.pageYOffset > 165 && !topScrolled) {
+      topScrolled = true
+      document.getElementById('mobile-bar').classList.remove('top')
+    } else if (window.pageYOffset <= 165 && topScrolled) {
+      topScrolled = false
+      document.getElementById('mobile-bar').classList.add('top')
+    }
+  })
+</script>

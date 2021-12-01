@@ -652,6 +652,11 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+hexo-auto-canonical@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/hexo-auto-canonical/-/hexo-auto-canonical-0.1.1.tgz#9d864d6a915e399c6d1b89042846eb0bf209fc9b"
+  integrity sha512-PR9JyqjK17Lun+/OOAT8+p1LjDknMIDJpyMnnNOlGthj3ry43xLy5+sYITjywhs6/wI5iROfC4lhlytNgII44A==
+
 hexo-autonofollow@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hexo-autonofollow/-/hexo-autonofollow-1.0.1.tgz#2c25344b71f6ea41303370bbd0b1732308bd7773"

@@ -1,2 +1,2 @@
 # docs
-documents
+https://docs.playentry.org

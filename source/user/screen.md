@@ -1,65 +1,49 @@
 ---
 layout: page
 title: 실행 화면
-date: 2020-11-12 15:44:00
+date: 2021-12-01 16:48:00
 type: userGuide
 category: "화면의 구성 요소"
 order: 4
 ---
 
-
-
 ## 작품 실행
 
 
 
-![screen-start](images/window/screen-start.png)
+<img src="images/window/screen-start.png" alt="screen-start" style="zoom: 50%;" />
 
-
-
-작품 만들기 화면의 왼쪽 위에 있는 실행 화면입니다. 작품 시작하기 버튼 ![ic-player-play](images\icon\ic-player-play.png)을 누르면 작품을 실행할 수 있습니다.
+작품 만들기 화면의 왼쪽 위에 있는 실행 화면입니다. '시작하기' 버튼을 누르면 작품을 실행할 수 있습니다.
 
 + 단축키 `ctrl` + `r` 을 눌러서 실행할 수도 있습니다.
 
 
 
-![screen-playing](images/window/screen-playing.png)
+<img src="images/window/screen-playing.png" alt="screen-playing" style="zoom:50%;" />
+
+작품이 실행 중이라면 '일시정지' 버튼과 '정지하기' 버튼이 나타나요.
+
++ **일시정지 버튼** ![ic-player-pause](images/icon/ic-player-pause.png) : 작품을 잠시동안 정지합니다. '다시 시작' 버튼 ![ic-player-play](images/icon/ic-player-play.png)을 다시 누르면 작품이 정지된 부분부터 다시 시작해요.
+
++ **정지하기 버튼** ![ic-player-stop](images/icon/ic-player-stop.png) : 작품을 완전히 정지하고 처음 상태로 되돌립니다. 단축키 `ctrl` + `r` 을 눌러서 정지할 수도 있습니다.
 
 
 
-작품이 실행 중이라면 작품 일시정지 버튼과 작품 중지하기 버튼이 나타나요.
-
-+ **작품 일시정지 버튼** ![ic-player-pause](images/icon/ic-player-pause.png) : 작품을 잠시동안 정지합니다. 시작하기 버튼 ![ic-player-play](images/icon/ic-player-play.png)을 다시 누르면 작품이 정지된 곳부터 시작해요.
-
-+ **작품 중지하기 버튼** ![ic-player-stop](images/icon/ic-player-stop.png) : 작품을 완전히 정지하고 처음 상태로 되돌립니다. 단축키 `ctrl` + `r` 을 눌러서 중지할 수도 있습니다.
-
-
-
-
-
-![screen-option](images/window/screen-option.png)
-
-
+<img src="images/window/screen-option.png" alt="screen-option" style="zoom:50%;" />
 
 실행 화면 위에 나타나는 좌표는 마우스 포인터의 좌표입니다. 실행 화면 안에 마우스 포인터를 대보세요.
 
 
 
-
-
-![screen-speed](images/window/screen-speed.png)
-
-
+<img src="images/window/screen-speed.png" alt="screen-speed" style="zoom:50%;" />
 
 속도 조절 버튼을 누르면 작품의 실행 속도를 1~5 범위에서 조절할 수 있어요. 블록의 실행 순서를 눈으로 천천히 확인하고자 할 때 유용합니다.
 
 
 
-![screen-coordinate](images/window/screen-coordinate.png)
+<img src="images/window/screen-coordinate.png" alt="screen-coordinate" style="zoom:50%;" />
 
-
-
-모눈 종이 버튼을 클릭하면 실행 화면에 눈금 좌표계가 나타납니다.
+'모눈종이' 버튼을 클릭하면 실행 화면에 눈금 좌표계가 나타납니다.
 
 + 실행 화면의 가운데가 좌표계의 원점입니다.
 + 실행 화면 안의 x 좌표 범위는 -240~240 입니다. 오른쪽으로 갈수록 양수(+)로 커지고, 왼쪽으로 갈수록 음수(-)로 커져요.
@@ -69,9 +53,7 @@ order: 4
 
 
 
-![screen-full](images/window/screen-full.jpg)
-
-
+![screen-full](images/window/screen-full.png)
 
 오른쪽 위의 크게 보기 버튼을 클릭하면 실행 화면을 크게 볼 수 있어요.
 
@@ -85,9 +67,9 @@ order: 4
 
 ## 장면
 
+
+
 ![header-scenes](images/window/header-scenes.png)
-
-
 
 엔트리의 장면은 영화 구성의 기본 단위인 장면과 비슷하다고 할 수 있어요. 장면들이 모여 영화가 되는 것처럼, 엔트리에서는 장면들이 모여 작품이 됩니다.
 
@@ -108,7 +90,7 @@ order: 4
 
 
 
-![screen-add-object](images/window/screen-add-object.png)
+<img src="images/window/screen-add-object-button.png" alt="screen-add-object-button" style="zoom:50%;" />
 
 
 
@@ -116,7 +98,7 @@ order: 4
 
 
 
-![object-add](images/window/object-add.jpg)
+![object-add](images/window/object-add.png)
 
 
 
@@ -130,7 +112,7 @@ order: 4
 
 #### ① 오브젝트 선택
 
-![add-object-select](images/window/add-object-select.jpg)
+![add-object-select](images/window/add-object-select.png)
 
 
 
@@ -142,21 +124,21 @@ order: 4
 
 
 
-![add-object-vector](images/window/add-object-vector.jpg)
+![add-object-vector](images/window/add-object-vector.png)
 
 
 
-오른쪽 상단의 '벡터 모아보기' 버튼을 클릭하면 벡터 모양의 오브젝트만 모아볼 수 있습니다.
+오른쪽 상단의 '벡터 모아보기' 버튼을 클릭하면 벡터 형식으로 만들어진 오브젝트만 모아볼 수 있습니다.
 
-각 모양의 좌측 상단에 있는 만년필 아이콘으로 벡터 오브젝트를 구분할 수 있어요.
+각 모양의 왼측 위에 있는 펜촉 아이콘![icon_vector](/Users/oyster/OneDrive/Documents/직장/CONNECT/operating/wiki/images/window/icon_vector.png)으로 벡터 오브젝트를 구분할 수 있어요. 벡터에 대한 더 자세한 설명은 모양 탭 문서에서 확인할 수 있습니다.
 
-벡터를 포함한 오브젝트는 앞으로도 엔트리에 계속 추가될 예정이니, 지켜봐주세요!
+벡터 오브젝트는 앞으로도 엔트리에 계속해서 추가될 예정이니, 지켜봐주세요!
 
 
 
 #### ② 파일 올리기
 
-![add-object-upload](images/window/add-object-upload.jpg)
+![add-object-upload](images/window/add-object-upload.png)
 
 
 
@@ -173,15 +155,15 @@ order: 4
 > 아래와 같은 그림은 이용약관 및 관련 법률에 의해 제재를 받을 수 있습니다.
 >
 > + 폭력적이고 잔인한 그림
-> + 선정적인 내용의 그림
+> + 선정적인 신체노출 그림
 > + 불쾌감을 주거나 혐오감을 일으키는 그림
 > + 무단 사용이 금지된 저작권의 그림 [[저작권에 대해 알아보기]](https://playentry.org/#!/terms/project)
 
 
 
-#### ③ 새로 만들기
+#### ③ 새로 그리기
 
-![add-object-new](images/window/add-object-new.jpg)
+![add-object-new](images/window/add-object-new.png)
 
 
 
@@ -194,7 +176,7 @@ order: 4
 > 아래와 같은 모양은 이용약관 및 관련 법률에 의해 제재를 받을 수 있습니다.
 >
 > + 폭력적이고 잔인한 그림
-> + 선정적인 내용의 그림
+> + 선정적인 신체노출 그림
 > + 불쾌감을 주거나 혐오감을 일으키는 그림
 > + 무단 사용이 금지된 저작권의 그림 [[저작권에 대해 알아보기]](https://playentry.org/#!/terms/project)
 
@@ -202,7 +184,7 @@ order: 4
 
 #### ④ 글상자
 
-![add-object-textbox](images/window/add-object-textbox.jpg)
+![add-object-textbox](images/window/add-object-textbox.png)
 
 
 
@@ -231,14 +213,14 @@ order: 4
 
   + **여러 줄 쓰기** : 내용 작성시 엔터키로 줄바꿈을 할 수 있습니다.
 
-    ![add-object-textbox-line](images/window/add-object-textbox-line.jpg)
+    <img src="images/window/add-object-textbox-line.png" alt="add-object-textbox-line" style="zoom:50%;" />
 
     글상자의 크기가 글자가 쓰이는 영역을 결정합니다.
 새로운 글자 추가 시 문장의 길이가 글상자의 가로 영역을 넘어가면 자동으로 줄이 바뀝니다.
 
 + **글 정렬**
 
-  <img src="images/window/object-textbox-edit.png" alt="object-textbox-edit" style="zoom: 77%;" />
+  <img src="images/window/object-textbox-edit.png" alt="object-textbox-edit" style="zoom: 33%;" />
 
 글상자 오브젝트를 선택하면 모양 탭 대신에 글상자 탭이 나타나요.
 

@@ -95,3 +95,19 @@ deploy:
   type: git
   repo: https://github.com/entrylabs/docs.git
   branch: gh-pages
+
+sitemap:
+  path: sitemap.xml
+  template: templates/sitemap_template.xml
+  rel: false
+  tags: true
+  categories: true
+
+robotstxt:
+  useragent: "*"
+  allow:
+    - /
+  sitemap: https://docs.playentry.org/sitemap.xml
+
+nofollow:
+  enable: true

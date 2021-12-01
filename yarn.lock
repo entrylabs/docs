@@ -123,6 +123,11 @@ bluebird@^3.2.2, bluebird@^3.5.0, bluebird@^3.5.1, bluebird@^3.5.2, bluebird@^3.
   resolved "http://npm.playentry.org:8080/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
 
+boolbase@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
+  integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
+
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "http://npm.playentry.org:8080/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
@@ -196,6 +201,17 @@ chalk@^4.0.0:
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
+
+cheerio@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-0.19.0.tgz#772e7015f2ee29965096d71ea4175b75ab354925"
+  integrity sha1-dy5wFfLuKZZQltcepBdbdas1SSU=
+  dependencies:
+    css-select "~1.0.0"
+    dom-serializer "~0.1.0"
+    entities "~1.1.1"
+    htmlparser2 "~3.8.1"
+    lodash "^3.2.0"
 
 chokidar@^3.0.0:
   version "3.5.2"
@@ -290,6 +306,11 @@ connect@^3.7.0:
     parseurl "~1.3.3"
     utils-merge "1.0.1"
 
+core-util-is@~1.0.0:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.3.tgz#a6042d3634c2b27e9328f837b965fac83808db85"
+  integrity sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==
+
 cross-spawn@^6.0.5:
   version "6.0.5"
   resolved "http://npm.playentry.org:8080/cross-spawn/-/cross-spawn-6.0.5.tgz#4a5ec7c64dfae22c3a14124dbacdee846d80cbc4"
@@ -321,6 +342,21 @@ css-parse@~2.0.0:
   integrity sha1-pGjuZnwW2BzPBcWMONKpfHgNv9Q=
   dependencies:
     css "^2.0.0"
+
+css-select@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/css-select/-/css-select-1.0.0.tgz#b1121ca51848dd264e2244d058cee254deeb44b0"
+  integrity sha1-sRIcpRhI3SZOIkTQWM7iVN7rRLA=
+  dependencies:
+    boolbase "~1.0.0"
+    css-what "1.0"
+    domutils "1.4"
+    nth-check "~1.0.0"
+
+css-what@1.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/css-what/-/css-what-1.0.0.tgz#d7cc2df45180666f99d2b14462639469e00f736c"
+  integrity sha1-18wt9FGAZm+Z0rFEYmOUaeAPc2w=
 
 css@^2.0.0:
   version "2.2.4"
@@ -388,6 +424,14 @@ destroy@~1.0.4:
   resolved "http://npm.playentry.org:8080/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
   integrity sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
 
+dom-serializer@0:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/dom-serializer/-/dom-serializer-0.2.2.tgz#1afb81f533717175d478655debc5e332d9f9bb51"
+  integrity sha512-2/xPb3ORsQ42nHYiSunXkDjPLBaEj/xTwUO4B7XCZQTRk7EBtTOPaygh10YAAh2OI1Qrp6NWfpAhzswj0ydt9g==
+  dependencies:
+    domelementtype "^2.0.1"
+    entities "^2.0.0"
+
 dom-serializer@^1.0.1:
   version "1.3.2"
   resolved "http://npm.playentry.org:8080/dom-serializer/-/dom-serializer-1.3.2.tgz#6206437d32ceefaec7161803230c7a20bc1b4d91"
@@ -397,10 +441,30 @@ dom-serializer@^1.0.1:
     domhandler "^4.2.0"
     entities "^2.0.0"
 
+dom-serializer@~0.1.0:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/dom-serializer/-/dom-serializer-0.1.1.tgz#1ec4059e284babed36eec2941d4a970a189ce7c0"
+  integrity sha512-l0IU0pPzLWSHBcieZbpOKgkIn3ts3vAh7ZuFyXNwJxJXk/c4Gwj9xaTJwIDVQCXawWD0qb3IzMGH5rglQaO0XA==
+  dependencies:
+    domelementtype "^1.3.0"
+    entities "^1.1.1"
+
+domelementtype@1, domelementtype@^1.3.0:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/domelementtype/-/domelementtype-1.3.1.tgz#d048c44b37b0d10a7f2a3d5fee3f4333d790481f"
+  integrity sha512-BSKB+TSpMpFI/HOxCNr1O8aMOTZ8hT3pM3GQ0w/mWRmkhEDSFJkkyzz4XQsBV44BChwGkrDfMyjVD0eA2aFV3w==
+
 domelementtype@^2.0.1, domelementtype@^2.2.0:
   version "2.2.0"
   resolved "http://npm.playentry.org:8080/domelementtype/-/domelementtype-2.2.0.tgz#9a0b6c2782ed6a1c7323d42267183df9bd8b1d57"
   integrity sha512-DtBMo82pv1dFtUmHyr48beiuq792Sxohr+8Hm9zoxklYPfa6n0Z3Byjj2IV7bmr2IyqClnqEQhfgHJJ5QF0R5A==
+
+domhandler@2.3:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-2.3.0.tgz#2de59a0822d5027fabff6f032c2b25a2a8abe738"
+  integrity sha1-LeWaCCLVAn+r/28DLCsloqir5zg=
+  dependencies:
+    domelementtype "1"
 
 domhandler@^3.0.0:
   version "3.3.0"
@@ -415,6 +479,21 @@ domhandler@^4.0.0, domhandler@^4.2.0:
   integrity sha512-PzE9aBMsdZO8TK4BnuJwH0QT41wgMbRzuZrHUcpYncEjmQazq8QEaBWgLG7ZyC/DAZKEgglpIA6j4Qn/HmxS3w==
   dependencies:
     domelementtype "^2.2.0"
+
+domutils@1.4:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/domutils/-/domutils-1.4.3.tgz#0865513796c6b306031850e175516baf80b72a6f"
+  integrity sha1-CGVRN5bGswYDGFDhdVFrr4C3Km8=
+  dependencies:
+    domelementtype "1"
+
+domutils@1.5:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/domutils/-/domutils-1.5.1.tgz#dcd8488a26f563d61079e48c9f7b7e32373682cf"
+  integrity sha1-3NhIiib1Y9YQeeSMn3t+Mjc2gs8=
+  dependencies:
+    dom-serializer "0"
+    domelementtype "1"
 
 domutils@^2.0.0, domutils@^2.5.2:
   version "2.8.0"
@@ -439,6 +518,16 @@ encodeurl@~1.0.2:
   version "1.0.2"
   resolved "http://npm.playentry.org:8080/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
   integrity sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k=
+
+entities@1.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/entities/-/entities-1.0.0.tgz#b2987aa3821347fcde642b24fdfc9e4fb712bf26"
+  integrity sha1-sph6o4ITR/zeZCsk/fyeT7cSvyY=
+
+entities@^1.1.1, entities@~1.1.1:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.2.tgz#bdfa735299664dfafd34529ed4f8522a275fea56"
+  integrity sha512-f2LZMYl1Fzu7YSBKg+RoROelpOaNrcGmE9AZubeDfrCEia483oW4MI4VyFd5VNHIgQ/7qm1I0wUHK1eJnn2y2w==
 
 entities@^2.0.0:
   version "2.2.0"
@@ -563,6 +652,13 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+hexo-autonofollow@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/hexo-autonofollow/-/hexo-autonofollow-1.0.1.tgz#2c25344b71f6ea41303370bbd0b1732308bd7773"
+  integrity sha1-LCU0S3H26kEwM3C70LFzIwi9d3M=
+  dependencies:
+    cheerio "^0.19.0"
+
 hexo-cli@^4.0.0:
   version "4.3.0"
   resolved "http://npm.playentry.org:8080/hexo-cli/-/hexo-cli-4.3.0.tgz#4bb2bf11a30fae601f2f53ac0cb833fee3187649"
@@ -638,6 +734,20 @@ hexo-generator-index@^1.0.0:
   integrity sha512-L25MdZ7e5ar/F8lIW+zBNNlA4f5A8CBUOYi1IQZCgL3wPVW+AWn66RSM5UVBAbiw5yxDeTHdk0sJYXbhSBaOFQ==
   dependencies:
     hexo-pagination "1.0.0"
+
+hexo-generator-robotstxt@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/hexo-generator-robotstxt/-/hexo-generator-robotstxt-0.2.0.tgz#e65a68659808904295f6ad99ebf6abbbeb6a32f2"
+  integrity sha1-5lpoZZgIkEKV9q2Z6/aru+tqMvI=
+
+hexo-generator-sitemap@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/hexo-generator-sitemap/-/hexo-generator-sitemap-2.2.0.tgz#4422670b6d9bbf8e512bc1219c4409f330cf3291"
+  integrity sha512-WoS/GpdrazoiFuhZXS3Qnb22L0uaiKHHWefcsoE7JLjh8WsksFom4v2FoNhr1RIYwFV7SudQFs91P5xcW+Gfow==
+  dependencies:
+    hexo-util "^2.1.0"
+    micromatch "^4.0.2"
+    nunjucks "^3.1.6"
 
 hexo-generator-tag@^1.0.0:
   version "1.0.0"
@@ -731,7 +841,7 @@ hexo-util@^1.0.0:
     strip-indent "^3.0.0"
     striptags "^3.1.1"
 
-hexo-util@^2.0.0, hexo-util@^2.4.0:
+hexo-util@^2.0.0, hexo-util@^2.1.0, hexo-util@^2.4.0:
   version "2.5.0"
   resolved "http://npm.playentry.org:8080/hexo-util/-/hexo-util-2.5.0.tgz#de5635341116ba2563a789a0ebceb55a875221ad"
   integrity sha512-l0zkqcg2524KPO84HQe0JROpPlCM/dEnCJaJrZ1qsq+3+/YxhDa0zxiGtUVY1dtrWzOK/V11Zj+UEklhGP8Jeg==
@@ -808,6 +918,17 @@ htmlparser2@^6.0.0:
     domutils "^2.5.2"
     entities "^2.0.0"
 
+htmlparser2@~3.8.1:
+  version "3.8.3"
+  resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-3.8.3.tgz#996c28b191516a8be86501a7d79757e5c70c1068"
+  integrity sha1-mWwosZFRaovoZQGn15dX5ccMEGg=
+  dependencies:
+    domelementtype "1"
+    domhandler "2.3"
+    domutils "1.5"
+    entities "1.0"
+    readable-stream "1.1"
+
 http-errors@~1.7.2:
   version "1.7.3"
   resolved "http://npm.playentry.org:8080/http-errors/-/http-errors-1.7.3.tgz#6c619e4f9c60308c38519498c14fbb10aacebb06"
@@ -827,7 +948,7 @@ inflight@^1.0.4:
     once "^1.3.0"
     wrappy "1"
 
-inherits@2, inherits@2.0.4, inherits@^2.0.3:
+inherits@2, inherits@2.0.4, inherits@^2.0.3, inherits@~2.0.1:
   version "2.0.4"
   resolved "http://npm.playentry.org:8080/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
@@ -878,6 +999,11 @@ is-wsl@^1.1.0:
   resolved "http://npm.playentry.org:8080/is-wsl/-/is-wsl-1.1.0.tgz#1f16e4aa22b04d1336b66188a66af3c600c3a66d"
   integrity sha1-HxbkqiKwTRM2tmGIpmrzxgDDpm0=
 
+isarray@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
+  integrity sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=
+
 isexe@^2.0.0:
   version "2.0.0"
   resolved "http://npm.playentry.org:8080/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
@@ -914,6 +1040,11 @@ lazy-cache@^1.0.3:
   version "1.0.4"
   resolved "http://npm.playentry.org:8080/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
   integrity sha1-odePw6UEdMuAhF07O24dpJpEbo4=
+
+lodash@^3.2.0:
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
+  integrity sha1-W/Rejkm6QYnhfUgnid/RW9FAt7Y=
 
 longest@^1.0.1:
   version "1.0.1"
@@ -1076,7 +1207,14 @@ normalize-path@^3.0.0, normalize-path@~3.0.0:
   resolved "http://npm.playentry.org:8080/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
   integrity sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==
 
-nunjucks@^3.2.1:
+nth-check@~1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/nth-check/-/nth-check-1.0.2.tgz#b2bd295c37e3dd58a3bf0700376663ba4d9cf05c"
+  integrity sha512-WeBOdju8SnzPN5vTUJYxYUxLeXpCaVP5i5e0LF8fg7WORF2Wd7wFX/pk0tYZk7s8T+J7VLy0Da6J1+wCT0AtHg==
+  dependencies:
+    boolbase "~1.0.0"
+
+nunjucks@^3.1.6, nunjucks@^3.2.1:
   version "3.2.3"
   resolved "http://npm.playentry.org:8080/nunjucks/-/nunjucks-3.2.3.tgz#1b33615247290e94e28263b5d855ece765648a31"
   integrity sha512-psb6xjLj47+fE76JdZwskvwG4MYsQKXUtMsPh6U0YMvmyjRtKRFcxnlXGWglNybtNTNVmGdp94K62/+NjF5FDQ==
@@ -1176,6 +1314,16 @@ range-parser@~1.2.1:
   version "1.2.1"
   resolved "http://npm.playentry.org:8080/range-parser/-/range-parser-1.2.1.tgz#3cf37023d199e1c24d1a55b84800c2f3e6468031"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
+
+readable-stream@1.1:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.13.tgz#f6eef764f514c89e2b9e23146a75ba106756d23e"
+  integrity sha1-9u73ZPUUyJ4rniMUanW6EGdW0j4=
+  dependencies:
+    core-util-is "~1.0.0"
+    inherits "~2.0.1"
+    isarray "0.0.1"
+    string_decoder "~0.10.x"
 
 readdirp@~3.6.0:
   version "3.6.0"
@@ -1354,6 +1502,11 @@ sprintf-js@~1.0.2:
   version "1.5.0"
   resolved "http://npm.playentry.org:8080/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
+
+string_decoder@~0.10.x:
+  version "0.10.31"
+  resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94"
+  integrity sha1-YuIDvEF2bGwoyfyEMB2rHFMQ+pQ=
 
 strip-ansi@^6.0.0:
   version "6.0.0"

@@ -41,7 +41,7 @@ entry-hw 는 직접 github 에서 데이터를 가져오며, entryjs 는 bower �
 
 ### 각 프로젝트 fork 하기
 
-반영하고자 하는 프로젝트를 먼저 fork 합니다. fork 방법은 각 가이드문서([entryjs](/docs/guide/entryjs/2018-03-09-getting_started.html), [entry-hw](/docs/guide/entry-hw/2016-05-01-getting_started.html))
+반영하고자 하는 프로젝트를 먼저 fork 합니다. fork 방법은 각 가이드문서([entryjs](/guide/entryjs/2018-03-09-getting_started.html), [entry-hw](/guide/entry-hw/2016-05-01-getting_started.html))
 를 참고해주세요.
 
 ### entryjs 반영하기

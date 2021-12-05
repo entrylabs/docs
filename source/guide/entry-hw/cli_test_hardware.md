@@ -19,17 +19,17 @@ $ npm run test # npm 패키지매니저를 사용하고 있는 경우
 
 ### 테스트 순서
 
-![CLI test 01](/docs/images/entry-hw/cli_test_01.png)
+![CLI test 01](/images/entry-hw/cli_test_01.png)
 
 1. `app/modules` 에 추가한 json 파일의 이름을 입력합니다. 기본값은 아두이노 확장보드입니다.
 
-![CLI test 02](/docs/images/entry-hw/cli_test_02.png)
+![CLI test 02](/images/entry-hw/cli_test_02.png)
 
 2. 시리얼포트 스캔 결과에서 연결하고자 하는 포트를 선택합니다.
   만약 해당 모듈이 자동연결 기능을 사용하고 있다면, 실제 엔트리 하드웨어에서 자동연결 탐색 시 연결될 포트명도 출력됩니다.
   또한 rescan 을 선택하는 경우, 다시 포트목록을 스캔합니다.
 
-![CLI test 03](/docs/images/entry-hw/cli_test_03.png)
+![CLI test 03](/images/entry-hw/cli_test_03.png)
 
 3. 정상적으로 연결이 완료된 경우, 연결 완료 메세지가 출력되고 3초 후에 프로그램이 종료됩니다.
 

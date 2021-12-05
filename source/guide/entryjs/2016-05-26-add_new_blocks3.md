@@ -12,7 +12,7 @@ order: 5
 
 ### 기본 블록
 
-![기본 블록](/docs/images/entryjs/block_create/default_value.png)
+![기본 블록](/images/entryjs/block_create/default_value.png)
 
 기존에 정의된 값만을 반환하는 블록입니다. 유사 블록으로는 초시계, 소리값 이 있습니다.
 
@@ -52,7 +52,7 @@ Entry.block = {
 
 ### 기본 사용자 입력 블록
 
-![기본 블록](/docs/images/entryjs/block_create/default_input_value.png)
+![기본 블록](/images/entryjs/block_create/default_input_value.png)
 
 사용자에게 직접 값을 입력받을 수 있는 블록입니다. 다른 블록의 파라미터로 주로 사용됩니다.
 
@@ -96,7 +96,7 @@ Entry.block = {
 
 ### 중첩 사용자 입력 블록
 
-![기본 블록](/docs/images/entryjs/block_create/default_multi_input_value.png)
+![기본 블록](/images/entryjs/block_create/default_multi_input_value.png)
 
 자료 계산시 또는 하드웨어 아날로그 값을 처리할때 많이 사용하는 블록 형태 입니다.
 
@@ -159,7 +159,7 @@ Entry.block = {
 
 ### 중첩 사용자 입력 블록 - 드롭다운 적용
 
-![기본 블록](/docs/images/entryjs/block_create/default_dropdown_input_value.png)
+![기본 블록](/images/entryjs/block_create/default_dropdown_input_value.png)
 
 사용자 키보드 타이핑 입력이 아닌 정해진 값을 선택해서 입력받는 방식으로 드롭다운 블록을 이용할 수 있습니다.
 
@@ -232,7 +232,7 @@ Entry.block = {
 
 ### 기본 판단 블록
 
-![기본 판단 블록](/docs/images/entryjs/block_create/default_boolean.png)
+![기본 판단 블록](/images/entryjs/block_create/default_boolean.png)
 
 IF문 등을 사용할때 사용하는 파라미터 블럭 입니다. 기본적으로 디지털 값 등 `true`, `false`두가지 형태로 나누어지는 데이터에 대해서 구성되어지는 기본 블록입니다
 
@@ -270,7 +270,7 @@ Entry.block = {
 
 ### 중첩 사용자 입력 판단 블록
 
-![중첩 사용자 입력 판단 블록](/docs/images/entryjs/block_create/default_input_boolean.png)
+![중첩 사용자 입력 판단 블록](/images/entryjs/block_create/default_input_boolean.png)
 
 사용자에게 입력을 받아 값을 비교해 boolean값으로 반환 받는 블록입니다. 하드웨어 센서 값들을 비교해서 처리하는데 이용할 수 있습니다. 다만 단순 값비교는 이미 존재하는 판단블록으로도 처리가 가능합니다.
 
@@ -314,7 +314,7 @@ Entry.block = {
 
 ### 중첩 사용자 드롭다운 판단 블록
 
-![중첩 사용자 드롭다운 판단 블록](/docs/images/entryjs/block_create/default_dropdown_boolean.png)
+![중첩 사용자 드롭다운 판단 블록](/images/entryjs/block_create/default_dropdown_boolean.png)
 
 정해진 목록내에서 입력 값을 받으려면 드롭다운을 사용할 수 있습니다. 주로 하드웨어의 디지털 입력을 처리 할때 많이 사용합니다.
 
@@ -371,7 +371,7 @@ Entry.block = {
 
 ### 기본 순차 블록
 
-![기본 순차 블록](/docs/images/entryjs/block_create/default_block.png)
+![기본 순차 블록](/images/entryjs/block_create/default_block.png)
 
 순차 블록중에서도 가장 기본적인 블록입니다. 아무런 `parameter`없이 정해진 기능만을 수행합니다.
 
@@ -409,7 +409,7 @@ Entry.block = {
 
 ### 사용자 입력 순차 블록
 
-![사용자 입력 순차 블록](/docs/images/entryjs/block_create/default_input_block.png)
+![사용자 입력 순차 블록](/images/entryjs/block_create/default_input_block.png)
 
 유저 입력을 받아서 처리하는 순차 블록. 기본적인 생성방법은 기존의 블록들과 다르지 않습니다.
 
@@ -451,7 +451,7 @@ Entry.block = {
 
 ### 드롭다운 입력 순차 블록
 
-![드롭다운 입력 순차 블록  ](/docs/images/entryjs/block_create/default_dropdown_block.png)
+![드롭다운 입력 순차 블록  ](/images/entryjs/block_create/default_dropdown_block.png)
 
 이전의 드롭다운 블록과 동일합니다.
 

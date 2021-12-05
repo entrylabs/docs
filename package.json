@@ -29,7 +29,6 @@
   "resolutions": {
     "cheerio": "0.22.0",
     "nth-check": "2.0.1",
-    "highlight.js": "10.4.1",
     "minimist": "0.2.1"
   }
 }

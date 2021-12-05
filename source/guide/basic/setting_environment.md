@@ -8,7 +8,7 @@ order: 1
 
 ## Git 설치
 
-> 연관 페이지 : [Git 사용 방법](/docs/guide/etc/2016-05-03-git_fork.html)
+> 연관 페이지 : [Git 사용 방법](/guide/etc/2016-05-03-git_fork.html)
 
 엔트리의 오픈소스 프로젝트는 Git을 사용하여 관리합니다.
 Git을 사용하여 코드를 기록하고 반영하므로 반드시 Git을 설치해야 합니다.
@@ -39,7 +39,7 @@ node --version
 
 정상적으로 설치되었다면 다음과 같은 결과가 출력됩니다. 버전은 다를 수 있습니다.
 
-![tutorial03](/docs/images/tutorial/tutorial03.png)
+![tutorial03](/images/tutorial/tutorial03.png)
 
 ## SerialPort 라이브러리 빌드 환경 설치
 

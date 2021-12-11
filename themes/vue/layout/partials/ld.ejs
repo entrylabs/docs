@@ -1,0 +1,25 @@
+<% var isPage = page.layout === 'page' %>
+<script type="application/ld+json">
+    {
+        "@context": "<%- url_for(config.url) %>",
+        "@type": "<%- isPage ? 'Article' : 'BlogPosting' -%>",
+        "author": {
+            "@type": "Person",
+            "name": <% if (page.author) { %>"<%= page.author %>"<% } else { %>"<%= config.author %>"<% } %>
+        },
+        <% if (page.title) { %>"headline": "<%= page.title %>",<% } %>
+        <% if (page.keywords) { %>"keywords": "<%- page.keywords %>",<% } %>
+        <% if (page.genre) { %>"genre": "<%- page.genre %>",<% } %>
+        "datePublished": "<%- date(page.date, 'YYYY-MM-DD') %>",
+        "dateCreated": "<%- date(page.date, 'YYYY-MM-DD') %>",
+        <% if (page.updated) { %>"dateModified": "<%- date(page.updated, 'YYYY-MM-DD') %>",<% } %>
+        "url": "<%- url_for(config.url + '/' + page.path) %>",
+        "description": "<%- page.description %>",
+        "wordCount": "<%- page.content.split(' ').length %>",
+        "publisher": <% if (page.author) { %>"<%= page.author %>"<% } else { %>"<%= config.author %>"<% } %>,
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "<%- url_for(config.url + '/' + page.path) %>"
+        }
+    }
+</script>

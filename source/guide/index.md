@@ -4,6 +4,9 @@ title: 시작하기
 type: guide
 category: 'Quick Start'
 order: 1
+keywords: ''
+genre: ''
+author: Entrylabs
 ---
 
 ## 이 문서는 무엇인가요?

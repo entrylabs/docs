@@ -4,11 +4,11 @@
   </form>
 </li>
 <li>
-  <a href="<%- url_for("/guide/") %>" class="nav-link<%- page.path.match(/guide/) ? ' current' : '' %>">Dev Guide</a>
+  <a href="<%- url_for("/guide/") %>" class="nav-link<%- page.path.match(/guide/) ? ' current' : '' %>" itemprop="url">Dev Guide</a>
 </li>
 <li>
-    <a href="<%- url_for("/user/") %>" class="nav-link<%- page.path.match(/user/) ? ' current' : '' %>">User Guide</a>
+    <a href="<%- url_for("/user/") %>" class="nav-link<%- page.path.match(/user/) ? ' current' : '' %>" itemprop="url">User Guide</a>
 </li>
 <li>
-  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link">GitHub</a>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url">GitHub</a>
 </li>

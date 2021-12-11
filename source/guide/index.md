@@ -4,9 +4,13 @@ title: 시작하기
 type: guide
 category: 'Quick Start'
 order: 1
-keywords: ''
-genre: ''
+keywords: 
+genre: 
+description: 
+thumbnail: 
 author: Entrylabs
+date: 2017-07-25
+updated: 2021-12-11
 ---
 
 ## 이 문서는 무엇인가요?

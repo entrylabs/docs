@@ -16,7 +16,7 @@
         <% if (page.updated) { %>"dateModified": "<%- date(page.updated, 'YYYY-MM-DD') %>",<% } %>
         "url": "<%- url_for(config.url + '/' + page.path) %>",
         "description": "<%- page.description ? page.description : theme.site_description %>",
-        "wordCount": "<%- page.content.split(' ').length %>",
+        <% if (page.content) { %>"wordCount": "<%- page.content.split(' ').length %>",<% } %>
         "publisher": <% if (page.author) { %>"<%= page.author %>"<% } else { %>"<%= config.author %>"<% } %>,
         "mainEntityOfPage": {
             "@type": "WebPage",

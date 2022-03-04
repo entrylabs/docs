@@ -93,7 +93,7 @@ description: "엔트리에서 하드웨어를 연결하는 방법을 알아봅�
 
 #### 2단계 - 엔트리 아두이노 소스 코드 업로드
 
-엔트리 아두이노 소스 코드를 다운로드 합니다. (앞으로 '소스 코드'라 부를게요.)
+[엔트리 아두이노 소스 코드](https://github.com/entrylabs/entry-hw/releases/download/v1.6.10/board.ino)를 다운로드 합니다. (앞으로 '소스 코드'라 부를게요.)
 
 에디터 화면 상단의 임포트(import) 버튼![arduino-editor-button-import](images/hw/arduino-editor-button-import.png)을 눌러 아까 다운로드 한 소스 코드를 불러옵니다.
 + 파일 이름은 `board.ino` 입니다. 파일 선택 창에서 이 파일을 선택해 주세요.

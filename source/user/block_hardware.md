@@ -88,7 +88,11 @@ description: "엔트리에서 하드웨어를 연결하는 방법을 알아봅�
 이제, 아두이노와 PC를 USB 케이블로 연결합니다. 케이블이 올바르게 끼워졌는지 확인해 주세요.
 
 보드가 정상적으로 인식되었다면 에디터 화면의 오른쪽 위에서 `Arduino {연결한 종류} has been connected` 라는 토스트가 표시되고,
+![arduino-edtior-screen-01](images/hw/arduino-edtior-screen-01.png)
+
 `Select Board or Port` 목록 상자를 눌러 연결할 보드를 선택할 수 있게 됩니다.
+![arduino-edtior-screen-02](images/hw/arduino-edtior-screen-02.png)
+
 
 
 #### 2단계 - 엔트리 아두이노 소스 코드 업로드
@@ -101,6 +105,8 @@ description: "엔트리에서 하드웨어를 연결하는 방법을 알아봅�
 
 소스 코드를 잘 불러왔다면 업로드(upload) 버튼![arduino-editor-button-upload](images/hw/arduino-editor-button-upload.png)을 눌러 보드에 업로드합니다.
 업로드가 완료되면 완료 메시지가 표시됩니다.
+
+![arduino-edtior-screen-03](images/hw/arduino-edtior-screen-03.png)
 
 
 #### 3단계 - 작품 만들기 화면에서 아두이노를 연결

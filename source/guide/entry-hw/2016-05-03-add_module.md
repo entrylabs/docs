@@ -198,3 +198,73 @@ module.exports = new [모듈명]();
 ### 드라이버 추가
 
 드라이버는 기본적으로 운영체제 별로 따로 설정하도록 되어 있으며, 해당 운영체제에 맞는 드라이버가 없는경우 드라이버 설치 버튼이 표시되지 않습니다. 드라이버 옵션에 작성한 경로에 맞추어 `app/drivers/`폴더에 드라이버를 넣어 주면 됩니다.
+
+### 커스텀 버튼 추가
+
+하드웨어 프로그램과 하드웨어 기기가 연결되었을 때, 사용자가 클릭 할 수 있는 '커스텀 버튼'을 제공할 수 있습니다.
+커스텀 버튼을 제공하기 위해선, `app/modules/모듈.json`에서 `customButton` 속성을 정의해야 합니다.
+
+버튼은 여러개 있을 수 있으므로 `customButton`속성은 각 버튼에 대한 내용이 정의된 객체를 배열로 가집니다. 버튼에 대한 객체는 각 버튼을 구분하기 위한 `key` 속성과 버튼에 표시될 텍스트인 `translate`로 구성되어 있습니다.
+
+예) app/modules/모듈.json
+
+````typescript
+{
+...
+  "customButton": [
+    {
+      "key": "case1",
+      // 버튼에 출력될 텍스트를 언어별로 정의
+      "translate": {
+        "en": "button1",
+        "ko": "버튼1",
+        "jp": "ボタン1"
+      },
+    },
+    {
+      "key": "case2",
+      // 아래와 같이 단일 string으로도 정의 가능
+      "translate" : "버튼2",
+    }
+  ]
+}
+````
+
+
+
+다음으로 `app/modules/모듈.js` 에서 커스텀 버튼을 사용자에게 보여줄지 여부를 boolean으로 return하는 `canShowCustomButton()` 함수를 구현합니다.
+
+마지막으로, 버튼 클릭시 실제 동작로직이 정의된 `customButtonClicked(key)` 함수를 구현합니다. `customButtonClicked(key)` 함수는, `app/modules/모듈.json`의 `key`속성값을 인자로 받아옵니다. 버튼이 여러개 있다면, `key`를 통해 버튼별 로직을 분기하여 구현하시는 것을 추천드립니다. 
+
+
+
+예) app/modules/모듈.js
+
+````typescript
+// 커스텀 버튼을 사용자에게 보여줄지 여부
+canShowCustomButton() {
+  return true;
+}
+
+// 커스텀 버튼 클릭시 동작할 로직
+customButtonClicked(key) {
+  switch (key) {
+    case "case1":
+      //버튼 1 로직
+      break;
+    case "case2":
+      //버튼 2 로직
+      break;
+    default:
+      console.log(key);
+  }
+}
+````
+
+
+
+모든 구현을 마치면, 하드웨어 연결시 아래와 같이 버튼이 출력됩니다.
+**(이미지는 예시를 위한 것으로 마이크로비트는 현재 커스텀 버튼을 제공하고 있지 않습니다.)**
+
+![custom_button](/images/entry-hw/custom_button.png)
+

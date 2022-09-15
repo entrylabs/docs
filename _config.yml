@@ -12,8 +12,9 @@ timezone: Asia/Tokyo
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://entrylabs.github.io
-root: /docs
+url: https://docs.playentry.org
+root: /
+baseurl: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -33,7 +34,7 @@ skip_render:
 new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
+external_link.enable: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -94,3 +95,19 @@ deploy:
   type: git
   repo: https://github.com/entrylabs/docs.git
   branch: gh-pages
+
+sitemap:
+  path: sitemap.xml
+  template: templates/sitemap_template.xml
+  rel: false
+  tags: true
+  categories: true
+
+robotstxt:
+  useragent: "*"
+  allow:
+    - /
+  sitemap: https://docs.playentry.org/sitemap.xml
+
+nofollow:
+  enable: true

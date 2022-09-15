@@ -17,7 +17,7 @@ order: 1
 먼저, [EntryJS GitHub 페이지](https://github.com/entrylabs/entryjs)에 접속 합니다.  
 
 사이트 접속 후 우측 상단에 있는 Fork 버튼을 클릭합니다.
-![Fork](/docs/images/entry-hw/fork.png)  
+![Fork](/images/entry-hw/fork.png)  
 
 이후, 복사한 레포지토리를 git clone으로 내 로컬 컴퓨터에 다운 받아 개발 가능한 상태로 만듭니다.  
 

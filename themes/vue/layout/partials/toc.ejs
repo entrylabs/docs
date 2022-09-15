@@ -13,7 +13,7 @@
                     <% } %>
                 <% } %>
                 <li>
-                    <a href="<%- url_for(p.path) %>" class="sidebar-link<%- page.path === p.path ? ' current' : '' %><%- p.is_new ? ' new' : '' %>"><%- p.title %></a>
+                    <a href="<%- url_for(p.path) %>" class="sidebar-link<%- page.path === p.path ? ' current' : '' %><%- p.is_new ? ' new' : '' %>" itemprop="url"><%- p.title %></a>
                 </li>
             <% }) %>
         <%

@@ -137,7 +137,7 @@ Entry.SAMPLE.blockMenuBlocks = [
 
 ### 하드웨어 첫 등록시 홍보용 이미지 추가
 
-![about01](/docs/images/entryjs/about01.png)
+![about01](/images/entryjs/about01.png)
 
 하드웨어 블록파일의 프로퍼티에는 imageName, url 이 있습니다.  
 이 정보는 엔트리의 '엔트리는?' 페이지(상단 참조) 의 '연결되는 하드웨어' 리스트 추가용으로 사용됩니다.  

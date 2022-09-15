@@ -263,7 +263,7 @@
         }
       }).join('').replace(/\(.*\)$/, '')
       link.innerHTML =
-        '<a class="section-link" data-scroll href="#' + h.id + '">' +
+        '<a class="section-link" data-scroll href="#' + h.id + '" itemprop="url">' +
           htmlEscape(text) +
         '</a>'
       return link

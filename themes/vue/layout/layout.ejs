@@ -1,20 +1,23 @@
 <% var isIndex = page.path === 'index.html' %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
     <head>
         <title><%- page.title ? page.title + ' — ' : '' %>Entry Docs</title>
         <meta charset="utf-8">
         <meta name="description" content="<%- theme.site_description %>">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd" />
+
+        <%- autoCanonical(config, page) %>
 
         <meta property="og:type" content="article">
         <meta property="og:title" content="<%- page.title ? page.title + ' — ' : '' %>Entry Docs">
-        <meta property="og:description" content="<%- theme.site_description %>">
+        <meta property="og:description" content="<%- page.description ? page.description : theme.site_description %>">
         <meta property="og:image" content="https://<%- theme.root_domain %>/images/logo.png">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:title" content="<%- page.title ? page.title + ' — ' : '' %>Entry Docs">
-        <meta name="twitter:description" content="<%- theme.site_description %>">
+        <meta name="twitter:description" content="<%- page.description ? page.description : theme.site_description %>">
         <meta name="twitter:image" content="https://<%- theme.root_domain %>/images/logo.png">
 
         <link rel="apple-touch-icon" sizes="57x57" href="<%- url_for("/images/icons/apple-icon-57x57.png") %>">
@@ -58,6 +61,7 @@
             ga('create', 'UA-103554573-1', 'auto');
             ga('send', 'pageview');
         </script>
+        <%- partial('partials/ld') %>
     </head>
     <body class="<%- isIndex ? '' : 'docs' -%>">
         <div id="mobile-bar" <%- isIndex ? 'class="top"' : '' %>>

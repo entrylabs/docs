@@ -23,17 +23,17 @@
     <% if (page.type === 'guide' || page.type==="user") { %>
       <div class="guide-links">
         <% site.pages.find({ type: page.type, category: page.category, order: page.order - 1 }).each(function (page) { %>
-          <span>← <a href="<%- url_for(page.path) %>"><%- page.title %></a></span>
+          <span>← <a href="<%- url_for(page.path) %>" itemprop="url"><%- page.title %></a></span>
         <% }) %>
         <% site.pages.find({ type: page.type, category: page.category, order: page.order + 1 }).each(function (page) { %>
-          <span style="float:right"><a href="<%- url_for(page.path) %>"><%- page.title %></a> →</span>
+          <span style="float:right"><a href="<%- url_for(page.path) %>" itemprop="url"><%- page.title %></a> →</span>
         <% }) %>
       </div>
     <% } %>
     <div class="footer">
       Caught a mistake or want to contribute to the documentation?
       <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/<%- page.path.replace(/\.html$/, '.md') %>" target="_blank"> -->
-      <a href="https://github.com/entrylabs/docs/blob/master/source/<%- page.path.replace(/\.html$/, '.md') %>" target="_blank">
+      <a href="https://github.com/entrylabs/docs/blob/master/source/<%- page.path.replace(/\.html$/, '.md') %>" target="_blank" itemprop="url">
         Edit this page on Github!
       </a>
       <div id="disqus_thread"></div>
@@ -54,6 +54,6 @@
         (d.head || d.body).appendChild(s);
       })();
       </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" itemprop="url">comments powered by Disqus.</a></noscript>
     </div>
 </div>

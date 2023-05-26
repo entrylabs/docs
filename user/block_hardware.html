@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>하드웨어 블록 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/user/block_hardware.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="하드웨어 블록 — Entry Docs">
+        <meta property="og:description" content="엔트리에서 하드웨어를 연결하는 방법을 알아봅시다.">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="하드웨어 블록 — Entry Docs">
+        <meta name="twitter:description" content="엔트리에서 하드웨어를 연결하는 방법을 알아봅시다.">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "userGuide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "하드웨어 블록",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2022-02-17",
+        "dateCreated": "2022-02-17",
+        "dateModified": "2023-05-25",
+        "url": "https://docs.playentry.org/user/block_hardware.html",
+        "description": "엔트리에서 하드웨어를 연결하는 방법을 알아봅시다.",
+        "wordCount": "642",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/user/block_hardware.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>작품</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/what-is-project.html" class="sidebar-link" itemprop="url">작품</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>화면의 구성 요소</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/header.html" class="sidebar-link" itemprop="url">상단 메뉴</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/screen.html" class="sidebar-link" itemprop="url">실행 화면</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/sub-space.html" class="sidebar-link" itemprop="url">보조 창</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_block.html" class="sidebar-link" itemprop="url">블록 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_shape.html" class="sidebar-link" itemprop="url">모양 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_sound.html" class="sidebar-link" itemprop="url">소리 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_attribute.html" class="sidebar-link" itemprop="url">속성 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/others.html" class="sidebar-link" itemprop="url">기타</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>블록</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/block_start.html" class="sidebar-link" itemprop="url">시작 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_flow.html" class="sidebar-link" itemprop="url">흐름 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_motion.html" class="sidebar-link" itemprop="url">움직임 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_looks.html" class="sidebar-link" itemprop="url">생김새 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_brush.html" class="sidebar-link" itemprop="url">붓 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_text.html" class="sidebar-link" itemprop="url">글상자 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_sound.html" class="sidebar-link" itemprop="url">소리 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_decision.html" class="sidebar-link" itemprop="url">판단 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_calculate.html" class="sidebar-link" itemprop="url">계산 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_variable.html" class="sidebar-link" itemprop="url">자료 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_function.html" class="sidebar-link" itemprop="url">함수 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_data.html" class="sidebar-link" itemprop="url">데이터 분석 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai.html" class="sidebar-link" itemprop="url">인공지능 블록 > 인공지능이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_translate.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 번역</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_tts.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 읽어주기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_stt.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 오디오 감지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_video_sensing.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 비디오 감지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model.html" class="sidebar-link" itemprop="url">인공지능 블록 > 모델 학습이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_image.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 이미지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_text.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 텍스트</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_voice.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 음성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_classification.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_prediction.html" class="sidebar-link" itemprop="url">인공지능 블록 > 예측 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_clustering.html" class="sidebar-link" itemprop="url">인공지능 블록 > 군집 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_hardware.html" class="sidebar-link current" itemprop="url">하드웨어 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_extension.html" class="sidebar-link" itemprop="url">확장 블록</a>
+                </li>
+            
+        
+    
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content userGuide with-sidebar ">
+    
+      
+    
+    
+      <h1>하드웨어 블록</h1>
+    
+    <p>엔트리 작품을 통해 작품 실행 화면의 오브젝트 말고도 현실 세계의 로봇이나 모듈, 보드를 조작할 수 있습니다.</p>
+<p>엔트리를 통해 하드웨어를 조작하려면, 엔트리와 하드웨어를 서로 연결하고, 연결한 하드웨어를 위해 만들어진 전용 블록을 여러분이 만든 작품에 조립하고 작품을 실행하면 됩니다.</p>
+<!-- 하드웨어 웹 연결 추가 후 사용할 부분
+여기서는 엔트리에 하드웨어를 연결하는 두 가지 방법을 알아볼게요.
+
+| 방법 | 연결할 수 있는 하드웨어 | 지원하는 운영체제 |
+| --- | --- | --- |
+| 하드웨어 연결 프로그램 사용하기 | 엔트리에 연동된 모든 하드웨어 | Windows, macOS |
+| 웹 브라우저로 연결하기 | 햄스터, 마이크로비트(V1/V2), 아두이노 우노, 아두이노 나노 | Whale OS, Chrome OS, macOS |
+
+## 방법 1. 하드웨어 연결 프로그램 사용하기
+
+## 방법 2. 웹 브라우저로 바로 연결하기
+-->
+
+<h2 id="하드웨어-연결-프로그램-사용하기"><a href="#하드웨어-연결-프로그램-사용하기" class="headerlink" title="하드웨어 연결 프로그램 사용하기"></a>하드웨어 연결 프로그램 사용하기</h2><h4 id="하드웨어-연결-프로그램-설치"><a href="#하드웨어-연결-프로그램-설치" class="headerlink" title="하드웨어 연결 프로그램 설치"></a>하드웨어 연결 프로그램 설치</h4><p><img src="images/window/hardware-connect-download1.png" alt="hardware-connect-download1"></p>
+<p>하드웨어 블록 꾸러미에는 하드웨어 연결을 위한 다양한 메뉴가 있습니다. 연결에 성공하면 사용할 수 있는 블록이 나타날 거예요.</p>
+<p>‘연결 프로그램 다운로드’ 글씨를 클릭해서 하드웨어 연결에 필요한 (운영체제에 맞는) 프로그램 설치 파일을 다운로드합니다.</p>
+<p><img src="images/window/hardware-run-program.png" alt="hardware-run-program"></p>
+<p>다운로드한 연결 프로그램을 설치했다면, 생성한 실행 아이콘을 더블 클릭하거나 위와 같이 ‘연결 프로그램 열기’ 버튼을 클릭해서 프로그램을 실행해요.</p>
+<h4 id="연결할-하드웨어-찾기"><a href="#연결할-하드웨어-찾기" class="headerlink" title="연결할 하드웨어 찾기"></a>연결할 하드웨어 찾기</h4><p><img src="images/window/hardware-connect-main.png" alt="hardware-connect-main"></p>
+<p>하드웨어 연결 프로그램 창입니다.</p>
+<p>연결하려는 하드웨어를 찾아서 클릭하면 연결 화면이 나타나요.</p>
+<p><img src="images/window/hardware-connect-cloud.png" alt="hardware-connect-cloud"></p>
+<p>클라우드 PC 연결을 시도한다면 위에 ‘클라우드 모드’ 표시가 나타납니다.</p>
+<p><img src="images/window/hardware-connect-search.png" alt="hardware-connect-search"></p>
+<p>오른쪽 위의 검색창을 통해 원하는 하드웨어의 이름을 검색할 수 있어요.</p>
+<p>검색창 아래의 목록 상자에서 카테고리를 선택하면 원하는 하드웨어를 더 쉽게 찾을 수 있습니다.</p>
+<p>실행하고자 하는 하드웨어 모양을 클릭하고 관련 펌웨어를 설치하면, 엔트리에서 사용할 수 있는 하드웨어 블록들이 나타납니다.</p>
+<h2 id="POINT-아두이노-사용하기"><a href="#POINT-아두이노-사용하기" class="headerlink" title="POINT: 아두이노 사용하기"></a>POINT: 아두이노 사용하기</h2><p>엔트리에 아두이노(Arduino)를 연결할 때는 다른 하드웨어와 달리 추가 작업이 필요합니다.<br>사용할 아두이노 보드에 먼저 ‘엔트리 아두이노 소스 코드’를 업로드해야 엔트리 하드웨어 연결 기능을 사용할 수 있습니다.</p>
+<ul>
+<li>엔트리 아두이노 소스 코드는 보드에 한 번만 업로드하면 됩니다. 이미 업로드한 경우에는 바로 <strong>3단계</strong>를 진행합니다.</li>
+<li>아래의 설명은 아두이노 웹 에디터(Arduino Web Editor)를 사용하는 것을 기준으로 작성되었지만,<br>설치형 프로그램인 아두이노 IDE를 통해서도 같은 방법으로 소스 코드를 업로드할 수 있습니다.</li>
+</ul>
+<h4 id="1단계-아두이노와-PC를-연결"><a href="#1단계-아두이노와-PC를-연결" class="headerlink" title="1단계 - 아두이노와 PC를 연결"></a>1단계 - 아두이노와 PC를 연결</h4><p>먼저, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://create.arduino.cc/editor">아두이노 웹 에디터</a>에 접속합니다. (앞으로 ‘에디터’라 부를게요.)<br>아두이노 웹사이트에 로그인 하면 에디터 화면이 표시됩니다.</p>
+<ul>
+<li>아두이노 웹 에디터를 사용하려면 아두이노 계정이 필요합니다.<br>이메일 또는 구글, 페이스북, 애플 계정으로 가입할 수 있습니다.</li>
+<li>이메일로 가입한 경우, 이메일 인증이 필요합니다. 입력한 이메일 주소로 발송된 인증 메일의 인증 버튼을 클릭하면 가입이 완료됩니다.</li>
+</ul>
+<p>다음으로 PC와 아두이노를 연결할 수 있게 해주는 ‘아두이노 크리에이트’ 프로그램을 설치합니다.</p>
+<ul>
+<li><strong>Windows</strong>와 <strong>macOS</strong>를 사용하는 경우, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://create.arduino.cc/getting-started/plugin/welcome">아두이노 크리에이트 에이전트</a>를 설치합니다.<br>위 페이지에 접속하면 자동으로 사용하는 운영체제에 맞는 프로그램을 다운로드 받을 수 있습니다.</li>
+<li><strong>Whale OS</strong>, <strong>Chrome OS</strong> 등 크로미움 기반 운영체제를 사용하는 경우, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://chrome.google.com/webstore/detail/arduino-create-for-educat/elmgohdonjdampbcgefphnlchgocpaij">아두이노 크리에이트 크롬 확장 프로그램</a>을 설치합니다.</li>
+</ul>
+<p>이제, 아두이노와 PC를 USB 케이블로 연결합니다. 케이블이 올바르게 끼워졌는지 확인해 주세요.</p>
+<p>보드가 정상적으로 인식되었다면 에디터 화면의 오른쪽 위에서 <code>Arduino &#123;연결한 종류&#125; has been connected</code> 라는 토스트가 표시되고,<br><img src="images/hw/arduino-edtior-screen-01.png" alt="arduino-edtior-screen-01"></p>
+<p><code>Select Board or Port</code> 목록 상자를 눌러 연결할 보드를 선택할 수 있게 됩니다.<br><img src="images/hw/arduino-edtior-screen-02.png" alt="arduino-edtior-screen-02"></p>
+<h4 id="2단계-엔트리-아두이노-소스-코드-업로드"><a href="#2단계-엔트리-아두이노-소스-코드-업로드" class="headerlink" title="2단계 - 엔트리 아두이노 소스 코드 업로드"></a>2단계 - 엔트리 아두이노 소스 코드 업로드</h4><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entry-hw/releases/download/v1.6.10/board.ino">엔트리 아두이노 소스 코드</a>를 다운로드 합니다. (앞으로 ‘소스 코드’라 부를게요.)</p>
+<p>에디터 화면 상단의 임포트(import) 버튼<img src="images/hw/arduino-editor-button-import.png" alt="arduino-editor-button-import">을 눌러 아까 다운로드 한 소스 코드를 불러옵니다.</p>
+<ul>
+<li>파일 이름은 <code>board.ino</code> 입니다. 파일 선택 창에서 이 파일을 선택해 주세요.</li>
+<li>임포트 버튼이 보이지 않는다면, 화면 왼쪽의 <code>Sketchbook</code> 메뉴를 클릭해 패널을 표시합니다.</li>
+</ul>
+<p>소스 코드를 잘 불러왔다면 업로드(upload) 버튼<img src="images/hw/arduino-editor-button-upload.png" alt="arduino-editor-button-upload">을 눌러 보드에 업로드합니다.<br>업로드가 완료되면 완료 메시지가 표시됩니다.</p>
+<p><img src="images/hw/arduino-edtior-screen-03.png" alt="arduino-edtior-screen-03"></p>
+<h4 id="3단계-작품-만들기-화면에서-아두이노를-연결"><a href="#3단계-작품-만들기-화면에서-아두이노를-연결" class="headerlink" title="3단계 - 작품 만들기 화면에서 아두이노를 연결"></a>3단계 - 작품 만들기 화면에서 아두이노를 연결</h4><p>이제 모든 준비가 끝났습니다. 엔트리의 작품 만들기 화면으로 돌아와 아두이노를 연결합니다.</p>
+<!-- 하드웨어 웹 연결 추가 후 사용할 부분
+하드웨어 연결 프로그램을 사용(방법 1)하거나 웹 브라우저로 바로 연결(방법 2)할 수 있습니다. 
+-->
+
+<p>엔트리와 아두이노가 연결되면 블록 꾸러미에서 아두이노 블록이 표시됩니다.</p>
+<p>연결이 잘 이루어졌는데도 블록이 표시되지 않는다면 아래를 확인해 주세요.</p>
+<ul>
+<li>블록 꾸러미의 [하드웨어 연결하기] 버튼을 클릭해 블록 꾸러미를 새로 고침합니다.</li>
+<li>하드웨어 연결 프로그램을 사용하는 경우, 프로그램 창 오른쪽 위에 ‘엔트리 서버 연결됨’이 표시되는지 확인해 주세요.<br>‘엔트리 서버 연결 안 됨’이 표시되면 작품 만들기 창이 잘 열려 있는지 확인하고 프로그램을 새로 고침해 주세요.</li>
+<li>하드웨어 연결 프로그램의 버전이 1.9.26 이상인지 확인해 주세요.<br>인증서가 갱신되어 1.9.25 이하 버전에서는 블록이 정상적으로 표시되지 않습니다.</li>
+</ul>
+
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/user/block_hardware.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/user/block_hardware.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://entryhw.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com/?ref_noscript" itemprop="url">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

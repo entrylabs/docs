@@ -1,0 +1,557 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>오브젝트 추가하기 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/guide/entry-offline/2018-01-10-add_objects.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="오브젝트 추가하기 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="오브젝트 추가하기 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "guide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "오브젝트 추가하기",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2023-05-25",
+        "dateCreated": "2023-05-25",
+        "dateModified": "2023-05-25",
+        "url": "https://docs.playentry.org/guide/entry-offline/2018-01-10-add_objects.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "658",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/guide/entry-offline/2018-01-10-add_objects.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+                
+                
+                    
+                        <li><h3>Quick Start</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/quick_start/2018-07-30-tutorial.html" class="sidebar-link" itemprop="url">엔트리 하드웨어 개발 튜토리얼</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Basic</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/basic/setting_environment.html" class="sidebar-link" itemprop="url">개발 환경 세팅</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/pull_request.html" class="sidebar-link" itemprop="url">PR 요청하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/2016-07-07-faq.html" class="sidebar-link" itemprop="url">자주 하는 질문</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/2023-05-25-common_problem.html" class="sidebar-link" itemprop="url">자주 발생하는 에러</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry JS</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-09-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-22-add_new_blocks.html" class="sidebar-link" itemprop="url">블록 명세 작성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-26-add_new_blocks2.html" class="sidebar-link" itemprop="url">블록 사용 등록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-26-add_new_blocks3.html" class="sidebar-link" itemprop="url">블록 모양별 개발 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-07-08-add_new_blocks4.html" class="sidebar-link" itemprop="url">하드웨어 블록 만들기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-09-translate.html" class="sidebar-link" itemprop="url">하드웨어 블록 번역작업</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-14-add_hardware.html" class="sidebar-link" itemprop="url">하드웨어 블록 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-23-test_project.html" class="sidebar-link" itemprop="url">프로젝트 테스트하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry HW</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2016-05-01-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2016-05-03-add_module.html" class="sidebar-link" itemprop="url">하드웨어 모듈 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/add_bluetooth_hardware.html" class="sidebar-link" itemprop="url">블루투스 하드웨어 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/cli_test_hardware.html" class="sidebar-link" itemprop="url">하드웨어 연결 테스트하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2017-05-16-enroll_entry-hw.html" class="sidebar-link" itemprop="url">하드웨어 등록 서비스 신청하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry Offline</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-20-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-21-project_structure.html" class="sidebar-link" itemprop="url">프로젝트 구조</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-27-develop.html" class="sidebar-link" itemprop="url">개발하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-01-10-add_objects.html" class="sidebar-link current" itemprop="url">오브젝트 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-28-translate.html" class="sidebar-link" itemprop="url">다국어 작업하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-10-30-custom_project.html" class="sidebar-link" itemprop="url">커스텀 프로젝트 빌드</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-01-09-build.html" class="sidebar-link" itemprop="url">빌드하기</a>
+                </li>
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Etc.</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/etc/2016-05-03-git_fork.html" class="sidebar-link" itemprop="url">Git 사용 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/etc/2020-06-24-doc_contribution.html" class="sidebar-link" itemprop="url">문서 기여하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/etc/2019-12-11-updates.html" class="sidebar-link" itemprop="url">문서 업데이트 내역</a>
+                </li>
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar 2018-01-10-add_objects-guide">
+    
+      
+    
+    
+      <h1>오브젝트 추가하기</h1>
+    
+    <p>엔트리의 오브젝트는 <code>오브젝트</code>와 <code>모양 또는 글상자</code>, <code>소리</code>로 구분됩니다.<br><code>오브젝트</code> 는 다수의 <code>모양</code>, <code>소리</code> 를 가질 수 있는 엔트리 객체를 말합니다.</p>
+<p>여기서는 특정 오브젝트를 추가하는 방법에 대해 소개하도록 하겠습니다.</p>
+<p>엔트리 오프라인에서 오브젝트들은 아래와 같이 관리되고 있습니다.</p>
+<ul>
+<li><code>src/renderer/resources/db</code> 내의 <code>json</code> 파일들로 <strong>오브젝트 메타데이터</strong>를 관리합니다.</li>
+<li><code>src/renderer/resources/lang</code> 에서 <strong>오브젝트의 명칭</strong>을 관리합니다.</li>
+<li><code>src/renderer/resources/uploads</code> 에서 <strong>실제 파일</strong>을 관리합니다.</li>
+</ul>
+<p>오브젝트를 추가하는 방법은 아래와 같습니다.</p>
+<ol>
+<li>추가할 <code>오브젝트</code> 파일을 <code>uploads</code>에 추가 (추가시 파일명은 난수값이며, 폴더 구조도 이와 연관이 있습니다.)</li>
+<li><code>db</code> 하위의 <code>json</code>파일에 오브젝트 메타데이터 추가</li>
+<li><code>json</code>에 추가된 오브젝트에 맞추어 <code>lang</code>밑에 있는 영어 언어 추가</li>
+</ol>
+<h2 id="파일명칭-만들기"><a href="#파일명칭-만들기" class="headerlink" title="파일명칭 만들기"></a>파일명칭 만들기</h2><p>폴더 및 파일명 엔트리 전역에서 사용되는 난수값으로 처리되어있습니다.<br>오브젝트의 파일명은 <code>mainUtils.js</code>의 <code>createFileId</code>라는 함수에서 정해진 규칙으로 만들 수 있습니다.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> crypto <span class="keyword">from</span> <span class="string">&#x27;crypto&#x27;</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createFileId</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> randomStr = <span class="string">`<span class="subst">$&#123;<span class="built_in">Math</span>.random().toString(<span class="number">16</span>)&#125;</span>000000000`</span>.substr(<span class="number">2</span>, <span class="number">8</span>);</span><br><span class="line">    <span class="keyword">return</span> crypto</span><br><span class="line">        .createHash(<span class="string">&#x27;md5&#x27;</span>)</span><br><span class="line">        .update(randomStr)</span><br><span class="line">        .digest(<span class="string">&#x27;hex&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>위의 함수를 실행하면 <code>c10d9264e94cf57451b45a13ca6db1cc</code> 와 같은 32 자리 텍스트가 만들어 지게 됩니다.<br>이렇게 만들어진 파일의 앞의 4 자리가 폴더의 명칭도 결정됩니다.<br><code>c10d9264e94cf57451b45a13ca6db1cc</code>의 경우는 <code>uploads/c1/0d/image</code>와 같이 <strong>앞의 4 자리를 2 자리씩 잘라서</strong> 폴더에 파일을 넣도록 처리 됩니다.<br>집어 넣는 파일이 <code>모양</code> 파일 이라면 <code>uploads/c1/0d/image/c10d9264e94cf57451b45a13ca6db1cc.png</code> 와 같이 파일을 넣으면 됩니다.</p>
+<h2 id="모양-추가하기"><a href="#모양-추가하기" class="headerlink" title="모양 추가하기"></a>모양 추가하기</h2><p>모양은 <code>image</code>와 <code>thumb</code>로 나뉩니다. <code>image</code>는 원본 이미지로서 실제 사용자가 사용할 이미지이며, <code>thumb</code>는 썸네일 이미지로 큰이미지가 필요없는곳에 이미지를 표기 할때 사용됩니다. </p>
+<p>모양 추가에는 아래와 같은 제약사항이 있습니다.</p>
+<ul>
+<li>하나의 모양이 추가 할때 반드시 <code>image</code>와 <code>thumb</code>가 반드시 같이 추가가 되어야 합니다.</li>
+<li>파일 확장자는 <code>.png</code>로 만들어져야 합니다.</li>
+<li><code>image</code>의 경우 특별한 사이즈 제한이 없으나, <code>thumb</code> 는 <strong>96px * 96px</strong> 로 제한되어 있습니다.</li>
+</ul>
+<p>필요한 위치에 파일을 넣었으면 <code>resource_map/pictures.json</code> 파일에 오브젝트를 추가해야 합니다.<br>모양 오브젝트의 기본 구성은 다음과 같습니다.</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;filename&quot;</span>: <span class="string">&quot;a8268fd79a48fd9b92c7b47406b95393&quot;</span>, <span class="comment">// 만들어진 파일이름 추가</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;(1)엔트리봇_걷기1&quot;</span>, <span class="comment">// 해당 모양의 이름</span></span><br><span class="line">  <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;_system_&quot;</span>,  <span class="comment">// 모양의 타입 _system_ 으로 고정</span></span><br><span class="line">  <span class="attr">&quot;dimension&quot;</span>: &#123; <span class="attr">&quot;width&quot;</span>: <span class="number">284</span>, <span class="attr">&quot;height&quot;</span>: <span class="number">350</span> &#125;,  <span class="comment">// 이미지의 사이즈</span></span><br><span class="line">  <span class="attr">&quot;category&quot;</span>: &#123; <span class="attr">&quot;main&quot;</span>: <span class="string">&quot;entrybot_friends&quot;</span> &#125;  <span class="comment">// 카테고리</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>카테고리의 경우 설정된 키에 따라 오브젝트가 분리가 됩니다.<br>지원되는 <code>모양</code> 카테고리는 다음과 같습니다.<br>“entrybot_friends”, “architect”, “vehicles”, “stuff”, “default”, “animal”, “interface”, “environment”, “food”, “people”, “plant”, “background”, “fantasy”</p>
+</blockquote>
+<h2 id="소리-추가하기"><a href="#소리-추가하기" class="headerlink" title="소리 추가하기"></a>소리 추가하기</h2><p>소리파일은 <code>image</code>와 다르게 <code>uploads/xx/xx/</code> 폴더 바로 밑에 파일이 존재 하면 됩니다.</p>
+<p>별다른 제약사항은 없으며, 확장자가 <code>mp3</code>여야 합니다.</p>
+<p>소리 오브젝트의 기본구성은 다음과 같습니다.</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;filename&quot;</span>: <span class="string">&quot;6d64798150d7b48a9dd76af909a82ef9&quot;</span>,  <span class="comment">// 만들어진 파일이름 추가</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;기침소리&quot;</span>,  <span class="comment">// 해당 소리의 이름</span></span><br><span class="line">  <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;_system_&quot;</span>,  <span class="comment">// 소리의 타입 _system_ 으로 고정</span></span><br><span class="line">  <span class="attr">&quot;ext&quot;</span>: <span class="string">&quot;.mp3&quot;</span>,  <span class="comment">// 소리파일의 확장자</span></span><br><span class="line">  <span class="attr">&quot;duration&quot;</span>: <span class="number">1.2</span>,  <span class="comment">// 소리파일의 재생시간</span></span><br><span class="line">  <span class="attr">&quot;category&quot;</span>: &#123; <span class="attr">&quot;sub&quot;</span>: <span class="string">&quot;일상생활&quot;</span>, <span class="attr">&quot;main&quot;</span>: <span class="string">&quot;사람&quot;</span> &#125;  <span class="comment">// 소리파일의 카테고리</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>카테고리의 경우 설정된 키에 따라 오브젝트가 분리가 된다.<br>지원되는 소리의 카테고리는 다음과 같다.<br>“사람”, 자연, “사물”, “판타지”, “악기”</p>
+</blockquote>
+<h2 id="오브젝트-추가하기"><a href="#오브젝트-추가하기" class="headerlink" title="오브젝트 추가하기"></a>오브젝트 추가하기</h2><p>오브젝트를 추가하는 방법은 소리 및 이미지를 위와 동일하게 추가한 후, 메타데이터에서 연결하여 사용합니다.</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;(2)엔트리봇&quot;</span>,  <span class="comment">// 오브젝트 명칭</span></span><br><span class="line">  <span class="attr">&quot;sounds&quot;</span>: [],  <span class="comment">// 소리 정보 - 소리 오브젝트 내용이 들어가면됨.</span></span><br><span class="line">  <span class="comment">// 모양 정보 - 모양 오브젝트 내용이 들어가면됨.</span></span><br><span class="line">  <span class="attr">&quot;pictures&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;filename&quot;</span>: <span class="string">&quot;f2a7a0b57de442aba21e63a53a387436&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;(2)엔트리봇_앞1&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;dimension&quot;</span>: &#123; <span class="attr">&quot;width&quot;</span>: <span class="number">196</span>, <span class="attr">&quot;height&quot;</span>: <span class="number">351</span> &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;_system_&quot;</span>,  <span class="comment">// 오브젝트의 타입 _system_ 고정</span></span><br><span class="line">  <span class="attr">&quot;category&quot;</span>: &#123; <span class="attr">&quot;main&quot;</span>: <span class="string">&quot;entrybot_friends&quot;</span> &#125;,  <span class="comment">// 오브젝트가 분리될 카테고리 타입</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>오브젝트</code>에서 허용되는 카테고리 종류는 <code>모양</code> 에서 사용되는 카테고리와 동일합니다.</p>
+</blockquote>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/entry-offline/2017-12-27-develop.html" itemprop="url">개발하기</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/entry-offline/2017-12-28-translate.html" itemprop="url">다국어 작업하기</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/guide/entry-offline/2018-01-10-add_objects.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/guide/entry-offline/2018-01-10-add_objects.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://entryhw.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com/?ref_noscript" itemprop="url">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

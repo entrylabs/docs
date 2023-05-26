@@ -1,0 +1,589 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>하드웨어 모듈 추가하기 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/guide/entry-hw/2016-05-03-add_module.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="하드웨어 모듈 추가하기 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="하드웨어 모듈 추가하기 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "guide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "하드웨어 모듈 추가하기",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2023-05-25",
+        "dateCreated": "2023-05-25",
+        "dateModified": "2023-05-25",
+        "url": "https://docs.playentry.org/guide/entry-hw/2016-05-03-add_module.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "2032",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/guide/entry-hw/2016-05-03-add_module.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+                
+                
+                    
+                        <li><h3>Quick Start</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/quick_start/2018-07-30-tutorial.html" class="sidebar-link" itemprop="url">엔트리 하드웨어 개발 튜토리얼</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Basic</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/basic/setting_environment.html" class="sidebar-link" itemprop="url">개발 환경 세팅</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/pull_request.html" class="sidebar-link" itemprop="url">PR 요청하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/2016-07-07-faq.html" class="sidebar-link" itemprop="url">자주 하는 질문</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/2023-05-25-common_problem.html" class="sidebar-link" itemprop="url">자주 발생하는 에러</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry JS</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-09-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-22-add_new_blocks.html" class="sidebar-link" itemprop="url">블록 명세 작성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-26-add_new_blocks2.html" class="sidebar-link" itemprop="url">블록 사용 등록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-26-add_new_blocks3.html" class="sidebar-link" itemprop="url">블록 모양별 개발 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-07-08-add_new_blocks4.html" class="sidebar-link" itemprop="url">하드웨어 블록 만들기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-09-translate.html" class="sidebar-link" itemprop="url">하드웨어 블록 번역작업</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-14-add_hardware.html" class="sidebar-link" itemprop="url">하드웨어 블록 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-23-test_project.html" class="sidebar-link" itemprop="url">프로젝트 테스트하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry HW</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2016-05-01-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2016-05-03-add_module.html" class="sidebar-link current" itemprop="url">하드웨어 모듈 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/add_bluetooth_hardware.html" class="sidebar-link" itemprop="url">블루투스 하드웨어 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/cli_test_hardware.html" class="sidebar-link" itemprop="url">하드웨어 연결 테스트하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2017-05-16-enroll_entry-hw.html" class="sidebar-link" itemprop="url">하드웨어 등록 서비스 신청하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry Offline</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-20-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-21-project_structure.html" class="sidebar-link" itemprop="url">프로젝트 구조</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-27-develop.html" class="sidebar-link" itemprop="url">개발하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-01-10-add_objects.html" class="sidebar-link" itemprop="url">오브젝트 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-28-translate.html" class="sidebar-link" itemprop="url">다국어 작업하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-10-30-custom_project.html" class="sidebar-link" itemprop="url">커스텀 프로젝트 빌드</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-01-09-build.html" class="sidebar-link" itemprop="url">빌드하기</a>
+                </li>
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Etc.</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/etc/2016-05-03-git_fork.html" class="sidebar-link" itemprop="url">Git 사용 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/etc/2020-06-24-doc_contribution.html" class="sidebar-link" itemprop="url">문서 기여하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/etc/2019-12-11-updates.html" class="sidebar-link" itemprop="url">문서 업데이트 내역</a>
+                </li>
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar 2016-05-03-add_module-guide">
+    
+      
+    
+    
+      <h1>하드웨어 모듈 추가하기</h1>
+    
+    <h2 id="모듈의-위치"><a href="#모듈의-위치" class="headerlink" title="모듈의 위치"></a>모듈의 위치</h2><p>엔트리 하드웨어에서, 각 파일들의 위치는 아래와 같습니다.</p>
+<ul>
+<li>모듈 파일 : <code>app/modules/</code></li>
+<li>펌웨어 파일 : <code>app/firmwares/</code></li>
+<li>드라이버 파일 : <code>app/drivers/</code></li>
+</ul>
+<h2 id="모듈의-구성"><a href="#모듈의-구성" class="headerlink" title="모듈의 구성"></a>모듈의 구성</h2><p>모듈은 <code>모듈명.js</code>, <code>모듈명.json</code>, <code>모듈명.png</code>의 3가지로 구성됩니다.<br>아두이노를 예를 들면 아래와 같습니다.</p>
+<blockquote>
+<p>arduino.js : 실제 하드웨어 로직<br>arduino.json : 하드웨어의 접속방식 및 속성 등의 메타데이터<br>arduino.png : 하드웨어 프로그램에서 표기될 이미지  </p>
+</blockquote>
+<h2 id="모듈-추가하기"><a href="#모듈-추가하기" class="headerlink" title="모듈 추가하기"></a>모듈 추가하기</h2><p>하드웨어를 추가하는 기본적인 과정은 다음과 같습니다.</p>
+<ul>
+<li>.js 파일생성</li>
+<li>.json 파일생성</li>
+<li>이미지 삽입</li>
+<li>필요에 따라 드라이버 및 펌웨어 추가</li>
+</ul>
+<p>알맞게 파일이 생성되면 실제 하드웨어 화면에 추가한 하드웨어가 표시되어 테스트가능 상태가 됩니다.<br>개발시 현재 엔트리에 등록되어있는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entry-hw/tree/master/app/modules">하드웨어 모듈 목록</a>를 참고하시는 것을 추천합니다.</p>
+<h3 id="js-파일생성"><a href="#js-파일생성" class="headerlink" title=".js 파일생성"></a><code>.js</code> 파일생성</h3><blockquote>
+<p>기존 자바스크립트 모듈화 기법에서, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes">ES6 문법인 class</a> 를 활용하는 방법으로 개선되었습니다.<br>타 모듈의 과거 방식으로 개발하여도 무방하지만, 아래의 방법을 추천드립니다.<br>아래의 방식은 기존에 필수적으로 구현해야했던 함수들이 상단에 구현되어있으므로, 생략시 초기값을 따르게 됩니다.<br>초기값은 BaseModule 을 참고해주세요. </p>
+</blockquote>
+<blockquote>
+<p>실제 적용되어있는 모듈의 예시로는 ev3 를 참고해주세요.</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> BaseModule = <span class="built_in">require</span>(<span class="string">&#x27;./baseModule&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> [모듈명] <span class="keyword">extends</span> <span class="title">BaseModule</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 클래스 내부에서 사용될 필드들을 이곳에서 선언합니다.</span></span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>();</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">this</span>.foo = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    최초에 커넥션이 이루어진 후의 초기 설정.</span></span><br><span class="line"><span class="comment">    handler 는 워크스페이스와 통신하 데이터를 json 화 하는 오브젝트입니다. (datahandler/json 참고)</span></span><br><span class="line"><span class="comment">    config 은 module.json 오브젝트입니다.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="title">init</span>(<span class="params">handler, config</span>)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.handler = handler;</span><br><span class="line">        <span class="built_in">this</span>.config = config;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    연결 후 초기에 송신할 데이터가 필요한 경우 사용합니다.</span></span><br><span class="line"><span class="comment">    requestInitialData 를 사용한 경우 checkInitialData 가 필수입니다.</span></span><br><span class="line"><span class="comment">    이 두 함수가 정의되어있어야 로직이 동작합니다. 필요없으면 작성하지 않아도 됩니다.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="title">requestInitialData</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="comment">// return true;</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 연결 후 초기에 수신받아서 정상연결인지를 확인해야하는 경우 사용합니다.</span></span><br><span class="line">    <span class="function"><span class="title">checkInitialData</span>(<span class="params">data, config</span>)</span> &#123;</span><br><span class="line">        <span class="comment">// return true;</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 주기적으로 하드웨어에서 받은 데이터의 검증이 필요한 경우 사용합니다.</span></span><br><span class="line">    <span class="function"><span class="title">validateLocalData</span>(<span class="params">data</span>)</span> &#123;</span><br><span class="line">        <span class="comment">// return true;</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    하드웨어 기기에 전달할 데이터를 반환합니다.</span></span><br><span class="line"><span class="comment">    slave 모드인 경우 duration 속성 간격으로 지속적으로 기기에 요청을 보냅니다.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="title">requestLocalData</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="comment">// 하드웨어로 보낼 데이터 로직</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 하드웨어에서 온 데이터 처리</span></span><br><span class="line">    <span class="function"><span class="title">handleLocalData</span>(<span class="params">data</span>)</span> &#123;</span><br><span class="line">        <span class="comment">// 데이터 처리 로직</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 엔트리로 전달할 데이터</span></span><br><span class="line">    <span class="function"><span class="title">requestRemoteData</span>(<span class="params">handler</span>)</span> &#123;</span><br><span class="line">        <span class="comment">// handler.write(key, value) ...</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 엔트리에서 받은 데이터에 대한 처리</span></span><br><span class="line">    <span class="function"><span class="title">handleRemoteData</span>(<span class="params">handler</span>)</span> &#123;</span><br><span class="line">        <span class="comment">// const value = handler.read(key) ...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="keyword">new</span> [모듈명]();</span><br></pre></td></tr></table></figure>
+
+<h3 id="json-파일생성"><a href="#json-파일생성" class="headerlink" title=".json 파일생성"></a><code>.json</code> 파일생성</h3><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;id&quot;</span>: <span class="string">&quot;하드웨어ID(엔트리와 사전규약 필요. ex.&#x27;010101&#x27;)&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;en&quot;</span>: <span class="string">&quot;English Name&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;ko&quot;</span>: <span class="string">&quot;한글명&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;category&quot;</span>: <span class="string">&quot;해당 기기의 카테고리 분류(robot, module, board)&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;platform&quot;</span>: [<span class="string">&quot;사용 할 운영체제(win32 | darwin)&quot;</span>, <span class="string">&quot;복수 선택 가능&quot;</span>],</span><br><span class="line">    <span class="attr">&quot;icon&quot;</span> : <span class="string">&quot;이미지(.png(권장) | .jpg | .gif ...)&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;module&quot;</span>: <span class="string">&quot;모듈(.js)&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;driver&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;win32-ia32&quot;</span>: <span class="string">&quot;윈도우32비트 하드웨어 드라이버(여러 드라이버 등록가능)&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;win32-x64&quot;</span>: <span class="string">&quot;윈도우64비트 하드웨어 드라이버(여러 드라이버 등록가능)&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;darwin-x64&quot;</span>: <span class="string">&quot;맥(Osx) 64비트 하드웨어 드라이버(여러 드라이버 등록가능)&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;회사 홈페이지&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;email&quot;</span>: <span class="string">&quot;고객센터 Email&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;reconnect&quot;</span>: <span class="string">&quot;연결 lost시 재접속 시도여부 (true | false)&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;firmware&quot;</span>: <span class="string">&quot;아두이노 hex 혹은 hex 파일 업로드 타입 전용. 해당 펌웨어 명&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;firmwareBaudRate&quot;</span> : <span class="string">&quot;펌웨어 업로드시 동작할 Baud Rate 값 기본 115200&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;firmwareMCUType&quot;</span> : <span class="string">&quot;펌웨어 업로드시 동작할 MCUType. 기본 m328p&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;tryFlahserNumber&quot;</span> : <span class="string">&quot;펌웨어 업로드 실패시 재시도 회수. 기본 10&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;select_com_port&quot;</span>: <span class="string">&quot;Com Port 선택창 여부 (true | false)&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hardware&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;타입(serial | bluetooth)&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;control&quot;</span>: <span class="string">&quot;동작방식(slave | master)&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;duration&quot;</span>: <span class="string">&quot;slave 모드일 경우 통신이 끊겼을 경우 재접속을 시도할 ms. 기본 1000&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;comName&quot;</span>: <span class="string">&quot;[&#x27;COMPortName&#x27;] 존재하는 경우 해당 속성이 일치하는 COMPort 선택&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;vendor&quot;</span>: <span class="string">&quot;[&#x27;하드웨어 벤더명(ex.Arduino)&#x27;] 존재하는 경우 해당 속성이 일치하는 COMPort 선택&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;pnpId&quot;</span>: <span class="string">&quot;[&#x27;pnpId&#x27;] 존재하는 경우 해당 속성이 일치하는 COMPort 선택&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;scanType&quot;</span>: <span class="string">&quot;deprecated 되었습니다.&quot;</span>, </span><br><span class="line">        <span class="attr">&quot;firmwarecheck&quot;</span>: <span class="string">&quot;checkInitialData 3초간 실패시 펌웨어 자동 업로드여부 (true | false)&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;lostTimer&quot;</span>: <span class="string">&quot;연결 성사 후 일정시간동안 통신이 없는 경우 lost 처리할 ms. 기본 500&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;advertise&quot;</span>: <span class="string">&quot;&#123;number&#125; 하단 참고&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;softwareReset: &quot;</span>&#123;boolean&#125; 하단 참고<span class="string">&quot;,</span></span><br><span class="line"><span class="string">        &quot;</span>baudRate<span class="string">&quot;: &quot;</span>baudRate(<span class="number">115200</span>(최대), 57600, 38400, 19200, 9600, 4800, 2400, 1800, 1200, 600, 300, 200, 150, 134, 110, 75, 50)<span class="attr">&quot;,</span></span><br><span class="line"><span class="attr">        &quot;</span>parity<span class="attr">&quot; : &quot;</span>parity(&#x27;none&#x27;, &#x27;even&#x27;, &#x27;mark&#x27;, &#x27;odd&#x27;, &#x27;space&#x27;)<span class="attr">&quot;,</span></span><br><span class="line"><span class="attr">        &quot;</span>dataBits<span class="attr">&quot; : &quot;</span>dataBits(8, 7, 6, 5)<span class="attr">&quot;,</span></span><br><span class="line"><span class="attr">        &quot;</span>stopBits<span class="attr">&quot; : &quot;</span>stopBits(1, 2)<span class="attr">&quot;,</span></span><br><span class="line"><span class="attr">        &quot;</span>bufferSize<span class="attr">&quot; : &quot;</span>bufferSize(255 ...)<span class="attr">&quot;,</span></span><br><span class="line"><span class="attr">        &quot;</span>flowControl<span class="attr">&quot; : &quot;</span>flowControl(&#x27;hardware&#x27; | &#x27;software&#x27;)<span class="attr">&quot;</span></span><br><span class="line"><span class="attr">        &quot;</span>delimiter<span class="attr">&quot; : &quot;</span>&#123;string&#125; delimiter(ex &#x27;\r&#x27;)<span class="string">&quot;,</span></span><br><span class="line"><span class="string">        &quot;</span>byteDelimiter<span class="string">&quot; : &quot;</span>&#123;string|number[]&#125; delimiter(ex &#x27;\r&#x27;)<span class="string">&quot;,</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>몇가지 속성에 대해 추가 설명 드립니다.</p>
+<ul>
+<li><p>comName, vendor, pnpId : COMPort 스캔시 사용되는 속성입니다. 해당 속성과 매치되는 경우 바로 해당 COMPort 를 선택합니다.</p>
+</li>
+<li><p>control : slave, master 중 하나를 선택해야 합니다. 이 둘은 통신방식이 다릅니다.  </p>
+<ul>
+<li>최초 checkInitialData &amp; requestInitialData (HandShake) 시<ul>
+<li>master : 마스터 속성인 경우 기기쪽에서 먼저 데이터가 올때까지 기다립니다.</li>
+<li>slave : duration 속성만큼의 간격으로 기기쪽으로 먼저 데이터를 보냅니다.</li>
+</ul>
+</li>
+<li>연결 성사 후 데이터 통신시<ul>
+<li>master : 기기에서 데이터를 받으면 그다음 기기로 requestLocalData 송신</li>
+<li>slave : requestLocalData 를 duration 속성만큼 주기적으로 전송</li>
+</ul>
+</li>
+<li>advertise : 연결 성사 후 마지막으로 handler 에 작성한 데이터(엔트리로 전송할 데이터) 를 변경없이 advertise 속성 만큼의 간격으로 서버에 전송합니다.</li>
+<li>softwareReset : true 인 경우, 최초 연결 후 시리얼포트에 dtr 플래그를 1초간 off 합니다. 그 후 다시 flag on 합니다.</li>
+</ul>
+<p>SerialPort 관련</p>
+<ul>
+<li>baudRate ~ bufferSize : 시리얼포트 라이브러리 오픈시 필요한 옵션입니다. 자세한 사항은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://serialport.io/docs/en/api-stream#openoptions">Serialport Docs</a> 를 참고해주세요.  </li>
+<li>flowControl : hardware, software 로 나뉩니다. hardware 선택시 rtscts 플래그 / software 시 xon, xoff 플래그가 on 입니다.</li>
+<li>delimiter | byteDelimiter : 둘중 한 프로퍼티만 적용됩니다. 기기에서 전달받는 데이터의 파서를 선택합니다.<br>delimiter 인 경우 결과값을 string 으로, byteDelimiter 의 경우 byteArray(ex. [255, 83, 13, 10]) 로 전달받습니다.<br>byteDelimiter 는 해당 delimiter 를 포함한 결과값을 받게 됩니다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="이미지-삽입"><a href="#이미지-삽입" class="headerlink" title="이미지 삽입"></a>이미지 삽입</h3><p>이미지는 찌그러짐을 방지하기 위해 정사각형의 이미지를 추천드립니다. (100px * 100px)<br>또한 배경색이 투명색한 <code>.png</code> 파일이어야 합니다.<br>용량문제 때문에 너무 큰 이미지는 사용을 자제해 주시고, 적당한 크기의 이미지를 최대한 압축 및 최적화 후 넣어 주시면 됩니다.<br>용량이 너무 크다고 판단되는 경우 임의로 리사이징을 할 수 있습니다.</p>
+<blockquote>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://tinypng.com/">https://tinypng.com/</a> 사이트 에서 간단하게 무료로 <code>.png</code>파일을 최적화 할 수 있습니다.</p>
+</blockquote>
+<h3 id="펌웨어-추가"><a href="#펌웨어-추가" class="headerlink" title="펌웨어 추가"></a>펌웨어 추가</h3><p><code>모듈.json</code> 파일의 firmware 프로퍼티에 작성한 값을 통해 펌웨어를 찾습니다.<br><code>[펌웨어명].hex</code>파일을 <code>app/firmwares/</code> 위치에 넣어 주면 이후에 하드웨어 프로그램에서 자동적으로 해당 펌웨어를 업로드 합니다.<br>현재 펌웨어는 업로드는 아두이노 계열인 <code>Uno</code>와 <code>Nano</code> 보드만 지원하고 있습니다. <code>Nano</code> 보드에 펌웨어를 올리기 위해선 <code>firmwareBaudRate</code> 속성의 값을 <code>57600</code>으로 설정해야 정상적으로 업로드가 가능합니다.</p>
+<h3 id="드라이버-추가"><a href="#드라이버-추가" class="headerlink" title="드라이버 추가"></a>드라이버 추가</h3><p>드라이버는 기본적으로 운영체제 별로 따로 설정하도록 되어 있으며, 해당 운영체제에 맞는 드라이버가 없는경우 드라이버 설치 버튼이 표시되지 않습니다. 드라이버 옵션에 작성한 경로에 맞추어 <code>app/drivers/</code>폴더에 드라이버를 넣어 주면 됩니다.</p>
+<h3 id="커스텀-버튼-추가"><a href="#커스텀-버튼-추가" class="headerlink" title="커스텀 버튼 추가"></a>커스텀 버튼 추가</h3><p>하드웨어 프로그램과 하드웨어 기기가 연결되었을 때, 사용자가 클릭 할 수 있는 ‘커스텀 버튼’을 제공할 수 있습니다.<br>커스텀 버튼을 제공하기 위해선, <code>app/modules/모듈.json</code>에서 <code>customButton</code> 속성을 정의해야 합니다.</p>
+<p>버튼은 여러개 있을 수 있으므로 <code>customButton</code>속성은 각 버튼에 대한 내용이 정의된 객체를 배열로 가집니다. 버튼에 대한 객체는 각 버튼을 구분하기 위한 <code>key</code> 속성과 버튼에 표시될 텍스트인 <code>translate</code>로 구성되어 있습니다.</p>
+<p>예) app/modules/모듈.json</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">...</span><br><span class="line">  <span class="string">&quot;customButton&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">&quot;key&quot;</span>: <span class="string">&quot;case1&quot;</span>,</span><br><span class="line">      <span class="comment">// 버튼에 출력될 텍스트를 언어별로 정의</span></span><br><span class="line">      <span class="string">&quot;translate&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;en&quot;</span>: <span class="string">&quot;button1&quot;</span>,</span><br><span class="line">        <span class="string">&quot;ko&quot;</span>: <span class="string">&quot;버튼1&quot;</span>,</span><br><span class="line">        <span class="string">&quot;jp&quot;</span>: <span class="string">&quot;ボタン1&quot;</span></span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">&quot;key&quot;</span>: <span class="string">&quot;case2&quot;</span>,</span><br><span class="line">      <span class="comment">// 아래와 같이 단일 string으로도 정의 가능</span></span><br><span class="line">      <span class="string">&quot;translate&quot;</span> : <span class="string">&quot;버튼2&quot;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>다음으로 <code>app/modules/모듈.js</code> 에서 커스텀 버튼을 사용자에게 보여줄지 여부를 boolean으로 return하는 <code>canShowCustomButton()</code> 함수를 구현합니다.</p>
+<p>마지막으로, 버튼 클릭시 실제 동작로직이 정의된 <code>customButtonClicked(key)</code> 함수를 구현합니다. <code>customButtonClicked(key)</code> 함수는, <code>app/modules/모듈.json</code>의 <code>key</code>속성값을 인자로 받아옵니다. 버튼이 여러개 있다면, <code>key</code>를 통해 버튼별 로직을 분기하여 구현하시는 것을 추천드립니다. </p>
+<p>예) app/modules/모듈.js</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 커스텀 버튼을 사용자에게 보여줄지 여부</span></span><br><span class="line"><span class="function"><span class="title">canShowCustomButton</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 커스텀 버튼 클릭시 동작할 로직</span></span><br><span class="line"><span class="function"><span class="title">customButtonClicked</span>(<span class="params">key</span>)</span> &#123;</span><br><span class="line">  <span class="keyword">switch</span> (key) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;case1&quot;</span>:</span><br><span class="line">      <span class="comment">//버튼 1 로직</span></span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;case2&quot;</span>:</span><br><span class="line">      <span class="comment">//버튼 2 로직</span></span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="built_in">console</span>.log(key);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>모든 구현을 마치면, 하드웨어 연결시 아래와 같이 버튼이 출력됩니다.<br><strong>(이미지는 예시를 위한 것으로 마이크로비트는 현재 커스텀 버튼을 제공하고 있지 않습니다.)</strong></p>
+<p><img src="/images/entry-hw/custom_button.png" alt="custom_button"></p>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/entry-hw/2016-05-01-getting_started.html" itemprop="url">시작하기</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/entry-hw/add_bluetooth_hardware.html" itemprop="url">블루투스 하드웨어 추가하기</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/guide/entry-hw/2016-05-03-add_module.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/guide/entry-hw/2016-05-03-add_module.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://entryhw.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com/?ref_noscript" itemprop="url">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

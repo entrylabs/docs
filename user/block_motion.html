@@ -1,0 +1,639 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>움직임 블록 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/user/block_motion.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="움직임 블록 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="움직임 블록 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "userGuide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "움직임 블록",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2020-11-13",
+        "dateCreated": "2020-11-13",
+        "dateModified": "2023-05-25",
+        "url": "https://docs.playentry.org/user/block_motion.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "982",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/user/block_motion.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>작품</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/what-is-project.html" class="sidebar-link" itemprop="url">작품</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>화면의 구성 요소</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/header.html" class="sidebar-link" itemprop="url">상단 메뉴</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/screen.html" class="sidebar-link" itemprop="url">실행 화면</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/sub-space.html" class="sidebar-link" itemprop="url">보조 창</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_block.html" class="sidebar-link" itemprop="url">블록 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_shape.html" class="sidebar-link" itemprop="url">모양 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_sound.html" class="sidebar-link" itemprop="url">소리 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_attribute.html" class="sidebar-link" itemprop="url">속성 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/others.html" class="sidebar-link" itemprop="url">기타</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>블록</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/block_start.html" class="sidebar-link" itemprop="url">시작 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_flow.html" class="sidebar-link" itemprop="url">흐름 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_motion.html" class="sidebar-link current" itemprop="url">움직임 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_looks.html" class="sidebar-link" itemprop="url">생김새 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_brush.html" class="sidebar-link" itemprop="url">붓 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_text.html" class="sidebar-link" itemprop="url">글상자 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_sound.html" class="sidebar-link" itemprop="url">소리 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_decision.html" class="sidebar-link" itemprop="url">판단 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_calculate.html" class="sidebar-link" itemprop="url">계산 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_variable.html" class="sidebar-link" itemprop="url">자료 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_function.html" class="sidebar-link" itemprop="url">함수 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_data.html" class="sidebar-link" itemprop="url">데이터 분석 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai.html" class="sidebar-link" itemprop="url">인공지능 블록 > 인공지능이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_translate.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 번역</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_tts.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 읽어주기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_stt.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 오디오 감지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_video_sensing.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 비디오 감지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model.html" class="sidebar-link" itemprop="url">인공지능 블록 > 모델 학습이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_image.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 이미지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_text.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 텍스트</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_voice.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 음성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_classification.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_prediction.html" class="sidebar-link" itemprop="url">인공지능 블록 > 예측 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_clustering.html" class="sidebar-link" itemprop="url">인공지능 블록 > 군집 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_hardware.html" class="sidebar-link" itemprop="url">하드웨어 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_extension.html" class="sidebar-link" itemprop="url">확장 블록</a>
+                </li>
+            
+        
+    
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content userGuide with-sidebar ">
+    
+      
+    
+    
+      <h1>움직임 블록</h1>
+    
+    <p>움직임 블록에는 오브젝트를 움직이거나 회전하는 블록들이 있습니다.</p>
+<p>움직임 블록들의 이름에는 규칙이 있답니다. 이 규칙을 알면 블록들을 더 쉽게 이해할 수 있을 거예요!</p>
+<h2 id="POINT-움직이기-바꾸기-vs-이동하기"><a href="#POINT-움직이기-바꾸기-vs-이동하기" class="headerlink" title="POINT: 움직이기(바꾸기)  vs  이동하기"></a>POINT: 움직이기(바꾸기)  vs  이동하기</h2><p><strong>① ‘움직이기(바꾸기)’ 블록</strong></p>
+<p><img src="images/block-motion-01.png" alt="block-motion" style="zoom:67%;"> <img src="images/block-motion-05.png" alt="block-motion" style="zoom:67%;"> <img src="images/block-motion-03.png" alt="block-motion" style="zoom:67%;"> <img src="images/block-motion-19.png" alt="block-motion" style="zoom:67%;"></p>
+<p>블록 이름에 ‘움직이기’ 또는 ‘바꾸기’가 들어간 블록들은 현재 오브젝트의 위치가 기준이 됩니다. 현재 위치에 따라 주어진 값만큼 움직이죠.  </p>
+<p>따라서 ‘움직이기’ 블록에는 움직일 거리를 입력해야 합니다.</p>
+<p><strong>② ‘이동하기’ 블록</strong></p>
+<p><img src="images/block-motion-08.png" alt="block-motion" style="zoom:67%;"> <img src="images/block-motion-09.png" alt="block-motion" style="zoom:67%;"> <img src="images/block-motion-10.png" alt="block-motion" style="zoom:67%;"></p>
+<p>블록 이름에 ‘이동하기’가 들어간 블록들은 좌표이동하기 블록들은 현재 위치와 상관없이 입력한 좌표로 오브젝트가 이동합니다.</p>
+<p>따라서 실행 화면의 좌표를 입력해야 합니다.</p>
+<h2 id="POINT-초-동안"><a href="#POINT-초-동안" class="headerlink" title="POINT: ~초 동안"></a>POINT: ~초 동안</h2><p>입력한 시간 동안 움직이는 블록과 그렇지 않은 블록들은 오브젝트의 움직임에 차이가 있습니다.</p>
+<p><strong>① 주어진 시간 없이 이동하기/움직이기</strong></p>
+<p>움직임 블록에 입력한 시간 값이 없으면 오브젝트는 한 번에 이동합니다. 마치 순간이동을 한 것 처럼요!</p>
+<img src="images/block-motion-08.png" alt="block-motion" style="zoom:67%;">
+
+<p><img src="images/window/motion-teleport.gif" alt="motion-teleport"></p>
+<p><strong>② 입력한 시간 동안 이동하기/움직이기</strong></p>
+<p>움직임 블록에 입력한 시간이 있으면 오브젝트는 해당 시간 동안 미끄러지듯 이동합니다.</p>
+<img src="images/block-motion-09.png" alt="block-motion" style="zoom:67%;">
+
+<p><img src="images/window/motion-glide.gif" alt="motion-glide"></p>
+<p>움직임 블록 이름의 규칙도 알았으니, 이제 블록들을 하나 하나 자세히 알아볼까요?</p>
+<h2 id="1-이동-방향으로-10-만큼-움직이기"><a href="#1-이동-방향으로-10-만큼-움직이기" class="headerlink" title="1. 이동 방향으로 (10) 만큼 움직이기"></a>1. 이동 방향으로 <code>(10)</code> 만큼 움직이기</h2><p><img src="images/block-motion-01.png" alt="block-motion"></p>
+<p>이 오브젝트의 이동 방향 화살표가 가리키는 방향으로 입력한 거리(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)만큼 움직입니다.</p>
+<p>입력한 거리가 음수이면 이동 방향의 반대 방향으로 움직여요.</p>
+<h2 id="2-화면-끝에-닿으면-튕기기"><a href="#2-화면-끝에-닿으면-튕기기" class="headerlink" title="2. 화면 끝에 닿으면 튕기기"></a>2. 화면 끝에 닿으면 튕기기</h2><p><img src="images/block-motion-02.png" alt="block-motion"></p>
+<p>이 오브젝트가 화면 끝에 닿으면 한 번 튕깁니다.</p>
+<p>이동 방향이 벽을 기준으로 반대 방향을 이루는 각도로 오브젝트의 방향을 바꿉니다.</p>
+<p>벽에 닿아 튕기면 이동방향은 반대로 바뀌고 오브젝트 또한 상하좌우가 바뀌게 됩니다.</p>
+<p><img src="images/window/motion-bounce.gif" alt="motion-bounce"></p>
+<p>엔트리봇이 걷는 모습을 만들 때 이 블록을 사용하면 하늘을 거꾸로 걷는 엔트리봇을 보실 수 있습니다.</p>
+<p>바운스 볼 등 상하좌우가 바뀌어도 괜찮은 오브젝트에서는 더 유용한 블록이 될 거예요!</p>
+<h2 id="3-x-좌표를-10-만큼-바꾸기"><a href="#3-x-좌표를-10-만큼-바꾸기" class="headerlink" title="3. x 좌표를 (10) 만큼 바꾸기"></a>3. x 좌표를 <code>(10)</code> 만큼 바꾸기</h2><p><img src="images/block-motion-03.png" alt="block-motion"></p>
+<p>이 오브젝트의 x 좌표를 입력한 수(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)만큼 움직입니다.</p>
+<p>입력한 수가 양수이면 오른쪽으로, 음수이면 왼쪽으로 움직여요.</p>
+<h2 id="4-y-좌표를-10-만큼-바꾸기"><a href="#4-y-좌표를-10-만큼-바꾸기" class="headerlink" title="4. y 좌표를 (10) 만큼 바꾸기"></a>4. y 좌표를 <code>(10)</code> 만큼 바꾸기</h2><p><img src="images/block-motion-04.png" alt="block-motion"></p>
+<p>이 오브젝트의 y 좌표를 입력한 수(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)만큼 움직입니다.</p>
+<p>입력한 수가 양수이면 위쪽으로, 음수이면 아래쪽으로 움직여요.</p>
+<h2 id="5-2-초-동안-x-10-y-10-만큼-움직이기"><a href="#5-2-초-동안-x-10-y-10-만큼-움직이기" class="headerlink" title="5. (2) 초 동안 x: (10) y: (10) 만큼 움직이기"></a>5. <code>(2)</code> 초 동안 x: <code>(10)</code> y: <code>(10)</code> 만큼 움직이기</h2><p><img src="images/block-motion-05.png" alt="block-motion"></p>
+<p>입력한 시간(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)동안 이 오브젝트의 x, y 좌표를 현재 위치에서 각각의 수(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)만큼 움직입니다.</p>
+<p>이 블록이 동작하는 도중에 다른 블록으로 이 오브젝트의 위치를 바꾸어도 계속 동작합니다.</p>
+<p>이 블록의 동작이 끝난 후에 다음 블록이 동작합니다.</p>
+<h2 id="6-x-10-위치로-이동하기"><a href="#6-x-10-위치로-이동하기" class="headerlink" title="6. x: (10) 위치로 이동하기"></a>6. x: <code>(10)</code> 위치로 이동하기</h2><p><img src="images/block-motion-06.png" alt="block-motion"></p>
+<p>이 오브젝트가 현재 위치와 상관 없이 입력한 x 좌표(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)로 이동합니다.</p>
+<h2 id="7-y-10-위치로-이동하기"><a href="#7-y-10-위치로-이동하기" class="headerlink" title="7. y: (10) 위치로 이동하기"></a>7. y: <code>(10)</code> 위치로 이동하기</h2><p><img src="images/block-motion-07.png" alt="block-motion"></p>
+<p>이 오브젝트가 현재 위치와 상관 없이 입력한 y 좌표(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)로 이동합니다.</p>
+<h2 id="8-x-0-y-0-위치로-이동하기"><a href="#8-x-0-y-0-위치로-이동하기" class="headerlink" title="8. x: (0) y: (0) 위치로 이동하기"></a>8. x: <code>(0)</code> y: <code>(0)</code> 위치로 이동하기</h2><p><img src="images/block-motion-08.png" alt="block-motion"></p>
+<p>이 오브젝트가 현재 위치와 상관 없이 입력한 x, y 좌표(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)로 이동합니다.</p>
+<h2 id="9-2-초-동안-x-10-y-10-위치로-이동하기"><a href="#9-2-초-동안-x-10-y-10-위치로-이동하기" class="headerlink" title="9. (2) 초 동안 x: (10) y: (10) 위치로 이동하기"></a>9. <code>(2)</code> 초 동안 x: <code>(10)</code> y: <code>(10)</code> 위치로 이동하기</h2><p><img src="images/block-motion-09.png" alt="block-motion"></p>
+<p>입력한 시간(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)동안 이 오브젝트가 입력한 x, y 좌표(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)로 이동합니다.</p>
+<p>이 블록이 동작하는 도중에 다른 블록으로 이 오브젝트의 위치를 바꾸어도 남은 시간동안 입력한 위치로 이동하게 됩니다.</p>
+<p>이 블록의 동작이 끝난 후에 다음 블록이 동작합니다.</p>
+<h2 id="10-오브젝트-위치로-이동하기"><a href="#10-오브젝트-위치로-이동하기" class="headerlink" title="10. [오브젝트] 위치로 이동하기"></a>10. <code>[오브젝트]</code> 위치로 이동하기</h2><p><img src="images/block-motion-10.png" alt="block-motion"></p>
+<p>이 오브젝트가 선택한 위치로 이동합니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-motion.png" style="zoom:50%;">)를 클릭하면 오브젝트 또는 마우스 포인터를 선택해 해당 위치로 이동할 수 있습니다.</p>
+<h2 id="11-2-초-동안-오브젝트-위치로-이동하기"><a href="#11-2-초-동안-오브젝트-위치로-이동하기" class="headerlink" title="11. (2) 초 동안 [오브젝트] 위치로 이동하기"></a>11. <code>(2)</code> 초 동안 <code>[오브젝트]</code> 위치로 이동하기</h2><p><img src="images/block-motion-11.png" alt="block-motion"></p>
+<p>입력한 시간(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)동안 이 오브젝트가 선택한 항목의 위치로 이동합니다.</p>
+<p>이 블록이 동작하는 도중에 선택한 항목의 위치를 바꾸어도 계속 동작하지만, 처음 동작할 때의 위치로 계속 이동해요.</p>
+<p>이 블록의 동작이 끝난 후에 다음 블록이 동작합니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-motion.png" style="zoom:50%;">)를 클릭하면 오브젝트 또는 마우스 포인터를 선택해 해당 위치로 이동할 수 있습니다.</p>
+<h2 id="12-방향을-90º-만큼-회전하기"><a href="#12-방향을-90º-만큼-회전하기" class="headerlink" title="12. 방향을 (90º) 만큼 회전하기"></a>12. 방향을 <code>(90º)</code> 만큼 회전하기</h2><p><img src="images/block-motion-12.png" alt="block-motion"></p>
+<p>이 오브젝트의 방향을 (중심점을 기준으로) 입력한 각도(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)만큼 회전합니다.</p>
+<p>입력한 각도가 양수이면 시계 방향으로, 음수이면 반시계 방향으로 회전해요.</p>
+<h2 id="13-이동-방향을-90º-만큼-회전하기"><a href="#13-이동-방향을-90º-만큼-회전하기" class="headerlink" title="13. 이동 방향을 (90º) 만큼 회전하기"></a>13. 이동 방향을 <code>(90º)</code> 만큼 회전하기</h2><p><img src="images/block-motion-13.png" alt="block-motion"></p>
+<p>이 오브젝트의 이동 방향을 입력한 각도만큼 회전합니다.</p>
+<p>입력한 각도가 양수이면 시계 방향으로, 음수이면 반시계 방향으로 회전해요.</p>
+<h2 id="14-2-초-동안-방향을-90º-만큼-회전하기"><a href="#14-2-초-동안-방향을-90º-만큼-회전하기" class="headerlink" title="14. (2) 초 동안 방향을 (90º) 만큼 회전하기"></a>14. <code>(2)</code> 초 동안 방향을 <code>(90º)</code> 만큼 회전하기</h2><p><img src="images/block-motion-14.png" alt="block-motion"></p>
+<p>입력한 시간(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)동안 이 오브젝트의 방향을 (중심점을 기준으로) 입력한 각도(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)만큼 회전합니다.</p>
+<p>입력한 각도가 양수이면 시계 방향으로, 음수이면 반시계 방향으로 회전해요.</p>
+<p>이 블록이 동작하는 도중에 다른 블록으로 이 오브젝트의 방향을 바꾸어도 계속 동작해요.</p>
+<p>이 블록의 동작이 끝난 후에 다음 블록이 동작합니다.</p>
+<h2 id="15-2-초-동안-이동-방향-90º-만큼-회전하기"><a href="#15-2-초-동안-이동-방향-90º-만큼-회전하기" class="headerlink" title="15. (2) 초 동안 이동 방향 (90º) 만큼 회전하기"></a>15. <code>(2)</code> 초 동안 이동 방향 <code>(90º)</code> 만큼 회전하기</h2><p><img src="images/block-motion-15.png" alt="block-motion"></p>
+<p>입력한 시간(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)동안 이 오브젝트의 이동 방향을 입력한 각도(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)만큼 회전합니다.</p>
+<p>입력한 각도가 양수이면 시계 방향으로, 음수이면 반시계 방향으로 회전해요.</p>
+<p>이 블록이 동작하는 도중에 다른 블록으로 이 오브젝트의 방향이나 이동 방향을 바꾸어도 계속 동작해요.</p>
+<p>이 블록의 동작이 끝난 후에 다음 블록이 동작합니다.</p>
+<h2 id="16-방향을-90º-으-로-정하기"><a href="#16-방향을-90º-으-로-정하기" class="headerlink" title="16. 방향을 (90º) (으)로 정하기"></a>16. 방향을 <code>(90º)</code> (으)로 정하기</h2><p><img src="images/block-motion-16.png" alt="block-motion"></p>
+<p>이 오브젝트의 방향을 (중심점을 기준으로) 입력한 각도(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)로 정합니다.</p>
+<h2 id="17-이동-방향을-90º-으-로-정하기"><a href="#17-이동-방향을-90º-으-로-정하기" class="headerlink" title="17. 이동 방향을 (90º) (으)로 정하기"></a>17. 이동 방향을 <code>(90º)</code> (으)로 정하기</h2><p><img src="images/block-motion-17.png" alt="block-motion"></p>
+<p>이 오브젝트의 이동 방향을 입력한 각도(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)로 정합니다.</p>
+<h2 id="18-엔트리봇-쪽-바라보기"><a href="#18-엔트리봇-쪽-바라보기" class="headerlink" title="18. [엔트리봇] 쪽 바라보기"></a>18. <code>[엔트리봇]</code> 쪽 바라보기</h2><p><img src="images/block-motion-18.png" alt="block-motion"></p>
+<p>오브젝트의 이동 방향 화살표가 선택한 항목를 바라볼 수 있게 이 오브젝트의 방향을 (중심점을 기준으로) 정합니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-motion.png" style="zoom:50%;">)를 클릭하면 바라볼 오브젝트 또는 마우스 포인터를 선택할 수 있어요.</p>
+<h2 id="19-90º-방향으로-10-만큼-움직이기"><a href="#19-90º-방향으로-10-만큼-움직이기" class="headerlink" title="19. (90º) 방향으로 (10) 만큼 움직이기"></a>19. <code>(90º)</code> 방향으로 <code>(10)</code> 만큼 움직이기</h2><p><img src="images/block-motion-19.png" alt="block-motion"></p>
+<p>오브젝트가 (중심점을 기준으로) 입력한 각도(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)로 입력한 거리(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)만큼 움직입니다.</p>
+<p>입력한 거리가 음수이면 입력한 각도의 반대 방향으로 움직여요.</p>
+
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/user/block_motion.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/user/block_motion.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://entryhw.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com/?ref_noscript" itemprop="url">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

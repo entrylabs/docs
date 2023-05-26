@@ -1,0 +1,601 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>소리 탭 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/user/tab_sound.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="소리 탭 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="소리 탭 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "userGuide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "소리 탭",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2020-11-13",
+        "dateCreated": "2020-11-13",
+        "dateModified": "2023-05-25",
+        "url": "https://docs.playentry.org/user/tab_sound.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "262",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/user/tab_sound.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>작품</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/what-is-project.html" class="sidebar-link" itemprop="url">작품</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>화면의 구성 요소</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/header.html" class="sidebar-link" itemprop="url">상단 메뉴</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/screen.html" class="sidebar-link" itemprop="url">실행 화면</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/sub-space.html" class="sidebar-link" itemprop="url">보조 창</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_block.html" class="sidebar-link" itemprop="url">블록 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_shape.html" class="sidebar-link" itemprop="url">모양 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_sound.html" class="sidebar-link current" itemprop="url">소리 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_attribute.html" class="sidebar-link" itemprop="url">속성 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/others.html" class="sidebar-link" itemprop="url">기타</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>블록</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/block_start.html" class="sidebar-link" itemprop="url">시작 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_flow.html" class="sidebar-link" itemprop="url">흐름 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_motion.html" class="sidebar-link" itemprop="url">움직임 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_looks.html" class="sidebar-link" itemprop="url">생김새 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_brush.html" class="sidebar-link" itemprop="url">붓 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_text.html" class="sidebar-link" itemprop="url">글상자 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_sound.html" class="sidebar-link" itemprop="url">소리 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_decision.html" class="sidebar-link" itemprop="url">판단 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_calculate.html" class="sidebar-link" itemprop="url">계산 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_variable.html" class="sidebar-link" itemprop="url">자료 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_function.html" class="sidebar-link" itemprop="url">함수 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_data.html" class="sidebar-link" itemprop="url">데이터 분석 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai.html" class="sidebar-link" itemprop="url">인공지능 블록 > 인공지능이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_translate.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 번역</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_tts.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 읽어주기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_stt.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 오디오 감지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_video_sensing.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 비디오 감지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model.html" class="sidebar-link" itemprop="url">인공지능 블록 > 모델 학습이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_image.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 이미지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_text.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 텍스트</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_voice.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 음성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_classification.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_prediction.html" class="sidebar-link" itemprop="url">인공지능 블록 > 예측 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_clustering.html" class="sidebar-link" itemprop="url">인공지능 블록 > 군집 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_hardware.html" class="sidebar-link" itemprop="url">하드웨어 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_extension.html" class="sidebar-link" itemprop="url">확장 블록</a>
+                </li>
+            
+        
+    
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content userGuide with-sidebar ">
+    
+      
+    
+    
+      <h1>소리 탭</h1>
+    
+    <h2 id="소리-목록"><a href="#소리-목록" class="headerlink" title="소리 목록"></a>소리 목록</h2><img src="images/window/main-sound-list.png" alt="main-sound" style="zoom:50%;">
+
+
+
+<p>오브젝트에 소리를 추가 또는 관리하는 영역입니다.</p>
+<p>모든 오브젝트에는 하나의 소리 목록이 있어요. ‘소리 추가하기’ 버튼을 통해 원하는 소리를 이 목록에 추가할 수 있습니다.</p>
+<p>소리 목록에 추가한 소리는 소리 블록을 통해 재생할 수 있습니다.</p>
+<p><img src="images/window/sound_tab_list_example.png" alt="sound_tab_list"></p>
+<ul>
+<li><p>이름 상자를 클릭해서 이름을 수정합니다.</p>
+</li>
+<li><p>오른쪽의 X 버튼을 클릭해서 삭제합니다.</p>
+</li>
+<li><p>왼쪽의 재생 아이콘을 클릭해서 재생합니다.</p>
+</li>
+<li><p>왼쪽의 재생 아이콘을 드래그해서 소리 목록의 순서를 바꿉니다.</p>
+</li>
+<li><p>소리를 마우스 우클릭하면 이름 수정, 복제, 삭제, PC에 저장이 가능합니다.</p>
+</li>
+<li><p>선택한 소리를 편집하는 영역</p>
+</li>
+</ul>
+<img src="images/window/main-sound.png" alt="main-sound" style="zoom: 50%;">
+
+
+
+<p>소리 편집 기능은 아직 준비되지 않았어요. 멋진 업데이트로 찾아올 테니, 기대해주실 거죠?</p>
+<h2 id="소리-추가-팝업"><a href="#소리-추가-팝업" class="headerlink" title="소리 추가 팝업"></a>소리 추가 팝업</h2><p><img src="images/window/sound-add.png" alt="sound-add"></p>
+<p>‘소리 추가하기’ 버튼을 클릭하면 나타나는 팝업 창입니다.</p>
+<p>소리를 선택하고, 아래의 ‘추가하기’ 버튼을 클릭하면 소리 목록에 추가할 수 있어요.</p>
+<p>오른쪽 위의 검색창을 통해 원하는 소리의 이름을 검색할 수 있어요. 왼쪽의 카테고리를 선택하면 원하는 소리를 더 쉽게 찾을 수 있습니다.</p>
+<h4 id="①-소리-선택"><a href="#①-소리-선택" class="headerlink" title="① 소리 선택"></a>① 소리 선택</h4><p><img src="images/window/sound-select.png" alt="add-sound"></p>
+<p>원하는 소리를 클릭해서 선택합니다. 중복 선택이 가능해요. 선택한 소리는 아래의 선택 목록 영역에서 볼 수 있어요.</p>
+<p>선택한 소리를 다시 클릭하거나, 선택 목록의 소리에 마우스 포인터를 가져갔을 때 나타나는 X 표시를 눌러 선택을 해제할 수 있습니다.</p>
+<p>일부 카테고리의 소리는 태그로 분류되어 상단의 태그를 선택하면 원하는 소리를 더 쉽게 찾을 수 있습니다.</p>
+<h4 id="②-파일-올리기"><a href="#②-파일-올리기" class="headerlink" title="② 파일 올리기"></a>② 파일 올리기</h4><p><img src="images/window/import-sound.png" alt="import-sound"></p>
+<p>원하는 소리를 직접 올릴 수도 있어요.</p>
+<p>소리 파일의 용량은 10MB 이하여야 하고, mp3 형식(확장자)를 지원합니다.</p>
+<p>올린 소리는 파일 올리기 목록에서 볼 수 있습니다. 선택한 소리만 소리 목록에 추가됩니다. 파일을 올리면 기본적으로 선택한 상태가 되니 유의해 주세요.</p>
+<blockquote>
+<p>아래와 같은 소리는 이용약관 및 관련 법률에 의해 제재를 받을 수 있습니다.</p>
+<ul>
+<li>폭력적이고 잔인한 소리</li>
+<li>선정적인 내용의 소리</li>
+<li>불쾌감을 주거나 혐오감을 일으키는 소리</li>
+<li>무단 사용이 금지된 저작권의 소리 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://playentry.org/#!/terms/project">[저작권에 대해 알아보기]</a></li>
+</ul>
+</blockquote>
+
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/user/tab_sound.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/user/tab_sound.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://entryhw.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com/?ref_noscript" itemprop="url">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

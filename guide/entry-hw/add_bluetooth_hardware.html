@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>블루투스 하드웨어 추가하기 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/guide/entry-hw/add_bluetooth_hardware.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="블루투스 하드웨어 추가하기 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="블루투스 하드웨어 추가하기 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "guide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "블루투스 하드웨어 추가하기",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2023-05-25",
+        "dateCreated": "2023-05-25",
+        "dateModified": "2023-05-25",
+        "url": "https://docs.playentry.org/guide/entry-hw/add_bluetooth_hardware.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "151",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/guide/entry-hw/add_bluetooth_hardware.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+                
+                
+                    
+                        <li><h3>Quick Start</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/quick_start/2018-07-30-tutorial.html" class="sidebar-link" itemprop="url">엔트리 하드웨어 개발 튜토리얼</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Basic</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/basic/setting_environment.html" class="sidebar-link" itemprop="url">개발 환경 세팅</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/pull_request.html" class="sidebar-link" itemprop="url">PR 요청하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/2016-07-07-faq.html" class="sidebar-link" itemprop="url">자주 하는 질문</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/2023-05-25-common_problem.html" class="sidebar-link" itemprop="url">자주 발생하는 에러</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry JS</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-09-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-22-add_new_blocks.html" class="sidebar-link" itemprop="url">블록 명세 작성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-26-add_new_blocks2.html" class="sidebar-link" itemprop="url">블록 사용 등록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-26-add_new_blocks3.html" class="sidebar-link" itemprop="url">블록 모양별 개발 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-07-08-add_new_blocks4.html" class="sidebar-link" itemprop="url">하드웨어 블록 만들기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-09-translate.html" class="sidebar-link" itemprop="url">하드웨어 블록 번역작업</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-14-add_hardware.html" class="sidebar-link" itemprop="url">하드웨어 블록 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-23-test_project.html" class="sidebar-link" itemprop="url">프로젝트 테스트하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry HW</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2016-05-01-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2016-05-03-add_module.html" class="sidebar-link" itemprop="url">하드웨어 모듈 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/add_bluetooth_hardware.html" class="sidebar-link current" itemprop="url">블루투스 하드웨어 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/cli_test_hardware.html" class="sidebar-link" itemprop="url">하드웨어 연결 테스트하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2017-05-16-enroll_entry-hw.html" class="sidebar-link" itemprop="url">하드웨어 등록 서비스 신청하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry Offline</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-20-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-21-project_structure.html" class="sidebar-link" itemprop="url">프로젝트 구조</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-27-develop.html" class="sidebar-link" itemprop="url">개발하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-01-10-add_objects.html" class="sidebar-link" itemprop="url">오브젝트 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-28-translate.html" class="sidebar-link" itemprop="url">다국어 작업하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-10-30-custom_project.html" class="sidebar-link" itemprop="url">커스텀 프로젝트 빌드</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-01-09-build.html" class="sidebar-link" itemprop="url">빌드하기</a>
+                </li>
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Etc.</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/etc/2016-05-03-git_fork.html" class="sidebar-link" itemprop="url">Git 사용 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/etc/2020-06-24-doc_contribution.html" class="sidebar-link" itemprop="url">문서 기여하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/etc/2019-12-11-updates.html" class="sidebar-link" itemprop="url">문서 업데이트 내역</a>
+                </li>
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar add_bluetooth_hardware-guide">
+    
+      
+    
+    
+      <h1>블루투스 하드웨어 추가하기</h1>
+    
+    <p>엔트리에서는 블루투스 프로파일중 Serial Port Profile(이하 SPP)만 지원합니다.<br>Bluetooth Low Energy(이하 BLE) 타입의 블루투스는 현재로선 지원하지 않습니다.</p>
+<blockquote>
+<p>BLE 는 현재 개발중 단계이며, 업체의 개발은 아직 허용되지 않았습니다.<br>만약 필요하신 경우, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entry-hw/tree/develop/app/src/main/core/ble">develop#BLE</a> 를 를 참고해주세요. </p>
+</blockquote>
+<h2 id="모듈에-블루투스-설정하기"><a href="#모듈에-블루투스-설정하기" class="headerlink" title="모듈에 블루투스 설정하기"></a>모듈에 블루투스 설정하기</h2><p>일단 블루투스를 사용하기 위해서는 <code>.json</code>파일에 블루투스 정보를 추가해야 합니다.</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;hardware&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;bluetooth&quot;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>하드웨어 타입이 블루투스인 경우에는 자동으로 COM Port 선택창이 나오게 되어있습니다.<br>블루투스 연결시 COM Port(Serial Port)를 선택해야 하는 이유는 SPP로 연결 할때 쌍으로 연결이 되기 때문입니다.<br>SPP연결 후에는 송신포트와 수신포트가 생기는데 실제는 송신포트로만 실제 사용하게 됩니다.<br>또한, 벤더명이 블루투스 동글의 드라이버명을 따라가기 때문에, 실제 어떠한 하드웨어인지를 자동으로 알기가 힘든 부분이 있습니다.<br>이 때문에 강제적으로 사용자가 COM Port 리스트에서 송신포트를 선택하도록 하고 있습니다. 기타 나머지 설정 및 코드는 블루투스이긴 하지만 실제로는 Serial Port와 동일하게 동작하기 때문에 똑같이 설정 하시면 됩니다.</p>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/entry-hw/2016-05-03-add_module.html" itemprop="url">하드웨어 모듈 추가하기</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/entry-hw/cli_test_hardware.html" itemprop="url">하드웨어 연결 테스트하기</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/guide/entry-hw/add_bluetooth_hardware.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/guide/entry-hw/add_bluetooth_hardware.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://entryhw.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com/?ref_noscript" itemprop="url">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

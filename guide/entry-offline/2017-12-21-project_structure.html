@@ -1,0 +1,562 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>프로젝트 구조 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/guide/entry-offline/2017-12-21-project_structure.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="프로젝트 구조 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="프로젝트 구조 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "guide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "프로젝트 구조",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2023-05-25",
+        "dateCreated": "2023-05-25",
+        "dateModified": "2023-05-25",
+        "url": "https://docs.playentry.org/guide/entry-offline/2017-12-21-project_structure.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "505",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/guide/entry-offline/2017-12-21-project_structure.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+                
+                
+                    
+                        <li><h3>Quick Start</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/quick_start/2018-07-30-tutorial.html" class="sidebar-link" itemprop="url">엔트리 하드웨어 개발 튜토리얼</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Basic</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/basic/setting_environment.html" class="sidebar-link" itemprop="url">개발 환경 세팅</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/pull_request.html" class="sidebar-link" itemprop="url">PR 요청하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/2016-07-07-faq.html" class="sidebar-link" itemprop="url">자주 하는 질문</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/2023-05-25-common_problem.html" class="sidebar-link" itemprop="url">자주 발생하는 에러</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry JS</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-09-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-22-add_new_blocks.html" class="sidebar-link" itemprop="url">블록 명세 작성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-26-add_new_blocks2.html" class="sidebar-link" itemprop="url">블록 사용 등록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-26-add_new_blocks3.html" class="sidebar-link" itemprop="url">블록 모양별 개발 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-07-08-add_new_blocks4.html" class="sidebar-link" itemprop="url">하드웨어 블록 만들기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-09-translate.html" class="sidebar-link" itemprop="url">하드웨어 블록 번역작업</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-14-add_hardware.html" class="sidebar-link" itemprop="url">하드웨어 블록 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-23-test_project.html" class="sidebar-link" itemprop="url">프로젝트 테스트하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry HW</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2016-05-01-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2016-05-03-add_module.html" class="sidebar-link" itemprop="url">하드웨어 모듈 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/add_bluetooth_hardware.html" class="sidebar-link" itemprop="url">블루투스 하드웨어 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/cli_test_hardware.html" class="sidebar-link" itemprop="url">하드웨어 연결 테스트하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2017-05-16-enroll_entry-hw.html" class="sidebar-link" itemprop="url">하드웨어 등록 서비스 신청하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry Offline</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-20-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-21-project_structure.html" class="sidebar-link current" itemprop="url">프로젝트 구조</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-27-develop.html" class="sidebar-link" itemprop="url">개발하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-01-10-add_objects.html" class="sidebar-link" itemprop="url">오브젝트 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-28-translate.html" class="sidebar-link" itemprop="url">다국어 작업하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-10-30-custom_project.html" class="sidebar-link" itemprop="url">커스텀 프로젝트 빌드</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-01-09-build.html" class="sidebar-link" itemprop="url">빌드하기</a>
+                </li>
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Etc.</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/etc/2016-05-03-git_fork.html" class="sidebar-link" itemprop="url">Git 사용 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/etc/2020-06-24-doc_contribution.html" class="sidebar-link" itemprop="url">문서 기여하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/etc/2019-12-11-updates.html" class="sidebar-link" itemprop="url">문서 업데이트 내역</a>
+                </li>
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar 2017-12-21-project_structure-guide">
+    
+      
+    
+    
+      <h1>프로젝트 구조</h1>
+    
+    <p>Electron 의 프로세스 구조에 따라, 엔트리 오프라인은 크게 main process 와 renderer process 디렉토리로 나뉘어져 있습니다.<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://electronjs.org/docs/tutorial/application-architecture#electron-application-architecture">Electron Documentation</a> 를 참고해주세요.</p>
+<p>아래의 구조는 주요 디렉토리를 정리한 트리입니다.<br>아래 구조는 지속적으로 변경될 수 있습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">entry-offline/</span><br><span class="line">├─ build/</span><br><span class="line">└─ src/</span><br><span class="line">   ├─ main/</span><br><span class="line">   │  ├─ electron/</span><br><span class="line">   │  ├─ static/</span><br><span class="line">   │  └─ views/</span><br><span class="line">   │</span><br><span class="line">   └─ renderer/</span><br><span class="line">      ├─ actions/</span><br><span class="line">      ├─ reducers/</span><br><span class="line">      ├─ components/</span><br><span class="line">      ├─ resources/</span><br><span class="line">      │  ├─ db/</span><br><span class="line">      │  ├─ fonts/</span><br><span class="line">      │  ├─ images/</span><br><span class="line">      │  ├─ lang/</span><br><span class="line">      │  ├─ modal/</span><br><span class="line">      │  └─ uploads/</span><br><span class="line">      │</span><br><span class="line">      ├─ helper/</span><br><span class="line">      └─ bower_components/</span><br><span class="line">         ├─ entryjs/</span><br><span class="line">         └─ entry-hw/</span><br></pre></td></tr></table></figure>
+
+<h3 id="빌드용-파일-build"><a href="#빌드용-파일-build" class="headerlink" title="빌드용 파일 (build/)"></a>빌드용 파일 (build/)</h3><p>윈도우, 맥 빌드에 필요한 파일이 들어있습니다.   </p>
+<h3 id="주요-소스-src"><a href="#주요-소스-src" class="headerlink" title="주요 소스 (src/)"></a>주요 소스 (src/)</h3><p>엔트리 오프라인의 주요 코드가 위치합니다.</p>
+<ul>
+<li>main.js, main.html<ul>
+<li>기본이 되는 윈도우 html 및 엔트리 오프라인 엔트리포인트 입니다.</li>
+</ul>
+</li>
+</ul>
+<h4 id="메인-프로세스-소스-src-main"><a href="#메인-프로세스-소스-src-main" class="headerlink" title="메인 프로세스 소스 (src/main/)"></a>메인 프로세스 소스 (src/main/)</h4><p>메인 프로세스에서 동작하는 코드들이 있습니다.</p>
+<ul>
+<li>electron : 일렉트론 구동시 필요한 파일들입니다.</li>
+<li>static : static file 다운로드시 필요한 파일들을 모아둔 디렉토리 입니다.</li>
+<li>views : 일렉트론 윈도우를 다루는 객체 및 html 이 들어있습니다.</li>
+</ul>
+<ul>
+<li>fileUtils.js : 파일 시스템에 관한 로직들이 담긴 파일입니다.</li>
+<li>mainUtils.js : 실제 비즈니스로직을 담당하고 있는 파일입니다.</li>
+<li>ipcMainHelper.js : 렌더러 프로세스에서 오는 ipc 이벤트를 처리하는 곳입니다. MVC 의 컨트롤러와 흡사합니다. </li>
+</ul>
+<h4 id="렌더러-프로세스-소스-src-renderer"><a href="#렌더러-프로세스-소스-src-renderer" class="headerlink" title="렌더러 프로세스 소스 (src/renderer/)"></a>렌더러 프로세스 소스 (src/renderer/)</h4><p>렌더러 프로세스 소스입니다. 엔트리 워크스페이스를 구현하기 위한 소스 입니다.</p>
+<ul>
+<li>initEntry.js : 엔트리를 구성하기전 필요한 코드를 세팅하는 파일입니다.</li>
+<li>renderEntry.js : 리액트 컴포넌트를 렌더링하는 파일입니다.</li>
+<li>nativeMenu.js : 언어가 설정된 후 일렉트론의 메뉴 및 숏컷을 설정하는 파일입니다. </li>
+</ul>
+<h5 id="리액트-컴포넌트-및-리덕스-구성요소-actions-reducers-components"><a href="#리액트-컴포넌트-및-리덕스-구성요소-actions-reducers-components" class="headerlink" title="리액트 컴포넌트 및 리덕스 구성요소 (actions, reducers, components)"></a>리액트 컴포넌트 및 리덕스 구성요소 (actions, reducers, components)</h5><p>엔트리 워크스페이스는 리액트로 구성되었습니다. react-redux 를 구현하기 위한 기본 구성요소입니다.  </p>
+<h5 id="리소스-맵-resources"><a href="#리소스-맵-resources" class="headerlink" title="리소스 맵 (resources)"></a>리소스 맵 (resources)</h5><p>데이터베이스 정보, 이미지, 모달 등의 정보를 가지고 있습니다.</p>
+<ul>
+<li>db : 엔트리에서 사용되는 기본 리소스들에 대한 데이터베이스 덤프 정보를 가집니다.</li>
+<li>uploads : 실제 기본 리소스들 (스프라이트 이미지, 사운드)이 담긴 위치입니다.</li>
+<li>lang : 언어 정보 데이터입니다.</li>
+</ul>
+<ul>
+<li>static.js / static_mini.js : 엔트리를 구동하는데 필요한 특별한 정보 파일입니다. 실과형모드에는 static_mini.js 를 참조합니다.</li>
+</ul>
+<h5 id="유틸-파일-helper"><a href="#유틸-파일-helper" class="headerlink" title="유틸 파일 (helper)"></a>유틸 파일 (helper)</h5><p>렌더러 프로세스의 비즈니스 로직을 담당합니다.</p>
+<ul>
+<li>entry : 엔트리 코드와 밀접한 연관이 있는 파일입니다. (엔트리 내부 프로토타입 몽키패치, 오브젝트 조작 등)</li>
+</ul>
+<ul>
+<li>databaseManager.js : 리소스맵의 db 를 가져와 출력하는 Data Access Object 역할을 하는 파일입니다.</li>
+<li>storageManager.js : 로컬스토리지를 다루는 파일입니다.</li>
+<li>rendererUtils.js : 렌더러 프로세스의 일반적인 비즈니스 로직을 담당하는 파일입니다.</li>
+<li>ipcRendererHelper.js : 메인 프로세스와의 ipc 통신을 위한 파일입니다.</li>
+</ul>
+<h5 id="정적-라이브러리-bower-components"><a href="#정적-라이브러리-bower-components" class="headerlink" title="정적 라이브러리 (bower_components)"></a>정적 라이브러리 (bower_components)</h5><p>entryjs, entry-hw 등 정적라이브러리를 모은 디렉토리입니다. <code>bower.json</code> 파일을 참고해주세요. </p>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/entry-offline/2017-12-20-getting_started.html" itemprop="url">시작하기</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/entry-offline/2017-12-27-develop.html" itemprop="url">개발하기</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/guide/entry-offline/2017-12-21-project_structure.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/guide/entry-offline/2017-12-21-project_structure.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://entryhw.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com/?ref_noscript" itemprop="url">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

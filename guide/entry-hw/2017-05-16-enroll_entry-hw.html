@@ -1,0 +1,660 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>하드웨어 등록 서비스 신청하기 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/guide/entry-hw/2017-05-16-enroll_entry-hw.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="하드웨어 등록 서비스 신청하기 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="하드웨어 등록 서비스 신청하기 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "guide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "하드웨어 등록 서비스 신청하기",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2023-05-25",
+        "dateCreated": "2023-05-25",
+        "dateModified": "2023-05-25",
+        "url": "https://docs.playentry.org/guide/entry-hw/2017-05-16-enroll_entry-hw.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "2574",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/guide/entry-hw/2017-05-16-enroll_entry-hw.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+                
+                
+                    
+                        <li><h3>Quick Start</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/quick_start/2018-07-30-tutorial.html" class="sidebar-link" itemprop="url">엔트리 하드웨어 개발 튜토리얼</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Basic</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/basic/setting_environment.html" class="sidebar-link" itemprop="url">개발 환경 세팅</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/pull_request.html" class="sidebar-link" itemprop="url">PR 요청하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/2016-07-07-faq.html" class="sidebar-link" itemprop="url">자주 하는 질문</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/2023-05-25-common_problem.html" class="sidebar-link" itemprop="url">자주 발생하는 에러</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry JS</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-09-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-22-add_new_blocks.html" class="sidebar-link" itemprop="url">블록 명세 작성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-26-add_new_blocks2.html" class="sidebar-link" itemprop="url">블록 사용 등록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-26-add_new_blocks3.html" class="sidebar-link" itemprop="url">블록 모양별 개발 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-07-08-add_new_blocks4.html" class="sidebar-link" itemprop="url">하드웨어 블록 만들기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-09-translate.html" class="sidebar-link" itemprop="url">하드웨어 블록 번역작업</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-14-add_hardware.html" class="sidebar-link" itemprop="url">하드웨어 블록 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-23-test_project.html" class="sidebar-link" itemprop="url">프로젝트 테스트하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry HW</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2016-05-01-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2016-05-03-add_module.html" class="sidebar-link" itemprop="url">하드웨어 모듈 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/add_bluetooth_hardware.html" class="sidebar-link" itemprop="url">블루투스 하드웨어 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/cli_test_hardware.html" class="sidebar-link" itemprop="url">하드웨어 연결 테스트하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2017-05-16-enroll_entry-hw.html" class="sidebar-link current" itemprop="url">하드웨어 등록 서비스 신청하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry Offline</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-20-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-21-project_structure.html" class="sidebar-link" itemprop="url">프로젝트 구조</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-27-develop.html" class="sidebar-link" itemprop="url">개발하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-01-10-add_objects.html" class="sidebar-link" itemprop="url">오브젝트 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-28-translate.html" class="sidebar-link" itemprop="url">다국어 작업하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-10-30-custom_project.html" class="sidebar-link" itemprop="url">커스텀 프로젝트 빌드</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-01-09-build.html" class="sidebar-link" itemprop="url">빌드하기</a>
+                </li>
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Etc.</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/etc/2016-05-03-git_fork.html" class="sidebar-link" itemprop="url">Git 사용 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/etc/2020-06-24-doc_contribution.html" class="sidebar-link" itemprop="url">문서 기여하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/etc/2019-12-11-updates.html" class="sidebar-link" itemprop="url">문서 업데이트 내역</a>
+                </li>
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar 2017-05-16-enroll_entry-hw-guide">
+    
+      
+    
+    
+      <h1>하드웨어 등록 서비스 신청하기</h1>
+    
+    <h2 id="하드웨어-등록-서비스란"><a href="#하드웨어-등록-서비스란" class="headerlink" title="하드웨어 등록 서비스란?"></a>하드웨어 등록 서비스란?</h2><p>하드웨어 등록 서비스는 엔트리서비스에 신규 하드웨어를 등록하고 관리하기 위한 서비스입니다.<br>하드웨어를 등록하여야만 엔트리에서 공식적으로 해당 하드웨어를 이용할 수 있습니다.</p>
+<h2 id="왜-등록해야-하는-건가요"><a href="#왜-등록해야-하는-건가요" class="headerlink" title="왜 등록해야 하는 건가요?"></a>왜 등록해야 하는 건가요?</h2><p>17년 5월 31일까지는 엔트리에 하드웨어의 추가나 변경을 하려면 특별한 절차가 없이 가능하였습니다.<br>이는 엔트리가 모든 업체와 상생하며 건강한 소프트웨어 교육 플랫폼으로서 성장하기 위한 의도였습니다.</p>
+<p>이러한 의도는 변하지 않을 것이며, 앞으로도 지켜져야할 사항입니다.</p>
+<p>그런데 최근 엔트리의 사용자가 늘어나고 다양한 하드웨어 교구들이 추가되면서<br>하드웨어 연결시 발견하기 어렵거나 교육 현장에서만 발생할 수 있는 오류 사항들이 간혹 발견되고 있습니다.</p>
+<p>따라서 이러한 경우를 미연에 방지하고 효과적으로 대처하기 위하여<br>양 자간의 역할을 규정하고, 좋은 서비스를 사용자에게 제공하기 위해 최선을 다하자는 약속을 하고자 합니다.</p>
+<hr>
+<h2 id="약속-내용"><a href="#약속-내용" class="headerlink" title="약속 내용"></a>약속 내용</h2><p><strong>커넥트재단의 약속</strong></p>
+<ol>
+<li>하드웨어 등록을 위한 개발 가이드</li>
+<li>하드웨어 등록을 위한 하드웨어 ID 발급</li>
+<li>“엔트리 서비스”에서의 하드웨어 품질 테스트<ul>
+<li>동작 오류를 확인하는 최소한의 범위에서 제공됩니다.</li>
+<li>테스트의 진행을 위해서는 최초 1회에 한해서만 하드웨어 장비의 지원을 선택적으로 받습니다.</li>
+</ul>
+</li>
+<li>“엔트리 서비스”에 “하드웨어 모듈”의 반영</li>
+<li>기타 “커넥트(재)”가 추가 개발하거나 다른 커넥트(재)와의 제휴 계약 등을 통해 “제휴사”에게 제공하는 일체의 서비스  </li>
+</ol>
+<p><strong>신청시 약속해주셨으면 하는 부분</strong></p>
+<ol>
+<li>안정적인 하드웨어 모듈 개발</li>
+<li>담당 부서 또는 담당자와의 커뮤니케이션 채널 유지</li>
+<li>하드웨어의 품질 테스트<ul>
+<li>하드웨어의 모든 기능이 엔트리에서 오작동 하지 않는지 확인하는 절차이어야 합니다.</li>
+<li>하드웨어를 등록하거나 변경하는 매 차례마다 진행되어야 합니다.</li>
+<li>엔트리 사용자의 오류 신고가 접수된 경우 테스트를 요청드릴 수 있습니다.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="약속-방법"><a href="#약속-방법" class="headerlink" title="약속 방법"></a>약속 방법</h2><p>각 하드웨어 별로 “하드웨어 등록 서비스 신청서”를 출력하시어 작성하신 뒤, 사업자등록증 사본과 함께 이메일로 보내주시면 됩니다.</p>
+<p><strong>제출 서류</strong></p>
+<ul>
+<li>신청서 1부 (<a href="/files/entry-hw_enroll_200722.docx">다운로드 &gt;</a>)</li>
+<li>사업자등록증 사본<ul>
+<li>사업자등록증은 신청서를 작성/제출하는 실무자가 회사를 대표함을 증명하기 위해 수집하고 있는 점 양해를 부탁드립니다.</li>
+</ul>
+</li>
+</ul>
+<p><strong>제출 방법</strong></p>
+<ul>
+<li>email(<a href="mailto:entry@connect.or.kr" rel="external nofollow noopener noreferrer" target="_blank">entry@connect.or.kr</a>) 제출</li>
+</ul>
+<p><strong>신청서 내용 설명</strong></p>
+<p>신청서는 다음과 같이 구성되어 있습니다.</p>
+<ol>
+<li>신청서</li>
+<li>이용약관</li>
+<li>개인정보수집동의</li>
+</ol>
+<p><strong>신청서</strong></p>
+<p>신청서에서는 아래와 같은 정보를 수집하고 있으며, 수집하는 정보 중 개인정보로 간주되는 정보는 수집에 대한 동의를 구하고 있습니다.</p>
+<ul>
+<li>제품의 공식 명칭과 사진, 홈페이지 주소등 <strong>사용자들이 알아야 할 정보</strong></li>
+<li>개발 담당부서, 연락처와 같이 엔트리가 <strong>유지보수를 위해서 알아야 할 정보</strong>  </li>
+</ul>
+<p><strong>이용약관 설명</strong></p>
+<p>이용약관은 약속에 대한 세부 사항이 담겨져 있습니다.<br>위 내용은 핵심 부분을 추린 것이며, 상세 내용은 <strong>반드시</strong> 약관의 전문을 확인해주시길 바랍니다.</p>
+<p><strong>개인정보수집동의</strong></p>
+<ul>
+<li>신청서를 통해 수집한 정보를 보관하기 위한 동의서입니다.</li>
+</ul>
+<hr>
+<h4 id="이용약관-전문"><a href="#이용약관-전문" class="headerlink" title="이용약관 전문"></a>이용약관 전문</h4><blockquote>
+<p>제 1 조 (목적)<br>이 약관은 재단법인 네이버커넥트(이하 “재단”)가 제공하는 하드웨어 등록 서비스 및 관련 제반 서비스의 이용과 관련하여 재단과 제휴사와의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다. </p>
+<p>제 2 조 (정의)<br>이 약관에서 사용하는 용어의 정의는 다음과 같습니다.<br>①    “엔트리 서비스”라 함은 구현되는 단말기(PC, TV, 휴대형단말기 등의 각종 유무선 장치를 포함)와 상관없이 회원이 이용할 수 있는 소프트웨어 교육 플랫폼인 엔트리 및 엔트리 관련 제반 서비스를 의미합니다.<br>②    “회원”이라 함은 재단의 엔트리 서비스에 접속하여 “엔트리 이용약관”에 따라 재단과 이용계약을 체결하고, 재단이 제공하는 서비스를 이용하는 고객을 말합니다.<br>③    “하드웨어 등록 서비스”라 함은 엔트리 서비스에서 회원이 제휴사의 하드웨어를 이용할 수 있도록 등록하기 위해 재단이 제공하는 서비스를 의미합니다.<br>④    “제휴사”라 함은 엔트리 서비스에 등록되는 하드웨어 제품의 제조사로 이 약관에 따라 재단과 이용계약을 체결하고 재단이 제공하는 하드웨어 등록 서비스를 이용하여 하드웨어 모듈을 개발하는 고객을 말합니다.<br>⑤    “하드웨어 모듈”이라 함은 제휴사가 제조한 하드웨어를 “엔트리 서비스”에 연결하기 위해 필요한 문장, 음성, 이미지, 동영상, 링크, 소프트웨어, 프로그램, 코드 등 기타 정보를 말합니다.<br>⑥    “하드웨어 ID”라 함은 재단에서 하드웨어 모듈을 구별하고, 유지·관리하기 위해 하드웨어 별로 제휴사에 부여하는 유일한 값을 말합니다.</p>
+<p>제 3 조 (약관의 게시와 개정)<br>⑦    재단은 제휴사의 하드웨어 등록 서비스 신청 시 이 약관의 내용을 알 수 있도록 웹페이지를 통해 게시하거나, 열람할 수 있는 방법을 제공합니다.<br>⑧    재단은 “약관의규제에관한법률”, “정보통신망이용촉진및정보보호등에관한법률(이하 “정보통신망법”)” 등 관련법을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.<br>⑨    재단이 약관을 개정할 경우에는 적용일자 30일 전까지 및 개정사유를 명시하여 하드웨어 등록 서비스 홈페이지에서 공지하거나, 제9조 제1항의 방법으로 통지합니다. 다만, 제휴사에게 불리한 약관의 개정의 경우에는 반드시 제9조 제1항의 방법으로 통지합니다.<br>⑩    재단이 전항에 따라 개정약관을 공지 또는 통지하면서 제휴사에게 30일 기간 내에 의사표시를 하지 않으면 의사표시가 표명된 것으로 본다는 뜻을 명확하게 공지 또는 통지하였음에도 제휴사가 명시적으로 거부의 의사표시를 하지 아니한 경우 제휴사가 개정약관에 동의한 것으로 봅니다.<br>⑪    제휴사가 개정약관의 적용에 동의하지 않는 경우 재단은 개정 약관의 내용을 적용할 수 없으며, 이 경우 제휴사는 이용계약을 해지할 수 있습니다. 다만, 기존 약관을 적용할 수 없는 특별한 사정이 있는 경우에는 재단은 이용계약을 해지할 수 있습니다. </p>
+<p>제 4 조 (약관의 해석)<br>재단은 하드웨어 등록 서비스의 원활한 제공을 위하여 별도의 이용정책을 둘 수 있으며, 이 약관에서 정하지 아니한 사항이나 해석에 대해서는 이용정책, 관계법령 또는 상관례에 따릅니다. </p>
+<p>제 5 조 (이용계약 체결)<br>①    이용계약은 하드웨어 등록 서비스를 이용하고자 하는 자(이하 “신청자”)가 재단이 안내하는 방법에 따라 약관의 내용에 대하여 동의를 한 다음 서비스 이용 신청을 하고 재단이 이러한 신청에 대하여 승낙함으로써 체결됩니다.<br>②    재단은 신청자의 신청에 대하여 하드웨어 등록 서비스 이용을 승낙함을 원칙으로 합니다. 다만, 재단은 다음 각 호에 해당하는 신청에 대하여는 승낙을 하지 않거나 사후에 이용계약을 해지할 수 있습니다. </p>
+<ol>
+<li>가입신청자가 이 약관에 의하여 이전에 제휴사 자격을 상실한 적이 있는 경우, 단 재단의 재이용 승낙을 얻은 경우에는 예외로 함. </li>
+<li>허위의 정보를 기재하거나, 재단이 제시하는 내용을 기재하지 않은 경우 </li>
+<li>신청자가 제조한 하드웨어 제품이 엔트리 서비스와의 연동에 적합하지 않은 경우</li>
+<li>신청자의 귀책사유로 인하여 승인이 불가능하거나 기타 규정한 제반 사항을 위반하며 신청하는 경우<br>③    재단은 서비스관련설비의 여유가 없거나, 기술상 또는 업무상 문제가 있는 경우에는 승낙을 유보할 수 있습니다.<br>④    제2항과 제3항에 따라 서비스 이용 신청의 승낙을 하지 아니하거나 유보한 경우, 재단은 원칙적으로 이를 신청자에게 알리도록 합니다.<br>제 6 조 (제휴사 정보의 변경)<br>①    제휴사는 서비스 이용 신청 시 기재한 사항이 변경되었을 경우 전자우편 기타 방법으로 재단에 대하여 그 변경사항을 알려야 합니다.<br>②    전 항의 변경사항을 재단에 알리지 않아 발생한 불이익에 대하여 재단은 책임지지 않습니다. </li>
+</ol>
+<p>제 7 조 (개인정보보호 의무)<br>재단은 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 개인정보보호법 등 관계 법령이 정하는 바에 따라 제휴사의 개인정보를 보호하기 위해 노력합니다. 개인정보의 보호 및 사용에 대해서는 관련법 및 재단의 개인정보처리방침이 적용됩니다. 다만, 재단의 공식 사이트 외에 재단의 사이트에 링크된 외부 재단의 사이트에 대해서는 재단의 개인정보처리방침이 적용되지 않습니다. </p>
+<p>제 8 조 (제휴사의 “하드웨어 ID” 관리에 대한 의무)<br>①    제휴사의 하드웨어 ID에 관한 관리책임은 제휴사에게 있으며, 이를 제 3자가 이용하도록 하여서는 안 됩니다.<br>②    제휴사는 “하드웨어 ID”가 도용되거나 제3자가 사용하고 있음을 인지한 경우에는 이를 즉시 재단에 통지하고 재단의 안내에 따라야 합니다.<br>③    전 항의 경우에 해당 제휴사가 재단에 그 사실을 통지하지 않거나, 통지한 경우에도 재단의 안내에 따르지 않아 발생한 불이익에 대하여 재단은 책임지지 않습니다. </p>
+<p>제 9 조 (제휴사에 대한 통지)<br>①    재단이 제휴사에 대한 통지를 하는 경우 이 약관에 별도 규정이 없는 한 신청 시에 제공받은 전자우편주소, 전화번호 등을 이용하여 할 수 있습니다.<br>②    재단은 제휴사 전체에 대해 통지의 경우 7일 이상 하드웨어 등록 서비스홈페이지에 게시함으로써 제1항의 통지에 갈음할 수 있습니다. </p>
+<p>제 10 조 (재단의 의무)<br>①    재단은 관련법과 이 약관이 금지하거나 미풍양속에 반하는 행위를 하지 않으며, 계속적이고 안정적으로 하드웨어 등록 서비스를 제공하기 위하여 최선을 다하여 노력합니다.<br>②    재단은 하드웨어 등록 서비스 이용 계약이 체결된 경우, 제휴사의 요청에 따라 하드웨어 ID를 발급하고, 하드웨어 모듈 개발을 위한 기술 안내 방법을 제공합니다.<br>③    재단은 제휴사가 제공한 하드웨어 모듈이 엔트리 서비스에서 정상 동작할 수 있는 최소한의 요건을 갖추었는지 여부를 확인하기 위하여 품질 테스트를 진행할 수 있습니다. 이 경우 재단은 품질 테스트 진행을 위하여 제휴사에 하드웨어 제품 제공을 요청할 수 있습니다.<br>④    재단은 제휴사가 제공한 하드웨어 모듈의 품질 테스트가 완료된 경우, 엔트리 서비스에 하드웨어 모듈을 반영하여 엔트리 서비스에서 회원이 하드웨어를 이용할 수 있도록 합니다.<br>⑤    재단은 제휴사가 제공한 하드웨어 모듈에서 하자가 발견된 경우, 문제 해결이 완료될 때까지 엔트리 서비스에 하드웨어 모듈을 반영하는 것을 유보하거나 연동을 해제할 수 있습니다.<br>⑥    재단은 하드웨어 등록 서비스 이용과 관련하여 발생하는 제휴사의 불만 또는 피해구제요청을 적절하게 처리할 수 있도록 필요한 인력 및 시스템을 구비합니다.<br>⑦    재단은 하드웨어 등록 서비스 이용과 관련하여 제휴사로부터 제기된 의견이나 불만이 정당하다고 인정할 경우에는 이를 처리하여야 합니다. 제휴사가 제기한 의견이나 불만사항에 대해서는 게시판을 활용하거나 전자우편 등을 통하여 제휴사에게 처리과정 및 결과를 전달합니다.</p>
+<p>제 11 조 (제휴사의 의무)<br>①    제휴사는 엔트리 서비스에서의 하드웨어 이용을 위하여 하드웨어 모듈을 개발하고, 재단이 정한 방법에 따라 재단에 제공하며, 엔트리 서비스내 회원의 안정적인 하드웨어 이용을 위하여 최선을 다하여 노력합니다.<br>②    제휴사는 품질 테스트 및 원활한 하드웨어 등록 서비스의 이용을 위하여 담당 직원의 정보를 재단에 제공하고, 담당 직원이 변경될 경우 재단에 변경 정보를 통지합니다.<br>③    제휴사는 엔트리 서비스에서의 하드웨어 이용이 정상적으로 이루어 질 수 있도록 다음 각 호에 해당하는 경우 품질 테스트를 진행합니다.</p>
+<ol>
+<li>하드웨어 모듈을 재단에 최초로 제출하거나 변경하여 제출 하는 경우</li>
+<li>재단에 제출한 하드웨어 모듈이 “엔트리서비스”에 반영되어 회원이 하드웨어를 이용할 수 있는 경우</li>
+<li>회원의 오류 신고가 접수된 경우</li>
+<li>기타 정당한 사유로 인하여 재단의 테스트 요청이 있는 경우<br>④    제휴사는 위 조항에 따라 하드웨어 모듈에서 하자가 발견된 경우 그 즉시 재단에 통보하고, 이를 수정할 계획과 일정을 수립해야 합니다.<br>⑤    제휴사는 다음 행위를 하여서는 안 됩니다. </li>
+<li>신청 또는 변경 시 허위내용의 등록 </li>
+<li>재단이 정한 정보 이외의 정보(컴퓨터 프로그램 등) 등의 송신 또는 게시</li>
+<li>재단과 기타 제3자의 저작권 등 지적재산권에 대한 침해 </li>
+<li>재단 및 기타 제3자의 명예를 손상시키거나 업무를 방해하는 행위</li>
+<li>외설 또는 폭력적인 메시지, 화상, 음성, 기타 공서양속에 반하는 정보를 하드웨어 등록 서비스 또는 엔트리 서비스에 공개 또는 게시하는 행위</li>
+<li>기타 불법적이거나 부당한 행위<br>⑥    제휴사는 관계법, 이 약관의 규정, 이용정책, 이용안내 및 하드웨어 등록 서비스와 관련하여 공지한 주의사항, 재단이 통지하는 사항 등을 준수하여야 하며, 기타 재단의 업무에 방해되는 행위를 하여서는 안 됩니다. </li>
+</ol>
+<p>제 12 조 (하드웨어 등록 서비스의 제공 등)<br>①    재단은 제휴사에게 아래와 같은 하드웨어 등록 서비스를 제공합니다. </p>
+<ol>
+<li>하드웨어 등록을 위한 안내 문서 서비스</li>
+<li>하드웨어 등록을 위한 하드웨어 ID 발급 서비스</li>
+<li>엔트리 서비스에서의 하드웨어 품질 테스트</li>
+<li>엔트리 서비스에 하드웨어 모듈의 반영</li>
+<li>기타 재단이 추가 개발하거나 다른 재단과의 제휴 계약 등을 통해 제휴사에게 제공하는 일체의 서비스<br>②    재단은 하드웨어 등록 서비스를 일정범위로 분할하여 각 범위 별로 이용가능시간을 별도로 지정할 수 있습니다. 다만, 이러한 경우에는 그 내용을 사전에 공지합니다.<br>③    하드웨어 등록 서비스는 연중무휴, 1일 24시간 제공함을 원칙으로 합니다.<br>④    재단은 컴퓨터 등 정보통신설비의 보수점검, 교체 및 고장, 통신두절 또는 운영상 상당한 이유가 있는 경우 하드웨어 등록 서비스의 제공을 일시적으로 중단할 수 있습니다. 이 경우 재단은 제9조에 정한 방법으로 제휴사에게 통지합니다. 다만, 재단이 사전에 통지할 수 없는 부득이한 사유가 있는 경우 사후에 통지할 수 있습니다.<br>⑤    재단은 서비스의 제공에 필요한 경우 정기점검을 실시할 수 있으며, 정기점검시간은 서비스제공화면에 공지한 바에 따릅니다. </li>
+</ol>
+<p>제 13 조 (하드웨어 등록 서비스의 변경)<br>①    재단은 상당한 이유가 있는 경우에 운영상, 기술상의 필요에 따라 제공하고 있는 전부 또는 일부 하드웨어 등록 서비스를 변경할 수 있습니다.<br>②    하드웨어 등록 서비스의 내용, 이용방법, 이용시간에 대하여 변경이 있는 경우에는 변경사유, 변경될 서비스의 내용 및 제공일자 등은 그 변경 전에 해당 서비스 초기화면에 게시하여야 합니다.<br>③    재단은 무료로 제공되는 서비스의 일부 또는 전부를 재단의 정책 및 운영의 필요상 수정, 중단, 변경할 수 있으며, 이에 대하여 관련법에 특별한 규정이 없는 한 제휴사에게 별도의 보상을 하지 않습니다. </p>
+<p>제 14 조 (정보의 제공 및 광고의 게재)<br>①    재단은 제휴사가 하드웨어 등록 서비스 이용 중 필요하다고 인정되는 다양한 정보를 공지사항이나 전자우편 등의 방법으로 제휴사에게 제공할 수 있습니다. 다만, 제휴사는 관련법에 따른 거래관련 정보 및 고객문의 등에 대한 답변 등을 제외하고는 언제든지 전자우편에 대해서 수신 거절을 할 수 있습니다.<br>②    제1항의 정보를 전화 및 모사전송기기에 의하여 전송하려고 하는 경우에는 제휴사의 사전 동의를 받아서 전송합니다. 다만, 제휴사의 거래관련 정보 및 고객문의 등에 대한 회신에 있어서는 제외됩니다.<br>③    재단은 하드웨어 등록 서비스의 운영과 관련하여 서비스 화면, 홈페이지, 전자우편 등에 광고를 게재할 수 있습니다. 광고가 게재된 전자우편을 수신한 제휴사는 수신거절을 재단에게 할 수 있습니다. </p>
+<p>제 15 조 (하드웨어 모듈의 라이선스 등)<br>①    엔트리 서비스와의 연동을 위하여 제휴사가 개발하여 재단에 제공한 하드웨어 모듈은 하드웨어 연결 프로그램에 탑재됩니다.<br>②    하드웨어 연결 프로그램 및 하드웨어 모듈에는 아파치 라이선스가 적용되며, 제휴사는 하드웨어 모듈의 소스코드 공개를 허락합니다.</p>
+<p>제 16 조 (정보의 관리)<br>①    제휴사의 정보가 정보통신망법 및 저작권법 등 관련법에 위반되는 내용을 포함하는 경우, 권리자는 관련법이 정한 절차에 따라 해당 정보의 게시중단 및 삭제 등을 요청할 수 있으며, 재단은 관련법에 따라 조치를 취하여야 합니다.<br>②    재단은 전항에 따른 권리자의 요청이 없는 경우라도 권리침해가 인정될 만한 사유가 있거나 기타 커넥트(재) 정책 및 관련법에 위반되는 경우에는 관련법에 따라 해당 정보에 대해 임시조치 등을 취할 수 있습니다. </p>
+<p>제 17 조 (권리의 귀속)<br>①    하드웨어 등록 서비스에 대한 저작권 및 지적재산권은 재단에 귀속됩니다. 단, 제휴사가 작성한 정보는 제외하며, 제휴사가 제공한 하드웨어 모듈에 대해서는 제15조에 따릅니다.<br>②    재단은 하드웨어 등록 서비스와 관련하여 제휴사에게 재단이 정한 이용조건에 따라 하드웨어 ID 등을 이용할 수 있는 이용권만을 부여하며, 제휴사는 이를 양도, 판매, 담보제공 등의 처분행위를 할 수 없습니다. </p>
+<p>제 18 조 (계약해제, 해지 등)<br>①    제휴사는 언제든지 고객센터 또는 전자우편 등을 통하여 하드웨어 등록 서비스 이용계약 해지 신청을 할 수 있으며, 재단은 관련법 등이 정하는 바에 따라 이를 즉시 처리하여야 합니다.<br>②    제휴사가 계약을 해지할 경우, 관련법 및 개인정보취급방침에 따라 재단이 제휴사 정보를 보유하는 경우를 제외하고는 해지 후 제휴사의 모든 데이터는 소멸됩니다.<br>③    제휴사가 계약을 해지하는 경우, 엔트리 서비스와 하드웨어 모듈의 연동 해제 및 하드웨어 모듈이 삭제될 수 있습니다. </p>
+<p>제 19 조 (이용제한 등)<br>①    재단은 제휴사가 이 약관의 의무를 위반하거나 하드웨어 등록 서비스의 정상적인 운영을 방해한 경우, 경고, 엔트리 서비스와 하드웨어 모듈의 연동 해제 또는 연결 프로그램에서 하드웨어 모듈 삭제 등으로 하드웨어 등록 서비스 이용을 단계적으로 제한할 수 있습니다.<br>②    재단은 전항에도 불구하고, 결제도용, 저작권법을 위반한 불법프로그램의 제공 및 운영방해, 정보통신망법을 위반한 불법통신 및 해킹, 악성프로그램의 배포, 접속권한 초과행위 등과 같이 관련법을 위반한 경우에는 즉시 영구이용정지를 할 수 있습니다. 본 항에 따른 영구이용정지 시 하드웨어 등록 서비스를 통해 얻은 혜택 등은 모두 소멸되며, 재단은 이에 대해 별도로 보상하지 않습니다.<br>③    재단은 제휴사가 계속해서 3개월 이상 로그인하지 않거나, 제휴사가 제출한 하드웨어 모듈을 회원들이 3개월 이상 이용하지 않는 경우, 제휴사 정보의 보호 및 운영의 효율성을 위해 하드웨어 등록 서비스 제공을 중단할 수 있습니다.<br>④    재단은 본 조의 이용제한 범위 내에서 제한의 조건 및 세부내용은 이용정책 또는 이용안내에서 정하는 바에 의합니다.<br>⑤    본 조에 따라 하드웨어 등록 서비스 이용을 제한하거나 계약을 해지하는 경우에는 재단은 제9조에 따라 통지합니다.<br>⑥    제휴사는 본 조에 따른 이용제한 등에 대해 재단이 정한 절차에 따라 이의신청을 할 수 있습니다. 이 때 이의가 정당하다고 재단이 인정하는 경우 재단은 즉시 하드웨어 등록 서비스의 이용을 재개합니다. </p>
+<p>제 20 조 (책임제한)<br>①    재단은 천재지변 또는 이에 준하는 불가항력으로 인하여 하드웨어 등록 서비스를 제공할 수 없는 경우에는 하드웨어 등록 서비스 제공에 관한 책임이 면제됩니다.<br>②    재단은 품질 테스트용 하드웨어 제품 미제공 등 제휴사의 귀책사유로 인한 하드웨어 등록 서비스 및 엔트리 서비스 내의 하드웨어 이용의 장애·오류에 대하여는 책임을 지지 않습니다.<br>③    재단은 제휴사가 하드웨어 등록 서비스와 관련하여 게재한 정보, 자료, 사실의 신뢰도, 정확성 등의 내용에 관하여는 책임을 지지 않습니다.<br>④    재단은 제휴사 간 또는 제휴사과 제3자 상호간에 하드웨어 등록 서비스를 매개로 하여 거래 등을 한 경우에는 책임이 면제됩니다.<br>⑤    재단은 무료로 제공되는 하드웨어 등록 서비스 이용과 관련하여 관련법에 특별한 규정이 없는 한 책임을 지지 않습니다. </p>
+<p>제 21 조 (준거법 및 재판관할)<br>①    재단과 제휴사 간 제기된 소송은 대한민국법을 준거법으로 합니다.<br>②    재단과 제휴사 간 발생한 분쟁에 관한 소송은 제소 당시의 제휴사의 주소에 의하고, 주소가 없는 경우 거소를 관할하는 지방법원의 전속관할로 합니다. 단, 제소 당시 제휴사의 주소 또는 거소가 명확하지 아니한 경우의 관할법원은 민사소송법에 따라 정합니다.</p>
+<p>부칙</p>
+<ol>
+<li>이 약관은 2020년 7월 22일부터 적용됩니다.</li>
+<li>2017년 6월 1일부터 시행되던 종전의 약관은 본 약관으로 대체합니다.
+ </li>
+</ol>
+</blockquote>
+<hr>
+<h4 id="개인정보수집동의"><a href="#개인정보수집동의" class="headerlink" title="개인정보수집동의"></a>개인정보수집동의</h4><blockquote>
+<p>엔트리에서는 하드웨어 등록 신청서 접수를 위하여 아래와 같이 신청자의 개인정보를 처리합니다.</p>
+<ol>
+<li><p>수집하는 개인정보 항목</p>
+<ul>
+<li>제휴사 정보 : 이름, 주소, 전화번호, 이메일 주소</li>
+<li>하드웨어 정보 : 고객 문의 대응 이메일 및 전화번호</li>
+<li>담당자/부서 정보 : 이름, 전화번호, 이메일 주소</li>
+<li>사업자등록증 등 첨부서류</li>
+</ul>
+</li>
+<li><p>개인정보의 수집 목적</p>
+<ul>
+<li>하드웨어 등록 신청서 접수, 검토, 제공 등 하드웨어 등록 서비스 제공</li>
+</ul>
+</li>
+<li><p>개인정보의 보관기간</p>
+<ul>
+<li>하드웨어 등록 서비스 이용기간 동안 보관합니다.</li>
+</ul>
+</li>
+<li><p>개인정보 수집 동의를 거부할 권리</p>
+<ul>
+<li>정보주체는 개인정보의 수집 및 이용을 거부할 권리가 있습니다. 본 개인정보 수집 및 이용 동의를 거부하실 경우, 제휴 신청에 제한이 있을 수 있습니다.</li>
+</ul>
+</li>
+<li><p>개인정보의 위탁에 관한 사항</p>
+<ul>
+<li>“커넥트”는 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다.<br>5-1 수탁업체<br>  네이버㈜, 네이버 비즈니스플랫폼㈜, N Tech Service(주)<br>5-2 위탁업무 내용<br>  서버 등 인프라 관리업무, 서비스 개발 및 운영<br>5-3 위탁 기간<br>  계약 해지시 혹은 위탁계약 종료시까지</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/entry-hw/cli_test_hardware.html" itemprop="url">하드웨어 연결 테스트하기</a></span>
+        
+        
+      </div>
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/guide/entry-hw/2017-05-16-enroll_entry-hw.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/guide/entry-hw/2017-05-16-enroll_entry-hw.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://entryhw.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com/?ref_noscript" itemprop="url">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

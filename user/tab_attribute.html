@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>속성 탭 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/user/tab_attribute.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="속성 탭 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="속성 탭 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "userGuide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "속성 탭",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2020-11-12",
+        "dateCreated": "2020-11-12",
+        "dateModified": "2023-05-25",
+        "url": "https://docs.playentry.org/user/tab_attribute.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "799",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/user/tab_attribute.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>작품</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/what-is-project.html" class="sidebar-link" itemprop="url">작품</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>화면의 구성 요소</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/header.html" class="sidebar-link" itemprop="url">상단 메뉴</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/screen.html" class="sidebar-link" itemprop="url">실행 화면</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/sub-space.html" class="sidebar-link" itemprop="url">보조 창</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_block.html" class="sidebar-link" itemprop="url">블록 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_shape.html" class="sidebar-link" itemprop="url">모양 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_sound.html" class="sidebar-link" itemprop="url">소리 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_attribute.html" class="sidebar-link current" itemprop="url">속성 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/others.html" class="sidebar-link" itemprop="url">기타</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>블록</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/block_start.html" class="sidebar-link" itemprop="url">시작 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_flow.html" class="sidebar-link" itemprop="url">흐름 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_motion.html" class="sidebar-link" itemprop="url">움직임 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_looks.html" class="sidebar-link" itemprop="url">생김새 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_brush.html" class="sidebar-link" itemprop="url">붓 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_text.html" class="sidebar-link" itemprop="url">글상자 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_sound.html" class="sidebar-link" itemprop="url">소리 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_decision.html" class="sidebar-link" itemprop="url">판단 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_calculate.html" class="sidebar-link" itemprop="url">계산 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_variable.html" class="sidebar-link" itemprop="url">자료 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_function.html" class="sidebar-link" itemprop="url">함수 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_data.html" class="sidebar-link" itemprop="url">데이터 분석 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai.html" class="sidebar-link" itemprop="url">인공지능 블록 > 인공지능이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_translate.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 번역</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_tts.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 읽어주기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_stt.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 오디오 감지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_video_sensing.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 비디오 감지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model.html" class="sidebar-link" itemprop="url">인공지능 블록 > 모델 학습이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_image.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 이미지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_text.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 텍스트</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_voice.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 음성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_classification.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_prediction.html" class="sidebar-link" itemprop="url">인공지능 블록 > 예측 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_clustering.html" class="sidebar-link" itemprop="url">인공지능 블록 > 군집 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_hardware.html" class="sidebar-link" itemprop="url">하드웨어 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_extension.html" class="sidebar-link" itemprop="url">확장 블록</a>
+                </li>
+            
+        
+    
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content userGuide with-sidebar ">
+    
+      
+    
+    
+      <h1>속성 탭</h1>
+    
+    <h2 id="속성-목록"><a href="#속성-목록" class="headerlink" title="속성 목록"></a>속성 목록</h2><img src="images/window/main-attribute.png" alt="main-attribute" style="zoom: 50%;">
+
+
+
+<p>작품에서 사용하는 <strong>변수, 리스트, 신호, 함수</strong>를 관리하는 영역입니다.</p>
+<img src="images/window/attribute-list.png" alt="attribute-list" style="zoom:80%;">
+
+
+
+<p>각 속성들의 사용법은 다음과 같습니다.</p>
+<ul>
+<li>왼쪽의 아이콘으로 각 속성의 종류를 구분합니다.</li>
+<li>이름 상자를 클릭해서 이름을 수정합니다.</li>
+<li>역삼각형 버튼을 클릭하면 세부 내용과 해당 속성이 사용된 오브젝트를 확인할 수 있습니다.</li>
+<li>오른쪽의 X 버튼을 클릭해서 속성을 삭제합니다.</li>
+<li>변수/리스트는 오른쪽의 눈 버튼을 클릭해서 실행 화면에서 나타내거나 숨길 수 있습니다.</li>
+</ul>
+<h2 id="변수"><a href="#변수" class="headerlink" title="변수"></a>변수</h2><p>변수는 숫자나 문자 데이터를 저장할 수 있는 공간입니다. 필요할 때마다 찾아서 데이터를 넣고 뺄 수 있는 상자를 떠올려보세요.<br>변수에는 한 번에 한 가지 데이터만 저장할 수 있으며, 데이터는 언제든지 수정, 변경할 수 있습니다.</p>
+<img src="images/window/variable-list.png" alt="variable-list" style="zoom:80%;">
+
+
+
+<p>‘변수’ 카테고리를 선택해서 변수를 추가하거나 모아봅니다.</p>
+<p>변수의 종류는 네 가지고, 모든 오브젝트에서 사용하는 변수와 특정 오브젝트에서만 사용하는 변수로 분류합니다.</p>
+<p>왼쪽의 아이콘으로 변수의 종류를 확인할 수 있어요.</p>
+<p>‘변수 추가하기’ 버튼을 클릭하면 추가할 변수의 종류를 선택할 수 있어요.</p>
+<ul>
+<li><p><strong>모든 오브젝트에 사용</strong></p>
+<ul>
+<li><p><img src="images/icon/ic_attr_variable_on.png" alt="ic_attr_variable_on" style="zoom:50%;"> <strong>일반 변수로 사용 (작품에 저장)</strong>  : 작품을 정지하면 기본값으로 초기화되는 변수입니다.</p>
+</li>
+<li><p><img src="images/icon/ic_attr_variable_cloud_on.png" alt="ic_attr_variable_cloud_on" style="zoom:50%;"> <strong>공유 변수로 사용 (서버에 저장)</strong> : 작품을 정지하면 서버에 저장되는 변수입니다.</p>
+</li>
+<li><p><img src="images/icon/ic_attr_variable_real_time_on.png" alt="ic_attr_variable_real_time_on" style="zoom:50%;"> <strong>실시간 변수로 사용 (서버에 저장)</strong> : 작품을 실행하는 도중에 실시간으로 서버에 저장되는 변수입니다.</p>
+</li>
+</ul>
+</li>
+<li><p><img src="images/icon/ic_attr_variable_local_on.png" alt="ic_attr_variable_local_on" style="zoom:50%;"> <strong>이 오브젝트에서 사용</strong> : 선택한 오브젝트에서만 사용하는 일반 변수입니다. 해당 오브젝트의 복제본도 다른 오브젝트가 사용할 수 없는 변수를 가집니다.</p>
+</li>
+</ul>
+<p><img src="images/window/variable-attribute.png" alt="variable-attribute"></p>
+<p>역삼각형 버튼을 클릭하면 나타나는 각 변수의 설정입니다.</p>
+<ul>
+<li><p><strong>변수 속성</strong></p>
+<ul>
+<li><p><strong>기본값</strong> : 변수가 작품을 실행할 때부터 가질 값을 정합니다.</p>
+</li>
+<li><p><strong>슬라이드</strong> : 실행 화면에서 이 변수의 슬라이드를 보이거나 숨깁니다. 최댓값과 최솟값 사이에서 사용자가 변수를 직접 조절할 수 있습니다.</p>
+<p>실행 화면에 다음과 같은 슬라이드가 나타나 작품 실행 도중에 변수를 변경할 수 있어요.</p>
+<p>   <img src="images/window/variable-screen.png" alt="variable-screen"></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>사용된 오브젝트</strong> : 어떤 오브젝트가 이 변수를 어떻게 사용하는지 확인합니다. 각 정보를 클릭하면, 이 변수를 사용하는 장면과 오브젝트를 선택하고 블록을 강조 표시합니다. 일일이 찾지 않아도 클릭 한 번으로 찾을 수 있어요.</p>
+<ul>
+<li>변수 더하기 : 사용된 오브젝트에 변수를 더합니다.</li>
+<li>변수 정하기 : 사용된 오브젝트의 변수를 정합니다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="리스트"><a href="#리스트" class="headerlink" title="리스트"></a>리스트</h2><p>리스트는 숫자나 문자 데이터를 여러개 저장할 수 있는 공간입니다. 필요할 때마다 물건을 담거나 뺄 수 있는 여러 칸 짜리 서랍을 떠올려보세요.</p>
+<p>리스트 각 항목에는 한 가지 데이터만 저장할 수 있으며, 데이터들은 언제든지 수정, 변경이 가능합니다. 또한 리스트 항목에는 순서대로 번호가 붙어있어, 데이터를 불러오거나 수정할 때 항목 번호를 이용할 수 있어요.</p>
+<img src="images/window/lists-list.png" alt="lists-list" style="zoom:80%;">
+
+
+
+<p>‘리스트’ 카테고리를 선택해서 리스트를 추가하거나 모아봅니다.</p>
+<p>리스트의 종류는 네 가지고, 모든 오브젝트에서 사용하는 리스트와 특정 오브젝트에서만 사용하는 리스트로 분류합니다. 왼쪽의 아이콘으로 리스트의 종류를 확인할 수 있어요.</p>
+<img src="images/window/lists-add.png" alt="lists-add" style="zoom:80%;">
+
+
+
+<p>‘리스트 추가하기’ 버튼을 클릭하면 추가할 리스트의 종류를 선택할 수 있어요.</p>
+<ul>
+<li><p><strong>모든 오브젝트에 사용</strong></p>
+<ul>
+<li><p><img src="images/icon/ic_attr_list_on.png" alt="ic_attr_list_on" style="zoom:50%;"> <strong>일반 리스트로 사용 (작품에 저장)</strong> : 작품을 정지하면 기본값으로 초기화되는 리스트입니다.</p>
+</li>
+<li><p><img src="images/icon/ic_attr_list_cloud_on.png" alt="ic_attr_list_cloud_on" style="zoom:50%;"> <strong>공유 리스트로 사용 (서버에 저장)</strong> : 작품을 정지하면 서버에 저장되는 리스트입니다.</p>
+</li>
+<li><p><img src="images/icon/ic_attr_list_real_time_on.png" alt="ic_attr_list_real_time_on" style="zoom:50%;"> <strong>실시간 리스트로 사용 (서버에 저장)</strong> : 작품을 실행하는 도중에 실시간으로 서버에 저장되는 리스</p>
+<p>트입니다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><img src="images/icon/ic_attr_list_local_on.png" alt="ic_attr_list_local_on" style="zoom:50%;"> <strong>이 오브젝트에서 사용</strong> : 선택한 오브젝트에서만 사용하는 일반 리스트입니다. 해당 오브젝트의 복제본 역시 다른 오브젝트가 사용할 수 없는 리스트를 가집니다.</li>
+</ul>
+<img src="images/window/lists-attribute.png" alt="lists-attribute" style="zoom:80%;">
+
+
+
+<p>역삼각형 버튼을 클릭하면 나타나는 각 리스트의 설정입니다.</p>
+<ul>
+<li><p><strong>리스트 속성</strong></p>
+</li>
+<li><p><strong>리스트 내보내기</strong> : 이 버튼을 클릭하면 리스트 항목의 내용을 복사하거나, 엑셀로 내려받을 수 있는 팝업창이 나타납니다.</p>
+</li>
+</ul>
+  <img src="images/window/lists-attribute2.png" alt="lists-attribute2" style="zoom: 105%;">
+
+
+
+
+
+<ul>
+<li><strong>리스트 불러오기</strong> : 이 버튼을 클릭하면 리스트의 항목을 올릴 수 있는 팝업 창이 나타납니다. 한 줄이 하나의 항목이며, 기존의 리스트 항목이 있다면 새로 올리는 항목으로 변경합니다.</li>
+</ul>
+<p>  <img src="images/window/lists-attribute3.png" alt="lists-attribute3"></p>
+<ul>
+<li><strong>리스트 항목 수</strong> : ‘-‘와 ‘+’를 클릭하거나 직접 개수를 입력해서 리스트의 항목 수를 추가 또는 삭제합니다.</li>
+</ul>
+<p>  ​                                                     <img src="images/window/lists-attribute1.png" alt="lists-attribute1" style="zoom:110%;"></p>
+<ul>
+<li><strong>사용된 오브젝트</strong> : 어떤 오브젝트가 이 리스트를 어떻게 사용하는지 확인할 수 있습니다. 각 정보를 클릭하면, 이 리스트를 사용하는 장면과 오브젝트를 선택하고 블록을 강조 표시합니다. 일일이 찾지 않아도 클릭 한 번으로 찾을 수 있어요.</li>
+</ul>
+<h2 id="신호"><a href="#신호" class="headerlink" title="신호"></a>신호</h2><p>신호는 어떤 오브젝트가 원하는 때에 다른 오브젝트의 블록이 동작할 타이밍을 알려주는 기능을 말합니다. 오브젝트끼리 주고 받는 대화라고도 볼 수 있어요.<br>신호를 이용하면 내가 원하는 시점과 조건에 맞춰 오브젝트가 동작하는 순서를 정할 수 있습니다.</p>
+<img src="images/window/signal-list.png" alt="signal-list" style="zoom:80%;">
+
+
+
+<p>‘신호’ 카테고리를 선택해서 신호를 추가하거나 모아봅니다.</p>
+<img src="images/window/signal-add.png" alt="signal-add" style="zoom:80%;">
+
+
+
+<p>‘신호 추가하기’ 버튼을 클릭하면 이름을 입력하고 신호를 추가할 수 있습니다.</p>
+<img src="images/window/signal-attribute.png" alt="signal-attribute" style="zoom:80%;">
+
+
+
+<p>역삼각형 버튼을 클릭하면 어떤 오브젝트가 이 신호를 어떻게 사용하는지 확인할 수 있습니다.</p>
+<p>각 정보를 클릭하면, 이 신호를 사용하는 장면과 오브젝트를 선택하고 블록을 강조 표시합니다. 일일이 찾지 않아도 클릭 한 번에 찾을 수 있어요.</p>
+<h2 id="함수"><a href="#함수" class="headerlink" title="함수"></a>함수</h2><p>함수를 이용하면 여러 블록의 조립을 하나의 블록처럼 사용할 수 있습니다. 하나의 기능을 위해 사용되는 블록의 모음이거나 여러 번 사용해야 하는 블록들을 함수로 만들면 편리하답니다.</p>
+<p>마치 ‘집 밖으로 나가기’라는 하나의 목표를 위해 양치를 하고, 양말을 신고, 현관문을 열어야 하는 것처럼요!</p>
+<img src="images/window/function-list.png" alt="function-list" style="zoom:80%;">
+
+
+
+<p>‘함수’ 카테고리를 선택해서 함수를 추가하거나 모아봅니다.</p>
+<p>‘함수 추가하기’ 버튼을 클릭하면 함수 블록 조립소에서 함수를 만들 수 있어요.</p>
+<img src="images/window/function-attribute.png" alt="function-attribute" style="zoom:80%;">
+
+
+
+<p>역삼각형 버튼을 클릭하면 어떤 오브젝트가 이 함수를 사용하는지 확인할 수 있습니다.</p>
+
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/user/tab_attribute.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/user/tab_attribute.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://entryhw.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com/?ref_noscript" itemprop="url">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

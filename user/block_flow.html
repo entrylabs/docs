@@ -1,0 +1,610 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>흐름 블록 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/user/block_flow.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="흐름 블록 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="흐름 블록 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "userGuide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "흐름 블록",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2021-01-07",
+        "dateCreated": "2021-01-07",
+        "dateModified": "2023-05-25",
+        "url": "https://docs.playentry.org/user/block_flow.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "485",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/user/block_flow.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>작품</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/what-is-project.html" class="sidebar-link" itemprop="url">작품</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>화면의 구성 요소</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/header.html" class="sidebar-link" itemprop="url">상단 메뉴</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/screen.html" class="sidebar-link" itemprop="url">실행 화면</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/sub-space.html" class="sidebar-link" itemprop="url">보조 창</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_block.html" class="sidebar-link" itemprop="url">블록 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_shape.html" class="sidebar-link" itemprop="url">모양 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_sound.html" class="sidebar-link" itemprop="url">소리 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_attribute.html" class="sidebar-link" itemprop="url">속성 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/others.html" class="sidebar-link" itemprop="url">기타</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>블록</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/block_start.html" class="sidebar-link" itemprop="url">시작 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_flow.html" class="sidebar-link current" itemprop="url">흐름 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_motion.html" class="sidebar-link" itemprop="url">움직임 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_looks.html" class="sidebar-link" itemprop="url">생김새 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_brush.html" class="sidebar-link" itemprop="url">붓 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_text.html" class="sidebar-link" itemprop="url">글상자 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_sound.html" class="sidebar-link" itemprop="url">소리 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_decision.html" class="sidebar-link" itemprop="url">판단 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_calculate.html" class="sidebar-link" itemprop="url">계산 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_variable.html" class="sidebar-link" itemprop="url">자료 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_function.html" class="sidebar-link" itemprop="url">함수 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_data.html" class="sidebar-link" itemprop="url">데이터 분석 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai.html" class="sidebar-link" itemprop="url">인공지능 블록 > 인공지능이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_translate.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 번역</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_tts.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 읽어주기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_stt.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 오디오 감지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_video_sensing.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 비디오 감지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model.html" class="sidebar-link" itemprop="url">인공지능 블록 > 모델 학습이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_image.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 이미지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_text.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 텍스트</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_voice.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 음성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_classification.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_prediction.html" class="sidebar-link" itemprop="url">인공지능 블록 > 예측 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_clustering.html" class="sidebar-link" itemprop="url">인공지능 블록 > 군집 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_hardware.html" class="sidebar-link" itemprop="url">하드웨어 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_extension.html" class="sidebar-link" itemprop="url">확장 블록</a>
+                </li>
+            
+        
+    
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content userGuide with-sidebar ">
+    
+      
+    
+    
+      <h1>흐름 블록</h1>
+    
+    <h2 id="1-2-초-기다리기"><a href="#1-2-초-기다리기" class="headerlink" title="1. (2) 초 기다리기"></a>1. <code>(2)</code> 초 기다리기</h2><p><img src="images/block-flow-01.png" alt="block-flow"></p>
+<p>입력한 시간(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)만큼 기다린 후에 다음 블록이 동작합니다.</p>
+<p>시간이 0 이하이면 동작을 건너뛰는 대신에 아주 짧은 시간을 기다려요.</p>
+<h2 id="2-10-번-반복하기"><a href="#2-10-번-반복하기" class="headerlink" title="2. (10) 번 반복하기"></a>2. <code>(10)</code> 번 반복하기</h2><p><img src="images/block-flow-02.png" alt="block-flow"></p>
+<p>입력한 횟수(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)만큼 감싸인 블록이 반복 동작합니다.</p>
+<p>횟수가 0 이면 감싸인 블록은 동작하지 않아요.</p>
+<h2 id="3-계속-반복하기"><a href="#3-계속-반복하기" class="headerlink" title="3. 계속 반복하기"></a>3. 계속 반복하기</h2><p><img src="images/block-flow-03.png" alt="block-flow"></p>
+<p>감싸인 블록이 계속해서 반복 동작합니다.</p>
+<p>‘반복 중단하기’ 블록(<img src="images/block-flow-05.png" alt="block-flow" style="zoom:50%;">)으로 멈출 수 있어요.</p>
+<h2 id="4-lt-참-gt-이-될-때까지-반복하기"><a href="#4-lt-참-gt-이-될-때까지-반복하기" class="headerlink" title="4. &lt;참&gt; [이 될 때까지] 반복하기"></a>4. <code>&lt;참&gt;</code> <code>[이 될 때까지]</code> 반복하기</h2><p><img src="images/block-flow-04.png" alt="block-flow"></p>
+<p>판단 블록(<img src="images/icon/decision.png" style="zoom:50%;">)에 따라 감싸인 블록이 반복 동작할지 결정합니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-flow.png" style="zoom:50%;">)를 클릭하면 반복을 멈추는 시점을 바꿀 수 있어요.</p>
+<ul>
+<li><strong>선택할 수 있는 시점</strong><ul>
+<li><code>이 될 때까지</code> : 판단 블록(<img src="images/icon/decision.png" style="zoom:50%;">)이 참이 될 때까지(거짓인 동안) 반복합니다.</li>
+<li><code>인 동안</code> : 판단 블록(<img src="images/icon/decision.png" style="zoom:50%;">)이 참인 동안(거짓이 될 때까지) 반복합니다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-반복-중단하기"><a href="#5-반복-중단하기" class="headerlink" title="5. 반복 중단하기"></a>5. 반복 중단하기</h2><p><img src="images/block-flow-05.png" alt="block-flow"></p>
+<p>이 블록을 감싼 가장 가까운 반복 블록을 <strong>즉시</strong> 멈춥니다.</p>
+<p>이 블록이 조립되어 있는 블록 중 가장 가까이에 있는 반복 블록이 멈추게 됩니다.</p>
+<h2 id="6-만일-lt-참-gt-이라면"><a href="#6-만일-lt-참-gt-이라면" class="headerlink" title="6. 만일 &lt;참&gt; 이라면"></a>6. 만일 <code>&lt;참&gt;</code> 이라면</h2><p><img src="images/block-flow-06.png" alt="block-flow"></p>
+<p>만일 판단 블록(<img src="images/icon/decision.png" style="zoom:50%;">)이 참이라면, 감싸인 블록이 동작합니다. 거짓이라면, 감싸인 블록이 동작하지 않고 다음 블록이 동작합니다.</p>
+<h2 id="7-만일-lt-참-gt-이-라면-아니면"><a href="#7-만일-lt-참-gt-이-라면-아니면" class="headerlink" title="7. 만일 &lt;참&gt; (이)라면 아니면"></a>7. 만일 <code>&lt;참&gt;</code> (이)라면 아니면</h2><p><img src="images/block-flow-07.png" alt="block-flow"></p>
+<p>만일 판단 블록(<img src="images/icon/decision.png" style="zoom:50%;">)이 참이라면, 위의 감싸인 블록이 동작합니다. 거짓이라면, 아래의 감싸인 블록이 동작합니다.</p>
+<p>‘만일 <code>&lt;참&gt;</code> 이라면’ 블록을 두 개 조립하는 것보다 판단 블록(<img src="images/icon/decision.png" style="zoom:50%;">)이 덜 필요하겠죠!</p>
+<h2 id="8-lt-참-gt-이-가-될-때까지-기다리기"><a href="#8-lt-참-gt-이-가-될-때까지-기다리기" class="headerlink" title="8. &lt;참&gt; 이(가) 될 때까지 기다리기"></a>8. <code>&lt;참&gt;</code> 이(가) 될 때까지 기다리기</h2><p><img src="images/block-flow-08.png" alt="block-flow"></p>
+<p>판단 블록(<img src="images/icon/decision.png" style="zoom:50%;">)이 참이 될 때까지 기다렸다가, 참이 되면 다음 블록이 동작합니다.</p>
+<h2 id="9-모든-코드-멈추기"><a href="#9-모든-코드-멈추기" class="headerlink" title="9. [모든] 코드 멈추기"></a>9. <code>[모든]</code> 코드 멈추기</h2><p><img src="images/block-flow-09.png" alt="block-flow"></p>
+<p>선택한 블록이 <strong>즉시</strong> 멈춥니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-flow.png" style="zoom:50%;">)를 클릭하면 멈출 블록을 선택할 수 있어요.</p>
+<ul>
+<li><strong>선택할 수 있는 블록</strong><ul>
+<li><code>모든</code> : 작품의 모든 블록이 동작을 멈춥니다.</li>
+<li><code>오브젝트</code> : 이 오브젝트의 모든 블록이 동작을 멈춥니다.</li>
+<li><code>이 블록</code> : 이 블록과 조립한 블록이 동작을 멈춥니다.</li>
+<li><code>이 블록과 다른</code> : 이 오브젝트에서 이 블록과 조립한 블록을 제외한 모든 블록이 동작을 멈춥니다.</li>
+<li><code>다른 오브젝트</code> : 다른 오브젝트의 모든 블록이 동작을 멈춥니다.</li>
+</ul>
+</li>
+</ul>
+<p>하지만 모든 코드를 멈추어도 작품을 중지하는 것은 아닙니다. 시작 블록은 여전히 작동하거든요.</p>
+<h2 id="10-처음부터-다시-실행하기"><a href="#10-처음부터-다시-실행하기" class="headerlink" title="10. 처음부터 다시 실행하기"></a>10. 처음부터 다시 실행하기</h2><p><img src="images/block-flow-10.png" alt="block-flow"></p>
+<p>작품을 처음부터 다시 실행합니다.</p>
+<p>시작하기 버튼을 클릭했을 때와 똑같이 작품을 실행해요.</p>
+<h2 id="11-복제본이-처음-생성되었을-때"><a href="#11-복제본이-처음-생성되었을-때" class="headerlink" title="11. 복제본이 처음 생성되었을 때"></a>11. 복제본이 처음 생성되었을 때</h2><p><img src="images/block-flow-11.png" alt="block-flow"></p>
+<p>오브젝트의 복제본이 새로 생성되었을 때, 해당 복제본에서만 이 블록에 조립된 블록이 동작합니다.</p>
+<p>다른 복제본과 원본 오브젝트는 이 시작 블록이 동작하지 않아요.</p>
+<h2 id="12-자신-의-복제본-만들기"><a href="#12-자신-의-복제본-만들기" class="headerlink" title="12. [자신] 의 복제본 만들기"></a>12. <code>[자신]</code> 의 복제본 만들기</h2><p><img src="images/block-flow-12.png" alt="block-flow"></p>
+<p>오브젝트의 복제본을 생성합니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-flow.png" style="zoom:50%;">)를 클릭하면 자신(이 오브젝트) 또는 다른 오브젝트를 선택할 수 있어요.</p>
+<h2 id="13-이-복제본-삭제하기"><a href="#13-이-복제본-삭제하기" class="headerlink" title="13. 이 복제본 삭제하기"></a>13. 이 복제본 삭제하기</h2><p><img src="images/block-flow-13.png" alt="block-flow"></p>
+<p>이 블록이 동작하는 해당 복제본을 삭제합니다.</p>
+<h2 id="14-모든-복제본-삭제하기"><a href="#14-모든-복제본-삭제하기" class="headerlink" title="14. 모든 복제본 삭제하기"></a>14. 모든 복제본 삭제하기</h2><p><img src="images/block-flow-14.png" alt="block-flow"></p>
+<p>이 블록이 동작하는 오브젝트와 상관 없이, 작품에서 생성한 <strong>모든</strong> 복제본을 삭제합니다.</p>
+<p>복제본들이 가장 무서워하는 블록이에요.</p>
+
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/user/block_flow.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/user/block_flow.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://entryhw.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com/?ref_noscript" itemprop="url">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,686 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>실행 화면 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/user/screen.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="실행 화면 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="실행 화면 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "userGuide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "실행 화면",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2021-12-01",
+        "dateCreated": "2021-12-01",
+        "dateModified": "2023-05-25",
+        "url": "https://docs.playentry.org/user/screen.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "949",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/user/screen.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>작품</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/what-is-project.html" class="sidebar-link" itemprop="url">작품</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>화면의 구성 요소</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/header.html" class="sidebar-link" itemprop="url">상단 메뉴</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/screen.html" class="sidebar-link current" itemprop="url">실행 화면</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/sub-space.html" class="sidebar-link" itemprop="url">보조 창</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_block.html" class="sidebar-link" itemprop="url">블록 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_shape.html" class="sidebar-link" itemprop="url">모양 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_sound.html" class="sidebar-link" itemprop="url">소리 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_attribute.html" class="sidebar-link" itemprop="url">속성 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/others.html" class="sidebar-link" itemprop="url">기타</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>블록</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/block_start.html" class="sidebar-link" itemprop="url">시작 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_flow.html" class="sidebar-link" itemprop="url">흐름 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_motion.html" class="sidebar-link" itemprop="url">움직임 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_looks.html" class="sidebar-link" itemprop="url">생김새 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_brush.html" class="sidebar-link" itemprop="url">붓 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_text.html" class="sidebar-link" itemprop="url">글상자 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_sound.html" class="sidebar-link" itemprop="url">소리 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_decision.html" class="sidebar-link" itemprop="url">판단 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_calculate.html" class="sidebar-link" itemprop="url">계산 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_variable.html" class="sidebar-link" itemprop="url">자료 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_function.html" class="sidebar-link" itemprop="url">함수 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_data.html" class="sidebar-link" itemprop="url">데이터 분석 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai.html" class="sidebar-link" itemprop="url">인공지능 블록 > 인공지능이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_translate.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 번역</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_tts.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 읽어주기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_stt.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 오디오 감지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_video_sensing.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 비디오 감지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model.html" class="sidebar-link" itemprop="url">인공지능 블록 > 모델 학습이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_image.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 이미지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_text.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 텍스트</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_voice.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 음성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_classification.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_prediction.html" class="sidebar-link" itemprop="url">인공지능 블록 > 예측 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_clustering.html" class="sidebar-link" itemprop="url">인공지능 블록 > 군집 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_hardware.html" class="sidebar-link" itemprop="url">하드웨어 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_extension.html" class="sidebar-link" itemprop="url">확장 블록</a>
+                </li>
+            
+        
+    
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content userGuide with-sidebar ">
+    
+      
+    
+    
+      <h1>실행 화면</h1>
+    
+    <h2 id="작품-실행"><a href="#작품-실행" class="headerlink" title="작품 실행"></a>작품 실행</h2><img src="images/window/screen-start.png" alt="screen-start" style="zoom: 50%;">
+
+<p>작품 만들기 화면의 왼쪽 위에 있는 실행 화면입니다. ‘시작하기’ 버튼을 누르면 작품을 실행할 수 있습니다.</p>
+<ul>
+<li>단축키 <code>ctrl</code> + <code>r</code> 을 눌러서 실행할 수도 있습니다.</li>
+</ul>
+<img src="images/window/screen-playing.png" alt="screen-playing" style="zoom:50%;">
+
+<p>작품이 실행 중이라면 ‘일시정지’ 버튼과 ‘정지하기’ 버튼이 나타나요.</p>
+<ul>
+<li><p><strong>일시정지 버튼</strong> <img src="images/icon/ic-player-pause.png" alt="ic-player-pause"> : 작품을 잠시동안 정지합니다. ‘다시 시작’ 버튼 <img src="images/icon/ic-player-play.png" alt="ic-player-play">을 다시 누르면 작품이 정지된 부분부터 다시 시작해요.</p>
+</li>
+<li><p><strong>정지하기 버튼</strong> <img src="images/icon/ic-player-stop.png" alt="ic-player-stop"> : 작품을 완전히 정지하고 처음 상태로 되돌립니다. 단축키 <code>ctrl</code> + <code>r</code> 을 눌러서 정지할 수도 있습니다.</p>
+</li>
+</ul>
+<img src="images/window/screen-option.png" alt="screen-option" style="zoom:50%;">
+
+<p>실행 화면 위에 나타나는 좌표는 마우스 포인터의 좌표입니다. 실행 화면 안에 마우스 포인터를 대보세요.</p>
+<img src="images/window/screen-speed.png" alt="screen-speed" style="zoom:50%;">
+
+<p>속도 조절 버튼을 누르면 작품의 실행 속도를 1~5 범위에서 조절할 수 있어요. 블록의 실행 순서를 눈으로 천천히 확인하고자 할 때 유용합니다.</p>
+<img src="images/window/screen-coordinate.png" alt="screen-coordinate" style="zoom:50%;">
+
+<p>‘모눈종이’ 버튼을 클릭하면 실행 화면에 눈금 좌표계가 나타납니다.</p>
+<ul>
+<li>실행 화면의 가운데가 좌표계의 원점입니다.</li>
+<li>실행 화면 안의 x 좌표 범위는 -240~240 입니다. 오른쪽으로 갈수록 양수(+)로 커지고, 왼쪽으로 갈수록 음수(-)로 커져요.</li>
+<li>실행 화면 안의 y 좌표 범위는 -135~135 입니다. 위로 갈수록 양수(+)로 커지고, 아래로 갈수록 음수(-)로 커져요.</li>
+</ul>
+<p>오브젝트의 위치를 파악할 때 유용해요.</p>
+<p><img src="images/window/screen-full.png" alt="screen-full"></p>
+<p>오른쪽 위의 크게 보기 버튼을 클릭하면 실행 화면을 크게 볼 수 있어요.</p>
+<p>큰 실행 화면 아래에서 속도 조절 버튼을 제외한 모든 기능을 사용할 수 있습니다.</p>
+<p>큰 실행 화면은 오른쪽 아래의 작게 보기 버튼을 클릭하면 원래의 크기로 되돌릴 수 있습니다.</p>
+<h2 id="장면"><a href="#장면" class="headerlink" title="장면"></a>장면</h2><p><img src="images/window/header-scenes.png" alt="header-scenes"></p>
+<p>엔트리의 장면은 영화 구성의 기본 단위인 장면과 비슷하다고 할 수 있어요. 장면들이 모여 영화가 되는 것처럼, 엔트리에서는 장면들이 모여 작품이 됩니다.</p>
+<p>한 장면 안에서 영화가 시간에 따라 흘러가듯, 엔트리 작품의 블록 코드들도 장면 안에서 순차적으로 작동합니다. 영화에서 다음 장면으로 넘어가면 화면에 등장하는 인물과 배경에 변화가 있듯이, 엔트리에서도 새로운 장면에서는 새로운 오브젝트들과 코드가 필요하죠.</p>
+<ul>
+<li>오른쪽의 장면 추가하기 버튼을 클릭해서 새 장면을 추가합니다.</li>
+<li>장면 이름을 클릭하면 이름을 수정할 수 있습니다.</li>
+<li>장면을 클릭하면 장면을 선택할 수 있습니다. 해당 장면의 실행화면, 오브젝트 목록이 나타납니다.</li>
+<li>선택한 장면 오른쪽의 X 버튼을 클릭해서 삭제합니다.</li>
+</ul>
+<h2 id="오브젝트-추가"><a href="#오브젝트-추가" class="headerlink" title="오브젝트 추가"></a>오브젝트 추가</h2><img src="images/window/screen-add-object-button.png" alt="screen-add-object-button" style="zoom:50%;">
+
+
+
+<p>오브젝트 추가하기 버튼을 누르면 원하는 오브젝트를 오브젝트 목록에 추가할 수 있습니다.</p>
+<p><img src="images/window/object-add.png" alt="object-add"></p>
+<p>오브젝트 추가하기 버튼을 클릭하면 나타나는 팝업 창입니다.</p>
+<p>오브젝트를 선택하고, 아래의 ‘추가하기’ 버튼을 클릭해서 오브젝트 목록에 추가해요.</p>
+<p>오른쪽 위의 검색창을 통해 원하는 오브젝트의 이름을 검색할 수 있어요. 왼쪽의 카테고리를 선택하면 원하는 오브젝트를 더 쉽게 찾을 수 있습니다.</p>
+<h4 id="①-오브젝트-선택"><a href="#①-오브젝트-선택" class="headerlink" title="① 오브젝트 선택"></a>① 오브젝트 선택</h4><p><img src="images/window/add-object-select.png" alt="add-object-select"></p>
+<p>원하는 오브젝트를 클릭해서 선택합니다. 중복 선택이 가능해요. 선택한 오브젝트는 아래의 선택 목록 영역에서 볼 수 있어요.</p>
+<p>선택한 오브젝트를 다시 클릭하거나, 선택 목록의 오브젝트에 마우스 포인터를 가져갔을 때 나타나는 X 표시를 누르면 선택을 해제할 수 있습니다.</p>
+<p> 오브젝트 선택 영역 상단의 태그를 선택하면 원하는 모양을 더 쉽게 찾을 수 있습니다.</p>
+<p><img src="images/window/add-object-vector.png" alt="add-object-vector"></p>
+<p>오른쪽 상단의 ‘벡터 모아보기’ 버튼을 클릭하면 벡터 형식으로 만들어진 오브젝트만 모아볼 수 있습니다.</p>
+<p>각 모양의 왼측 위에 있는 펜촉 아이콘<img src="/Users/oyster/OneDrive/Documents/%E1%84%8C%E1%85%B5%E1%86%A8%E1%84%8C%E1%85%A1%E1%86%BC/CONNECT/operating/wiki/images/window/icon_vector.png" alt="icon_vector">으로 벡터 오브젝트를 구분할 수 있어요. 벡터에 대한 더 자세한 설명은 모양 탭 문서에서 확인할 수 있습니다.</p>
+<p>벡터 오브젝트는 앞으로도 엔트리에 계속해서 추가될 예정이니, 지켜봐주세요!</p>
+<h4 id="②-파일-올리기"><a href="#②-파일-올리기" class="headerlink" title="② 파일 올리기"></a>② 파일 올리기</h4><p><img src="images/window/add-object-upload.png" alt="add-object-upload"></p>
+<p>원하는 오브젝트의 모양을 직접 올릴 수도 있어요.</p>
+<p>모양 파일의 용량은 10MB 이하여야 하고, jpg, png, bmp, svg 또는 eo 형식(확장자)의 파일을 지원해요. jpg, png, bmp 형식은 비트맵 모드, svg 형식은 벡터 모드로 적용합니다.</p>
+<p>(eo 형식의 파일은 엔트리 오브젝트 파일입니다. 오브젝트 목록에서, 오브젝트를 우클릭하면 나타나는 메뉴에서 저장할 수 있어요.)</p>
+<p>올린 모양은 파일 올리기 목록에서 볼 수 있습니다. 파일을 올리면 기본적으로 선택한 상태가 되며 선택한 모양만 모양 목록에 추가됩니다.</p>
+<blockquote>
+<p>아래와 같은 그림은 이용약관 및 관련 법률에 의해 제재를 받을 수 있습니다.</p>
+<ul>
+<li>폭력적이고 잔인한 그림</li>
+<li>선정적인 신체노출 그림</li>
+<li>불쾌감을 주거나 혐오감을 일으키는 그림</li>
+<li>무단 사용이 금지된 저작권의 그림 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://playentry.org/#!/terms/project">[저작권에 대해 알아보기]</a></li>
+</ul>
+</blockquote>
+<h4 id="③-새로-그리기"><a href="#③-새로-그리기" class="headerlink" title="③ 새로 그리기"></a>③ 새로 그리기</h4><p><img src="images/window/add-object-new.png" alt="add-object-new"></p>
+<p>원하는 오브젝트를 찾을 수 없다고요? 그럼 직접 그려보는 것은 어떨까요!</p>
+<p>그림을 직접 그려서 오브젝트로 저장할 수 있습니다. 아래 ‘이동하기’ 버튼을 클릭해서 새로 그릴 오브젝트를 오브젝트 목록에 추가해요. 뭐든 그릴 수 있는 도화지를 추가하는 셈이죠!</p>
+<blockquote>
+<p>아래와 같은 모양은 이용약관 및 관련 법률에 의해 제재를 받을 수 있습니다.</p>
+<ul>
+<li>폭력적이고 잔인한 그림</li>
+<li>선정적인 신체노출 그림</li>
+<li>불쾌감을 주거나 혐오감을 일으키는 그림</li>
+<li>무단 사용이 금지된 저작권의 그림 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://playentry.org/#!/terms/project">[저작권에 대해 알아보기]</a></li>
+</ul>
+</blockquote>
+<h4 id="④-글상자"><a href="#④-글상자" class="headerlink" title="④ 글상자"></a>④ 글상자</h4><p><img src="images/window/add-object-textbox.png" alt="add-object-textbox"></p>
+<p>글상자 오브젝트를 추가하는 탭입니다.</p>
+<p>글상자는 일반 오브젝트와 달리 모양 대신에 문자를 실행 화면에 나타내요. 이 창에서 글상자를 꾸미거나, 바로 아래의 ‘적용하기’ 버튼을 클릭하면(글상자의 내용은 ‘글상자’가 됩니다) 오브젝트 목록에 추가할 수 있습니다.</p>
+<ul>
+<li><p><strong>첫 번째 목록 상자 (글꼴)</strong></p>
+</li>
+<li><p><code>바탕체</code>, <code>한라산체</code>, <code>나눔고딕체</code>, <code>나눔명조</code>, <code>나눔손글씨</code>, <code>나눔스퀘어라운드체</code>, <code>코딩고딕체</code>, <code>잘난체</code>, <code>디자인하우스체</code>, <code>둥근모꼴체</code>, <code>어비마이센체</code>, <code>산돌 코믹스탠실</code>, <code>산돌 초록우산 어린이</code>, <code>산돌 씨네마극장</code>, <code>산돌 맵씨</code>, <code>산돌 별이샤방샤방</code>, <code>산돌 목각</code>, <code>산돌 용비어천가</code></p>
+</li>
+<li><p><strong>글씨 효과 (중복 선택이 가능해요)</strong></p>
+<ul>
+<li><strong>볼드체</strong>(굵은 글씨), <u>밑줄</u>, <em>이탤릭체</em>(기울어진 글씨), <del>가로줄</del>(취소선)</li>
+</ul>
+</li>
+<li><p><strong>두 번째 목록 상자 (글씨색)</strong> : 글씨색을 정합니다.<br>팔레트 모드에서 색깔을 선택하거나 슬라이더 모드에서 색깔을 조절할 수 있어요.</p>
+</li>
+<li><p><strong>세 번째 목록 상자 (배경색, 채우기 색상)</strong> : 글상자의 영역을 채울 색깔(배경색)을 정합니다.<br>팔레트 모드에서 색깔을 선택하거나 슬라이더 모드에서 색깔을 조절할 수 있어요.</p>
+</li>
+<li><p><strong>쓰기 방식</strong></p>
+<ul>
+<li><p><strong>한 줄 쓰기</strong> : 내용을 한 줄로만 작성할 수 있습니다.<br>새로운 글자가 추가되면 글상자의 좌우 길이가 길어집니다.</p>
+</li>
+<li><p><strong>여러 줄 쓰기</strong> : 내용 작성시 엔터키로 줄바꿈을 할 수 있습니다.</p>
+<img src="images/window/add-object-textbox-line.png" alt="add-object-textbox-line" style="zoom:50%;">
+
+<p>글상자의 크기가 글자가 쓰이는 영역을 결정합니다.<br>새로운 글자 추가 시 문장의 길이가 글상자의 가로 영역을 넘어가면 자동으로 줄이 바뀝니다.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>글 정렬</strong></p>
+<img src="images/window/object-textbox-edit.png" alt="object-textbox-edit" style="zoom: 33%;">
+
+</li>
+</ul>
+<p>글상자 오브젝트를 선택하면 모양 탭 대신에 글상자 탭이 나타나요.</p>
+<p>이 탭에서는 글상자의 영역에서 글씨를 왼쪽/가운데/오른쪽으로 정렬하는 버튼을 사용할 수 있습니다.</p>
+<h2 id="오브젝트-조절"><a href="#오브젝트-조절" class="headerlink" title="오브젝트 조절"></a>오브젝트 조절</h2><p>(<img src="images/window/object-unlock.png" alt="object-unlock" style="zoom:80%;">잠금을 해제한 상태인) 오브젝트는 아래의 그림과 같이 실행 화면에서 오브젝트의 속성을 조절할 수 있어요.</p>
+<img src="images/window/screen-edit-object.png" alt="screen-edit-object" style="zoom:50%;">
+
+
+
+<ul>
+<li>모양을 드래그해서 오브젝트의 위치를 움직입니다.</li>
+<li><strong>셀렉트 박스</strong> <img src="images\icon\icon-control-select-box.png" alt="icon-control-select-box" style="zoom:60%;"> : 드래그해서 모양의 가로, 세로 크기를 조절합니다. 오브젝트의 <strong>크기</strong>도 함께 바뀌어요.</li>
+<li><strong>중심점, 중심축</strong> <img src="images\icon\icon-control-box-dot.png" alt="icon-control-box-dot" style="zoom:60%;"> : 드래그해서 중심 위치를 조절합니다. 중심점은 오브젝트 속성의 <strong>좌표</strong>예요. 오브젝트를 이동할 때에도 이 중심점을 기준으로 이동하며 오브젝트의 방향을 회전할 때의 중심축이기도 합니다.</li>
+<li><strong>오브젝트 방향 핸들</strong> <img src="images\icon\icon-control-box-rotate.png" alt="icon-control-box-rotate" style="zoom:60%;"> : 오브젝트의 중심을 기준으로 드래그를 하며 방향을 조절합니다. 오브젝트 방향 핸들을 바꾸면 오브젝트가 바라보는 <strong>방향</strong>도 함께 바뀌어요.</li>
+<li><strong>이동 방향 표시</strong> <img src="images\icon\icon-control-arrow.png" alt="icon-control-arrow" style="zoom:80%;"> : 드래그해서 이동 방향을 조절합니다. 오브젝트 속성의 <strong>이동 방향</strong>도 함께 바뀌어요. 방향과 이동방향은 다른 것임을 주의하세요! 방향을 조절할 때 이동 방향도 함께 바뀌는 것처럼 보이지만, ‘이동 방향’은 오브젝트가 움직이는 방향이기 때문에 바뀌지 않아요.</li>
+</ul>
+
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/user/screen.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/user/screen.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://entryhw.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com/?ref_noscript" itemprop="url">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

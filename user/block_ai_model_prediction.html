@@ -1,0 +1,640 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>인공지능 블록 > 예측 모델 - 숫자 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/user/block_ai_model_prediction.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="인공지능 블록 > 예측 모델 - 숫자 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="인공지능 블록 > 예측 모델 - 숫자 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "userGuide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "인공지능 블록 &gt; 예측 모델 - 숫자",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2021-01-18",
+        "dateCreated": "2021-01-18",
+        "dateModified": "2023-05-25",
+        "url": "https://docs.playentry.org/user/block_ai_model_prediction.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "955",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/user/block_ai_model_prediction.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>작품</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/what-is-project.html" class="sidebar-link" itemprop="url">작품</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>화면의 구성 요소</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/header.html" class="sidebar-link" itemprop="url">상단 메뉴</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/screen.html" class="sidebar-link" itemprop="url">실행 화면</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/sub-space.html" class="sidebar-link" itemprop="url">보조 창</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_block.html" class="sidebar-link" itemprop="url">블록 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_shape.html" class="sidebar-link" itemprop="url">모양 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_sound.html" class="sidebar-link" itemprop="url">소리 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_attribute.html" class="sidebar-link" itemprop="url">속성 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/others.html" class="sidebar-link" itemprop="url">기타</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>블록</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/block_start.html" class="sidebar-link" itemprop="url">시작 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_flow.html" class="sidebar-link" itemprop="url">흐름 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_motion.html" class="sidebar-link" itemprop="url">움직임 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_looks.html" class="sidebar-link" itemprop="url">생김새 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_brush.html" class="sidebar-link" itemprop="url">붓 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_text.html" class="sidebar-link" itemprop="url">글상자 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_sound.html" class="sidebar-link" itemprop="url">소리 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_decision.html" class="sidebar-link" itemprop="url">판단 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_calculate.html" class="sidebar-link" itemprop="url">계산 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_variable.html" class="sidebar-link" itemprop="url">자료 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_function.html" class="sidebar-link" itemprop="url">함수 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_data.html" class="sidebar-link" itemprop="url">데이터 분석 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai.html" class="sidebar-link" itemprop="url">인공지능 블록 > 인공지능이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_translate.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 번역</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_tts.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 읽어주기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_stt.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 오디오 감지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_video_sensing.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 비디오 감지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model.html" class="sidebar-link" itemprop="url">인공지능 블록 > 모델 학습이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_image.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 이미지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_text.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 텍스트</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_voice.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 음성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_classification.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_prediction.html" class="sidebar-link current" itemprop="url">인공지능 블록 > 예측 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_clustering.html" class="sidebar-link" itemprop="url">인공지능 블록 > 군집 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_hardware.html" class="sidebar-link" itemprop="url">하드웨어 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_extension.html" class="sidebar-link" itemprop="url">확장 블록</a>
+                </li>
+            
+        
+    
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content userGuide with-sidebar ">
+    
+      
+    
+    
+      <h1>인공지능 블록 > 예측 모델 - 숫자</h1>
+    
+    <p><img src="images/window/model/model_prediction_number.png" alt="model_prediction_number"></p>
+<p>모델이 학습할 숫자를 테이블로 업로드하거나 직접 작성해 데이터로 입력하고, 입력한 데이터의 <strong>몇몇 속성을 바탕으로 하나의 속성을 예측</strong>하는 모델을 학습합니다.</p>
+<ul>
+<li>예측: 숫자 모델을 학습하려먼 <strong>먼저 데이터로 삼을 테이블을 추가해야 합니다</strong>. 학습하기 전에 데이터 분석 카테고리에서 [테이블 불러오기]를 통해, 기본 테이블, 파일 업로드, 새로 만들기의 방법으로 테이블을 추가 해주세요.</li>
+</ul>
+<p>예측: 숫자 모델을 선택하면 아래와 같이 모델 학습하기 창이 나타납니다.</p>
+<p><img src="images/window/model/window_train_prdc_1.png" alt="window_train_prdc_1"></p>
+<p>먼저 모델의 이름부터 지어볼까요? 이름 상자를 클릭해서 모델의 이름을 정합니다.</p>
+<h4 id="①-데이터-입력하기-테이블-선택하기"><a href="#①-데이터-입력하기-테이블-선택하기" class="headerlink" title="① 데이터 입력하기 = 테이블 선택하기"></a>① 데이터 입력하기 = 테이블 선택하기</h4><p>예측: 숫자 모델 학습의 첫 단계는 데이터 입력 박스에서 모델의 데이터로 삼을 테이블을 선택하는 것이에요. 모델을 학습하기 전에, ‘데이터 분석 블록’ 카테고리에서 테이블을 추가하는 것을 잊지 마세요!</p>
+<p><img src="images/window/model/window_train_prdc_2.png" alt="window_train_prdc_2"></p>
+<p>목록 상자를 눌러 작품에 추가한 테이블 중에서 모델 학습에서 사용할 테이블을 선택하면, 바로 아래에 테이블의 속성이 표시됩니다. 여기서 표시되는 속성은 (1행을 제외한) 모든 행이 숫자로 이루어진 속성입니다. (숫자 데이터를 학습하는 모델이니 당연하겠죠?)</p>
+<p><img src="images/window/model/window_train_prdc_3.png" alt="window_train_prdc_3"></p>
+<ul>
+<li><p><strong>핵심 속성</strong>: 핵심 속성은 속성 중에서 ‘원인’에 해당하는 속성을 말합니다. 조금 어렵게 말하면 ‘독립 변수’ 또는 ‘설명 변수’를 의미합니다.<br>모델이 학습할 때 어떤 속성을 원인으로 삼을 것인지를 선택하는 부분이에요.<br>엔트리에서는 최대 3개까지 핵심 속성을 설정할 수 있습니다. </p>
+<ul>
+<li>예를 들어, 어떤 지역에 있는 집의 ‘건축 연도’, ‘역과의 거리’, ‘면적’을 핵심 속성으로 삼는다고 생각해 보세요.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>예측 속성</strong>: 예측 속성은 예측: 숫자 모델의 ‘결과’에 해당하는 예측 값이 되는 속성을 말합니다. 다르게 말하면 ‘종속 변수’에 해당해요.<br>예측 모델이 학습의 결과로, 입력한 데이터를 어떤 속성의 값으로 예측할지 선택하는 부분이에요.<br>예측 속성도 핵심 속성과 마찬가지로 모든 행이 숫자로 이루어진 속성만 선택할 수 있어요.</p>
+<ul>
+<li>예를 들어, 집의 ‘월세’를 예측 속성으로 삼는다고 생각해 보세요.<br>핵심 속성이 원인이고 예측 속성이 결과니까,<br>학습한 모델이  집의 ‘건축 연도’, ‘역과의 거리’, ‘면적’를 가지고 ‘월세’를 예측해낼 수 있겠죠?</li>
+</ul>
+</li>
+</ul>
+<h4 id="②-학습하기"><a href="#②-학습하기" class="headerlink" title="② 학습하기"></a>② 학습하기</h4><p><img src="images/window/model/window_train_prdc_4.png" alt="window_train_prdc_4"></p>
+<p>이렇게 핵심 속성, 예측 속성을 설정하고 나면, 학습 박스의 [모델 학습하기] 버튼을 클릭할 수 있게 됩니다. 이 버튼을 눌러 학습을 바로 시작할 수도 있지만, ‘모델을 학습할 수 있습니다.’ 글씨를 클릭해서 다양한 <strong>학습 조건</strong>을 설정할 수도 있어요.</p>
+<p><img src="images/window/model/window_train_prdc_5.png" alt="window_train_prdc_5"></p>
+<ul>
+<li><p><strong>세대(Epoch)</strong><br>입력한 데이터 전체를 몇 번 반복하여 학습할지 정하는 부분입니다. 입력한 모든 데이터 전체를 1번 학습하는 것을 1세대라고 부르고, 세대는 에포크라고도 불러요.</p>
+<p>다양한 문제(데이터)가 담긴 문제집 1권을 총 몇 번을 푸냐는 것과 같은 것이지요. 그러나 문제집을 1번만 봐서 문제를 잘 푸는 사람이 없듯이 1번만 학습하면 정확하지 않은 결과가 나올 수도 있어요. 반면 하나의 문제집만 너무 반복해서 학습하면 계속 같은 문제만 학습하다 보니 응용력이 부족해지겠죠?</p>
+<p>적당히 학습해야 좋은 결과를 얻을 수 있습니다.</p>
+</li>
+<li><p><strong>배치 크기(Batch Size)</strong><br>입력한 데이터 전체를 얼마큼 작은 부분으로 쪼개서 학습할지 정하는 부분입니다.</p>
+<p>다양한 문제(데이터)가 담긴 문제집 1권에서 숙제를 어디서부터 어디까지 할지 범위를 정하는 것과 비슷해요. 숙제의 범위가 넓으면 문제집 한 권을 빠르게 끝낼 수 있고, 숙제의 범위가 좁으면 숙제를 여러 번 해야 문제집을 다 끝낼 수 있는 것과 같습니다.</p>
+</li>
+<li><p><strong>학습률(Learning Rate)</strong><br>데이터를 얼마나 세세하게 학습할지를 정하는 부분입니다.</p>
+<p>모델이 계속 학습하면서 가장 나은 결과를 갖는 점을 찾아간다고 상상하면, 그 때의 보폭의 크기를 정하는 것과 같아요. 보폭이 작으면 가장 나은 결과를 찾을 수는 있겠지만 시간이 오래 걸릴 것이고, 보폭이 크면 가장 나은 결과를 자꾸 지나치면서 제대로 된 결과를 찾아내지 못 할 수 있어요.</p>
+</li>
+<li><p><strong>테스트 데이터 비율(Test Data Rate)</strong><br>입력한 데이터 중 어느정도 비율을 학습한 모델을 테스트하는 데에 사용할지 정하는 부분입니다.</p>
+<p>테스트 데이터 비율을 0.3로 정했다면 10개의 데이터를 입력했을 때 7개는 학습용으로,  3개는 테스트용으로 사용하겠다는 뜻이 돼요.</p>
+</li>
+</ul>
+<p>학습 조건을 기본값으로 두거나, 조건을 변경한 후 [모델 학습하기] 버튼을 클릭하면 모델 학습이 시작됩니다.</p>
+<p><img src="images/window/model/window_train_prdc_6.png" alt="window_train_prdc_6">)<img src="images/window/model/window_train_prdc_7.png" alt="window_train_prdc_7"></p>
+<p>이렇게 학습을 모두 완료했다면, [차트] 버튼을 클릭해 학습한 과정을 그래프로도 확인할 수 있어요. 이 때, 예측 모델에서 보여주는 그래프는 모델의 정확도가 아니라 <strong>평균 제곱 오차</strong>(MSE)입니다. 평균 제곱 오차는 정확도와는 반대로 작으면 작을 수록 모델이 정확하다는 뜻이에요.</p>
+<p>가로축은 세대(Epoch)를 나타냅니다. 세로축에서 <strong>loss</strong>는 학습 오차(MSE)를 의미하고, <strong>val_loss</strong>는 검증 오차를 나타냅니다. 오차가 0에 가까울수록 더 정확한 결과라는 것을 의미해요.</p>
+<h4 id="③-결과-확인하기"><a href="#③-결과-확인하기" class="headerlink" title="③ 결과 확인하기"></a>③ 결과 확인하기</h4><p>모델 학습이 모두 완료되었다면, 결과 박스에서 학습 결과를 확인할 수 있습니다.<br>예측 모델의 결과는 핵심 속성의 값을 대입하면 예측 값을 얻을 수 있는 함수 형태로 구해지는데요. 핵심 속성의 개수만큼 회귀식의 X(독립 변수)의 개수가 늘어납니다. </p>
+<p><img src="images/window/model/window_train_prdc_8.png" alt="window_train_prdc_8"></p>
+<p>핵심 속성을 1개, 예측 속성을 1개 설정했다면 모델이 만든 회귀식과 위와 같이 2차원 좌표 평면에서 점 차트와 회귀선(회귀식으로 그린 직선)을 확인할 수 있습니다.</p>
+<ul>
+<li>그어진 회귀선이 데이터를 가장 잘 표현하는 직선인지 확인해 보세요!</li>
+</ul>
+<p>핵심 속성을 2개 이상 설정했다면 모델이 만든 회귀식을 확인할 수 있습니다. 단, 2차원에서 표현할 수 없기 때문에 차트는 표시되지 않습니다.</p>
+<p><img src="images/window/model/window_train_prdc_8_1.png" alt="window_train_prdc_8_1"></p>
+<p>이제 예측 모델을 학습해 봤으니, 작품에서 한 번 활용해 볼까요?</p>
+<h2 id="1-모델-다시-학습하기"><a href="#1-모델-다시-학습하기" class="headerlink" title="1. 모델 다시 학습하기"></a>1. 모델 다시 학습하기</h2><p><img src="images/block-ai-model-prdc-01.png" alt="block-ai-model-prdc-01"></p>
+<p>모델을 다시 학습합니다. </p>
+<p>모델 설정을 변경하거나 입력 데이터가 되는 테이블의 내용을 수정했다면, 변경된 내용을 바탕으로 모델을 다시 학습합니다.</p>
+<h2 id="2-lt-모델이-학습되었는가-gt"><a href="#2-lt-모델이-학습되었는가-gt" class="headerlink" title="2. &lt;모델이 학습되었는가?&gt;"></a>2. &lt;모델이 학습되었는가?&gt;</h2><p><img src="images/block-ai-model-prdc-02.png" alt="block-ai-model-prdc-02"></p>
+<p>모델의 학습 상태를 가져오는 판단 블록입니다.</p>
+<p>모델이 학습되었다면 ‘참’을, 학습 중이거나 학습되지 않았다면 ‘거짓’으로 판단합니다.</p>
+<h2 id="3-모델-보이기"><a href="#3-모델-보이기" class="headerlink" title="3. 모델 [보이기]"></a>3. 모델 <code>[보이기]</code></h2><p><img src="images/block-ai-model-prdc-04.png" alt="block-ai-model-prdc-03"></p>
+<p>모델의 학습 상태를 표시하는 창을 실행 화면에 보이게 하거나 숨깁니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-ai.png" style="zoom:50%;">)를 클릭해서 보이기/숨기기를 선택할 수 있어요.</p>
+<h2 id="4-모델-차트-창-열기"><a href="#4-모델-차트-창-열기" class="headerlink" title="4. 모델 차트 창 [열기]"></a>4. 모델 차트 창 <code>[열기]</code></h2><p><img src="images/block-ai-model-prdc-04.png" alt="block-ai-model-prdc-04"></p>
+<p>모델을 학습할 때 입력한 데이터와 모델이 분류한 클래스를 2차원 좌표평면에 나타낸 차트 창을 열거나 닫습니다.</p>
+<p>핵심 속성이 2개 이상인 경우 모델의 차트를 2차원 좌표평면 위에 그릴 수 없기 때문에, 이 블록은 표시되지 않습니다. </p>
+<p>목록 상자(<img src="images/icon/dropdown-ai.png" style="zoom:50%;">)를 클릭해서 열기/닫기를 선택할 수 있어요.</p>
+<h2 id="5-학습-조건-학습률-을-10-으로-바꾸기"><a href="#5-학습-조건-학습률-을-10-으로-바꾸기" class="headerlink" title="5. 학습 조건 [학습률] 을 (10) 으로 바꾸기"></a>5. 학습 조건 <code>[학습률]</code> 을 <code>(10)</code> 으로 바꾸기</h2><p><img src="images/block-ai-model-prdc-05.png" alt="block-ai-model-prdc-05"></p>
+<p>선택한 학습 조건을 입력한 값으로 바꾸어 설정합니다.</p>
+<p>변경한 학습 조건은 ‘모델 다시 학습하기’ 블록으로 모델을 다시 학습할 때부터 적용됩니다.</p>
+<p>세대가 자연수가 아닌 경우, 학습률과 테스트 데이터 비율이 0 보다 작거나 1보다 큰 경우에는 (조건이 옳지 않기 때문에) 작품 실행 시 오류가 발생합니다.</p>
+<ul>
+<li><strong>학습 조건</strong><ul>
+<li><code>학습률</code>,<code>세대</code>, <code>테스트 데이터 비율</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="6-핵심-속성1-10-의-예측-값"><a href="#6-핵심-속성1-10-의-예측-값" class="headerlink" title="6. 핵심 속성1 (10) 의 예측 값"></a>6. 핵심 속성1 <code>(10)</code> 의 예측 값</h2><p><img src="images/block-ai-model-prdc-06.png" alt="block-ai-model-prdc-06"></p>
+<p>핵심 속성의 값을 입력해 모델이 분류한 클래스를 가져오는 값 블록입니다. </p>
+<p>값은 숫자로 표현됩니다.</p>
+<p>‘핵심 속성1’ 등은 모델 학습 시 선택한 속성 이름으로 표시되며, 설정한 핵심 속성의 개수에 따라 값 블록을 결합할 수 있는 개수도 함께 늘어납니다.</p>
+<h2 id="7-결정-계수"><a href="#7-결정-계수" class="headerlink" title="7. 결정 계수"></a>7. 결정 계수</h2><p><img src="images/block-ai-model-prdc-07.png" alt="block-ai-model-prdc-07"></p>
+<p>모델의 결정 계수를 가져오는 값 블록입니다. </p>
+<p>모델이 얼마나 잘 예측하는지, 모델의 설명력을 표현하는 값입니다. 단, 모델의 정확도와 완전히 같은 것은 아니니 사용에 주의해 주세요.</p>
+
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/user/block_ai_model_prediction.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/user/block_ai_model_prediction.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://entryhw.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com/?ref_noscript" itemprop="url">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

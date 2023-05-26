@@ -1,0 +1,562 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>블록 모양별 개발 방법 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/guide/entryjs/2016-05-26-add_new_blocks3.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="블록 모양별 개발 방법 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="블록 모양별 개발 방법 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "guide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "블록 모양별 개발 방법",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2023-05-25",
+        "dateCreated": "2023-05-25",
+        "dateModified": "2023-05-25",
+        "url": "https://docs.playentry.org/guide/entryjs/2016-05-26-add_new_blocks3.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "5659",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/guide/entryjs/2016-05-26-add_new_blocks3.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+                
+                
+                    
+                        <li><h3>Quick Start</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/quick_start/2018-07-30-tutorial.html" class="sidebar-link" itemprop="url">엔트리 하드웨어 개발 튜토리얼</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Basic</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/basic/setting_environment.html" class="sidebar-link" itemprop="url">개발 환경 세팅</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/pull_request.html" class="sidebar-link" itemprop="url">PR 요청하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/2016-07-07-faq.html" class="sidebar-link" itemprop="url">자주 하는 질문</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/2023-05-25-common_problem.html" class="sidebar-link" itemprop="url">자주 발생하는 에러</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry JS</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-09-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-22-add_new_blocks.html" class="sidebar-link" itemprop="url">블록 명세 작성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-26-add_new_blocks2.html" class="sidebar-link" itemprop="url">블록 사용 등록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-26-add_new_blocks3.html" class="sidebar-link current" itemprop="url">블록 모양별 개발 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-07-08-add_new_blocks4.html" class="sidebar-link" itemprop="url">하드웨어 블록 만들기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-09-translate.html" class="sidebar-link" itemprop="url">하드웨어 블록 번역작업</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-14-add_hardware.html" class="sidebar-link" itemprop="url">하드웨어 블록 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-23-test_project.html" class="sidebar-link" itemprop="url">프로젝트 테스트하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry HW</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2016-05-01-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2016-05-03-add_module.html" class="sidebar-link" itemprop="url">하드웨어 모듈 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/add_bluetooth_hardware.html" class="sidebar-link" itemprop="url">블루투스 하드웨어 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/cli_test_hardware.html" class="sidebar-link" itemprop="url">하드웨어 연결 테스트하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2017-05-16-enroll_entry-hw.html" class="sidebar-link" itemprop="url">하드웨어 등록 서비스 신청하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry Offline</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-20-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-21-project_structure.html" class="sidebar-link" itemprop="url">프로젝트 구조</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-27-develop.html" class="sidebar-link" itemprop="url">개발하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-01-10-add_objects.html" class="sidebar-link" itemprop="url">오브젝트 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-28-translate.html" class="sidebar-link" itemprop="url">다국어 작업하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-10-30-custom_project.html" class="sidebar-link" itemprop="url">커스텀 프로젝트 빌드</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-01-09-build.html" class="sidebar-link" itemprop="url">빌드하기</a>
+                </li>
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Etc.</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/etc/2016-05-03-git_fork.html" class="sidebar-link" itemprop="url">Git 사용 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/etc/2020-06-24-doc_contribution.html" class="sidebar-link" itemprop="url">문서 기여하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/etc/2019-12-11-updates.html" class="sidebar-link" itemprop="url">문서 업데이트 내역</a>
+                </li>
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar 2016-05-26-add_new_blocks3-guide">
+    
+      
+    
+    
+      <h1>블록 모양별 개발 방법</h1>
+    
+    <h2 id="값-블록"><a href="#값-블록" class="headerlink" title="값 블록"></a>값 블록</h2><p>값 블록은 동그란 형태의 블록으로, 기본적으로 다른 블록에 끼워 넣어서 사용하는 블록입니다. 들어가는 값은 숫자와 문자의 형태의 데이터 입니다.</p>
+<h3 id="기본-블록"><a href="#기본-블록" class="headerlink" title="기본 블록"></a>기본 블록</h3><p><img src="/images/entryjs/block_create/default_value.png" alt="기본 블록"></p>
+<p>기존에 정의된 값만을 반환하는 블록입니다. 유사 블록으로는 초시계, 소리값 이 있습니다.</p>
+<p><code>skeleton</code>은 미리 정의된 블록 모양을 정하는 프로퍼티입니다. 이 예제에서는 <code>basic_string_field</code> 를 사용하였습니다.<br><code>fontColor</code>를 통해 블록 내 글자색을 변경할 수 있습니다.<br><code>template</code>프로퍼티로 블록이 보여지는 명칭을 변경할 수 있습니다.</p>
+<blockquote>
+<p>template 프로퍼티는 작성되지 않은 경우, Lang.template 위치에서 블록 명칭과 동일한 값이 있는지 확인합니다. 여기에도 없는 경우 프로젝트 자체가 로드되지 않으므로 주의해주세요.</p>
+<p>또한 하드웨어 블록 개발시에는 다국어 템플릿 작성방법이 따로 명시되어있으므로, 해당 부분을 참고해주세요.</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Entry.block = &#123;</span><br><span class="line">    <span class="attr">default_value</span>: &#123;</span><br><span class="line">        <span class="comment">//블록 색상</span></span><br><span class="line">        <span class="attr">color</span>: <span class="string">&quot;#00CFCA&quot;</span>,</span><br><span class="line">        <span class="comment">//경계선 색상</span></span><br><span class="line">        <span class="attr">outerLine</span>: <span class="string">&quot;#04B5B0&quot;</span>,</span><br><span class="line">        <span class="comment">// 폰트색상 basic_string_field는 기본 색상이 검정색(#000) 입니다.</span></span><br><span class="line">        <span class="attr">fontColor</span>: <span class="string">&quot;#000&quot;</span>,</span><br><span class="line">        <span class="comment">// 블록 모양 정의</span></span><br><span class="line">        <span class="attr">skeleton</span>: <span class="string">&quot;basic_string_field&quot;</span>,</span><br><span class="line">        <span class="comment">// 블록 텍스트</span></span><br><span class="line">        <span class="attr">template</span>: <span class="string">&quot;test&quot;</span>,</span><br><span class="line">        <span class="comment">// 보여질 블록 정의</span></span><br><span class="line">        <span class="attr">def</span>: &#123;</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&quot;default_value&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">class</span>: <span class="string">&quot;test&quot;</span>,</span><br><span class="line">        <span class="comment">// 블록 기능정의</span></span><br><span class="line">        <span class="attr">func</span>: <span class="function"><span class="keyword">function</span> (<span class="params">sprite, script</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;value&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="기본-사용자-입력-블록"><a href="#기본-사용자-입력-블록" class="headerlink" title="기본 사용자 입력 블록"></a>기본 사용자 입력 블록</h3><p><img src="/images/entryjs/block_create/default_input_value.png" alt="기본 블록"></p>
+<p>사용자에게 직접 값을 입력받을 수 있는 블록입니다. 다른 블록의 파라미터로 주로 사용됩니다.</p>
+<p>해당 블록에서는 template 값이 중요합니다.<br><code>template</code>의 에서 <code>%1</code>, <code>%2</code> 와 같은 값이 사용자 입력란으로 치환됩니다.<br>템플릿은 0번째 index, 1번째 index … 순으로 치환됩니다.<br>치환된 index 번호는 paramsKeyMap 에서 활용되니 코드를 확인해주세요.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Entry.block = &#123;</span><br><span class="line">    <span class="attr">default_input_value</span>: &#123;</span><br><span class="line">        <span class="attr">color</span>: <span class="string">&quot;#FFD974&quot;</span>,</span><br><span class="line">        <span class="attr">skeleton</span>: <span class="string">&quot;basic_string_field&quot;</span>,</span><br><span class="line">        <span class="comment">// 블록 텍스트 - %1은 0번째 파라미터를 뜻 합니다.</span></span><br><span class="line">        <span class="attr">template</span>: <span class="string">&quot;%1&quot;</span>,</span><br><span class="line">        <span class="comment">// 블록에 사용할 파라미터</span></span><br><span class="line">        <span class="attr">params</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">type</span>: <span class="string">&quot;TextInput&quot;</span>,</span><br><span class="line">                <span class="attr">value</span>: <span class="number">0</span></span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">def</span>: &#123;</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&quot;default_input_value&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// 파라미터를 사용 할때 쓰는 Key값 정의</span></span><br><span class="line">        <span class="attr">paramsKeyMap</span>: &#123;</span><br><span class="line">            <span class="comment">// VALUE라는 key에 0번째 파라미터를 정의 하였습니다.</span></span><br><span class="line">            <span class="attr">VALUE</span>: <span class="number">0</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">class</span>: <span class="string">&quot;test&quot;</span>,</span><br><span class="line">        <span class="attr">func</span>: <span class="function"><span class="keyword">function</span> (<span class="params">sprite, script</span>) </span>&#123;</span><br><span class="line">            <span class="comment">// 해당 값을 getField로 가져오고</span></span><br><span class="line">            <span class="comment">// 가져 올때 paramsKeyMap에서</span></span><br><span class="line">            <span class="comment">// 정의한 VALUE라는 키값으로 데이터를 가져옵니다.</span></span><br><span class="line">            <span class="keyword">return</span> script.getField(<span class="string">&quot;VALUE&quot;</span>, script);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="중첩-사용자-입력-블록"><a href="#중첩-사용자-입력-블록" class="headerlink" title="중첩 사용자 입력 블록"></a>중첩 사용자 입력 블록</h3><p><img src="/images/entryjs/block_create/default_multi_input_value.png" alt="기본 블록"></p>
+<p>자료 계산시 또는 하드웨어 아날로그 값을 처리할때 많이 사용하는 블록 형태 입니다.</p>
+<p>해당 블록에서 핵심은 단일 입력 블록을 만들 때와는 다르게 <code>type: &quot;Block&quot;</code>를 사용해서 값을 가져오는 것과 <code>def &gt; params</code>를 통해 초기값을 설정한다는 점을 꼼꼼히 봐야 합니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Entry.block = &#123;</span><br><span class="line">    <span class="attr">default_multi_input_value</span>: &#123;</span><br><span class="line">        <span class="attr">color</span>: <span class="string">&quot;#FFD974&quot;</span>,</span><br><span class="line">        <span class="attr">skeleton</span>: <span class="string">&quot;basic_string_field&quot;</span>,</span><br><span class="line">        <span class="comment">// 블록 텍스트</span></span><br><span class="line">        <span class="comment">// 파라미터가 2개 사용되기 때문에 %1 %2 두개를 사용하였습니다.</span></span><br><span class="line">        <span class="attr">template</span>: <span class="string">&quot;%1 + %2&quot;</span>,</span><br><span class="line">        <span class="attr">params</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 중첩되는 Value블록을 만들경우에는</span></span><br><span class="line">                <span class="comment">// TextInput이 아닌 Block타입으로 생성합니다.</span></span><br><span class="line">                <span class="comment">// Block type에는 string, boolean, param</span></span><br><span class="line">                <span class="comment">// 3가지 종류의 accept가 존재 합니다.</span></span><br><span class="line">                <span class="attr">type</span>: <span class="string">&quot;Block&quot;</span>,</span><br><span class="line">                <span class="attr">accept</span>: <span class="string">&quot;string&quot;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">type</span>: <span class="string">&quot;Block&quot;</span>,</span><br><span class="line">                <span class="attr">accept</span>: <span class="string">&quot;string&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">events</span>: &#123;&#125;,</span><br><span class="line">        <span class="attr">def</span>: &#123;</span><br><span class="line">            <span class="comment">// def의 params의 경우는 초기값을 지정할수 있습니다.</span></span><br><span class="line">            <span class="comment">// TextInput의 경우에도 def &gt; params을 통해 값을 지정할수 있습니다.</span></span><br><span class="line">            <span class="attr">params</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">type</span>: <span class="string">&quot;number&quot;</span>,</span><br><span class="line">                    <span class="attr">params</span>: [ <span class="string">&quot;0&quot;</span> ]</span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">type</span>: <span class="string">&quot;number&quot;</span>,</span><br><span class="line">                    <span class="attr">params</span>: [ <span class="string">&quot;10&quot;</span> ]</span><br><span class="line">                &#125;</span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&quot;default_multi_input_value&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">paramsKeyMap</span>: &#123;</span><br><span class="line">            <span class="attr">LEFTHAND</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="attr">RIGHTHAND</span>: <span class="number">1</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">class</span>: <span class="string">&quot;test&quot;</span>,</span><br><span class="line">        <span class="attr">func</span>: <span class="function"><span class="keyword">function</span> (<span class="params">sprite, script</span>) </span>&#123;</span><br><span class="line">            <span class="comment">// type이 Block의 경우에는 Field가 아닌 Value로 취급해서 가져 옵니다.</span></span><br><span class="line">            <span class="comment">// 일반적으로는 getValue로 값을 가져오고</span></span><br><span class="line">            <span class="comment">// 명시적으로 숫자형으로 가져오고 싶을때에는 getNumberValue를 사용합니다.</span></span><br><span class="line">            <span class="keyword">const</span> leftValue = script.getNumberValue(<span class="string">&quot;LEFTHAND&quot;</span>, script);</span><br><span class="line">            <span class="keyword">const</span> rightValue = script.getNumberValue(<span class="string">&quot;RIGHTHAND&quot;</span>, script);</span><br><span class="line">            <span class="keyword">return</span> leftValue + rightValue;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="중첩-사용자-입력-블록-드롭다운-적용"><a href="#중첩-사용자-입력-블록-드롭다운-적용" class="headerlink" title="중첩 사용자 입력 블록 - 드롭다운 적용"></a>중첩 사용자 입력 블록 - 드롭다운 적용</h3><p><img src="/images/entryjs/block_create/default_dropdown_input_value.png" alt="기본 블록"></p>
+<p>사용자 키보드 타이핑 입력이 아닌 정해진 값을 선택해서 입력받는 방식으로 드롭다운 블록을 이용할 수 있습니다.</p>
+<p>기본적으로 드롭다운은 <code>Key</code>, <code>Value</code>방식으로 동작하고 <code>Key</code>는 사용자 에게 보여주는 값이며, <code>Value</code>는 내부적으로 사용되는 값 입니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Entry.block = &#123;</span><br><span class="line">    <span class="attr">default_dropdown_input_value</span>: &#123;</span><br><span class="line">        <span class="attr">color</span>: <span class="string">&quot;#FFD974&quot;</span>,</span><br><span class="line">        <span class="attr">skeleton</span>: <span class="string">&quot;basic_string_field&quot;</span>,</span><br><span class="line">        <span class="attr">template</span>: <span class="string">&quot;%1 x %2&quot;</span>,</span><br><span class="line">        <span class="attr">params</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">type</span>: <span class="string">&quot;Block&quot;</span>,</span><br><span class="line">                <span class="attr">accept</span>: <span class="string">&quot;string&quot;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">type</span>: <span class="string">&quot;Dropdown&quot;</span>,</span><br><span class="line">                <span class="comment">// Dropdown 생성 기준은</span></span><br><span class="line">                <span class="comment">// [[&quot;key1&quot;, &quot;value1&quot;], [&quot;key2&quot;, &quot;value2&quot;]]</span></span><br><span class="line">                <span class="comment">// 처럼 구성이 됩니다.</span></span><br><span class="line">                <span class="attr">options</span>: [</span><br><span class="line">                    [<span class="string">&quot;1&quot;</span>, <span class="string">&quot;1&quot;</span>],</span><br><span class="line">                    [<span class="string">&quot;2&quot;</span>, <span class="string">&quot;2&quot;</span>],</span><br><span class="line">                    [<span class="string">&quot;3&quot;</span>, <span class="string">&quot;3&quot;</span>],</span><br><span class="line">                    [<span class="string">&quot;4&quot;</span>, <span class="string">&quot;4&quot;</span>],</span><br><span class="line">                    [<span class="string">&quot;5&quot;</span>, <span class="string">&quot;5&quot;</span>],</span><br><span class="line">                    [<span class="string">&quot;6&quot;</span>, <span class="string">&quot;6&quot;</span>],</span><br><span class="line">                    [<span class="string">&quot;7&quot;</span>, <span class="string">&quot;7&quot;</span>],</span><br><span class="line">                    [<span class="string">&quot;8&quot;</span>, <span class="string">&quot;8&quot;</span>],</span><br><span class="line">                    [<span class="string">&quot;9&quot;</span>, <span class="string">&quot;9&quot;</span>]</span><br><span class="line">                ],</span><br><span class="line">                <span class="attr">fontSize</span>: <span class="number">11</span>,</span><br><span class="line">                <span class="comment">// 기본 컬러는 EntryStatic.ARROW_COLOR_VARIABLE 입니다.</span></span><br><span class="line">                <span class="attr">arrowColor</span>: <span class="string">&quot;#FFD974&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">def</span>: &#123;</span><br><span class="line">            <span class="attr">params</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">type</span>: <span class="string">&quot;number&quot;</span>,</span><br><span class="line">                    <span class="attr">params</span>: [ <span class="string">&quot;2&quot;</span> ]</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="comment">// Dropdown 값의 경우 Value를 설정하면 초기값이 처리 됩니다.</span></span><br><span class="line">                <span class="string">&quot;1&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&quot;test1&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">paramsKeyMap</span>: &#123;</span><br><span class="line">            <span class="attr">LEFTHAND</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="attr">RIGHTHAND</span>: <span class="number">1</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">class</span>: <span class="string">&quot;test&quot;</span>,</span><br><span class="line">        <span class="attr">func</span>: <span class="function"><span class="keyword">function</span> (<span class="params">sprite, script</span>) </span>&#123;</span><br><span class="line">            <span class="comment">// Dropdown의 경우 getField로 값을 가져오고</span></span><br><span class="line">            <span class="comment">// 명식적으로 숫자형으로 가져올땐 getNumberField를 사용해서 가져 옵니다.</span></span><br><span class="line">            <span class="comment">// 가져온 데이터는 Dropdown Option설정시에 지정하였던 Value값 입니다.</span></span><br><span class="line">            <span class="keyword">const</span> leftValue = script.getNumberValue(<span class="string">&quot;LEFTHAND&quot;</span>, script);</span><br><span class="line">            <span class="keyword">const</span> rightValue = script.getNumberField(<span class="string">&quot;RIGHTHAND&quot;</span>, script);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> leftValue * rightValue;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="판단-블록"><a href="#판단-블록" class="headerlink" title="판단 블록"></a>판단 블록</h2><p>판단 블록은 육각형 형태의 블록으로 다른블록에 끼워 넣어서 사용하는 블록입니다. 들어가는 값은 <code>TRUE</code>, <code>FLASE</code>의 <code>Boolean</code>값이 들어가게 됩니다.</p>
+<h3 id="기본-판단-블록"><a href="#기본-판단-블록" class="headerlink" title="기본 판단 블록"></a>기본 판단 블록</h3><p><img src="/images/entryjs/block_create/default_boolean.png" alt="기본 판단 블록"></p>
+<p>IF문 등을 사용할때 사용하는 파라미터 블럭 입니다. 기본적으로 디지털 값 등 <code>true</code>, <code>false</code>두가지 형태로 나누어지는 데이터에 대해서 구성되어지는 기본 블록입니다</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Entry.block = &#123;</span><br><span class="line">    <span class="attr">default_boolean</span>: &#123;</span><br><span class="line">        <span class="comment">// 판단 블록 색생</span></span><br><span class="line">        <span class="comment">// 기본 색상은 #AEB8FF</span></span><br><span class="line">        <span class="attr">color</span>: <span class="string">&quot;#AEB8FF&quot;</span>,</span><br><span class="line">        <span class="comment">// 판단 블록은 skeleton이 basic_boolean_field 입니다.</span></span><br><span class="line">        <span class="attr">skeleton</span>: <span class="string">&quot;basic_boolean_field&quot;</span>,</span><br><span class="line">        <span class="comment">// template에 기본적으로 텍스트를 작성하면 해당 바로 텍스트가 표현되나</span></span><br><span class="line">        <span class="comment">// 아래와 같이 type: &quot;Text&quot; 로도 마찬가지로 설정할수 있습니다.</span></span><br><span class="line">        <span class="attr">template</span>: <span class="string">&quot;%1&quot;</span>,</span><br><span class="line">        <span class="attr">params</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">type</span>: <span class="string">&quot;Text&quot;</span>,</span><br><span class="line">                <span class="comment">// 보여질 텍스트</span></span><br><span class="line">                <span class="attr">text</span>: <span class="string">&quot;판단 블록&quot;</span>,</span><br><span class="line">                <span class="comment">// 텍스트의 색상</span></span><br><span class="line">                <span class="attr">color</span>: <span class="string">&quot;#3D3D3D&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">def</span>: &#123;</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&quot;default_boolean&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">class</span>: <span class="string">&quot;test&quot;</span>,</span><br><span class="line">        <span class="attr">func</span>: <span class="function"><span class="keyword">function</span> (<span class="params">sprite, script</span>) </span>&#123;</span><br><span class="line">            <span class="comment">// 판단 블록은 리턴값이 true, false이어야 합니다.</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="중첩-사용자-입력-판단-블록"><a href="#중첩-사용자-입력-판단-블록" class="headerlink" title="중첩 사용자 입력 판단 블록"></a>중첩 사용자 입력 판단 블록</h3><p><img src="/images/entryjs/block_create/default_input_boolean.png" alt="중첩 사용자 입력 판단 블록"></p>
+<p>사용자에게 입력을 받아 값을 비교해 boolean값으로 반환 받는 블록입니다. 하드웨어 센서 값들을 비교해서 처리하는데 이용할 수 있습니다. 다만 단순 값비교는 이미 존재하는 판단블록으로도 처리가 가능합니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Entry.block = &#123;</span><br><span class="line">    <span class="attr">default_input_boolean</span>: &#123;</span><br><span class="line">        <span class="attr">color</span>: <span class="string">&quot;#AEB8FF&quot;</span>,</span><br><span class="line">        <span class="attr">skeleton</span>: <span class="string">&quot;basic_boolean_field&quot;</span>,</span><br><span class="line">        <span class="attr">template</span>: <span class="string">&quot;%1 == %2&quot;</span>,</span><br><span class="line">        <span class="attr">params</span>: [&#123;</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&quot;Block&quot;</span>,</span><br><span class="line">            <span class="attr">accept</span>: <span class="string">&quot;string&quot;</span></span><br><span class="line">        &#125;, &#123;</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&quot;Block&quot;</span>,</span><br><span class="line">            <span class="attr">accept</span>: <span class="string">&quot;string&quot;</span></span><br><span class="line">        &#125;],</span><br><span class="line">        <span class="attr">def</span>: &#123;</span><br><span class="line">            <span class="attr">params</span>: [&#123;</span><br><span class="line">                <span class="attr">type</span>: <span class="string">&quot;number&quot;</span>,</span><br><span class="line">                <span class="attr">params</span>: [ <span class="string">&quot;10&quot;</span> ]</span><br><span class="line">            &#125;, &#123;</span><br><span class="line">                <span class="attr">type</span>: <span class="string">&quot;number&quot;</span>,</span><br><span class="line">                <span class="attr">params</span>: [ <span class="string">&quot;33&quot;</span> ]</span><br><span class="line">            &#125;],</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&quot;default_input_boolean&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">paramsKeyMap</span>: &#123;</span><br><span class="line">            <span class="attr">LEFTHAND</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="attr">RIGHTHAND</span>: <span class="number">1</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">class</span>: <span class="string">&quot;test&quot;</span>,</span><br><span class="line">        <span class="attr">func</span>: <span class="function"><span class="keyword">function</span> (<span class="params">sprite, script</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">const</span> leftValue = script.getNumberValue(<span class="string">&quot;LEFTHAND&quot;</span>, script);</span><br><span class="line">            <span class="keyword">const</span> rightValue = script.getNumberValue(<span class="string">&quot;RIGHTHAND&quot;</span>, script);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> (leftValue === rightValue);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="중첩-사용자-드롭다운-판단-블록"><a href="#중첩-사용자-드롭다운-판단-블록" class="headerlink" title="중첩 사용자 드롭다운 판단 블록"></a>중첩 사용자 드롭다운 판단 블록</h3><p><img src="/images/entryjs/block_create/default_dropdown_boolean.png" alt="중첩 사용자 드롭다운 판단 블록"></p>
+<p>정해진 목록내에서 입력 값을 받으려면 드롭다운을 사용할 수 있습니다. 주로 하드웨어의 디지털 입력을 처리 할때 많이 사용합니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Entry.block = &#123;</span><br><span class="line">    <span class="attr">default_dropdown_boolean</span>: &#123;</span><br><span class="line">        <span class="attr">color</span>: <span class="string">&quot;#AEB8FF&quot;</span>,</span><br><span class="line">        <span class="attr">skeleton</span>: <span class="string">&quot;basic_boolean_field&quot;</span>,</span><br><span class="line">        <span class="attr">template</span>: <span class="string">&quot;%1이 참이면&quot;</span>,</span><br><span class="line">        <span class="attr">params</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">type</span>: <span class="string">&quot;Dropdown&quot;</span>,</span><br><span class="line">                <span class="attr">options</span>: [</span><br><span class="line">                    [ <span class="string">&quot;첫번째&quot;</span>, <span class="string">&quot;0&quot;</span> ],</span><br><span class="line">                    [ <span class="string">&quot;두번째&quot;</span>, <span class="string">&quot;1&quot;</span> ],</span><br><span class="line">                    [ <span class="string">&quot;세번째&quot;</span>, <span class="string">&quot;2&quot;</span> ]</span><br><span class="line">                ],</span><br><span class="line">                <span class="attr">fontSize</span>: <span class="number">11</span></span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">def</span>: &#123;</span><br><span class="line">            <span class="attr">params</span>: [</span><br><span class="line">                <span class="string">&quot;0&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&quot;default_dropdown_boolean&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">paramsKeyMap</span>: &#123;</span><br><span class="line">            <span class="attr">VALUE</span>: <span class="number">0</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">class</span>: <span class="string">&quot;test&quot;</span>,</span><br><span class="line">        <span class="attr">func</span>: <span class="function"><span class="keyword">function</span> (<span class="params">sprite, script</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">const</span> value = script.getNumberField(<span class="string">&quot;VALUE&quot;</span>, script);</span><br><span class="line">            <span class="keyword">let</span> result;</span><br><span class="line">            <span class="keyword">switch</span>(value) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">                    result = <span class="literal">true</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                    result = <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                    result = <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="순차-블록"><a href="#순차-블록" class="headerlink" title="순차 블록"></a>순차 블록</h2><p>순차로 실행되는 블록으로 정해진 기능을 수행하는 블록입니다. 엔트리에서 가장 많이 사용됩니다.</p>
+<h3 id="기본-순차-블록"><a href="#기본-순차-블록" class="headerlink" title="기본 순차 블록"></a>기본 순차 블록</h3><p><img src="/images/entryjs/block_create/default_block.png" alt="기본 순차 블록"></p>
+<p>순차 블록중에서도 가장 기본적인 블록입니다. 아무런 <code>parameter</code>없이 정해진 기능만을 수행합니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Entry.block = &#123;</span><br><span class="line">    <span class="attr">default_block</span>: &#123;</span><br><span class="line">        <span class="comment">// 하드웨어 기본 색상</span></span><br><span class="line">        <span class="attr">color</span>: <span class="string">&quot;#00979D&quot;</span>,</span><br><span class="line">        <span class="attr">skeleton</span>: <span class="string">&quot;basic&quot;</span>,</span><br><span class="line">        <span class="comment">// 순차블록은 마지막에 이미지가 들어가도록 되어 있습니다.</span></span><br><span class="line">        <span class="comment">// 이미지도 parameter로 관리 됨으로 %1값이 마지막에 들어갑니다.</span></span><br><span class="line">        <span class="attr">template</span>: <span class="string">&quot;변수 A값에 1더하기 %1&quot;</span>,</span><br><span class="line">        <span class="attr">params</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">type</span>: <span class="string">&quot;Indicator&quot;</span>,</span><br><span class="line">                <span class="comment">// hardware_03.png가 하드웨어 아이콘 입니다.</span></span><br><span class="line">                <span class="attr">img</span>: <span class="string">&quot;block_icon/hardware_03.png&quot;</span>,</span><br><span class="line">                <span class="attr">size</span>: <span class="number">12</span></span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">events</span>: &#123;&#125;,</span><br><span class="line">        <span class="attr">def</span>: &#123;</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&quot;default_block&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">class</span>: <span class="string">&quot;test&quot;</span>,</span><br><span class="line">        <span class="attr">isNotFor</span>: [],</span><br><span class="line">        <span class="attr">func</span>: <span class="function"><span class="keyword">function</span> (<span class="params">sprite, script</span>) </span>&#123;</span><br><span class="line">            Entry.test.A++;</span><br><span class="line">            <span class="comment">// return 이 없는 경우는 별다른 값을 반환하지 않고, 다음블럭으로 진행됩니다.</span></span><br><span class="line">            <span class="comment">// return script.callReturn() 은 과거코드로, 생략가능합니다.</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="사용자-입력-순차-블록"><a href="#사용자-입력-순차-블록" class="headerlink" title="사용자 입력 순차 블록"></a>사용자 입력 순차 블록</h3><p><img src="/images/entryjs/block_create/default_input_block.png" alt="사용자 입력 순차 블록"></p>
+<p>유저 입력을 받아서 처리하는 순차 블록. 기본적인 생성방법은 기존의 블록들과 다르지 않습니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Entry.block = &#123;</span><br><span class="line">    <span class="attr">default_input_block</span>: &#123;</span><br><span class="line">        <span class="attr">color</span>: <span class="string">&quot;#00979D&quot;</span>,</span><br><span class="line">        <span class="attr">skeleton</span>: <span class="string">&quot;basic&quot;</span>,</span><br><span class="line">        <span class="attr">template</span>: <span class="string">&quot;변수 A값에 %1더하기 %2&quot;</span>,</span><br><span class="line">        <span class="attr">params</span>: [&#123;</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&quot;Block&quot;</span>,</span><br><span class="line">            <span class="attr">accept</span>: <span class="string">&quot;string&quot;</span></span><br><span class="line">        &#125;, &#123;</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&quot;Indicator&quot;</span>,</span><br><span class="line">            <span class="attr">img</span>: <span class="string">&quot;block_icon/hardware_03.png&quot;</span>,</span><br><span class="line">            <span class="attr">size</span>: <span class="number">12</span></span><br><span class="line">        &#125;],</span><br><span class="line">        <span class="attr">events</span>: &#123;&#125;,</span><br><span class="line">        <span class="attr">def</span>: &#123;</span><br><span class="line">            <span class="attr">params</span>: [&#123;</span><br><span class="line">                <span class="attr">type</span>: <span class="string">&quot;number&quot;</span>,</span><br><span class="line">                <span class="attr">params</span>: [ <span class="string">&quot;1&quot;</span> ]</span><br><span class="line">            &#125;,</span><br><span class="line">                <span class="literal">null</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&quot;default_input_block&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">class</span>: <span class="string">&quot;test&quot;</span>,</span><br><span class="line">        <span class="attr">paramsKeyMap</span>: &#123;</span><br><span class="line">            <span class="attr">VALUE</span>: <span class="number">0</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">func</span>: <span class="function"><span class="keyword">function</span> (<span class="params">sprite, script</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">const</span> value = script.getNumberValue(<span class="string">&quot;VALUE&quot;</span>, script);</span><br><span class="line">            Entry.test.A += value;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="드롭다운-입력-순차-블록"><a href="#드롭다운-입력-순차-블록" class="headerlink" title="드롭다운 입력 순차 블록"></a>드롭다운 입력 순차 블록</h3><p><img src="/images/entryjs/block_create/default_dropdown_block.png" alt="드롭다운 입력 순차 블록  "></p>
+<p>이전의 드롭다운 블록과 동일합니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Entry.block = &#123;</span><br><span class="line">    <span class="attr">default_dropdown_block</span>: &#123;</span><br><span class="line">        <span class="attr">color</span>: <span class="string">&quot;#00979D&quot;</span>,</span><br><span class="line">        <span class="attr">skeleton</span>: <span class="string">&quot;basic&quot;</span>,</span><br><span class="line">        <span class="attr">template</span>: <span class="string">&quot;변수 A값에 %1더하기 %2&quot;</span>,</span><br><span class="line">        <span class="attr">params</span>: [&#123;</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&quot;Dropdown&quot;</span>,</span><br><span class="line">            <span class="attr">options</span>: [</span><br><span class="line">                [ <span class="string">&quot;1&quot;</span>, <span class="string">&quot;1&quot;</span> ],</span><br><span class="line">                [ <span class="string">&quot;2&quot;</span>, <span class="string">&quot;2&quot;</span> ],</span><br><span class="line">                [ <span class="string">&quot;3&quot;</span>, <span class="string">&quot;3&quot;</span> ]</span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">fontSize</span>: <span class="number">11</span></span><br><span class="line">        &#125;, &#123;</span><br><span class="line">            <span class="string">&quot;type&quot;</span>: <span class="string">&quot;Indicator&quot;</span>,</span><br><span class="line">            <span class="string">&quot;img&quot;</span>: <span class="string">&quot;block_icon/hardware_03.png&quot;</span>,</span><br><span class="line">            <span class="string">&quot;size&quot;</span>: <span class="number">12</span></span><br><span class="line">        &#125;],</span><br><span class="line">        <span class="attr">def</span>: &#123;</span><br><span class="line">            <span class="string">&quot;params&quot;</span>: [ <span class="string">&quot;1&quot;</span>, <span class="literal">null</span> ],</span><br><span class="line">            <span class="string">&quot;type&quot;</span>: <span class="string">&quot;default_dropdown_block&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">class</span>: <span class="string">&quot;test&quot;</span>,</span><br><span class="line">        <span class="attr">paramsKeyMap</span>: &#123;</span><br><span class="line">            <span class="attr">VALUE</span>: <span class="number">0</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">func</span>: <span class="function"><span class="keyword">function</span> (<span class="params">sprite, script</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">const</span> value = script.getNumberField(<span class="string">&quot;VALUE&quot;</span>, script);</span><br><span class="line">            Entry.test.A += value;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/entryjs/2016-05-26-add_new_blocks2.html" itemprop="url">블록 사용 등록</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/entryjs/2016-07-08-add_new_blocks4.html" itemprop="url">하드웨어 블록 만들기</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/guide/entryjs/2016-05-26-add_new_blocks3.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/guide/entryjs/2016-05-26-add_new_blocks3.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://entryhw.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com/?ref_noscript" itemprop="url">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

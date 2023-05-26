@@ -1,0 +1,930 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>모양 탭 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/user/tab_shape.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="모양 탭 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="모양 탭 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "userGuide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "모양 탭",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2020-11-12",
+        "dateCreated": "2020-11-12",
+        "dateModified": "2023-05-25",
+        "url": "https://docs.playentry.org/user/tab_shape.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "1778",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/user/tab_shape.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>작품</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/what-is-project.html" class="sidebar-link" itemprop="url">작품</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>화면의 구성 요소</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/header.html" class="sidebar-link" itemprop="url">상단 메뉴</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/screen.html" class="sidebar-link" itemprop="url">실행 화면</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/sub-space.html" class="sidebar-link" itemprop="url">보조 창</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_block.html" class="sidebar-link" itemprop="url">블록 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_shape.html" class="sidebar-link current" itemprop="url">모양 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_sound.html" class="sidebar-link" itemprop="url">소리 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_attribute.html" class="sidebar-link" itemprop="url">속성 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/others.html" class="sidebar-link" itemprop="url">기타</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>블록</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/block_start.html" class="sidebar-link" itemprop="url">시작 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_flow.html" class="sidebar-link" itemprop="url">흐름 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_motion.html" class="sidebar-link" itemprop="url">움직임 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_looks.html" class="sidebar-link" itemprop="url">생김새 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_brush.html" class="sidebar-link" itemprop="url">붓 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_text.html" class="sidebar-link" itemprop="url">글상자 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_sound.html" class="sidebar-link" itemprop="url">소리 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_decision.html" class="sidebar-link" itemprop="url">판단 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_calculate.html" class="sidebar-link" itemprop="url">계산 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_variable.html" class="sidebar-link" itemprop="url">자료 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_function.html" class="sidebar-link" itemprop="url">함수 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_data.html" class="sidebar-link" itemprop="url">데이터 분석 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai.html" class="sidebar-link" itemprop="url">인공지능 블록 > 인공지능이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_translate.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 번역</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_tts.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 읽어주기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_stt.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 오디오 감지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_video_sensing.html" class="sidebar-link" itemprop="url">인공지능 블록 > AI 활용 - 비디오 감지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model.html" class="sidebar-link" itemprop="url">인공지능 블록 > 모델 학습이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_image.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 이미지</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_text.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 텍스트</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_voice.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 음성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_classification.html" class="sidebar-link" itemprop="url">인공지능 블록 > 분류 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_prediction.html" class="sidebar-link" itemprop="url">인공지능 블록 > 예측 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_model_clustering.html" class="sidebar-link" itemprop="url">인공지능 블록 > 군집 모델 - 숫자</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_hardware.html" class="sidebar-link" itemprop="url">하드웨어 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_extension.html" class="sidebar-link" itemprop="url">확장 블록</a>
+                </li>
+            
+        
+    
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content userGuide with-sidebar ">
+    
+      
+    
+    
+      <h1>모양 탭</h1>
+    
+    <h2 id="모양-목록"><a href="#모양-목록" class="headerlink" title="모양 목록"></a>모양 목록</h2><p><img src="images/window/main-shape-list.png" alt="main-shape-list"></p>
+<p>오브젝트의 모양을 추가 또는 관리하는 영역입니다.</p>
+<p>모든 오브젝트에는 하나의 모양 목록이 있어요. ‘모양 추가하기’ 버튼을 통해 원하는 모양을 이 목록에 추가할 수 있습니다. 조금 더 자세히 살펴볼까요?</p>
+<p><img src="images/window/shape_list.png" alt="shape_list"></p>
+<p>이름 상자를 클릭해서 이름을 수정하고 오른쪽의 X 버튼을 클릭해서 삭제합니다.</p>
+<p>왼쪽의 썸네일 아이콘을 드래그해서 모양 목록의 순서를 바꿀 수 있습니다.  모양의 순서를 이용하는 블록이 있으니 순서에 맞게 잘 정렬해 주세요.</p>
+<p>모양을 마우스 우클릭하면 이름 수정, 복제, 삭제, PC에 저장 할 지 선택할 수 있습니다.  그러나 모든 오브젝트에는 항상 한 개 이상의 모양이 있어야 합니다.</p>
+<p>오브젝트에 모양이 하나만 남았다면, 더 이상 모양을 삭제할 수 없어요!</p>
+<h2 id="모양-추가-팝업"><a href="#모양-추가-팝업" class="headerlink" title="모양 추가 팝업"></a>모양 추가 팝업</h2><p><img src="images/window/shape-add.png" alt="shape-add"></p>
+<p>‘모양 추가하기’ 버튼을 클릭하면 나타나는 팝업 창입니다. 모양을 선택하고, 아래의 ‘추가하기’ 버튼을 클릭해서 모양 목록에 추가해요.</p>
+<p>오른쪽 위의 검색창을 통해 원하는 모양을 검색할 수 있어요.</p>
+<h4 id="①-모양-선택"><a href="#①-모양-선택" class="headerlink" title="① 모양 선택"></a>① 모양 선택</h4><p><img src="images/window/shape-select.png" alt="shape-select"></p>
+<p>원하는 모양을 클릭해서 선택합니다. 중복 선택이 가능해요. 선택한 모양은 아래의 선택 목록 영역에서 볼 수 있어요.</p>
+<p>선택한 모양을 다시 클릭하거나, 선택 목록의 모양에 마우스 포인터를 가져갔을 때 나타나는 X 표시를 누르면 선택을 해제할 수 있습니다.</p>
+<p> 일부 카테고리의 모양은 태그로 분류하기 때문에 모양 선택 영역 상단의 태그를 선택하면 원하는 모양을 더 쉽게 찾을 수 있습니다.</p>
+<p><img src="images/window/shape-select-vector.png" alt="shape-select-vector"></p>
+<p>오른쪽 상단의 ‘벡터 모아보기’ 버튼을 클릭하면 벡터 모양만 모아볼 수 있습니다.</p>
+<p>각 모양의 좌측 상단에 있는 만년필 아이콘으로 벡터 모양을 구분할 수 있어요.</p>
+<p>벡터를 포함한 모양은 앞으로도 엔트리에 계속 추가될 예정이니, 지켜봐주세요!</p>
+<h4 id="②-파일-올리기"><a href="#②-파일-올리기" class="headerlink" title="② 파일 올리기"></a>② 파일 올리기</h4><p><img src="images/window/shape-import.png" alt="shape-import"></p>
+<p>원하는 모양을 직접 올릴 수도 있어요.</p>
+<p>모양 파일의 용량은 10MB 이하여야 하고, jpg, png, bmp, svg 형식(확장자)의 파일을 지원해요.</p>
+<p>jpg, png, bmp 형식은 비트맵 모드, svg 형식은 벡터 모드로 적용합니다.</p>
+<p>올린 모양은 파일 올리기 목록에서 볼 수 있습니다. 파일을 올리면 기본적으로 선택한 상태가 되며 선택한 모양만 모양 목록에 추가됩니다.</p>
+<blockquote>
+<p>아래와 같은 그림은 이용약관 및 관련 법률에 의해 제재를 받을 수 있습니다.</p>
+<ul>
+<li>폭력적이고 잔인한 그림</li>
+<li>선정적인 내용의 그림</li>
+<li>불쾌감을 주거나 혐오감을 일으키는 그림</li>
+<li>무단 사용이 금지된 저작권의 그림 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://playentry.org/#!/terms/project">[저작권에 대해 알아보기]</a></li>
+</ul>
+</blockquote>
+<h4 id="③-새로-만들기"><a href="#③-새로-만들기" class="headerlink" title="③ 새로 만들기"></a>③ 새로 만들기</h4><p><img src="images/window/shape-new.png" alt="shape-new"></p>
+<p>그림을 그려 나만의 오브젝트를 만들 수도 있습니다.</p>
+<p>그림을 직접 그려서 모양으로 저장합니다. 아래 ‘이동하기’ 버튼을 클릭하면 그림판으로 연결됩니다. 그림판에서 새로 그릴 모양을 저장한 뒤 목록에 추가해요.</p>
+<blockquote>
+<p>아래와 같은 모양은 이용약관 및 관련 법률에 의해 제재를 받을 수 있습니다.</p>
+<ul>
+<li>폭력적이고 잔인한 그림</li>
+<li>선정적인 내용의 그림</li>
+<li>불쾌감을 주거나 혐오감을 일으키는 그림</li>
+<li>무단 사용이 금지된 저작권의 그림 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://playentry.org/#!/terms/project">[저작권에 대해 알아보기]</a></li>
+</ul>
+</blockquote>
+<h2 id="그림판"><a href="#그림판" class="headerlink" title="그림판"></a>그림판</h2><p><img src="images/window/main-shape-paint.png" alt="main-shape-edit"></p>
+<p>오브젝트의 모양을 그리거나 편집할 수 있는 공간입니다.</p>
+<p>영역이 좁아서 불편하시나요? 좌측 상단의 최대화 버튼을 클릭하면 더 넓게 볼 수 있습니다.</p>
+<p><img src="images/window/shape-paint-menu.png" alt="shape-edit-bitmap"></p>
+<p>좌측 상단의 버튼을 다시 눌러 원래의 크기로 축소할 수 있습니다.</p>
+<p>그림판에는 다양한 기능이 있어요! 각 영역 별로 나누어 살펴봅시다.</p>
+<ul>
+<li><strong>새그림/ 저장하기/ 새 모양으로 저장/ 모양 가져오기</strong></li>
+</ul>
+<p>  <img src="images/window/shape-paint-tool1.png" alt="shape-paint-tool1"></p>
+<ul>
+<li><strong>새 그림</strong> : ‘새로 만들기’처럼 그림이 없는 모양을 그림 목록에 추가합니다.</li>
+<li><strong>저장하기</strong> : 현재 그림을 저장합니다.</li>
+<li><strong>새 모양으로 저장</strong> : 현재 모양을 유지하고 새 모양으로 추가해서 저장합니다.</li>
+<li><strong>모양 가져오기</strong> : 그림판에 원하는 모양을 추가합니다.</li>
+</ul>
+<p>​         </p>
+<ul>
+<li><strong>복사/ 붙여넣기/ 자르기/ 삭제/ 모두 삭제</strong></li>
+</ul>
+<p>  <img src="images/window/shape-paint-tool2.png" alt="shape-paint-tool2"></p>
+<ul>
+<li><p><strong>복사</strong> : 선택한 영역의 그림을 복사합니다.</p>
+</li>
+<li><p><strong>붙여넣기</strong> : 복사한 그림을 그림판에 붙여넣습니다.</p>
+</li>
+<li><p><strong>자르기</strong> : 선택한 영역의 그림을 복사하고 삭제합니다.</p>
+</li>
+<li><p><strong>삭제</strong> : 선택한 영역의 그림을 삭제합니다.</p>
+</li>
+<li><p><strong>모두 삭제</strong> : 이 그림판의 모든 그림을 삭제합니다.</p>
+</li>
+</ul>
+<p>​        일부 기능은 단축키로도 편리하게 사용할 수 있어요.</p>
+<table>
+<thead>
+<tr>
+<th>기능</th>
+<th>단축키 (윈도우/맥 공통)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>복사</td>
+<td><code>ctrl</code> + <code>c</code></td>
+</tr>
+<tr>
+<td>붙여넣기</td>
+<td><code>ctrl</code> + <code>v</code></td>
+</tr>
+<tr>
+<td>삭제</td>
+<td><code>del</code></td>
+</tr>
+<tr>
+<td>선택한 그림 이동</td>
+<td><code>위쪽 화살표</code>, <code>아래쪽 화살표</code>, <code>오른쪽 화살표</code>, <code>왼쪽 화살표</code></td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>확대/ 축소 기능</strong></li>
+</ul>
+<p><img src="images/window/shape-paint-tool5.png" alt="shape-paint-tool5"></p>
+<p>그림판의 우측 상단에 위치한 이 버튼을 클릭해서 그림을 확대 혹은 축소하거나 표준 크기로 조절해요.</p>
+<p>표준 크기는 100%이고, 크기는 30%~250% 사이로 조절할 수 있습니다.</p>
+<p>그림을 더욱 세밀하고 수월하게 그릴 수 있겠네요!</p>
+<h4 id="①-비트맵"><a href="#①-비트맵" class="headerlink" title="① 비트맵"></a><strong>① 비트맵</strong></h4><p><img src="images/window/shape-paint-bitmap-or-vector.png" alt="shape-paint-bitmap-or-vector"></p>
+<p>그림판의 모드를 선택할 수 있습니다. <strong>비트맵</strong>과 <strong>벡터</strong>를 지원해요.</p>
+<p>비트맵은 픽셀(pixel)의 집합으로 표현하는 형식의 그림입니다. 더 쉽게 말하면, 점들이 모여서 나타내는 그림이에요.</p>
+<p>따라서 확대/축소 기능으로 비트맵 그림을 확대해보면 정사각형이 점처럼 그림을 이루고 있는 것을 볼 수 있습니다.</p>
+<p>인터넷 상의 그림 대부분이 비트맵인 만큼 가장 일반적인 그림 형식이랍니다!</p>
+<p><img src="images/window/shape-pixel-info.png" alt="shape-pixel-info"></p>
+<p>모양에 표시되는 숫자는 이 그림의 해상도입니다. 이 그림이 가로, 세로로 몇 개의 점을 차지하는지 알 수 있어요. 해상도는 오브젝트의 크기에도 영향을 줍니다.</p>
+<p><img src="images/window/shape-paint-bitmap-tools.png" alt="shape-paint-bitmap-tools"></p>
+<p>그림판의 좌측에는 그림 도구가 있습니다. 비트맵 모드의 각 도구를 클릭하면 하단의 영역에서 해당 도구의 속성을 볼 수 있어요. 한 번 자세히 알아볼까요?</p>
+<ul>
+<li><strong>이동</strong> : 그림판을 드래그해서 공간을 움직입니다.</li>
+</ul>
+<p>  <img src="images/window/shape-tool3-1.png" alt="shape-tool3-1"></p>
+<ul>
+<li><strong>선택</strong> : 그림판을 드래그해서 그림을 영역으로 선택합니다. 그림을 충분히 포함해서 선택해야 합니다. 빈 공간은 선택할 수 없어요!</li>
+</ul>
+<p>  <img src="images/window/shape-tool3-2.png" alt="shape-tool3-2"></p>
+<ul>
+<li><p><strong>크기(pixel)</strong> : 선택한 영역의 그림의 가로 길이(w) 또는 세로 길이(h)를 정합니다.</p>
+</li>
+<li><p><strong>회전(º)</strong> : 선택한 영역의 그림을 회전합니다. ‘90º’ 버튼을 클릭하면 오른쪽으로 90도씩 회전합니다.</p>
+</li>
+<li><p><strong>반전</strong> : 선택한 영역의 그림을 뒤집습니다. 가로 또는 세로로 뒤집을 수 있습니다. 아래의 그림과 같이 그림판에서 선택 영역의 파란색 상자를 드래그하면  크기를 조절하거나 뒤집을 수 있어요. 또한 주황색 원을 드래그하면 회전할 수 있습니다.</p>
+</li>
+</ul>
+<p><img src="images/window/shape-paint-control.png" alt="shape-paint-control"></p>
+<ul>
+<li><strong>펜</strong> : 그림판에 클릭 또는 드래그해서 그림을 그립니다.</li>
+</ul>
+<p>  <img src="images/window/shape-tool3-3.png" alt="shape-tool3-3"></p>
+<ul>
+<li><strong>윤곽선 굵기</strong> : 펜의 굵기를 조절합니다.</li>
+<li><strong>채우기 색상</strong> : 펜의 색상을 정합니다.</li>
+</ul>
+<ul>
+<li><strong>직선</strong> : 그림판에 드래그해서 직선을 그립니다.</li>
+</ul>
+<p>  <img src="images/window/shape-tool3-4.png" alt="shape-tool3-4"></p>
+<ul>
+<li><strong>윤곽선 굵기</strong> : 직선의 굵기를 조절합니다.</li>
+<li><strong>윤곽선 색상</strong> : 직선의 색상을 정합니다.</li>
+</ul>
+<ul>
+<li><strong>사각형</strong> : 그림판에 드래그해서 사각형을 그립니다.</li>
+</ul>
+<p>  <img src="images/window/shape-tool3-5.png" alt="shape-tool3-5"></p>
+<ul>
+<li><p><strong>윤곽선 굵기</strong> : 사각형 테두리 선의 굵기를 조절합니다.</p>
+</li>
+<li><p><strong>윤곽선 색상</strong> : 사각형 테두리 선의 색상을 정합니다.</p>
+</li>
+<li><p><strong>채우기 색상</strong> : 사각형의 영역을 채울 색상을 정합니다.</p>
+</li>
+<li><p><strong>크기(pixel)</strong> : 사각형의 가로 길이(w) 또는 세로 길이(h)를 정합니다.</p>
+</li>
+<li><p><strong>회전(º)</strong> : 사각형을 회전합니다. ‘90º’ 버튼을 클릭하면 오른쪽으로 90도씩 회전할 수 있습니다. 그림판에서 선택 영역의 파란색 상자를 드래그하면            크기를 조절하거나 뒤집을 수 있어요. 또한 주황색 원을 드래그하면 회전할 수 있습니다.</p>
+</li>
+</ul>
+<ul>
+<li><strong>원</strong> : 그림판에 드래그해서 원을 그립니다.</li>
+</ul>
+<p>  <img src="images/window/shape-tool3-6.png" alt="shape-tool3-6"></p>
+<ul>
+<li><p><strong>윤곽선 굵기</strong> : 원 테두리 선의 굵기를 조절합니다.</p>
+</li>
+<li><p><strong>채우기 색상</strong> : 원형의 영역을 채울 색상을 정합니다.</p>
+</li>
+<li><p><strong>크기(pixel)</strong> : 원의 가로 길이(w) 또는 세로 길이(h)를 정합니다.</p>
+</li>
+<li><p><strong>회전(º)</strong> : 원을 회전합니다. ‘90º’ 버튼을 클릭하면 오른쪽으로 90도씩 회전할 수 있습니다. 그림판에서 선택 영역의 파란색 상자를 드래그하면 크기를 조절하거나 뒤집을 수 있어요. 또한 주황색 원을 드래그하면 회전할 수 있습니다.</p>
+</li>
+</ul>
+<ul>
+<li><strong>글상자</strong> : 그림판에 클릭한 위치에 글을 작성합니다.</li>
+</ul>
+<p>  <img src="images/window/shape-tool3-7.png" alt="shape-tool3-7"></p>
+<ul>
+<li><strong>글꼴</strong> : 글상자의 글꼴을 선택합니다.</li>
+<li><strong>윤곽선 굵기</strong> : 글상자 테두리 선의 굵기를 조절합니다.</li>
+<li><strong>윤곽선 색상</strong> : 글상자 테두리 선의 색상을 정합니다.</li>
+<li><strong>채우기 색상</strong> : 글상자의 영역을 채울 색상을 정합니다.</li>
+<li><strong>글꼴 크기</strong> : 글꼴의 크기를 조절합니다. 글상자의 영역에 영향을 줍니다.</li>
+<li><strong>글꼴 스타일</strong> : 글꼴의 스타일을 <strong>볼드체</strong>와 <em>이태릭체</em>로 선택할 수 있습니다. 중복 선택이 가능해요.</li>
+</ul>
+<ul>
+<li><strong>채우기</strong> : 그림판을 클릭해서 그림에 색을 채웁니다.</li>
+</ul>
+<p>  <img src="images/window/shape-tool3-8.png" alt="shape-tool3-8"></p>
+<ul>
+<li><strong>채우기 색상</strong> : 그림을 채울 색상을 정합니다.</li>
+</ul>
+<ul>
+<li><strong>지우기</strong> : 그림판에 클릭 또는 드래그해서 그림을 지웁니다.</li>
+</ul>
+<p>  <img src="images/window/shape-tool3-9.png" alt="shape-tool3-9"></p>
+<ul>
+<li><strong>지우개 굵기</strong> : 지우개의 굵기를 조절합니다. 수가 작을수록 세밀하게 지울 수 있고, 클수록 한 번에 많은 양을 지울 수 있습니다.</li>
+</ul>
+<h4 id="②-벡터"><a href="#②-벡터" class="headerlink" title="② 벡터"></a>② 벡터</h4><p><img src="images/window/shape-paint-vector.png" alt="shape-edit-vector"></p>
+<p>벡터는 점과 점 사이의 관계를 점과 점을 잇는 선으로 이미지를 표현하는 방식입니다.</p>
+<p>선은 직선일 수도 있고 곡선일 수도 있습니다.  더 쉽게 말하면, 점들을 이은 선과 면으로 나타내는 그림이에요.</p>
+<p>비트맵과 달리 점과 선으로 그림을 그리기 떄문에 이미지를 자유롭게 늘리고 변형해도 깨져 보이지 않는답니다!</p>
+<p>따라서 비트맵과 벡터는 서로 다른 장점을 가지고 있어요!</p>
+<blockquote>
+<ul>
+<li><strong>비트맵</strong> 모드는 사진처럼 정교한 이미지를 표현하기에 유용합니다.</li>
+<li><strong>벡터</strong> 모드는 확대/축소를 빈번하게 하는 이미지 혹은 레이어 별로 수정을 해야하는 경우에 유용합니다.</li>
+</ul>
+</blockquote>
+<p><img src="images/window/shape-paint-vector-menu.png" alt="shape-paint-vector-menu"></p>
+<p>벡터 모드에서는 상단에 벡터 그림에 필요한 메뉴가 나타납니다. 좀 더 자세히 살펴볼까요?</p>
+<ul>
+<li><strong>그룹화/ 그룹 해제/ 앞으로/ 뒤로/ 맨 앞으로/ 맨 뒤로</strong></li>
+</ul>
+<p>  <img src="images/window/shape-paint-vector-tool1.png" alt="shape-paint-vector-tool1"></p>
+<ul>
+<li><strong>그룹화</strong> : 선택한 모든 요소를 하나의 요소로 묶습니다.</li>
+<li><strong>그룹 해제</strong> : 그룹화한 요소를 다시 개별 요소로 나눕니다.</li>
+<li><strong>앞으로</strong> : 선택한 요소를 바로 앞의 요소보다 앞으로 보냅니다.</li>
+<li><strong>뒤로</strong> : 선택한 요소를 바로 뒤의 요소보다 뒤로 보냅니다.</li>
+<li><strong>맨 앞으로</strong> : 선택한 요소를 맨 앞으로 보냅니다.</li>
+<li><strong>맨 뒤로</strong> : 선택한 요소를 맨 뒤로 보냅니다.</li>
+</ul>
+<p>​        벡터 모드에서만 사용할 수 있는 편리한 단축키도 있어요.</p>
+<table>
+<thead>
+<tr>
+<th>기능</th>
+<th>단축키 (윈도우/맥 공통)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>여러 개체 선택</td>
+<td><code>shift</code> + <code>마우스 왼쪽 클릭</code></td>
+</tr>
+<tr>
+<td>선택한 개체를 앞으로 이동</td>
+<td><code>ctrl</code> + <code>[</code></td>
+</tr>
+<tr>
+<td>선택한 개체를 뒤로 이동</td>
+<td><code>ctrl</code> + <code>]</code></td>
+</tr>
+</tbody></table>
+<p><img src="images/window/shape-paint-vector-tools.png" alt="shape-paint-vector-tools"></p>
+<p>그림판의 좌측에는 그림 도구가 있습니다.</p>
+<p>백터 모드의 각 도구를 클릭하면 하단의 영역에서 해당 도구의 속성을 볼 수 있어요.</p>
+<ul>
+<li><strong>이동</strong> : 그림판을 드래그해서 공간을 움직입니다.</li>
+</ul>
+<p><img src="images/window/shape-tool3-1.png" alt="shape-tool3-1"></p>
+<ul>
+<li><p><strong>선택</strong> : 그림판을 드래그해서 요소를 선택합니다. 하나 이상의 요소를 포함해서 선택해야 합니다. 빈 공</p>
+<p>간은 선택할 수 없어요!</p>
+</li>
+</ul>
+<p>  <img src="images/window/shape-paint-vector-tool2.png" alt="shape-tool3-2"></p>
+<ul>
+<li><p><strong>윤곽선 굵기</strong> : 선택한 요소의 테두리 선의 굵기를 바꿉니다. 윤곽선이 없으면 영향을 주지 않아요.</p>
+</li>
+<li><p><strong>윤곽선 색상</strong> : 선택한 요소의 테두리 선의 색상을 정합니다. 윤곽선이 없으면 영향을 주지 않아요. 직선의 색상도 바꿀 수 있습니다.</p>
+</li>
+<li><p><strong>채우기 색상</strong> : 선택한 요소의 영역을 채울 색상을 정합니다. 윤곽선만 있으면 영향을 주지 않아요. 펜으로 그린 그림의 색상도 바꿀 수 있습니다.</p>
+</li>
+<li><p><strong>크기(pixel)</strong> : 선택한 요소의 가로 길이(w) 또는 세로 길이(h)를 정합니다.</p>
+</li>
+<li><p><strong>회전(º)</strong> : 선택한 요소를 회전합니다. ‘90º’ 버튼을 클릭하면 오른쪽으로 90도씩 회전합니다.</p>
+<p><img src="images/window/shape-paint-vector-control.png" alt="shape-paint-control"></p>
+</li>
+<li><p><strong>반전</strong> : 선택한 요소를 뒤집습니다. 가로 또는 세로로 뒤집을 수 있습니다. 아래의 그림과 같이 그림판에서 선택 영역의 파란색 상자를 드래그하면 크기를  조절하거나 반전할 수 있어요. 또한 주황색 원을 드래그하면 회전할 수 있습니다.</p>
+</li>
+</ul>
+<ul>
+<li><strong>형태</strong> : 그림판을 드래그해서 요소의 형태를 선택합니다.</li>
+</ul>
+<p>  <img src="images/window/shape-paint-vector-tool3.png" alt="shape-paint-vector-tool3"></p>
+<ul>
+<li><p><strong>윤곽선 굵기</strong> : 선택한 요소의 테두리 선의 굵기를 바꿉니다. 윤곽선이 없으면 영향을 주지 않아요.</p>
+</li>
+<li><p><strong>윤곽선 색상</strong> : 선택한 요소의 테두리 선의 색상을 정합니다. 윤곽선이 없으면 영향을 주지 않아요.  </p>
+<p>직선의 색상도 바꿀 수 있습니다.</p>
+</li>
+<li><p><strong>채우기 색상</strong> : 선택한 요소의 영역을 채울 색상을 정합니다. 윤곽선만 있으면 영향을 주지 않아요.</p>
+<p>​       펜으로 그린 그림의 색상도 바꿀 수 있습니다.</p>
+</li>
+<li><p><strong>편집 방법</strong> :  선택한 요소가 구부러진 지점에서, 주황색 선으로 연결된 파란색 상자를 드래그하면 선의 구부러진 정도를 조절할 수 있습니다.                      ‘둥글게’ 와 ‘각지게’로 두 가지 방법을 선택할 수 있어요.  </p>
+</li>
+<li><p><strong>둥글게</strong> : 양쪽 선을 동시에 조절하여 두 선을 자연스럽게 잇습니다. 두 주황색 선이 직선의 형태로 함께 회전합니다.</p>
+<p><img src="images/window/shape-paint-vector-form-control-curve1.png" alt="shape-paint-vector-form-control-curve1"></p>
+</li>
+<li><p><strong>각지게</strong> :  한 쪽 선만을 움직여 구부러진 정도를 조절할 수 있습니다. 두 주황색 선이  따로 회전합니다.</p>
+<p><img src="images/window/shape-paint-vector-form-control-curve2.png" alt="shape-paint-vector-form-control-curve">  </p>
+</li>
+</ul>
+<p>  아래의 그림과 같이 선택 영역의 점을 드래그하면 형태를 조절할 수 있어요.</p>
+<p>  <img src="images/window/shape-paint-vector-form-control.png" alt="shape-paint-vector-form-control"></p>
+<ul>
+<li><strong>펜</strong> : 그림판에 클릭 또는 드래그해서 그림을 그립니다. 클릭을 해제할 때까지 그린 그림이 하나의 요소가 되어요.</li>
+</ul>
+<p>  <img src="images/window/shape-tool3-3.png" alt="shape-tool3-3"></p>
+<ul>
+<li><strong>윤곽선 굵기</strong> : 펜의 굵기를 조절합니다.</li>
+<li><strong>채우기 색상</strong> : 펜의 색상을 정합니다.</li>
+</ul>
+<ul>
+<li><strong>직선</strong> : 그림판에 드래그해서 직선을 그립니다.</li>
+</ul>
+<p>  <img src="images/window/shape-tool3-4.png" alt="shape-tool3-4"></p>
+<ul>
+<li><strong>윤곽선 굵기</strong> : 직선의 굵기를 조절합니다.</li>
+<li><strong>윤곽선 색상</strong> : 직선의 색상을 정합니다.</li>
+</ul>
+<ul>
+<li><strong>사각형</strong> : 그림판에 드래그해서 사각형을 그립니다.</li>
+</ul>
+<p>  <img src="images/window/shape-tool3-5.png" alt="shape-tool3-5"></p>
+<ul>
+<li><strong>윤곽선 굵기</strong> : 사각형 테두리 선의 굵기를 조절합니다.</li>
+<li><strong>윤곽선 색상</strong> : 사각형 테두리 선의 색상을 정합니다.</li>
+<li><strong>채우기 색상</strong> : 사각형의 영역을 채울 색상을 정합니다.</li>
+<li><strong>크기(pixel)</strong> : 사각형의 가로 길이(w) 또는 세로 길이(h)를 정합니다.</li>
+<li><strong>회전(º)</strong> : 사각형을 회전합니다. ‘90º’ 버튼을 클릭하면 오른쪽으로 90도씩 회전할 수 있습니다.</li>
+</ul>
+<ul>
+<li><strong>원</strong> : 그림판에 드래그해서 원을 그립니다.</li>
+</ul>
+<p>  <img src="images/window/shape-tool3-6.png" alt="shape-tool3-6"></p>
+<ul>
+<li><strong>윤곽선 굵기</strong> : 원 테두리 선의 굵기를 조절합니다.</li>
+<li><strong>윤곽선 색상</strong> : 원 테두리 선의 색상을 정합니다.</li>
+<li><strong>채우기 색상</strong> : 원형의 영역을 채울 색상을 정합니다.</li>
+<li><strong>크기(pixel)</strong> : 원의 가로 길이(w) 또는 세로 길이(h)를 정합니다.</li>
+<li><strong>회전(º)</strong> : 원을 회전합니다. ‘90º’ 버튼을 클릭하면 오른쪽으로 90도씩 회전합니다.</li>
+</ul>
+<ul>
+<li><strong>글상자</strong> : 그림판에 클릭한 위치에 글을 작성합니다. (벡터 모드에서 글상자는 벡터 형태가 아닙니다!)</li>
+</ul>
+<p>  <img src="images/window/shape-tool3-7.png" alt="shape-tool3-7"></p>
+<ul>
+<li><p><strong>글꼴</strong> : 글상자의 글꼴을 선택합니다. 글꼴 목록은 글상자 오브젝트와 같습니다.</p>
+</li>
+<li><p><strong>윤곽선 굵기</strong> : 글상자 테두리 선의 굵기를 조절합니다.</p>
+</li>
+<li><p><strong>윤곽선 색상</strong> : 글상자 테두리 선의 색상을 정합니다.</p>
+</li>
+<li><p><strong>채우기 색상</strong> : 글상자의 영역을 채울 색상을 정합니다.</p>
+</li>
+<li><p><strong>글꼴 크기</strong> : 글꼴의 크기를 조절합니다. 글상자의 영역에 영향을 줍니다.</p>
+</li>
+<li><p><strong>글꼴 스타일</strong> : 글꼴의 스타일을 <strong>볼드체</strong>와 <em>이태릭체</em>로 선택할 수 있습니다. 중복 선택이 가능해요.</p>
+</li>
+</ul>
+<ul>
+<li><strong>채우기</strong> : 그림판을 클릭해서 요소에 색을 채웁니다.</li>
+</ul>
+<p>  <img src="images/window/shape-tool3-8.png" alt="shape-tool3-8"></p>
+<ul>
+<li><strong>채우기 색상</strong> : 그림을 채울 색상을 정합니다.</li>
+</ul>
+<ul>
+<li><strong>지우기</strong> : 그림판에 클릭 또는 드래그해서 그림을 지웁니다.</li>
+</ul>
+<p>  <img src="images/window/shape-tool3-9.png" alt="shape-tool3-9"></p>
+<ul>
+<li>그림의 일부가 지워지면, 요소의 형태가 바뀌어요.</li>
+<li><strong>지우개 굵기</strong> : 지우개의 굵기를 조절합니다. 수가 작을수록 세밀하게 지울 수 있고, 클수록 한 번에 많은 양을 지울 수 있습니다.</li>
+</ul>
+
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/user/tab_shape.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/user/tab_shape.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://entryhw.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com/?ref_noscript" itemprop="url">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

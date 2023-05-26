@@ -1,0 +1,568 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>블록 명세 작성 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/guide/entryjs/2016-05-22-add_new_blocks.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="블록 명세 작성 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="블록 명세 작성 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "guide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "블록 명세 작성",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2023-05-25",
+        "dateCreated": "2023-05-25",
+        "dateModified": "2023-05-25",
+        "url": "https://docs.playentry.org/guide/entryjs/2016-05-22-add_new_blocks.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "859",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/guide/entryjs/2016-05-22-add_new_blocks.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+                
+                
+                    
+                        <li><h3>Quick Start</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/quick_start/2018-07-30-tutorial.html" class="sidebar-link" itemprop="url">엔트리 하드웨어 개발 튜토리얼</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Basic</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/basic/setting_environment.html" class="sidebar-link" itemprop="url">개발 환경 세팅</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/pull_request.html" class="sidebar-link" itemprop="url">PR 요청하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/2016-07-07-faq.html" class="sidebar-link" itemprop="url">자주 하는 질문</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/2023-05-25-common_problem.html" class="sidebar-link" itemprop="url">자주 발생하는 에러</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry JS</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-09-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-22-add_new_blocks.html" class="sidebar-link current" itemprop="url">블록 명세 작성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-26-add_new_blocks2.html" class="sidebar-link" itemprop="url">블록 사용 등록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-26-add_new_blocks3.html" class="sidebar-link" itemprop="url">블록 모양별 개발 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-07-08-add_new_blocks4.html" class="sidebar-link" itemprop="url">하드웨어 블록 만들기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-09-translate.html" class="sidebar-link" itemprop="url">하드웨어 블록 번역작업</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-14-add_hardware.html" class="sidebar-link" itemprop="url">하드웨어 블록 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-23-test_project.html" class="sidebar-link" itemprop="url">프로젝트 테스트하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry HW</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2016-05-01-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2016-05-03-add_module.html" class="sidebar-link" itemprop="url">하드웨어 모듈 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/add_bluetooth_hardware.html" class="sidebar-link" itemprop="url">블루투스 하드웨어 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/cli_test_hardware.html" class="sidebar-link" itemprop="url">하드웨어 연결 테스트하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2017-05-16-enroll_entry-hw.html" class="sidebar-link" itemprop="url">하드웨어 등록 서비스 신청하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry Offline</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-20-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-21-project_structure.html" class="sidebar-link" itemprop="url">프로젝트 구조</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-27-develop.html" class="sidebar-link" itemprop="url">개발하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-01-10-add_objects.html" class="sidebar-link" itemprop="url">오브젝트 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-28-translate.html" class="sidebar-link" itemprop="url">다국어 작업하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-10-30-custom_project.html" class="sidebar-link" itemprop="url">커스텀 프로젝트 빌드</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-01-09-build.html" class="sidebar-link" itemprop="url">빌드하기</a>
+                </li>
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Etc.</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/etc/2016-05-03-git_fork.html" class="sidebar-link" itemprop="url">Git 사용 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/etc/2020-06-24-doc_contribution.html" class="sidebar-link" itemprop="url">문서 기여하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/etc/2019-12-11-updates.html" class="sidebar-link" itemprop="url">문서 업데이트 내역</a>
+                </li>
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar 2016-05-22-add_new_blocks-guide">
+    
+      
+    
+    
+      <h1>블록 명세 작성</h1>
+    
+    <h2 id="블록-명세-작성"><a href="#블록-명세-작성" class="headerlink" title="블록 명세 작성"></a>블록 명세 작성</h2><h3 id="블록-구현-위치"><a href="#블록-구현-위치" class="headerlink" title="블록 구현 위치"></a>블록 구현 위치</h3><p>블록파일의 위치는 다음과 같습니다.  </p>
+<ul>
+<li>src/playground/block_entry.js : 과거 블럭 (legacy)</li>
+<li>src/playground/blocks ..<ul>
+<li>block_start.js : 시작 블록</li>
+<li>block_flow.js : 흐름 블록</li>
+<li>block_moving.js : 움직임 블록</li>
+<li>block_looks.js : 생김새 블록</li>
+<li>block_brush.js : 붓 블록</li>
+<li>block_sound.js : 소리 블록</li>
+<li>block_judgement.js : 판단 블록</li>
+<li>block_calc.js : 계산 블록</li>
+<li>block_variable.js : 자료 블록</li>
+<li>block_func.js : 함수 생성 관련</li>
+<li>block_expansion_*.js : 확장블록 관련 블록</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>하드웨어 블록은 <code>src/playground/blocks/hardware/block_(하드웨어명).js</code> 파일에서 관리 됩니다.<br>이에 따른 블록 생성정보는 <a href="/guide/entryjs/2016-07-08-add_new_blocks4.html#하드웨어-블록-개발">하드웨어 블록 개발</a> 문서를 참고해 주세요.</p>
+</blockquote>
+<h3 id="블록-생성-위치"><a href="#블록-생성-위치" class="headerlink" title="블록 생성 위치"></a>블록 생성 위치</h3><p>블록은 각 위치에서 만들어지고, Entry.block 오브젝트에 모든 블럭이 합쳐지게 됩니다.<br>Entry.block 은 src/playground/block_entry.js 에서 초기화됩니다.  </p>
+<p>block_entry.js 내에서는 과거 블럭과 파일단위로 쪼개진 블럭이 Entry.block 에 할당되는 로직이 포함되어 있습니다.</p>
+<h3 id="블록-생성-방법"><a href="#블록-생성-방법" class="headerlink" title="블록 생성 방법"></a>블록 생성 방법</h3><p>아래의 내용은 블록 구성에 필요한 정보 입니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Entry.block = &#123;</span><br><span class="line">    <span class="string">&quot;sample_block&quot;</span>: &#123; <span class="comment">// (1)</span></span><br><span class="line">        <span class="string">&quot;parent&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="comment">// (2)</span></span><br><span class="line">        <span class="string">&quot;color&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="comment">// (3)</span></span><br><span class="line">        <span class="string">&quot;fontColor&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="comment">// (4)</span></span><br><span class="line">        <span class="string">&quot;skeleton&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="comment">// (5)</span></span><br><span class="line">        <span class="string">&quot;statement&quot;</span>: [], <span class="comment">// (6)</span></span><br><span class="line">        <span class="string">&quot;params&quot;</span>: [], <span class="comment">// (7)</span></span><br><span class="line">        <span class="string">&quot;events&quot;</span>: &#123;&#125;, <span class="comment">// (8)</span></span><br><span class="line">        <span class="string">&quot;def&quot;</span>: &#123;&#125;, <span class="comment">// (9)</span></span><br><span class="line">        <span class="string">&quot;paramsKeyMap&quot;</span>: &#123;&#125;, <span class="comment">// (10)</span></span><br><span class="line">        <span class="string">&quot;class&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="comment">// (11)</span></span><br><span class="line">        <span class="string">&quot;isNotFor&quot;</span>: [], <span class="comment">// (12)</span></span><br><span class="line">        <span class="string">&quot;func&quot;</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125; <span class="comment">// (13)</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p><code>sample_block</code> : 블록 명칭입니다.</p>
+</li>
+<li><p><code>parent</code><br>특정 블록의 정보를 상속 받아 사용할 경우 사용하는 속성 입니다.<br>즉, <code>sample_block</code>이라는 블록을 생성할때 <code>sample_mother_block</code>이라는 블록의 과 똑같은 모양과 역할을 하는 블록으로 만들고자 할때는 <code>parent</code> 부분에 <code>sample_mother_block</code>이라는 값을 작성 함으로써 할당이 가능해 집니다.<br>다만 <code>parent</code>만 설정하면 <code>parent</code>와 단순히 똑같은 블록이 하나더 생일 뿐입니다.<br><code>parent</code>를 상속 받은후 <code>def</code>속성 에서 다른 블록이라는 것을 명시해 주어야 합니다.</p>
+<p> 그 예는 다음과 같습니다.  </p>
+ <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;sample_block&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;parent&quot;</span>: <span class="string">&quot;sample_mother_block&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;def&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;params&quot;</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                type: &#x27;number&#x27;,</span><br><span class="line">                params: [&#x27;<span class="number">10</span>&#x27;],</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="literal">null</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;sample_block&quot;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>color</code> : 블록의 색상을 RGB 코드로 지정 합니다.<br>하드웨어 블록의 경우 아래와 같은 블록 색상으로 고정입니다.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">color</span>: EntryStatic.colorSet.block.default.HARDWARE,</span><br><span class="line">  <span class="attr">outerLine</span>: EntryStatic.colorSet.block.darken.HARDWARE, </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>fontColor</code> : 블록의 글자 색상을 지정 합니다. 생략가능합니다.</p>
+</li>
+<li><p><code>skeleton</code> : 블록의 모양을 결정 합니다. 해당블록의 모양은 차후에 생성되는 문서를 참고해 주세요.<br>현재 기본적으로 사용가능한 <code>skeleton</code>은 <code>basic</code>, <code>basic_create</code>, <code>basic_event</code>, <code>basic_loop</code>, <code>basic_define</code>, <code>pebble_event</code>, <code>pebble_loop</code>, <code>pebble_basic</code>, <code>basic_string_field</code>, <code>basic_boolean_field</code>, <code>basic_param</code>, <code>basic_button</code>, <code>basic_without_next</code>, <code>basic_double_loop</code>가 있습니다.  </p>
+</li>
+<li><p><code>statement</code> : 블록 안에 블록을 넣을수 있는 블록의 타입을 설정 합니다. 기본적으로 <code>&quot;accept&quot;: &quot;basic&quot;</code>을 사용 합니다.</p>
+</li>
+<li><p><code>params</code> : 블록에 추가될 파라미터들입니다. 기본적으로는 indicator 를 추가하며, 파라미터가 필요한 경우 추가합니다.</p>
+</li>
+<li><p><code>events</code> : 특정 상황에서의 이벤트를 처리할 수 있습니다.<br>현재 사용할 수 있는 이벤트는 <code>viewAdd</code>, <code>dataAdd</code>, <code>viewDestory</code>, <code>dataDestroy</code>, <code>mousedown</code>, <code>dblclick</code> 이 있습니다.</p>
+</li>
+<li><p><code>def</code> : 블록을 정의 합니다. type 요소의 경우에는 특수한 경우가 아니면 블록 명칭과 동일하게 작성하면 됩니다.<br> params의 경우는 params에 정의한 parameter에서 초기값등을 설정 할수 있습니다.</p>
+ <figure class="highlight json"><table><tr><td class="code"><pre><span class="line">def: &#123;</span><br><span class="line">    <span class="attr">&quot;params&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            type: &#x27;number&#x27;,</span><br><span class="line">            params: [&#x27;<span class="number">10</span>&#x27;],</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="literal">null</span>,</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;sample_block&quot;</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>paramsKeyMap</code> : <code>params</code>에 정의한 <code>parameter</code>에 대한 <code>key</code>값을 지정합니다. <code>key</code> 는 0부터 시작되는 index 값입니다.<br>아래 예의 경우에는 params 의 첫번째 값이 VALUE 라는 <code>key</code>로 매핑되는 경우입니다.</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">paramsKeyMap: &#123;</span><br><span class="line">    VALUE: <span class="number">0</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>class</code> : 블록 단위의 모음을 설정합니다. <code>class</code>끼리 묶이고 <code>class</code>가 다른 경우 가로줄로 구분되어 사용자에게 보여지게 됩니다.</p>
+</li>
+<li><p><code>isNotFor</code> : 엔트리는 존재하는 모든블럭을 로딩하고 숨김처리하는 방식으로 필요한 블럭만 보여주는 형태를 취하고 있습니다.<br>이와 같은 작업에 필요한 속성입니다.<br>일반적으로 변수의 존재여부에 따른 블럭 숨김 및 하드웨어 연결시 해당 하드웨어 블록만 노출 등에 활용중입니다.<br><strong>하드웨어 개발에서는 모든 블럭이 해당 하드웨어명과 동일하게 작성되어야 합니다.</strong></p>
+</li>
+<li><p><code>func</code> : 실질적인 블록의 로직을 담당합니다. 일반 순차블록의 경우 return 값이 없으면 암시적으로 다음블록으로 진행합니다.<br>문법상 자세한 사항은 <a href="./2016-05-26-add_new_blocks3.html">블록 모양별 개발 방법</a>을 참고하시는 것을 추천드립니다.</p>
+</li>
+</ol>
+
+    
+      <div class="guide-links">
+        
+        
+          <span style="float:right"><a href="/guide/entryjs/2016-05-26-add_new_blocks2.html" itemprop="url">블록 사용 등록</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/guide/entryjs/2016-05-22-add_new_blocks.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/guide/entryjs/2016-05-22-add_new_blocks.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://entryhw.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com/?ref_noscript" itemprop="url">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

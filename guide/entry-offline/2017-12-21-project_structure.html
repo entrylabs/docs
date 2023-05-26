@@ -76,9 +76,9 @@
         "image": "https://docs.playentry.org/images/logo.png",
         
         
-        "datePublished": "2023-05-25",
-        "dateCreated": "2023-05-25",
-        "dateModified": "2023-05-25",
+        "datePublished": "2023-05-26",
+        "dateCreated": "2023-05-26",
+        "dateModified": "2023-05-26",
         "url": "https://docs.playentry.org/guide/entry-offline/2017-12-21-project_structure.html",
         "description": "Entry Docs - 엔트리 개발 가이드&위키",
         "wordCount": "505",
@@ -89,7 +89,7 @@
         }
     }
 </script>
-    <meta name="generator" content="Hexo 5.4.0"></head>
+    <meta name="generator" content="Hexo 5.4.2"></head>
     <body class="docs">
         <div id="mobile-bar">
             <a class="menu-button"></a>
@@ -432,7 +432,7 @@
     
     <p>Electron 의 프로세스 구조에 따라, 엔트리 오프라인은 크게 main process 와 renderer process 디렉토리로 나뉘어져 있습니다.<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://electronjs.org/docs/tutorial/application-architecture#electron-application-architecture">Electron Documentation</a> 를 참고해주세요.</p>
 <p>아래의 구조는 주요 디렉토리를 정리한 트리입니다.<br>아래 구조는 지속적으로 변경될 수 있습니다.</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">entry-offline/</span><br><span class="line">├─ build/</span><br><span class="line">└─ src/</span><br><span class="line">   ├─ main/</span><br><span class="line">   │  ├─ electron/</span><br><span class="line">   │  ├─ static/</span><br><span class="line">   │  └─ views/</span><br><span class="line">   │</span><br><span class="line">   └─ renderer/</span><br><span class="line">      ├─ actions/</span><br><span class="line">      ├─ reducers/</span><br><span class="line">      ├─ components/</span><br><span class="line">      ├─ resources/</span><br><span class="line">      │  ├─ db/</span><br><span class="line">      │  ├─ fonts/</span><br><span class="line">      │  ├─ images/</span><br><span class="line">      │  ├─ lang/</span><br><span class="line">      │  ├─ modal/</span><br><span class="line">      │  └─ uploads/</span><br><span class="line">      │</span><br><span class="line">      ├─ helper/</span><br><span class="line">      └─ bower_components/</span><br><span class="line">         ├─ entryjs/</span><br><span class="line">         └─ entry-hw/</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">entry-offline/</span><br><span class="line">├─ build/</span><br><span class="line">└─ src/</span><br><span class="line">   ├─ main/</span><br><span class="line">   │  ├─ electron/</span><br><span class="line">   │  ├─ static/</span><br><span class="line">   │  └─ views/</span><br><span class="line">   │</span><br><span class="line">   └─ renderer/</span><br><span class="line">      ├─ actions/</span><br><span class="line">      ├─ reducers/</span><br><span class="line">      ├─ components/</span><br><span class="line">      ├─ resources/</span><br><span class="line">      │  ├─ db/</span><br><span class="line">      │  ├─ fonts/</span><br><span class="line">      │  ├─ images/</span><br><span class="line">      │  ├─ lang/</span><br><span class="line">      │  ├─ modal/</span><br><span class="line">      │  └─ uploads/</span><br><span class="line">      │</span><br><span class="line">      ├─ helper/</span><br><span class="line">      └─ bower_components/</span><br><span class="line">         ├─ entryjs/</span><br><span class="line">         └─ entry-hw/</span><br></pre></td></tr></table></figure>
 
 <h3 id="빌드용-파일-build"><a href="#빌드용-파일-build" class="headerlink" title="빌드용 파일 (build/)"></a>빌드용 파일 (build/)</h3><p>윈도우, 맥 빌드에 필요한 파일이 들어있습니다.   </p>
 <h3 id="주요-소스-src"><a href="#주요-소스-src" class="headerlink" title="주요 소스 (src/)"></a>주요 소스 (src/)</h3><p>엔트리 오프라인의 주요 코드가 위치합니다.</p>

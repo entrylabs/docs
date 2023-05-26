@@ -76,12 +76,12 @@
         "image": "https://docs.playentry.org/images/logo.png",
         
         
-        "datePublished": "2023-05-25",
-        "dateCreated": "2023-05-25",
-        "dateModified": "2023-05-25",
+        "datePublished": "2023-05-26",
+        "dateCreated": "2023-05-26",
+        "dateModified": "2023-05-26",
         "url": "https://docs.playentry.org/guide/entry-hw/add_bluetooth_hardware.html",
         "description": "Entry Docs - 엔트리 개발 가이드&위키",
-        "wordCount": "151",
+        "wordCount": "158",
         "publisher": "Entrylabs",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -89,7 +89,7 @@
         }
     }
 </script>
-    <meta name="generator" content="Hexo 5.4.0"></head>
+    <meta name="generator" content="Hexo 5.4.2"></head>
     <body class="docs">
         <div id="mobile-bar">
             <a class="menu-button"></a>
@@ -435,7 +435,7 @@
 <p>BLE 는 현재 개발중 단계이며, 업체의 개발은 아직 허용되지 않았습니다.<br>만약 필요하신 경우, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entry-hw/tree/develop/app/src/main/core/ble">develop#BLE</a> 를 를 참고해주세요. </p>
 </blockquote>
 <h2 id="모듈에-블루투스-설정하기"><a href="#모듈에-블루투스-설정하기" class="headerlink" title="모듈에 블루투스 설정하기"></a>모듈에 블루투스 설정하기</h2><p>일단 블루투스를 사용하기 위해서는 <code>.json</code>파일에 블루투스 정보를 추가해야 합니다.</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;hardware&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;bluetooth&quot;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;hardware&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;bluetooth&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 <p>하드웨어 타입이 블루투스인 경우에는 자동으로 COM Port 선택창이 나오게 되어있습니다.<br>블루투스 연결시 COM Port(Serial Port)를 선택해야 하는 이유는 SPP로 연결 할때 쌍으로 연결이 되기 때문입니다.<br>SPP연결 후에는 송신포트와 수신포트가 생기는데 실제는 송신포트로만 실제 사용하게 됩니다.<br>또한, 벤더명이 블루투스 동글의 드라이버명을 따라가기 때문에, 실제 어떠한 하드웨어인지를 자동으로 알기가 힘든 부분이 있습니다.<br>이 때문에 강제적으로 사용자가 COM Port 리스트에서 송신포트를 선택하도록 하고 있습니다. 기타 나머지 설정 및 코드는 블루투스이긴 하지만 실제로는 Serial Port와 동일하게 동작하기 때문에 똑같이 설정 하시면 됩니다.</p>
 
     

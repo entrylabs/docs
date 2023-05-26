@@ -76,12 +76,12 @@
         "image": "https://docs.playentry.org/images/logo.png",
         
         
-        "datePublished": "2023-05-25",
-        "dateCreated": "2023-05-25",
-        "dateModified": "2023-05-25",
+        "datePublished": "2023-05-26",
+        "dateCreated": "2023-05-26",
+        "dateModified": "2023-05-26",
         "url": "https://docs.playentry.org/guide/entry-offline/2018-10-30-custom_project.html",
         "description": "Entry Docs - 엔트리 개발 가이드&위키",
-        "wordCount": "396",
+        "wordCount": "405",
         "publisher": "Entrylabs",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -89,7 +89,7 @@
         }
     }
 </script>
-    <meta name="generator" content="Hexo 5.4.0"></head>
+    <meta name="generator" content="Hexo 5.4.2"></head>
     <body class="docs">
         <div id="mobile-bar">
             <a class="menu-button"></a>
@@ -434,7 +434,7 @@
 <p>이에 관련하여 이 문서에서는 자신이 개발한 entryjs 혹은 entry-hw 버전으로 교체하여 오프라인 프로젝트를 빌드하는 방법을 작성하였습니다.</p>
 <h2 id="연동-구조"><a href="#연동-구조" class="headerlink" title="연동 구조"></a>연동 구조</h2><p>엔트리 오프라인은 렌더러 프로세스에서 entryjs, entry-hw 프로젝트를 가져오는 구조입니다.</p>
 <p>아래는 bower.json 에 기술된 내용입니다.</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    <span class="attr">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;entry-hw&quot;</span>: <span class="string">&quot;https://github.com/entrylabs/entry-hw.git#[latest tag version]&quot;</span>,</span><br><span class="line">        <span class="comment">//other dependencies...</span></span><br><span class="line">        <span class="attr">&quot;entryjs&quot;</span>: <span class="string">&quot;#[latest tag version]&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;entry-hw&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://github.com/entrylabs/entry-hw.git#[latest tag version]&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="comment">//other dependencies...</span></span><br><span class="line">        <span class="attr">&quot;entryjs&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#[latest tag version]&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 <p>entry-hw 는 직접 github 에서 데이터를 가져오며, entryjs 는 bower 저장소에 등록된 버전을 가져오는 형태를 띄고 있습니다.</p>
 <p>만약 자신이 작업한 entry, entry-hw 를 오프라인 프로젝트에 반영하고자 한다면, 이를 수정하여 적용할 수 있습니다.</p>
 <blockquote>
@@ -446,7 +446,7 @@
 </blockquote>
 <p>배포판의 경우, entryjs 를 그대로 사용하는 것이 아닌 bundle 된 데이터와 offline 에서 필요한 몇가지 파일만을 추출해서 사용합니다.<br>오프라인 프로젝트는 이에 맞춘 구조로 이루어져 있으므로, 동일한 구조로 만들어 주어야 합니다.</p>
 <p>구조는 아래와 같습니다.</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">entryjs/</span><br><span class="line"> ...</span><br><span class="line">├─ dist/</span><br><span class="line">│  ├─ entry.css</span><br><span class="line">│  ├─ entry.js</span><br><span class="line">│  └─ entry.min.js</span><br><span class="line">├─ extern/</span><br><span class="line">├─ images/</span><br><span class="line">└─ src/</span><br><span class="line">   └─ playground/</span><br><span class="line">      ├─ blocks/</span><br><span class="line">      ├─ block_entry.js</span><br><span class="line">      └─ block_entry_mini.js</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">entryjs/</span><br><span class="line"> ...</span><br><span class="line">├─ dist/</span><br><span class="line">│  ├─ entry.css</span><br><span class="line">│  ├─ entry.js</span><br><span class="line">│  └─ entry.min.js</span><br><span class="line">├─ extern/</span><br><span class="line">├─ images/</span><br><span class="line">└─ src/</span><br><span class="line">   └─ playground/</span><br><span class="line">      ├─ blocks/</span><br><span class="line">      ├─ block_entry.js</span><br><span class="line">      └─ block_entry_mini.js</span><br></pre></td></tr></table></figure>
 
 <p>아래와 같은 구조를 위해 직접 파일을 옮겨도 되나, 기존 배포구조 빌드의 경우 <code>entryjs/script/build.sh</code> 를 따르고 있습니다.<br>bash script 이므로 windows 에서는 git bash 등의 쉘을 사용하셔야 할 수 있습니다.</p>
 <p>이와 같은 파일 구조를 entry-offline/src/renderer/bower_components/entry-js 에 복사하시면 됩니다.</p>

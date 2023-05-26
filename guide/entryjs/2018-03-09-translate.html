@@ -76,12 +76,12 @@
         "image": "https://docs.playentry.org/images/logo.png",
         
         
-        "datePublished": "2023-05-25",
-        "dateCreated": "2023-05-25",
-        "dateModified": "2023-05-25",
+        "datePublished": "2023-05-26",
+        "dateCreated": "2023-05-26",
+        "dateModified": "2023-05-26",
         "url": "https://docs.playentry.org/guide/entryjs/2018-03-09-translate.html",
         "description": "Entry Docs - 엔트리 개발 가이드&위키",
-        "wordCount": "317",
+        "wordCount": "322",
         "publisher": "Entrylabs",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -89,7 +89,7 @@
         }
     }
 </script>
-    <meta name="generator" content="Hexo 5.4.0"></head>
+    <meta name="generator" content="Hexo 5.4.2"></head>
     <body class="docs">
         <div id="mobile-bar">
             <a class="menu-button"></a>
@@ -437,7 +437,7 @@
 <p>추가적으로 블럭의 도움말을 설정하고자 하는 경우, ko.Helper.(블럭명) 의 형태로 추가하시면 됩니다.</p>
 </blockquote>
 <p>예)</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 기본 설정</span></span><br><span class="line">Entry.SAMPLE = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;SAMPLE&#x27;</span>,</span><br><span class="line">    <span class="attr">setZero</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 언어 적용</span></span><br><span class="line">Entry.SAMPLE.setLanguage = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="attr">ko</span>: &#123;</span><br><span class="line">            <span class="comment">// ko.js에 작성하던 내용</span></span><br><span class="line">            <span class="attr">template</span>: &#123;</span><br><span class="line">                <span class="attr">sample_block</span>: <span class="string">&quot;%1&quot;</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">en</span>: &#123;</span><br><span class="line">            <span class="comment">// en.js에 작성하던 내용</span></span><br><span class="line">            <span class="attr">template</span>: &#123;</span><br><span class="line">                <span class="attr">sample_block</span>: <span class="string">&quot;%1&quot;</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 기본 설정</span></span><br><span class="line"><span class="title class_">Entry</span>.<span class="property">SAMPLE</span> = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;SAMPLE&#x27;</span>,</span><br><span class="line">    <span class="attr">setZero</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 언어 적용</span></span><br><span class="line"><span class="title class_">Entry</span>.<span class="property">SAMPLE</span>.<span class="property">setLanguage</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="attr">ko</span>: &#123;</span><br><span class="line">            <span class="comment">// ko.js에 작성하던 내용</span></span><br><span class="line">            <span class="attr">template</span>: &#123;</span><br><span class="line">                <span class="attr">sample_block</span>: <span class="string">&quot;%1&quot;</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">en</span>: &#123;</span><br><span class="line">            <span class="comment">// en.js에 작성하던 내용</span></span><br><span class="line">            <span class="attr">template</span>: &#123;</span><br><span class="line">                <span class="attr">sample_block</span>: <span class="string">&quot;%1&quot;</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     
       <div class="guide-links">

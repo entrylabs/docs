@@ -6,6 +6,8 @@ category: 'Basic'
 order: 1
 ---
 
+> NOTICE! 개발 중 문제가 발생하면 [자주 발생하는 오류](/guide/basic/2023-05-25-common_problem.html) 페이지를 참고해 주시기 바랍니다.
+
 ### Git 설치 및 GitHub 회원 가입
 
 #### Git 설치

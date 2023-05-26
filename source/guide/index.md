@@ -25,16 +25,20 @@ updated: 2021-12-11
 현재 엔트리의 모든 기능을 다루고 있지는 않으며 점차 내용을 추가할 예정입니다.
 
 이 문서는 최신 버전과 다른 내용이 있을 수 있습니다.  
-이상한 점을 발견한 경우 [이슈 리포트](https://github.com/entrylabs/docs/issues) 또는 [엔트리 개발팀](mailto:dl_entry_hw@nts-corp.com)에게 문의 바랍니다.
+이상한 점을 발견한 경우 [이슈 리포트](https://github.com/entrylabs/docs/issues) 또는 [엔트리 고객센터](mailto:entry@connect.or.kr)에 문의 바랍니다.
 
 ## 문서 구성
 
 - 시작하기
-  - [엔트리 하드웨어 개발 튜토리얼](/guide/2018-07-30-tutorial.html): 소프트웨어 개발에 익숙하지 않은 하드웨어 개발자도 쉽게 따라할 수 있도록 간단한 예시를 사용하여 엔트리 하드웨어 개발 과정을 설명합니다.
+  - [엔트리 하드웨어 개발 튜토리얼](/guide/quick_start/2018-07-30-tutorial.html): 소프트웨어 개발에 익숙하지 않은 하드웨어 개발자도 쉽게 따라할 수 있도록 간단한 예시를 사용하여 엔트리 하드웨어 개발 과정을 설명합니다.
+- Basic
+  - [개발 환경 세팅](/guide/basic/setting_environment.html): 각 프로젝트를 설치하기 위해 필요한 개발환경 세팅을 설명합니다. **반드시 읽어보시길 바랍니다.**
+  - [PR 요청하기](/guide/basic/pull_request.html): 개발을 완료한 후 이를 Entry에 반영하는 방법을 설명합니다.
+  - [자주 하는 질문](/guide/basic/2016-07-07-faq.html): 개발 이외에 자주하는 질문에 대한 답변을 정리하였습니다.
+  - [자주 발생하는 오류](/guide/basic/2023-05-25-common_problem.html): 개발중 자주 발생하는 오류를 정리하였습니다.
 - [Entry JS](/guide/entryjs/2018-03-09-getting_started.html): 엔트리 하드웨어 블록을 작성하는 방법을 설명합니다.
 - [Entry Hardware](/guide/entry-hw/2016-05-01-getting_started.html): 엔트리 하드웨어 블록과 하드웨어 간 데이터를 주고받을 수 있게 하는 모듈을 작성하는 방법을 설명합니다.
-- [Entry Offline](/guide/entry-mini/2016-12-12-getting_started.html): Entry Offline을 사용하여 프로그램을 개발하는 방법을 설명합니다.
-- [완료된 개발 코드 Pull Request 하기](/guide/end.html): 개발을 완료한 후 이를 Entry에 반영하는 방법을 설명합니다.
+- [Entry Offline](/guide/entry-offline/2017-12-20-getting_started.html): Entry Offline을 사용하여 프로그램을 개발하는 방법을 설명합니다.
 - 기타
   - [Git 사용 방법](/guide/etc/2016-05-03-git_fork.html): 엔트리 오픈소스 프로젝트 이용에 필요한 Git을 이해하는 데 유용한 참고 문서를 정리했습니다.
-  - [FAQ](/guide/etc/2016-07-07-faq.html): 엔트리 오픈소스 프로젝트 관련 자주 묻는 질문과 답변을 정리했습니다.
+  - [FAQ](/guide/basic/2016-07-07-faq.html): 엔트리 오픈소스 프로젝트 관련 자주 묻는 질문과 답변을 정리했습니다.

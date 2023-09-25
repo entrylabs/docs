@@ -25,7 +25,7 @@ updated: 2021-12-11
 현재 엔트리의 모든 기능을 다루고 있지는 않으며 점차 내용을 추가할 예정입니다.
 
 이 문서는 최신 버전과 다른 내용이 있을 수 있습니다.  
-이상한 점을 발견한 경우 [이슈 리포트](https://github.com/entrylabs/docs/issues) 또는 [엔트리 고객센터](mailto:entry@connect.or.kr)에 문의 바랍니다.
+이상한 점을 발견한 경우 [이슈 리포트](https://github.com/entrylabs/docs/issues) 또는 [엔트리 고객센터](mailto:help@playentry.org)에 문의 바랍니다.
 
 ## 문서 구성
 

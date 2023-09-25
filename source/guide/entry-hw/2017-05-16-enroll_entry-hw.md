@@ -58,7 +58,7 @@ order: 5
 
 **제출 방법**
 
-- email(entry@connect.or.kr) 제출
+- email(help@playentry.org) 제출
 
 **신청서 내용 설명**
 

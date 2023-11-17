@@ -1,49 +1,29 @@
 ---
 layout: page
 title: 생김새 블록
-date: 2020-12-22 15:45:00
+date: 2023-11-16 12:53:00
 type: userGuide
 category: "블록"
 order: 14
 ---
 
-
-
 ## 1. 모양 보이기
 
-
-
 ![block-looks](images/block-looks-01.png)
-
-
 
 오브젝트를 보이게 합니다.
 
 
-
-
-
 ## 2. 모양 숨기기
 
-
-
 ![block-looks](images/block-looks-02.png)
-
-
 
 오브젝트를 실행 화면에서 숨깁니다.
 
 
-
-
-
 ## 3. `(안녕!)` 을(를) `(4)` 초 동안 `[말하기]`
 
-
-
 <img src="images/block-looks-03.png" alt="block-looks" />
-
-
 
 오브젝트가 입력한 내용(<img src="images/icon/value.png" alt="value" style="zoom:50%;" />)을 입력한 시간(<img src="images/icon/value.png" alt="value" style="zoom:50%;" />)동안 말풍선으로 보여줍니다.
 
@@ -51,17 +31,14 @@ order: 14
 
 그러나 시간은 그대로 유지됩니다.  시간이 지나면 말풍선은 사라지고 다음 블록이 동작합니다.
 
-
-
++ **선택할 수 있는 말풍선**
+  + `말하기` : 일반적인 모양의 말풍선입니다.<br><img src="images/block-looks-03-example-01.png" alt="말하기" style="zoom:40%;" />
+  + `생각하기` : 생각을 나타내는 구름 모양 말풍선입니다.<br><img src="images/block-looks-03-example-02.png" alt="말하기" style="zoom:40%;" />
 
 
 ## 4. `(안녕!)` 을(를) `[말하기]`
 
-
-
 ![block-looks](images/block-looks-04.png)
-
-
 
 오브젝트가 입력한 내용(<img src="images/icon/value.png" alt="value" style="zoom:50%;" />)을 말풍선으로 보여줍니다.
 
@@ -69,31 +46,21 @@ order: 14
 
 <img src="images/block-looks-03.png" alt="block-looks" style="zoom:60%;" />과 달리 다음 블록이 바로 동작해요.
 
-
-
++ **선택할 수 있는 말풍선**
+  + `말하기` : 일반적인 모양의 말풍선입니다.
+  + `생각하기` : 생각을 나타내는 구름 모양 말풍선입니다.
 
 
 ## 5. 말하기 지우기
 
-
-
 ![block-looks](images/block-looks-05.png)
-
-
 
 오브젝트의 말풍선을 지웁니다. 쉿!
 
 
-
-
-
 ## 6. `(모양1)` 모양으로 바꾸기
 
-
-
 ![block-looks](images/block-looks-06.png)
-
-
 
 오브젝트의 모양을 바꿉니다.
 
@@ -101,21 +68,12 @@ order: 14
 
 모양 값 블록(<img src="images\icon\icon-looksvalue.png" alt="icon-looksvalue" style="zoom:50%;" />)을 분리해 값 블록(<img src="images/icon/value.png" alt="value" style="zoom:50%;" />)에 숫자를 입력하면, 모양 목록에 해당하는 순서의 모양으로 바꿀 수 있습니다.
 
-
-
 <img src="images\window\looks-input-change.gif" alt="looks-input-change" style="zoom:65%;" />
-
-
-
 
 
 ## 7. `[다음]` 모양으로 바꾸기
 
-
-
 ![block-looks](images/block-looks-07.png)
-
-
 
 오브젝트의 모양을 모양 목록의 순서에 따라 이전/다음 모양으로 바꿉니다.
 
@@ -124,16 +82,9 @@ order: 14
 지금 모양이 마지막 순서라면 다음 모양은 첫 번째고, 지금 모양이 첫 번째 순서라면 이전 모양은 마지막 모양이에요.
 
 
-
-
-
 ## 8. `[색깔]` 효과를 `(10)` 만큼 주기
 
-
-
 ![block-looks](images/block-looks-08.png)
-
-
 
 오브젝트에 입력한 숫자(<img src="images/icon/value.png" alt="value" style="zoom:50%;" />)만큼 효과를 줍니다.
 
@@ -147,16 +98,9 @@ order: 14
   + `투명도` : 0~100 의 범위에서 투명 효과를 줍니다. 100 에 가까울수록 투명해요!
 
 
-
-
-
 ## 9. `[색깔]` 효과를 `(100)` (으)로 정하기
 
-
-
 ![block-looks](images/block-looks-09.png)
-
-
 
 오브젝트의 효과를 입력한 숫자(<img src="images/icon/value.png" alt="value" style="zoom:50%;" />)로 정합니다.
 
@@ -168,30 +112,16 @@ order: 14
   + `투명도` : 0~100 의 범위에서 투명 효과를 줍니다. 100 에 가까울수록 투명해요!
 
 
-
-
-
 ## 10. 효과 모두 지우기
 
-
-
 ![block-looks](images/block-looks-10.png)
-
-
 
 오브젝트의 효과를 모두 지웁니다.
 
 
-
-
-
 ## 11. 크기를 `(10)` 만큼 바꾸기
 
-
-
 ![block-looks](images/block-looks-11.png)
-
-
 
 오브젝트의 크기를 입력한 크기(<img src="images/icon/value.png" alt="value" style="zoom:50%;" />)만큼 바꿉니다.
 
@@ -200,16 +130,9 @@ order: 14
 오브젝트의 기본 크기는 100 이고, 1 보다 작아질 수 없어요.
 
 
-
-
-
 ## 12. 크기를 `(100)` (으)로 정하기
 
-
-
 ![block-looks](images/block-looks-12.png)
-
-
 
 오브젝트의 크기를 입력한 크기(<img src="images/icon/value.png" alt="value" style="zoom:50%;" />)로 정합니다.
 
@@ -218,48 +141,27 @@ order: 14
 작거나 커져요. 1 보다 작은 크기를 입력하면 크기는 1 입니다.
 
 
-
-
-
 ## 13. 상하 모양 뒤집기
 
-
-
 ![block-looks](images/block-looks-13.png)
-
-
 
 오브젝트의 모양을 세로 방향으로 뒤집습니다.
 
 오브젝트의 방향과 이동 방향, 중심점은 변하지 않아요.
 
 
-
-
-
 ## 14. 좌우 모양 뒤집기
 
-
-
 ![block-looks](images/block-looks-14.png)
-
-
 
 오브젝트의 모양을 가로 방향으로 뒤집습니다.
 
 오브젝트의 방향과 이동 방향, 중심점은 변하지 않아요.
 
 
-
-
-
 ## 15. `[맨 앞으로]` 보내기
 
-
-
 ![block-looks](images/block-looks-15.png)
-
-
 
 오브젝트가 실행 화면에서 보이는 순서를 바꿉니다.
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 함수 블록
-date: 2023-01-25 15:48:00
+date: 2023-11-17 15:32:00
 type: userGuide
 category: "블록"
 order: 21
@@ -18,7 +18,11 @@ order: 21
 ![block-function-define-example2](images/block-function-define-example2.png)  
 '집 밖으로 나가기'라는 목적을 달성하는 함수를 정의한다면 이렇게 만들 수 있겠네요.
 
+
+
 * * *
+
+
 
 ## 함수 만들기 화면
 
@@ -44,9 +48,9 @@ order: 21
 
 함수 정의하기 블록은 흐름 블록과 비슷하게 일반 블록을 감싸는 형태입니다.
 
-+ **기본 형태** (결과값을 가지지 않음)  
++ **기본 형태** (결괏값을 가지지 않음)  
 ![block-function-define](images/block-function-define.png)
-+ **결과값을 가지는 형태**  
++ **결괏값을 가지는 형태**  
 ![block-function-define-value](images/block-function-define-value.png)
 
 함수 정의하기 블록에 일반 블록을 조립하면, 함수가 동작할 때 각각의 블록이 조립된 순서대로 동작합니다.  
@@ -121,10 +125,10 @@ order: 21
 
 + **기본 형태** (일반 블록)  
 ![block-function](images/block-function.png)
-+ **결과값 형태** (값 블록)  
++ **결괏값 형태** (값 블록)  
 ![block-function-value](images/block-function-value.png)  
 함수 블록은 일반 블록의 형태 뿐만 아니라, 값 블록의 형태로도 만들어 줄 수 있어요.  
-함수에 조립된 블록들이 모두 동작한 후, 결과값을 반환하는 형태가 되는 거죠!  
+함수에 조립된 블록들이 모두 동작한 후, 결괏값을 반환하는 형태가 되는 거죠!  
 (그래서 최종적으로 만들어 지는 함수 블록도 값 블록 모양이 되는 거에요.)
 
 블록 조립소에서 함수 블록을 조립해 사용할 때는, 함수 블록의 `(문자/숫자값 1)` 자리에 입력된 값(`(40)`)이 함수를 정의할 때 사용한 일반 블록에 결합된 모든 `(문자/숫자값 1)`의 자리에 똑같이 들어가서 동작하게 됩니다.

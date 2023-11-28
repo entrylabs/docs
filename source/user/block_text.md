@@ -1,13 +1,13 @@
 ---
 layout: page
 title: 글상자 블록
-date: 2023-11-16 16:23:00
+date: 2023-11-17 17:31:00
 type: userGuide
 category: "블록"
 order: 16
 ---
 
-## 1. 글상자 `[글상자]` 의 내용
+## 1. (글상자 `[글상자]` 의 내용)
 
 ![block-text](images/block-text-01.png)
 
@@ -66,7 +66,7 @@ order: 16
   + `나눔고딕`, `나눔명조`, `나눔바른펜`, `나눔손글씨`, `나눔스퀘어라운드`, `마루 부리`, `본고딕`, `D2 Coding`, `잘난체`, `디자인하우스체`, `둥근모꼴체`, `어비마이센체`, `산돌 코믹스탠실`, `산돌 초록우산 어린이`, `산돌 씨네마극장`, `산돌 맵씨`, `산돌 별이샤방샤방`, `산돌 목각`, `산돌 용비어천가`
 
 
-## 7. 글씨색을 [<span style="color:red">◼︎</span>] (으)로 바꾸기
+## 7. 글씨색을 [<span style="color:red">◼︎</span>] / `(#FF0000)` (으)로 바꾸기
 
 ![block-text](images/block-text-07.png)
 
@@ -75,7 +75,7 @@ order: 16
 색깔 상자를 클릭하면 팔레트 모드에서 색깔을 선택하거나 슬라이더 모드에서 색깔을 조절할 수 있어요.
 
 
-## 8. 배경색을 [<span style="color:red">◼︎</span>] (으)로 바꾸기
+## 8. 배경색을 [<span style="color:red">◼︎</span>] / `(#FF0000)` (으)로 바꾸기
 
 ![block-text](images/block-text-08.png)
 

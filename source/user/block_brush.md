@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 붓 블록
-date: 2023-11-16 13:41:00
+date: 2023-11-17 17:30:00
 type: userGuide
 category: "블록"
 order: 15
@@ -35,7 +35,7 @@ order: 15
 
 
 
-## 4. 그리기 색을 [<span style="color:red">◼︎</span>] (으)로 정하기 / 그리기 색을 `(#FF0000)` (으)로 정하기
+## 4. 그리기 색을 [<span style="color:red">◼︎</span>] / `(#FF0000)` (으)로 정하기
 
 ![block-brush](images/block-brush-04.png)
 
@@ -82,7 +82,7 @@ order: 15
 오브젝트가 더 이상 선을 그리지 않고 채우기를 멈춥니다.
 
 
-## 9. 채우기 색을 [<span style="color:red">◼︎</span>] (으)로 정하기 / 채우기 색을 `(#FF0000)` (으)로 정하기
+## 9. 채우기 색을 [<span style="color:red">◼︎</span>] / `(#FF0000)` (으)로 정하기
 
 ![block-brush](images/block-brush-09.png)
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 테이블 불러오기
-date: 2023-11-28 12:20:00
+date: 2023-11-29 12:22:00
 type: userGuide
 category: "팝업"
 order: 43
@@ -12,7 +12,7 @@ order: 43
 <img src="images/popup/button-load-table.png" alt="button-load-table" style="zoom:40%;" />
 
 
-데이터 분석 블록 꾸러미에서 '테이블 불러오기' 버튼을 클릭하면 나타나는 테이블 불러오기 팝업이 표시됩니다.  
+데이터 분석 블록 꾸러미에서 '테이블 불러오기' 버튼을 누르면 테이블 불러오기 팝업이 표시됩니다.  
 작품에서 활용하고자 하는 테이블을 선택하고 '추가' 버튼을 클릭하면 데이터 분석 블록이 블록 꾸러미에 표시됩니다.
 
 

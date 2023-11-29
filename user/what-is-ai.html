@@ -2,21 +2,21 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
-        <title>모델 학습이란? — Entry Docs</title>
+        <title>인공지능(AI)이란? — Entry Docs</title>
         <meta charset="utf-8">
         <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
 
-        <link rel="canonical" href="https://docs.playentry.org/user/block_model.html">
+        <link rel="canonical" href="https://docs.playentry.org/user/what-is-ai.html">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="모델 학습이란? — Entry Docs">
+        <meta property="og:title" content="인공지능(AI)이란? — Entry Docs">
         <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
         <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="모델 학습이란? — Entry Docs">
+        <meta name="twitter:title" content="인공지능(AI)이란? — Entry Docs">
         <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
         <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
 
@@ -72,20 +72,20 @@
             "@type": "Person",
             "name": "Entrylabs"
         },
-        "headline": "모델 학습이란?",
+        "headline": "인공지능(AI)이란?",
         "image": "https://docs.playentry.org/images/logo.png",
         
         
-        "datePublished": "2023-11-17",
-        "dateCreated": "2023-11-17",
+        "datePublished": "2023-11-29",
+        "dateCreated": "2023-11-29",
         "dateModified": "2023-11-29",
-        "url": "https://docs.playentry.org/user/block_model.html",
+        "url": "https://docs.playentry.org/user/what-is-ai.html",
         "description": "Entry Docs - 엔트리 개발 가이드&위키",
-        "wordCount": "373",
+        "wordCount": "84",
         "publisher": "Entrylabs",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://docs.playentry.org/user/block_model.html"
+            "@id": "https://docs.playentry.org/user/what-is-ai.html"
         }
     }
 </script>
@@ -355,7 +355,7 @@
                     
                 
                 <li>
-                    <a href="/user/block_ai.html" class="sidebar-link" itemprop="url">인공지능(AI)이란?</a>
+                    <a href="/user/what-is-ai.html" class="sidebar-link current" itemprop="url">인공지능(AI)이란?</a>
                 </li>
             
                 
@@ -419,7 +419,55 @@
                     
                 
                 <li>
-                    <a href="/user/block_model.html" class="sidebar-link current" itemprop="url">모델 학습이란?</a>
+                    <a href="/user/what-is-model.html" class="sidebar-link" itemprop="url">모델 학습이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_model_image.html" class="sidebar-link" itemprop="url">AI 모델 > 분류 - 이미지 모델</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_model_text.html" class="sidebar-link" itemprop="url">AI 모델 > 분류 - 텍스트 모델</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_model_sound.html" class="sidebar-link" itemprop="url">AI 모델 > 분류 - 소리 모델</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_model_classification.html" class="sidebar-link" itemprop="url">AI 모델 > 분류 - 숫자 모델</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_model_prediction.html" class="sidebar-link" itemprop="url">AI 모델 > 예측 - 숫자 모델</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_model_clustering.html" class="sidebar-link" itemprop="url">AI 모델 > 군집 - 숫자 모델</a>
                 </li>
             
                 
@@ -454,42 +502,19 @@
       
     
     
-      <h1>모델 학습이란?</h1>
+      <h1>인공지능(AI)이란?</h1>
     
-    <p>AI 블록을 사용해 봤다면, 이제 직접 인공지능 모델을 한 번 만들어볼까요?<br>엔트리에서는 <strong>이미지/음성/텍스트를 각각의 클래스로 분류할 수 있는 모델</strong>, <strong>숫자를 분류/예측하거나 군집으로 만드는 모델</strong> 등을 학습할 수 있어요. 엔트리에서 학습한 모델은 블록으로 조립해 작품에서도 활용할 수 있어요. </p>
-<p>모델을 학습하고 나면 사용자가 학습하지 않은 새로운 데이터를 입력해도, 모델이 스스로 새로운 데이터를 학습한 모델에 넣어 나오는 결과값을 알려준답니다.</p>
-<ul>
-<li>모델 학습하기는 크롬 사용을 권장합니다. 다른 브라우저에는 동작하지 않거나, 모델 학습 속도가 (상상 이상으로) 느릴 수 있습니다.</li>
-<li>모델은 최대 10개까지 학습시킬 수 있습니다. 학습한 모델이 10개를 초과하면 1개 이상의 모델을 비활성화해야 새로운 모델을 학습시킬 수 있습니다.</li>
-<li>비활성화된 모델은 기존 작품에서 더 이상 동작하지 않고, 다시 활성화하기 전에는 사용할 수 없습니다. 모델을 비활성화 할 때는 이미 공유한 작품에 해당 모델이 추가되지 않았는지 꼭 확인해 주세요.</li>
-<li>학습한 모델을 추가한 작품에서 코드 보기를 누르거나 작품을 사본으로 저장해도 모델은 확인할 수 없습니다. 학습한 모델은 모델을 만든 사용자만 확인할 수 있습니다.</li>
-<li>이미 학습이 완료된 학습 데이터는 서버 환경에 따라 비정기적으로 삭제될 수 있습니다. 학습 데이터가 삭제되더라도 학습한 모델 자체는 유지됩니다.</li>
-<li>모델 학습에 사용하는 학습 데이터는 서버에 저장됩니다. 저작권에 문제가 없고 개인정보가 아닌 데이터만 입력해 주세요. 이를 지키지 않아 발생하는 문제는 모두 사용자의 책임입니다.</li>
-</ul>
-<h2 id="학습할-모델-선택하기-gt-새로-만들기"><a href="#학습할-모델-선택하기-gt-새로-만들기" class="headerlink" title="학습할 모델 선택하기 &gt; 새로 만들기"></a>학습할 모델 선택하기 &gt; 새로 만들기</h2><p><img src="images/window/model-learning.png" alt="model-learning"></p>
-<p>인공지능 블록 카테고리의 블록 꾸러미에 있는 ‘인공지능 모델 학습하기’ 버튼을 클릭하면 나타나는 팝업 창입니다. (새 탭에서 열립니다.)</p>
-<p>학습할 데이터의 유형을 선택하고 모델 학습을 완료하면 해당 유형의 블록을 블록 꾸러미에 추가해요.</p>
-<p>아래는 학습할 수 있는 데이터의 유형입니다.</p>
-<ul>
-<li><strong>분류: 이미지</strong><br>업로드 또는 웹캠으로 촬영한 이미지를 분류할 수 있는 모델을 학습합니다.</li>
-<li><strong>분류: 텍스트</strong><br>직접 작성하거나 파일로 업로드한 텍스트를 분류할 수 있는 모델을 학습합니다.</li>
-<li><strong>분류: 음성</strong><br>마이크로 녹음하거나 파일로 업로드한 음성을 분류할 수 있는 모델을 학습합니다.</li>
-<li><strong>분류: 숫자</strong><br>테이블의 숫자 데이터를 가장 가까운 이웃(K개)을 기준으로 각각의 클래스로 분류하는 모델을 학습합니다.</li>
-<li><strong>예측: 숫자</strong><br>테이블의 숫자 데이터를 핵심 속성으로 삼아 예측 속성을 찾아내는 선형 회귀 모델을 학습합니다.</li>
-<li><strong>군집: 숫자</strong><br>테이블의 숫자 데이터를 핵심 속성으로 삼아 정한 수(K개)만큼의 묶음으로 만드는 모델을 학습합니다.</li>
-</ul>
-<p><img src="images/window/learning-my-models.png" alt="learning-my-models"></p>
-<h2 id="학습할-모델-선택하기-gt-나의-모델"><a href="#학습할-모델-선택하기-gt-나의-모델" class="headerlink" title="학습할 모델 선택하기 &gt; 나의 모델"></a>학습할 모델 선택하기 &gt; 나의 모델</h2><p>‘나의 모델’ 탭에서는 이미 학습한 모델을 다시 학습하거나 바로 추가할 수 있습니다. 하나의 작품에서 하나의 모델만 선택할 수 있어요.</p>
-<p><img src="images/window/learning-my-models-activate.png" alt="learning-my-models-activate"></p>
-<p>오른쪽의 ‘비활성화 모델 함께보기’ 토글 버튼을 클릭하면 학습한 모델을 활성화/비활성화할 수 있습니다.</p>
-<p>비활성화한 각 모델은 오른쪽 위의 [X] 버튼을 눌러 모델과 학습 데이터를 삭제할 수 있어요. 해당 모델을 적용해 만든 작품은 정상적으로 동작하지 않게 됩니다.</p>
-<p>모델을 비활성화하고 삭제할 때는 이미 공유한 작품에 적용되어 있지는 않은지 꼭 확인해주세요.</p>
+    <p>인공지능(AI)이란, 인간의 지혜나 사고 방식을 모방해서 학습해, 인간과 유사한 능력을 가지는 프로그램입니다. 그 능력은 인간과 비슷할 수도, 훨씬 뛰어날 수도 있어요. 그만큼 가능성은 무궁무진하답니다.</p>
+<p>인공지능은 다양한 방식으로 우리의 삶 속에 존재해요.</p>
+<p>스마트폰을 사용하는 패턴을 학습해서 배터리를 절약하거나, ‘유튜브’에서 여러분이 좋아할 만한 영상을 추천해줍니다. ‘네이버 클로바’ ‘구글 어시스턴트’, ‘애플 시리’, ‘카카오 미니’ 등의 인공지능(스피커)과 소통하기도 해요.</p>
+<p>이렇게 우리 일상에 가까이 있으면서 우리를 편리하게 해 주는 인공지능을 엔트리에서 체험하고 활용해볼 수 있어요. 또한 인공지능 모델을 직접 학습시키며 머신러닝의 원리를 자연스럽게 배워볼 수 있습니다.</p>
+<p>※ 모든 인공지능 블록은 인터넷 연결이 필요합니다.</p>
 
     
     <div class="footer">
       Caught a mistake or want to contribute to the documentation?
-      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/user/block_model.md" target="_blank"> -->
-      <a href="https://github.com/entrylabs/docs/blob/master/source/user/block_model.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/user/what-is-ai.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/user/what-is-ai.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
         Edit this page on Github!
       </a>
     </div>

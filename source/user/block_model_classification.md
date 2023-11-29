@@ -1,7 +1,7 @@
 ---
 layout: page
-title: AI 모델 > 분류: 숫자 모델
-date: 2023-11-17 18:06:00
+title: AI 모델 > 분류 - 숫자 모델
+date: 2023-11-29 18:24:00
 type: userGuide
 category: "블록"
 order: 35
@@ -89,7 +89,7 @@ order: 35
 
 
 
-## 2. <모델이 학습되었는가?>
+## 2. 모델이 학습되었는가?
 
 ![block-ai-model-clsf-02](images/block-ai-model-clsf-02.png)
 
@@ -170,7 +170,7 @@ order: 35
 
 
 
-## 8. <핵심 속성1 `(10)` 핵심 속성2 `(10)` 의 분류 결과가 `[클래스1]` 인가?>
+## 8. 핵심 속성1 `(10)` 핵심 속성2 `(10)` 의 분류 결과가 `[클래스1]` 인가?
 
 ![block-ai-model-clsf-08](images/block-ai-model-clsf-08.png)
 

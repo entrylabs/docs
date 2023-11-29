@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AI 블록 > 얼굴 인식
-date: 2023-11-24 19:13:00
+date: 2023-11-29 18:11:00
 type: userGuide
 category: "블록"
 order: 28
@@ -43,7 +43,7 @@ order: 28
 
 
 
-## 3. <카메라가 연결되었는가?>
+## 3. 카메라가 연결되었는가?
 
 ![block-ai-video](images/block-ai-video-03.png)
 
@@ -73,7 +73,7 @@ order: 28
 
 
 
-## 6. (`[자신]` 에서 감지한 `[움직임]` 값)
+## 6. `[자신]` 에서 감지한 `[움직임]` 값
 
 ![block-ai-video](images/block-ai-video-06.png)
 
@@ -125,7 +125,7 @@ order: 28
 
 
 
-## 10. <얼굴을 인식했는가?>
+## 10. 얼굴을 인식했는가?
 
 ![block-ai-face](images/block-ai-face-04.png)
 
@@ -134,7 +134,7 @@ order: 28
 얼굴 인식을 시작하지 않았다면 항상 거짓으로 판단해요.
 
 
-## 11. (인식한 얼굴의 수)
+## 11. 인식한 얼굴의 수
 
 ![block-ai-face](images/block-ai-face-05.png)
 
@@ -163,7 +163,7 @@ order: 28
 
 
 
-## 14. <`[1]` 번째 얼굴의 성별이 `[여성]` 인가?>
+## 14. `[1]` 번째 얼굴의 성별이 `[여성]` 인가?
 
 ![block-ai-face](images/block-ai-face-08.png)
 
@@ -171,7 +171,7 @@ order: 28
 
 
 
-## 15. <`[1]` 번째 얼굴의 나이 `[=]` `(10)` 인가?>
+## 15. `[1]` 번째 얼굴의 나이 `[=]` `(10)` 인가?
 
 ![block-ai-face](images/block-ai-face-09.png)
 
@@ -179,7 +179,7 @@ order: 28
 
 
 
-## 16. <`[1]` 번째 얼굴의 감정이 `[분노]` 인가?>
+## 16. `[1]` 번째 얼굴의 감정이 `[분노]` 인가?
 
 ![block-ai-face](images/block-ai-face-10.png)
 
@@ -190,7 +190,7 @@ order: 28
   + `분노`, `혐오`, `두려움`, `행복`, `무표정`, `슬픔`, `놀람`
 
 
-## 17. (`[1]` 번째 얼굴의 `[왼쪽 눈]`의 `[x]` 좌표)
+## 17. `[1]` 번째 얼굴의 `[왼쪽 눈]`의 `[x]` 좌표
 
 ![block-ai-face](images/block-ai-face-11.png)
 
@@ -202,7 +202,7 @@ order: 28
 
 
 
-## 18. (`[1]` 번째 얼굴의 `[성별]`)
+## 18. `[1]` 번째 얼굴의 `[성별]`
 
 ![block-ai-face](images/block-ai-face-12.png)
 

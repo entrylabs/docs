@@ -1,13 +1,13 @@
 ---
 layout: page
 title: 글상자 블록
-date: 2023-11-17 17:31:00
+date: 2023-11-29 18:29:00
 type: userGuide
 category: "블록"
 order: 16
 ---
 
-## 1. (글상자 `[글상자]` 의 내용)
+## 1. 글상자 `[글상자]` 의 내용
 
 ![block-text](images/block-text-01.png)
 

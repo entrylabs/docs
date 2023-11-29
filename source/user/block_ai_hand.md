@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AI 블록 > 손 인식
-date: 2023-11-27 15:41:00
+date: 2023-11-29 18:12:00
 type: userGuide
 category: "블록"
 order: 30
@@ -53,7 +53,7 @@ order: 30
 
 
 
-## 3. <카메라가 연결되었는가?>
+## 3. 카메라가 연결되었는가?
 
 ![block-ai-video](images/block-ai-video-03.png)
 
@@ -83,7 +83,7 @@ order: 30
 
 
 
-## 6. (`[자신]` 에서 감지한 `[움직임]` 값)
+## 6. `[자신]` 에서 감지한 `[움직임]` 값
 
 ![block-ai-video](images/block-ai-video-06.png)
 
@@ -135,7 +135,7 @@ order: 30
 
 
 
-## 10. <손을 인식했는가?>
+## 10. 손을 인식했는가?
 
 ![block-ai-hand](images/block-ai-hand-04.png)
 
@@ -145,7 +145,7 @@ order: 30
 
 
 
-## 11. (인식한 손의 수)
+## 11. 인식한 손의 수
 
 ![block-ai-hand](images/block-ai-hand-05.png)
 
@@ -174,7 +174,7 @@ order: 30
 
 
 
-## 14. (`[1]` 번째 손의 `[엄지]` `[끝]` 의 `[x]` 좌표)
+## 14. `[1]` 번째 손의 `[엄지]` `[끝]` 의 `[x]` 좌표
 
 ![block-ai-hand](images/block-ai-hand-08.png)
 
@@ -186,7 +186,7 @@ order: 30
 
 
 
-## 15. <`[1]` 번째 손이 `[오른손]` 인가?>
+## 15. `[1]` 번째 손이 `[오른손]` 인가?
 
 ![block-ai-hand](images/block-ai-hand-09.png)
 
@@ -194,14 +194,14 @@ order: 30
 
 
 
-## 16. (`[1]` 번째 손)
+## 16. `[1]` 번째 손
 
 ![block-ai-hand](images/block-ai-hand-10.png)
 
 인식한 손이 오른손인지 왼손인지 가져오는 값 블록입니다.
 
 
-## 17. <`[1]` 번째 손의 모양이 `[쥔 손]` 인가?>
+## 17. `[1]` 번째 손의 모양이 `[쥔 손]` 인가?
 
 ![block-ai-hand](images/block-ai-hand-11.png)
 
@@ -212,7 +212,7 @@ order: 30
   + `쥔 손`, `편 손`, `가리킨 손`, `엄지 아래로`, `엄지 위로`, `브이 사인`, `사랑해`
 
 
-## 18. (`[1]` 번째 손의 모양)
+## 18. `[1]` 번째 손의 모양
 
 ![block-ai-hand](images/block-ai-hand-12.png)
 

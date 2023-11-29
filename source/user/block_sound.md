@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 소리 블록
-date: 2023-11-28 15:10:00
+date: 2023-11-29 18:29:00
 type: userGuide
 category: "블록"
 order: 17
@@ -79,7 +79,7 @@ order: 17
 소리 값 블록(<img src="images\icon\icon-soundvalue.png" alt="icon-soundvalue" style="zoom:50%;" />)을 분리해 값 블록(<img src="images/icon/value.png" alt="value" style="zoom:50%;" />)에 숫자를 입력하면, 소리 목록에 해당하는 순서의 소리를 재생할 수 있습니다.
 
 
-## 7. (`([소리])` 소리의 길이)
+## 7. `([소리])` 소리의 길이
 
 ![block-sound](images/block-sound-07.png)
 
@@ -88,7 +88,7 @@ order: 17
 목록 상자(<img src="images/icon/dropdown-sound.png" style="zoom:50%;" />)를 클릭하면 소리를 선택할 수 있어요.
 
 
-## 8. (소리 크기)
+## 8. 소리 크기
 
 ![block-sound](images/block-sound-08.png)
 
@@ -118,7 +118,7 @@ order: 17
 기본 크기는 100(%)이고, 0~100% 범위에서 조절할 수 있어요.
 
 
-## 11. (소리 빠르기)
+## 11. 소리 빠르기
 
 ![block-sound](images/block-sound-11.png)
 

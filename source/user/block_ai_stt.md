@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AI 블록 > 음성 인식
-date: 2023-11-20 18:21:00
+date: 2023-11-29 18:29:00
 type: userGuide
 category: "블록"
 order: 26
@@ -22,7 +22,7 @@ order: 26
 
 
 
-## 1. <마이크가 연결되었는가?>
+## 1. 마이크가 연결되었는가?
 
 ![block-ai-tts](images/block-ai-tts-01.png)
 
@@ -30,7 +30,7 @@ order: 26
 
 
 
-## 2. (마이크 소리 크기)
+## 2. 마이크 소리 크기
 
 ![block-ai-tts](images/block-ai-tts-02.png)
 
@@ -88,7 +88,7 @@ order: 26
 
 
 
-## 6. (음성을 문자로 바꾼 값)
+## 6. 음성을 문자로 바꾼 값
 
 ![block-ai-tts](images/block-ai-tts-06.png)
 

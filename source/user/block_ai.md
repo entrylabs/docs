@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 인공지능 블록 > 인공지능이란?
-date: 2021-01-11 09:25:00
+title: 인공지능(AI)이란?
+date: 2023-11-17 17:50:00
 type: userGuide
 category: "블록"
 order: 23

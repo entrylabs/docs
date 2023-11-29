@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 확장 블록
-date: 2021-01-11 10:08:00
+date: 2023-11-24 17:23:00
 type: userGuide
 category: "블록"
-order: 36
+order: 38
 ---
 
 ## 확장 블록 불러오기 팝업
@@ -24,11 +24,13 @@ order: 36
 + **자연재난 국민행동요령** : 자연재난 발생 시 국민이 지켜야 하는 기본적인 행동요령에 대한 블록 모음입니다. [국민안전처 제공]
 + **행사** : 국내 지역별 다양한 행사 및 축제와 관련된 블록 모음입니다. [한국관광공사 제공]  
 
+
 ---
 
-# 날씨
 
-![extention-select-weather](images/window/extention-select-weather.jpg)
+## 날씨
+
+![weather](images/card/weather.png)
 
 기온, 강수량, 미세먼지 농도 등 한국의 날씨와 관련된 블록 모음입니다. [웨더아이 제공]
 
@@ -78,7 +80,7 @@ order: 36
 
 
 
-## 3. `[오늘]` `[서울]` `[전체]` 의 `[최저기온(ºc)]`
+## 3. (`[오늘]` `[서울]` `[전체]` 의 `[최저기온(ºc)]`)
 
 
 
@@ -94,7 +96,7 @@ order: 36
 
 
 
-## 4. 현재 `[서울]` `[전체]` 의 `[기온(ºc)]`
+## 4. (현재 `[서울]` `[전체]` 의 `[기온(ºc)]`)
 
 
 
@@ -112,7 +114,7 @@ order: 36
 
 
 
-## 5. 오늘 `[서울]` `[전체]` 의 `[00]` 시 기온
+## 5. (오늘 `[서울]` `[전체]` 의 `[00]` 시 기온)
 
 
 
@@ -123,12 +125,14 @@ order: 36
 선택한 지역에서 오늘의 시간대별 기온을 가져오는 값 블록입니다.
 
 목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;" />)를 클릭하면 지역과 시간대를 선택할 수 있어요.  
+
 　
 ---
 
-#  생활안전 국민행동요령
 
-![extention-select-lifesafety](images/window/extention-select-lifesafety.jpg)
+##  생활안전 국민행동요령
+
+![lifesafety](images/card/lifesafety.png)
 
 
 
@@ -142,7 +146,7 @@ order: 36
   + 선택한 생활 속 문제에 따라 달라집니다.
 
 
-## 6. `[응급처치]` 에서 `[화상 처치]` 방법의 수
+## 1. (`[응급처치]` 에서 `[화상 처치]` 방법의 수)
 
 
 ![block-extension-lifesafety](images/block-extension-lifesafety-01.png)
@@ -156,7 +160,7 @@ order: 36
 
 
 
-## 7. `[응급처치]` 에서 `[화상 처치]` 방법 `(1)` 번째 항목
+## 2. (`[응급처치]` 에서 `[화상 처치]` 방법 `(1)` 번째 항목)
 
 
 
@@ -168,13 +172,15 @@ order: 36
 
 목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;" />)를 클릭하면 생활 속 문제와 행동요령을 선택할 수 있어요.  
 　
+
 ---
 
-# 자연재난 국민행동요령
+
+## 자연재난 국민행동요령
 
 
 
-![extention-select-disaster](images/window/extention-select-disaster.jpg)
+![disaster](images/card/disaster.png)
 
 
 
@@ -191,7 +197,7 @@ order: 36
 
 
 
-## 8. `[태풍]` `[태풍이 오기 전]` 해야할 행동요령 수
+## 1. (`[태풍]` `[태풍이 오기 전]` 해야할 행동요령 수)
 
 
 
@@ -205,7 +211,7 @@ order: 36
 
 
 
-## 9. 자연재난 `[태풍]` `[태풍이 오기 전]` 해야할 행동요령 `(1)` 번째 항목
+## 2. (자연재난 `[태풍]` `[태풍이 오기 전]` 해야할 행동요령 `(1)` 번째 항목)
 
 
 
@@ -217,13 +223,15 @@ order: 36
 
 목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;" />)를 클릭하면 자연재해와 상황을 선택할 수 있어요.  
 　
+
 ---
 
-# 행사
+
+## 행사
 
 
 
-![extention-select-festival](images/window/extention-select-festival.jpg)
+![festival](images/card/festival.png)
 
 
 
@@ -242,7 +250,7 @@ order: 36
 
 
 
-## 10. `[서울]` `[1월]` 행사의 수
+## 1. (`[서울]` `[1월]` 행사의 수)
 
 
 
@@ -258,7 +266,7 @@ order: 36
 
 
 
-## 11. `[서울]` `[1월]` 행사 `(1)` 번째 항목의 `[제목]`
+## 2. (`[서울]` `[1월]` 행사 `(1)` 번째 항목의 `[제목]`)
 
 
 

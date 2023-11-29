@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AI 블록 > 사람 인식
-date: 2023-11-27 15:55:00
+date: 2023-11-29 18:15:00
 type: userGuide
 category: "블록"
 order: 27
@@ -43,7 +43,7 @@ order: 27
 
 
 
-## 3. <카메라가 연결되었는가?>
+## 3. 카메라가 연결되었는가?
 
 ![block-ai-video](images/block-ai-video-03.png)
 
@@ -73,7 +73,7 @@ order: 27
 
 
 
-## 6. (`[자신]` 에서 감지한 `[움직임]` 값)
+## 6. `[자신]` 에서 감지한 `[움직임]` 값
 
 ![block-ai-video](images/block-ai-video-06.png)
 
@@ -125,7 +125,7 @@ order: 27
 
 
 
-## 10. <사람을 인식했는가?>
+## 10. 사람을 인식했는가?
 
 ![block-ai-human](images/block-ai-human-04.png)
 
@@ -135,7 +135,7 @@ order: 27
 
 
 
-## 11. (인식한 사람의 수)
+## 11. 인식한 사람의 수
 
 ![block-ai-human](images/block-ai-human-05.png)
 
@@ -165,7 +165,7 @@ order: 27
 
 
 
-## 14. (`[1]` 번째 사람의 `[코]` 의 `[x]` 좌표)
+## 14. `[1]` 번째 사람의 `[코]` 의 `[x]` 좌표
 
 ![block-ai-human](images/block-ai-human-08.png)
 

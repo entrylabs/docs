@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AI 블록 > 번역
-date: 2023-11-20 18:23:00
+date: 2023-11-29 18:18:00
 type: userGuide
 category: "블록"
 order: 24
@@ -24,7 +24,7 @@ order: 24
 목록 상자(<img src="images/icon/dropdown-ai.png" style="zoom:50%;" />)를 클릭하면 번역할 언어를 선택할 수 있어요.
 
 
-## 2. (`(엔트리)` 의 언어)
+## 2. `(엔트리)` 의 언어
 
 ![block-ai-translation](images/block-ai-translation-02.png)
 

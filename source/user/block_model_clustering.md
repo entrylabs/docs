@@ -1,7 +1,7 @@
 ---
 layout: page
-title: AI 모델 > 군집: 숫자 모델
-date: 2023-11-17 18:10:00
+title: AI 모델 > 군집 - 숫자 모델
+date: 2023-11-29 18:25:00
 type: userGuide
 category: "블록"
 order: 37
@@ -87,7 +87,7 @@ order: 37
 
 
 
-## 2. <모델이 학습되었는가?>
+## 2. 모델이 학습되었는가?
 
 ![block-ai-model-clst-02](images/block-ai-model-clst-02.png)
 

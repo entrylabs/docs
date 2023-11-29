@@ -1,7 +1,7 @@
 ---
 layout: page
-title: AI 모델 > 분류: 소리 모델
-date: 2023-11-17 17:34:00
+title: AI 모델 > 분류 - 소리 모델
+date: 2023-11-29 18:18:00
 type: userGuide
 category: "블록"
 order: 34
@@ -116,7 +116,7 @@ order: 34
 
 목록 상자(<img src="images/icon/dropdown-ai.png" style="zoom:50%;" />)를 클릭하면 정확도를 가져올 클래스를 선택할 수 있어요.
 
-## 4. <분류 결과가 `[클래스]` 인가?>
+## 4. 분류 결과가 `[클래스]` 인가?
 
 ![block-ai-model-05](images/block-ai-model-05.png)
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AI 블록 > 사물 인식
-date: 2023-11-24 17:10:00
+date: 2023-11-29 18:16:00
 type: userGuide
 category: "블록"
 order: 29
@@ -43,7 +43,7 @@ order: 29
 
 
 
-## 3. <카메라가 연결되었는가?>
+## 3. 카메라가 연결되었는가?
 
 ![block-ai-video](images/block-ai-video-03.png)
 
@@ -73,7 +73,7 @@ order: 29
 
 
 
-## 6. (`[자신]` 에서 감지한 `[움직임]` 값)
+## 6. `[자신]` 에서 감지한 `[움직임]` 값
 
 ![block-ai-video](images/block-ai-video-06.png)
 
@@ -125,7 +125,7 @@ order: 29
 
 
 
-## 10. <사물을 인식했는가?>
+## 10. 사물을 인식했는가?
 
 ![block-ai-object](images/block-ai-object-04.png)
 
@@ -135,7 +135,7 @@ order: 29
 
 
 
-## 11. (인식한 사물의 수)
+## 11. 인식한 사물의 수
 
 ![block-ai-object](images/block-ai-object-05.png)
 
@@ -144,7 +144,7 @@ order: 29
 최대 3개의 사물을 인식할 수 있습니다.
 
 
-## 12. <사물 중 `[자전거]` 을(를) 인식했는가?>
+## 12. 사물 중 `[자전거]` 을(를) 인식했는가?
 
 ![block-ai-object](images/block-ai-object-06.png)
 

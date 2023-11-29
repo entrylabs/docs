@@ -1,7 +1,7 @@
 ---
 layout: page
-title: AI 모델 > 예측: 숫자 모델
-date: 2023-11-17 18:10:00
+title: AI 모델 > 예측 - 숫자 모델
+date: 2023-11-29 18:21:00
 type: userGuide
 category: "블록"
 order: 36
@@ -126,7 +126,7 @@ order: 36
 
 
 
-## 2. <모델이 학습되었는가?>
+## 2. 모델이 학습되었는가?
 
 ![block-ai-model-prdc-02](images/block-ai-model-prdc-02.png)
 

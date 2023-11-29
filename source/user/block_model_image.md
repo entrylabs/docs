@@ -1,7 +1,7 @@
 ---
 layout: page
-title: AI 모델 > 분류: 이미지 모델
-date: 2023-11-17 18:10:00
+title: AI 모델 > 분류 - 이미지 모델
+date: 2023-11-29 18:23:00
 type: userGuide
 category: "블록"
 order: 32
@@ -121,7 +121,7 @@ order: 32
 
 목록 상자(<img src="images/icon/dropdown-ai.png" style="zoom:50%;" />)를 클릭하면 신뢰도를 가져올 클래스를 선택할 수 있어요.
 
-## 5. <분류 결과가 `[클래스]` 인가?>
+## 5. 분류 결과가 `[클래스]` 인가?
 
 ![block-ai-model-05](images/block-ai-model-05.png)
 

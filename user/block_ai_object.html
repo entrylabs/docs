@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>AI 블록 > 사물 인식 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/user/block_ai_object.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="AI 블록 > 사물 인식 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="AI 블록 > 사물 인식 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "userGuide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "AI 블록 &gt; 사물 인식",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2023-11-24",
+        "dateCreated": "2023-11-24",
+        "dateModified": "2023-11-29",
+        "url": "https://docs.playentry.org/user/block_ai_object.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "642",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/user/block_ai_object.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.2"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">Dev Guide</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">User Guide</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>작품</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/what-is-project.html" class="sidebar-link" itemprop="url">작품</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>화면의 구성 요소</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/header.html" class="sidebar-link" itemprop="url">상단 메뉴</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/screen.html" class="sidebar-link" itemprop="url">실행 화면</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/sub-space.html" class="sidebar-link" itemprop="url">보조 창</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_block.html" class="sidebar-link" itemprop="url">블록 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_shape.html" class="sidebar-link" itemprop="url">모양 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_sound.html" class="sidebar-link" itemprop="url">소리 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_attribute.html" class="sidebar-link" itemprop="url">속성 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/others.html" class="sidebar-link" itemprop="url">기타</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>블록</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/block_start.html" class="sidebar-link" itemprop="url">시작 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_flow.html" class="sidebar-link" itemprop="url">흐름 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_motion.html" class="sidebar-link" itemprop="url">움직임 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_looks.html" class="sidebar-link" itemprop="url">생김새 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_brush.html" class="sidebar-link" itemprop="url">붓 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_text.html" class="sidebar-link" itemprop="url">글상자 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_sound.html" class="sidebar-link" itemprop="url">소리 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_decision.html" class="sidebar-link" itemprop="url">판단 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_figures.html" class="sidebar-link" itemprop="url">계산 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_variable.html" class="sidebar-link" itemprop="url">자료 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_function.html" class="sidebar-link" itemprop="url">함수 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_table.html" class="sidebar-link" itemprop="url">데이터 분석 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai.html" class="sidebar-link" itemprop="url">인공지능(AI)이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_translate.html" class="sidebar-link" itemprop="url">AI 블록 > 번역</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_tts.html" class="sidebar-link" itemprop="url">AI 블록 > 읽어주기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_stt.html" class="sidebar-link" itemprop="url">AI 블록 > 음성 인식</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_human.html" class="sidebar-link" itemprop="url">AI 블록 > 사람 인식</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_face.html" class="sidebar-link" itemprop="url">AI 블록 > 얼굴 인식</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_object.html" class="sidebar-link current" itemprop="url">AI 블록 > 사물 인식</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_hand.html" class="sidebar-link" itemprop="url">AI 블록 > 손 인식</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_model.html" class="sidebar-link" itemprop="url">모델 학습이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_extension.html" class="sidebar-link" itemprop="url">확장 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_hardware.html" class="sidebar-link" itemprop="url">하드웨어 블록</a>
+                </li>
+            
+        
+    
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content userGuide with-sidebar ">
+    
+      
+    
+    
+      <h1>AI 블록 > 사물 인식</h1>
+    
+    <p><img src="images/card/object.png" alt="object"></p>
+<p>카메라로 입력되는 이미지(영상)을 통해 사물을 인식하는 블록입니다.<br>인공지능이 80여 개의 다양한 사물을 인식하는 것을 간단히 경험해 볼 수 있어요!</p>
+<ul>
+<li>이 블록은 카메라 연결이 꼭 필요한 블록입니다. 데스크탑의 경우 별도 웹캠을 연결해 주세요.<br>※ 카메라를 통해 입력되는 영상은 <span style="color:red"><strong>절대로 서버에 저장되거나 외부로 공유되지 않습니다.</strong></span></li>
+<li>이 블록은 인터넷 익스플로러 브라우저와 iOS 운영 체제에서는 동작하지 않습니다.<br>인터넷 브라우저의 경우, 안정적인 동작을 위해 구글 크롬 또는 네이버 웨일 브라우저의 사용을 권장합니다.</li>
+<li>카메라를 연결했는데도 블록이 동작하지 않거나, 영상이 제대로 입력되지 않는 경우 인터넷 브라우저의 설정을 변경해 카메라 사용을 허용해주세요.<br>(크롬 브라우저의 경우, 주소 표시줄 오른쪽의 카메라 아이콘을 클릭하거나 ‘설정 &gt; 개인정보 및 보안 &gt; 사이트 설정 &gt; 카메라’ 에서 엔트리 사이트의 카메라 사용을 허용해 주세요.)<br><img src="images/window/video-access.png" alt="video-access">  </li>
+</ul>
+<p>사물 인식 블록이 인식할 수 있는 사물은 아래와 같습니다.</p>
+<ul>
+<li><code>사람</code>, <code>자전거</code>, <code>자동차</code>, <code>오토바이</code>, <code>비행기</code>, <code>버스</code>, <code>기차</code>, <code>트럭</code>, <code>보트</code>, <code>신호등</code>, <code>소화전</code>, <code>정지 표지판</code>, <code>주차 미터기</code>, <code>벤치</code>, <code>새</code>, <code>고양이</code>, <code>개</code>, <code>말</code>, <code>양</code>, <code>소</code>, <code>코끼리</code>, <code>곰</code>, <code>얼룩말</code>, <code>기린</code>, <code>배낭</code>, <code>우산</code>, <code>핸드백</code>, <code>넥타이</code>, <code>여행 가방</code>, <code>원반</code>, <code>스키</code>, <code>스노보드</code>, <code>공</code>, <code>연</code>, <code>야구 배트</code>, <code>야구 글러브</code>, <code>스케이트보드</code>, <code>서프보드</code>, <code>테니스 라켓</code>, <code>병</code>, <code>와인잔</code>, <code>컵</code>, <code>포크</code>, <code>나이프</code>, <code>숟가락</code>, <code>그릇</code>, <code>바나나</code>, <code>사과</code>, <code>샌드위치</code>, <code>오렌지</code>, <code>브로콜리</code>, <code>당근</code>, <code>핫도그</code>, <code>피자</code>, <code>도넛</code>, <code>케이크</code>, <code>의자</code>, <code>소파</code>, <code>화분</code>, <code>침대</code>, <code>식탁</code>, <code>변기</code>, <code>TV</code>, <code>노트북</code>, <code>마우스</code>, <code>리모컨</code>, <code>키보드</code>, <code>핸드폰</code>, <code>전자레인지</code>, <code>오븐</code>, <code>토스터</code>, <code>싱크대</code>, <code>냉장고</code>, <code>책</code>, <code>시계</code>, <code>꽃병</code>, <code>가위</code>, <code>테디베어</code>, <code>헤어드라이어</code>, <code>칫솔</code></li>
+</ul>
+<h2 id="1-비디오-화면-보이기"><a href="#1-비디오-화면-보이기" class="headerlink" title="1. 비디오 화면 [보이기]"></a>1. 비디오 화면 <code>[보이기]</code></h2><p><img src="images/block-ai-video-01.png" alt="block-ai-video"></p>
+<p>카메라가 촬영하는 화면(앞으로 ‘비디오 화면’이라고 부를게요)을 실행 화면에서 보이거나 숨깁니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-ai.png" style="zoom:50%;">)를 클릭하면 보일지 숨길지 고를 수 있어요.</p>
+<h2 id="2-1번-카메라로-바꾸기"><a href="#2-1번-카메라로-바꾸기" class="headerlink" title="2. [1번] 카메라로 바꾸기"></a>2. <code>[1번]</code> 카메라로 바꾸기</h2><p><img src="images/block-ai-video-02.png" alt="block-ai-video"></p>
+<p>비디오 화면을 촬영할 카메라를 선택한 카메라로 바꿉니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-ai.png" style="zoom:50%;">)를 클릭하면 기기에 연결된 카메라 목록이 표시되고, 이 중에서 하나를 선택할 수 있어요.</p>
+<h2 id="3-lt-카메라가-연결되었는가-gt"><a href="#3-lt-카메라가-연결되었는가-gt" class="headerlink" title="3. &lt;카메라가 연결되었는가?&gt;"></a>3. &lt;카메라가 연결되었는가?&gt;</h2><p><img src="images/block-ai-video-03.png" alt="block-ai-video"></p>
+<p>기기에 카메라가 연결되어 있다면 참으로, 아니라면 거짓으로 판단하는 블록입니다.</p>
+<h2 id="4-비디오-화면-좌우-뒤집기"><a href="#4-비디오-화면-좌우-뒤집기" class="headerlink" title="4. 비디오 화면 [좌우] 뒤집기"></a>4. 비디오 화면 <code>[좌우]</code> 뒤집기</h2><p><img src="images/block-ai-video-04.png" alt="block-ai-video"></p>
+<p>비디오 화면을 실행 화면에서 좌우(가로) 또는 상하(세로)로 뒤집습니다.</p>
+<p>기본 화면은 거울을 보는 것처럼 좌우로 뒤집어져 있어요.</p>
+<p>목록 상자(<img src="images/icon/dropdown-ai.png" style="zoom:50%;">)를 클릭하면 뒤집을 방향을 선택할 수 있어요.</p>
+<h2 id="5-비디오-투명도-효과를-0-으로-정하기"><a href="#5-비디오-투명도-효과를-0-으로-정하기" class="headerlink" title="5. 비디오 투명도 효과를 (0) 으로 정하기"></a>5. 비디오 투명도 효과를 <code>(0)</code> 으로 정하기</h2><p><img src="images/block-ai-video-05.png" alt="block-ai-video"></p>
+<p>비디오 화면의 투명도 효과를 입력한 숫자로 정합니다. 0%~100% 범위에서 조절할 수 있어요.</p>
+<p>이 블록을 사용하지 않았을 때 기본 투명도 효과는 50%입니다.</p>
+<h2 id="6-자신-에서-감지한-움직임-값"><a href="#6-자신-에서-감지한-움직임-값" class="headerlink" title="6. ([자신] 에서 감지한 [움직임] 값)"></a>6. (<code>[자신]</code> 에서 감지한 <code>[움직임]</code> 값)</h2><p><img src="images/block-ai-video-06.png" alt="block-ai-video"></p>
+<p>비디오 화면에서 오브젝트나 실행 화면이 감지한 움직임 정도를 가져오는 값 블록입니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-ai.png" style="zoom:50%;">)를 클릭하면 감지할 대상과 감지할 값을 선택할 수 있어요.</p>
+<ul>
+<li><strong>감지할 대상 (첫 번째 목록 상자)</strong><ul>
+<li><code>자신</code>  : 해당 오브젝트에서 움직임을 감지합니다.  </li>
+<li><code>실행 화면</code> : 촬영하는 전체 화면에서 움직임을 감지합니다.</li>
+</ul>
+</li>
+<li><strong>감지할 값 (두 번째 목록 상자)</strong><ul>
+<li><code>움직임</code> : 움직임이 작고 느릴수록 0 에 가깝고, 크고 많을수록 큰 수를 가져옵니다.</li>
+<li><code>방향</code> : 오른쪽 또는 위쪽으로 움직일수록 양수로 커지고, 왼쪽 또는 아래쪽으로 움직일수록 음수로 커지는 수를 가져옵니다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-사물을-인식했을-때"><a href="#7-사물을-인식했을-때" class="headerlink" title="7. 사물을 인식했을 때"></a>7. 사물을 인식했을 때</h2><p><img src="images/block-ai-object-01.png" alt="block-ai-object"></p>
+<p>사물을 인식했을 때 아래의 블록이 동작합니다.</p>
+<p>한 번 인식을 시작하고 연속적으로 인식이 유지되면 다시 동작하지 않지만, 사물이 새롭게 인식되는 순간 다시 블록이 동작합니다.</p>
+<p>사물 인식을 시작하지 않았다면 블록이 동작하지 않아요.</p>
+<h2 id="8-사물-인식-시작하기"><a href="#8-사물-인식-시작하기" class="headerlink" title="8. 사물 인식 [시작하기]"></a>8. 사물 인식 <code>[시작하기]</code></h2><p><img src="images/block-ai-object-02.png" alt="block-ai-object"></p>
+<p>사물 인식을 시작하거나 중지합니다.</p>
+<p>사물을 인식하려면 꼭 이 블록을 통해 인식을 시작해야 해요.</p>
+<p>목록 상자(<img src="images/icon/dropdown-ai.png" style="zoom:50%;">)를 클릭하면 인식을 시작할지 중지할지 선택할 수 있어요.</p>
+<h2 id="9-인식한-사물-보이기"><a href="#9-인식한-사물-보이기" class="headerlink" title="9. 인식한 사물 [보이기]"></a>9. 인식한 사물 <code>[보이기]</code></h2><p><img src="images/block-ai-object-03.png" alt="block-ai-object"></p>
+<p>인식한 사물을 실행 화면에서 보이거나 숨깁니다.</p>
+<p>‘보이기’를 선택하면 인식한 사물의 이름과 둘러싼 사각형의 형태로 표시해요.</p>
+<p>목록 상자 (<img src="images/icon/dropdown-ai.png" style="zoom:50%;">)를 클릭하면 인식한 형태를 보일지 숨길지 고를 수 있어요.</p>
+<h2 id="10-lt-사물을-인식했는가-gt"><a href="#10-lt-사물을-인식했는가-gt" class="headerlink" title="10. &lt;사물을 인식했는가?&gt;"></a>10. &lt;사물을 인식했는가?&gt;</h2><p><img src="images/block-ai-object-04.png" alt="block-ai-object"></p>
+<p>사물을 인식했다면 참으로, 아니라면 거짓으로 판단하는 블록입니다.</p>
+<p>사물 인식을 시작하지 않았다면 항상 거짓으로 판단해요.</p>
+<h2 id="11-인식한-사물의-수"><a href="#11-인식한-사물의-수" class="headerlink" title="11. (인식한 사물의 수)"></a>11. (인식한 사물의 수)</h2><p><img src="images/block-ai-object-05.png" alt="block-ai-object"></p>
+<p>인식한 사물이 몇 개인지를 가져오는 값 블록입니다.</p>
+<p>최대 3개의 사물을 인식할 수 있습니다.</p>
+<h2 id="12-lt-사물-중-자전거-을-를-인식했는가-gt"><a href="#12-lt-사물-중-자전거-을-를-인식했는가-gt" class="headerlink" title="12. &lt;사물 중 [자전거] 을(를) 인식했는가?&gt;"></a>12. &lt;사물 중 <code>[자전거]</code> 을(를) 인식했는가?&gt;</h2><p><img src="images/block-ai-object-06.png" alt="block-ai-object"></p>
+<p>선택한 사물을 인식했다면 참으로, 아니라면 거짓으로 판단하는 블록입니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-ai.png" style="zoom:50%;">)를 클릭하면 인식 여부를 확인할 사물을 선택할 수 있어요.</p>
+
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/user/block_ai_object.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/user/block_ai_object.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

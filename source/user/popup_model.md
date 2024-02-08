@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 인공지능 모델 학습하기
-date: 2023-11-29 12:16:00
+date: 2024-02-06 11:00:00
 type: userGuide
 category: "팝업"
-order: 45
+order: 42
 ---
 
 ## 인공지능 모델 학습하기 팝업

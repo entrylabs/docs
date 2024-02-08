@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 블록 탭
-date: 2023-12-04 11:42:00
+date: 2024-02-05 11:42:00
 type: userGuide
 category: "화면의 구성 요소"
 order: 6
@@ -9,7 +9,7 @@ order: 6
 
 ## 블록 카테고리
 
-<img src="images/window/main-block-category.png" alt="main-block" style="zoom:67%;" />
+<img src="images/tab/block-category.png" alt="main-block" style="zoom:67%;" />
 
 
 
@@ -39,7 +39,7 @@ order: 6
 
 ## 블록 꾸러미
 
-<img src="images/window/main-block-pack.png" alt="main-block-pack" style="zoom:67%;" />
+<img src="images/tab/block-pack.png" alt="main-block-pack" style="zoom:67%;" />
 
 
 
@@ -51,7 +51,7 @@ order: 6
 
 ## 블록 조립소
 
-<img src="images/window/main-block-space.png" alt="main-block-space" style="zoom:67%;" />
+<img src="images/tab/block-space.png" alt="main-block-space" style="zoom:67%;" />
 
 
 
@@ -61,7 +61,7 @@ order: 6
 
 블록 조립소의 빈 공간을 드래그하면 공간을 이동할 수 있어요.
 
-+ 블록 조립소의 빈 공간을 마우스 우클릭한 뒤 '코드 정리하기'를 클릭하여 이 공간의 모든 블록을 정리할 수 있습니다.
+블록 조립소의 빈 공간을 마우스 우클릭한 뒤 '코드 정리하기'를 클릭하여 이 공간의 모든 블록을 정리할 수 있습니다.
 
 - **함수 블록 조립소**
 
@@ -71,7 +71,7 @@ order: 6
 
   일반 블록 조립소와 마찬가지로 빈 공간을 드래그하면 공간을 이동할 수 있고, 마우스 우클릭하면 같은 메뉴를 사용할 수 있습니다.
 
-  <img src="images/window/main-func-assembly-space.png" alt="main-fuc-assembly-space" style="zoom:80%;" />
+  <img src="images/tab/block-func-assembly-space.png" alt="main-fuc-assembly-space" style="zoom:80%;" />
 
 
 
@@ -83,7 +83,7 @@ order: 6
 
 
 
-![block-assembly](images/window/block-assembly.gif)
+![block-assembly](images/tab/block-assembly.gif)
 
 
 
@@ -91,7 +91,7 @@ order: 6
 
 
 
-![block-sepration](images/window/block-sepration.gif)
+![block-sepration](images/tab/block-sepration.gif)
 
 
 
@@ -99,7 +99,7 @@ order: 6
 
 
 
-![block-combine-1](images/window/block-combine-1.gif)
+![block-combine-1](images/tab/block-combine-1.gif)
 
 
 
@@ -107,7 +107,7 @@ order: 6
 
 
 
-![block-combine-1](images/window/block-combine-2.gif)
+![block-combine-1](images/tab/block-combine-2.gif)
 
 
 
@@ -145,7 +145,7 @@ order: 6
 
 
 
-![memo-](images/window/memo.png)
+![memo](images/tab/block-memo.png)
 
 
 
@@ -163,7 +163,7 @@ order: 6
 
 
 
-![memo-fold](images/window/memo-fold.gif)
+![memo-fold](images/tab/block-memo-fold.gif)
 
 
 
@@ -175,7 +175,7 @@ order: 6
 
 
 
-![memo-size](images/window/memo-size.gif)
+![memo-size](images/tab/block-memo-size.gif)
 
 
 
@@ -185,7 +185,7 @@ order: 6
 
 
 
-![memo-connect-block](images/window/memo-connect-block.gif)
+![memo-connect-block](images/tab/block-memo-connect.gif)
 
 
 
@@ -195,7 +195,7 @@ order: 6
 
 메모를 마우스 우클릭하면 메모 복사 & 붙여넣기(복제), 메모 복사하기, 메모 삭제하기, 메모 접기, (메모가 블록과 결합했다면) 메모 분리하기가 가능합니다.
 
-<img src="images/window/main-block-memo.png" alt="main-block-memo" style="zoom:67%;" />
+<img src="images/tab/block-memo-button.png" alt="main-block-memo" style="zoom:67%;" />
 
 
 
@@ -228,7 +228,7 @@ order: 6
 
 #### 확대/축소 기능
 
-<img src="images/window/main-block-zoom.png" alt="main-block-zoom" style="zoom:67%;" />
+<img src="images/tab/block-zoom.png" alt="main-block-zoom" style="zoom:67%;" />
 
 
 

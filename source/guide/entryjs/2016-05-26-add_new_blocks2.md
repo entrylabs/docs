@@ -2,7 +2,7 @@
 layout: page
 title: 블록 사용 등록
 type: guide
-category: 'Entry JS'
+category: '블록만들기'
 order: 4
 ---
 

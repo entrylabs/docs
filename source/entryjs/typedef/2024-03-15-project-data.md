@@ -18,14 +18,14 @@ EntryJS 워크스페이스에서 작업한 프로젝트의 전체 구성과 상�
 |프로퍼티|타입|설명|
 |---|---|---|
 |speed|number|작품 실행 속도(FPS)|
-|objects|[Object Data](/entryjs/typedef/2024-03-15-object-data.html)|오브젝트 정보|
-|variables|Variables Data|변수 정보|
-|messages|Messages Data|신호 정보|
-|functions|Functions Data|함수 정보|
-|scenes|Scenes Data|장면 정보|
-|interface|interfaceState|인터페이스 정보|
-|tables|Tables Data|데이터 테이블 목록|
+|objects|[Object Data](/entryjs/typedef/2024-03-15-object-data.html)[]|오브젝트 정보|
+|variables|[Variable Data](/entryjs/typedef/2024-03-15-variable-data.html)[]|변수 정보|
+|messages|[Message Data](/entryjs/typedef/2024-03-15-message-data.html)[]|신호 정보|
+|functions|[Functions Data](/entryjs/typedef/2024-03-15-function-data.html)[]|함수 정보|
+|scenes|[Scene Data](/entryjs/typedef/2024-03-15-scene-data.html)[]|장면 정보|
+|interface|[interfaceState](/entryjs/typedef/2024-03-15-interface-state.html)[]|인터페이스 정보|
+|tables|[Table Data](/entryjs/typedef/2024-03-15-table-data.html)[]|데이터 테이블 목록|
 |learning|ID|학습 모델 ID|
-|aiUtilizeBlocks|AiUtilizeBlocks Data|AI 블록 목록|
-|expansionBlocks|ExpansionBlocks Data|확장 블록 목록|
-|hardwareLiteBlocks|hardwareLiteBlocks Data|브라우저 하드웨어 블록 목록|
+|aiUtilizeBlocks|string[]|AI 블록 목록|
+|expansionBlocks|string[]|확장 블록 목록|
+|hardwareLiteBlocks|string[]|브라우저 하드웨어 블록 목록|

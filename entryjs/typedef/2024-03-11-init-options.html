@@ -1,0 +1,536 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Init Options — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/entryjs/typedef/2024-03-11-init-options.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Init Options — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Init Options — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "entryjs"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "Init Options",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2024-03-11",
+        "dateCreated": "2024-03-11",
+        "dateModified": "2024-03-11",
+        "url": "https://docs.playentry.org/entryjs/typedef/2024-03-11-init-options.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "100",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/entryjs/typedef/2024-03-11-init-options.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.2"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link current" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link current" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>시작하기</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/index.html" class="sidebar-link" itemprop="url">소개</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-02-29-installation.html" class="sidebar-link" itemprop="url">설치방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-02-29-structure.html" class="sidebar-link" itemprop="url">프로젝트 구조</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-03-05-run.html" class="sidebar-link" itemprop="url">EntryJS 실행하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>API문서</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-api.html" class="sidebar-link" itemprop="url">핵심 API</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-data.html" class="sidebar-link" itemprop="url">Entry Event 사용법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-event.html" class="sidebar-link" itemprop="url">Entry Event 목록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-03-05-util.html" class="sidebar-link" itemprop="url">Entry Util</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-popup.html" class="sidebar-link" itemprop="url">팝업 관리</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-03-05-static.html" class="sidebar-link" itemprop="url">STATIC JS</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>타입정의</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-11-init-options.html" class="sidebar-link current" itemprop="url">Init Options</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-function-data.html" class="sidebar-link" itemprop="url">Function Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-interface-state.html" class="sidebar-link" itemprop="url">Interface State</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-message-data.html" class="sidebar-link" itemprop="url">Message Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-object-data.html" class="sidebar-link" itemprop="url">Object Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-project-data.html" class="sidebar-link" itemprop="url">Project Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-scene-data.html" class="sidebar-link" itemprop="url">Scene Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-table-data.html" class="sidebar-link" itemprop="url">Table Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-variable-data.html" class="sidebar-link" itemprop="url">Variable Data</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>기타</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/faq/2024-02-29-faq.html" class="sidebar-link" itemprop="url">자주 묻는 질문(FAQ)</a>
+                </li>
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content entryjs with-sidebar ">
+    
+      
+    
+    
+      <h1>Init Options</h1>
+    
+    <p>Entry.init 함수를 호출할 때 전달되는 옵션 객체입니다. 이 객체를 통해 개발자는 Entry 워크스페이스의 초기 설정 값을 정의하고, 워크스페이스가 로드될 때 필요한 다양한 환경 설정을 커스터마이즈할 수 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>프로퍼티</th>
+<th>타입</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>‘workspace’|’minimize’</td>
+<td>entryjs를 띄울 기본형식. ‘’</td>
+</tr>
+<tr>
+<td>libDir</td>
+<td>string</td>
+<td>써드파티 라이브러리 저장소. entryjs를 포함한 Library 위치. (기본값: ‘/lib’)</td>
+</tr>
+<tr>
+<td>defaultDir</td>
+<td>string</td>
+<td>기본 assets이 지정된 위치</td>
+</tr>
+<tr>
+<td>soundDir</td>
+<td>string</td>
+<td>sound 파일이 들어 있는 고유한 path</td>
+</tr>
+<tr>
+<td>baseUrl</td>
+<td>string</td>
+<td>API블록, AI블록등을 호출한 원본 API주소</td>
+</tr>
+<tr>
+<td>fonts</td>
+<td>Array</td>
+<td>웹폰트 정보</td>
+</tr>
+<tr>
+<td>objectAddable</td>
+<td>boolean</td>
+<td>오브젝트 추가가능 여부 (true)</td>
+</tr>
+<tr>
+<td>objectEditable</td>
+<td>boolean</td>
+<td>오브젝트 수정가능 여부 (true). 이값을 false로 세팅하면 objectAddable도 false가 된다.</td>
+</tr>
+<tr>
+<td>objectdeletable</td>
+<td>boolean</td>
+<td>오브젝트 삭제가능 여부 (true)</td>
+</tr>
+<tr>
+<td>soundeditable</td>
+<td>boolean</td>
+<td>소리 수정가능 여부 (true)</td>
+</tr>
+<tr>
+<td>pictureeditable</td>
+<td>boolean</td>
+<td>모양 수정가능 여부 (true)</td>
+</tr>
+<tr>
+<td>sceneEditable</td>
+<td>boolean</td>
+<td>장면 수정가능 여부 (true)</td>
+</tr>
+<tr>
+<td>functionEnable</td>
+<td>boolean</td>
+<td>함수 사용가능 여부 (true)</td>
+</tr>
+<tr>
+<td>messageEnable</td>
+<td>boolean</td>
+<td>신호 사용가능 여부 (true)</td>
+</tr>
+<tr>
+<td>variableEnable</td>
+<td>boolean</td>
+<td>변수 사용가능 여부 (true)</td>
+</tr>
+<tr>
+<td>listEnable</td>
+<td>boolean</td>
+<td>리스트 사용가능 여부 (true)</td>
+</tr>
+<tr>
+<td>aiLearningEnable</td>
+<td>boolean</td>
+<td>AI 사용가능 여부 (true)</td>
+</tr>
+<tr>
+<td>isForLecture</td>
+<td>boolean</td>
+<td>강의용 프로젝트 여부 (false)</td>
+</tr>
+<tr>
+<td>textCodingEnable</td>
+<td>boolean</td>
+<td>엔트리 파이선 사용가능 여부 (true)</td>
+</tr>
+<tr>
+<td>hardwareEnable</td>
+<td>boolean</td>
+<td>하드웨어 사용가능 여부 (true)</td>
+</tr>
+</tbody></table>
+
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/entryjs/typedef/2024-03-11-init-options.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/entryjs/typedef/2024-03-11-init-options.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

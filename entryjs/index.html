@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>소개 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/entryjs/">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="소개 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="소개 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "entryjs"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "소개",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2024-02-29",
+        "dateCreated": "2024-02-29",
+        "dateModified": "2024-03-04",
+        "url": "https://docs.playentry.org/entryjs/index.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "111",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/entryjs/index.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.2"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link current" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link current" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>시작하기</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/index.html" class="sidebar-link current" itemprop="url">소개</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-02-29-installation.html" class="sidebar-link" itemprop="url">설치방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-02-29-structure.html" class="sidebar-link" itemprop="url">프로젝트 구조</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-03-05-run.html" class="sidebar-link" itemprop="url">EntryJS 실행하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>API문서</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-api.html" class="sidebar-link" itemprop="url">핵심 API</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-data.html" class="sidebar-link" itemprop="url">Entry Event 사용법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-event.html" class="sidebar-link" itemprop="url">Entry Event 목록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-03-05-util.html" class="sidebar-link" itemprop="url">Entry Util</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-popup.html" class="sidebar-link" itemprop="url">팝업 관리</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-03-05-static.html" class="sidebar-link" itemprop="url">STATIC JS</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>타입정의</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-11-init-options.html" class="sidebar-link" itemprop="url">Init Options</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-function-data.html" class="sidebar-link" itemprop="url">Function Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-interface-state.html" class="sidebar-link" itemprop="url">Interface State</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-message-data.html" class="sidebar-link" itemprop="url">Message Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-object-data.html" class="sidebar-link" itemprop="url">Object Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-project-data.html" class="sidebar-link" itemprop="url">Project Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-scene-data.html" class="sidebar-link" itemprop="url">Scene Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-table-data.html" class="sidebar-link" itemprop="url">Table Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-variable-data.html" class="sidebar-link" itemprop="url">Variable Data</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>기타</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/faq/2024-02-29-faq.html" class="sidebar-link" itemprop="url">자주 묻는 질문(FAQ)</a>
+                </li>
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content entryjs with-sidebar ">
+    
+      
+    
+    
+      <h1>소개</h1>
+    
+    <p>EntryJS 문서에 오신것을 환영합니다!</p>
+<h2 id="EntryJS란-무엇인가요"><a href="#EntryJS란-무엇인가요" class="headerlink" title="EntryJS란 무엇인가요?"></a>EntryJS란 무엇인가요?</h2><p>EntryJS는 프로그래밍 교육을 목적으로 한 JavaScript 라이브러리입니다. </p>
+<p>EntryJS의 핵심은 사용자 친화적인 인터페이스와 블록 기반 프로그래밍 언어를 제공하는 것입니다. 사용자는 복잡한 코드를 작성할 필요 없이, 블록을 조합하여 간단하게 프로그램을 만들 수 있습니다. 이를 통해 사용자는 논리적 사고와 문제 해결 능력을 자연스럽게 개발할 수 있습니다.</p>
+<h2 id="이-문서를-사용하는-방법"><a href="#이-문서를-사용하는-방법" class="headerlink" title="이 문서를 사용하는 방법"></a>이 문서를 사용하는 방법</h2><p>화면 왼쪽에는 문서 탐색 모음이 있습니다. 문서의 페이지는 기본부터 고급까지 순차적으로 구성되어 있으므로 애플리케이션을 구축할 때 단계별로 따라갈 수 있습니다. 그러나 순서에 관계없이 읽거나 사용 사례에 적용되는 페이지로 건너뛸 수 있습니다.</p>
+<p>화면 오른쪽에는 페이지 섹션 간을 더 쉽게 탐색할 수 있는 목차가 표시됩니다. 페이지를 빠르게 찾아야 하는 경우 상단의 검색창을 이용하세요.</p>
+
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/entryjs/index.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/entryjs/index.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

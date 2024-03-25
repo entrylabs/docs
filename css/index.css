@@ -609,10 +609,10 @@ body {
   vertical-align: top;
 }
 #hero .left {
-  width: 49%;
+  width: 40%;
 }
 #hero .right {
-  width: 51%;
+  width: 60%;
 }
 #hero .hero-logo {
   width: 415px;

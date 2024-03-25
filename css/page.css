@@ -1051,6 +1051,7 @@ i.rotating-clockwise {
 .content > table th {
   font-weight: bold;
   text-align: left;
+  white-space: nowrap;
 }
 .content > table th,
 .content > table tr:nth-child(2n) {

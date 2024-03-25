@@ -1,0 +1,930 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Entry Event 목록 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/entryjs/api/2024-02-29-event.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Entry Event 목록 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Entry Event 목록 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "entryjs"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "Entry Event 목록",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2024-02-29",
+        "dateCreated": "2024-02-29",
+        "dateModified": "2024-03-18",
+        "url": "https://docs.playentry.org/entryjs/api/2024-02-29-event.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "715",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/entryjs/api/2024-02-29-event.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.2"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link current" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link current" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>시작하기</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/index.html" class="sidebar-link" itemprop="url">소개</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-02-29-installation.html" class="sidebar-link" itemprop="url">설치방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-02-29-structure.html" class="sidebar-link" itemprop="url">프로젝트 구조</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-03-05-run.html" class="sidebar-link" itemprop="url">EntryJS 실행하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>API문서</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-api.html" class="sidebar-link" itemprop="url">핵심 API</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-data.html" class="sidebar-link" itemprop="url">Entry Event 사용법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-event.html" class="sidebar-link current" itemprop="url">Entry Event 목록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-03-05-util.html" class="sidebar-link" itemprop="url">Entry Util</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-popup.html" class="sidebar-link" itemprop="url">팝업 관리</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-03-05-static.html" class="sidebar-link" itemprop="url">STATIC JS</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>타입정의</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-11-init-options.html" class="sidebar-link" itemprop="url">Init Options</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-function-data.html" class="sidebar-link" itemprop="url">Function Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-interface-state.html" class="sidebar-link" itemprop="url">Interface State</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-message-data.html" class="sidebar-link" itemprop="url">Message Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-object-data.html" class="sidebar-link" itemprop="url">Object Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-project-data.html" class="sidebar-link" itemprop="url">Project Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-scene-data.html" class="sidebar-link" itemprop="url">Scene Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-table-data.html" class="sidebar-link" itemprop="url">Table Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-variable-data.html" class="sidebar-link" itemprop="url">Variable Data</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>기타</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/faq/2024-02-29-faq.html" class="sidebar-link" itemprop="url">자주 묻는 질문(FAQ)</a>
+                </li>
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content entryjs with-sidebar ">
+    
+      
+    
+    
+      <h1>Entry Event 목록</h1>
+    
+    <p>아래는 EntryJS의 이벤트 목록과 각 이벤트의 상세 설명을 포함한 API 문서입니다.<br>이벤트의 사용법은 <a href="/entryjs/api/2024-02-29-data.html">Entry Event 사용법</a>페이지를 참고하세요.</p>
+<h4 id="목록"><a href="#목록" class="headerlink" title="목록"></a>목록</h4><ul>
+<li><p>프로젝트 이벤트</p>
+<ul>
+<li><a href="#beforeStop">beforeStop</a></li>
+<li><a href="#blockExecute">blockExecute</a></li>
+<li><a href="#blockExecuteEnd">blockExecuteEnd</a></li>
+<li><a href="#dispatchEventDidTogglePause">dispatchEventDidTogglePause</a></li>
+<li><a href="#dispatchEventDidToggleStop">dispatchEventDidToggleStop</a></li>
+<li><a href="#run">run</a></li>
+<li><a href="#stageMouseMove">stageMouseMove</a></li>
+<li><a href="#stageMouseOut">stageMouseOut</a></li>
+<li><a href="#stop">stop</a></li>
+<li><a href="#toggleFullScreen">toggleFullScreen</a></li>
+<li><a href="#windowResized">windowResized</a></li>
+<li><a href="#workspaceChangeMode">workspaceChangeMode</a></li>
+</ul>
+</li>
+<li><p>코드 조립소 이벤트</p>
+<ul>
+<li><a href="#commentVisibleChanged">commentVisibleChanged</a></li>
+<li><a href="#saveBlockImages">saveBlockImages</a></li>
+<li><a href="#textEdited">textEdited</a></li>
+</ul>
+</li>
+<li><p>공통 팝업 이벤트</p>
+<ul>
+<li><a href="#dismissModal">dismissModal</a></li>
+</ul>
+</li>
+<li><p>모양 이벤트</p>
+<ul>
+<li><a href="#downloadPicture">downloadPicture</a></li>
+<li><a href="#openPictureImport">openPictureImport</a></li>
+<li><a href="#openPictureManager">openPictureManager</a></li>
+<li><a href="#pictureNameChanged">pictureNameChanged</a></li>
+<li><a href="#pictureSelected">pictureSelected</a></li>
+<li><a href="#saveCanvasImage">saveCanvasImage</a></li>
+</ul>
+</li>
+<li><p>소리 이벤트</p>
+<ul>
+<li><a href="#downloadSound">downloadSound</a></li>
+<li><a href="#endLoading">endLoading</a></li>
+<li><a href="#openSoundManager">openSoundManager</a></li>
+<li><a href="#removeSound">removeSound</a></li>
+<li><a href="#soundLoaded">soundLoaded</a></li>
+<li><a href="#soundSelected">soundSelected</a></li>
+<li><a href="#soundUnselected">soundUnselected</a></li>
+<li><a href="#startLoading">startLoading</a></li>
+</ul>
+</li>
+<li><p>오브젝트 이벤트</p>
+<ul>
+<li><a href="#exportObject">exportObject</a></li>
+<li><a href="#openSpriteManager">openSpriteManager</a></li>
+<li><a href="#removeObject">removeObject</a></li>
+</ul>
+</li>
+<li><p>함수 이벤트</p>
+<ul>
+<li><a href="#removeFunctionsEnd">removeFunctionsEnd</a></li>
+<li><a href="#removeFunctionsStart">removeFunctionsStart</a></li>
+</ul>
+</li>
+<li><p>데이터분석 이벤트</p>
+<ul>
+<li><a href="#openTableManager">openTableManager</a></li>
+</ul>
+</li>
+<li><p>확장블록 이벤트</p>
+<ul>
+<li><a href="#openExpansionBlockManager">openExpansionBlockManager</a></li>
+</ul>
+</li>
+<li><p>변수 이벤트</p>
+<ul>
+<li><a href="#openExportListModal">openExportListModal</a></li>
+<li><a href="#openImportListModal">openImportListModal</a></li>
+</ul>
+</li>
+<li><p>하드웨어 이벤트</p>
+<ul>
+<li><a href="#hwDownload">hwDownload</a></li>
+<li><a href="#openHardWareDownloadModal">openHardWareDownloadModal</a></li>
+<li><a href="#openHardwareLiteBlockManager">openHardwareLiteBlockManager</a></li>
+</ul>
+</li>
+<li><p>인공지능 이벤트</p>
+<ul>
+<li><a href="#openAIUtilizeBlockManager">openAIUtilizeBlockManager</a></li>
+<li><a href="#openAIUtilizeTrainManager">openAIUtilizeTrainManager</a></li>
+<li><a href="#showVideoLoadingScreen">showVideoLoadingScreen</a></li>
+<li><a href="#sttSubmitted">sttSubmitted</a></li>
+</ul>
+</li>
+<li><p>백팩 이벤트</p>
+<ul>
+<li><a href="#addBackPackToEntry">addBackPackToEntry</a></li>
+<li><a href="#changeBackPackTitle">changeBackPackTitle</a></li>
+<li><a href="#closeBackPack">closeBackPack</a></li>
+<li><a href="#openBackPack">openBackPack</a></li>
+<li><a href="#removeBackPackItem">removeBackPackItem</a></li>
+</ul>
+</li>
+<li><p>기타 이벤트</p>
+<ul>
+<li><a href="#EntryBeforeUnload">EntryBeforeUnload</a></li>
+<li><a href="#keyPressed">keyPressed</a></li>
+<li><a href="#keyUpped">keyUpped</a></li>
+<li><a href="#loadComplete">loadComplete</a></li>
+<li><a href="#loadStart">loadStart</a></li>
+<li><a href="#onPopupClose">onPopupClose</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="프로젝트-이벤트"><a href="#프로젝트-이벤트" class="headerlink" title="프로젝트 이벤트"></a>프로젝트 이벤트</h2><h3 id="beforeStop"><a href="#beforeStop" class="headerlink" title="beforeStop"></a>beforeStop</h3><p>프로젝트의 실행이 중지되기 바로 전에 발생합니다.</p>
+<h3 id="blockExecute"><a href="#blockExecute" class="headerlink" title="blockExecute"></a>blockExecute</h3><p>프로그래밍 블록의 실행이 시작될 때 발생합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>블록 view</td>
+<td>object</td>
+<td>✔️</td>
+<td></td>
+<td>실행중인 블록의 view</td>
+</tr>
+</tbody></table>
+<h3 id="blockExecuteEnd"><a href="#blockExecuteEnd" class="headerlink" title="blockExecuteEnd"></a>blockExecuteEnd</h3><p>프로그래밍 블록의 실행이 종료될 때 발생합니다.</p>
+<h3 id="dispatchEventDidTogglePause"><a href="#dispatchEventDidTogglePause" class="headerlink" title="dispatchEventDidTogglePause"></a>dispatchEventDidTogglePause</h3><p>작품을 <code>일시정지</code>하거나 <code>다시시작</code> 할 경우 발생합니다.</p>
+<h3 id="dispatchEventDidToggleStop"><a href="#dispatchEventDidToggleStop" class="headerlink" title="dispatchEventDidToggleStop"></a>dispatchEventDidToggleStop</h3><p>작품 <code>정지하기</code> 클릭시 발생합니다.</p>
+<blockquote>
+<p><a href="#stop">stop</a> 이벤트 이후에 발생합니다.</p>
+</blockquote>
+<h3 id="run"><a href="#run" class="headerlink" title="run"></a>run</h3><p>작품 <code>시작하기</code> 클릭시 발생합니다.</p>
+<h3 id="stageMouseMove"><a href="#stageMouseMove" class="headerlink" title="stageMouseMove"></a>stageMouseMove</h3><p>스테이지 위에 마우스가 이동하면 발생합니다.</p>
+<h3 id="stageMouseOut"><a href="#stageMouseOut" class="headerlink" title="stageMouseOut"></a>stageMouseOut</h3><p>스테이지 밖으로 마우스가 벗어나면 발생합니다.</p>
+<h3 id="stop"><a href="#stop" class="headerlink" title="stop"></a>stop</h3><p>작품 <code>정지하기</code> 클릭시 발생합니다.</p>
+<h3 id="toggleFullScreen"><a href="#toggleFullScreen" class="headerlink" title="toggleFullScreen"></a>toggleFullScreen</h3><p>전체화면 토글시 발생합니다.</p>
+<h3 id="windowResized"><a href="#windowResized" class="headerlink" title="windowResized"></a>windowResized</h3><p>워크스페이스의 화면 사이즈를 변경(resize)하면 발생합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>e</td>
+<td>Event</td>
+<td></td>
+<td></td>
+<td>resize 이벤트</td>
+</tr>
+</tbody></table>
+<h3 id="workspaceChangeMode"><a href="#workspaceChangeMode" class="headerlink" title="workspaceChangeMode"></a>workspaceChangeMode</h3><p>워크스페이스 모드 변경시 발생합니다.<br>ex) 엔트리 파이썬, 블록 코딩</p>
+<h2 id="코드-조립소-이벤트"><a href="#코드-조립소-이벤트" class="headerlink" title="코드 조립소 이벤트"></a>코드 조립소 이벤트</h2><h3 id="commentVisibleChanged"><a href="#commentVisibleChanged" class="headerlink" title="commentVisibleChanged"></a>commentVisibleChanged</h3><p>주석을 열거나 닫으면 발생합니다.</p>
+<h3 id="saveBlockImages"><a href="#saveBlockImages" class="headerlink" title="saveBlockImages"></a>saveBlockImages</h3><p>블록 <code>이미지로 저장하기</code> 클릭시 발생합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>이미지</td>
+<td>json</td>
+<td></td>
+<td></td>
+<td>이미지 데이터</td>
+</tr>
+</tbody></table>
+<h3 id="textEdited"><a href="#textEdited" class="headerlink" title="textEdited"></a>textEdited</h3><p>블록의 텍스트를 수정하면 발생합니다.</p>
+<h2 id="공통-팝업-이벤트"><a href="#공통-팝업-이벤트" class="headerlink" title="공통 팝업 이벤트"></a>공통 팝업 이벤트</h2><h3 id="dismissModal"><a href="#dismissModal" class="headerlink" title="dismissModal"></a>dismissModal</h3><p>팝업을 닫으면 발생합니다.</p>
+<h2 id="모양-이벤트"><a href="#모양-이벤트" class="headerlink" title="모양 이벤트"></a>모양 이벤트</h2><h3 id="downloadPicture"><a href="#downloadPicture" class="headerlink" title="downloadPicture"></a>downloadPicture</h3><p>모양탭에서 모양에 대해 <code>PC에 저장</code>을 누를 경우 발생합니다.</p>
+<h3 id="openPictureImport"><a href="#openPictureImport" class="headerlink" title="openPictureImport"></a>openPictureImport</h3><p>그림판에서 <code>모양 가져오기</code> 버튼 클릭시 발생합니다.</p>
+<h3 id="openPictureManager"><a href="#openPictureManager" class="headerlink" title="openPictureManager"></a>openPictureManager</h3><p>모양탭에서 <code>모양 추가하기</code> 버튼 클릭시 발생합니다.</p>
+<blockquote>
+<p>이 이벤트를 받아서 팝업 오픈을 수행해야 합니다.</p>
+</blockquote>
+<h3 id="pictureNameChanged"><a href="#pictureNameChanged" class="headerlink" title="pictureNameChanged"></a>pictureNameChanged</h3><p>모양의 이름변경시 발생합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>모양</td>
+<td>json</td>
+<td>✔️</td>
+<td></td>
+<td>이름을 변경한 모양의 데이터</td>
+</tr>
+</tbody></table>
+<h3 id="pictureSelected"><a href="#pictureSelected" class="headerlink" title="pictureSelected"></a>pictureSelected</h3><p>특정 모양을 선택시 발생합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>모양</td>
+<td>json</td>
+<td>✔️</td>
+<td></td>
+<td>선택한 모양의 데이터</td>
+</tr>
+<tr>
+<td>삭제여부</td>
+<td>boolean</td>
+<td>✔️</td>
+<td></td>
+<td>모양의 삭제여부</td>
+</tr>
+</tbody></table>
+<h3 id="saveCanvasImage"><a href="#saveCanvasImage" class="headerlink" title="saveCanvasImage"></a>saveCanvasImage</h3><p>그림판에서 저장시 발생합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>이미지</td>
+<td>json</td>
+<td>✔️</td>
+<td></td>
+<td>이미지 데이터</td>
+</tr>
+</tbody></table>
+<h2 id="소리-이벤트"><a href="#소리-이벤트" class="headerlink" title="소리 이벤트"></a>소리 이벤트</h2><h3 id="downloadSound"><a href="#downloadSound" class="headerlink" title="downloadSound"></a>downloadSound</h3><p>소리탭에서 소리에 대해 <code>PC에 저장</code>을 누를 경우 발생합니다.</p>
+<h3 id="endLoading"><a href="#endLoading" class="headerlink" title="endLoading"></a>endLoading</h3><p>Loading이 종료될때 발생합니다.<br>ex) 사운드 파일 로드완료.</p>
+<h3 id="openSoundManager"><a href="#openSoundManager" class="headerlink" title="openSoundManager"></a>openSoundManager</h3><p>소리탭에서 <code>소리 추가하기</code> 버튼 클릭시 발생합니다.</p>
+<blockquote>
+<p>이 이벤트를 받아서 팝업 오픈을 수행해야 합니다.</p>
+</blockquote>
+<h3 id="removeSound"><a href="#removeSound" class="headerlink" title="removeSound"></a>removeSound</h3><p>소리 삭제하기시 발생합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>소리</td>
+<td>json</td>
+<td></td>
+<td></td>
+<td>소리 데이터</td>
+</tr>
+</tbody></table>
+<h3 id="soundLoaded"><a href="#soundLoaded" class="headerlink" title="soundLoaded"></a>soundLoaded</h3><p>소리 파일이 로드되면 발생합니다.</p>
+<h3 id="soundSelected"><a href="#soundSelected" class="headerlink" title="soundSelected"></a>soundSelected</h3><p>소리탭에서 소리가 선택되면 발생합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>소리</td>
+<td>json</td>
+<td></td>
+<td></td>
+<td>선택한 소리의 데이터</td>
+</tr>
+<tr>
+<td>오브젝트</td>
+<td>json</td>
+<td></td>
+<td></td>
+<td>소리를 포함한 오브젝트 데이터</td>
+</tr>
+</tbody></table>
+<h3 id="soundUnselected"><a href="#soundUnselected" class="headerlink" title="soundUnselected"></a>soundUnselected</h3><p>소리의 선택이 해제되면 발생합니다.</p>
+<h3 id="startLoading"><a href="#startLoading" class="headerlink" title="startLoading"></a>startLoading</h3><p>Loading이 시작할 때 발생합니다.<br>ex) 사운드 파일 로드 시작.</p>
+<h2 id="오브젝트-이벤트"><a href="#오브젝트-이벤트" class="headerlink" title="오브젝트 이벤트"></a>오브젝트 이벤트</h2><h3 id="exportObject"><a href="#exportObject" class="headerlink" title="exportObject"></a>exportObject</h3><p><code>오브젝트 파일 내보내기</code>시 발생합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>오브젝트</td>
+<td>json</td>
+<td></td>
+<td></td>
+<td>오브젝트 데이터</td>
+</tr>
+</tbody></table>
+<h3 id="openSpriteManager"><a href="#openSpriteManager" class="headerlink" title="openSpriteManager"></a>openSpriteManager</h3><p><code>오브젝트 추가하기</code> 버튼 클릭시 발생합니다.</p>
+<blockquote>
+<p>이 이벤트를 받아서 팝업 오픈을 수행해야 합니다.</p>
+</blockquote>
+<h3 id="removeObject"><a href="#removeObject" class="headerlink" title="removeObject"></a>removeObject</h3><p><code>오브젝트 삭제하기</code>시 발생합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>오브젝트</td>
+<td>json</td>
+<td></td>
+<td></td>
+<td>오브젝트 데이터</td>
+</tr>
+</tbody></table>
+<h2 id="함수-이벤트"><a href="#함수-이벤트" class="headerlink" title="함수 이벤트"></a>함수 이벤트</h2><h3 id="removeFunctionsEnd"><a href="#removeFunctionsEnd" class="headerlink" title="removeFunctionsEnd"></a>removeFunctionsEnd</h3><p>함수 블록 삭제 직후 발생합니다.</p>
+<h3 id="removeFunctionsStart"><a href="#removeFunctionsStart" class="headerlink" title="removeFunctionsStart"></a>removeFunctionsStart</h3><p>함수 블록 삭제 직전 발생합니다.</p>
+<h2 id="데이터분석-이벤트"><a href="#데이터분석-이벤트" class="headerlink" title="데이터분석 이벤트"></a>데이터분석 이벤트</h2><h3 id="openTableManager"><a href="#openTableManager" class="headerlink" title="openTableManager"></a>openTableManager</h3><p><code>데이터 불러오기</code> 버튼 클릭시 발생합니다.</p>
+<blockquote>
+<p>이 이벤트를 받아서 팝업 오픈을 수행해야 합니다.</p>
+</blockquote>
+<h2 id="확장블록-이벤트"><a href="#확장블록-이벤트" class="headerlink" title="확장블록 이벤트"></a>확장블록 이벤트</h2><h3 id="openExpansionBlockManager"><a href="#openExpansionBlockManager" class="headerlink" title="openExpansionBlockManager"></a>openExpansionBlockManager</h3><p><code>확장 블록 불러오기</code> 버튼 클릭시 발생합니다.</p>
+<h2 id="변수-이벤트"><a href="#변수-이벤트" class="headerlink" title="변수 이벤트"></a>변수 이벤트</h2><h3 id="openExportListModal"><a href="#openExportListModal" class="headerlink" title="openExportListModal"></a>openExportListModal</h3><p><code>리스트 내보내기</code> 버튼 클릭시 발생합니다.</p>
+<h3 id="openImportListModal"><a href="#openImportListModal" class="headerlink" title="openImportListModal"></a>openImportListModal</h3><p><code>리스트 불러오기</code> 버튼 클릭시 발생합니다.</p>
+<h2 id="하드웨어-이벤트"><a href="#하드웨어-이벤트" class="headerlink" title="하드웨어 이벤트"></a>하드웨어 이벤트</h2><h3 id="hwDownload"><a href="#hwDownload" class="headerlink" title="hwDownload"></a>hwDownload</h3><p>하드웨어블록중 <code>다운로드 블록</code>을 클릭할시 발생합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>타입</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>hardware : 하드웨어 프로그램 다운로드<br>ino : 엔트리 아두이노 소스</td>
+</tr>
+</tbody></table>
+<h3 id="openHardWareDownloadModal"><a href="#openHardWareDownloadModal" class="headerlink" title="openHardWareDownloadModal"></a>openHardWareDownloadModal</h3><p>하드웨어 다운로드 팝업 오픈시 발생합니다.</p>
+<h3 id="openHardwareLiteBlockManager"><a href="#openHardwareLiteBlockManager" class="headerlink" title="openHardwareLiteBlockManager"></a>openHardwareLiteBlockManager</h3><p>하드웨어 <code>브라우저로 연결하기</code> 버튼 클릭시 발생합니다.</p>
+<h2 id="인공지능-이벤트"><a href="#인공지능-이벤트" class="headerlink" title="인공지능 이벤트"></a>인공지능 이벤트</h2><h3 id="openAIUtilizeBlockManager"><a href="#openAIUtilizeBlockManager" class="headerlink" title="openAIUtilizeBlockManager"></a>openAIUtilizeBlockManager</h3><p><code>인공지능 블록 불러오기</code> 버튼 클릭시 발생합니다.</p>
+<h3 id="openAIUtilizeTrainManager"><a href="#openAIUtilizeTrainManager" class="headerlink" title="openAIUtilizeTrainManager"></a>openAIUtilizeTrainManager</h3><p><code>인공지능 모델 학습하기</code> 버튼 클릭시 발생합니다.</p>
+<h3 id="showVideoLoadingScreen"><a href="#showVideoLoadingScreen" class="headerlink" title="showVideoLoadingScreen"></a>showVideoLoadingScreen</h3><p>인공지능에서 비디오가 노출될 때 발생합니다.</p>
+<h3 id="sttSubmitted"><a href="#sttSubmitted" class="headerlink" title="sttSubmitted"></a>sttSubmitted</h3><p>Speech-to-Text 완료시 발생합니다.</p>
+<h2 id="백팩-이벤트"><a href="#백팩-이벤트" class="headerlink" title="백팩 이벤트"></a>백팩 이벤트</h2><h3 id="addBackPackToEntry"><a href="#addBackPackToEntry" class="headerlink" title="addBackPackToEntry"></a>addBackPackToEntry</h3><p>사용자가 백팩에 새로운 객체를 추가할 때 발생합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>볼록타입</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>‘block’ : 블록 추가시 <br> ‘object’ : 오브젝트 추가시</td>
+</tr>
+<tr>
+<td>데이터</td>
+<td>json</td>
+<td></td>
+<td></td>
+<td>backpack 데이터</td>
+</tr>
+</tbody></table>
+<h3 id="changeBackPackTitle"><a href="#changeBackPackTitle" class="headerlink" title="changeBackPackTitle"></a>changeBackPackTitle</h3><p>백팩의 이름을 변경하면 발생합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ID</td>
+<td>ID</td>
+<td></td>
+<td></td>
+<td>백팩 아이템의 ID</td>
+</tr>
+<tr>
+<td>제목</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>백팩 아이템의 제목</td>
+</tr>
+</tbody></table>
+<h3 id="closeBackPack"><a href="#closeBackPack" class="headerlink" title="closeBackPack"></a>closeBackPack</h3><p>백팩 창을 닫으면 발생합니다.</p>
+<h3 id="openBackPack"><a href="#openBackPack" class="headerlink" title="openBackPack"></a>openBackPack</h3><p>백팩 오픈시 발생합니다.</p>
+<h3 id="removeBackPackItem"><a href="#removeBackPackItem" class="headerlink" title="removeBackPackItem"></a>removeBackPackItem</h3><p>백팩 아이템 삭제시 발생합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ID</td>
+<td>ID</td>
+<td></td>
+<td></td>
+<td>백팩 아이템의 ID</td>
+</tr>
+</tbody></table>
+<h2 id="기타-이벤트"><a href="#기타-이벤트" class="headerlink" title="기타 이벤트"></a>기타 이벤트</h2><h3 id="EntryBeforeUnload"><a href="#EntryBeforeUnload" class="headerlink" title="EntryBeforeUnload"></a>EntryBeforeUnload</h3><p>웹 페이지가 사용자에 의해 닫히거나 새로고침되기 직전에 발생합니다</p>
+<h3 id="keyPressed"><a href="#keyPressed" class="headerlink" title="keyPressed"></a>keyPressed</h3><p>엔트리 워크스페이스에서 키보드를 누를경우(onkeydown) 발생합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>e</td>
+<td>KeyboardEvent</td>
+<td></td>
+<td></td>
+<td>onkeydown 이벤트</td>
+</tr>
+</tbody></table>
+<h3 id="keyUpped"><a href="#keyUpped" class="headerlink" title="keyUpped"></a>keyUpped</h3><p>엔트리 워크스페이스에서 키보드를 뗄 경우(onkeyup) 발생합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>e</td>
+<td>KeyboardEvent</td>
+<td></td>
+<td></td>
+<td>onkeyup 이벤트</td>
+</tr>
+</tbody></table>
+<h3 id="loadComplete"><a href="#loadComplete" class="headerlink" title="loadComplete"></a>loadComplete</h3><p>Entry의 프로젝트 로드가 완료되면 발생합니다.</p>
+<h3 id="loadStart"><a href="#loadStart" class="headerlink" title="loadStart"></a>loadStart</h3><p>Entry의 프로젝트의 이미지 로드가 시작하면 발생합니다.</p>
+<h3 id="onPopupClose"><a href="#onPopupClose" class="headerlink" title="onPopupClose"></a>onPopupClose</h3><p>엔트리 스테이지가 전체화면모드가 종료되면 발생합니다.</p>
+
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/entryjs/api/2024-02-29-event.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/entryjs/api/2024-02-29-event.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

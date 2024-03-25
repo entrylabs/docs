@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>STATIC JS — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/entryjs/api/2024-03-05-static.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="STATIC JS — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="STATIC JS — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "entryjs"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "STATIC JS",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2024-03-05",
+        "dateCreated": "2024-03-05",
+        "dateModified": "2024-03-15",
+        "url": "https://docs.playentry.org/entryjs/api/2024-03-05-static.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "736",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/entryjs/api/2024-03-05-static.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.2"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link current" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link current" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>시작하기</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/index.html" class="sidebar-link" itemprop="url">소개</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-02-29-installation.html" class="sidebar-link" itemprop="url">설치방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-02-29-structure.html" class="sidebar-link" itemprop="url">프로젝트 구조</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-03-05-run.html" class="sidebar-link" itemprop="url">EntryJS 실행하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>API문서</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-api.html" class="sidebar-link" itemprop="url">핵심 API</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-data.html" class="sidebar-link" itemprop="url">Entry Event 사용법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-event.html" class="sidebar-link" itemprop="url">Entry Event 목록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-03-05-util.html" class="sidebar-link" itemprop="url">Entry Util</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-popup.html" class="sidebar-link" itemprop="url">팝업 관리</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-03-05-static.html" class="sidebar-link current" itemprop="url">STATIC JS</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>타입정의</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-11-init-options.html" class="sidebar-link" itemprop="url">Init Options</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-function-data.html" class="sidebar-link" itemprop="url">Function Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-interface-state.html" class="sidebar-link" itemprop="url">Interface State</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-message-data.html" class="sidebar-link" itemprop="url">Message Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-object-data.html" class="sidebar-link" itemprop="url">Object Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-project-data.html" class="sidebar-link" itemprop="url">Project Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-scene-data.html" class="sidebar-link" itemprop="url">Scene Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-table-data.html" class="sidebar-link" itemprop="url">Table Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-variable-data.html" class="sidebar-link" itemprop="url">Variable Data</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>기타</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/faq/2024-02-29-faq.html" class="sidebar-link" itemprop="url">자주 묻는 질문(FAQ)</a>
+                </li>
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content entryjs with-sidebar ">
+    
+      
+    
+    
+      <h1>STATIC JS</h1>
+    
+    <p><code>static.js</code>는 EntryJS 환경에서 사용되는 중요한 설정 파일로, <code>window.EntryStatic</code> 변수에 다양한 옵션과 환경 설정 값을 할당하여 Entry의 워크스페이스 및 기타 환경을 구성하는 데 사용됩니다. 이 파일은 EntryJS의 사용성, 확장성, 그리고 커스터마이징을 용이하게 하기 위해 설계된 다양한 정적(static) 값들을 정의합니다.</p>
+<blockquote>
+<p>실제로 엔트리에서 사용중인 <code>static.js</code>는 EntryJS 프로젝트 구조 내의 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/extern/util/static.js">extern/util/static.js</a> 경로에서 찾을 수 있습니다. </p>
+</blockquote>
+<h4 id="목록"><a href="#목록" class="headerlink" title="목록"></a>목록</h4><ul>
+<li><a href="#fontFamily">fontFamily</a></li>
+<li><a href="#fontOffsetY">fontOffsetY</a></li>
+<li><a href="#heightLetter">heightLetter</a></li>
+<li><a href="#messageMaxLength">messageMaxLength</a></li>
+<li><a href="#getAllBlocks">getAllBlocks</a></li>
+<li><a href="#fonts">fonts</a></li>
+<li><a href="#colorSet">colorSet</a></li>
+<li><a href="#getDefaultFontFamily">getDefaultFontFamily</a></li>
+</ul>
+<h3 id="fontFamily"><a href="#fontFamily" class="headerlink" title="fontFamily"></a>fontFamily</h3><p>EntryJS 워크스페이스 내에서 사용될 기본 폰트 패밀리(Font Family)를 지정하는데 사용됩니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 기본값</span></span><br><span class="line"><span class="title class_">EntryStatic</span>.<span class="property">fontFamily</span> = <span class="string">&quot;NanumGothic, &#x27;Nanum Gothic&#x27;&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="fontOffsetY"><a href="#fontOffsetY" class="headerlink" title="fontOffsetY"></a>fontOffsetY</h3><p>EntryJS에서 블록 내의 텍스트 필드(textField)를 렌더링할 때, 폰트별로 적절한 Y축 오프셋 값을 주어 텍스트가 블록의 중앙 높이에 맞춰지도록 하는 옵션입니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 기본값</span></span><br><span class="line"><span class="title class_">EntryStatic</span>.<span class="property">fontOffsetY</span> = -<span class="number">2.5</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="heightLetter"><a href="#heightLetter" class="headerlink" title="heightLetter"></a>heightLetter</h3><p>EntryJS에서 블록 내 텍스트 영역의 높이 값을 계산하는 데 사용되는 기준 문자를 지정하는 설정입니다. 이 옵션을 통해 개발자는 특정 문자의 너비를 기준으로 하여 블록 내의 텍스트 영역의 높이를 적절하게 조정할 수 있습니다. 기본값인 ‘M’은 텍스트 높이를 측정하기 위한 일반적인 기준 문자로 사용되며, 이는 대부분의 폰트에서 가로 세로의 차이가 비교적 비슷하기 때문입니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 기본값</span></span><br><span class="line"><span class="title class_">EntryStatic</span>.<span class="property">heightLetter</span> = <span class="string">&#x27;M&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="messageMaxLength"><a href="#messageMaxLength" class="headerlink" title="messageMaxLength"></a>messageMaxLength</h3><p>EntryJS 환경에서 신호 블록(메시지 블록)의 이름을 변경할 때 허용되는 최대 길이 값을 지정하는 설정입니다. 이 옵션을 설정함으로써, 개발자는 신호 이름의 길이를 제한할 수 있으며, 이는 사용자가 신호 블록의 이름을 입력할 때 길이 제한을 적용받게 됩니다. </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 기본값</span></span><br><span class="line"><span class="title class_">EntryStatic</span>.<span class="property">messageMaxLength</span> = <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="messageMaxLength-1"><a href="#messageMaxLength-1" class="headerlink" title="messageMaxLength"></a>messageMaxLength</h3><p>EntryJS 환경에서 신호 블록(메시지 블록)의 이름을 변경할 때 허용되는 최대 길이 값을 지정하는 설정입니다. 이 옵션을 설정함으로써, 개발자는 신호 이름의 길이를 제한할 수 있으며, 이는 사용자가 신호 블록의 이름을 입력할 때 길이 제한을 적용받게 됩니다. </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 기본값</span></span><br><span class="line"><span class="title class_">EntryStatic</span>.<span class="property">messageMaxLength</span> = <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="variableBlockList"><a href="#variableBlockList" class="headerlink" title="variableBlockList"></a>variableBlockList</h3><p>EntryJS 환경에서 프로젝트를 오브젝트 파일로 내보낼 때 포함될 변수 블록을 지정하는 설정입니다. 이 옵션을 사용하면 개발자는 내보내기 작업 시 포함시킬 특정 변수 블록을 선별적으로 지정할 수 있으며, 이를 통해 내보낸 파일의 크기를 최적화하거나, 특정 사용 사례에 맞는 데이터만을 포함시킬 수 있습니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 기본값</span></span><br><span class="line"><span class="title class_">EntryStatic</span>.<span class="property">variableBlockList</span> = [</span><br><span class="line">    <span class="string">&#x27;get_variable&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;change_variable&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;set_variable&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;show_variable&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;hide_variable&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;value_of_index_from_list&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;add_value_to_list&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;remove_value_from_list&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;insert_value_to_list&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;change_value_list_index&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;length_of_list&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;is_included_in_list&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;show_list&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;hide_list&#x27;</span>,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<h3 id="messageBlockList"><a href="#messageBlockList" class="headerlink" title="messageBlockList"></a>messageBlockList</h3><p>EntryJS 환경에서 오브젝트 파일로 내보내기(export) 시에 포함될 신호(메시지) 블록들을 지정하는 설정입니다. 이 옵션을 통해 개발자는 내보낼 객체 파일에 포함될 메시지 블록의 종류를 제한하거나 지정할 수 있습니다. 특히, 프로젝트의 특정 기능이나 상호작용에 필요한 신호 블록들만을 선택적으로 내보낼 때 유용하게 사용됩니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 기본값</span></span><br><span class="line"><span class="title class_">EntryStatic</span>.<span class="property">messageBlockList</span> = [<span class="string">&#x27;when_message_cast&#x27;</span>, <span class="string">&#x27;message_cast&#x27;</span>, <span class="string">&#x27;message_cast_wait&#x27;</span>];</span><br></pre></td></tr></table></figure>
+
+<h3 id="getAllBlocks"><a href="#getAllBlocks" class="headerlink" title="getAllBlocks"></a>getAllBlocks</h3><p>EntryJS에서 사용할 수 있는 블록 및 그 블록이 속한 카테고리를 지정하는 데 사용됩니다. 이 설정을 통해 개발자는 워크스페이스 내에서 사용자에게 제공될 블록의 종류와 그룹핑을 결정할 수 있으며, 특정 카테고리 또는 블록을 숨기거나 추가할 수 있습니다. getAllBlocks 값이 지정되지 않으면, 어떤 블록이나 카테고리도 워크스페이스에 나타나지 않게 됩니다.</p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/b69246f0581b62794128a736f52c08cb2a13b423/extern/util/static.js#L180-L642">소스참조</a></p>
+<h3 id="fonts"><a href="#fonts" class="headerlink" title="fonts"></a>fonts</h3><p>EntryJS 워크스페이스 내에서 사용될 폰트들을 설정하는 옵션입니다. 이 설정을 통해 개발자는 워크스페이스의 다양한 컴포넌트(예: 그림판, 텍스트 상자 등)에서 사용자가 활용할 수 있는 폰트 목록을 지정할 수 있습니다.</p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/b69246f0581b62794128a736f52c08cb2a13b423/extern/util/static.js#L843-L1007">소스참조</a></p>
+<h3 id="colorSet"><a href="#colorSet" class="headerlink" title="colorSet"></a>colorSet</h3><p>EntryJS 워크스페이스 내에서 사용되는 블록들의 색상을 지정하는 일종의 테마(theme) 설정입니다. 이 옵션을 통해 개발자는 워크스페이스의 블록 색상을 커스터마이즈할 수 있으며, 이를 통해 사용자에게 시각적으로 일관성 있는 환경을 제공하거나 특정 학습 목적에 맞게 블록의 색상을 조정할 수 있습니다.</p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/b69246f0581b62794128a736f52c08cb2a13b423/extern/util/static.js#L1009-L1113">소스참조</a></p>
+<h3 id="getDefaultFontFamily"><a href="#getDefaultFontFamily" class="headerlink" title="getDefaultFontFamily"></a>getDefaultFontFamily</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 기본값</span></span><br><span class="line"><span class="title class_">EntryStatic</span>.<span class="property">getDefaultFontFamily</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> localLang = <span class="title class_">Lang</span> || &#123;&#125;;</span><br><span class="line">    <span class="keyword">const</span> type = localLang.<span class="property">type</span>;</span><br><span class="line">    <span class="keyword">const</span> fallbackType = localLang.<span class="property">fallbackType</span>;</span><br><span class="line">    <span class="keyword">const</span> langType = type || fallbackType || <span class="string">&#x27;en&#x27;</span>;</span><br><span class="line">    <span class="keyword">switch</span> (langType) &#123;</span><br><span class="line">        <span class="attr">default</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;NanumGothic, &#x27;Nanum Gothic&#x27;, 나눔고딕, NanumGothicWeb, &#x27;맑은 고딕&#x27;, &#x27;Malgun Gothic&#x27;, Dotum&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/entryjs/api/2024-03-05-static.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/entryjs/api/2024-03-05-static.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

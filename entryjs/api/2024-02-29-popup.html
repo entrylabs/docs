@@ -1,0 +1,1422 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>팝업 관리 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/entryjs/api/2024-02-29-popup.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="팝업 관리 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="팝업 관리 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "entryjs"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "팝업 관리",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2024-03-19",
+        "dateCreated": "2024-03-19",
+        "dateModified": "2024-03-19",
+        "url": "https://docs.playentry.org/entryjs/api/2024-02-29-popup.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "6038",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/entryjs/api/2024-02-29-popup.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.2"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link current" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link current" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>시작하기</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/index.html" class="sidebar-link" itemprop="url">소개</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-02-29-installation.html" class="sidebar-link" itemprop="url">설치방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-02-29-structure.html" class="sidebar-link" itemprop="url">프로젝트 구조</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-03-05-run.html" class="sidebar-link" itemprop="url">EntryJS 실행하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>API문서</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-api.html" class="sidebar-link" itemprop="url">핵심 API</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-data.html" class="sidebar-link" itemprop="url">Entry Event 사용법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-event.html" class="sidebar-link" itemprop="url">Entry Event 목록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-03-05-util.html" class="sidebar-link" itemprop="url">Entry Util</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-popup.html" class="sidebar-link current" itemprop="url">팝업 관리</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-03-05-static.html" class="sidebar-link" itemprop="url">STATIC JS</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>타입정의</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-11-init-options.html" class="sidebar-link" itemprop="url">Init Options</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-function-data.html" class="sidebar-link" itemprop="url">Function Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-interface-state.html" class="sidebar-link" itemprop="url">Interface State</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-message-data.html" class="sidebar-link" itemprop="url">Message Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-object-data.html" class="sidebar-link" itemprop="url">Object Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-project-data.html" class="sidebar-link" itemprop="url">Project Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-scene-data.html" class="sidebar-link" itemprop="url">Scene Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-table-data.html" class="sidebar-link" itemprop="url">Table Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-variable-data.html" class="sidebar-link" itemprop="url">Variable Data</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>기타</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/faq/2024-02-29-faq.html" class="sidebar-link" itemprop="url">자주 묻는 질문(FAQ)</a>
+                </li>
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content entryjs with-sidebar ">
+    
+      
+    
+    
+      <h1>팝업 관리</h1>
+    
+    <p>이 문서에서는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entry-tool">entry-tool</a>의 팝업과 기타 툴들을 사용하는 방법을 소개합니다.</p>
+<br>
+
+<h4 id="목록"><a href="#목록" class="headerlink" title="목록"></a>목록</h4><ul>
+<li><a href="#설치-및-세팅">설치 및 세팅</a><ul>
+<li><a href="#패키지-매니저로-가져오기">패키지 매니저로 가져오기</a></li>
+<li><a href="#External-JavaScript로-가져오기">External JavaScript로 가져오기</a></li>
+</ul>
+</li>
+</ul>
+<br>
+
+<ul>
+<li><a href="#공통">공통</a><ul>
+<li><a href="#get-set-함수">get set 함수</a></li>
+<li><a href="#show">show</a></li>
+<li><a href="#hide">hide</a></li>
+<li><a href="#setData">setData</a></li>
+<li><a href="#remove">remove</a></li>
+<li><a href="#render">render</a></li>
+</ul>
+</li>
+</ul>
+<br>
+
+<ul>
+<li><a href="#Popup">Popup</a><ul>
+<li><a href="#select">select</a></li>
+<li><a href="#upload">upload</a></li>
+<li><a href="#dragUpload">dragUpload</a></li>
+<li><a href="#draw">draw</a></li>
+<li><a href="#write">write</a></li>
+<li><a href="#sprite">sprite</a></li>
+<li><a href="#picture">picture</a></li>
+<li><a href="#paint">paint</a></li>
+<li><a href="#sound">sound</a></li>
+<li><a href="#expansion">expansion</a></li>
+<li><a href="#aiUtilize">aiUtilize</a></li>
+<li><a href="#hardwareLite">hardwareLite</a></li>
+<li><a href="#projects">projects</a></li>
+<li><a href="#table">table</a></li>
+<li><a href="#이벤트">이벤트</a></li>
+<li><a href="#팝업-데이터-타입-정의">팝업 데이터 타입 정의</a></li>
+</ul>
+</li>
+</ul>
+<br>
+
+<ul>
+<li><a href="#Widget">Widget</a><ul>
+<li><a href="#Chart">Chart</a></li>
+<li><a href="#ModalChart">ModalChart</a></li>
+<li><a href="#ModalTable">ModalTable</a></li>
+<li><a href="#BillBoardChart">BillBoardChart</a></li>
+<li><a href="#TreeNode">TreeNode</a></li>
+<li><a href="#ModalProgress">ModalProgress</a></li>
+<li><a href="#Dropper">Dropper</a></li>
+<li><a href="#Sortable">Sortable</a></li>
+<li><a href="#Draggable">Draggable</a></li>
+<li><a href="#Dropdown">Dropdown</a></li>
+<li><a href="#DropdownExtra">DropdownExtra</a></li>
+<li><a href="#Angle">Angle</a></li>
+<li><a href="#Number">Number</a></li>
+<li><a href="#ContextMenu">ContextMenu</a></li>
+<li><a href="#Backpack">Backpack</a></li>
+<li><a href="#MusicScale">MusicScale</a></li>
+</ul>
+</li>
+</ul>
+<br>
+
+<ul>
+<li><a href="#기타">기타</a><ul>
+<li><a href="#ListTool">ListTool</a></li>
+<li><a href="#DataAnalytics">DataAnalytics</a></li>
+</ul>
+</li>
+</ul>
+<br>
+
+<ul>
+<li><a href="#React-컴포넌트">React 컴포넌트</a><ul>
+<li><a href="#Component.Dropdown">Component.Dropdown</a></li>
+<li><a href="#Component.ModalProgress">Component.ModalProgress</a></li>
+<li><a href="#Component.ColorPicker">Component.ColorPicker</a></li>
+<li><a href="#Component.Backpack">Component.Backpack</a></li>
+<li><a href="#Component.Number">Component.Number</a></li>
+<li><a href="#Component.MusicScale">Component.MusicScale</a></li>
+<li><a href="#Component.ContextMenu">Component.ContextMenu</a></li>
+</ul>
+</li>
+</ul>
+<br>
+
+
+
+
+<h2 id="설치-및-세팅"><a href="#설치-및-세팅" class="headerlink" title="설치 및 세팅"></a>설치 및 세팅</h2><h3 id="패키지-매니저로-가져오기"><a href="#패키지-매니저로-가져오기" class="headerlink" title="패키지 매니저로 가져오기"></a>패키지 매니저로 가져오기</h3><p>entry-tool은 현재 npm에 패키지가 등록되어 있지 않습니다.</p>
+<p>따라서, 패키지 매니저로 설치하기 위해선 package.json에 github 링크를 추가해서 설치해야 합니다.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># in package.json</span></span><br><span class="line"><span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">        <span class="comment"># 접두사 dist/가 있는 브랜치는 빌드파일만 있는 브랜치입니다.</span></span><br><span class="line">     <span class="string">&quot;entry-tool&quot;</span>: <span class="string">&quot;git+https://github.com/entrylabs/entry-tool.git#dist/develop&quot;</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h3 id="External-JavaScript로-가져오기"><a href="#External-JavaScript로-가져오기" class="headerlink" title="External JavaScript로 가져오기"></a>External JavaScript로 가져오기</h3><p>html에서 script태그를 사용하여 번들js와 css파일을 불러와 사용할 수 있습니다.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 설치경로에서 가져오기: node_modules</span></span><br><span class="line">&lt;<span class="built_in">link</span> rel=<span class="string">&#x27;stylesheet&#x27;</span> href=<span class="string">&#x27;/node_modules경로/entry-tool/dist/entry-tool.css&#x27;</span>/&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">&quot;text/javascript&quot;</span> src=<span class="string">&#x27;/node_modules경로/entry-tool/dist/entry-tool.js&#x27;</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 설치경로에서 가져오기: 직접 추가한 경우</span></span><br><span class="line">&lt;<span class="built_in">link</span> rel=<span class="string">&#x27;stylesheet&#x27;</span> href=<span class="string">&#x27;파일경로/entry-tool.css&#x27;</span>/&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">&quot;text/javascript&quot;</span> src=<span class="string">&#x27;파일경로/entry-tool.js&#x27;</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># cdn</span></span><br><span class="line">&lt;<span class="built_in">link</span> href=<span class="string">&quot;https://playentry.org/lib/entry-tool/dist/entry-tool.css&quot;</span> rel=<span class="string">&quot;stylesheet&quot;</span> /&gt;</span><br><span class="line">&lt;script</span><br><span class="line">    <span class="built_in">type</span>=<span class="string">&quot;text/javascript&quot;</span></span><br><span class="line">    src=<span class="string">&quot;https://playentry.org/lib/entry-tool/dist/entry-tool.js&quot;</span></span><br><span class="line">&gt;&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<br>
+
+<h2 id="공통"><a href="#공통" class="headerlink" title="공통"></a>공통</h2><p>entry-tool에서 제공하는 툴들은 js모듈 형식으로 사용 가능합니다.<br>React 컴포넌트로 사용 가능한 툴들은 아래 문서에서 별도로 기술합니다.</p>
+<p>js모듈로 entry-tool의 툴들을 사용하기 위해선 가져온 모듈 클래스를 생성자로 신규 인스턴스를 생성해야 합니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// example 1</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Popup</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@entrylabs/tool&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> popup = <span class="keyword">new</span> <span class="title class_">Popup</span>(&#123;</span><br><span class="line">      <span class="attr">container</span>: <span class="variable language_">this</span>.<span class="property">container</span>,</span><br><span class="line">      <span class="attr">isShow</span>: <span class="literal">false</span>,</span><br><span class="line">      <span class="attr">theme</span>: <span class="string">&#x27;entry&#x27;</span>,</span><br><span class="line">      <span class="attr">data</span>: &#123; <span class="attr">data</span>: &#123; <span class="attr">data</span>: [] &#125; &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// example 2</span></span><br><span class="line"><span class="keyword">const</span> &#123; <span class="title class_">ListTool</span> &#125; = <span class="keyword">await</span> <span class="keyword">import</span>(<span class="string">&#x27;@entrylabs/tool&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> listTool = <span class="keyword">new</span> <span class="title class_">ListTool</span>(&#123;</span><br><span class="line">  <span class="attr">container</span>: <span class="variable language_">this</span>.<span class="property">listContainer</span>,</span><br><span class="line">  <span class="attr">isShow</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">theme</span>: <span class="string">&#x27;entry&#x27;</span>,</span><br><span class="line">  <span class="attr">data</span>: &#123;&#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>인스턴스 생성에 필요한 파라미터는 아래와 같습니다.</p>
+<p>각 파라미터는 js get, set 기능이나 show, hide 함수를 통해 변경이 가능합니다.</p>
+<p>상세한 구현내용은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entry-tool/blob/3e6cc0c7c99a158078f6e68a7df6a4451dcf1cdf/src/hoc/withWrapper.jsx#L17">withWrapper</a> 에서 확인하실 수 있습니다.</p>
+<ul>
+<li>Returns: entry-tool 인스턴스(object)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>container</td>
+<td>HTMLDivElement</td>
+<td>✔️</td>
+<td>document 하우 div</td>
+<td>생성할 element의 부모가 될 html element 입니다.</td>
+</tr>
+<tr>
+<td>isShow</td>
+<td></td>
+<td>✔️</td>
+<td>true</td>
+<td>초기 노출여부를 설정합니다.</td>
+</tr>
+<tr>
+<td>data</td>
+<td></td>
+<td></td>
+<td></td>
+<td>리스트나 일부 팝업처럼 데이터를 시각화하는 툴들이 사용하는 데이터입니다. 초기값을 {}로 세팅하고 추후 setData 함수로 설정 가능합니다.</td>
+</tr>
+<tr>
+<td>props</td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>명시된 파리미터 이외에 내부 React 컴포넌트에 전달할 props 값입니다.</td>
+</tr>
+<tr>
+<td>theme</td>
+<td>‘entry’ | ‘lecture’ | ‘entryline’</td>
+<td></td>
+<td></td>
+<td>테마 스타일을 설정 할 수 있습니다. 일반적으로 ‘entry’를 사용합니다.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>✔️</td>
+<td></td>
+<td>생성할 툴의 세부 타입</td>
+</tr>
+<tr>
+<td><del>target</del></td>
+<td></td>
+<td></td>
+<td></td>
+<td>deprecated</td>
+</tr>
+</tbody></table>
+<p>아래는 JS모듈에서 공통으로 사용하는 함수들입니다.</p>
+<p>인스턴스명은 예시를 위해 임의로 tool로 지정합니다.</p>
+<br>
+
+<h3 id="get-set-함수"><a href="#get-set-함수" class="headerlink" title="get set 함수"></a>get set 함수</h3><p>인스턴스 생성시 생성자 함수의 파라미터로 넣어준 값들의 js get, set 함수를 지원합니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">tool.<span class="title function_">container</span>(container)</span><br><span class="line">toolContainer = tool.<span class="property">container</span></span><br><span class="line"></span><br><span class="line">tool.<span class="title function_">props</span>(props)</span><br><span class="line">toolProps = tool.<span class="property">props</span></span><br><span class="line"></span><br><span class="line">toolType = tool.<span class="property">type</span></span><br><span class="line"></span><br><span class="line">toolIsShow = tool.<span class="property">isShow</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// set data의 경우 기존 값을 대체하는 것이 아닌, Object.assign으로 프로퍼티를 추가하는 방식입니다.</span></span><br><span class="line">tool.<span class="title function_">data</span>(data)</span><br><span class="line">tooData = tool.<span class="property">data</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="show"><a href="#show" class="headerlink" title="show"></a>show</h3><p>툴을 노출시킵니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">tool.<span class="title function_">show</span>(props, data);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Returns: entry-tool 인스턴스(object)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>props</td>
+<td>object</td>
+<td>✔️</td>
+<td></td>
+<td>명시된 파리미터 이외에 내부 React 컴포넌트에 전달할 props 값입니다.</td>
+</tr>
+<tr>
+<td>data</td>
+<td>object</td>
+<td>✔️</td>
+<td></td>
+<td>시각화할 데이터 정보입니다.</td>
+</tr>
+</tbody></table>
+<br>
+
+<h3 id="hide"><a href="#hide" class="headerlink" title="hide"></a>hide</h3><p>툴을 감춥니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">tool.<span class="title function_">hide</span>(props, data);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Returns: entry-tool 인스턴스(object)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>props</td>
+<td>object</td>
+<td>✔️</td>
+<td></td>
+<td>명시된 파리미터 이외에 내부 React 컴포넌트에 전달할 props 값입니다.</td>
+</tr>
+<tr>
+<td>data</td>
+<td>object</td>
+<td>✔️</td>
+<td></td>
+<td>시각화할 데이터 정보입니다.</td>
+</tr>
+</tbody></table>
+<br>
+
+<h3 id="setData"><a href="#setData" class="headerlink" title="setData"></a>setData</h3><p>팝업에서 표시해줄 item, navigation, sort 정보와 같은 데이터를 전달합니다.</p>
+<p>entry-tool popup 사용시 가장 많이 사용하는 함수입니다.</p>
+<p>일반적으로 최초로 팝업을 시각화하거나, 사용자 액션을 통해 popup event가 발생했을 때, 핸들링 함수에서 많이 사용합니다.</p>
+<p>파라미터로 사용하는 data값의 양식은 어떤 type의 popup을 사용하는지에 따라 달라집니다.</p>
+<p>자세한 사용법은 아래의 각 popup type별 문서에서 기술합니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">tool.<span class="title function_">setData</span>(data);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Returns: entry-tool 인스턴스(object)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>data</td>
+<td>object</td>
+<td>✔️</td>
+<td></td>
+<td>시각화할 데이터 정보입니다.</td>
+</tr>
+</tbody></table>
+<br>
+
+<h3 id="remove"><a href="#remove" class="headerlink" title="remove"></a>remove</h3><p>dom을 완전히 제거하고 내부값(data, props, container)를 초기화합니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">tool.<span class="title function_">remove</span>();</span><br></pre></td></tr></table></figure>
+
+
+<br>
+
+<h3 id="render"><a href="#render" class="headerlink" title="render"></a>render</h3><p>현재 프로퍼티를 기반으로 새롭게 렌더합니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">await</span> tool.<span class="title function_">render</span>();</span><br></pre></td></tr></table></figure>
+
+
+
+
+<br>
+
+
+
+<h2 id="Popup"><a href="#Popup" class="headerlink" title="Popup"></a>Popup</h2><p>엔트리에서 사용하는 다양한 팝업을 제공합니다.</p>
+<p>팝업의 종류는 type 프로퍼티를 통해 지정할 수 있습니다.</p>
+<p>type은 단독 기능을 위해 만들어진 type과, 해당 기능들을 조합하여 특정 페이지를 구현한 type으로 나뉩니다.</p>
+<p>페이지 구현 type들은 entry-tool 소스에서는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entry-tool/blob/3e6cc0c7c99a158078f6e68a7df6a4451dcf1cdf/src/constants/index.js#L234">constants/index.js</a>에서 확인 가능합니다.</p>
+<p>navigations 프로퍼티에서 어떤 단독기능 type을 사용중인지 확인할 수 있으며, 실제 화면에서는 상단 네비게이션바에 각 팝업기능 바로가기가 할당됩니다.</p>
+<h4 id="단독-기능-type"><a href="#단독-기능-type" class="headerlink" title="단독 기능 type"></a>단독 기능 type</h4><table>
+<thead>
+<tr>
+<th>type</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>select</td>
+<td>카드뷰 형태로 리스트를 출력하고, 사용자가 특정 카드뷰를 선택하는 팝업입니다.</td>
+</tr>
+<tr>
+<td>upload</td>
+<td>‘파일 올리기’ 기능을 위해 사용하는 팝업입니다.</td>
+</tr>
+<tr>
+<td>dragUpload</td>
+<td>‘파일을 끌어다 놓거나 클릭해서 업로드’ 기능을 위해 사용하는 팝업입니다.</td>
+</tr>
+<tr>
+<td>draw</td>
+<td>‘새로 그리기’ 기능을 위해 사용하는 팝업입니다.</td>
+</tr>
+<tr>
+<td>write</td>
+<td>‘글상자’ 기능을 위해 사용하는 팝업입니다.</td>
+</tr>
+</tbody></table>
+<h4 id="페이지-구현-type"><a href="#페이지-구현-type" class="headerlink" title="페이지 구현 type"></a>페이지 구현 type</h4><table>
+<thead>
+<tr>
+<th>type</th>
+<th>사용 기능</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sprite</td>
+<td>select, upload, draw, write</td>
+<td>‘오브젝트 추가하기’에서 사용하는 팝업입니다.</td>
+</tr>
+<tr>
+<td>picture</td>
+<td>select, upload, draw</td>
+<td>‘모양 추가하기’에서 사용하는 팝업입니다.</td>
+</tr>
+<tr>
+<td>paint</td>
+<td>select, upload</td>
+<td>‘모양 가져오기’에서 사용하는 팝업입니다.</td>
+</tr>
+<tr>
+<td>sound</td>
+<td>select, upload</td>
+<td>‘소리 추가하기’에서 사용하는 팝업입니다.</td>
+</tr>
+<tr>
+<td>expansion</td>
+<td>select</td>
+<td>‘확장 블록 불러오기’에서 사용하는 팝업입니다.</td>
+</tr>
+<tr>
+<td>aiUtilize</td>
+<td>select</td>
+<td>‘인공지능 블록 불러오기’에서 사용하는 팝업입니다.</td>
+</tr>
+<tr>
+<td>hardwareLite</td>
+<td>select</td>
+<td>하드웨어 ‘브라우저로 연결하기’에서 사용하는 팝업입니다.</td>
+</tr>
+<tr>
+<td>projects</td>
+<td>project</td>
+<td>‘작품 불러오기’에서 사용하는 팝업입니다. 전용 컴포넌트인 ‘project’를 사용합니다.</td>
+</tr>
+<tr>
+<td>table</td>
+<td>select, dragUpload, draw</td>
+<td>‘테이블 불러오기’에서 사용하는 팝업입니다.</td>
+</tr>
+</tbody></table>
+<br>
+
+<p>이 아래로는 각 type을 이미지와 함께 소개합니다.</p>
+<p>단독 기능 type은 구체적인 사용예시 코드가 포함되어 있습니다.</p>
+<p>페이지 구현 type들은 자신이 사용하는 단독type에서 사용하는 이벤트를 핸들링하여 setData로 적절히 데이터 처리를 해야 합니다.</p>
+<p>페이지 구현 type들은 tool.data.data.data의 데이터들이 조금씩 다릅니다. 각 타입별 데이터는 <a href="#팝업-데이터-타입-정의">팝업 데이터 타입 정의</a>에서 다룹니다.</p>
+<p>좀 더 구체적인 사용 예시는 entry-offline의 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entry-offline/blob/master/src/renderer/helper/entry/entryModalHelper.ts">entryModalHelper.ts</a>파일에서도 확인이 가능합니다.</p>
+<br>
+
+<h3 id="select"><a href="#select" class="headerlink" title="select"></a>select</h3><p><img src="/images/entry-tool/popup_select_main.png" alt="select_main"></p>
+<p>카드뷰 형태로 리스트를 출력하고, 사용자가 특정 카드뷰를 선택하는 팝업입니다.</p>
+<p>엔트리 서비스에서는 ‘오브젝트 추가하기’, ‘모양 추가하기’, ‘소리 추가하기’ 등에 적용되어 있습니다.</p>
+<p>select에서 각 item의 데이터들을 data 값에 할당해 주어야 합니다.</p>
+<p>data의 프로퍼티는 popup type별로 다를 수 있기에 이 문서에서는 가장 기본적인 프로퍼티만 예시로 소개합니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// popup 인스턴스 초기화</span></span><br><span class="line"><span class="keyword">const</span> popup = <span class="keyword">new</span> <span class="title class_">Popup</span>(&#123;</span><br><span class="line">    <span class="attr">container</span>: <span class="variable language_">this</span>.<span class="property">container</span>,</span><br><span class="line">    <span class="attr">isShow</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">theme</span>: <span class="string">&#x27;entry&#x27;</span>,</span><br><span class="line">    <span class="attr">data</span>: &#123; </span><br><span class="line">      <span class="attr">data</span>: &#123; </span><br><span class="line">      <span class="comment">// item이 사용할 썸네일 baseUrl, imageName과 조합하여 css style로 이미지를 불러온다.</span></span><br><span class="line">        <span class="attr">imageBaseUrl</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">        <span class="attr">data</span>: [</span><br><span class="line">          &#123;</span><br><span class="line">            <span class="attr">name</span>: <span class="string">&#x27;item1&#x27;</span>,</span><br><span class="line">            <span class="attr">description</span>: <span class="string">&#x27;아이템 설명&#x27;</span>,</span><br><span class="line">            <span class="attr">label</span>: &#123;</span><br><span class="line">              <span class="attr">ko</span>: <span class="string">&#x27;타이틀&#x27;</span>,</span><br><span class="line">              <span class="attr">en</span>: <span class="string">&#x27;title&#x27;</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">imageName</span>: <span class="string">&#x27;file1.png&#x27;</span></span><br><span class="line">          &#125;,</span><br><span class="line">        ]</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 이벤트 핸들링</span></span><br><span class="line">popup.<span class="title function_">on</span>(<span class="string">&#x27;submit&#x27;</span>, <span class="function">(<span class="params">datas</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// ex) data가 엔트리 오브젝트인 경우</span></span><br><span class="line">    datas.<span class="title function_">map</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> object = &#123;</span><br><span class="line">          <span class="attr">id</span>: <span class="title class_">Entry</span>.<span class="title function_">generateHash</span>(),</span><br><span class="line">          <span class="attr">objectType</span>: <span class="string">&#x27;sprite&#x27;</span>,</span><br><span class="line">          <span class="attr">sprite</span>: item,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="title class_">Entry</span>.<span class="property">container</span>.<span class="title function_">addObject</span>(object, <span class="number">0</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 추가로 data 세팅이 필요한 경우 data 추가</span></span><br><span class="line"><span class="comment">// sidebar data 추가시, 바로 sidebar 컴포넌트를 렌더한다.</span></span><br><span class="line">popup.<span class="title function_">setData</span>(&#123; sidebar &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// show 함수로 사용자에게 노출</span></span><br><span class="line">popup.<span class="title function_">show</span>();</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<br>
+
+<h3 id="upload"><a href="#upload" class="headerlink" title="upload"></a>upload</h3><p><img src="/images/entry-tool/popup_upload_main.png" alt="upload_main"></p>
+<p>‘파일 올리기’ 기능을 위해 사용하는 팝업입니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 사용자 로컬 디렉토리에서 선택한 파일을 1차로 임시저장</span></span><br><span class="line"><span class="comment">// 업로드한 파일이 sound, image, table 이면 formData에 object 데이터이면 &#x27;objectData&#x27;를 통해 넘어옵니다.</span></span><br><span class="line">popup.<span class="title function_">on</span>(<span class="string">&#x27;dummyUploads&#x27;</span>, <span class="keyword">async</span> (&#123; formData, objectData &#125;) =&gt; &#123;</span><br><span class="line">	<span class="keyword">const</span> validFormData = <span class="title function_">handleFormData</span>(formData);</span><br><span class="line">  <span class="keyword">const</span> validObjectData = <span class="title function_">handleObjectData</span>(objectData);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 가공된 파일데이터를 setData로 전달해서 팝업화면에 반영</span></span><br><span class="line">  popup.<span class="title function_">setData</span>(&#123;</span><br><span class="line">    <span class="attr">data</span>: &#123; </span><br><span class="line">      <span class="attr">uploads</span>: validFormData,</span><br><span class="line">      <span class="attr">data</span>: []</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  popup.<span class="title function_">setData</span>(&#123;</span><br><span class="line">    <span class="attr">data</span>: &#123; </span><br><span class="line">      <span class="attr">uploads</span>: validObjectData,</span><br><span class="line">      <span class="attr">data</span>: []</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 사용자가 &#x27;추가히기&#x27; 버튼을 클릭하여 임시보관중인 업로드 파일들을 서비스에 반영</span></span><br><span class="line">popup.<span class="title function_">on</span>(<span class="string">&#x27;uploads&#x27;</span>, <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">	data.<span class="property">uploads</span>.<span class="title function_">map</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 데이터 종류에 맞게 엔트리WS에 반영</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 업로드 실패시 에러 핸들링</span></span><br><span class="line">popup.<span class="title function_">on</span>(<span class="string">&#x27;uploadFail&#x27;</span>, <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">alert</span>(<span class="string">`<span class="subst">$&#123;data.messageParent&#125;</span><span class="subst">$&#123;data.message&#125;</span>`</span>);</span><br><span class="line">&#125;)</span><br><span class="line">         </span><br></pre></td></tr></table></figure>
+
+
+
+<br>
+
+<h3 id="dragUpload"><a href="#dragUpload" class="headerlink" title="dragUpload"></a>dragUpload</h3><p><img src="/images/entry-tool/popup_dragupload_main.png" alt="dragupload_main"></p>
+<p>‘파일을 끌어다 놓거나 클릭해서 업로드’ 기능을 위해 사용하는 팝업입니다.</p>
+<p>사용자가 파일 업로드를 드래그&amp;드랍으로 해줄 수 있을 뿐, 개발자 입장에서 핸들링할 내용은 upload와 동일합니다.</p>
+<br>
+
+<h3 id="draw"><a href="#draw" class="headerlink" title="draw"></a>draw</h3><p><img src="/images/entry-tool/popup_draw_main.png" alt="draw_main"></p>
+<p>‘새로 그리기’ 기능을 위해 사용하는 팝업입니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">popup.<span class="title function_">on</span>(<span class="string">&#x27;draw&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// WS의 그리기 페이지로 리다이렉트 혹은 기타 그리기 툴로 이동</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="write"><a href="#write" class="headerlink" title="write"></a>write</h3><p><img src="/images/entry-tool/popup_write_main.png" alt="write_main"></p>
+<p>‘글상자’ 기능을 위해 사용하는 팝업입니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">popup.<span class="title function_">on</span>(<span class="string">&#x27;write&#x27;</span>, <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 파라미로 넘어온 글상자 데이터를 Entry WS에 반영</span></span><br><span class="line">  <span class="keyword">const</span> object = &#123;</span><br><span class="line">      <span class="attr">id</span>: <span class="title class_">Entry</span>.<span class="title function_">generateHash</span>(),</span><br><span class="line">      <span class="attr">name</span>: <span class="string">&#x27;글상자 이름&#x27;</span>,</span><br><span class="line">      <span class="attr">text</span>: data.<span class="property">text</span>,</span><br><span class="line">      <span class="attr">options</span>: &#123;</span><br><span class="line">          <span class="attr">font</span>: data.<span class="property">font</span>,</span><br><span class="line">          <span class="attr">bold</span>: <span class="literal">false</span>,</span><br><span class="line">          <span class="attr">underLine</span>: <span class="literal">false</span>,</span><br><span class="line">          <span class="attr">italic</span>: <span class="literal">false</span>,</span><br><span class="line">          <span class="attr">strike</span>: data.<span class="property">effects</span>.<span class="property">through</span> || <span class="literal">false</span>,</span><br><span class="line">          <span class="attr">colour</span>: data.<span class="property">effects</span>.<span class="property">color</span> || <span class="string">&#x27;#000000&#x27;</span>,</span><br><span class="line">          <span class="attr">background</span>: data.<span class="property">effects</span>.<span class="property">backgroundColor</span> || <span class="string">&#x27;#ffffff&#x27;</span>,</span><br><span class="line">          <span class="attr">lineBreak</span>: data.<span class="property">writeType</span> === <span class="string">&#x27;one&#x27;</span> ? <span class="literal">false</span> : <span class="literal">true</span>,</span><br><span class="line">          ...data.<span class="property">effects</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">objectType</span>: <span class="string">&#x27;textBox&#x27;</span>,</span><br><span class="line">      <span class="attr">sprite</span>: &#123; <span class="attr">sounds</span>: [], <span class="attr">pictures</span>: [] &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="title class_">Entry</span>.<span class="property">container</span>.<span class="title function_">addObject</span>(object, <span class="number">0</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="sprite"><a href="#sprite" class="headerlink" title="sprite"></a>sprite</h3><p><img src="/images/entry-tool/popup_sprite_main.png" alt="sprite_main"></p>
+<p>‘오브젝트 추가하기’에서 사용하는 팝업입니다.</p>
+<p>내부적으로 select, upload, draw, write 팝업 기능을 사용하며 상단 naviation에서 확인 가능합니다.</p>
+<br>
+
+<h3 id="picture"><a href="#picture" class="headerlink" title="picture"></a>picture</h3><p><img src="/images/entry-tool/popup_picture_main.png" alt="popup_picture_main"></p>
+<p>‘모양 추가하기’에서 사용하는 팝업입니다. </p>
+<p>내부적으로 select, upload, draw 팝업 기능을 사용하며 상단 naviation에서 확인 가능합니다.</p>
+<br>
+
+<h3 id="paint"><a href="#paint" class="headerlink" title="paint"></a>paint</h3><p><img src="/images/entry-tool/popup_paint_main.png" alt="popup_paint_main"></p>
+<p>‘모양 가져오기’에서 사용하는 팝업입니다.</p>
+<p>내부적으로 select, upload 팝업 기능을 사용하며 상단 naviation에서 확인 가능합니다.</p>
+<br>
+
+<h3 id="sound"><a href="#sound" class="headerlink" title="sound"></a>sound</h3><p><img src="/images/entry-tool/popup_sound_main.png" alt="popup_sound_main"></p>
+<p>‘소리 추가하기’에서 사용하는 팝업입니다.</p>
+<p>내부적으로 select, upload 팝업 기능을 사용하며 상단 naviation에서 확인 가능합니다.</p>
+<br>
+
+<h3 id="expansion"><a href="#expansion" class="headerlink" title="expansion"></a>expansion</h3><p><img src="/images/entry-tool/popup_expansion_main.png" alt="popup_expansion_main"></p>
+<p>‘확장 블록 불러오기’에서 사용하는 팝업입니다.</p>
+<p>내부적으로 select 팝업 기능을 사용하며 상단 naviation에서 확인 가능합니다.</p>
+<br>
+
+<h3 id="aiUtilize"><a href="#aiUtilize" class="headerlink" title="aiUtilize"></a>aiUtilize</h3><p><img src="/images/entry-tool/popup_aiUtilize_main.png" alt="popup_aiUtilize_main"></p>
+<p>‘인공지능 블록 불러오기’에서 사용하는 팝업입니다.</p>
+<p>내부적으로 select 팝업 기능을 사용하며 상단 naviation에서 확인 가능합니다.</p>
+<br>
+
+<h3 id="hardwareLite"><a href="#hardwareLite" class="headerlink" title="hardwareLite"></a>hardwareLite</h3><p><img src="/images/entry-tool/popup_hardwareLite_main.png" alt="popup_hardwareLite_main"></p>
+<p>하드웨어 ‘브라우저로 연결하기’에서 사용하는 팝업입니다.</p>
+<p>내부적으로 select 팝업 기능을 사용하며 상단 naviation에서 확인 가능합니다.</p>
+<br>
+
+<h3 id="projects"><a href="#projects" class="headerlink" title="projects"></a>projects</h3><p><img src="/images/entry-tool/popup_projects_empty.png" alt="popup_projects_empty"></p>
+<p><img src="/images/entry-tool/popup_projects_main.png" alt="popup_projects_main"></p>
+<p>‘작품 불러오기’에서 사용하는 팝업입니다. 전용 컴포넌트인 ‘project’를 사용합니다.</p>
+<p>엔트리 서비스에서는 projectNavOptions으로 검색조건을 세팅해서 사용 중입니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> popup = <span class="keyword">new</span> <span class="title class_">Popup</span>(&#123;</span><br><span class="line">    <span class="attr">container</span>: <span class="variable language_">this</span>.<span class="property">container</span>,</span><br><span class="line">    <span class="attr">isShow</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">theme</span>: <span class="string">&#x27;entry&#x27;</span>,</span><br><span class="line">    <span class="attr">data</span>: &#123; <span class="attr">data</span>: &#123; <span class="attr">data</span>: [] &#125; &#125;,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">popup.<span class="title function_">setData</span>(&#123;</span><br><span class="line">    <span class="attr">projectNavOptions</span>: &#123;</span><br><span class="line">        <span class="attr">categoryOptions</span>: [</span><br><span class="line">            <span class="string">&#x27;all&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;game&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;living&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;storytelling&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;arts&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;knowledge&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;etc&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">sortOptions</span>: [<span class="string">&#x27;updated&#x27;</span>, <span class="string">&#x27;visit&#x27;</span>, <span class="string">&#x27;likeCnt&#x27;</span>, <span class="string">&#x27;comment&#x27;</span>],</span><br><span class="line">        <span class="attr">periodOptions</span>: [<span class="string">&#x27;all&#x27;</span>, <span class="string">&#x27;today&#x27;</span>, <span class="string">&#x27;week&#x27;</span>, <span class="string">&#x27;month&#x27;</span>, <span class="string">&#x27;quarter&#x27;</span>],</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="table"><a href="#table" class="headerlink" title="table"></a>table</h3><p><img src="/images/entry-tool/popup_table_main.png" alt="popup_table_main"></p>
+<p><img src="/images/entry-tool/popup_table_select.png" alt="popup_table_select"></p>
+<p>‘테이블 불러오기’에서 사용하는 팝업입니다.</p>
+<p>내부적으로 select, dragUpload, draw 팝업 기능을 사용하며 상단 naviation에서 확인 가능합니다.</p>
+<br>
+
+
+
+<h3 id="이벤트"><a href="#이벤트" class="headerlink" title="이벤트"></a>이벤트</h3><p>팝업 인스턴스는 특정 상황에서 커스텀 이벤트를 발생시킵니다.</p>
+<p>개발자는 각 커스텀 이벤트를 핸들링할 핸들러 함수를 인스턴스에 할당할 수 있습니다.</p>
+<p>이벤트의 종류는 entry-tool 소스에서는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entry-tool/blob/3e6cc0c7c99a158078f6e68a7df6a4451dcf1cdf/src/constants/index.js#L6">constants/index.js</a> 에서 확인 가능합니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">popup</span><br><span class="line">  .<span class="title function_">on</span>(<span class="string">&#x27;fetch&#x27;</span>, <span class="keyword">async</span> (data) =&gt; &#123;</span><br><span class="line">      <span class="comment">// fetch핸들링 로직</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">on</span>(<span class="string">&#x27;search&#x27;</span>, <span class="keyword">async</span> (data) =&gt; &#123;</span><br><span class="line">     <span class="comment">// search핸들링 로직</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">on</span>(<span class="string">&#x27;dummyUploads&#x27;</span>, <span class="keyword">async</span> (&#123; formData, objectData &#125;) =&gt; &#123;</span><br><span class="line">    <span class="comment">// dummyUploads핸들링 로직</span></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h4 id="submit"><a href="#submit" class="headerlink" title="submit"></a>submit</h4><p>사용자가 선택한 item의 data를 추가할 때 발생하는 이벤트입니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>selected: Array</td>
+<td>Array</td>
+<td></td>
+<td></td>
+<td>선택된 아이템들의 데이터들의 배열입니다.</td>
+</tr>
+</tbody></table>
+<br>
+
+<h4 id="search"><a href="#search" class="headerlink" title="search"></a>search</h4><p>사용자가 특정 data를 검색할때 발생하는 이벤트입니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>category</td>
+<td>Array</td>
+<td></td>
+<td></td>
+<td>검색 카테고리 정보입니다. [다국어, value] 구조입니다.</td>
+</tr>
+<tr>
+<td>period</td>
+<td>Array</td>
+<td></td>
+<td></td>
+<td>검색 기간 정보입니다. [다국어, value] 구조입니다.</td>
+</tr>
+<tr>
+<td>searchQuery</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>사용자가 입력한 검색 키워드값 입니다.</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>Array</td>
+<td></td>
+<td></td>
+<td>정렬 정보입니다. [다국어, value] 구조입니다.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>팝업의 type값</td>
+</tr>
+</tbody></table>
+<br>
+
+<h4 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h4><p>팝업이 로딩될 때, 데이터 fetch를 위해 발생하는 이벤트입니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sidebar</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>선택된 사이드바값입니다.</td>
+</tr>
+<tr>
+<td>subMenu</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>선택된 서브메뉴값입니다.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>popup type 정보입니다.</td>
+</tr>
+</tbody></table>
+<br>
+
+<h4 id="fetchMore"><a href="#fetchMore" class="headerlink" title="fetchMore"></a>fetchMore</h4><p>‘propject’ type 팝업 사용시, 데이터 fetch를 위해 발생하는 이벤트입니다.</p>
+<p>‘project’ type 팝업은 infinity grid 형태로 item들을 노출시킵니다.</p>
+<p>최초 데이터로드를 할때와 사용자 스크롤로 인해 추가 데이터를 불러와야 하는 상황에서 발생합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>callback</td>
+<td>function</td>
+<td></td>
+<td></td>
+<td>콜백 함수입니다.</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array</td>
+<td></td>
+<td></td>
+<td>현재까지 불러온 data 정보입니다.</td>
+</tr>
+<tr>
+<td>searchParam</td>
+<td>Object</td>
+<td></td>
+<td></td>
+<td>작품 검색조건입니다.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>popup 타입정보 입니다.</td>
+</tr>
+</tbody></table>
+<br>
+
+<h4 id="close"><a href="#close" class="headerlink" title="close"></a>close</h4><p>팝업이 닫혔을 때 발생하는 이벤트입니다.</p>
+<br>
+
+<h4 id="write-1"><a href="#write-1" class="headerlink" title="write"></a>write</h4><p>‘글상자’ 생성시 발생하는 이벤트 입니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>data</td>
+<td>Object</td>
+<td></td>
+<td></td>
+<td>생성한 글상자 오브젝트 정보입니다.</td>
+</tr>
+</tbody></table>
+<br>
+
+<h4 id="draw-1"><a href="#draw-1" class="headerlink" title="draw"></a>draw</h4><p>그리기 화면으로 이동시 발생하는 이벤트입니다.</p>
+<br>
+
+<h4 id="makeProject"><a href="#makeProject" class="headerlink" title="makeProject"></a>makeProject</h4><p>‘작품 불러오기’ 팝업에서 작품이 없을 경우 노출되는 ‘작품 만들기’ 클릭시 발생하는 이벤트입니다.</p>
+<br>
+
+<h4 id="itemon"><a href="#itemon" class="headerlink" title="itemon"></a>itemon</h4><p>item 선택시 발생하는 이벤트입니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>data</td>
+<td>Object</td>
+<td></td>
+<td></td>
+<td>선택한 item 정보입니다.</td>
+</tr>
+<tr>
+<td>callback</td>
+<td></td>
+<td></td>
+<td></td>
+<td>콜백함수입니다.</td>
+</tr>
+</tbody></table>
+<br>
+
+<h4 id="itemoff"><a href="#itemoff" class="headerlink" title="itemoff"></a>itemoff</h4><p>item 선택 해제시 발생하는 이벤트입니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>data</td>
+<td>Object</td>
+<td></td>
+<td></td>
+<td>선택 해제한 item 정보입니다.</td>
+</tr>
+<tr>
+<td>callback</td>
+<td></td>
+<td></td>
+<td></td>
+<td>콜백함수입니다.</td>
+</tr>
+</tbody></table>
+<br>
+
+<h4 id="play"><a href="#play" class="headerlink" title="play"></a>play</h4><p>소리 추가하기에서 아이템 선택시, 음원 재생을 위해 발생하는 이벤트입니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>item</td>
+<td>Object</td>
+<td></td>
+<td></td>
+<td>선택된 음원아이템의 데이터입니다.</td>
+</tr>
+</tbody></table>
+<br>
+
+<h4 id="stop"><a href="#stop" class="headerlink" title="stop"></a>stop</h4><p>재생중인 음원 아이템을 한번 더 클릭시, 음원정지를 위해 발생하는 이벤트입니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>item</td>
+<td>Object</td>
+<td></td>
+<td></td>
+<td>선택된 음원 instance와 callback함수를 포함한 오브젝트입니다.</td>
+</tr>
+</tbody></table>
+<br>
+
+<h4 id="uploadFail"><a href="#uploadFail" class="headerlink" title="uploadFail"></a>uploadFail</h4><p>‘파일 올리기’ 실패시 발생하는 이벤트입니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>data</td>
+<td>Object</td>
+<td></td>
+<td></td>
+<td>실패 메시지 message와 메시지를 보낸 주체messageParent 정보를 담고 있습니다.</td>
+</tr>
+</tbody></table>
+<br>
+
+<h4 id="uploads"><a href="#uploads" class="headerlink" title="uploads"></a>uploads</h4><p>‘파일 올리기’로 받아온 데이터들을 ‘추가하기’ 버튼을 클릭하여 업로드 할때 발생하는 이벤트입니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>uploads</td>
+<td>Array</td>
+<td></td>
+<td></td>
+<td>업로드할 파일 데이터들 입니다.</td>
+</tr>
+</tbody></table>
+<br>
+
+<h4 id="dummyUploads"><a href="#dummyUploads" class="headerlink" title="dummyUploads"></a>dummyUploads</h4><p>‘파일 올리기’로 데이터를 임시로 받아왔을 때 발생하는 이벤트입니다. </p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>formData</td>
+<td>FormData</td>
+<td></td>
+<td></td>
+<td>업로드한 파일의 formData입니다.</td>
+</tr>
+</tbody></table>
+<br>
+
+<h3 id="팝업-데이터-타입-정의"><a href="#팝업-데이터-타입-정의" class="headerlink" title="팝업 데이터 타입 정의"></a>팝업 데이터 타입 정의</h3><p>팝업에서 사용하는 파라미터들의 타입을 임시로 정의한 문서입니다.</p>
+<p>아래 타입들은 현재 엔트리웹&amp;엔트리 오프라인에서 사용중인 데이터 구조로 일부 필수값을 제외하면 임의로 변경이 가능합니다.</p>
+<p>이 문서는 추후 세분화하여 별도의 페이지로 옮겨질 예정입니다.</p>
+<h4 id="popup-data"><a href="#popup-data" class="headerlink" title="popup.data"></a>popup.data</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">popup.<span class="title function_">setData</span>(</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="comment">// project type에서 검색 기능을 위해 사용</span></span><br><span class="line">      <span class="attr">projectNavOptions</span>: &#123;</span><br><span class="line">        <span class="attr">categoryOptions</span>: [<span class="string">&#x27;all&#x27;</span>, <span class="string">&#x27;game&#x27;</span>, <span class="string">&#x27;living&#x27;</span>,<span class="string">&#x27;etc&#x27;</span>],</span><br><span class="line">        <span class="attr">sortOptions</span>: [<span class="string">&#x27;updated&#x27;</span>, <span class="string">&#x27;visit&#x27;</span>, <span class="string">&#x27;likeCnt&#x27;</span>, <span class="string">&#x27;comment&#x27;</span>],</span><br><span class="line">        <span class="attr">periodOptions</span>: [<span class="string">&#x27;all&#x27;</span>, <span class="string">&#x27;today&#x27;</span>, <span class="string">&#x27;week&#x27;</span>, <span class="string">&#x27;month&#x27;</span>, <span class="string">&#x27;quarter&#x27;</span>],</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="comment">// select type에서 사용</span></span><br><span class="line">      <span class="attr">sidebar</span>: &#123;</span><br><span class="line">      	<span class="string">&quot;people&quot;</span>: &#123;</span><br><span class="line">          <span class="string">&quot;id&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">          <span class="string">&quot;name&quot;</span>: <span class="string">&quot;사람&quot;</span>,</span><br><span class="line">          <span class="string">&quot;value&quot;</span>: <span class="string">&quot;people&quot;</span>,</span><br><span class="line">          <span class="string">&quot;sub&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;all&quot;</span>: &#123;</span><br><span class="line">                <span class="string">&quot;id&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                <span class="string">&quot;name&quot;</span>: <span class="string">&quot;전체&quot;</span>,</span><br><span class="line">                <span class="string">&quot;value&quot;</span>: <span class="string">&quot;all&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">      	&#125;,</span><br><span class="line">        <span class="string">&quot;animal&quot;</span>: &#123; ... &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">      data : &#123;</span><br><span class="line">        <span class="comment">// select type에서 사용</span></span><br><span class="line">        <span class="attr">imageBaseUrl</span>: <span class="string">&#x27;/assets/images/&#x27;</span>,</span><br><span class="line">        <span class="attr">data</span>: [</span><br><span class="line">          &#123;</span><br><span class="line">            <span class="attr">name</span>: <span class="string">&#x27;item1&#x27;</span>,</span><br><span class="line">            <span class="attr">description</span>: <span class="string">&#x27;아이템 설명&#x27;</span>,</span><br><span class="line">            <span class="attr">label</span>: &#123;</span><br><span class="line">              <span class="attr">ko</span>: <span class="string">&#x27;타이틀&#x27;</span>,</span><br><span class="line">              <span class="attr">en</span>: <span class="string">&#x27;title&#x27;</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">imageName</span>: <span class="string">&#x27;file1.png&#x27;</span></span><br><span class="line">          &#125;</span><br><span class="line">        ],</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+
+<br>
+
+
+<h4 id="ObjectItems"><a href="#ObjectItems" class="headerlink" title="ObjectItems"></a>ObjectItems</h4><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">// sprite 팝업의 data type</span></span><br><span class="line"><span class="punctuation">[</span><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;id&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;(1)엔트리봇&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;ko&quot;</span><span class="punctuation">:</span> <span class="string">&quot;(1)엔트리봇&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;en&quot;</span><span class="punctuation">:</span> <span class="string">&quot;(1)Entrybot&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;ja&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;vn&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;category&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="string">&quot;entrybot_friends&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;sub&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;pictures&quot;</span><span class="punctuation">:</span> pictureItems<span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;sounds&quot;</span><span class="punctuation">:</span> SoundItems<span class="punctuation">,</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h4 id="pictureItems"><a href="#pictureItems" class="headerlink" title="pictureItems"></a>pictureItems</h4><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">// picture 팝업의 data type</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;(1)엔트리봇_걷기1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;ko&quot;</span><span class="punctuation">:</span> <span class="string">&quot;(1)엔트리봇_걷기1&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;en&quot;</span><span class="punctuation">:</span> <span class="string">&quot;(1)Entrybot_walk1&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;ja&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;vn&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;filename&quot;</span><span class="punctuation">:</span> <span class="string">&quot;filename&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;imageType&quot;</span><span class="punctuation">:</span> <span class="string">&quot;png&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;dimension&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;width&quot;</span><span class="punctuation">:</span> <span class="number">284</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;height&quot;</span><span class="punctuation">:</span> <span class="number">350</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;trimmed&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h4 id="SoundItems"><a href="#SoundItems" class="headerlink" title="SoundItems"></a>SoundItems</h4><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">// sound 팝업의 data type</span></span><br><span class="line"><span class="punctuation">[</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;기타 루프1&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;ko&quot;</span><span class="punctuation">:</span> <span class="string">&quot;기타 루프1&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;en&quot;</span><span class="punctuation">:</span> <span class="string">&quot;기타 루프1.mp3&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;ja&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;vn&quot;</span><span class="punctuation">:</span> <span class="string">&quot;기타 루프1.mp3&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;filename&quot;</span><span class="punctuation">:</span> <span class="string">&quot;9pd0&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;duration&quot;</span><span class="punctuation">:</span> <span class="number">8</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="tableItems"><a href="#tableItems" class="headerlink" title="tableItems"></a>tableItems</h4><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">// table 팝업의 data type</span></span><br><span class="line"><span class="punctuation">[</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;id&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vibe 장르별 재생 수&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lang&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ko&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;rows&quot;</span><span class="punctuation">:</span> <span class="number">12</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;fields&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;월&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot; 발라드&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot; 댄스&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot; 힙합&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot; 팝&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot; 락&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot; 캐롤&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot; 합계&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;fieldInfos&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;provider&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vibe&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;summary&quot;</span><span class="punctuation">:</span> <span class="string">&quot;summary&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;summary&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;exampleurl&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;linkText&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;isOpen&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;projectTable&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;_id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;id&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;chart&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;fields&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">            <span class="string">&quot;월&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="string">&quot; 발라드&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="string">&quot; 댄스&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="string">&quot; 힙합&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="string">&quot; 팝&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="string">&quot; 락&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="string">&quot; 캐롤&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="string">&quot; 합계&quot;</span></span><br><span class="line">        <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;user&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;data&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">            <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;2019-01&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot; 4580340&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot; 3506013&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot; 2530997&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot; 1781670&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot; 433264&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot; 0&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot; 12832284&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;월발라드댄스힙합팝락캐롤합계.csv&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;user&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;created&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2023-02-14T06:22:44.770Z&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;updated&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2023-02-14T06:22:44.770Z&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;__v&quot;</span><span class="punctuation">:</span> <span class="number">0</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;updated&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2023-02-14T06:22:45.960Z&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hasOtherTypes&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;otherTypes&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span></span><br><span class="line">	<span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h4 id="aiUtilizeItems"><a href="#aiUtilizeItems" class="headerlink" title="aiUtilizeItems"></a>aiUtilizeItems</h4><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">// aiUtilizeItems 팝업의 data type</span></span><br><span class="line"><span class="punctuation">[</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;translate&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;imageName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;papago.svg&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;category&quot;</span><span class="punctuation">:</span> <span class="string">&quot;general&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;sponsorText&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Powered by &#123;image&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;sponsorImage&quot;</span><span class="punctuation">:</span> <span class="string">&quot;naver.png&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;sponsorOnImage&quot;</span><span class="punctuation">:</span> <span class="string">&quot;naverOn.png&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;ko&quot;</span><span class="punctuation">:</span> <span class="string">&quot;번역&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;en&quot;</span><span class="punctuation">:</span> <span class="string">&quot;translate&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;jp&quot;</span><span class="punctuation">:</span> <span class="string">&quot;翻訳&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;titleKey&quot;</span><span class="punctuation">:</span> <span class="string">&quot;template.translate_title_text&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;파파고를 이용하여 다른 언어로 번역할 수 있는 블록 모음입니다.&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;descriptionKey&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Msgs.expansion_translate_description&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;isInitialized&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;api&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/api/expansionBlock/papago/&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;sponsor&quot;</span><span class="punctuation">:</span> <span class="string">&quot;papagoNaver&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;typeMap&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;dictionary&quot;</span><span class="punctuation">:</span> <span class="string">&quot;nsmt&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;artificial_intelligence&quot;</span><span class="punctuation">:</span> <span class="string">&quot;n2mt&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;apiType&quot;</span><span class="punctuation">:</span> <span class="string">&quot;n2mt&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;active&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span></span><br><span class="line">	<span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h4 id="expansionItems"><a href="#expansionItems" class="headerlink" title="expansionItems"></a>expansionItems</h4><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">// expansionItems 팝업의 data type</span></span><br><span class="line"><span class="punctuation">[</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;behaviorConductLifeSafety&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;imageName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;firstaid.png&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;ko&quot;</span><span class="punctuation">:</span> <span class="string">&quot;생활안전&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;en&quot;</span><span class="punctuation">:</span> <span class="string">&quot;LifeSafety&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;jp&quot;</span><span class="punctuation">:</span> <span class="string">&quot;生活安全&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;titleKey&quot;</span><span class="punctuation">:</span> <span class="string">&quot;template.behaviorConductLifeSafety_title_text&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;생활 속 안전을 위해 국민이 지켜야 하는 행동요령에 대한 블록 모음입니다. [국민안전처 제공]&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;descriptionKey&quot;</span><span class="punctuation">:</span> <span class="string">&quot;설명&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;isInitialized&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;api&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/api/expansionBlock/behaviorConduct&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;apiType&quot;</span><span class="punctuation">:</span> <span class="string">&quot;03&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;active&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span></span><br><span class="line">	<span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h4 id="projectItems"><a href="#projectItems" class="headerlink" title="projectItems"></a>projectItems</h4><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">// projectItems 팝업의 data type</span></span><br><span class="line"><span class="punctuation">[</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;작품명&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;user&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;사용자id&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;username&quot;</span><span class="punctuation">:</span> <span class="string">&quot;사용자명&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;nickname&quot;</span><span class="punctuation">:</span> <span class="string">&quot;사용자 닉네임&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;profileImage&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;_id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;avatarImage&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;thumb&quot;</span><span class="punctuation">:</span> <span class="string">&quot;썸네일 경로/파일명.png&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;isopen&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;isPracticalCourse&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;category&quot;</span><span class="punctuation">:</span> <span class="string">&quot;기타&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;categoryCode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;etc&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;created&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2024-02-28T05:41:16.878Z&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;updated&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2024-02-28T05:41:16.878Z&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;special&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;isForLecture&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;isForStudy&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;isForSubmit&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hashId&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;complexity&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;staffPicked&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;ranked&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;visit&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;likeCnt&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;comment&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;showComment&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;project&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h4 id="hardwareLiteItems"><a href="#hardwareLiteItems" class="headerlink" title="hardwareLiteItems"></a>hardwareLiteItems</h4><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">// hardwareLiteItems 팝업의 data type</span></span><br><span class="line"><span class="punctuation">[</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;하드웨어 id&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;선택한 하드웨어명&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;제조사 사이트 url&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;imageName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;이미지명.png&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;ko&quot;</span><span class="punctuation">:</span> <span class="string">&quot;네오스파이더&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;duration&quot;</span><span class="punctuation">:</span> <span class="number">32</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;blockMenuBlocks&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      	<span class="comment">// 블럭정보</span></span><br><span class="line">        <span class="string">&quot;neospiderlite_get_analog_value&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;neospiderlite_get_analog_value_map&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;portData&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;baudRate&quot;</span><span class="punctuation">:</span> <span class="number">115200</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;duration&quot;</span><span class="punctuation">:</span> <span class="number">32</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;dataBits&quot;</span><span class="punctuation">:</span> <span class="number">8</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;parity&quot;</span><span class="punctuation">:</span> <span class="string">&quot;none&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;stopBits&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;bufferSize&quot;</span><span class="punctuation">:</span> <span class="number">512</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;constantServing&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;하드웨어 설명&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;linkBox&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;desc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;썸네일 하단 링크&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;링크 클릭시 이동할 url&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;active&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span></span><br><span class="line">	<span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="Widget"><a href="#Widget" class="headerlink" title="Widget"></a>Widget</h2><p><strong>이 문서는 작성중인 문서입니다.</strong></p>
+<h3 id="Chart"><a href="#Chart" class="headerlink" title="Chart"></a>Chart</h3><h3 id="ModalChart"><a href="#ModalChart" class="headerlink" title="ModalChart"></a>ModalChart</h3><h3 id="ModalTable"><a href="#ModalTable" class="headerlink" title="ModalTable"></a>ModalTable</h3><h3 id="BillBoardChart"><a href="#BillBoardChart" class="headerlink" title="BillBoardChart"></a>BillBoardChart</h3><h3 id="TreeNode"><a href="#TreeNode" class="headerlink" title="TreeNode"></a>TreeNode</h3><h3 id="modalProgress"><a href="#modalProgress" class="headerlink" title="modalProgress"></a>modalProgress</h3><h3 id="Dropper"><a href="#Dropper" class="headerlink" title="Dropper"></a>Dropper</h3><h3 id="Sortable"><a href="#Sortable" class="headerlink" title="Sortable"></a>Sortable</h3><h3 id="Draggable"><a href="#Draggable" class="headerlink" title="Draggable"></a>Draggable</h3><h3 id="Dropdown"><a href="#Dropdown" class="headerlink" title="Dropdown"></a>Dropdown</h3><h3 id="DropdownExtra"><a href="#DropdownExtra" class="headerlink" title="DropdownExtra"></a>DropdownExtra</h3><h3 id="angle"><a href="#angle" class="headerlink" title="angle"></a>angle</h3><h3 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h3><h3 id="ContextMenu"><a href="#ContextMenu" class="headerlink" title="ContextMenu"></a>ContextMenu</h3><h3 id="Backpack"><a href="#Backpack" class="headerlink" title="Backpack"></a>Backpack</h3><h3 id="MusicScale"><a href="#MusicScale" class="headerlink" title="MusicScale"></a>MusicScale</h3><br>
+
+<h3 id="기타"><a href="#기타" class="headerlink" title="기타"></a>기타</h3><h3 id="ListTool"><a href="#ListTool" class="headerlink" title="ListTool"></a>ListTool</h3><h3 id="DataAnalytics"><a href="#DataAnalytics" class="headerlink" title="DataAnalytics"></a>DataAnalytics</h3><br>
+
+<h2 id="React-컴포넌트"><a href="#React-컴포넌트" class="headerlink" title="React 컴포넌트"></a>React 컴포넌트</h2><p><strong>이 문서는 작성중인 문서입니다.</strong></p>
+<p>일부 툴들은 React컴포넌트로 제공됩니다.</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Dropdown</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@entrylabs/tool/component&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span>(<span class="language-xml"><span class="tag">&lt;<span class="name">Dropdown</span>/&gt;</span></span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="Component-Dropdown"><a href="#Component-Dropdown" class="headerlink" title="Component.Dropdown"></a>Component.Dropdown</h3><figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;<span class="title class_">Dropdown</span></span><br><span class="line">    autoWidth</span><br><span class="line">    animation=&#123;<span class="literal">false</span>&#125;</span><br><span class="line">    items=&#123;[]&#125;</span><br><span class="line">    positionDom=&#123;buttonEl.<span class="property">current</span>&#125;</span><br><span class="line">    onSelectDropdown=&#123;<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> options = item[<span class="number">2</span>] || &#123;&#125;;</span><br><span class="line">        <span class="keyword">const</span> &#123; disabled &#125; = options;</span><br><span class="line">        <span class="keyword">if</span> (disabled) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (onSelect) &#123;</span><br><span class="line">            <span class="title function_">onSelect</span>(item);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (callback) &#123;</span><br><span class="line">            <span class="title function_">callback</span>();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;&#125;</span><br><span class="line">    outsideExcludeDom=&#123;[buttonEl.<span class="property">current</span>]&#125;</span><br><span class="line">    onOutsideClick=&#123;<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="title function_">setOn</span>(!on);</span><br><span class="line">        <span class="keyword">if</span> (onOutsideClick) &#123;</span><br><span class="line">            <span class="title function_">onOutsideClick</span>(item);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>theme</td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>checkedIndex</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>items</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>autoWidth</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>animation</td>
+<td></td>
+<td></td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>onSelectDropdown</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>onChange</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>maximumSelectionLength</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>multiple</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>showSelectAll</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>onOutsideClick</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>eventTypes</td>
+<td></td>
+<td></td>
+<td>[‘mouseup’, ‘touchend’, ‘wheel’]</td>
+<td></td>
+</tr>
+<tr>
+<td>outsideExcludeDom</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="Component-ModalProgress"><a href="#Component-ModalProgress" class="headerlink" title="Component.ModalProgress"></a>Component.ModalProgress</h3><h3 id="Component-ColorPicker"><a href="#Component-ColorPicker" class="headerlink" title="Component.ColorPicker"></a>Component.ColorPicker</h3><h3 id="Component-Backpack"><a href="#Component-Backpack" class="headerlink" title="Component.Backpack"></a>Component.Backpack</h3><h3 id="Component-Number"><a href="#Component-Number" class="headerlink" title="Component.Number"></a>Component.Number</h3><h3 id="Component-MusicScale"><a href="#Component-MusicScale" class="headerlink" title="Component.MusicScale"></a>Component.MusicScale</h3><h3 id="Component-ContextMenu"><a href="#Component-ContextMenu" class="headerlink" title="Component.ContextMenu"></a>Component.ContextMenu</h3>
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/entryjs/api/2024-02-29-popup.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/entryjs/api/2024-02-29-popup.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

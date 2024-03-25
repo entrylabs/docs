@@ -2,7 +2,7 @@
 layout: page
 title: 시작하기
 type: guide
-category: 'Entry JS'
+category: '블록만들기'
 order: 1
 ---
 

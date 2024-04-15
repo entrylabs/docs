@@ -24,6 +24,13 @@ updated: 2024-04-15
 
 [initOption](/entryjs/typedef/2024-03-11-init-options.html)으로 `expansionDisable` 값을 `true`로 전달하면 확장 블록 기능이 동작하지 않습니다.
 
+```js
+Entry.init(container, {
+    //... options
+    expansionDisable: true, //확장 블록 기능 off
+});
+```
+
 또는 확장블록을 추가 및 제거하려면 아래의 소스코드를 수정한 후 빌드해야 합니다.
 [src/class/Expansion.js](https://github.com/entrylabs/entryjs/blob/develop/src/class/Expansion.js)
 
@@ -41,13 +48,6 @@ import '../playground/blocks/block_expansion_behaviorconduct_lifesafety';
 확장블록 카테고리까지 제거하고 싶은경우 [static.js](/entryjs/api/2024-03-05-static.html)에서 `getAllBlocks`의 `expansion`항목을 제거하면 됩 합니다. 
 
 다른방법의 카테고리 및 블록 제거 방법은 [핵심 API](/entryjs/api/2024-02-29-api.html#Entry-playground-blockMenu-banClass)를 참고하시면 됩니다.
-
-```js
-Entry.init(container, {
-    //... options
-    expansionDisable: true, //확장 블록 기능 off
-});
-```
 
 ### META DATA
 기본적으로 블록마다 메타데이터를 가지게 됩니다. 개발하는 블록마다 다른 메타데이터를 가지기도 하시면 공통적으로 필요한 메타데이터가 있습니다.

@@ -10,7 +10,7 @@ description:
 thumbnail: 
 author: Entrylabs
 date: 2024-03-11
-updated: 2024-03-11
+updated: 2024-04-15
 ---
 
 Entry.init 함수를 호출할 때 전달되는 옵션 객체입니다. 이 객체를 통해 개발자는 Entry 워크스페이스의 초기 설정 값을 정의하고, 워크스페이스가 로드될 때 필요한 다양한 환경 설정을 커스터마이즈할 수 있습니다.
@@ -37,3 +37,5 @@ Entry.init 함수를 호출할 때 전달되는 옵션 객체입니다. 이 객�
 |isForLecture|boolean|강의용 프로젝트 여부 (false)|
 |textCodingEnable|boolean|엔트리 파이선 사용가능 여부 (true)|
 |hardwareEnable|boolean|하드웨어 사용가능 여부 (true)|
+|expansionDisable|boolean|확장블록 사용가능 여부 (true)|
+|aiUtilizeDisable|boolean|인공지능블록 사용가능 여부 (true)|

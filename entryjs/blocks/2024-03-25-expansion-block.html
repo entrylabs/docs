@@ -1,0 +1,546 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>확장블록 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/entryjs/blocks/2024-03-25-expansion-block.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="확장블록 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="확장블록 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "entryjs"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "확장블록",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2024-03-15",
+        "dateCreated": "2024-03-15",
+        "dateModified": "2024-04-15",
+        "url": "https://docs.playentry.org/entryjs/blocks/2024-03-25-expansion-block.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "2395",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/entryjs/blocks/2024-03-25-expansion-block.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.2"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link current" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link current" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>시작하기</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/index.html" class="sidebar-link" itemprop="url">소개</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-02-29-installation.html" class="sidebar-link" itemprop="url">설치방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-02-29-structure.html" class="sidebar-link" itemprop="url">프로젝트 구조</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-03-05-run.html" class="sidebar-link" itemprop="url">EntryJS 실행하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>API문서</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-data.html" class="sidebar-link" itemprop="url">Entry Event 사용법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-api.html" class="sidebar-link" itemprop="url">핵심 API</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-event.html" class="sidebar-link" itemprop="url">Entry Event 목록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-03-05-util.html" class="sidebar-link" itemprop="url">Entry Util</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-popup.html" class="sidebar-link" itemprop="url">팝업 관리</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-03-05-static.html" class="sidebar-link" itemprop="url">STATIC JS</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>고급 기능 블록</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/blocks/2024-03-25-expansion-block.html" class="sidebar-link current" itemprop="url">확장블록</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>타입정의</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-11-init-options.html" class="sidebar-link" itemprop="url">Init Options</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-function-data.html" class="sidebar-link" itemprop="url">Function Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-message-data.html" class="sidebar-link" itemprop="url">Message Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-object-data.html" class="sidebar-link" itemprop="url">Object Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-project-data.html" class="sidebar-link" itemprop="url">Project Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-interface-state.html" class="sidebar-link" itemprop="url">Interface State</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-table-data.html" class="sidebar-link" itemprop="url">Table Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-scene-data.html" class="sidebar-link" itemprop="url">Scene Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-variable-data.html" class="sidebar-link" itemprop="url">Variable Data</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>기타</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/faq/2024-02-29-faq.html" class="sidebar-link" itemprop="url">자주 묻는 질문(FAQ)</a>
+                </li>
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content entryjs with-sidebar ">
+    
+      
+    
+    
+      <h1>확장블록</h1>
+    
+    <p>확장블록은 EntryJS에서 사용자가 다양한 외부 API 데이터를 워크스페이스 내로 직접 가져올 수 있게 해주는 API 블록입니다. 날씨 정보, 국민 행동 요령, 행사 정보와 같은 외부 데이터를 실시간으로 프로젝트에 활용할 수 있습니다.</p>
+<h3 id="현재의-한계"><a href="#현재의-한계" class="headerlink" title="현재의 한계"></a>현재의 한계</h3><p>수정과 추가를 위해 EntryJS 소스 코드를 직접 수정하고 빌드해야 한다는 점입니다.</p>
+<blockquote>
+<p>추후 개선을 통해 외부에서 동적으로 확장블록을 컨트롤 할수 있게 수정할 예정입니다.</p>
+</blockquote>
+<h2 id="공통"><a href="#공통" class="headerlink" title="공통"></a>공통</h2><p><a href="/entryjs/typedef/2024-03-11-init-options.html">initOption</a>으로 <code>expansionDisable</code> 값을 <code>true</code>로 전달하면 확장 블록 기능이 동작하지 않습니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Entry</span>.<span class="title function_">init</span>(container, &#123;</span><br><span class="line">    <span class="comment">//... options</span></span><br><span class="line">    <span class="attr">expansionDisable</span>: <span class="literal">true</span>, <span class="comment">//확장 블록 기능 off</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>또는 확장블록을 추가 및 제거하려면 아래의 소스코드를 수정한 후 빌드해야 합니다.<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/src/class/Expansion.js">src/class/Expansion.js</a></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_expansion_weather&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_expansion_festival&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_expansion_behaviorconduct_disaster&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_expansion_behaviorconduct_lifesafety&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// weather, festival을 제거 하고 싶은경우</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_expansion_behaviorconduct_disaster&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_expansion_behaviorconduct_lifesafety&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>확장블록 카테고리까지 제거하고 싶은경우 <a href="/entryjs/api/2024-03-05-static.html">static.js</a>에서 <code>getAllBlocks</code>의 <code>expansion</code>항목을 제거하면 됩 합니다. </p>
+<p>다른방법의 카테고리 및 블록 제거 방법은 <a href="/entryjs/api/2024-02-29-api.html#Entry-playground-blockMenu-banClass">핵심 API</a>를 참고하시면 됩니다.</p>
+<h3 id="META-DATA"><a href="#META-DATA" class="headerlink" title="META DATA"></a>META DATA</h3><p>기본적으로 블록마다 메타데이터를 가지게 됩니다. 개발하는 블록마다 다른 메타데이터를 가지기도 하시면 공통적으로 필요한 메타데이터가 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>프로퍼티</th>
+<th>타입</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>name</td>
+<td>string</td>
+<td>확장 블록의 이름</td>
+</tr>
+<tr>
+<td>imageName</td>
+<td>string</td>
+<td>확장 블록의 이미지</td>
+</tr>
+<tr>
+<td>title</td>
+<td>Lang</td>
+<td>확장 블록의 다국어 이름</td>
+</tr>
+<tr>
+<td>titleKey</td>
+<td>string</td>
+<td>확장 블록의 다국어 키<br>예) template.festival_title_text = window.Lang.template.festival_title_text</td>
+</tr>
+<tr>
+<td>descriptionKey</td>
+<td>string</td>
+<td>확장 블록의 다국어 키</td>
+</tr>
+<tr>
+<td>api</td>
+<td>string</td>
+<td>해당 확장블록을 호출할 api의 url</td>
+</tr>
+</tbody></table>
+<h3 id="팝업-관리"><a href="#팝업-관리" class="headerlink" title="팝업 관리"></a>팝업 관리</h3><p>기본적으로는 <a href="/entryjs/api/2024-02-29-popup.html#expansion">팝업 expansion</a>의 기능으로 확장 블록을 팝업에 띄울수 있습니다.<br>블록 메뉴에서 <code>확장 블록 불러오기</code>버튼 클릭시 <code>openExpansionBlockManager</code>이벤트가 발생하고 이때 <a href="/entryjs/api/2024-02-29-popup.html#show">popup.show</a> 를 이용해 팝업을 띄울수 있습니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Entry</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;openExpansionBlockManager&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// EntryJS load가 정상적이라면</span></span><br><span class="line">    <span class="comment">// 전역 Entry의 EXPANSION_BLOCK_LIST에 확장 블록 리스트가 들어 있습니다.</span></span><br><span class="line">    tool.<span class="property">popup</span>.<span class="title function_">show</span>(<span class="string">&#x27;expansion&#x27;</span>, <span class="title class_">Object</span>.<span class="title function_">values</span>(<span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK_LIST</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="날씨"><a href="#날씨" class="headerlink" title="날씨"></a>날씨</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/block_expansion_weather.js">소스</a></p>
+<p>기온, 강수량, 미세먼지 농도 등 한국의 날씨와 관련된 블록 모음입니다.</p>
+<p>해당 블록을 사용하기 위해선 API 서버 구축이 필요합니다.</p>
+<blockquote>
+<p>현재 엔트리에서는 웨더아이 OPEN API 데이터를 이용해서 제공하고 있습니다.<br>웨더아이가 아니더라도 각 블록에서 데이터를 맞춰주면 어떤 날씨 API를 사용하더라도 문제 없습니다.<br>각 블록의 func를 수정해서 사용하면 됩니다.</p>
+</blockquote>
+<h3 id="check-city-weather"><a href="#check-city-weather" class="headerlink" title="check_city_weather"></a>check_city_weather</h3><p>선택한 날짜와 지역의 날씨 정보를 실제 날씨 상태와 비교하여 일치하는 경우 ‘참’으로 판단하는 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> location = &#123;</span><br><span class="line">        <span class="attr">parent</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;LOCATION&#x27;</span>, script),</span><br><span class="line">        <span class="attr">sub</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;SUBLOCATION&#x27;</span>, script),</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">// 지역&amp;날짜 값을 던져서 날씨 정보를 가져온다.</span></span><br><span class="line">    <span class="keyword">const</span> apiResult = <span class="keyword">await</span> <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">weather</span>.<span class="title function_">getData</span>(</span><br><span class="line">        <span class="string">&#x27;week&#x27;</span>,</span><br><span class="line">        location,</span><br><span class="line">        script.<span class="title function_">getField</span>(<span class="string">&#x27;DATE&#x27;</span>, script)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 날씨가 셀렉트 박스와 값이 같은지 비교</span></span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">weather</span>.<span class="title function_">checkWeather</span>(</span><br><span class="line">        apiResult.<span class="property">sky_code</span>,</span><br><span class="line">        script.<span class="title function_">getField</span>(<span class="string">&#x27;WEATHER&#x27;</span>, script)</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="check-city-finedust"><a href="#check-city-finedust" class="headerlink" title="check_city_finedust"></a>check_city_finedust</h3><p>선택한 지역의 현재 미세먼지 정보를 실제 미세먼지 등급과 비교하여 일치하는 경우 ‘참’으로 판단하는 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> location = &#123;</span><br><span class="line">        <span class="attr">parent</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;LOCATION&#x27;</span>, script),</span><br><span class="line">        <span class="attr">sub</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;SUBLOCATION&#x27;</span>, script),</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">// 지역 값을 던져서 현재의 미세먼지 정보를 가져온다</span></span><br><span class="line">    <span class="keyword">const</span> apiResult = <span class="keyword">await</span> <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">weather</span>.<span class="title function_">getData</span>(</span><br><span class="line">        <span class="string">&#x27;now&#x27;</span>,</span><br><span class="line">        location,</span><br><span class="line">        <span class="literal">null</span></span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 미세먼지가 셀렉트 박스와 값이 같은지 비교</span></span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">weather</span>.<span class="title function_">checkFineDust</span>(</span><br><span class="line">        apiResult.<span class="property">pm10</span>,</span><br><span class="line">        script.<span class="title function_">getField</span>(<span class="string">&#x27;FINEDUST&#x27;</span>, script)</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="get-city-weather-data"><a href="#get-city-weather-data" class="headerlink" title="get_city_weather_data"></a>get_city_weather_data</h3><p>선택한 날짜와 지역의 각종 날씨 정보 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> location = &#123;</span><br><span class="line">        <span class="attr">parent</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;LOCATION&#x27;</span>, script),</span><br><span class="line">        <span class="attr">sub</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;SUBLOCATION&#x27;</span>, script),</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 지역&amp;날짜 값을 던져서 날씨 정보를 가져온다.</span></span><br><span class="line">    <span class="keyword">const</span> apiResult = <span class="keyword">await</span> <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">weather</span>.<span class="title function_">getData</span>(</span><br><span class="line">        <span class="string">&#x27;week&#x27;</span>,</span><br><span class="line">        location,</span><br><span class="line">        script.<span class="title function_">getField</span>(<span class="string">&#x27;DATE&#x27;</span>, script)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 정의된 타입을 가져온다.</span></span><br><span class="line">    <span class="keyword">const</span> type =</span><br><span class="line">        <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">weather</span>.<span class="property">propertyMap</span>[script.<span class="title function_">getField</span>(<span class="string">&#x27;TYPE&#x27;</span>, script)];</span><br><span class="line">    <span class="comment">// 선택한 타입에 따라 데이터를 가져온다.</span></span><br><span class="line">    <span class="keyword">return</span> apiResult[type];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="get-current-city-weather-data"><a href="#get-current-city-weather-data" class="headerlink" title="get_current_city_weather_data"></a>get_current_city_weather_data</h3><p>현재 선택한 지역의 날씨 정보 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> location = &#123;</span><br><span class="line">        <span class="attr">parent</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;LOCATION&#x27;</span>, script),</span><br><span class="line">        <span class="attr">sub</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;SUBLOCATION&#x27;</span>, script),</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">// 정의된 타입을 가져온다.</span></span><br><span class="line">    <span class="keyword">const</span> type =</span><br><span class="line">        <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">weather</span>.<span class="property">propertyMap</span>[script.<span class="title function_">getField</span>(<span class="string">&#x27;TYPE&#x27;</span>, script)];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 지역 값을 던져서 현재의 날씨 정보를 가져온다.</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">weather</span></span><br><span class="line">            .<span class="title function_">getData</span>(<span class="string">&#x27;now&#x27;</span>, location, <span class="literal">null</span>)</span><br><span class="line">            .<span class="title function_">then</span>(<span class="function">(<span class="params">data</span>) =&gt;</span> <span class="title function_">resolve</span>(data[type]));</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="get-today-city-temperature"><a href="#get-today-city-temperature" class="headerlink" title="get_today_city_temperature"></a>get_today_city_temperature</h3><p>오늘 선택한 지역과 시간대의 기온 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> location = &#123;</span><br><span class="line">        <span class="attr">parent</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;LOCATION&#x27;</span>, script),</span><br><span class="line">        <span class="attr">sub</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;SUBLOCATION&#x27;</span>, script),</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">const</span> date = <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">weather</span>.<span class="property">date</span></span><br><span class="line">        .<span class="title function_">toISOString</span>()</span><br><span class="line">        .<span class="title function_">slice</span>(<span class="number">0</span>, <span class="number">10</span>)</span><br><span class="line">        .<span class="title function_">replace</span>(<span class="regexp">/-/g</span>, <span class="string">&#x27;&#x27;</span>);</span><br><span class="line">    <span class="keyword">let</span> time = script.<span class="title function_">getField</span>(<span class="string">&#x27;TIME&#x27;</span>, script);</span><br><span class="line">    <span class="comment">// db에 저장하지 않으면서 00시가 없어져서 03시부터 가능..</span></span><br><span class="line">    <span class="keyword">if</span> (time == <span class="string">&#x27;00&#x27;</span>) &#123;</span><br><span class="line">        time = <span class="string">&#x27;03&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 지역&amp;날짜 값을 던져서 날씨 정보를 가져온다.</span></span><br><span class="line">    <span class="keyword">const</span> apiResult = <span class="keyword">await</span> <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">weather</span>.<span class="title function_">getData</span>(</span><br><span class="line">        <span class="string">&#x27;hour&#x27;</span>,</span><br><span class="line">        location,</span><br><span class="line">        date + <span class="title function_">pad2</span>(time - (time % <span class="number">3</span>))</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> apiResult.<span class="property">temp</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="행사"><a href="#행사" class="headerlink" title="행사"></a>행사</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/block_expansion_festival.js">소스</a></p>
+<p>국내 지역별 다양한 행사 및 축제와 관련된 불록 모음 입니다. </p>
+<p>해당 블록을 사용하기 위해선 API 서버 구축이 필요합니다.</p>
+<blockquote>
+<p>현재 엔트리에서는 API는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.data.go.kr/data/15101578/openapi.do">공공데이터의포털</a>을 이용하고 있습니다.<br>각 블록의 func를 상황에 맞도록 수정해서 사용하면 됩니다.</p>
+</blockquote>
+<h3 id="count-festival"><a href="#count-festival" class="headerlink" title="count_festival"></a>count_festival</h3><p>선택한 날짜와 지역에서 열리는 행사의 수 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> defaultValue = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">const</span> params = &#123;</span><br><span class="line">        <span class="attr">area</span>:</span><br><span class="line">            <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">festival</span>.<span class="property">locationMap</span>[</span><br><span class="line">                script.<span class="title function_">getField</span>(<span class="string">&#x27;LOCATION&#x27;</span>, script)</span><br><span class="line">            ].<span class="property">code</span>,</span><br><span class="line">        <span class="attr">month</span>:</span><br><span class="line">            <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">festival</span>.<span class="property">monthMap</span>[script.<span class="title function_">getField</span>(<span class="string">&#x27;MONTH&#x27;</span>, script)],</span><br><span class="line">        <span class="attr">list</span>: <span class="string">&#x27;N&#x27;</span>,</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">// 지역과 날짜를 param으로 던져서 값을 가져온다.</span></span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">getFestivalCount</span>(params, defaultValue);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="get-festival-info"><a href="#get-festival-info" class="headerlink" title="get_festival_info"></a>get_festival_info</h3><p>선택한 날짜와 지역에서 열리는 행사에 대한 정보 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> number = script.<span class="title function_">getStringValue</span>(<span class="string">&#x27;NUMBER&#x27;</span>, script);</span><br><span class="line">    <span class="keyword">const</span> type = script.<span class="title function_">getField</span>(<span class="string">&#x27;TYPE&#x27;</span>, script);</span><br><span class="line">    <span class="keyword">const</span> infoType = <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">festival</span>.<span class="property">infoTypeMap</span>[type];</span><br><span class="line">    <span class="keyword">const</span> location =</span><br><span class="line">        <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">festival</span>.<span class="property">locationMap</span>[script.<span class="title function_">getField</span>(<span class="string">&#x27;LOCATION&#x27;</span>, script)];</span><br><span class="line">    <span class="keyword">const</span> defaultValue = <span class="title class_">Lang</span>.<span class="property">Blocks</span>.<span class="property">no_data</span>;</span><br><span class="line">    <span class="keyword">const</span> params = &#123;</span><br><span class="line">        <span class="attr">area</span>: location.<span class="property">code</span>,</span><br><span class="line">        <span class="attr">month</span>:</span><br><span class="line">            <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">festival</span>.<span class="property">monthMap</span>[script.<span class="title function_">getField</span>(<span class="string">&#x27;MONTH&#x27;</span>, script)],</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">getFestivals</span>(number, params, &#123;&#125;).<span class="title function_">then</span>(<span class="function">(<span class="params">festival</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">switch</span> (type) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;area&#x27;</span>:</span><br><span class="line">                <span class="keyword">return</span> location.<span class="property">sub</span>[festival[infoType] - <span class="number">1</span>] || defaultValue;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;homepage&#x27;</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;overview&#x27;</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="title function_">getDetailInfo</span>(festival.<span class="property">contentid</span>, defaultValue, infoType);</span><br><span class="line">            <span class="attr">default</span>:</span><br><span class="line">                <span class="keyword">return</span> festival[infoType] || defaultValue;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="자연재난-국민행동요령"><a href="#자연재난-국민행동요령" class="headerlink" title="자연재난 국민행동요령"></a>자연재난 국민행동요령</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/block_expansion_behaviorconduct_disaster.js">소스</a></p>
+<p>자연재난 발생 시 국민이 지켜야하는 기본적인 행동요령에 대한 블록들의 모음입니다.</p>
+<p>해당 블록을 사용하기 위해선 API 서버 구축이 필요합니다.</p>
+<blockquote>
+<p>현재 엔트리에서는 API는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.data.go.kr/data/15000991/openapi.do#tab_layer_detail_function">공공데이터의포털</a>을 이용하고 있습니다.<br>각 블록에서 데이터를 맞춰주면 어떤 API를 사용하더라도 문제 없습니다.</p>
+</blockquote>
+<h3 id="count-disaster-behavior"><a href="#count-disaster-behavior" class="headerlink" title="count_disaster_behavior"></a>count_disaster_behavior</h3><p>선택한 자연재해가 발생했을 때 해야할 행동요령의 수 블록</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> params = &#123;</span><br><span class="line">        <span class="attr">category</span>: <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">behaviorConductDisaster</span>.<span class="property">apiType</span>,</span><br><span class="line">        <span class="attr">subCategory</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;CATEGORY&#x27;</span>, script),</span><br><span class="line">        <span class="attr">subCategory2</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;SUB_CATEGORY&#x27;</span>, script),</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">getBehavior</span>(params, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="get-disaster-behavior"><a href="#get-disaster-behavior" class="headerlink" title="get_disaster_behavior"></a>get_disaster_behavior</h3><p>선택한 자연재해가 발생했을 때 해야하는 행동요령에 대한 정보 블록</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> number = script.<span class="title function_">getStringValue</span>(<span class="string">&#x27;NUMBER&#x27;</span>, script);</span><br><span class="line">    <span class="keyword">const</span> defaultValue = <span class="title class_">Lang</span>.<span class="property">Blocks</span>.<span class="property">no_data</span>;</span><br><span class="line">    <span class="keyword">const</span> params = &#123;</span><br><span class="line">        <span class="attr">category</span>: <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">behaviorConductDisaster</span>.<span class="property">apiType</span>,</span><br><span class="line">        <span class="attr">subCategory</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;CATEGORY&#x27;</span>, script),</span><br><span class="line">        <span class="attr">subCategory2</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;SUB_CATEGORY&#x27;</span>, script),</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">getBehavior</span>(params, defaultValue, number);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="생활안전-국민행동요령"><a href="#생활안전-국민행동요령" class="headerlink" title="생활안전 국민행동요령"></a>생활안전 국민행동요령</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/block_expansion_behaviorconduct_lifesafety.js">소스</a></p>
+<p>생활 속 안전을 위해 국민이 지켜야 하는 행동요령에 대한 블록 모음입니다. </p>
+<p>해당 블록을 사용하기 위해선 API 서버 구축이 필요합니다.</p>
+<blockquote>
+<p>현재 엔트리에서는 API는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.data.go.kr/data/15000991/openapi.do#tab_layer_detail_function">공공데이터의포털</a>을 이용하고 있습니다.<br>각 블록에서 데이터를 맞춰주면 어떤 API를 사용하더라도 문제 없습니다.</p>
+</blockquote>
+<h3 id="count-lifeSafety-behavior"><a href="#count-lifeSafety-behavior" class="headerlink" title="count_lifeSafety_behavior"></a>count_lifeSafety_behavior</h3><p>선택한 생활 속 문제가 발생했을 때 해야할 행동요령의 수 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> params = &#123;</span><br><span class="line">        <span class="attr">category</span>: <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">behaviorConductLifeSafety</span>.<span class="property">apiType</span>,</span><br><span class="line">        <span class="attr">subCategory</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;CATEGORY&#x27;</span>, script),</span><br><span class="line">        <span class="attr">subCategory2</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;SUB_CATEGORY&#x27;</span>, script),</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">getBehavior</span>(params, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="get-lifeSafety-behavior"><a href="#get-lifeSafety-behavior" class="headerlink" title="get_lifeSafety_behavior"></a>get_lifeSafety_behavior</h3><p>선택한 생활 속 문제가 발생했을 때 해야할 행동요령에 대한 정보 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> number = script.<span class="title function_">getStringValue</span>(<span class="string">&#x27;NUMBER&#x27;</span>, script);</span><br><span class="line">    <span class="keyword">const</span> defaultValue = <span class="title class_">Lang</span>.<span class="property">Blocks</span>.<span class="property">no_data</span>;</span><br><span class="line">    <span class="keyword">const</span> params = &#123;</span><br><span class="line">        <span class="attr">category</span>: <span class="title class_">Entry</span>.<span class="property">EXPANSION_BLOCK</span>.<span class="property">behaviorConductLifeSafety</span>.<span class="property">apiType</span>,</span><br><span class="line">        <span class="attr">subCategory</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;CATEGORY&#x27;</span>, script),</span><br><span class="line">        <span class="attr">subCategory2</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;SUB_CATEGORY&#x27;</span>, script),</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">getBehavior</span>(params, defaultValue, number);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/entryjs/blocks/2024-03-25-expansion-block.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/entryjs/blocks/2024-03-25-expansion-block.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

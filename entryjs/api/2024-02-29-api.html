@@ -78,10 +78,10 @@
         
         "datePublished": "2024-02-29",
         "dateCreated": "2024-02-29",
-        "dateModified": "2024-03-14",
+        "dateModified": "2024-03-26",
         "url": "https://docs.playentry.org/entryjs/api/2024-02-29-api.html",
         "description": "Entry Docs - 엔트리 개발 가이드&위키",
-        "wordCount": "1364",
+        "wordCount": "1523",
         "publisher": "Entrylabs",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -224,7 +224,7 @@
                     
                 
                 <li>
-                    <a href="/entryjs/api/2024-02-29-api.html" class="sidebar-link current" itemprop="url">핵심 API</a>
+                    <a href="/entryjs/api/2024-02-29-data.html" class="sidebar-link" itemprop="url">Entry Event 사용법</a>
                 </li>
             
                 
@@ -232,7 +232,7 @@
                     
                 
                 <li>
-                    <a href="/entryjs/api/2024-02-29-data.html" class="sidebar-link" itemprop="url">Entry Event 사용법</a>
+                    <a href="/entryjs/api/2024-02-29-api.html" class="sidebar-link current" itemprop="url">핵심 API</a>
                 </li>
             
                 
@@ -273,19 +273,24 @@
                 
                 
                     
+                        <li><h3>고급 기능 블록</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/blocks/2024-03-25-expansion-block.html" class="sidebar-link" itemprop="url">확장블록</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
                         <li><h3>타입정의</h3></li>
                     
                 
                 <li>
                     <a href="/entryjs/typedef/2024-03-11-init-options.html" class="sidebar-link" itemprop="url">Init Options</a>
-                </li>
-            
-                
-                
-                    
-                
-                <li>
-                    <a href="/entryjs/typedef/2024-03-15-interface-state.html" class="sidebar-link" itemprop="url">Interface State</a>
                 </li>
             
                 
@@ -301,7 +306,7 @@
                     
                 
                 <li>
-                    <a href="/entryjs/typedef/2024-03-15-object-data.html" class="sidebar-link" itemprop="url">Object Data</a>
+                    <a href="/entryjs/typedef/2024-03-15-message-data.html" class="sidebar-link" itemprop="url">Message Data</a>
                 </li>
             
                 
@@ -309,7 +314,7 @@
                     
                 
                 <li>
-                    <a href="/entryjs/typedef/2024-03-15-message-data.html" class="sidebar-link" itemprop="url">Message Data</a>
+                    <a href="/entryjs/typedef/2024-03-15-object-data.html" class="sidebar-link" itemprop="url">Object Data</a>
                 </li>
             
                 
@@ -325,7 +330,7 @@
                     
                 
                 <li>
-                    <a href="/entryjs/typedef/2024-03-15-scene-data.html" class="sidebar-link" itemprop="url">Scene Data</a>
+                    <a href="/entryjs/typedef/2024-03-15-interface-state.html" class="sidebar-link" itemprop="url">Interface State</a>
                 </li>
             
                 
@@ -334,6 +339,14 @@
                 
                 <li>
                     <a href="/entryjs/typedef/2024-03-15-table-data.html" class="sidebar-link" itemprop="url">Table Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-scene-data.html" class="sidebar-link" itemprop="url">Scene Data</a>
                 </li>
             
                 
@@ -403,6 +416,14 @@
 <li><a href="#Entry-stateManager-getUndoStack">getUndoStack</a></li>
 <li><a href="#Entry-stateManager-redo">redo</a></li>
 <li><a href="#Entry-stateManager-undo">undo</a></li>
+</ul>
+</li>
+<li><p>Playground</p>
+<ul>
+<li><a href="#Entry-playground-blockMenu-banClass">banClass</a></li>
+<li><a href="#Entry-playground-blockMenu-unbanClass">unbanClass</a></li>
+<li><a href="#Entry-playground-blockMenu-banCategory">banCategory</a></li>
+<li><a href="#Entry-playground-blockMenu-unbanCategory">unbanCategory</a></li>
 </ul>
 </li>
 <li><p>Toast</p>
@@ -688,6 +709,104 @@
 </tr>
 </tbody></table>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Entry</span>.<span class="property">stateManager</span>.<span class="title function_">undo</span>();</span><br><span class="line"><span class="comment">// 또는</span></span><br><span class="line"><span class="title class_">Entry</span>.<span class="property">stateManager</span>.<span class="title function_">undo</span>(<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Playground"><a href="#Playground" class="headerlink" title="Playground"></a>Playground</h2><h3 id="Entry-playground-blockMenu-banClass"><a href="#Entry-playground-blockMenu-banClass" class="headerlink" title="Entry.playground.blockMenu.banClass"></a>Entry.playground.blockMenu.banClass</h3><p>특정 블록을 블록 메뉴에서 숨기는 데 사용됩니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>className</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>블록을 제외할 isNotFor요소 입니다.</td>
+</tr>
+<tr>
+<td>doNotAlign</td>
+<td>boolean</td>
+<td>✔️</td>
+<td>undefined</td>
+<td>다시 그릴지 여부 입니다. 기본적으로는 다시 그리고 <code>true</code>를 값을 주면 블록을 다시 그리지 않습니다.</td>
+</tr>
+</tbody></table>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 메세지 블록들을 숨기고 싶은 경우</span></span><br><span class="line"><span class="title class_">Entry</span>.<span class="property">playground</span>.<span class="property">blockMenu</span>.<span class="title function_">banClass</span>(<span class="string">&#x27;message&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Entry-playground-blockMenu-unbanClass"><a href="#Entry-playground-blockMenu-unbanClass" class="headerlink" title="Entry.playground.blockMenu.unbanClass"></a>Entry.playground.blockMenu.unbanClass</h3><p>블록 메뉴에 숨긴블록을 표시하는 데 사용됩니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>className</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>숨긴 블록을 표시할 isNotFor요소 입니다.</td>
+</tr>
+<tr>
+<td>doNotAlign</td>
+<td>boolean</td>
+<td>✔️</td>
+<td>undefined</td>
+<td>다시 그릴지 여부 입니다. 기본적으로는 다시 그리고 <code>true</code>를 값을 주면 블록을 다시 그리지 않습니다.</td>
+</tr>
+</tbody></table>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 숨긴 메세지 블록들을 표시하고 싶은 경우</span></span><br><span class="line"><span class="title class_">Entry</span>.<span class="property">playground</span>.<span class="property">blockMenu</span>.<span class="title function_">unbanClass</span>(<span class="string">&#x27;message&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Entry-playground-blockMenu-banCategory"><a href="#Entry-playground-blockMenu-banCategory" class="headerlink" title="Entry.playground.blockMenu.banCategory"></a>Entry.playground.blockMenu.banCategory</h3><p>특정 카테고리를 블록 메뉴에서 숨기는 데 사용됩니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>categoryName</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>숨길 카테고리 명 입니다.</td>
+</tr>
+</tbody></table>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 시작 카테고리를 숨기고 싶은 경우</span></span><br><span class="line"><span class="title class_">Entry</span>.<span class="property">playground</span>.<span class="property">blockMenu</span>.<span class="title function_">banCategory</span>(<span class="string">&#x27;start&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Entry-playground-blockMenu-unbanCategory"><a href="#Entry-playground-blockMenu-unbanCategory" class="headerlink" title="Entry.playground.blockMenu.unbanCategory"></a>Entry.playground.blockMenu.unbanCategory</h3><p>숨긴 카테고리를 블록 메뉴에서 표시하는 데 사용됩니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>categoryName</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>표시할 카테고리 명 입니다.</td>
+</tr>
+</tbody></table>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 시작 카테고리를 표시하고 싶은 경우</span></span><br><span class="line"><span class="title class_">Entry</span>.<span class="property">playground</span>.<span class="property">blockMenu</span>.<span class="title function_">unbanCategory</span>(<span class="string">&#x27;start&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 <h2 id="Toast"><a href="#Toast" class="headerlink" title="Toast"></a>Toast</h2><h3 id="Entry-toast-alert"><a href="#Entry-toast-alert" class="headerlink" title="Entry.toast.alert"></a>Entry.toast.alert</h3><p>사용자에게 메시지를 전달하기 위해 화면에 빨간색 경고 토스트(toast)를 띄우는 데 사용됩니다. 이 메서드는 주로 경고, 오류 메시지 또는 중요한 정보를 사용자에게 즉각적으로 알릴 때 사용합니다.</p>
 <table>

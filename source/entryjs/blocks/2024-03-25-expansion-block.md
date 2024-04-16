@@ -61,6 +61,19 @@ import '../playground/blocks/block_expansion_behaviorconduct_lifesafety';
 |descriptionKey|string|확장 블록의 다국어 키|
 |api|string|해당 확장블록을 호출할 api의 url|
 
+
+### 팝업 관리
+기본적으로는 [팝업 expansion](/entryjs/api/2024-02-29-popup.html#expansion)의 기능으로 확장 블록을 팝업에 띄울수 있습니다.
+블록 메뉴에서 `확장 블록 불러오기`버튼 클릭시 `openExpansionBlockManager`이벤트가 발생하고 이때 [popup.show](/entryjs/api/2024-02-29-popup.html#show) 를 이용해 팝업을 띄울수 있습니다.
+
+```js
+Entry.addEventListener('openExpansionBlockManager', () => {
+    // EntryJS load가 정상적이라면
+    // 전역 Entry의 EXPANSION_BLOCK_LIST에 확장 블록 리스트가 들어 있습니다.
+    tool.popup.show('expansion', Object.values(Entry.EXPANSION_BLOCK_LIST));
+});
+```
+
 ## 날씨
 
 [소스](https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/block_expansion_weather.js)

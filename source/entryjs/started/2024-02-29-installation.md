@@ -19,12 +19,15 @@ EntryJS를 사용하여 프로젝트에 풍부한 프로그래밍 교육 기능�
 
 1. **EntryJS 라이브러리 찾기**:
    - EntryJS의 최신 버전이나 특정 날짜의 버전을 GitHub의 `v3.날짜.빌드번호` 태그에서 찾습니다. 예를 들어, `v3.20240227.1050`와 같은 형식일 수 있습니다.
+   - 최신 Tag를 확인하시면 됩니다. https://github.com/entrylabs/entryjs/tags
 
 2. **라이브러리 다운로드**:
    - 원하는 버전의 EntryJS 파일을 다운로드합니다. 일반적으로는 `entry.min.js` 같은 압축된 JavaScript 파일을 사용하게 됩니다.
 
 3. **웹 프로젝트에 포함시키기**:
    - 다운로드한 `entry.min.js` 파일을 웹 프로젝트의 적절한 위치에 저장합니다. 그리고 HTML 파일 내에서 이 JavaScript 파일을 참조하도록 `<script>` 태그를 추가합니다.
+
+> entry-tool도 [공개 배포](https://github.com/entrylabs/entry-tool/tree/dist/develop/dist)되고 있습니다.
 
 ```html
 <!DOCTYPE html>
@@ -51,7 +54,7 @@ EntryJS를 웹 프로젝트에 성공적으로 통합하려면, EntryJS 라이�
 
 1. HTML 문서에 라이브러리 포함하기
 
-웹 프로젝트의 HTML 파일 내 `<head>` 태그 또는 `<body>` 태그의 끝에 다음과 같이 `<script>` 태그를 추가하여 EntryJS와 의존성 라이브러리들을 포함시킬 수 있습니다. 아래 코드는 필요한 모든 라이브러리를 로드하는 예제입니다:
+웹 프로젝트의 HTML 파일 내 `<head>` 태그 또는 `<body>` 태그의 끝에 다음과 같이 `<script>` 태그와 `<link>` 추가하여 EntryJS와 의존성 라이브러리들을 포함시킬 수 있습니다. 아래 코드는 필요한 모든 라이브러리를 로드하는 예제입니다:
 
 ```html
 <!DOCTYPE html>
@@ -59,6 +62,11 @@ EntryJS를 웹 프로젝트에 성공적으로 통합하려면, EntryJS 라이�
 <head>
     <meta charset="UTF-8">
     <title>EntryJS Integration Example</title>
+
+    <!-- style sheet -->
+    <link href="path/to/lib/entry-tool/dist/entry-tool.css" rel="stylesheet" />
+    <link href="path/to/lib/entry-js/dist/entry.css" rel="stylesheet" />
+
     <!-- 의존성 라이브러리들 -->
     <script src="path/to/lib/lodash/dist/lodash.min.js"></script>
     <script src="path/to/js/ws/locales.js"></script>

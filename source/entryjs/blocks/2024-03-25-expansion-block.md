@@ -69,7 +69,7 @@ import '../playground/blocks/block_expansion_behaviorconduct_lifesafety';
 
 해당 블록을 사용하기 위해선 API 서버 구축이 필요합니다.
 > 현재 엔트리에서는 웨더아이 OPEN API 데이터를 이용해서 제공하고 있습니다.
-> 웨더아리가 아니더라도 각 블록에서 데이터를 맞춰주면 어떤 날씨 API를 사용하더라도 문제 없습니다.
+> 웨더아이가 아니더라도 각 블록에서 데이터를 맞춰주면 어떤 날씨 API를 사용하더라도 문제 없습니다.
 > 각 블록의 func를 수정해서 사용하면 됩니다.
 
 ### check_city_weather
@@ -194,16 +194,15 @@ async func(sprite, script) {
 }
 ```
 
-## 생활안전 국민행동요령
+## 행사
 
 [소스](https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/block_expansion_festival.js)
 
-생활 속 안전을 위해 국민이 지켜야 하는 행동요령에 대한 블록 모음입니다. 
+국내 지역별 다양한 행사 및 축제와 관련된 불록 모음 입니다. 
 
 해당 블록을 사용하기 위해선 API 서버 구축이 필요합니다.
-> 현재 엔트리에서는 API는 [공공데이터의포털](https://www.data.go.kr/data/15000991/openapi.do#tab_layer_detail_function)을 이용하고 있습니다.
-> 웨더아리가 아니더라도 각 블록에서 데이터를 맞춰주면 어떤 API를 사용하더라도 문제 없습니다.
-> 각 블록의 func를 수정해서 사용하면 됩니다.
+> 현재 엔트리에서는 API는 [공공데이터의포털](https://www.data.go.kr/data/15101578/openapi.do)을 이용하고 있습니다.
+> 각 블록의 func를 상황에 맞도록 수정해서 사용하면 됩니다.
 
 ### count_festival
 선택한 날짜와 지역에서 열리는 행사의 수 블록.
@@ -257,6 +256,82 @@ func(sprite, script) {
 ```
 
 ## 자연재난 국민행동요령
+[소스](https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/block_expansion_behaviorconduct_disaster.js)
 
-## 행사
+자연재난 발생 시 국민이 지켜야하는 기본적인 행동요령에 대한 블록들의 모음입니다.
 
+해당 블록을 사용하기 위해선 API 서버 구축이 필요합니다.
+> 현재 엔트리에서는 API는 [공공데이터의포털](https://www.data.go.kr/data/15000991/openapi.do#tab_layer_detail_function)을 이용하고 있습니다.
+> 각 블록에서 데이터를 맞춰주면 어떤 API를 사용하더라도 문제 없습니다.
+
+### count_disaster_behavior
+선택한 자연재해가 발생했을 때 해야할 행동요령의 수 블록
+
+```js
+func(sprite, script) {
+    const params = {
+        category: Entry.EXPANSION_BLOCK.behaviorConductDisaster.apiType,
+        subCategory: script.getField('CATEGORY', script),
+        subCategory2: script.getField('SUB_CATEGORY', script),
+    };
+
+    return getBehavior(params, 0);
+}
+```
+### get_disaster_behavior
+선택한 자연재해가 발생했을 때 해야하는 행동요령에 대한 정보 블록
+
+```js
+func(sprite, script) {
+    const number = script.getStringValue('NUMBER', script);
+    const defaultValue = Lang.Blocks.no_data;
+    const params = {
+        category: Entry.EXPANSION_BLOCK.behaviorConductDisaster.apiType,
+        subCategory: script.getField('CATEGORY', script),
+        subCategory2: script.getField('SUB_CATEGORY', script),
+    };
+
+    return getBehavior(params, defaultValue, number);
+}
+```
+
+## 생활안전 국민행동요령
+[소스](https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/block_expansion_behaviorconduct_lifesafety.js)
+
+생활 속 안전을 위해 국민이 지켜야 하는 행동요령에 대한 블록 모음입니다. 
+
+해당 블록을 사용하기 위해선 API 서버 구축이 필요합니다.
+> 현재 엔트리에서는 API는 [공공데이터의포털](https://www.data.go.kr/data/15000991/openapi.do#tab_layer_detail_function)을 이용하고 있습니다.
+> 각 블록에서 데이터를 맞춰주면 어떤 API를 사용하더라도 문제 없습니다.
+
+### count_lifeSafety_behavior
+선택한 생활 속 문제가 발생했을 때 해야할 행동요령의 수 블록.
+
+```js
+func(sprite, script) {
+    const params = {
+        category: Entry.EXPANSION_BLOCK.behaviorConductLifeSafety.apiType,
+        subCategory: script.getField('CATEGORY', script),
+        subCategory2: script.getField('SUB_CATEGORY', script),
+    };
+
+    return getBehavior(params, 0);
+}
+```
+
+### get_lifeSafety_behavior
+선택한 생활 속 문제가 발생했을 때 해야할 행동요령에 대한 정보 블록.
+
+```js
+func(sprite, script) {
+    const number = script.getStringValue('NUMBER', script);
+    const defaultValue = Lang.Blocks.no_data;
+    const params = {
+        category: Entry.EXPANSION_BLOCK.behaviorConductLifeSafety.apiType,
+        subCategory: script.getField('CATEGORY', script),
+        subCategory2: script.getField('SUB_CATEGORY', script),
+    };
+
+    return getBehavior(params, defaultValue, number);
+}
+```

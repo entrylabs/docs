@@ -1,0 +1,601 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>인공지능 블록 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/entryjs/blocks/2024-04-17-ai-block.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="인공지능 블록 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="인공지능 블록 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "entryjs"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "인공지능 블록",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2024-04-17",
+        "dateCreated": "2024-04-17",
+        "dateModified": "2024-04-17",
+        "url": "https://docs.playentry.org/entryjs/blocks/2024-04-17-ai-block.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "2768",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/entryjs/blocks/2024-04-17-ai-block.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.2"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link current" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link current" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>시작하기</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/index.html" class="sidebar-link" itemprop="url">소개</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-02-29-installation.html" class="sidebar-link" itemprop="url">설치방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-02-29-structure.html" class="sidebar-link" itemprop="url">프로젝트 구조</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/started/2024-03-05-run.html" class="sidebar-link" itemprop="url">EntryJS 실행하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>API문서</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-data.html" class="sidebar-link" itemprop="url">Entry Event 사용법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-api.html" class="sidebar-link" itemprop="url">핵심 API</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-event.html" class="sidebar-link" itemprop="url">Entry Event 목록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-03-05-util.html" class="sidebar-link" itemprop="url">Entry Util</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-02-29-popup.html" class="sidebar-link" itemprop="url">팝업 관리</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/api/2024-03-05-static.html" class="sidebar-link" itemprop="url">STATIC JS</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>고급 기능 블록</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/blocks/2024-03-25-expansion-block.html" class="sidebar-link" itemprop="url">확장블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/blocks/2024-04-17-ai-block.html" class="sidebar-link current" itemprop="url">인공지능 블록</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>타입정의</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-11-init-options.html" class="sidebar-link" itemprop="url">Init Options</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-function-data.html" class="sidebar-link" itemprop="url">Function Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-interface-state.html" class="sidebar-link" itemprop="url">Interface State</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-object-data.html" class="sidebar-link" itemprop="url">Object Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-message-data.html" class="sidebar-link" itemprop="url">Message Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-project-data.html" class="sidebar-link" itemprop="url">Project Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-scene-data.html" class="sidebar-link" itemprop="url">Scene Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-table-data.html" class="sidebar-link" itemprop="url">Table Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-variable-data.html" class="sidebar-link" itemprop="url">Variable Data</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>기타</h3></li>
+                    
+                
+                <li>
+                    <a href="/entryjs/faq/2024-02-29-faq.html" class="sidebar-link" itemprop="url">자주 묻는 질문(FAQ)</a>
+                </li>
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content entryjs with-sidebar ">
+    
+      
+    
+    
+      <h1>인공지능 블록</h1>
+    
+    <p>인공지능(AI) 블록은 EntryJS에서 제공하는 고급 기능 블록 중 하나로, 사용자가 자신의 프로젝트에 인공지능 기술을 쉽게 통합할 수 있게 해줍니다. 이 블록들은 프로젝트에 AI의 강력한 기능을 추가하여, 예를 들어 이미지 인식, 음성 인식, 텍스트 분석 및 기계 학습과 같은 기능을 구현할 수 있습니다.</p>
+<h3 id="현재의-한계"><a href="#현재의-한계" class="headerlink" title="현재의 한계"></a>현재의 한계</h3><p>수정과 추가를 위해 EntryJS 소스 코드를 직접 수정하고 빌드해야 한다는 점입니다.</p>
+<blockquote>
+<p>추후 개선을 통해 외부에서 동적으로 인공지능 블록을 컨트롤 할수 있게 수정할 예정입니다.</p>
+</blockquote>
+<h2 id="공통"><a href="#공통" class="headerlink" title="공통"></a>공통</h2><p><a href="/entryjs/typedef/2024-03-11-init-options.html">initOption</a>으로 <code>aiUtilizeDisable</code> 값을 <code>true</code>로 전달하면 인공지능 블록 기능이 동작하지 않습니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Entry</span>.<span class="title function_">init</span>(container, &#123;</span><br><span class="line">    <span class="comment">//... options</span></span><br><span class="line">    <span class="attr">aiUtilizeDisable</span>: <span class="literal">true</span>, <span class="comment">//인공지능 블록 기능 off</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>또는 인공지능 블록을 추가 및 제거하려면 아래의 소스코드를 수정한 후 빌드해야 합니다.<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/src/class/AIUtilize.js">src/class/AIUtilize.js</a></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_ai_utilize_audio&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_ai_utilize_tts&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_ai_utilize_translate&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_ai_utilize_video&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_ai_utilize_gesture_recognition&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_ai_utilize_pose_landmarker&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_ai_utilize_face_landmarker&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_ai_utilize_object_detector&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 음성인식, 읽어주기 제거 하고 싶은경우</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_ai_utilize_translate&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_ai_utilize_video&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_ai_utilize_gesture_recognition&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_ai_utilize_pose_landmarker&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_ai_utilize_face_landmarker&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../playground/blocks/block_ai_utilize_object_detector&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>인공지능 카테고리까지 제거하고 싶은경우 <a href="/entryjs/api/2024-03-05-static.html">static.js</a>에서 <code>getAllBlocks</code>의 <code>ai_utilize</code>항목을 제거하면 됩 합니다. </p>
+<p>다른방법의 카테고리 및 블록 제거 방법은 <a href="/entryjs/api/2024-02-29-api.html#Entry-playground-blockMenu-banClass">핵심 API</a>를 참고하시면 됩니다.</p>
+<h3 id="META-DATA"><a href="#META-DATA" class="headerlink" title="META DATA"></a>META DATA</h3><p>기본적으로 블록마다 메타데이터를 가지게 됩니다. 개발하는 블록마다 다른 메타데이터를 가지기도 하시면 공통적으로 필요한 메타데이터가 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>프로퍼티</th>
+<th>타입</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>name</td>
+<td>string</td>
+<td>인공지능 블록의 이름</td>
+</tr>
+<tr>
+<td>imageName</td>
+<td>string</td>
+<td>인공지능 블록의 이미지</td>
+</tr>
+<tr>
+<td>category</td>
+<td>‘general’|’video’|’audio’</td>
+<td>general=기본<br>video=비디오 감지<br>audio=오디오 감지</td>
+</tr>
+<tr>
+<td>title</td>
+<td>Lang</td>
+<td>인공지능 블록의 다국어 이름</td>
+</tr>
+<tr>
+<td>titleKey</td>
+<td>string</td>
+<td>인공지능 블록의 다국어 키<br>예) template.voice_title_text = window.Lang.template.voice_title_text</td>
+</tr>
+<tr>
+<td>descriptionKey</td>
+<td>string</td>
+<td>인공지능 블록의 다국어 키</td>
+</tr>
+<tr>
+<td>api</td>
+<td>string</td>
+<td>해당 인공지능 블록을 호출할 api의 url</td>
+</tr>
+</tbody></table>
+<h3 id="팝업-관리"><a href="#팝업-관리" class="headerlink" title="팝업 관리"></a>팝업 관리</h3><p>기본적으로는 <a href="/entryjs/api/2024-02-29-popup.html#aiUtilize">팝업 aiUtilize</a>의 기능으로 인공지능 블록을 팝업에 띄울수 있습니다.<br>블록 메뉴에서 <code>인공지능 블록 불러오기</code>버튼 클릭시 <code>openAIUtilizeBlockManager</code>이벤트가 발생하고 이때 <a href="/entryjs/api/2024-02-29-popup.html#show">popup.show</a> 를 이용해 팝업을 띄울수 있습니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Entry</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;openAIUtilizeBlockManager&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// EntryJS load가 정상적이라면</span></span><br><span class="line">    <span class="comment">// 전역 Entry의 AI_UTILIZE_BLOCK_LIST 확장 블록 리스트가 들어 있습니다.</span></span><br><span class="line">    tool.<span class="property">popup</span>.<span class="title function_">show</span>(<span class="string">&#x27;aiUtilize&#x27;</span>, <span class="title class_">Object</span>.<span class="title function_">values</span>(<span class="title class_">Entry</span>.<span class="property">AI_UTILIZE_BLOCK_LIST</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="번역"><a href="#번역" class="headerlink" title="번역"></a>번역</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/block_ai_utilize_translate.js">소스</a></p>
+<p>파파고를 이용하여 다른 언어로 번역할 수 있는 블록 모음입니다.</p>
+<p>해당 블록을 사용하기 위해선 AI API 서버 구축이 필요합니다.</p>
+<blockquote>
+<p>현재 엔트리에서는 AI API는 papago을 이용하고 있습니다.<br>각 블록의 func를 상황에 맞도록 수정해서 사용하면 됩니다.</p>
+</blockquote>
+<h3 id="get-translated-string"><a href="#get-translated-string" class="headerlink" title="get_translated_string"></a>get_translated_string</h3><p>입력한 문자값을 선택한 언어로 번역 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> textObj = <span class="title function_">checkText</span>(script.<span class="title function_">getStringValue</span>(<span class="string">&#x27;TEXT&#x27;</span>, script));</span><br><span class="line">    <span class="keyword">if</span> (!textObj.<span class="property">result</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> textObj.<span class="property">message</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> type = <span class="title class_">Entry</span>.<span class="property">AI_UTILIZE_BLOCK</span>.<span class="property">translate</span>.<span class="property">apiType</span>;</span><br><span class="line">    <span class="keyword">const</span> params = &#123;</span><br><span class="line">        <span class="attr">text</span>: textObj.<span class="property">message</span>,</span><br><span class="line">        <span class="attr">target</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;TARGET&#x27;</span>, script),</span><br><span class="line">        <span class="attr">source</span>: script.<span class="title function_">getField</span>(<span class="string">&#x27;SOURCE&#x27;</span>, script),</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (params.<span class="property">target</span> == params.<span class="property">source</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> params.<span class="property">text</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">translate</span>(params, type, <span class="title class_">Lang</span>.<span class="property">Blocks</span>.<span class="property">unknown_sentence</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="check-language"><a href="#check-language" class="headerlink" title="check_language"></a>check_language</h3><p>입력된 문자값의 언어를 감지 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> text = script.<span class="title function_">getStringValue</span>(<span class="string">&#x27;TEXT&#x27;</span>, script);</span><br><span class="line">    <span class="keyword">const</span> textObj = <span class="title function_">checkText</span>(text);</span><br><span class="line">    <span class="keyword">if</span> (!textObj.<span class="property">result</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> textObj.<span class="property">message</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">checkLang</span>(textObj.<span class="property">message</span>, <span class="title class_">Lang</span>.<span class="property">Blocks</span>.<span class="property">unknown_sentence</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="읽어주기"><a href="#읽어주기" class="headerlink" title="읽어주기"></a>읽어주기</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/block_ai_utilize_tts.js">소스</a></p>
+<p>nVoice 음성합성 기술로 다양한 목소리로 문장을 읽는 블록모음 입니다.</p>
+<p>해당 블록을 사용하기 위해선 AI API 서버 구축이 필요합니다.</p>
+<blockquote>
+<p>현재 엔트리에서는 AI API는 clova를 이용하고 있습니다.<br>각 블록의 func를 상황에 맞도록 수정해서 사용하면 됩니다.</p>
+</blockquote>
+<h3 id="read-text"><a href="#read-text" class="headerlink" title="read_text"></a>read_text</h3><p>입력한 문자값을 설정된 목소리로 읽는 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; result, message, hash &#125; = <span class="title function_">checkText</span>(script.<span class="title function_">getStringValue</span>(<span class="string">&#x27;TEXT&#x27;</span>, script));</span><br><span class="line">    <span class="keyword">if</span> (result) &#123;</span><br><span class="line">        <span class="keyword">const</span> prop = sprite.<span class="title function_">getVoiceProp</span>();</span><br><span class="line">        <span class="title function_">read</span>(&#123;</span><br><span class="line">            message,</span><br><span class="line">            hash,</span><br><span class="line">            prop,</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> script.<span class="title function_">callReturn</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="read-text-wait-with-block"><a href="#read-text-wait-with-block" class="headerlink" title="read_text_wait_with_block"></a>read_text_wait_with_block</h3><p>입력한 문자값을 읽어준 후 다음 블록을 실행하는 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; result, message, hash &#125; = <span class="title function_">checkText</span>(script.<span class="title function_">getStringValue</span>(<span class="string">&#x27;TEXT&#x27;</span>, script));</span><br><span class="line">    <span class="keyword">const</span> prop = sprite.<span class="title function_">getVoiceProp</span>();</span><br><span class="line">    <span class="keyword">if</span> (result) &#123;</span><br><span class="line">        <span class="keyword">await</span> <span class="title function_">read</span>(&#123;</span><br><span class="line">            message,</span><br><span class="line">            hash,</span><br><span class="line">            prop,</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">return</span> script.<span class="title function_">callReturn</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="set-tts-property"><a href="#set-tts-property" class="headerlink" title="set_tts_property"></a>set_tts_property</h3><p>선택한 목소리가 선택한 속도와 선택한 음높이로 설정하는 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> speaker = script.<span class="title function_">getField</span>(<span class="string">&#x27;SPEAKER&#x27;</span>, script);</span><br><span class="line">    <span class="keyword">const</span> speed = script.<span class="title function_">getField</span>(<span class="string">&#x27;SPEED&#x27;</span>, script);</span><br><span class="line">    <span class="keyword">const</span> pitch = script.<span class="title function_">getField</span>(<span class="string">&#x27;PITCH&#x27;</span>, script);</span><br><span class="line">    <span class="keyword">const</span> volume = <span class="number">1</span>;</span><br><span class="line">    sprite.<span class="title function_">setVoiceProp</span>(&#123; speaker, speed, pitch, volume &#125;);</span><br><span class="line">    <span class="keyword">return</span> script.<span class="title function_">callReturn</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="사람-인식"><a href="#사람-인식" class="headerlink" title="사람 인식"></a>사람 인식</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/block_ai_utilize_pose_landmarker.js">소스</a></p>
+<p>카메라를 이용하여 사람의 신체를 인식하는 블록들의 모음입니다.</p>
+<p>해당 블록은 API 구축이 필요하지 않습니다.</p>
+<h3 id="when-pose-landmarker"><a href="#when-pose-landmarker" class="headerlink" title="when_pose_landmarker"></a>when_pose_landmarker</h3><p>사람을 인식하면 아래에 연결된 블록들을 실행하는 블록.</p>
+<h3 id="pose-landmarker"><a href="#pose-landmarker" class="headerlink" title="pose_landmarker"></a>pose_landmarker</h3><p>사람 인식을 시작하거나 중지하는 블록.</p>
+<h3 id="draw-detected-pose"><a href="#draw-detected-pose" class="headerlink" title="draw_detected_pose"></a>draw_detected_pose</h3><p>인식한 사람의 형태를 실행 화면에 보이게 하거나 숨기는 블록.</p>
+<h3 id="check-detected-pose"><a href="#check-detected-pose" class="headerlink" title="check_detected_pose"></a>check_detected_pose</h3><p>사람이 인식된 경우 ‘참’으로 판단하는 블록.</p>
+<h3 id="count-detected-pose"><a href="#count-detected-pose" class="headerlink" title="count_detected_pose"></a>count_detected_pose</h3><p>인식한 사람의 수 블록.</p>
+<h3 id="locate-to-pose"><a href="#locate-to-pose" class="headerlink" title="locate_to_pose"></a>locate_to_pose</h3><p>오브젝트가 선택한 사람의 신체 부위로 이동하는 블록.</p>
+<h3 id="locate-time-to-pose"><a href="#locate-time-to-pose" class="headerlink" title="locate_time_to_pose"></a>locate_time_to_pose</h3><p>오브젝트가 입력한 시간에 걸쳐 선택한 사람의 신체 부위로 이동하는 블록.</p>
+<h3 id="axis-detected-pose"><a href="#axis-detected-pose" class="headerlink" title="axis_detected_pose"></a>axis_detected_pose</h3><p>입력한 순서의 사람의 선택한 신체 부위의 위치 블록.</p>
+<h2 id="사물-인식"><a href="#사물-인식" class="headerlink" title="사물 인식"></a>사물 인식</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/block_ai_utilize_object_detector.js">소스</a></p>
+<p>카메라를 이용하여 사물을 인식하는 블록들의 모음입니다.</p>
+<p>해당 블록은 API 구축이 필요하지 않습니다.</p>
+<h3 id="when-object-detector"><a href="#when-object-detector" class="headerlink" title="when_object_detector"></a>when_object_detector</h3><p>사물을 인식하면 아래에 연결된 블록들을 실행하는 블록.</p>
+<h3 id="object-detector"><a href="#object-detector" class="headerlink" title="object_detector"></a>object_detector</h3><p>사물 인식을 시작하거나 중지하는 블록.</p>
+<h3 id="draw-detected-object"><a href="#draw-detected-object" class="headerlink" title="draw_detected_object"></a>draw_detected_object</h3><p>인식한 사물의 위치와 순서를 실행 화면에 보이게 하거나 숨기는 블록.</p>
+<h3 id="check-detected-object"><a href="#check-detected-object" class="headerlink" title="check_detected_object"></a>check_detected_object</h3><p>사물이 인식된 경우 ‘참’으로 판단하는 블록.</p>
+<h3 id="count-detected-object"><a href="#count-detected-object" class="headerlink" title="count_detected_object"></a>count_detected_object</h3><p>인식한 사물의 수 블록.</p>
+<h3 id="is-detected-among-objects"><a href="#is-detected-among-objects" class="headerlink" title="is_detected_among_objects"></a>is_detected_among_objects</h3><p>선택한 사물이 인식된 경우 ‘참’으로 판단하는 블록.</p>
+<h2 id="손-인식"><a href="#손-인식" class="headerlink" title="손 인식"></a>손 인식</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/block_ai_utilize_gesture_recognition.js">소스</a></p>
+<p>카메라를 이용하여 손을 인식하는 블록들의 모음입니다.</p>
+<p>해당 블록은 API 구축이 필요하지 않습니다.</p>
+<h3 id="when-hand-detection"><a href="#when-hand-detection" class="headerlink" title="when_hand_detection"></a>when_hand_detection</h3><p>손을 인식하면 아래에 연결된 블록들을 실행하는 블록.</p>
+<h3 id="hand-detection"><a href="#hand-detection" class="headerlink" title="hand_detection"></a>hand_detection</h3><p>손 인식을 시작하거나 중지하는 블록.</p>
+<h3 id="draw-detected-hand"><a href="#draw-detected-hand" class="headerlink" title="draw_detected_hand"></a>draw_detected_hand</h3><p>인식한 손의 형태를 실행 화면에 보이게 하거나 숨기는 블록.</p>
+<h3 id="check-detected-hand"><a href="#check-detected-hand" class="headerlink" title="check_detected_hand"></a>check_detected_hand</h3><p>손을 인식한 경우 ‘참’으로 판단하는 블록.</p>
+<h3 id="count-detected-hand"><a href="#count-detected-hand" class="headerlink" title="count_detected_hand"></a>count_detected_hand</h3><p>인식한 손의 개수 블록.</p>
+<h3 id="locate-to-hand"><a href="#locate-to-hand" class="headerlink" title="locate_to_hand"></a>locate_to_hand</h3><p>오브젝트가 선택한 손의 부위로 이동하는 블록.</p>
+<h3 id="locate-time-to-hand"><a href="#locate-time-to-hand" class="headerlink" title="locate_time_to_hand"></a>locate_time_to_hand</h3><p>오브젝트가 입력한 시간에 걸쳐 선택한 손의 부위로 이동하는 블록.</p>
+<h3 id="axis-detected-hand"><a href="#axis-detected-hand" class="headerlink" title="axis_detected_hand"></a>axis_detected_hand</h3><p>입력한 순서의 손에서 선택한 부위의 위치 값 블록.</p>
+<h3 id="is-which-hand"><a href="#is-which-hand" class="headerlink" title="is_which_hand"></a>is_which_hand</h3><p>입력한 순서의 손이 선택한 손이라면 ‘참’으로 판단하는 블록.</p>
+<h3 id="get-which-hand"><a href="#get-which-hand" class="headerlink" title="get_which_hand"></a>get_which_hand</h3><p>입력한 순서의 손이 오른손인지, 왼손인지를 반환하는 블록.</p>
+<h3 id="is-which-gesture"><a href="#is-which-gesture" class="headerlink" title="is_which_gesture"></a>is_which_gesture</h3><p>입력한 순서의 손이 선택한 모양이라면 ‘참’으로 판단하는 블록.</p>
+<h3 id="get-which-gesture"><a href="#get-which-gesture" class="headerlink" title="get_which_gesture"></a>get_which_gesture</h3><p>입력한 순서의 손이 어떤 모양인지를 반환하는 블록.</p>
+<h2 id="얼굴-인식"><a href="#얼굴-인식" class="headerlink" title="얼굴 인식"></a>얼굴 인식</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/block_ai_utilize_face_landmarker.js">소스</a></p>
+<p>카메라를 이용하여 얼굴을 인식하는 블록들의 모음입니다.</p>
+<p>해당 블록은 API 구축이 필요하지 않습니다.</p>
+<h3 id="when-face-landmarker"><a href="#when-face-landmarker" class="headerlink" title="when_face_landmarker"></a>when_face_landmarker</h3><p>얼굴을 인식하면 아래에 연결된 블록들을 실행하는 블록.</p>
+<h3 id="face-landmarker"><a href="#face-landmarker" class="headerlink" title="face_landmarker"></a>face_landmarker</h3><p>얼굴을 인식하면 아래에 연결된 블록들을 실행하는 블록.</p>
+<h3 id="draw-detected-face"><a href="#draw-detected-face" class="headerlink" title="draw_detected_face"></a>draw_detected_face</h3><p>인식한 얼굴의 형태를 실행 화면에 보이게 하거나 숨기는 블록.</p>
+<h3 id="check-detected-face"><a href="#check-detected-face" class="headerlink" title="check_detected_face"></a>check_detected_face</h3><p>얼굴이 인식된 경우 ‘참’으로 판단하는 블록.</p>
+<h3 id="count-detected-face"><a href="#count-detected-face" class="headerlink" title="count_detected_face"></a>count_detected_face</h3><p>인식한 얼굴의 수 블록.</p>
+<h3 id="locate-to-face"><a href="#locate-to-face" class="headerlink" title="locate_to_face"></a>locate_to_face</h3><p>오브젝트가 선택한 얼굴의 부위로 이동하는 블록.</p>
+<h3 id="locate-time-to-face"><a href="#locate-time-to-face" class="headerlink" title="locate_time_to_face"></a>locate_time_to_face</h3><p>오브젝트가 입력한 시간에 걸쳐 선택한 얼굴의 부위로 이동하는 블록.</p>
+<h3 id="check-detected-gender"><a href="#check-detected-gender" class="headerlink" title="check_detected_gender"></a>check_detected_gender</h3><p>선택한 얼굴이 선택한 성별이면 ‘참’으로 판단하는 블록.</p>
+<h3 id="check-compare-age"><a href="#check-compare-age" class="headerlink" title="check_compare_age"></a>check_compare_age</h3><p>선택한 얼굴의 나이가 입력한 수식에 해당한다면 ‘참’으로 판단하는 블록.</p>
+<h3 id="check-detected-emotion"><a href="#check-detected-emotion" class="headerlink" title="check_detected_emotion"></a>check_detected_emotion</h3><p>선택한 얼굴이 선택한 감정이면 ‘참’으로 판단하는 블록.</p>
+<h3 id="axis-detected-face"><a href="#axis-detected-face" class="headerlink" title="axis_detected_face"></a>axis_detected_face</h3><p>입력한 순서의 얼굴 중 선택된 얼굴 부위의 위치값 블록.</p>
+<h3 id="get-detected-face-value"><a href="#get-detected-face-value" class="headerlink" title="get_detected_face_value"></a>get_detected_face_value</h3><p>입력한 순서의 얼굴의 성별/나이/감정의 추정값 블록.</p>
+<h2 id="음성-인식"><a href="#음성-인식" class="headerlink" title="음성 인식"></a>음성 인식</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/block_ai_utilize_audio.js">소스</a></p>
+<p>마이크를 이용하여 음성을 인식하는 블록들의 모음입니다.</p>
+<p>해당 블록을 사용하기 위해선 AI API 서버 구축이 필요합니다.</p>
+<blockquote>
+<p>현재 엔트리에서는 AI API는 clova를 이용하고 있습니다.<br>각 블록의 func를 상황에 맞도록 수정해서 사용하면 됩니다.</p>
+</blockquote>
+<h3 id="check-microphone"><a href="#check-microphone" class="headerlink" title="check_microphone"></a>check_microphone</h3><p>컴퓨터에 마이크가 연결되어 있는 경우 ‘참’으로 판단하는 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="title class_">AudioUtils</span>.<span class="property">isInitialized</span>) &#123;</span><br><span class="line">            <span class="keyword">await</span> <span class="title class_">AudioUtils</span>.<span class="title function_">initialize</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="title class_">AudioUtils</span>.<span class="property">audioInputList</span>.<span class="property">length</span> &gt; <span class="number">0</span>;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="get-microphone-volume"><a href="#get-microphone-volume" class="headerlink" title="get_microphone_volume"></a>get_microphone_volume</h3><p>마이크에 입력되는 소리의 크기 값 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="title class_">AudioUtils</span>.<span class="property">isInitialized</span>) &#123;</span><br><span class="line">        <span class="keyword">await</span> <span class="title class_">AudioUtils</span>.<span class="title function_">initialize</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">AudioUtils</span>.<span class="property">currentVolume</span>;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="speech-to-text-convert"><a href="#speech-to-text-convert" class="headerlink" title="speech_to_text_convert"></a>speech_to_text_convert</h3><p>마이크를 통해 녹음된 음성을 인식하는 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="title class_">AudioUtils</span>.<span class="property">isInitialized</span>) &#123;</span><br><span class="line">        <span class="keyword">await</span> <span class="title class_">AudioUtils</span>.<span class="title function_">initialize</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="title class_">AudioUtils</span>.<span class="property">isRecording</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> language = script.<span class="title function_">getField</span>(<span class="string">&#x27;LANG&#x27;</span>, script);</span><br><span class="line">        <span class="keyword">if</span> (language === <span class="string">&#x27;Kor&#x27;</span>) &#123;</span><br><span class="line">            <span class="title class_">Entry</span>.<span class="property">container</span>.<span class="property">sttValue</span>.<span class="title function_">setName</span>(</span><br><span class="line">                <span class="string">`<span class="subst">$&#123;Lang.template.voice_title_text&#125;</span>:<span class="subst">$&#123;Lang.Blocks.korean_s&#125;</span>`</span></span><br><span class="line">            );</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (language === <span class="string">&#x27;Eng&#x27;</span>) &#123;</span><br><span class="line">            <span class="title class_">Entry</span>.<span class="property">container</span>.<span class="property">sttValue</span>.<span class="title function_">setName</span>(</span><br><span class="line">                <span class="string">`<span class="subst">$&#123;Lang.template.voice_title_text&#125;</span>:<span class="subst">$&#123;Lang.Blocks.english_s&#125;</span>`</span></span><br><span class="line">            );</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (language === <span class="string">&#x27;Jpn&#x27;</span>) &#123;</span><br><span class="line">            <span class="title class_">Entry</span>.<span class="property">container</span>.<span class="property">sttValue</span>.<span class="title function_">setName</span>(</span><br><span class="line">                <span class="string">`<span class="subst">$&#123;Lang.template.voice_title_text&#125;</span>:<span class="subst">$&#123;Lang.Blocks.japan_s&#125;</span>`</span></span><br><span class="line">            );</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="title class_">AudioUtils</span>.<span class="property">isRecording</span> = <span class="literal">true</span>;</span><br><span class="line">        <span class="title class_">Entry</span>.<span class="property">container</span>.<span class="title function_">enableSttValue</span>();</span><br><span class="line">        <span class="keyword">const</span> result = <span class="keyword">await</span> <span class="title class_">AudioUtils</span>.<span class="title function_">startRecord</span>(<span class="number">60</span> * <span class="number">1000</span>, language);</span><br><span class="line">        <span class="title class_">Entry</span>.<span class="title function_">dispatchEvent</span>(<span class="string">&#x27;audioRecordingDone&#x27;</span>);</span><br><span class="line">        <span class="title class_">Entry</span>.<span class="property">container</span>.<span class="title function_">setSttValue</span>(result || <span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">        <span class="title class_">Entry</span>.<span class="property">container</span>.<span class="title function_">setSttValue</span>(<span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">        <span class="keyword">throw</span> e;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="timed-speech-to-text-convert"><a href="#timed-speech-to-text-convert" class="headerlink" title="timed_speech_to_text_convert"></a>timed_speech_to_text_convert</h3><p>입력한 시간 동안 마이크를 통해 녹음된 음성을 선택한 언어로 인식하는 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="title class_">AudioUtils</span>.<span class="property">isInitialized</span>) &#123;</span><br><span class="line">        <span class="keyword">await</span> <span class="title class_">AudioUtils</span>.<span class="title function_">initialize</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="title class_">AudioUtils</span>.<span class="property">isRecording</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> time = <span class="title function_">_clamp</span>(script.<span class="title function_">getNumberValue</span>(<span class="string">&#x27;TIME&#x27;</span>), <span class="number">1</span>, <span class="number">60</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> language = script.<span class="title function_">getField</span>(<span class="string">&#x27;LANG&#x27;</span>, script);</span><br><span class="line">        <span class="keyword">if</span> (language === <span class="string">&#x27;Kor&#x27;</span>) &#123;</span><br><span class="line">            <span class="title class_">Entry</span>.<span class="property">container</span>.<span class="property">sttValue</span>.<span class="title function_">setName</span>(</span><br><span class="line">                <span class="string">`<span class="subst">$&#123;Lang.template.voice_title_text&#125;</span>:<span class="subst">$&#123;Lang.Blocks.korean_s&#125;</span>`</span></span><br><span class="line">            );</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (language === <span class="string">&#x27;Eng&#x27;</span>) &#123;</span><br><span class="line">            <span class="title class_">Entry</span>.<span class="property">container</span>.<span class="property">sttValue</span>.<span class="title function_">setName</span>(</span><br><span class="line">                <span class="string">`<span class="subst">$&#123;Lang.template.voice_title_text&#125;</span>:<span class="subst">$&#123;Lang.Blocks.english_s&#125;</span>`</span></span><br><span class="line">            );</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (language === <span class="string">&#x27;Jpn&#x27;</span>) &#123;</span><br><span class="line">            <span class="title class_">Entry</span>.<span class="property">container</span>.<span class="property">sttValue</span>.<span class="title function_">setName</span>(</span><br><span class="line">                <span class="string">`<span class="subst">$&#123;Lang.template.voice_title_text&#125;</span>:<span class="subst">$&#123;Lang.Blocks.japan_s&#125;</span>`</span></span><br><span class="line">            );</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="title class_">AudioUtils</span>.<span class="property">isRecording</span> = <span class="literal">true</span>;</span><br><span class="line">        <span class="title class_">Entry</span>.<span class="property">container</span>.<span class="title function_">enableSttValue</span>();</span><br><span class="line">        <span class="keyword">const</span> result = <span class="keyword">await</span> <span class="title class_">AudioUtils</span>.<span class="title function_">startTimedRecord</span>(time * <span class="number">1000</span>, language);</span><br><span class="line">        <span class="title class_">Entry</span>.<span class="title function_">dispatchEvent</span>(<span class="string">&#x27;audioRecordingDone&#x27;</span>);</span><br><span class="line">        <span class="title class_">Entry</span>.<span class="property">container</span>.<span class="title function_">setSttValue</span>(result || <span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">        <span class="title class_">Entry</span>.<span class="property">container</span>.<span class="title function_">setSttValue</span>(<span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">        <span class="keyword">throw</span> e;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="set-visible-speech-to-text"><a href="#set-visible-speech-to-text" class="headerlink" title="set_visible_speech_to_text"></a>set_visible_speech_to_text</h3><p>인식한 음성을 실행 화면에 보이게 하거나 숨기는 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> action = script.<span class="title function_">getField</span>(<span class="string">&#x27;ACTION&#x27;</span>);</span><br><span class="line">    <span class="keyword">const</span> sttValue = <span class="title class_">Entry</span>.<span class="property">container</span>.<span class="property">sttValue</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!sttValue) &#123;</span><br><span class="line">        <span class="keyword">return</span> script.<span class="title function_">callReturn</span>();</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (action === <span class="string">&#x27;SHOW&#x27;</span>) &#123;</span><br><span class="line">        sttValue.<span class="title function_">setVisible</span>(<span class="literal">true</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        sttValue.<span class="title function_">setVisible</span>(<span class="literal">false</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> script.<span class="title function_">callReturn</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="speech-to-text-get-value"><a href="#speech-to-text-get-value" class="headerlink" title="speech_to_text_get_value"></a>speech_to_text_get_value</h3><p>사람의 목소리를 문자로 변환한 값 블록.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Entry</span>.<span class="property">container</span>.<span class="title function_">getSttValue</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/entryjs/blocks/2024-04-17-ai-block.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/entryjs/blocks/2024-04-17-ai-block.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                // search index defaults to v2
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    indexName: 'entrylabs',
+                    inputSelector: selector,
+                    debug: false // Set debug to true if you want to inspect the dropdown
+                })
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

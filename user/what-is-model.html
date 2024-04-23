@@ -78,7 +78,7 @@
         
         "datePublished": "2023-11-29",
         "dateCreated": "2023-11-29",
-        "dateModified": "2024-04-19",
+        "dateModified": "2024-04-23",
         "url": "https://docs.playentry.org/user/what-is-model.html",
         "description": "Entry Docs - 엔트리 개발 가이드&위키",
         "wordCount": "271",
@@ -100,10 +100,8 @@
     <img src="/images/logo.png">
   </a>
   <ul id="nav">
-    <li>
-  <form id="search-form">
-    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
-  </form>
+    <li class="search-query-nav-wrapper">
+  <div id="search-query-nav"></div>
 </li>
 <li>
   <a href="/entryjs/" class="nav-link" itemprop="url">개발 가이드</a>
@@ -128,10 +126,8 @@
     <div class="sidebar">
     <div class="sidebar-inner">
         <ul class="main-menu">
-            <li>
-  <form id="search-form">
-    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
-  </form>
+            <li class="search-query-sidebar-wrapper">
+  <div id="search-query-sidebar"></div>
 </li>
 <li>
   <a href="/entryjs/" class="nav-link" itemprop="url">개발 가이드</a>
@@ -563,9 +559,35 @@
         <script src="/js/common.js"></script>
 
         <!-- at the end of the HEAD -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+        <style>
+            :root {
+                --docsearch-primary-color: #42b983;
+            }
+            
+            .DocSearch-Button {
+                background: #ffffff;
+                border: 1px solid #e3e3e3;
+                height: 30px;
+                line-height: 30px;
+            }
+
+            .DocSearch-Button:active, .DocSearch-Button:focus, .DocSearch-Button:hover {
+                background: var(--docsearch-searchbox-focus-background);
+                box-shadow: var(--docsearch-searchbox-shadow);
+                color: #2c3e50;
+                outline: none;
+            }
+            .DocSearch-Button-Placeholder {
+                font-size: 0.9rem;
+            }
+            .search-query-nav-wrapper {
+
+                vertical-align: middle !important;
+            }
+        </style>
         <!-- at the end of the BODY -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
         <script>
         [
             '#search-query-nav',
@@ -573,15 +595,15 @@
             '#search-query-menu'
         ].forEach(function (selector) {
             if (!document.querySelector(selector)) return
-                // search index defaults to v2
                 var match = window.location.pathname.match(/^\/(v\d+)/)
                 var version = match ? match[1] : 'v2'
                 docsearch({
-                    apiKey: 'ac74b4b1e90e6f709527919849a9ab2e',
+                    container: selector,
+                    appId: 'SA68SZF1Z4',
+                    apiKey: '2148f56602c452593e686003893d065b',
                     indexName: 'entrylabs',
-                    inputSelector: selector,
-                    debug: false // Set debug to true if you want to inspect the dropdown
-                })
+                    insights: true
+                });
             })
         </script>
 

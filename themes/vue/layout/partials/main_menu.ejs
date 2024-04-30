@@ -1,7 +1,5 @@
-<li>
-  <form id="search-form">
-    <input type="text" id="search-query-<%- context %>" class="search-query st-default-search-input">
-  </form>
+<li class="search-query-<%- context %>-wrapper">
+  <div id="search-query-<%- context %>"></div>
 </li>
 <li>
   <a href="<%- url_for("/entryjs/") %>" class="nav-link<%- page.path.indexOf('entryjs') === 0 ? ' current' : '' %>" itemprop="url">개발 가이드</a>

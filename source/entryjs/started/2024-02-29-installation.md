@@ -67,6 +67,9 @@ EntryJS를 웹 프로젝트에 성공적으로 통합하려면, EntryJS 라이�
     <link href="path/to/lib/entry-tool/dist/entry-tool.css" rel="stylesheet" />
     <link href="path/to/lib/entry-js/dist/entry.css" rel="stylesheet" />
 
+    <!--language-->
+    <script src="path/to/lib/entry-js/extern/lang/ko.js"></script>
+
     <!-- 의존성 라이브러리들 -->
     <script src="path/to/lib/lodash/dist/lodash.min.js"></script>
     <script src="path/to/js/ws/locales.js"></script>
@@ -96,12 +99,13 @@ EntryJS를 웹 프로젝트에 성공적으로 통합하려면, EntryJS 라이�
     <script src="path/to/lib/entry-js/extern/util/bignumber.min.js"></script>
     <script src="path/to/lib/components-webfontloader/webfontloader.js"></script>
     <script src="path/to/lib/entry-lms/dist/assets/app.js"></script>
-    <script src="path/to/lib/entry-tool/dist/entry-tool.js"></script>
-    <script src="path/to/lib/entry-paint/dist/static/js/entry-paint.js"></script>
-    <script src="path/to/external/sound/sound-editor.js"></script>
 
     <!-- Static JS -->
     <script src="path/to/lib/entry-js/extern/util/static.js"></script>
+
+    <script src="path/to/lib/entry-tool/dist/entry-tool.js"></script>
+    <script src="path/to/lib/entry-paint/dist/static/js/entry-paint.js"></script>
+    <script src="path/to/external/sound/sound-editor.js"></script>
 
     <!-- EntryJS 라이브러리 -->
     <script src="path/to/lib/entry-js/dist/entry.min.js"></script>

@@ -2,21 +2,21 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
-        <title>Entry Event 사용법 — Entry Docs</title>
+        <title>기본예제 — Entry Docs</title>
         <meta charset="utf-8">
         <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
 
-        <link rel="canonical" href="https://docs.playentry.org/entryjs/api/2024-02-29-data.html">
+        <link rel="canonical" href="https://docs.playentry.org/entryjs/started/2024-03-05-example.html">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="Entry Event 사용법 — Entry Docs">
+        <meta property="og:title" content="기본예제 — Entry Docs">
         <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
         <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Entry Event 사용법 — Entry Docs">
+        <meta name="twitter:title" content="기본예제 — Entry Docs">
         <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
         <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
 
@@ -72,20 +72,20 @@
             "@type": "Person",
             "name": "Entrylabs"
         },
-        "headline": "Entry Event 사용법",
+        "headline": "기본예제",
         "image": "https://docs.playentry.org/images/logo.png",
         
         
-        "datePublished": "2024-02-29",
-        "dateCreated": "2024-02-29",
-        "dateModified": "2024-03-05",
-        "url": "https://docs.playentry.org/entryjs/api/2024-02-29-data.html",
+        "datePublished": "2024-05-02",
+        "dateCreated": "2024-05-02",
+        "dateModified": "2024-05-03",
+        "url": "https://docs.playentry.org/entryjs/started/2024-03-05-example.html",
         "description": "Entry Docs - 엔트리 개발 가이드&위키",
-        "wordCount": "273",
+        "wordCount": "43",
         "publisher": "Entrylabs",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://docs.playentry.org/entryjs/api/2024-02-29-data.html"
+            "@id": "https://docs.playentry.org/entryjs/started/2024-03-05-example.html"
         }
     }
 </script>
@@ -207,7 +207,7 @@
                     
                 
                 <li>
-                    <a href="/entryjs/started/2024-03-05-example.html" class="sidebar-link" itemprop="url">기본예제</a>
+                    <a href="/entryjs/started/2024-03-05-example.html" class="sidebar-link current" itemprop="url">기본예제</a>
                 </li>
             
                 
@@ -228,7 +228,7 @@
                     
                 
                 <li>
-                    <a href="/entryjs/api/2024-02-29-data.html" class="sidebar-link current" itemprop="url">Entry Event 사용법</a>
+                    <a href="/entryjs/api/2024-02-29-data.html" class="sidebar-link" itemprop="url">Entry Event 사용법</a>
                 </li>
             
                 
@@ -403,29 +403,21 @@
       
     
     
-      <h1>Entry Event 사용법</h1>
+      <h1>기본예제</h1>
     
-    <p>EntryJS를 사용하면서, 다양한 이벤트를 처리하는 것은 애플리케이션의 동적인 상호작용을 만들어 내는 데 중요한 부분입니다. EntryJS는 이벤트를 추가, 제거, 실행하는 간단하면서도 강력한 메서드를 제공합니다. 이 문서에서는 EntryJS에서 이벤트를 다루는 기본적인 방법을 소개합니다.</p>
-<h3 id="이벤트-리스너-등록하기"><a href="#이벤트-리스너-등록하기" class="headerlink" title="이벤트 리스너 등록하기"></a>이벤트 리스너 등록하기</h3><p>이벤트 리스너를 등록하려면 Entry.addEventListener 메서드를 사용합니다. 이 메서드는 두 개의 매개변수를 받으며, 첫 번째는 이벤트의 이름이고, 두 번째는 해당 이벤트가 발생했을 때 실행될 콜백 함수입니다.</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myEventHandler</span>(<span class="params">args</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;이벤트 발생!&quot;</span>, args);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x27;customEvent&#x27; 이벤트에 대한 리스너 등록</span></span><br><span class="line"><span class="title class_">Entry</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;customEvent&#x27;</span>, myEventHandler);</span><br></pre></td></tr></table></figure>
-
-<h3 id="이벤트-리스너-제거하기"><a href="#이벤트-리스너-제거하기" class="headerlink" title="이벤트 리스너 제거하기"></a>이벤트 리스너 제거하기</h3><p>등록된 이벤트 리스너를 제거하려면 <code>Entry.removeEventListener</code> 메서드를 사용합니다. 이 메서드도 <code>addEventListener</code>와 마찬가지로 이벤트 이름과 콜백 함수를 매개변수로 받습니다. 정확히 같은 콜백 함수를 전달해야 해당 리스너가 제거됩니다.</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// &#x27;customEvent&#x27; 이벤트에 대한 리스너 제거</span></span><br><span class="line"><span class="title class_">Entry</span>.<span class="title function_">removeEventListener</span>(<span class="string">&#x27;customEvent&#x27;</span>, myEventHandler);</span><br></pre></td></tr></table></figure>
-
-<h3 id="특정-이벤트의-모든-리스너-제거하기"><a href="#특정-이벤트의-모든-리스너-제거하기" class="headerlink" title="특정 이벤트의 모든 리스너 제거하기"></a>특정 이벤트의 모든 리스너 제거하기</h3><p>특정 이벤트에 등록된 모든 리스너를 한 번에 제거하려면 <code>Entry.removeAllEventListener</code> 메서드를 사용합니다. 이 메서드는 제거하려는 이벤트 이름을 매개변수로 받습니다.</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// &#x27;customEvent&#x27; 이벤트에 등록된 모든 리스너 제거</span></span><br><span class="line"><span class="title class_">Entry</span>.<span class="title function_">removeAllEventListener</span>(<span class="string">&#x27;customEvent&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="이벤트-발생시키기"><a href="#이벤트-발생시키기" class="headerlink" title="이벤트 발생시키기"></a>이벤트 발생시키기</h3><p>특정 이벤트를 프로그래밍 방식으로 발생시키려면 <code>Entry.dispatchEvent</code> 메서드를 사용합니다. 첫 번째 매개변수는 발생시키려는 이벤트의 이름이고, 그 뒤에는 이벤트 핸들러로 전달될 매개변수들을 차례로 넣을 수 있습니다.</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// &#x27;customEvent&#x27; 이벤트 발생시키기</span></span><br><span class="line"><span class="title class_">Entry</span>.<span class="title function_">dispatchEvent</span>(<span class="string">&#x27;customEvent&#x27;</span>, <span class="string">&quot;매개변수1&quot;</span>, <span class="string">&quot;매개변수2&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<h3 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h3><p>EntryJS에서 이벤트를 처리하는 방법은 매우 직관적이며, 이를 통해 애플리케이션에 다양한 상호작용을 구현할 수 있습니다. 이벤트 리스너의 등록, 제거, 이벤트의 발생은 애플리케이션의 로직을 동적으로 제어하는 데 필수적인 기능입니다.</p>
+    <p>이 페이지는 Entryjs를 활용하여 워크스페이스를 구현하는데 실제적인 예제를 통해 이해를 돕기 위한 페이지 입니다.</p>
+<h2 id="Base"><a href="#Base" class="headerlink" title="Base"></a>Base</h2><p>Base Example은 기본적으로 클라이언트에서 필요한 사항을 예제로 구현한 예제 입니다. 5월 3일 현재 일부 기능만 구현되어 있습니다.</p>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/example/tree/main/base">레포지토리</a> - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.dev/entrylabs/example/blob/main/base/README.md">에디터로 보기</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://vercel.com/new/clone?repository-url=https://github.com/entrylabs/example/tree/main/base&project-name=entryjs-base&repository-name=entryjs-base">vercel 배포</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://stackblitz.com/github/entrylabs/example/tree/main/base">stackblitz 보기</a></li>
+</ul>
 
     
     <div class="footer">
       Caught a mistake or want to contribute to the documentation?
-      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/entryjs/api/2024-02-29-data.md" target="_blank"> -->
-      <a href="https://github.com/entrylabs/docs/blob/master/source/entryjs/api/2024-02-29-data.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/entryjs/started/2024-03-05-example.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/entryjs/started/2024-03-05-example.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
         Edit this page on Github!
       </a>
     </div>

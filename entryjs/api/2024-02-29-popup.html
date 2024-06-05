@@ -81,7 +81,7 @@
         "dateModified": "2024-04-08",
         "url": "https://docs.playentry.org/entryjs/api/2024-02-29-popup.html",
         "description": "Entry Docs - 엔트리 개발 가이드&위키",
-        "wordCount": "7838",
+        "wordCount": "8333",
         "publisher": "Entrylabs",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -455,6 +455,7 @@
 <li><a href="#projects">projects</a></li>
 <li><a href="#table">table</a></li>
 <li><a href="#이벤트">이벤트</a></li>
+<li><a href="#openManager-이벤트">openManager 이벤트</a></li>
 </ul>
 </li>
 </ul>
@@ -478,6 +479,20 @@
 <li><a href="#ContextMenu">ContextMenu</a></li>
 <li><a href="#Backpack">Backpack</a></li>
 <li><a href="#MusicScale">MusicScale</a></li>
+</ul>
+</li>
+</ul>
+<br>
+
+<ul>
+<li><a href="#Entry제공-함수">Entry제공 함수</a><ul>
+<li><a href="#Entry-generateHash">Entry.generateHash</a></li>
+<li><a href="#Entry-container-addObject">Entry.container.addObject</a></li>
+<li><a href="#Entry-playground-addPicture">Entry.playground.addPicture</a></li>
+<li><a href="#Entry-playground-addSound">Entry.playground.addSound</a></li>
+<li><a href="#Entry-playground-addExpansionBlocks">Entry.playground.addExpansionBlocks</a></li>
+<li><a href="#Entry-playground-removeExpansionBlocks">Entry.playground.removeExpansionBlocks</a></li>
+<li><a href="#Entry-playground-dataTable-addSources">Entry.playground.dataTable.addSources</a></li>
 </ul>
 </li>
 </ul>
@@ -1029,7 +1044,7 @@
 <p>내부적으로 select 팝업 기능을 사용합니다.</p>
 <h4 id="WS에-등록-4"><a href="#WS에-등록-4" class="headerlink" title="WS에 등록"></a>WS에 등록</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> expansionBlocks = [];</span><br><span class="line"><span class="comment">// submit 이벤트 핸들링</span></span><br><span class="line"><span class="comment">// expansionItems : Array&lt;expansionItem&gt;</span></span><br><span class="line">popup.<span class="title function_">on</span>(<span class="string">&#x27;submit&#x27;</span>, <span class="function">(<span class="params">expansionItems</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// ex) data가 엔트리 확장블럭(expansion)인 경우</span></span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 확장블럭 추가 이벤트 dispatch</span></span><br><span class="line">    <span class="title class_">Entry</span>.<span class="title function_">dispatchEvent</span>(<span class="string">&#x27;popupAddBlocks&#x27;</span>, &#123; <span class="attr">category</span>: <span class="string">&#x27;expansion&#x27;</span>, expansionItems &#125;);</span><br><span class="line">    <span class="comment">// 추가할 블럭 필터링</span></span><br><span class="line">    <span class="keyword">const</span> addBlocks = expansionItems.<span class="title function_">filter</span>(<span class="function">(<span class="params">&#123; name &#125;</span>) =&gt;</span> !<span class="title class_">Entry</span>.<span class="property">expansionBlocks</span>.<span class="title function_">includes</span>(name));</span><br><span class="line">    <span class="comment">// 필요시 제거할 확장블럭 필터링</span></span><br><span class="line">    <span class="keyword">const</span> removeBlocks = <span class="variable language_">this</span>.<span class="property">expansionBlocks</span></span><br><span class="line">            .<span class="title function_">filter</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> item.<span class="property">active</span>)</span><br><span class="line">            .<span class="title function_">filter</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> !expansionItems.<span class="title function_">includes</span>(item));</span><br><span class="line">    <span class="comment">// WS 블록메뉴에 확장블럭 추가</span></span><br><span class="line">    <span class="title class_">Entry</span>.<span class="property">playground</span>.<span class="title function_">addExpansionBlocks</span>(addBlocks, <span class="literal">true</span>, <span class="literal">true</span>);</span><br><span class="line">    <span class="comment">// 필요할 경우 WS 블록메뉴에 확장블럭 제거</span></span><br><span class="line">    <span class="title class_">Entry</span>.<span class="property">playground</span>.<span class="title function_">removeExpansionBlocks</span>(removeBlocks, <span class="literal">true</span>, <span class="literal">true</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="샘플-데이터-expansionItem"><a href="#샘플-데이터-expansionItem" class="headerlink" title="샘플 데이터 : expansionItem"></a>샘플 데이터 : expansionItem</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;festival&quot;</span>,</span><br><span class="line">    <span class="string">&quot;imageName&quot;</span>: <span class="string">&quot;festival.png&quot;</span>,</span><br><span class="line">    <span class="string">&quot;title&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;ko&quot;</span>: <span class="string">&quot;행사&quot;</span>,</span><br><span class="line">        <span class="string">&quot;en&quot;</span>: <span class="string">&quot;festival&quot;</span>,</span><br><span class="line">        <span class="string">&quot;jp&quot;</span>: <span class="string">&quot;イベント&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;titleKey&quot;</span>: <span class="string">&quot;template.festival_title_text&quot;</span>,</span><br><span class="line">    <span class="string">&quot;description&quot;</span>: <span class="string">&quot;국내 지역별 다양한 행사 및 축제와 관련된 불록 모음 입니다. [한국관광공사 제공]&quot;</span>,</span><br><span class="line">    <span class="string">&quot;descriptionKey&quot;</span>: <span class="string">&quot;Msgs.expansion_festival_description&quot;</span>,</span><br><span class="line">    <span class="string">&quot;isInitialized&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="string">&quot;api&quot;</span>: <span class="string">&quot;/api/expansionBlock/ko/festival&quot;</span>,</span><br><span class="line">    <span class="string">&quot;active&quot;</span>: <span class="literal">false</span></span><br><span class="line">  	<span class="comment">// 이하 프로퍼티들은 확장블록별 공유의 프로퍼티입니다. 아래는 예시로써 &#x27;행사&#x27; 확장블록의 공유 프로퍼티입니다.</span></span><br><span class="line">    <span class="string">&quot;locationMap&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;Seoul&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;code&quot;</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">&quot;sub&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;강남구&quot;</span>,</span><br><span class="line">                <span class="string">&quot;강동구&quot;</span>,</span><br><span class="line">                <span class="string">&quot;강북구&quot;</span>,</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">&quot;Incheon&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;code&quot;</span>: <span class="number">2</span>,</span><br><span class="line">            <span class="string">&quot;sub&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;강화군&quot;</span>,</span><br><span class="line">                <span class="string">&quot;계양구&quot;</span>,</span><br><span class="line">                <span class="string">&quot;남구&quot;</span>,</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">&quot;Daejeon&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;code&quot;</span>: <span class="number">3</span>,</span><br><span class="line">            <span class="string">&quot;sub&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;대덕구&quot;</span>,</span><br><span class="line">                <span class="string">&quot;동구&quot;</span>,</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">&quot;Daegu&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;code&quot;</span>: <span class="number">4</span>,</span><br><span class="line">            <span class="string">&quot;sub&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;남구&quot;</span>,</span><br><span class="line">                <span class="string">&quot;달서구&quot;</span>,</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">&quot;Gwangju&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;code&quot;</span>: <span class="number">5</span>,</span><br><span class="line">            <span class="string">&quot;sub&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;광산구&quot;</span>,</span><br><span class="line">                <span class="string">&quot;남구&quot;</span>,</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;infoTypeMap&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;title&quot;</span>: <span class="string">&quot;title&quot;</span>,</span><br><span class="line">        <span class="string">&quot;address&quot;</span>: <span class="string">&quot;addr1&quot;</span>,</span><br><span class="line">        <span class="string">&quot;start_date&quot;</span>: <span class="string">&quot;eventstartdate&quot;</span>,</span><br><span class="line">        <span class="string">&quot;end_date&quot;</span>: <span class="string">&quot;eventenddate&quot;</span>,</span><br><span class="line">        <span class="string">&quot;coordinatex&quot;</span>: <span class="string">&quot;mapx&quot;</span>,</span><br><span class="line">        <span class="string">&quot;coordinatey&quot;</span>: <span class="string">&quot;mapy&quot;</span>,</span><br><span class="line">        <span class="string">&quot;area&quot;</span>: <span class="string">&quot;sigungucode&quot;</span>,</span><br><span class="line">        <span class="string">&quot;homepage&quot;</span>: <span class="string">&quot;homepage&quot;</span>,</span><br><span class="line">        <span class="string">&quot;overview&quot;</span>: <span class="string">&quot;overview&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;monthMap&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;January&quot;</span>: <span class="number">1</span>,</span><br><span class="line">        <span class="string">&quot;Febuary &quot;</span>: <span class="number">2</span>,</span><br><span class="line">        <span class="string">&quot;March&quot;</span>: <span class="number">3</span>,</span><br><span class="line">        <span class="string">&quot;April&quot;</span>: <span class="number">4</span>,</span><br><span class="line">        <span class="string">&quot;May&quot;</span>: <span class="number">5</span>,</span><br><span class="line">        <span class="string">&quot;June&quot;</span>: <span class="number">6</span>,</span><br><span class="line">        <span class="string">&quot;July&quot;</span>: <span class="number">7</span>,</span><br><span class="line">        <span class="string">&quot;August&quot;</span>: <span class="number">8</span>,</span><br><span class="line">        <span class="string">&quot;September&quot;</span>: <span class="number">9</span>,</span><br><span class="line">        <span class="string">&quot;October&quot;</span>: <span class="number">10</span>,</span><br><span class="line">        <span class="string">&quot;November&quot;</span>: <span class="number">11</span>,</span><br><span class="line">        <span class="string">&quot;December&quot;</span>: <span class="number">12</span></span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="샘플-데이터-expansionItem"><a href="#샘플-데이터-expansionItem" class="headerlink" title="샘플 데이터 : expansionItem"></a>샘플 데이터 : expansionItem</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;festival&quot;</span>,</span><br><span class="line">    <span class="string">&quot;imageName&quot;</span>: <span class="string">&quot;festival.png&quot;</span>,</span><br><span class="line">    <span class="string">&quot;title&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;ko&quot;</span>: <span class="string">&quot;행사&quot;</span>,</span><br><span class="line">        <span class="string">&quot;en&quot;</span>: <span class="string">&quot;festival&quot;</span>,</span><br><span class="line">        <span class="string">&quot;jp&quot;</span>: <span class="string">&quot;イベント&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;titleKey&quot;</span>: <span class="string">&quot;template.festival_title_text&quot;</span>,</span><br><span class="line">    <span class="string">&quot;description&quot;</span>: <span class="string">&quot;국내 지역별 다양한 행사 및 축제와 관련된 불록 모음 입니다. [한국관광공사 제공]&quot;</span>,</span><br><span class="line">    <span class="string">&quot;descriptionKey&quot;</span>: <span class="string">&quot;Msgs.expansion_festival_description&quot;</span>,</span><br><span class="line">    <span class="string">&quot;isInitialized&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="string">&quot;api&quot;</span>: <span class="string">&quot;/api/expansionBlock/ko/festival&quot;</span>,</span><br><span class="line">    <span class="string">&quot;active&quot;</span>: <span class="literal">false</span></span><br><span class="line">    <span class="comment">// 이하 프로퍼티들은 확장블록별 공유의 프로퍼티입니다. 아래는 예시로써 &#x27;행사&#x27; 확장블록의 공유 프로퍼티입니다.</span></span><br><span class="line">    <span class="string">&quot;locationMap&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;Seoul&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;code&quot;</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">&quot;sub&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;강남구&quot;</span>,</span><br><span class="line">                <span class="string">&quot;강동구&quot;</span>,</span><br><span class="line">                <span class="string">&quot;강북구&quot;</span>,</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">&quot;Incheon&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;code&quot;</span>: <span class="number">2</span>,</span><br><span class="line">            <span class="string">&quot;sub&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;강화군&quot;</span>,</span><br><span class="line">                <span class="string">&quot;계양구&quot;</span>,</span><br><span class="line">                <span class="string">&quot;남구&quot;</span>,</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">&quot;Daejeon&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;code&quot;</span>: <span class="number">3</span>,</span><br><span class="line">            <span class="string">&quot;sub&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;대덕구&quot;</span>,</span><br><span class="line">                <span class="string">&quot;동구&quot;</span>,</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">&quot;Daegu&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;code&quot;</span>: <span class="number">4</span>,</span><br><span class="line">            <span class="string">&quot;sub&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;남구&quot;</span>,</span><br><span class="line">                <span class="string">&quot;달서구&quot;</span>,</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">&quot;Gwangju&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;code&quot;</span>: <span class="number">5</span>,</span><br><span class="line">            <span class="string">&quot;sub&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;광산구&quot;</span>,</span><br><span class="line">                <span class="string">&quot;남구&quot;</span>,</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;infoTypeMap&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;title&quot;</span>: <span class="string">&quot;title&quot;</span>,</span><br><span class="line">        <span class="string">&quot;address&quot;</span>: <span class="string">&quot;addr1&quot;</span>,</span><br><span class="line">        <span class="string">&quot;start_date&quot;</span>: <span class="string">&quot;eventstartdate&quot;</span>,</span><br><span class="line">        <span class="string">&quot;end_date&quot;</span>: <span class="string">&quot;eventenddate&quot;</span>,</span><br><span class="line">        <span class="string">&quot;coordinatex&quot;</span>: <span class="string">&quot;mapx&quot;</span>,</span><br><span class="line">        <span class="string">&quot;coordinatey&quot;</span>: <span class="string">&quot;mapy&quot;</span>,</span><br><span class="line">        <span class="string">&quot;area&quot;</span>: <span class="string">&quot;sigungucode&quot;</span>,</span><br><span class="line">        <span class="string">&quot;homepage&quot;</span>: <span class="string">&quot;homepage&quot;</span>,</span><br><span class="line">        <span class="string">&quot;overview&quot;</span>: <span class="string">&quot;overview&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;monthMap&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;January&quot;</span>: <span class="number">1</span>,</span><br><span class="line">        <span class="string">&quot;Febuary &quot;</span>: <span class="number">2</span>,</span><br><span class="line">        <span class="string">&quot;March&quot;</span>: <span class="number">3</span>,</span><br><span class="line">        <span class="string">&quot;April&quot;</span>: <span class="number">4</span>,</span><br><span class="line">        <span class="string">&quot;May&quot;</span>: <span class="number">5</span>,</span><br><span class="line">        <span class="string">&quot;June&quot;</span>: <span class="number">6</span>,</span><br><span class="line">        <span class="string">&quot;July&quot;</span>: <span class="number">7</span>,</span><br><span class="line">        <span class="string">&quot;August&quot;</span>: <span class="number">8</span>,</span><br><span class="line">        <span class="string">&quot;September&quot;</span>: <span class="number">9</span>,</span><br><span class="line">        <span class="string">&quot;October&quot;</span>: <span class="number">10</span>,</span><br><span class="line">        <span class="string">&quot;November&quot;</span>: <span class="number">11</span>,</span><br><span class="line">        <span class="string">&quot;December&quot;</span>: <span class="number">12</span></span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <br>
 
@@ -1430,10 +1445,236 @@
 </tbody></table>
 <br>
 
+<br>
+
+
+
+<h3 id="openManager-이벤트"><a href="#openManager-이벤트" class="headerlink" title="openManager 이벤트"></a>openManager 이벤트</h3><p>엔트리 WS에서 ‘오브젝 추가하기’, ‘모양 추가하기’, ‘소리 추가하기’와 같은 버튼을 클릭하면 각 타입에 맞는 openManager 이벤트가 entryjs에서 발생합니다.</p>
+<p>각 타입에 맞는 Popup 창이 show되도록 이벤트 핸들링을 해주어야 합니다.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// entryjs 초기화 이후</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Popup</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@entrylabs/tool&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> popup = <span class="keyword">new</span> <span class="title class_">Popup</span>(&#123;...&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> addEventListener = <span class="title class_">Entry</span>.<span class="property">addEventListener</span>.<span class="title function_">bind</span>(<span class="title class_">Entry</span>);</span><br><span class="line"><span class="keyword">const</span> removeAllEventListener = <span class="title class_">Entry</span>.<span class="property">removeAllEventListener</span>.<span class="title function_">bind</span>(<span class="title class_">Entry</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x27;오브젝트 추가하기&#x27; 클릭시 dispatch</span></span><br><span class="line"><span class="title function_">removeAllEventListener</span>(<span class="string">&#x27;openSpriteManager&#x27;</span>);</span><br><span class="line"><span class="title function_">addEventListener</span>(<span class="string">&#x27;openSpriteManager&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">popup</span>.<span class="title function_">show</span>(<span class="string">&#x27;sprite&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// &#x27;모양 추가하기&#x27; 클릭시 dispatch</span></span><br><span class="line"><span class="title function_">removeAllEventListener</span>(<span class="string">&#x27;openPictureManager&#x27;</span>);</span><br><span class="line"><span class="title function_">addEventListener</span>(<span class="string">&#x27;openPictureManager&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">popup</span>.<span class="title function_">show</span>(<span class="string">&#x27;picture&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// &#x27;소리 추가하기&#x27; 클릭시 dispatch</span></span><br><span class="line"><span class="title function_">removeAllEventListener</span>(<span class="string">&#x27;openSoundManager&#x27;</span>);</span><br><span class="line"><span class="title function_">addEventListener</span>(<span class="string">&#x27;openSoundManager&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">popup</span>.<span class="title function_">show</span>(<span class="string">&#x27;sound&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// &#x27;인공지능 블록 불러오기&#x27; 클릭시 dispatch</span></span><br><span class="line"><span class="title function_">removeAllEventListener</span>(<span class="string">&#x27;openAIUtilizeBlockManager&#x27;</span>);</span><br><span class="line"><span class="title function_">addEventListener</span>(<span class="string">&#x27;openAIUtilizeBlockManager&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> blocks = <span class="variable language_">this</span>.<span class="property">popup</span>.<span class="property">aiUtilizeBlocks</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">popup</span>.<span class="title function_">show</span>(<span class="string">&#x27;aiUtilize&#x27;</span>, blocks);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// &#x27;확장 블록 불러오기&#x27; 클릭시 dispatch</span></span><br><span class="line"><span class="title function_">removeAllEventListener</span>(<span class="string">&#x27;openExpansionBlockManager&#x27;</span>);</span><br><span class="line"><span class="title function_">addEventListener</span>(<span class="string">&#x27;openExpansionBlockManager&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> blocks = <span class="variable language_">this</span>.<span class="property">popup</span>.<span class="property">expansionBlocks</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">popup</span>.<span class="title function_">show</span>(<span class="string">&#x27;expansion&#x27;</span>, blocks);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// &#x27;모양 가져오기&#x27; 클릭시 dispatch</span></span><br><span class="line"><span class="title function_">removeAllEventListener</span>(<span class="string">&#x27;openPictureImport&#x27;</span>);</span><br><span class="line"><span class="title function_">addEventListener</span>(<span class="string">&#x27;openPictureImport&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">popup</span>.<span class="title function_">show</span>(<span class="string">&#x27;paint&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<br>
+
+<br>
+
+
+
 <h2 id="Widget"><a href="#Widget" class="headerlink" title="Widget"></a>Widget</h2><p><strong>이 문서는 작성중인 문서입니다.</strong></p>
 <h3 id="Chart"><a href="#Chart" class="headerlink" title="Chart"></a>Chart</h3><h3 id="ModalChart"><a href="#ModalChart" class="headerlink" title="ModalChart"></a>ModalChart</h3><h3 id="ModalTable"><a href="#ModalTable" class="headerlink" title="ModalTable"></a>ModalTable</h3><h3 id="BillBoardChart"><a href="#BillBoardChart" class="headerlink" title="BillBoardChart"></a>BillBoardChart</h3><h3 id="TreeNode"><a href="#TreeNode" class="headerlink" title="TreeNode"></a>TreeNode</h3><h3 id="modalProgress"><a href="#modalProgress" class="headerlink" title="modalProgress"></a>modalProgress</h3><h3 id="Dropper"><a href="#Dropper" class="headerlink" title="Dropper"></a>Dropper</h3><h3 id="Sortable"><a href="#Sortable" class="headerlink" title="Sortable"></a>Sortable</h3><h3 id="Draggable"><a href="#Draggable" class="headerlink" title="Draggable"></a>Draggable</h3><h3 id="Dropdown"><a href="#Dropdown" class="headerlink" title="Dropdown"></a>Dropdown</h3><h3 id="DropdownExtra"><a href="#DropdownExtra" class="headerlink" title="DropdownExtra"></a>DropdownExtra</h3><h3 id="angle"><a href="#angle" class="headerlink" title="angle"></a>angle</h3><h3 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h3><h3 id="ContextMenu"><a href="#ContextMenu" class="headerlink" title="ContextMenu"></a>ContextMenu</h3><h3 id="Backpack"><a href="#Backpack" class="headerlink" title="Backpack"></a>Backpack</h3><h3 id="MusicScale"><a href="#MusicScale" class="headerlink" title="MusicScale"></a>MusicScale</h3><br>
 
-<h3 id="기타"><a href="#기타" class="headerlink" title="기타"></a>기타</h3><h3 id="ListTool"><a href="#ListTool" class="headerlink" title="ListTool"></a>ListTool</h3><h3 id="DataAnalytics"><a href="#DataAnalytics" class="headerlink" title="DataAnalytics"></a>DataAnalytics</h3><br>
+<h2 id="Entry제공-함수"><a href="#Entry제공-함수" class="headerlink" title="Entry제공 함수"></a>Entry제공 함수</h2><p>이 문서의 예시코드에서 사용중인 Entry객체 하위 함수에 대해 기술합니다.<br>이 단원에 작성된 내용은 추후 별도의 페이지로 통합 될 수 있습니다.</p>
+<br>
+
+<h3 id="Entry-generateHash"><a href="#Entry-generateHash" class="headerlink" title="Entry.generateHash"></a>Entry.generateHash</h3><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/cd630e9b9fa41a5c7bfd76752d507d5b02be78cf/src/util/utils.js#L927">소스원본</a></p>
+<p>숫자와 알파벳으로 구성된 n자리 랜덤 해시값을 리턴합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>length</td>
+<td>number</td>
+<td>✔️</td>
+<td>4</td>
+<td>리턴할 해시값의 자릿수입니다.</td>
+</tr>
+</tbody></table>
+<p>Return : String</p>
+<br>
+
+<h3 id="Entry-container-addObject"><a href="#Entry-container-addObject" class="headerlink" title="Entry.container.addObject"></a>Entry.container.addObject</h3><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/cd630e9b9fa41a5c7bfd76752d507d5b02be78cf/src/class/container.js#L368">소스원본</a></p>
+<p>엔트리 WS에 오브젝트를 추가합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>objectModel</td>
+<td>Object</td>
+<td></td>
+<td></td>
+<td>WS에 추가할 오브젝트 모델정보입니다.</td>
+</tr>
+<tr>
+<td>index</td>
+<td>number</td>
+<td></td>
+<td></td>
+<td>삽입될 오브젝트의 인덱스입니다. 일반적으로 0값을 입력합니다.</td>
+</tr>
+</tbody></table>
+<p>Return : void</p>
+<br>
+
+<h3 id="Entry-playground-addPicture"><a href="#Entry-playground-addPicture" class="headerlink" title="Entry.playground.addPicture"></a>Entry.playground.addPicture</h3><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/015d78d3ec88c0b048088d4093fcffa00bb556cb/src/class/playground.js#L1245">소스원본</a></p>
+<p>엔트리WS에 모양(picture)을 추가합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>picture</td>
+<td>Object</td>
+<td></td>
+<td></td>
+<td>WS에 추가할 모양 정보입니다.</td>
+</tr>
+<tr>
+<td>isNew</td>
+<td>boolean</td>
+<td>✔️</td>
+<td>false</td>
+<td>추가할 모양이 신규인지 여부를 나타냅니다.<br>이 값에따라 picture파라미터의 id값을 재사용할지 판단합니다.</td>
+</tr>
+<tr>
+<td>isSelect</td>
+<td>boolean</td>
+<td>✔️</td>
+<td>true</td>
+<td>이 모양을 포함하는 오브젝트에서 이 모양을 선택하고 있는지 여부를 나타냅니다.<br>선택된 이미지는 오브젝트의 대표썸네일이 되며, 모양 탭에서 선택된 상태가 됩니다.</td>
+</tr>
+</tbody></table>
+<p>Return : void</p>
+<br>
+
+<h3 id="Entry-playground-addSound"><a href="#Entry-playground-addSound" class="headerlink" title="Entry.playground.addSound"></a>Entry.playground.addSound</h3><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/015d78d3ec88c0b048088d4093fcffa00bb556cb/src/class/playground.js#L1500">소스원본</a></p>
+<p>엔트리 WS에 소리(sound)를 추가합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sound</td>
+<td>Object</td>
+<td></td>
+<td></td>
+<td>WS에 추가할 소리 정보입니다.</td>
+</tr>
+<tr>
+<td>NotForView</td>
+<td>boolean</td>
+<td>✔️</td>
+<td>false</td>
+<td><strong>현재 사용하지 않는 파라미터입니다.</strong></td>
+</tr>
+<tr>
+<td>isNew</td>
+<td>boolean</td>
+<td>✔️</td>
+<td>false</td>
+<td>추가할 소리가 신규인지 여부를 나타냅니다.<br>이 값에따라 sound파라미터의 id값을 재사용할지 판단합니다.</td>
+</tr>
+<tr>
+<td>isSelect</td>
+<td>boolean</td>
+<td>✔️</td>
+<td>true</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>Return : void</p>
+<br>
+
+<br>
+
+<h3 id="Entry-playground-addExpansionBlocks"><a href="#Entry-playground-addExpansionBlocks" class="headerlink" title="Entry.playground.addExpansionBlocks"></a>Entry.playground.addExpansionBlocks</h3><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/015d78d3ec88c0b048088d4093fcffa00bb556cb/src/class/playground.js#L1475">소스원본1</a> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/015d78d3ec88c0b048088d4093fcffa00bb556cb/src/command/commands/object.js#L221">소스원본2</a></p>
+<p>파라미터로 넘겨준 block들의 name값이 Entry.EXPANSION_BLOCK에 포함된 경우, 해당 블럭들을 초기화하고 WS에 노출시킵니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>expansionBlocks</td>
+<td>Array&lt; Object&gt;</td>
+<td></td>
+<td></td>
+<td>추가할 블록의 배열입니다.</td>
+</tr>
+</tbody></table>
+<p>Return : void</p>
+<br>
+
+<h3 id="Entry-playground-removeExpansionBlocks"><a href="#Entry-playground-removeExpansionBlocks" class="headerlink" title="Entry.playground.removeExpansionBlocks"></a>Entry.playground.removeExpansionBlocks</h3><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/015d78d3ec88c0b048088d4093fcffa00bb556cb/src/class/playground.js#L1478">소스원본1</a> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/015d78d3ec88c0b048088d4093fcffa00bb556cb/src/command/commands/object.js#L250">소스원본2</a></p>
+<p>파라미터로 넘겨준 block들의 name값들을 기반으로 Entry.expansionBlocks에서 제거하고 해당 블럭들을 WS에서 미노출시킵니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>expansionBlocks</td>
+<td>Array&lt; Object&gt;</td>
+<td></td>
+<td></td>
+<td>제거할 블록을 배열입니다.</td>
+</tr>
+</tbody></table>
+<p>Return : void</p>
+<br>
+
+<h3 id="Entry-playground-dataTable-addSources"><a href="#Entry-playground-dataTable-addSources" class="headerlink" title="Entry.playground.dataTable.addSources"></a>Entry.playground.dataTable.addSources</h3><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/015d78d3ec88c0b048088d4093fcffa00bb556cb/src/class/DataTable.js#L119">소스원본</a></p>
+<p>엔트리 WS에 테이블 정보를 추가합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>기본값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>tables</td>
+<td>Array&lt; Object &gt;</td>
+<td>✔️</td>
+<td>[ ]</td>
+<td>WS에 추가할 테이블 정보입니다.</td>
+</tr>
+</tbody></table>
+<p>Return : void</p>
+<br>
+
+<br>
+
+<h2 id="기타"><a href="#기타" class="headerlink" title="기타"></a>기타</h2><h3 id="ListTool"><a href="#ListTool" class="headerlink" title="ListTool"></a>ListTool</h3><h3 id="DataAnalytics"><a href="#DataAnalytics" class="headerlink" title="DataAnalytics"></a>DataAnalytics</h3><br>
 
 <h2 id="React-컴포넌트"><a href="#React-컴포넌트" class="headerlink" title="React 컴포넌트"></a>React 컴포넌트</h2><p><strong>이 문서는 작성중인 문서입니다.</strong></p>
 <p>일부 툴들은 React컴포넌트로 제공됩니다.</p>

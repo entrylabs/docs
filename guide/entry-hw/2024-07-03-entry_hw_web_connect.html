@@ -1,0 +1,679 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>브라우저로 연결하기에 하드웨어 등록 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/guide/entry-hw/2024-07-03-entry_hw_web_connect.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="브라우저로 연결하기에 하드웨어 등록 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="브라우저로 연결하기에 하드웨어 등록 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "guide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "브라우저로 연결하기에 하드웨어 등록",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2024-07-05",
+        "dateCreated": "2024-07-05",
+        "dateModified": "2024-07-05",
+        "url": "https://docs.playentry.org/guide/entry-hw/2024-07-03-entry_hw_web_connect.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "3293",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/guide/entry-hw/2024-07-03-entry_hw_web_connect.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.2"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li class="search-query-nav-wrapper">
+  <div id="search-query-nav"></div>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li class="search-query-sidebar-wrapper">
+  <div id="search-query-sidebar"></div>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+                
+                
+                    
+                        <li><h3>Quick Start</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/quick_start/2018-07-30-tutorial.html" class="sidebar-link" itemprop="url">엔트리 하드웨어 개발 튜토리얼</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Basic</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/basic/setting_environment.html" class="sidebar-link" itemprop="url">개발 환경 세팅</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/pull_request.html" class="sidebar-link" itemprop="url">PR 요청하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/2016-07-07-faq.html" class="sidebar-link" itemprop="url">자주 하는 질문</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/basic/2023-05-25-common_problem.html" class="sidebar-link" itemprop="url">자주 발생하는 에러</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>블록만들기</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-09-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-22-add_new_blocks.html" class="sidebar-link" itemprop="url">블록 명세 작성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-26-add_new_blocks2.html" class="sidebar-link" itemprop="url">블록 사용 등록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-05-26-add_new_blocks3.html" class="sidebar-link" itemprop="url">블록 모양별 개발 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2016-07-08-add_new_blocks4.html" class="sidebar-link" itemprop="url">하드웨어 블록 만들기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-09-translate.html" class="sidebar-link" itemprop="url">하드웨어 블록 번역작업</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-14-add_hardware.html" class="sidebar-link" itemprop="url">하드웨어 블록 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entryjs/2018-03-23-test_project.html" class="sidebar-link" itemprop="url">프로젝트 테스트하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry HW</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2016-05-01-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2016-05-03-add_module.html" class="sidebar-link" itemprop="url">하드웨어 모듈 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/add_bluetooth_hardware.html" class="sidebar-link" itemprop="url">블루투스 하드웨어 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/cli_test_hardware.html" class="sidebar-link" itemprop="url">하드웨어 연결 테스트하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2017-05-16-enroll_entry-hw.html" class="sidebar-link" itemprop="url">하드웨어 등록 서비스 신청하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-hw/2024-07-03-entry_hw_web_connect.html" class="sidebar-link current" itemprop="url">브라우저로 연결하기에 하드웨어 등록</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry Offline</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-20-getting_started.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-21-project_structure.html" class="sidebar-link" itemprop="url">프로젝트 구조</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-27-develop.html" class="sidebar-link" itemprop="url">개발하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-01-10-add_objects.html" class="sidebar-link" itemprop="url">오브젝트 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2017-12-28-translate.html" class="sidebar-link" itemprop="url">다국어 작업하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-10-30-custom_project.html" class="sidebar-link" itemprop="url">커스텀 프로젝트 빌드</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/entry-offline/2018-01-09-build.html" class="sidebar-link" itemprop="url">빌드하기</a>
+                </li>
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Etc.</h3></li>
+                    
+                
+                <li>
+                    <a href="/guide/etc/2016-05-03-git_fork.html" class="sidebar-link" itemprop="url">Git 사용 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/etc/2020-06-24-doc_contribution.html" class="sidebar-link" itemprop="url">문서 기여하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/guide/etc/2019-12-11-updates.html" class="sidebar-link" itemprop="url">문서 업데이트 내역</a>
+                </li>
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar 2024-07-03-entry_hw_web_connect-guide">
+    
+      
+    
+    
+      <h1>브라우저로 연결하기에 하드웨어 등록</h1>
+    
+    <h2 id="브라우저로-연결하기란"><a href="#브라우저로-연결하기란" class="headerlink" title="브라우저로 연결하기란?"></a>브라우저로 연결하기란?</h2><p>‘브라우저로 연결하기’이하 ‘하드웨어 웹연결’은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API">web serial api</a>을 사용하여 브라우저와 하드웨어 기기를 직접 연결하는 기능입니다.<br>기존의 엔트리 하드웨어는 “사용자 기기 &lt;=&gt; <a target="_blank" rel="external nofollow noopener noreferrer" href="https://playentry.org/download/hardware">Entry HW 프로그램</a> &lt;=&gt; <a target="_blank" rel="external nofollow noopener noreferrer" href="https://playentry.org/ws/new">엔트리 만들기 웹 페이지</a>“ 의 구조를 가지고 있습니다.<br>하드웨어 웹연결은 Entry HW 프로그램을 사용하지 않고 “사용자 기기 &lt;=&gt; 엔트리 만들기 웹 페이지”의 구조를 가집니다.</p>
+<p>사용자 입장에서는 사용이 간편하고, 개발자 입장에서도 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs">entry-js</a>의 코드만 관리하면 된다는 장점이 있습니다.<br>하지만, 펌웨어와 드라이버 제공이 불가능하기에 하드웨어 제조사에서 별도의 안내를 해야하고 실험적이 기능이기에 연결이 불안정할 수도 있습니다</p>
+<br>
+
+<h2 id="유의사항"><a href="#유의사항" class="headerlink" title="유의사항"></a>유의사항</h2><ul>
+<li>반드시 <strong>자사 하드웨어 관련 파일만 수정</strong>을 부탁드립니다. hw_Lite.js 나 기타 공용파일들 수정은 반영이 어렵습니다.</li>
+<li>하드웨어 웹연결에서는 기본적으로 펌웨어를 제공하지 않습니다. WS의 ‘펌웨어 다운로드’ 버튼은 .hex파일을 다운로드하여 사용자가 직접 펌웨어 업데이트가 가능한 기기를 위한 기능입니다.</li>
+<li>하드웨어 웹연결 기능은 개발 초기 단계로 추후 <strong>제공 함수나 연결 라이프사이클이 변경될 수 있습니다</strong>. 경우에 따라서는 제조사측 코드를 수정해야 할 수 있으므로 미리 유의 부탁드립니다.</li>
+</ul>
+<br>
+
+<h2 id="PR-파일-간략-설명"><a href="#PR-파일-간략-설명" class="headerlink" title="PR 파일 간략 설명"></a>PR 파일 간략 설명</h2><p><img src="/images/entry-hw/HwLite_select1.png" alt="HwLite_select1"></p>
+<p>이 단원에서는 최종적으로 제조사가 entryjs에 PR해야할 파일 작성시 유의사항과 간략한 역할을 기술합니다.<br>하드웨어 웹연결을 지원하기 위해선 아래 3종류의 파일이 필수적으로 추가되어야 합니다. 아래 3파일을 작성후 entryjs의 develop-hw로 PR부탁드립니다.</p>
+<h3 id="block-모듈명-lite-js"><a href="#block-모듈명-lite-js" class="headerlink" title="block_모듈명 _lite.js"></a>block_모듈명 _lite.js</h3><ul>
+<li>반드시 entryjs &gt; src &gt; playground &gt; blocks &gt; hardwareLite 하위에 위치해야합니다.</li>
+<li>파일명은 반드시 block_ 모듈명 _lite.js 이어야 합니다.</li>
+<li>이 파일에서 하드웨어 웹연결에 필요한 정보를 담고있는 모듈클래스를 정의하게 됩니다.</li>
+<li>기존 하드웨어 연결에서 entryjs의 block_모듈명.js와 entry-hw의 모듈명.js의 역할을 모두 가지고 있습니다.</li>
+</ul>
+<h3 id="metadata-모듈명-lite-json"><a href="#metadata-모듈명-lite-json" class="headerlink" title="metadata_모듈명 _lite.json"></a>metadata_모듈명 _lite.json</h3><ul>
+<li>반드시 entryjs &gt; src &gt; playground &gt; blocks &gt; hardwareLite 하위에 위치해야합니다.</li>
+<li>파일명은 반드시 metadata_ 모듈명 _lite.json 이어야 합니다.</li>
+<li>웹연결 모듈에 대한 메타데이터를 가지고 있습니다.</li>
+<li>이 파일의 moduleId와 block_ 모듈명 _lite.js 의 클래스 내 id는 반드시 일치해야 합니다.(포맷이 다르므로 다른 하드웨어 웹연결 파일들을 예시로 참고해 주세요.)</li>
+<li>이 파일의 title, description은 WS에서 ‘브라우저로 연결하기’ 클릭시 나타나는 위의 이미지화면에서 모듈카드의 정보를 가지고 있습니다.</li>
+</ul>
+<h3 id="모듈명-png"><a href="#모듈명-png" class="headerlink" title="모듈명.png"></a>모듈명.png</h3><ul>
+<li>반드시 entryjs &gt; images &gt; hw_lite 하위에 위치해야 합니다.</li>
+<li>‘브라우저로 연결하기’ 클릭시 나타나는 위의 이미지화면에서 보여지는 이미지 파일입니다.</li>
+<li>파일명은 block_ 모듈명 _lite.js 에서 정의한 클래스 생성자의 this.imageName과 일치해야 합니다.</li>
+</ul>
+<br>
+
+<h2 id="block-모듈명-lite-js-구조-설명"><a href="#block-모듈명-lite-js-구조-설명" class="headerlink" title="block_ 모듈명 _lite.js 구조 설명"></a>block_ 모듈명 _lite.js 구조 설명</h2><p>WS가 실행되었을경우, Entry.모듈클래스 를 추가하는 함수가 즉시 실행됩니다.<br>이 파일에 정의되는 모듈클래스 구조와 역할은 다음과 같습니다.</p>
+<h3 id="모듈클래스"><a href="#모듈클래스" class="headerlink" title="모듈클래스"></a>모듈클래스</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line">(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title class_">Entry</span>.<span class="property">ArduinoLite</span> = <span class="keyword">new</span> (<span class="keyword">class</span> <span class="title class_">ArduinoLite</span> &#123;</span><br><span class="line">        <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">id</span> = <span class="string">&#x27;010101&#x27;</span>; <span class="comment">// id는 6자리 모두 입력해야 합니다.</span></span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&#x27;ArduinoLite&#x27;</span>;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">url</span> = <span class="string">&#x27;http://www.arduino.cc/&#x27;</span>;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">imageName</span> = <span class="string">&#x27;arduinolite.png&#x27;</span>;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">title</span> = &#123;</span><br><span class="line">                <span class="attr">ko</span>: <span class="string">&#x27;아두이노 우노&#x27;</span>,</span><br><span class="line">                <span class="attr">en</span>: <span class="string">&#x27;Arduino Uno&#x27;</span>,</span><br><span class="line">            &#125;;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">duration</span> = <span class="number">32</span>; <span class="comment">// 엔트리js에서 기기와 통신하는 함수를 호출하는 duration 간격입니다.</span></span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">blockMenuBlocks</span> = [</span><br><span class="line">                <span class="string">&#x27;arduinolite_get_number_sensor_value&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;arduinolite_get_digital_value&#x27;</span>,</span><br><span class="line">            ];</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">portData</span> = &#123;</span><br><span class="line">                <span class="attr">baudRate</span>: <span class="number">9600</span>,</span><br><span class="line">                <span class="attr">duration</span>: <span class="number">32</span>, <span class="comment">// web serial api에서 기기와 통신하는 duration 간격입니다.</span></span><br><span class="line">                <span class="attr">dataBits</span>: <span class="number">8</span>,</span><br><span class="line">                <span class="attr">parity</span>: <span class="string">&#x27;none&#x27;</span>,</span><br><span class="line">                <span class="attr">stopBits</span>: <span class="number">1</span>,</span><br><span class="line">                <span class="attr">bufferSize</span>: <span class="number">512</span>,</span><br><span class="line">                <span class="attr">constantServing</span>: <span class="literal">true</span>,</span><br><span class="line">            &#125;;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">readablePorts</span> = [];</span><br><span class="line">            <span class="variable language_">this</span>.<span class="title function_">setZero</span>();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="title function_">setZero</span>(<span class="params"></span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">port</span> = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">14</span>).<span class="title function_">fill</span>(<span class="number">0</span>);</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">digitalValue</span> = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">14</span>).<span class="title function_">fill</span>(<span class="number">0</span>);</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">remoteDigitalValue</span> = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">14</span>).<span class="title function_">fill</span>(<span class="number">0</span>);</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">analogValue</span> = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">6</span>).<span class="title function_">fill</span>(<span class="number">0</span>);</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">readablePorts</span> = <span class="title function_">_range</span>(<span class="number">0</span>, <span class="number">19</span>);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (<span class="title class_">Entry</span>.<span class="property">hwLite</span> &amp;&amp; <span class="title class_">Entry</span>.<span class="property">hwLite</span>.<span class="property">serial</span>) &#123;</span><br><span class="line">                <span class="title class_">Entry</span>.<span class="property">hwLite</span>.<span class="property">serial</span>.<span class="title function_">update</span>();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 디바이스에서 값을 읽어옵니다.</span></span><br><span class="line">        <span class="title function_">handleLocalData</span>(<span class="params">data</span>) &#123;&#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//디바이스에 값을 씁니다.</span></span><br><span class="line">        <span class="title function_">requestLocalData</span>(<span class="params"></span>) &#123;</span><br><span class="line">            <span class="keyword">const</span> queryString = [];</span><br><span class="line">            <span class="comment">// ...</span></span><br><span class="line">            <span class="keyword">return</span> queryString;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="title function_">setLanguage</span>(<span class="params"></span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123;</span><br><span class="line">                <span class="attr">ko</span>: &#123;</span><br><span class="line">                    <span class="attr">template</span>: &#123;</span><br><span class="line">                        <span class="attr">arduinolite_text</span>: <span class="string">&#x27;%1&#x27;</span>,</span><br><span class="line">                        <span class="attr">arduinolite_get_sensor_number</span>: <span class="string">&#x27;%1&#x27;</span>,</span><br><span class="line">                        <span class="attr">arduinolite_get_port_number</span>: <span class="string">&#x27;%1&#x27;</span>,</span><br><span class="line">                    &#125;,</span><br><span class="line">                    <span class="title class_">Device</span>: &#123;</span><br><span class="line">                        <span class="attr">arduinolite</span>: <span class="string">&#x27;아두이노&#x27;</span>,</span><br><span class="line">                    &#125;,</span><br><span class="line">                    <span class="title class_">Menus</span>: &#123;</span><br><span class="line">                        <span class="attr">arduinolite</span>: <span class="string">&#x27;아두이노&#x27;</span>,</span><br><span class="line">                    &#125;,</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="attr">en</span>: &#123;</span><br><span class="line">                    <span class="attr">template</span>: &#123;</span><br><span class="line">                        <span class="attr">arduinolite_text</span>: <span class="string">&#x27;%1&#x27;</span>,</span><br><span class="line">                        <span class="attr">arduinolite_get_sensor_number</span>: <span class="string">&#x27;%1&#x27;</span>,</span><br><span class="line">                        <span class="attr">arduinolite_get_port_number</span>: <span class="string">&#x27;%1&#x27;</span>,</span><br><span class="line">                    &#125;,</span><br><span class="line">                    <span class="title class_">Device</span>: &#123;</span><br><span class="line">                        <span class="attr">arduinolite</span>: <span class="string">&#x27;arduinolite&#x27;</span>,</span><br><span class="line">                    &#125;,</span><br><span class="line">                    <span class="title class_">Menus</span>: &#123;</span><br><span class="line">                        <span class="attr">arduinolite</span>: <span class="string">&#x27;ArduinoLite&#x27;</span>,</span><br><span class="line">                    &#125;,</span><br><span class="line">                &#125;,</span><br><span class="line">            &#125;;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="title function_">getBlocks</span>(<span class="params"></span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123;</span><br><span class="line">                <span class="attr">arduinolite_get_sensor_number</span>: &#123;</span><br><span class="line">                    <span class="attr">color</span>: <span class="title class_">EntryStatic</span>.<span class="property">colorSet</span>.<span class="property">block</span>.<span class="property">default</span>.<span class="property">HARDWARE</span>,</span><br><span class="line">                    <span class="attr">outerLine</span>: <span class="title class_">EntryStatic</span>.<span class="property">colorSet</span>.<span class="property">block</span>.<span class="property">darken</span>.<span class="property">HARDWARE</span>,</span><br><span class="line">                    <span class="attr">skeleton</span>: <span class="string">&#x27;basic_string_field&#x27;</span>,</span><br><span class="line">                    <span class="attr">statements</span>: [],</span><br><span class="line">                    <span class="attr">params</span>: [</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="attr">type</span>: <span class="string">&#x27;Dropdown&#x27;</span>,</span><br><span class="line">                            <span class="attr">options</span>: [</span><br><span class="line">                                [<span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;A0&#x27;</span>],</span><br><span class="line">                                [<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;A1&#x27;</span>],</span><br><span class="line">                                [<span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;A2&#x27;</span>],</span><br><span class="line">                                [<span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;A3&#x27;</span>],</span><br><span class="line">                                [<span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;A4&#x27;</span>],</span><br><span class="line">                                [<span class="string">&#x27;5&#x27;</span>, <span class="string">&#x27;A5&#x27;</span>],</span><br><span class="line">                            ],</span><br><span class="line">                            <span class="attr">value</span>: <span class="string">&#x27;A0&#x27;</span>,</span><br><span class="line">                            <span class="attr">fontSize</span>: <span class="number">11</span>,</span><br><span class="line">                            <span class="attr">bgColor</span>: <span class="title class_">EntryStatic</span>.<span class="property">colorSet</span>.<span class="property">block</span>.<span class="property">darken</span>.<span class="property">HARDWARE</span>,</span><br><span class="line">                            <span class="attr">arrowColor</span>: <span class="title class_">EntryStatic</span>.<span class="property">colorSet</span>.<span class="property">arrow</span>.<span class="property">default</span>.<span class="property">HARDWARE</span>,</span><br><span class="line">                        &#125;,</span><br><span class="line">                    ],</span><br><span class="line">                    <span class="attr">events</span>: &#123;&#125;,</span><br><span class="line">                    <span class="attr">def</span>: &#123;</span><br><span class="line">                        <span class="attr">params</span>: [<span class="literal">null</span>],</span><br><span class="line">                    &#125;,</span><br><span class="line">                    <span class="attr">paramsKeyMap</span>: &#123;</span><br><span class="line">                        <span class="attr">PORT</span>: <span class="number">0</span>,</span><br><span class="line">                    &#125;,</span><br><span class="line">                    <span class="title function_">func</span>(<span class="params">sprite, script</span>) &#123;</span><br><span class="line">                        <span class="keyword">return</span> script.<span class="title function_">getStringField</span>(<span class="string">&#x27;PORT&#x27;</span>);</span><br><span class="line">                    &#125;,</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="comment">// ...</span></span><br><span class="line">            &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)();</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="title class_">Entry</span>.<span class="property">ArduinoLite</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>constructor</p>
+<ul>
+<li>imageName : 샘플파일 이미지와 이름이 같아야 합니다</li>
+<li>portData : web-serial api를 사용해 브라우저로 기기와 통신하기위한 세팅값입니다. 연결이 불안정한경우가 아니라면 가급적 수정하지 않는것을 추천드립니다.</li>
+<li>duration : 기기와 통신하는 간격입니다.(ms단위)</li>
+<li>blockMenuBlocks : 블럭명세 정보입니다.</li>
+</ul>
+</li>
+<li><p>get monitorTemplate() : WS에서 하드웨어 연결시 좌측 ‘’오브젝트 추가하기’’ 하단의 4번째 탭에 보여지는 센서 모니터링 툴을 사용하기 위한 함수입니다. 초기값 세팅 역할을 합니다.</p>
+</li>
+<li><p>getMonitorPort() : monitorTemplate()와 마찬가지로 모니터링 툴용 함수입니다. 실시간 값 갱신을 위한 함수입니다.</p>
+</li>
+<li><p>setZero() : 연결시작 및 연결해제시 기기상태를 초기화하기 위한 함수입니다.</p>
+</li>
+<li><p>handleLocalData(data) : 기기로부터 값을 읽어서 WS에 반영하는 함수입니다. (기기로부터 값 읽음) this.portData.constantServing일 경우 사용합니다.</p>
+</li>
+<li><p>requestLocalData() : WS의 블록동작의 명령을 기기에게 쓰는 함수입니다. (기기에 값 쓰기) this.portData.constantServing일 경우 사용합니다.</p>
+</li>
+<li><p>getBlocks() : 블럭 상세 정보 및 로직을 반환하는 함수입니다.</p>
+</li>
+</ul>
+<br>
+
+<h2 id="통신방법"><a href="#통신방법" class="headerlink" title="통신방법"></a>통신방법</h2><p>디바이스와 통신하는 방법에는 아래 2가지가 있습니다.</p>
+<h3 id="지속-통신"><a href="#지속-통신" class="headerlink" title="지속 통신"></a>지속 통신</h3><ul>
+<li>사용자 액션(블럭 실행)이 없어도 항상 지정된 duration간격만큼 지속통신하는 방법입니다.</li>
+<li>block_ 모듈명 _lite.js 의 생성자에서 this.duration값을 지정하고, this.portData.constantServing 를 true로 세팅하게되면 handleLocalData(data)함수와 requestLocalData() 함수가 자동으로 실행되게 됩니다.</li>
+<li>ex. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/hardwareLite/block_arduino_lite.js">block_arduino_lite.js</a>, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/hardwareLite/block_sensorboard_lite.js">block_sensorboard_lite</a>, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/hardwareLite/block_hamster_lite.js">block_hamster_lite</a></li>
+</ul>
+<h3 id="단건-통신"><a href="#단건-통신" class="headerlink" title="단건 통신"></a>단건 통신</h3><ul>
+<li>사용자 액션(블럭 실행)이 있을때만 통신하는 방법입니다.</li>
+<li>필요할 때만 통신하므로 일반적으로 지속통신방법보다 부하가 적지만, ‘계속 반복하기’ 블럭 안에서 하드웨어 블럭을 사용하는 것처럼(초당 60번 호출) 단기간에 많은 통신을 할 경우 문제가 발생할 수도 있습니다.</li>
+<li>Entry.hwLite.serial.sendAsyncWithThrottle(기기에 입력할 값 : buffer | string, 리턴값 여부 | boolean)으로 호출할 수 있습니다. 첫번째 파라미터에는 기기에 입력할 버퍼, 두번째 파라미터를 false로 할 경우 기기로부터 받는 응답값을 받지 않습니다. 상세구조는 Entry.hwLite.serial.sendAsync() 함수를 확인 부탁드립니다.</li>
+<li>ex. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/hardwareLite/block_microbit2_lite.js">block_microbit2_lite</a></li>
+</ul>
+<h4 id="Entry-hwLite-serial-sendAsyncWithThrottle"><a href="#Entry-hwLite-serial-sendAsyncWithThrottle" class="headerlink" title="Entry.hwLite.serial.sendAsyncWithThrottle"></a>Entry.hwLite.serial.sendAsyncWithThrottle</h4><ul>
+<li>Return : 기기로부터 리턴된 value값</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>data</td>
+<td>Buffer | string</td>
+<td></td>
+<td>기기에 송신할 데이터입니다. string 타입일경우 utf8로 인코딩되어 송신됩니다.</td>
+</tr>
+<tr>
+<td>isResetReq</td>
+<td>boolean</td>
+<td>✔️</td>
+<td>데이터를 송신한 이후에 기기로부터 응답을 받지 않고 함수를 종료합니다.</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>Function</td>
+<td>✔️</td>
+<td>함수가 존재할경우, 송수신 완료 후 callback(value)값을 리턴합니다.</td>
+</tr>
+</tbody></table>
+<br>
+
+<h2 id="기타-웹연결-관련-함수들"><a href="#기타-웹연결-관련-함수들" class="headerlink" title="기타 웹연결 관련 함수들"></a>기타 웹연결 관련 함수들</h2><h3 id="Entry-playground-addHardwareLiteModule"><a href="#Entry-playground-addHardwareLiteModule" class="headerlink" title="Entry.playground.addHardwareLiteModule"></a>Entry.playground.addHardwareLiteModule</h3><p>웹연결에 사용할 모듈을 선택하는 함수입니다.<br>파라미터로 Entry.모듈명(ex. Entry.Neobot)을 넣으면 해당 하드웨어가 선택됩니다.<br>실제 운영 엔트리WS에서는 ‘브라우저로 연결하기’ =&gt; ‘팝업에서 모듈 선택 후 불러오기’ 까지 진행하면 자동으로 이 함수가 실행되지만, entryjs만 사용한 개발환경에서는 위 팝업을 사용할 수 없기 때문에 직접 함수를 실행시켜주셔야 합니다.</p>
+<table>
+<thead>
+<tr>
+<th>파라미터</th>
+<th>타입</th>
+<th>선택적</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>module</td>
+<td><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/edb5380602a0f035fb2b20eb9d2b7c8f1247f15d/types/index.d.ts#L180">EntryHardwareBlockModule</a></td>
+<td></td>
+<td>웹연결에 사용할 모듈객체입니다.</td>
+</tr>
+</tbody></table>
+<h3 id="Entry-hwLite-connect"><a href="#Entry-hwLite-connect" class="headerlink" title="Entry.hwLite.connect"></a>Entry.hwLite.connect</h3><p>웹연결 연결실행 함수입니다.</p>
+<h3 id="Entry-hwLite-disconnect"><a href="#Entry-hwLite-disconnect" class="headerlink" title="Entry.hwLite.disconnect"></a>Entry.hwLite.disconnect</h3><p>웹연결 연결해제 함수입니다. 가급적 직접 호출보다는 ‘연결 해제하기’ 버튼을 사용해주세요.</p>
+<h3 id="Entry-hwLite-serial-handleConnectErrorInEngineRun"><a href="#Entry-hwLite-serial-handleConnectErrorInEngineRun" class="headerlink" title="Entry.hwLite.serial.handleConnectErrorInEngineRun"></a>Entry.hwLite.serial.handleConnectErrorInEngineRun</h3><p>연결중 기기가 멈추거나 화면이 멈추는 등, 강제종료가 필요한 상황에 사용하는 함수입니다.</p>
+<h3 id="Entry-hwLite-getConnectFailedMenu"><a href="#Entry-hwLite-getConnectFailedMenu" class="headerlink" title="Entry.hwLite.getConnectFailedMenu"></a>Entry.hwLite.getConnectFailedMenu</h3><p>연결실패화면을 출력해야 할 때 사용합니다.</p>
+<p><img src="/images/entry-hw/HwLite_failedMenu1.png" alt="HwLite_failedMenu1"></p>
+<br>
+
+<h2 id="테스트하기"><a href="#테스트하기" class="headerlink" title="테스트하기"></a>테스트하기</h2><p>다음 2가지 방법으로 테스트하실수 있습니다.</p>
+<p>A. entryjs와 entry-tool을 함께 적용하고 계시다면 어려움없이 하드웨어 탭에서 ‘브라우저로 연결하기’ &gt; 모듈선택 &gt; 포트선택으로 테스트하실수 있습니다.<br>B. entryjs에서 yarn serve만으로 테스트하고 계시다면, 아래 순서로 진행해주세요</p>
+<ul>
+<li>크롬 개발자도구에서 <code>Entry.playground.addHardwareLiteModule(Entry.모듈클래스명);</code>를 입력합니다. 사용자가 팝업창에서 해당모듈을 선택했을때 실행되는 동작입니다.</li>
+<li>크롬 개발자도구에서 <code>Entry.hwLite.connect();</code>를 입력합니다. 사용자가 연결하기 버튼을 클릭할때 실행되는 동작입니다.</li>
+<li>모듈이 연결된 포트를 선택하고 완료를 누르면 블록이 출력됩니다.</li>
+</ul>
+<p>혹시 연결이 정상적으로 진행되지 않는다면 Entry.모듈명과 Entry.HARDWARE_LITE_LIST[‘모듈ID’] 이 존재하는지 확인 부탁드립니다, 둘중 하나라도 없다면 정상동작하지 않습니다. 모듈의 name, id 등을 체크해주세요.</p>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/entry-hw/2017-05-16-enroll_entry-hw.html" itemprop="url">하드웨어 등록 서비스 신청하기</a></span>
+        
+        
+      </div>
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/guide/entry-hw/2024-07-03-entry_hw_web_connect.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/guide/entry-hw/2024-07-03-entry_hw_web_connect.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+        <style>
+            :root {
+                --docsearch-primary-color: #42b983;
+            }
+            
+            .DocSearch-Button {
+                background: #ffffff;
+                border: 1px solid #e3e3e3;
+                height: 30px;
+                line-height: 30px;
+            }
+
+            .DocSearch-Button:active, .DocSearch-Button:focus, .DocSearch-Button:hover {
+                background: var(--docsearch-searchbox-focus-background);
+                box-shadow: var(--docsearch-searchbox-shadow);
+                color: #2c3e50;
+                outline: none;
+            }
+            .DocSearch-Button-Placeholder {
+                font-size: 0.9rem;
+            }
+            .search-query-nav-wrapper {
+
+                vertical-align: middle !important;
+            }
+        </style>
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    container: selector,
+                    appId: 'SA68SZF1Z4',
+                    apiKey: '2148f56602c452593e686003893d065b',
+                    indexName: 'entrylabs',
+                    insights: true
+                });
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

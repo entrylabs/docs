@@ -53,7 +53,139 @@ order: 6
 WS가 실행되었을경우, Entry.모듈클래스 를 추가하는 함수가 즉시 실행됩니다.
 이 파일에 정의되는 모듈클래스 구조와 역할은 다음과 같습니다.
 
-### 모듈클래스 (ex. NeobotLite, Microbit2lite 등)
+### 모듈클래스
+
+``` javascript
+'use strict';
+
+(function () {
+    Entry.ArduinoLite = new (class ArduinoLite {
+        constructor() {
+            this.id = '010101'; // id는 6자리 모두 입력해야 합니다.
+            this.name = 'ArduinoLite';
+            this.url = 'http://www.arduino.cc/';
+            this.imageName = 'arduinolite.png';
+            this.title = {
+                ko: '아두이노 우노',
+                en: 'Arduino Uno',
+            };
+            this.duration = 32; // 엔트리js에서 기기와 통신하는 함수를 호출하는 duration 간격입니다.
+            this.blockMenuBlocks = [
+                'arduinolite_get_number_sensor_value',
+                'arduinolite_get_digital_value',
+            ];
+            this.portData = {
+                baudRate: 9600,
+                duration: 32, // web serial api에서 기기와 통신하는 duration 간격입니다.
+                dataBits: 8,
+                parity: 'none',
+                stopBits: 1,
+                bufferSize: 512,
+                constantServing: true,
+            };
+            this.readablePorts = [];
+            this.setZero();
+        }
+
+        setZero() {
+            this.port = new Array(14).fill(0);
+            this.digitalValue = new Array(14).fill(0);
+            this.remoteDigitalValue = new Array(14).fill(0);
+            this.analogValue = new Array(6).fill(0);
+            this.readablePorts = _range(0, 19);
+
+            if (Entry.hwLite && Entry.hwLite.serial) {
+                Entry.hwLite.serial.update();
+            }
+        }
+
+        // 디바이스에서 값을 읽어옵니다.
+        handleLocalData(data) {}
+
+        //디바이스에 값을 씁니다.
+        requestLocalData() {
+            const queryString = [];
+            // ...
+            return queryString;
+        }
+
+        setLanguage() {
+            return {
+                ko: {
+                    template: {
+                        arduinolite_text: '%1',
+                        arduinolite_get_sensor_number: '%1',
+                        arduinolite_get_port_number: '%1',
+                    },
+                    Device: {
+                        arduinolite: '아두이노',
+                    },
+                    Menus: {
+                        arduinolite: '아두이노',
+                    },
+                },
+                en: {
+                    template: {
+                        arduinolite_text: '%1',
+                        arduinolite_get_sensor_number: '%1',
+                        arduinolite_get_port_number: '%1',
+                    },
+                    Device: {
+                        arduinolite: 'arduinolite',
+                    },
+                    Menus: {
+                        arduinolite: 'ArduinoLite',
+                    },
+                },
+            };
+        }
+
+        getBlocks() {
+            return {
+                arduinolite_get_sensor_number: {
+                    color: EntryStatic.colorSet.block.default.HARDWARE,
+                    outerLine: EntryStatic.colorSet.block.darken.HARDWARE,
+                    skeleton: 'basic_string_field',
+                    statements: [],
+                    params: [
+                        {
+                            type: 'Dropdown',
+                            options: [
+                                ['0', 'A0'],
+                                ['1', 'A1'],
+                                ['2', 'A2'],
+                                ['3', 'A3'],
+                                ['4', 'A4'],
+                                ['5', 'A5'],
+                            ],
+                            value: 'A0',
+                            fontSize: 11,
+                            bgColor: EntryStatic.colorSet.block.darken.HARDWARE,
+                            arrowColor: EntryStatic.colorSet.arrow.default.HARDWARE,
+                        },
+                    ],
+                    events: {},
+                    def: {
+                        params: [null],
+                    },
+                    paramsKeyMap: {
+                        PORT: 0,
+                    },
+                    func(sprite, script) {
+                        return script.getStringField('PORT');
+                    },
+                },
+                // ...
+            };
+        }
+    })();
+})();
+
+module.exports = Entry.ArduinoLite;
+
+
+
+```
 
 - constructor
     - imageName : 샘플파일 이미지와 이름이 같아야 합니다
@@ -91,6 +223,16 @@ WS가 실행되었을경우, Entry.모듈클래스 를 추가하는 함수가 �
 - Entry.hwLite.serial.sendAsyncWithThrottle(기기에 입력할 값 : buffer | string, 리턴값 여부 | boolean)으로 호출할 수 있습니다. 첫번째 파라미터에는 기기에 입력할 버퍼, 두번째 파라미터를 false로 할 경우 기기로부터 받는 응답값을 받지 않습니다. 상세구조는 Entry.hwLite.serial.sendAsync() 함수를 확인 부탁드립니다.
 - ex. [block_microbit2_lite](https://github.com/entrylabs/entryjs/blob/develop/src/playground/blocks/hardwareLite/block_microbit2_lite.js)
 
+#### Entry.hwLite.serial.sendAsyncWithThrottle
+- Return : 기기로부터 리턴된 value값
+
+| 파라미터   | 타입             | 선택적 | 설명                                                         |
+| ---------- | ---------------- | ------ | ------------------------------------------------------------ |
+| data       | Buffer \| string |        | 기기에 송신할 데이터입니다. string 타입일경우 utf8로 인코딩되어 송신됩니다. |
+| isResetReq | boolean          | ✔️      | 데이터를 송신한 이후에 기기로부터 응답을 받지 않고 함수를 종료합니다. |
+| callback   | Function         | ✔️      | 함수가 존재할경우, 송수신 완료 후 callback(value)값을 리턴합니다. |
+
+
 <br>
 
 ## 기타 웹연결 관련 함수들
@@ -98,6 +240,14 @@ WS가 실행되었을경우, Entry.모듈클래스 를 추가하는 함수가 �
 웹연결에 사용할 모듈을 선택하는 함수입니다.
 파라미터로 Entry.모듈명(ex. Entry.Neobot)을 넣으면 해당 하드웨어가 선택됩니다.
 실제 운영 엔트리WS에서는 '브라우저로 연결하기' => '팝업에서 모듈 선택 후 불러오기' 까지 진행하면 자동으로 이 함수가 실행되지만, entryjs만 사용한 개발환경에서는 위 팝업을 사용할 수 없기 때문에 직접 함수를 실행시켜주셔야 합니다.
+
+
+
+| 파라미터 | 타입                                                         | 선택적 | 설명                            |
+| -------- | ------------------------------------------------------------ | ------ | ------------------------------- |
+| module   | [EntryHardwareBlockModule](https://github.com/entrylabs/entryjs/blob/edb5380602a0f035fb2b20eb9d2b7c8f1247f15d/types/index.d.ts#L180) |        | 웹연결에 사용할 모듈객체입니다. |
+
+
 
 ### Entry.hwLite.connect
 웹연결 연결실행 함수입니다.
@@ -110,6 +260,8 @@ WS가 실행되었을경우, Entry.모듈클래스 를 추가하는 함수가 �
 
 ### Entry.hwLite.getConnectFailedMenu
 연결실패화면을 출력해야 할 때 사용합니다.
+
+![HwLite_failedMenu1](/images/entry-hw/HwLite_failedMenu1.png)
 
 <br>
 

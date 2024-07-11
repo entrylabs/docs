@@ -81,7 +81,7 @@
         "dateModified": "2024-05-22",
         "url": "https://docs.playentry.org/entryjs/api/2024-04-24-ml.html",
         "description": "Entry Docs - 엔트리 개발 가이드&위키",
-        "wordCount": "22854",
+        "wordCount": "22878",
         "publisher": "Entrylabs",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -215,7 +215,7 @@
                     
                 
                 <li>
-                    <a href="/entryjs/started/2024-03-05-run.html" class="sidebar-link" itemprop="url">EntryJS 실행하기</a>
+                    <a href="/entryjs/started/2024-05-03-example.html" class="sidebar-link" itemprop="url">기본예제</a>
                 </li>
             
                 
@@ -223,7 +223,7 @@
                     
                 
                 <li>
-                    <a href="/entryjs/started/2024-05-03-example.html" class="sidebar-link" itemprop="url">기본예제</a>
+                    <a href="/entryjs/started/2024-03-05-run.html" class="sidebar-link" itemprop="url">EntryJS 실행하기</a>
                 </li>
             
         
@@ -326,14 +326,6 @@
                     
                 
                 <li>
-                    <a href="/entryjs/typedef/2024-03-15-interface-state.html" class="sidebar-link" itemprop="url">Interface State</a>
-                </li>
-            
-                
-                
-                    
-                
-                <li>
                     <a href="/entryjs/typedef/2024-03-15-function-data.html" class="sidebar-link" itemprop="url">Function Data</a>
                 </li>
             
@@ -343,6 +335,14 @@
                 
                 <li>
                     <a href="/entryjs/typedef/2024-03-15-message-data.html" class="sidebar-link" itemprop="url">Message Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-interface-state.html" class="sidebar-link" itemprop="url">Interface State</a>
                 </li>
             
                 
@@ -564,11 +564,11 @@
 </tr>
 <tr>
 <td>project</td>
-<td>Object</td>
+<td>String</td>
 <td>✔️</td>
 <td>Popup</td>
 <td>undefined</td>
-<td>작품 프로젝트 정보입니다.</td>
+<td>현재 작품 프로젝트의 id입니다.</td>
 </tr>
 <tr>
 <td>tables</td>
@@ -586,6 +586,14 @@
 <td>undefined</td>
 <td>생성 가능한 모델종류를 제한합니다.<br>값이 없을경우 모든 종류의 모델을 제공합니다.</td>
 </tr>
+<tr>
+<td>tokenizerPath</td>
+<td>String</td>
+<td>✔️</td>
+<td>Popup</td>
+<td>‘/lib/entry-ml/dist/resources’</td>
+<td>‘분류:텍스트’학습하기에서 사용되는 형태소 분석 모듈의 경로입니다. ‘파일경로/resources’ 경로에 해당 파일이 있습니다.</td>
+</tr>
 </tbody></table>
 <br>
 
@@ -602,7 +610,7 @@
 
 <h3 id="Popup-인스턴스-생성-및-초기화"><a href="#Popup-인스턴스-생성-및-초기화" class="headerlink" title="Popup 인스턴스 생성 및 초기화"></a>Popup 인스턴스 생성 및 초기화</h3><p>사용자들이 인공지능 모델을 학습하는 UI를 팝업형태로 생성합니다.</p>
 <p>entry-tool을 활용한 팝업과 유사합니다.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> learningPopup = &#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> learningContainer = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// entrylabs/ml 라이브러리 import</span></span><br><span class="line"><span class="keyword">const</span> &#123; <span class="title class_">Popup</span> &#125; = <span class="keyword">await</span> <span class="keyword">import</span>(<span class="string">&#x27;@entrylabs/ml&#x27;</span>);</span><br><span class="line"><span class="comment">// 팝업 인스턴스가 없는 경우, 팝업을 띄울 DOM 컨테이너 생성</span></span><br><span class="line"><span class="keyword">if</span> (!<span class="title class_">Popup</span>.<span class="property">instance</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">learningContainer</span> = <span class="variable language_">this</span>.<span class="title function_">createContainer</span>(<span class="string">&#x27;EntryLearningContainer&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 팝업 초기화에 파라미터로 넣어줄 테이블 데이터를 WS에서 로드</span></span><br><span class="line"><span class="keyword">const</span> tables = <span class="title class_">Entry</span>.<span class="property">playground</span>.<span class="property">dataTable</span>.<span class="title function_">getTableJSON</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 팝업을 초기화하고 생성</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">learningPopup</span> = <span class="keyword">new</span> <span class="title class_">Popup</span>(&#123;</span><br><span class="line">    <span class="attr">container</span>: <span class="variable language_">this</span>.<span class="property">learningContainer</span>,</span><br><span class="line">    <span class="attr">isShow</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">dataApi</span>: <span class="variable language_">this</span>.<span class="property">dataApi</span>,</span><br><span class="line">    <span class="attr">i18n</span>: &#123;</span><br><span class="line">        <span class="attr">ko</span>: &#123;</span><br><span class="line">            <span class="attr">learning</span>: &#123;</span><br><span class="line">                <span class="attr">menu_my_model</span>: <span class="string">&#x27;my model&#x27;</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">data</span>: &#123;</span><br><span class="line">        tables,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> learningPopup = &#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> learningContainer = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// entrylabs/ml 라이브러리 import</span></span><br><span class="line"><span class="keyword">const</span> &#123; <span class="title class_">Popup</span> &#125; = <span class="keyword">await</span> <span class="keyword">import</span>(<span class="string">&#x27;@entrylabs/ml&#x27;</span>);</span><br><span class="line"><span class="comment">// 팝업 인스턴스가 없는 경우, 팝업을 띄울 DOM 컨테이너 생성</span></span><br><span class="line"><span class="keyword">if</span> (!<span class="title class_">Popup</span>.<span class="property">instance</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">learningContainer</span> = <span class="variable language_">this</span>.<span class="title function_">createContainer</span>(<span class="string">&#x27;EntryLearningContainer&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 팝업 초기화에 파라미터로 넣어줄 테이블 데이터를 WS에서 로드</span></span><br><span class="line"><span class="keyword">const</span> tables = <span class="title class_">Entry</span>.<span class="property">playground</span>.<span class="property">dataTable</span>.<span class="title function_">getTableJSON</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 팝업을 초기화하고 생성</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">learningPopup</span> = <span class="keyword">new</span> <span class="title class_">Popup</span>(&#123;</span><br><span class="line">    <span class="attr">container</span>: <span class="variable language_">this</span>.<span class="property">learningContainer</span>,</span><br><span class="line">    <span class="attr">isShow</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">dataApi</span>: <span class="variable language_">this</span>.<span class="property">dataApi</span>,</span><br><span class="line">    <span class="attr">i18n</span>: &#123;</span><br><span class="line">        <span class="attr">ko</span>: &#123;</span><br><span class="line">            <span class="attr">learning</span>: &#123;</span><br><span class="line">                <span class="attr">menu_my_model</span>: <span class="string">&#x27;my model&#x27;</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">data</span>: &#123;</span><br><span class="line">        tables,</span><br><span class="line">        <span class="attr">tokenizerPath</span>: <span class="string">&#x27;[entry-ml 파일경로]/resources&#x27;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>Popup( ) : ml 팝업 인스턴스(object)</li>

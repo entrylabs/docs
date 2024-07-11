@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 생김새 블록
-date: 2023-11-16 12:53:00
+date: 2024-07-09 12:53:00
 type: userGuide
 category: "블록"
 order: 14
@@ -141,27 +141,46 @@ order: 14
 작거나 커져요. 1 보다 작은 크기를 입력하면 크기는 1 입니다.
 
 
-## 13. 상하 모양 뒤집기
+## 13. `[가로]`를 `(10)` 만큼 늘이기
 
 ![block-looks](images/block-looks-13.png)
+
+오브젝트의 가로/세로 중 선택한 것의 크기를 입력한 값(<img src="images/icon/value.png" alt="value" style="zoom:50%;" />)만큼 늘이거나 줄입니다. 
+
+크기 바꾸기/정하기 블록과 달리 가로나 세로 길이 하나만 조절할 수 있습니다.
+
+이 때 입력한 수가 양수면 늘어나고, 음수이면 줄어들어요.
+
+
+## 14. 원래 크기로 되돌리기
+
+![block-looks](images/block-looks-14.png)
+
+오브젝트의 크기를 원래대로 (크기 바꾸기/정하기, 가로/세로 늘이기 블록으로 조절하기 전 상태로) 되돌립니다. 
+
+
+
+## 15. 상하 모양 뒤집기
+
+![block-looks](images/block-looks-15.png)
 
 오브젝트의 모양을 세로 방향으로 뒤집습니다.
 
 오브젝트의 방향과 이동 방향, 중심점은 변하지 않아요.
 
 
-## 14. 좌우 모양 뒤집기
+## 16. 좌우 모양 뒤집기
 
-![block-looks](images/block-looks-14.png)
+![block-looks](images/block-looks-16.png)
 
 오브젝트의 모양을 가로 방향으로 뒤집습니다.
 
 오브젝트의 방향과 이동 방향, 중심점은 변하지 않아요.
 
 
-## 15. `[맨 앞으로]` 보내기
+## 17. `[맨 앞으로]` 보내기
 
-![block-looks](images/block-looks-15.png)
+![block-looks](images/block-looks-17.png)
 
 오브젝트가 실행 화면에서 보이는 순서를 바꿉니다.
 

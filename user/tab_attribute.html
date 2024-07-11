@@ -76,12 +76,12 @@
         "image": "https://docs.playentry.org/images/logo.png",
         
         
-        "datePublished": "2020-11-12",
-        "dateCreated": "2020-11-12",
-        "dateModified": "2024-07-05",
+        "datePublished": "2024-04-24",
+        "dateCreated": "2024-04-24",
+        "dateModified": "2024-07-11",
         "url": "https://docs.playentry.org/user/tab_attribute.html",
         "description": "Entry Docs - 엔트리 개발 가이드&위키",
-        "wordCount": "799",
+        "wordCount": "810",
         "publisher": "Entrylabs",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -521,28 +521,27 @@
     
       <h1>속성 탭</h1>
     
-    <h2 id="속성-목록"><a href="#속성-목록" class="headerlink" title="속성 목록"></a>속성 목록</h2><img src="images/window/main-attribute.png" alt="main-attribute" style="zoom: 50%;">
+    <h2 id="속성-목록"><a href="#속성-목록" class="headerlink" title="속성 목록"></a>속성 목록</h2><img src="images/tab/attr.png" alt="attribute" style="zoom: 75%;">
 
 
 
 <p>작품에서 사용하는 <strong>변수, 리스트, 신호, 함수</strong>를 관리하는 영역입니다.</p>
-<img src="images/window/attribute-list.png" alt="attribute-list" style="zoom:80%;">
-
-
-
+<p><img src="images/tab/attr-list.png" alt="attribute-list"></p>
 <p>각 속성들의 사용법은 다음과 같습니다.</p>
 <ul>
-<li>왼쪽의 아이콘으로 각 속성의 종류를 구분합니다.</li>
-<li>이름 상자를 클릭해서 이름을 수정합니다.</li>
-<li>역삼각형 버튼을 클릭하면 세부 내용과 해당 속성이 사용된 오브젝트를 확인할 수 있습니다.</li>
-<li>오른쪽의 X 버튼을 클릭해서 속성을 삭제합니다.</li>
-<li>변수/리스트는 오른쪽의 눈 버튼을 클릭해서 실행 화면에서 나타내거나 숨길 수 있습니다.</li>
+<li>왼쪽의 아이콘으로 각 속성의 종류를 구분할 수 있습니다.<ul>
+<li><img src="images/icon/ic_attr_variable.svg" alt="ic_attr_variable"> <strong>변수</strong></li>
+<li><img src="images/icon/ic_attr_list.svg" alt="ic_attr_list"> <strong>리스트</strong></li>
+<li><img src="images/icon/ic_attr_signal.svg" alt="ic_attr_signal"> <strong>신호</strong></li>
+<li><img src="images/icon/ic_attr_func.svg" alt="ic_attr_func"> <strong>함수</strong></li>
+</ul>
+</li>
+<li>속성을 선택하면 해당 항목이 펼쳐지며 세부 내용을 확인하거나, 사용된 오브젝트 등을 변경할 수 있습니다.<br>자세한 내용은 아래 각 속성 설명에서 확인할 수 있습니다.</li>
+<li>X 버튼을 클릭하면 속성을 삭제할 수 있습니다.</li>
+<li>눈 모양 버튼을 클릭하면 실행 화면에서 표시되는 변수/리스트 창의 기본 표시 여부를 정할 수 있습니다.</li>
 </ul>
 <h2 id="변수"><a href="#변수" class="headerlink" title="변수"></a>변수</h2><p>변수는 숫자나 문자 데이터를 저장할 수 있는 공간입니다. 필요할 때마다 찾아서 데이터를 넣고 뺄 수 있는 상자를 떠올려보세요.<br>변수에는 한 번에 한 가지 데이터만 저장할 수 있으며, 데이터는 언제든지 수정, 변경할 수 있습니다.</p>
-<img src="images/window/variable-list.png" alt="variable-list" style="zoom:80%;">
-
-
-
+<p><img src="images/tab/attr-variable-list.png" alt="attr-variable-list"></p>
 <p>‘변수’ 카테고리를 선택해서 변수를 추가하거나 모아봅니다.</p>
 <p>변수의 종류는 네 가지고, 모든 오브젝트에서 사용하는 변수와 특정 오브젝트에서만 사용하는 변수로 분류합니다.</p>
 <p>왼쪽의 아이콘으로 변수의 종류를 확인할 수 있어요.</p>
@@ -550,18 +549,18 @@
 <ul>
 <li><p><strong>모든 오브젝트에 사용</strong></p>
 <ul>
-<li><p><img src="images/icon/ic_attr_variable_on.png" alt="ic_attr_variable_on" style="zoom:50%;"> <strong>일반 변수로 사용 (작품에 저장)</strong>  : 작품을 정지하면 기본값으로 초기화되는 변수입니다.</p>
+<li><p><img src="images/icon/ic_attr_variable.svg" alt="ic_attr_variable"> <strong>일반 변수로 사용 (작품에 저장)</strong>  : 작품을 정지하면 기본값으로 초기화되는 변수입니다.</p>
 </li>
-<li><p><img src="images/icon/ic_attr_variable_cloud_on.png" alt="ic_attr_variable_cloud_on" style="zoom:50%;"> <strong>공유 변수로 사용 (서버에 저장)</strong> : 작품을 정지하면 서버에 저장되는 변수입니다.</p>
+<li><p><img src="images/icon/ic_attr_variable_cloud.svg" alt="ic_attr_variable_cloud"> <strong>공유 변수로 사용 (서버에 저장)</strong> : 작품을 정지하면 서버에 저장되는 변수입니다.</p>
 </li>
-<li><p><img src="images/icon/ic_attr_variable_real_time_on.png" alt="ic_attr_variable_real_time_on" style="zoom:50%;"> <strong>실시간 변수로 사용 (서버에 저장)</strong> : 작품을 실행하는 도중에 실시간으로 서버에 저장되는 변수입니다.</p>
-</li>
-</ul>
-</li>
-<li><p><img src="images/icon/ic_attr_variable_local_on.png" alt="ic_attr_variable_local_on" style="zoom:50%;"> <strong>이 오브젝트에서 사용</strong> : 선택한 오브젝트에서만 사용하는 일반 변수입니다. 해당 오브젝트의 복제본도 다른 오브젝트가 사용할 수 없는 변수를 가집니다.</p>
+<li><p><img src="images/icon/ic_attr_variable_realtime.svg" alt="ic_attr_variable_realtime"> <strong>실시간 변수로 사용 (서버에 저장)</strong> : 작품을 실행하는 도중에 실시간으로 서버에 저장되는 변수입니다.</p>
 </li>
 </ul>
-<p><img src="images/window/variable-attribute.png" alt="variable-attribute"></p>
+</li>
+<li><p><img src="images/icon/ic_attr_variable_local.svg" alt="ic_attr_variable_local"> <strong>이 오브젝트에서 사용</strong> : 선택한 오브젝트에서만 사용하는 일반 변수입니다. 해당 오브젝트의 복제본도 다른 오브젝트가 사용할 수 없는 변수를 가집니다.</p>
+</li>
+</ul>
+<p><img src="images/tab/attr-variable-detail.png" alt="attr-variable-detail"></p>
 <p>역삼각형 버튼을 클릭하면 나타나는 각 변수의 설정입니다.</p>
 <ul>
 <li><p><strong>변수 속성</strong></p>
@@ -585,10 +584,7 @@
 </ul>
 <h2 id="리스트"><a href="#리스트" class="headerlink" title="리스트"></a>리스트</h2><p>리스트는 숫자나 문자 데이터를 여러개 저장할 수 있는 공간입니다. 필요할 때마다 물건을 담거나 뺄 수 있는 여러 칸 짜리 서랍을 떠올려보세요.</p>
 <p>리스트 각 항목에는 한 가지 데이터만 저장할 수 있으며, 데이터들은 언제든지 수정, 변경이 가능합니다. 또한 리스트 항목에는 순서대로 번호가 붙어있어, 데이터를 불러오거나 수정할 때 항목 번호를 이용할 수 있어요.</p>
-<img src="images/window/lists-list.png" alt="lists-list" style="zoom:80%;">
-
-
-
+<p><img src="images/tab/attr-list-list.png" alt="attr-list-list"></p>
 <p>‘리스트’ 카테고리를 선택해서 리스트를 추가하거나 모아봅니다.</p>
 <p>리스트의 종류는 네 가지고, 모든 오브젝트에서 사용하는 리스트와 특정 오브젝트에서만 사용하는 리스트로 분류합니다. 왼쪽의 아이콘으로 리스트의 종류를 확인할 수 있어요.</p>
 <img src="images/window/lists-add.png" alt="lists-add" style="zoom:80%;">

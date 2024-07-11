@@ -76,12 +76,12 @@
         "image": "https://docs.playentry.org/images/logo.png",
         
         
-        "datePublished": "2023-12-04",
-        "dateCreated": "2023-12-04",
-        "dateModified": "2024-07-05",
+        "datePublished": "2024-07-09",
+        "dateCreated": "2024-07-09",
+        "dateModified": "2024-07-11",
         "url": "https://docs.playentry.org/user/block_extension.html",
         "description": "Entry Docs - 엔트리 개발 가이드&위키",
-        "wordCount": "693",
+        "wordCount": "979",
         "publisher": "Entrylabs",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -522,13 +522,9 @@
       <h1>확장 블록</h1>
     
     <h1 id="날씨"><a href="#날씨" class="headerlink" title="날씨"></a>날씨</h1><p><img src="images/card/weather.png" alt="weather"></p>
-<p>기온, 강수량, 미세먼지 농도 등 한국의 날씨와 관련된 블록 모음입니다. [웨더아이 제공]</p>
-<p>아래는 날씨 확장 블록에서 선택할 수 있는 항목입니다.</p>
+<p>기온, 강수량, 미세먼지 농도 등 우리나라의 날씨와 관련된 블록 모음입니다. [웨더아이 제공]</p>
+<p>날씨 블록을 사용하기 위해서는 지역을 필수로 선택해야 합니다.</p>
 <ul>
-<li><strong>날짜</strong><ul>
-<li><code>어제</code>, <code>오늘</code>, <code>내일</code>, <code>모레</code>, <code>3일 후</code>, <code>4일 후</code>, <code>5일 후</code>, <code>6일 후</code></li>
-</ul>
-</li>
 <li><strong>시/도 (지역)</strong><ul>
 <li><code>서울</code>, <code>강원</code>, <code>경기</code>, <code>경남</code>, <code>경북</code>, <code>광주</code>, <code>대구</code>, <code>대전</code>, <code>부산</code>, <code>세종</code>, <code>울산</code>, <code>인천</code>, <code>전남</code>, <code>전북</code>, <code>제주</code>, <code>충남</code>, <code>충북</code></li>
 </ul>
@@ -537,32 +533,105 @@
 <li>선택한 시/도에 따라 달라집니다.</li>
 </ul>
 </li>
+</ul>
+<p>지역을 목록 상자에서 선택하지 않고, 법정동코드를 값 블록으로 직접 입력해서 사용할 수도 있습니다.</p>
+<h2 id="1-현재-서울-전체-의-날씨"><a href="#1-현재-서울-전체-의-날씨" class="headerlink" title="1. 현재 [서울] [전체] 의 날씨"></a>1. 현재 <code>[서울]</code> <code>[전체]</code> 의 날씨</h2><p><img src="images/block-extension-weather-01.png" alt="block-extension-weather"></p>
+<p>선택한 지역의 현재 날씨를 가져오는 값 블록입니다. </p>
+<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 지역을 선택할 수 있어요.</p>
+<h2 id="2-현재-서울-전체-의-풍향"><a href="#2-현재-서울-전체-의-풍향" class="headerlink" title="2. 현재 [서울] [전체] 의 풍향"></a>2. 현재 <code>[서울]</code> <code>[전체]</code> 의 풍향</h2><p><img src="images/block-extension-weather-02.png" alt="block-extension-weather"></p>
+<p>선택한 지역의 현재 풍향을 가져오는 값 블록입니다. </p>
+<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 지역을 선택할 수 있어요.</p>
+<p>풍향은 알파벳으로 표현됩니다. </p>
+<h2 id="3-현재-서울-전체-의-기온-ºc"><a href="#3-현재-서울-전체-의-기온-ºc" class="headerlink" title="3. 현재 [서울] [전체] 의 [기온(ºc)]"></a>3. 현재 <code>[서울]</code> <code>[전체]</code> 의 <code>[기온(ºc)]</code></h2><p><img src="images/block-extension-weather-03.png" alt="block-extension-weather"></p>
+<p>선택한 지역의 현재 기상 정보를 가져오는 값 블록입니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 지역과 기상 정보를 선택할 수 있어요.</p>
+<ul>
+<li><strong>선택할 수 있는 기상 정보</strong><ul>
+<li><code>기온(ºc)</code>, <code>미세먼지 농도(PM10, ㎍)</code>, <code>풍향</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="4-현재-서울-전체-의-날씨가-맑음-인가"><a href="#4-현재-서울-전체-의-날씨가-맑음-인가" class="headerlink" title="4. 현재 [서울] [전체] 의 날씨가 [맑음]인가?"></a>4. 현재 <code>[서울]</code> <code>[전체]</code> 의 날씨가 <code>[맑음]</code>인가?</h2><p><img src="images/block-extension-weather-04.png" alt="block-extension-weather"></p>
+<p>선택한 지역의 현재 날씨가 선택한 날씨가 같다면 참, 아니라면 거짓으로 판단하는 블록입니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 지역과 날씨를 선택할 수 있어요.</p>
+<ul>
 <li><strong>날씨</strong><ul>
 <li><code>맑음</code>, <code>구름조금</code>, <code>구름많음</code>, <code>흐림</code>, <code>비</code>, <code>진눈깨비</code>, <code>눈</code></li>
 </ul>
 </li>
-<li><strong>정보</strong><ul>
+</ul>
+<h2 id="5-현재-서울-전체-의-미세먼지-등급이-좋음-인가"><a href="#5-현재-서울-전체-의-미세먼지-등급이-좋음-인가" class="headerlink" title="5. 현재 [서울] [전체] 의 미세먼지 등급이 [좋음] 인가?"></a>5. 현재 <code>[서울]</code> <code>[전체]</code> 의 미세먼지 등급이 <code>[좋음]</code> 인가?</h2><p><img src="images/block-extension-weather-05.png" alt="block-extension-weather"></p>
+<p>선택한 지역의 현재 미세먼지 등급이 선택한 등급과 같다면 참, 아니라면 거짓으로 판단하는 블록입니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 지역과 미세먼지 등급을 선택할 수 있어요.</p>
+<ul>
+<li><strong>미세먼지 등급</strong><ul>
+<li><code>좋음</code>, <code>보통</code>, <code>나쁨</code>, <code>매우나쁨</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="6-오늘-서울-전체-의-날씨"><a href="#6-오늘-서울-전체-의-날씨" class="headerlink" title="6. [오늘] [서울] [전체] 의 날씨"></a>6. <code>[오늘]</code> <code>[서울]</code> <code>[전체]</code> 의 날씨</h2><p><img src="images/block-extension-weather-06.png" alt="block-extension-weather"></p>
+<p>선택한 지역의 일별(어제부터 6일 후까지) 날씨를 가져오는 값 블록입니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 날짜와 지역을 선택할 수 있어요.</p>
+<ul>
+<li><strong>날짜(일별)</strong><ul>
+<li><code>어제</code>, <code>오늘</code>, <code>내일</code>, <code>모레</code>, <code>3일 후</code>, <code>4일 후</code>, <code>5일 후</code>, <code>6일 후</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="7-오늘-서울-전체-의-최저기온-ºc"><a href="#7-오늘-서울-전체-의-최저기온-ºc" class="headerlink" title="7. [오늘] [서울] [전체] 의 [최저기온(ºc)]"></a>7. <code>[오늘]</code> <code>[서울]</code> <code>[전체]</code> 의 <code>[최저기온(ºc)]</code></h2><p><img src="images/block-extension-weather-07.png" alt="block-extension-weather"></p>
+<p>선택한 지역의 일별(어제부터 6일 후까지) 기상 정보를 가져오는 값 블록입니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 날짜와 지역, 기상 정보를 선택할 수 있어요.</p>
+<ul>
+<li><p><strong>날짜(일별)</strong></p>
+<ul>
+<li><code>어제</code>, <code>오늘</code>, <code>내일</code>, <code>모레</code>, <code>3일 후</code>, <code>4일 후</code>, <code>5일 후</code>, <code>6일 후</code></li>
+</ul>
+</li>
+<li><p><strong>선택할 수 있는 기상 정보</strong></p>
+<ul>
 <li><code>최저기온(ºc)</code>, <code>최고기온(ºc)</code>, <code>습도(%)</code>, <code>강수량(mm)</code>, <code>강수확률(%)</code>, <code>풍속(m/s)</code></li>
 </ul>
 </li>
 </ul>
-<h2 id="1-오늘-서울-전체-의-날씨가-맑음-인가"><a href="#1-오늘-서울-전체-의-날씨가-맑음-인가" class="headerlink" title="1. [오늘] [서울] [전체] 의 날씨가 [맑음] 인가?"></a>1. <code>[오늘]</code> <code>[서울]</code> <code>[전체]</code> 의 날씨가 <code>[맑음]</code> 인가?</h2><p><img src="images/block-extension-weather-01.png" alt="block-extension-weather"></p>
-<p>선택한 날짜와 지역의 실제 날씨가 선택한 날씨와 같다면 참, 아니라면 거짓으로 판단하는 블록입니다.</p>
+<h2 id="8-오늘-서울-전체-의-날씨가-맑음-인가"><a href="#8-오늘-서울-전체-의-날씨가-맑음-인가" class="headerlink" title="8. [오늘] [서울] [전체] 의 날씨가 [맑음] 인가?"></a>8. <code>[오늘]</code> <code>[서울]</code> <code>[전체]</code> 의 날씨가 <code>[맑음]</code> 인가?</h2><p><img src="images/block-extension-weather-08.png" alt="block-extension-weather"></p>
+<p>선택한 날짜와 선택한 지역의 일별(어제부터 6일 후까지) 날씨가 선택한 날씨와 같다면 참, 아니라면 거짓으로 판단하는 블록입니다.</p>
 <p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 날짜와 지역, 날씨를 선택할 수 있어요.</p>
-<h2 id="2-현재-서울-전체-의-미세먼지-등급이-좋음-인가"><a href="#2-현재-서울-전체-의-미세먼지-등급이-좋음-인가" class="headerlink" title="2. 현재 [서울] [전체] 의 미세먼지 등급이 [좋음] 인가?"></a>2. 현재 <code>[서울]</code> <code>[전체]</code> 의 미세먼지 등급이 <code>[좋음]</code> 인가?</h2><p><img src="images/block-extension-weather-02.png" alt="block-extension-weather"></p>
-<p>선택한 지역의 실제 미세먼지 등급이 선택한 등급과 같다면 참, 아니라면 거짓으로 판단하는 블록입니다.</p>
-<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 지역과 등급을 선택할 수 있어요.</p>
-<h2 id="3-오늘-서울-전체-의-최저기온-ºc"><a href="#3-오늘-서울-전체-의-최저기온-ºc" class="headerlink" title="3. [오늘] [서울] [전체] 의 [최저기온(ºc)]"></a>3. <code>[오늘]</code> <code>[서울]</code> <code>[전체]</code> 의 <code>[최저기온(ºc)]</code></h2><p><img src="images/block-extension-weather-03.png" alt="block-extension-weather"></p>
-<p>선택한 날짜와 지역의 정보를 가져오는 값 블록입니다.</p>
-<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 날짜와 지역, 정보를 선택할 수 있어요.</p>
-<h2 id="4-현재-서울-전체-의-기온-ºc"><a href="#4-현재-서울-전체-의-기온-ºc" class="headerlink" title="4. 현재 [서울] [전체] 의 [기온(ºc)]"></a>4. 현재 <code>[서울]</code> <code>[전체]</code> 의 <code>[기온(ºc)]</code></h2><p><img src="images/block-extension-weather-04.png" alt="block-extension-weather"></p>
-<p>현재 시각에서 선택한 지역의 정보를 가져오는 값 블록입니다.</p>
-<p><img src="images/block-extension-weather-03.png" alt="block-extension-weather" style="zoom:75%;">과  달리 현재 시각을 반영해요.</p>
-<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 지역과 정보를 선택할 수 있어요.</p>
-<h2 id="5-오늘-서울-전체-의-00-시-기온"><a href="#5-오늘-서울-전체-의-00-시-기온" class="headerlink" title="5. 오늘 [서울] [전체] 의 [00] 시 기온"></a>5. 오늘 <code>[서울]</code> <code>[전체]</code> 의 <code>[00]</code> 시 기온</h2><p><img src="images/block-extension-weather-05.png" alt="block-extension-weather"></p>
-<p>선택한 지역에서 오늘의 시간대별 기온을 가져오는 값 블록입니다.</p>
+<ul>
+<li><p><strong>날짜(일별)</strong></p>
+<ul>
+<li><code>어제</code>, <code>오늘</code>, <code>내일</code>, <code>모레</code>, <code>3일 후</code>, <code>4일 후</code>, <code>5일 후</code>, <code>6일 후</code></li>
+</ul>
+</li>
+<li><p><strong>날씨</strong></p>
+<ul>
+<li><code>맑음</code>, <code>구름조금</code>, <code>구름많음</code>, <code>흐림</code>, <code>비</code>, <code>진눈깨비</code>, <code>눈</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="9-서울-전체-의-00-시-날씨"><a href="#9-서울-전체-의-00-시-날씨" class="headerlink" title="9. [서울] [전체] 의 [00] 시 날씨"></a>9. <code>[서울]</code> <code>[전체]</code> 의 <code>[00]</code> 시 날씨</h2><p><img src="images/block-extension-weather-09.png" alt="block-extension-weather"></p>
+<p>선택한 지역의 시간대별(3시간) 날씨를 가져오는 값 블록입니다.</p>
 <p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 지역과 시간대를 선택할 수 있어요.  </p>
-<h2 id><a href="#" class="headerlink" title="　"></a>　</h2><h1 id="생활안전-국민행동요령"><a href="#생활안전-국민행동요령" class="headerlink" title="생활안전 국민행동요령"></a>생활안전 국민행동요령</h1><p><img src="images/card/lifesafety.png" alt="lifesafety"></p>
+<h2 id="10-서울-전체-의-00-시-기온"><a href="#10-서울-전체-의-00-시-기온" class="headerlink" title="10. [서울] [전체] 의 [00] 시 [기온]"></a>10. <code>[서울]</code> <code>[전체]</code> 의 <code>[00]</code> 시 <code>[기온]</code></h2><p><img src="images/block-extension-weather-10.png" alt="block-extension-weather"></p>
+<p>선택한 지역의 시간대별(3시간) 기상 정보를 가져오는 값 블록입니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 지역과 시간대를 선택할 수 있어요.  </p>
+<ul>
+<li><strong>선택할 수 있는 기상 정보</strong><ul>
+<li><code>기온(ºc)</code>, <code>습도(%)</code>, <code>강수량(mm)</code>, <code>강수확률(%)</code>, <code>풍속(m/s)</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="11-서울-전체-의-00-시-날씨가-맑음-인가"><a href="#11-서울-전체-의-00-시-날씨가-맑음-인가" class="headerlink" title="11. [서울] [전체] 의 [00] 시 날씨가 [맑음] 인가?"></a>11. <code>[서울]</code> <code>[전체]</code> 의 <code>[00]</code> 시 날씨가 <code>[맑음]</code> 인가?</h2><p><img src="images/block-extension-weather-11.png" alt="block-extension-weather"></p>
+<p>선택한 지역과 선택한 시간대의 날씨가 선택한 날씨와 같다면 참, 아니라면 거짓으로 판단하는 블록입니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 지역과 시간대를 선택할 수 있어요.  </p>
+<ul>
+<li><strong>날씨</strong><ul>
+<li><code>맑음</code>, <code>구름조금</code>, <code>구름많음</code>, <code>흐림</code>, <code>비</code>, <code>진눈깨비</code>, <code>눈</code>
+　</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="생활안전-국민행동요령"><a href="#생활안전-국민행동요령" class="headerlink" title="생활안전 국민행동요령"></a>생활안전 국민행동요령</h1><p><img src="images/card/lifesafety.png" alt="lifesafety"></p>
 <p>생활 속 안전을 위해 국민이 지켜야 하는 행동요령에 대한 블록 모음입니다. [국민안전처 제공]</p>
 <p>아래는 생활안전 국민행동요령 확장 블록에서 선택할 수 있는 항목입니다.</p>
 <ul>

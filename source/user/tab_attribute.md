@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 속성 탭
-date: 2020-11-12 15:51:00
+date: 2024-04-24 17:19:00
 type: userGuide
 category: "화면의 구성 요소"
 order: 9
@@ -10,7 +10,7 @@ order: 9
 ## 속성 목록
 
 
-<img src="images/window/main-attribute.png" alt="main-attribute" style="zoom: 50%;" />
+<img src="images/tab/attr.png" alt="attribute" style="zoom: 75%;" />
 
 
 
@@ -18,17 +18,21 @@ order: 9
 
 
 
-<img src="images/window/attribute-list.png" alt="attribute-list" style="zoom:80%;" />
+![attribute-list](images/tab/attr-list.png)
 
 
 
 각 속성들의 사용법은 다음과 같습니다.
 
-+ 왼쪽의 아이콘으로 각 속성의 종류를 구분합니다.
-+ 이름 상자를 클릭해서 이름을 수정합니다.
-+ 역삼각형 버튼을 클릭하면 세부 내용과 해당 속성이 사용된 오브젝트를 확인할 수 있습니다.
-+ 오른쪽의 X 버튼을 클릭해서 속성을 삭제합니다.
-+ 변수/리스트는 오른쪽의 눈 버튼을 클릭해서 실행 화면에서 나타내거나 숨길 수 있습니다.
++ 왼쪽의 아이콘으로 각 속성의 종류를 구분할 수 있습니다.
+  + ![ic_attr_variable](images/icon/ic_attr_variable.svg) **변수**
+  + ![ic_attr_list](images/icon/ic_attr_list.svg) **리스트**
+  + ![ic_attr_signal](images/icon/ic_attr_signal.svg) **신호**
+  + ![ic_attr_func](images/icon/ic_attr_func.svg) **함수**
++ 속성을 선택하면 해당 항목이 펼쳐지며 세부 내용을 확인하거나, 사용된 오브젝트 등을 변경할 수 있습니다.  
+자세한 내용은 아래 각 속성 설명에서 확인할 수 있습니다.
++ X 버튼을 클릭하면 속성을 삭제할 수 있습니다.
++ 눈 모양 버튼을 클릭하면 실행 화면에서 표시되는 변수/리스트 창의 기본 표시 여부를 정할 수 있습니다.
 
 
 
@@ -40,10 +44,7 @@ order: 9
 변수에는 한 번에 한 가지 데이터만 저장할 수 있으며, 데이터는 언제든지 수정, 변경할 수 있습니다.
 
 
-
-<img src="images/window/variable-list.png" alt="variable-list" style="zoom:80%;" />
-
-
+![attr-variable-list](images/tab/attr-variable-list.png)
 
 '변수' 카테고리를 선택해서 변수를 추가하거나 모아봅니다.
 
@@ -57,17 +58,17 @@ order: 9
 
 + **모든 오브젝트에 사용**
 
-  + <img src="images/icon/ic_attr_variable_on.png" alt="ic_attr_variable_on" style="zoom:50%;" /> **일반 변수로 사용 (작품에 저장)**  : 작품을 정지하면 기본값으로 초기화되는 변수입니다.
+  + ![ic_attr_variable](images/icon/ic_attr_variable.svg) **일반 변수로 사용 (작품에 저장)**  : 작품을 정지하면 기본값으로 초기화되는 변수입니다.
 
-  + <img src="images/icon/ic_attr_variable_cloud_on.png" alt="ic_attr_variable_cloud_on" style="zoom:50%;" /> **공유 변수로 사용 (서버에 저장)** : 작품을 정지하면 서버에 저장되는 변수입니다.
+  + ![ic_attr_variable_cloud](images/icon/ic_attr_variable_cloud.svg) **공유 변수로 사용 (서버에 저장)** : 작품을 정지하면 서버에 저장되는 변수입니다.
 
-  + <img src="images/icon/ic_attr_variable_real_time_on.png" alt="ic_attr_variable_real_time_on" style="zoom:50%;" /> **실시간 변수로 사용 (서버에 저장)** : 작품을 실행하는 도중에 실시간으로 서버에 저장되는 변수입니다.
+  + ![ic_attr_variable_realtime](images/icon/ic_attr_variable_realtime.svg) **실시간 변수로 사용 (서버에 저장)** : 작품을 실행하는 도중에 실시간으로 서버에 저장되는 변수입니다.
 
-+ <img src="images/icon/ic_attr_variable_local_on.png" alt="ic_attr_variable_local_on" style="zoom:50%;" /> **이 오브젝트에서 사용** : 선택한 오브젝트에서만 사용하는 일반 변수입니다. 해당 오브젝트의 복제본도 다른 오브젝트가 사용할 수 없는 변수를 가집니다.
++ ![ic_attr_variable_local](images/icon/ic_attr_variable_local.svg) **이 오브젝트에서 사용** : 선택한 오브젝트에서만 사용하는 일반 변수입니다. 해당 오브젝트의 복제본도 다른 오브젝트가 사용할 수 없는 변수를 가집니다.
 
 
 
-![variable-attribute](images/window/variable-attribute.png)
+![attr-variable-detail](images/tab/attr-variable-detail.png)
 
 
 
@@ -103,7 +104,7 @@ order: 9
 
 
 
-<img src="images/window/lists-list.png" alt="lists-list" style="zoom:80%;" />
+![attr-list-list](images/tab/attr-list-list.png)
 
 
 

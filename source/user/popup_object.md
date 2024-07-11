@@ -80,7 +80,7 @@ order: 40
 
 
 
-## ④ 글상자 탭
+### ④ 글상자 탭
 
 ![add-object-textbox](images/popup/add-object-textbox.png)
 

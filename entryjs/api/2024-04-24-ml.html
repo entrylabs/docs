@@ -81,7 +81,7 @@
         "dateModified": "2024-05-22",
         "url": "https://docs.playentry.org/entryjs/api/2024-04-24-ml.html",
         "description": "Entry Docs - 엔트리 개발 가이드&위키",
-        "wordCount": "22878",
+        "wordCount": "22917",
         "publisher": "Entrylabs",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -329,7 +329,7 @@
                     
                 
                 <li>
-                    <a href="/entryjs/typedef/2024-03-15-interface-state.html" class="sidebar-link" itemprop="url">Interface State</a>
+                    <a href="/entryjs/typedef/2024-03-15-message-data.html" class="sidebar-link" itemprop="url">Message Data</a>
                 </li>
             
                 
@@ -345,7 +345,7 @@
                     
                 
                 <li>
-                    <a href="/entryjs/typedef/2024-03-15-message-data.html" class="sidebar-link" itemprop="url">Message Data</a>
+                    <a href="/entryjs/typedef/2024-03-15-interface-state.html" class="sidebar-link" itemprop="url">Interface State</a>
                 </li>
             
                 
@@ -834,7 +834,7 @@
 
 <h3 id="Predict-인스턴스-이벤트"><a href="#Predict-인스턴스-이벤트" class="headerlink" title="Predict 인스턴스 이벤트"></a>Predict 인스턴스 이벤트</h3><h4 id="show-1"><a href="#show-1" class="headerlink" title="show"></a>show</h4><p>Predict 팝업을 노출할때 발생합니다.</p>
 <p>‘학습한 모델로 분류하기’ 블럭 실행시 이벤트가 emit됩니다.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> learningPredict = <span class="keyword">new</span> <span class="title class_">Predict</span>(&#123;&#125;);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">learningPredict</span>.<span class="title function_">on</span>(<span class="string">&#x27;show&#x27;</span>, () = &gt; &#123;</span><br><span class="line">    <span class="comment">// 작품이 실행되는 중이라면, 작품을 일시정지합니다.</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="title class_">Entry</span>.<span class="property">engine</span>.<span class="property">state</span> == <span class="string">&#x27;run&#x27;</span>) &#123;</span><br><span class="line">        <span class="comment">// 작품 일시정지 여부를 토글하는 함수입니다.</span></span><br><span class="line">        <span class="title class_">Entry</span>.<span class="property">engine</span>.<span class="title function_">togglePause</span>(&#123; <span class="attr">visible</span>: <span class="literal">false</span> &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> learningPredict = <span class="keyword">new</span> <span class="title class_">Predict</span>(&#123;&#125;);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">learningPredict</span>.<span class="title function_">on</span>(<span class="string">&#x27;show&#x27;</span>, () = &gt; &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">isPauseClicked</span> = <span class="literal">false</span>;</span><br><span class="line">    <span class="comment">// 작품이 실행되는 중이라면, 작품을 일시정지합니다.</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="title class_">Entry</span>.<span class="property">engine</span>.<span class="property">state</span> == <span class="string">&#x27;run&#x27;</span>) &#123;</span><br><span class="line">        <span class="comment">// 작품 일시정지 여부를 토글하는 함수입니다.</span></span><br><span class="line">        <span class="title class_">Entry</span>.<span class="property">engine</span>.<span class="title function_">togglePause</span>(&#123; <span class="attr">visible</span>: <span class="literal">false</span> &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 
 
@@ -851,7 +851,7 @@
 
 
 <h4 id="pause"><a href="#pause" class="headerlink" title="pause"></a>pause</h4><p>Predict 팝업의 ‘작품 일시정지’, ‘작품 다시 시작’ 버튼을 클릭하면 발생합니다.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> learningPredict = <span class="keyword">new</span> <span class="title class_">Predict</span>(&#123;&#125;);</span><br><span class="line"><span class="comment">// Predict 팝업에서 작품 일시정지를 눌렀는지 자체 판단하기 위한 예시 변수입니다.</span></span><br><span class="line"><span class="keyword">const</span> isPauseClicked = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">learningPredict</span>.<span class="title function_">on</span>(<span class="string">&#x27;pause&#x27;</span>, () = &gt; &#123;</span><br><span class="line">    <span class="comment">// Predict 팝업에서 &#x27;작품 일시정지&#x27; 상태에 따라서 작품을 일시정지할지 재실행할지 분기처리 합니다.</span></span><br><span class="line">    <span class="keyword">if</span> (!<span class="variable language_">this</span>.<span class="property">isPauseClicked</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">isPauseClicked</span> = <span class="literal">true</span>;</span><br><span class="line">        <span class="comment">// 작품 일시정지 여부를 토글하는 함수입니다.</span></span><br><span class="line">        <span class="title class_">Entry</span>.<span class="property">engine</span>.<span class="title function_">togglePause</span>(&#123; <span class="attr">visible</span>: <span class="literal">false</span> &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title class_">Entry</span>.<span class="property">engine</span>.<span class="title function_">togglePause</span>();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h5 id="isPauseClicked-엔트리의-일시정지와-Predict-팝업의-일시정지-버튼의-상태를-동기화-하기-위해-사용됩니다"><a href="#isPauseClicked-엔트리의-일시정지와-Predict-팝업의-일시정지-버튼의-상태를-동기화-하기-위해-사용됩니다" class="headerlink" title="isPauseClicked : 엔트리의 일시정지와 Predict 팝업의 일시정지 버튼의 상태를 동기화 하기 위해 사용됩니다."></a>isPauseClicked : 엔트리의 일시정지와 Predict 팝업의 일시정지 버튼의 상태를 동기화 하기 위해 사용됩니다.</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> learningPredict = <span class="keyword">new</span> <span class="title class_">Predict</span>(&#123;&#125;);</span><br><span class="line"><span class="comment">// Predict 팝업에서 작품 일시정지를 눌렀는지 자체 판단하기 위한 예시 변수입니다.</span></span><br><span class="line"><span class="keyword">const</span> isPauseClicked = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">learningPredict</span>.<span class="title function_">on</span>(<span class="string">&#x27;pause&#x27;</span>, () = &gt; &#123;</span><br><span class="line">    <span class="comment">// Predict 팝업에서 &#x27;작품 일시정지&#x27; 상태에 따라서 작품을 일시정지할지 재실행할지 분기처리 합니다.</span></span><br><span class="line">    <span class="keyword">if</span> (!<span class="variable language_">this</span>.<span class="property">isPauseClicked</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">isPauseClicked</span> = <span class="literal">true</span>;</span><br><span class="line">        <span class="comment">// 작품 일시정지 여부를 토글하는 함수입니다.</span></span><br><span class="line">        <span class="title class_">Entry</span>.<span class="property">engine</span>.<span class="title function_">togglePause</span>(&#123; <span class="attr">visible</span>: <span class="literal">false</span> &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title class_">Entry</span>.<span class="property">engine</span>.<span class="title function_">togglePause</span>();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 
 <br>

@@ -81,7 +81,7 @@
         "dateModified": "2024-05-22",
         "url": "https://docs.playentry.org/entryjs/api/2024-04-24-ml.html",
         "description": "Entry Docs - 엔트리 개발 가이드&위키",
-        "wordCount": "22917",
+        "wordCount": "23425",
         "publisher": "Entrylabs",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -300,7 +300,7 @@
                     
                 
                 <li>
-                    <a href="/entryjs/blocks/2024-03-25-expansion-block.html" class="sidebar-link" itemprop="url">확장블록</a>
+                    <a href="/entryjs/blocks/2024-04-17-ai-block.html" class="sidebar-link" itemprop="url">인공지능 블록</a>
                 </li>
             
                 
@@ -308,7 +308,7 @@
                     
                 
                 <li>
-                    <a href="/entryjs/blocks/2024-04-17-ai-block.html" class="sidebar-link" itemprop="url">인공지능 블록</a>
+                    <a href="/entryjs/blocks/2024-03-25-expansion-block.html" class="sidebar-link" itemprop="url">확장블록</a>
                 </li>
             
         
@@ -322,14 +322,6 @@
                 
                 <li>
                     <a href="/entryjs/typedef/2024-03-11-init-options.html" class="sidebar-link" itemprop="url">Init Options</a>
-                </li>
-            
-                
-                
-                    
-                
-                <li>
-                    <a href="/entryjs/typedef/2024-03-15-message-data.html" class="sidebar-link" itemprop="url">Message Data</a>
                 </li>
             
                 
@@ -353,7 +345,7 @@
                     
                 
                 <li>
-                    <a href="/entryjs/typedef/2024-03-15-object-data.html" class="sidebar-link" itemprop="url">Object Data</a>
+                    <a href="/entryjs/typedef/2024-03-15-message-data.html" class="sidebar-link" itemprop="url">Message Data</a>
                 </li>
             
                 
@@ -362,6 +354,14 @@
                 
                 <li>
                     <a href="/entryjs/typedef/2024-03-15-project-data.html" class="sidebar-link" itemprop="url">Project Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-object-data.html" class="sidebar-link" itemprop="url">Object Data</a>
                 </li>
             
                 
@@ -613,6 +613,11 @@
 
 <h3 id="Popup-인스턴스-생성-및-초기화"><a href="#Popup-인스턴스-생성-및-초기화" class="headerlink" title="Popup 인스턴스 생성 및 초기화"></a>Popup 인스턴스 생성 및 초기화</h3><p>사용자들이 인공지능 모델을 학습하는 UI를 팝업형태로 생성합니다.</p>
 <p>entry-tool을 활용한 팝업과 유사합니다.</p>
+<h4 id="Vanilla-JS"><a href="#Vanilla-JS" class="headerlink" title="Vanilla JS"></a>Vanilla JS</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;!<span class="variable constant_">DOCTYPE</span> html&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;ko&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>EntryJS Base Example<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./test/ai/entry-ml.css&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;loadPopup()&#125;</span>&gt;</span>show<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;popupContainer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;./test/ai/entry-ml.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            learningPopup = <span class="keyword">new</span> <span class="title class_">Entryml</span>.<span class="title class_">Popup</span>(&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">                <span class="attr">container</span>: <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;popupContainer&#x27;</span>),</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">                <span class="attr">isShow</span>: <span class="literal">false</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">                <span class="attr">data</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">                    <span class="attr">tokenizerPath</span>: <span class="string">&#x27;/test/ai/resources&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">                &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            &#125;);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="keyword">const</span> <span class="title function_">loadPopup</span> = (<span class="params"></span>) =&gt; &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">                learningPopup.<span class="title function_">show</span>();  </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="next-js"><a href="#next-js" class="headerlink" title="next.js"></a>next.js</h4><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://webpack.kr/configuration/externals/#externals">webpack externals</a>. 설정을 이용하여 아래와 같이 사용 가능합니다. </p>
+<p>webpack 설정.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">config.<span class="property">externals</span> = [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&#x27;@entrylabs/tool&#x27;</span>: <span class="string">&#x27;EntryTool&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;@entrylabs/tool/component&#x27;</span>: <span class="string">&#x27;EntryTool.Component&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;@entrylabs/ml&#x27;</span>: <span class="string">&#x27;Entryml&#x27;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> learningPopup = &#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> learningContainer = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// entrylabs/ml 라이브러리 import</span></span><br><span class="line"><span class="keyword">const</span> &#123; <span class="title class_">Popup</span> &#125; = <span class="keyword">await</span> <span class="keyword">import</span>(<span class="string">&#x27;@entrylabs/ml&#x27;</span>);</span><br><span class="line"><span class="comment">// 팝업 인스턴스가 없는 경우, 팝업을 띄울 DOM 컨테이너 생성</span></span><br><span class="line"><span class="keyword">if</span> (!<span class="title class_">Popup</span>.<span class="property">instance</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">learningContainer</span> = <span class="variable language_">this</span>.<span class="title function_">createContainer</span>(<span class="string">&#x27;EntryLearningContainer&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 팝업 초기화에 파라미터로 넣어줄 테이블 데이터를 WS에서 로드</span></span><br><span class="line"><span class="keyword">const</span> tables = <span class="title class_">Entry</span>.<span class="property">playground</span>.<span class="property">dataTable</span>.<span class="title function_">getTableJSON</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 팝업을 초기화하고 생성</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">learningPopup</span> = <span class="keyword">new</span> <span class="title class_">Popup</span>(&#123;</span><br><span class="line">    <span class="attr">container</span>: <span class="variable language_">this</span>.<span class="property">learningContainer</span>,</span><br><span class="line">    <span class="attr">isShow</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">dataApi</span>: <span class="variable language_">this</span>.<span class="property">dataApi</span>,</span><br><span class="line">    <span class="attr">i18n</span>: &#123;</span><br><span class="line">        <span class="attr">ko</span>: &#123;</span><br><span class="line">            <span class="attr">learning</span>: &#123;</span><br><span class="line">                <span class="attr">menu_my_model</span>: <span class="string">&#x27;my model&#x27;</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">data</span>: &#123;</span><br><span class="line">        tables,</span><br><span class="line">        <span class="attr">tokenizerPath</span>: <span class="string">&#x27;[entry-ml 파일경로]/resources&#x27;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <ul>

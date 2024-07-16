@@ -19,6 +19,7 @@ Entry.init 함수를 호출할 때 전달되는 옵션 객체입니다. 이 객�
 |---|---|---|
 |type|'workspace'\|'minimize'|entryjs를 띄울 기본형식. ''|
 |libDir|string|써드파티 라이브러리 저장소. entryjs를 포함한 Library 위치. (기본값: '/lib')|
+|entryDir|string|엔트리 mediaFile asset이 지정된 위치|
 |defaultDir|string|기본 assets이 지정된 위치|
 |soundDir|string|sound 파일이 들어 있는 고유한 path|
 |baseUrl|string|API블록, AI블록등을 호출한 원본 API주소|

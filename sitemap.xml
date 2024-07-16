@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/sub-space.html</loc>
+    <loc>https://docs.playentry.org/user/tab_attribute.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/tab_attribute.html</loc>
+    <loc>https://docs.playentry.org/user/sub-space.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -146,6 +146,15 @@
   </url>
   
   <url>
+    <loc>https://docs.playentry.org/user/block_ai_human.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://docs.playentry.org/user/block_ai_object.html</loc>
     
     <lastmod>2024-07-16</lastmod>
@@ -156,15 +165,6 @@
   
   <url>
     <loc>https://docs.playentry.org/user/block_ai_stt.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/user/block_ai_human.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -200,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/block_extension.html</loc>
+    <loc>https://docs.playentry.org/user/block_decision.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -209,7 +209,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/block_decision.html</loc>
+    <loc>https://docs.playentry.org/user/block_extension.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -281,6 +281,15 @@
   </url>
   
   <url>
+    <loc>https://docs.playentry.org/user/block_model_image.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://docs.playentry.org/user/block_model_prediction.html</loc>
     
     <lastmod>2024-07-16</lastmod>
@@ -290,7 +299,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/block_model_image.html</loc>
+    <loc>https://docs.playentry.org/user/block_motion.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -309,15 +318,6 @@
   
   <url>
     <loc>https://docs.playentry.org/user/block_model_text.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/user/block_motion.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -362,7 +362,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/block_variable.html</loc>
+    <loc>https://docs.playentry.org/user/header.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -371,7 +371,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/header.html</loc>
+    <loc>https://docs.playentry.org/user/block_variable.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -443,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entry-hw/add_bluetooth_hardware.html</loc>
+    <loc>https://docs.playentry.org/guide/entry-hw/2024-07-03-entry_hw_web_connect.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -452,7 +452,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entry-hw/2024-07-03-entry_hw_web_connect.html</loc>
+    <loc>https://docs.playentry.org/guide/entry-hw/add_bluetooth_hardware.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -506,7 +506,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entry-offline/2018-01-09-build.html</loc>
+    <loc>https://docs.playentry.org/guide/entry-offline/2018-01-10-add_objects.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -515,7 +515,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entry-offline/2018-01-10-add_objects.html</loc>
+    <loc>https://docs.playentry.org/guide/entry-offline/2018-01-09-build.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -551,6 +551,15 @@
   </url>
   
   <url>
+    <loc>https://docs.playentry.org/guide/entryjs/2016-07-08-add_new_blocks4.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://docs.playentry.org/guide/entryjs/2016-05-26-add_new_blocks3.html</loc>
     
     <lastmod>2024-07-16</lastmod>
@@ -560,7 +569,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entryjs/2016-07-08-add_new_blocks4.html</loc>
+    <loc>https://docs.playentry.org/guide/entryjs/2018-03-09-getting_started.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -579,15 +588,6 @@
   
   <url>
     <loc>https://docs.playentry.org/guide/entryjs/2018-03-14-add_hardware.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/guide/entryjs/2018-03-09-getting_started.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -794,15 +794,6 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/entryjs/typedef/2024-03-15-project-data.html</loc>
-    
-    <lastmod>2024-03-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://docs.playentry.org/entryjs/typedef/2024-03-15-scene-data.html</loc>
     
     <lastmod>2024-03-14</lastmod>
@@ -812,7 +803,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/entryjs/typedef/2024-03-15-table-data.html</loc>
+    <loc>https://docs.playentry.org/entryjs/typedef/2024-03-15-project-data.html</loc>
     
     <lastmod>2024-03-14</lastmod>
     
@@ -822,6 +813,15 @@
   
   <url>
     <loc>https://docs.playentry.org/entryjs/typedef/2024-03-15-variable-data.html</loc>
+    
+    <lastmod>2024-03-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/entryjs/typedef/2024-03-15-table-data.html</loc>
     
     <lastmod>2024-03-14</lastmod>
     

@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/popup_model.html</loc>
+    <loc>https://docs.playentry.org/user/popup_object.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/popup_object.html</loc>
+    <loc>https://docs.playentry.org/user/popup_model.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -128,132 +128,6 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/block_ai_stt.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/user/block_ai_translate.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/user/block_ai_tts.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/user/block_decision.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/user/block_brush.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/user/block_extension.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/user/block_figures.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/user/block_flow.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/user/block_function.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/user/block_hardware.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/user/block_looks.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/user/block_model_classification.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/user/block_model_clustering.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/user/block_model_image.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://docs.playentry.org/user/block_model_sound.html</loc>
     
     <lastmod>2024-07-16</lastmod>
@@ -272,7 +146,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/block_model_prediction.html</loc>
+    <loc>https://docs.playentry.org/user/block_sound.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -290,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/block_sound.html</loc>
+    <loc>https://docs.playentry.org/user/block_start.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -300,15 +174,6 @@
   
   <url>
     <loc>https://docs.playentry.org/user/block_table.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/user/block_start.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -380,6 +245,177 @@
   </url>
   
   <url>
+    <loc>https://docs.playentry.org/user/block_ai_stt.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/user/block_ai_translate.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/user/block_brush.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/user/block_ai_tts.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/user/block_decision.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/user/block_figures.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/user/block_flow.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/user/block_function.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/user/block_extension.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/user/block_hardware.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/user/block_looks.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/user/block_model_classification.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/user/block_model_clustering.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/user/block_model_image.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/user/block_model_prediction.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/guide/etc/2016-05-03-git_fork.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/guide/etc/2019-12-11-updates.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/guide/etc/2020-06-24-doc_contribution.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/guide/quick_start/2018-07-30-tutorial.html</loc>
+    
+    <lastmod>2024-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://docs.playentry.org/files/testino_module/testino.json</loc>
     
     <lastmod>2024-07-16</lastmod>
@@ -398,7 +434,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/basic/2023-05-25-common_problem.html</loc>
+    <loc>https://docs.playentry.org/guide/basic/pull_request.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -407,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/basic/pull_request.html</loc>
+    <loc>https://docs.playentry.org/guide/basic/2023-05-25-common_problem.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -488,7 +524,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entry-offline/2017-12-27-develop.html</loc>
+    <loc>https://docs.playentry.org/guide/entry-offline/2017-12-28-translate.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -497,7 +533,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entry-offline/2017-12-28-translate.html</loc>
+    <loc>https://docs.playentry.org/guide/entry-offline/2017-12-27-develop.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -524,7 +560,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entryjs/2016-05-22-add_new_blocks.html</loc>
+    <loc>https://docs.playentry.org/guide/entry-offline/2018-10-30-custom_project.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -533,7 +569,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entry-offline/2018-10-30-custom_project.html</loc>
+    <loc>https://docs.playentry.org/guide/entryjs/2016-05-22-add_new_blocks.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     
@@ -605,43 +641,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/etc/2016-05-03-git_fork.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/guide/etc/2019-12-11-updates.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/guide/etc/2020-06-24-doc_contribution.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://docs.playentry.org/guide/entry-hw/2017-05-16-enroll_entry-hw.html</loc>
-    
-    <lastmod>2024-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/guide/quick_start/2018-07-30-tutorial.html</loc>
     
     <lastmod>2024-07-16</lastmod>
     

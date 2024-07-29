@@ -40,3 +40,4 @@ Entry.init 함수를 호출할 때 전달되는 옵션 객체입니다. 이 객�
 |hardwareEnable|boolean|하드웨어 사용가능 여부 (true)|
 |expansionDisable|boolean|확장블록 사용가능 여부 (true)|
 |aiUtilizeDisable|boolean|인공지능블록 사용가능 여부 (true)|
+|blockSaveImageEnable|boolean|블록 이미지로 저장하기 사용가능 여부 (true)|

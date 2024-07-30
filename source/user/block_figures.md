@@ -294,3 +294,9 @@ order: 19
 ![block-figures](images/block-figures-28.png)
 
 입력한 HEX 값을 빨강(R), 초록(G), 파랑(B) 중 하나로 변환해 가져오는 값 블록입니다.
+
+## 29. `<참>` 의 값
+
+![block-figures](images/block-figures-29.png)
+
+결합한 판단 블록의 결과를 가져오는 값 블록입니다. 판단 블록이 '참'이면 'TRUE', '거짓'이면 'FALSE'가 돼요.

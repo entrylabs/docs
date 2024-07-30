@@ -173,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/block_ai_tts.html</loc>
+    <loc>https://docs.playentry.org/user/block_ai_translate.html</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -182,7 +182,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/block_ai_translate.html</loc>
+    <loc>https://docs.playentry.org/user/block_ai_tts.html</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -245,7 +245,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/block_hardware.html</loc>
+    <loc>https://docs.playentry.org/user/block_looks.html</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -254,7 +254,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/block_looks.html</loc>
+    <loc>https://docs.playentry.org/user/block_hardware.html</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -326,7 +326,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/block_sound.html</loc>
+    <loc>https://docs.playentry.org/user/block_start.html</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -335,7 +335,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/user/block_start.html</loc>
+    <loc>https://docs.playentry.org/user/block_sound.html</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -380,60 +380,6 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/files/testino_module/testino.json</loc>
-    
-    <lastmod>2024-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/guide/basic/2023-05-25-common_problem.html</loc>
-    
-    <lastmod>2024-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/guide/basic/2016-07-07-faq.html</loc>
-    
-    <lastmod>2024-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/guide/basic/setting_environment.html</loc>
-    
-    <lastmod>2024-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/guide/basic/pull_request.html</loc>
-    
-    <lastmod>2024-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.playentry.org/guide/entry-hw/2016-05-01-getting_started.html</loc>
-    
-    <lastmod>2024-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://docs.playentry.org/guide/entry-hw/2016-05-03-add_module.html</loc>
     
     <lastmod>2024-07-30</lastmod>
@@ -452,7 +398,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entry-hw/cli_test_hardware.html</loc>
+    <loc>https://docs.playentry.org/guide/entry-hw/add_bluetooth_hardware.html</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -461,7 +407,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entry-hw/add_bluetooth_hardware.html</loc>
+    <loc>https://docs.playentry.org/guide/entry-hw/cli_test_hardware.html</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -488,15 +434,6 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entry-offline/2017-12-27-develop.html</loc>
-    
-    <lastmod>2024-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://docs.playentry.org/guide/entry-offline/2017-12-28-translate.html</loc>
     
     <lastmod>2024-07-30</lastmod>
@@ -506,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entry-offline/2018-01-10-add_objects.html</loc>
+    <loc>https://docs.playentry.org/guide/entry-offline/2017-12-27-develop.html</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -524,7 +461,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entry-offline/2018-10-30-custom_project.html</loc>
+    <loc>https://docs.playentry.org/guide/entry-offline/2018-01-10-add_objects.html</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -533,7 +470,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entryjs/2016-05-22-add_new_blocks.html</loc>
+    <loc>https://docs.playentry.org/guide/entry-offline/2018-10-30-custom_project.html</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -551,7 +488,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entryjs/2016-05-26-add_new_blocks3.html</loc>
+    <loc>https://docs.playentry.org/guide/entryjs/2016-05-22-add_new_blocks.html</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -569,6 +506,15 @@
   </url>
   
   <url>
+    <loc>https://docs.playentry.org/guide/entryjs/2016-05-26-add_new_blocks3.html</loc>
+    
+    <lastmod>2024-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://docs.playentry.org/guide/entryjs/2018-03-09-getting_started.html</loc>
     
     <lastmod>2024-07-30</lastmod>
@@ -578,7 +524,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entryjs/2018-03-14-add_hardware.html</loc>
+    <loc>https://docs.playentry.org/guide/entryjs/2018-03-09-translate.html</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -587,7 +533,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/guide/entryjs/2018-03-09-translate.html</loc>
+    <loc>https://docs.playentry.org/guide/entryjs/2018-03-14-add_hardware.html</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -642,6 +588,60 @@
   
   <url>
     <loc>https://docs.playentry.org/guide/quick_start/2018-07-30-tutorial.html</loc>
+    
+    <lastmod>2024-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/files/testino_module/testino.json</loc>
+    
+    <lastmod>2024-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/guide/basic/2016-07-07-faq.html</loc>
+    
+    <lastmod>2024-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/guide/basic/2023-05-25-common_problem.html</loc>
+    
+    <lastmod>2024-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/guide/basic/pull_request.html</loc>
+    
+    <lastmod>2024-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/guide/basic/setting_environment.html</loc>
+    
+    <lastmod>2024-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.playentry.org/guide/entry-hw/2016-05-01-getting_started.html</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -803,7 +803,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/entryjs/typedef/2024-03-15-scene-data.html</loc>
+    <loc>https://docs.playentry.org/entryjs/typedef/2024-03-15-table-data.html</loc>
     
     <lastmod>2024-03-14</lastmod>
     
@@ -812,7 +812,7 @@
   </url>
   
   <url>
-    <loc>https://docs.playentry.org/entryjs/typedef/2024-03-15-table-data.html</loc>
+    <loc>https://docs.playentry.org/entryjs/typedef/2024-03-15-scene-data.html</loc>
     
     <lastmod>2024-03-14</lastmod>
     

@@ -593,7 +593,7 @@ jpg, png, bmp 형식은 비트맵 모드, svg 형식은 벡터 모드로 적용�
 > + 폭력적이고 잔인한 그림
 > + 선정적인 내용의 그림
 > + 불쾌감을 주거나 혐오감을 일으키는 그림
-> + 무단 사용이 금지된 저작권의 그림 [[저작권에 대해 알아보기]](https://playentry.org/#!/terms/project)
+> + 무단 사용이 금지된 저작권의 그림 [[저작권에 대해 알아보기]](https://playentry.org/terms/copyright)
 
 
 
@@ -616,4 +616,4 @@ jpg, png, bmp 형식은 비트맵 모드, svg 형식은 벡터 모드로 적용�
 > + 폭력적이고 잔인한 그림
 > + 선정적인 내용의 그림
 > + 불쾌감을 주거나 혐오감을 일으키는 그림
-> + 무단 사용이 금지된 저작권의 그림 [[저작권에 대해 알아보기]](https://playentry.org/#!/terms/project)
+> + 무단 사용이 금지된 저작권의 그림 [[저작권에 대해 알아보기]](https://playentry.org/terms/copyright)

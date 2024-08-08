@@ -81,7 +81,7 @@
         "dateModified": "2024-04-08",
         "url": "https://docs.playentry.org/entryjs/api/2024-02-29-popup.html",
         "description": "Entry Docs - 엔트리 개발 가이드&위키",
-        "wordCount": "8978",
+        "wordCount": "8982",
         "publisher": "Entrylabs",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -361,14 +361,6 @@
                     
                 
                 <li>
-                    <a href="/entryjs/typedef/2024-03-15-scene-data.html" class="sidebar-link" itemprop="url">Scene Data</a>
-                </li>
-            
-                
-                
-                    
-                
-                <li>
                     <a href="/entryjs/typedef/2024-03-15-table-data.html" class="sidebar-link" itemprop="url">Table Data</a>
                 </li>
             
@@ -378,6 +370,14 @@
                 
                 <li>
                     <a href="/entryjs/typedef/2024-03-15-variable-data.html" class="sidebar-link" itemprop="url">Variable Data</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/entryjs/typedef/2024-03-15-scene-data.html" class="sidebar-link" itemprop="url">Scene Data</a>
                 </li>
             
         
@@ -854,7 +854,7 @@
 
 <h3 id="upload"><a href="#upload" class="headerlink" title="upload"></a>upload</h3><p><img src="/images/entry-tool/popup_upload_main.png" alt="upload_main"></p>
 <p>‘파일 올리기’ 기능을 위해 사용하는 팝업입니다.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 사용자 로컬 디렉토리에서 선택한 파일을 1차로 임시저장</span></span><br><span class="line"><span class="comment">// 업로드한 파일이 sound, image, table 이면 formData에 object 데이터이면 &#x27;objectData&#x27;를 통해 넘어옵니다.</span></span><br><span class="line">popup.<span class="title function_">on</span>(<span class="string">&#x27;dummyUploads&#x27;</span>, <span class="keyword">async</span> (&#123; formData, objectData &#125;) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> validFormData = <span class="title function_">handleFormData</span>(formData);</span><br><span class="line">  <span class="keyword">const</span> validObjectData = <span class="title function_">handleObjectData</span>(objectData);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 가공된 파일데이터를 setData로 전달해서 팝업화면에 반영</span></span><br><span class="line">  popup.<span class="title function_">setData</span>(&#123;</span><br><span class="line">    <span class="attr">data</span>: &#123; </span><br><span class="line">      <span class="attr">uploads</span>: validFormData,</span><br><span class="line">      <span class="attr">data</span>: []</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  popup.<span class="title function_">setData</span>(&#123;</span><br><span class="line">    <span class="attr">data</span>: &#123; </span><br><span class="line">      <span class="attr">uploads</span>: validObjectData,</span><br><span class="line">      <span class="attr">data</span>: []</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 사용자가 &#x27;추가히기&#x27; 버튼을 클릭하여 임시보관중인 업로드 파일들을 서비스에 반영</span></span><br><span class="line">popup.<span class="title function_">on</span>(<span class="string">&#x27;uploads&#x27;</span>, <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">  data.<span class="property">uploads</span>.<span class="title function_">map</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 데이터 종류에 맞게 엔트리WS에 반영</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 업로드 실패시 에러 핸들링</span></span><br><span class="line">popup.<span class="title function_">on</span>(<span class="string">&#x27;uploadFail&#x27;</span>, <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">alert</span>(<span class="string">`<span class="subst">$&#123;data.messageParent&#125;</span><span class="subst">$&#123;data.message&#125;</span>`</span>);</span><br><span class="line">&#125;)</span><br><span class="line">         </span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 사용자 로컬 디렉토리에서 선택한 파일을 1차로 임시저장</span></span><br><span class="line"><span class="comment">// 업로드한 파일이 sound, image, table 이면 formData에 object 데이터이면 &#x27;objectData&#x27;를 통해 넘어옵니다.</span></span><br><span class="line">popup.<span class="title function_">on</span>(<span class="string">&#x27;dummyUploads&#x27;</span>, <span class="title function_">async</span> (&#123; formData, objectData &#125;) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> validFormData = <span class="title function_">handleFormData</span>(formData);</span><br><span class="line">  <span class="keyword">const</span> validObjectData = <span class="title function_">handleObjectData</span>(objectData);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 가공된 파일데이터를 setData로 전달해서 팝업화면에 반영</span></span><br><span class="line">  popup.<span class="title function_">setData</span>(&#123;</span><br><span class="line">    <span class="attr">data</span>: &#123; </span><br><span class="line">      <span class="attr">uploads</span>: validFormData,</span><br><span class="line">      <span class="attr">data</span>: []</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  popup.<span class="title function_">setData</span>(&#123;</span><br><span class="line">    <span class="attr">data</span>: &#123; </span><br><span class="line">      <span class="attr">uploads</span>: validObjectData,</span><br><span class="line">      <span class="attr">data</span>: []</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 사용자가 &#x27;추가히기&#x27; 버튼을 클릭하여 임시보관중인 업로드 파일들을 서비스에 반영</span></span><br><span class="line">popup.<span class="title function_">on</span>(<span class="string">&#x27;uploads&#x27;</span>, <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">  data.<span class="property">uploads</span>.<span class="title function_">map</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 데이터 종류에 맞게 엔트리WS에 반영</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 업로드 실패시 에러 핸들링</span></span><br><span class="line">popup.<span class="title function_">on</span>(<span class="string">&#x27;uploadFail&#x27;</span>, <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">alert</span>(<span class="string">`<span class="subst">$&#123;data.messageParent&#125;</span><span class="subst">$&#123;data.message&#125;</span>`</span>);</span><br><span class="line">&#125;)</span><br><span class="line">         </span><br></pre></td></tr></table></figure>
 
 
 
@@ -1109,7 +1109,7 @@
 <h3 id="이벤트"><a href="#이벤트" class="headerlink" title="이벤트"></a>이벤트</h3><p>팝업 인스턴스는 특정 상황에서 커스텀 이벤트를 발생시킵니다.</p>
 <p>개발자는 각 커스텀 이벤트를 핸들링할 핸들러 함수를 인스턴스에 할당할 수 있습니다.</p>
 <p>이벤트의 종류는 entry-tool 소스에서는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entry-tool/blob/3e6cc0c7c99a158078f6e68a7df6a4451dcf1cdf/src/constants/index.js#L6">constants/index.js</a> 에서 확인 가능합니다.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">popup</span><br><span class="line">  .<span class="title function_">on</span>(<span class="string">&#x27;fetch&#x27;</span>, <span class="keyword">async</span> (data) =&gt; &#123;</span><br><span class="line">      <span class="comment">// fetch핸들링 로직</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">on</span>(<span class="string">&#x27;search&#x27;</span>, <span class="keyword">async</span> (data) =&gt; &#123;</span><br><span class="line">     <span class="comment">// search핸들링 로직</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">on</span>(<span class="string">&#x27;dummyUploads&#x27;</span>, <span class="keyword">async</span> (&#123; formData, objectData &#125;) =&gt; &#123;</span><br><span class="line">    <span class="comment">// dummyUploads핸들링 로직</span></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">popup</span><br><span class="line">  .<span class="title function_">on</span>(<span class="string">&#x27;fetch&#x27;</span>, <span class="title function_">async</span> (data) =&gt; &#123;</span><br><span class="line">      <span class="comment">// fetch핸들링 로직</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">on</span>(<span class="string">&#x27;search&#x27;</span>, <span class="title function_">async</span> (data) =&gt; &#123;</span><br><span class="line">     <span class="comment">// search핸들링 로직</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">on</span>(<span class="string">&#x27;dummyUploads&#x27;</span>, <span class="title function_">async</span> (&#123; formData, objectData &#125;) =&gt; &#123;</span><br><span class="line">    <span class="comment">// dummyUploads핸들링 로직</span></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 
 <br>
 

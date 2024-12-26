@@ -128,5 +128,5 @@ order: 8
 > + 폭력적이고 잔인한 소리
 > + 선정적인 내용의 소리
 > + 불쾌감을 주거나 혐오감을 일으키는 소리
-> + 무단 사용이 금지된 저작권의 소리  [[저작권에 대해 알아보기]](https://playentry.org/#!/terms/project)
+> + 무단 사용이 금지된 저작권의 소리  [[저작권에 대해 알아보기]](https://playentry.org/terms/copyright)
 

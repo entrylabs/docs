@@ -1,0 +1,694 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>확장 > 국민행동요령 블록 — Entry Docs</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="naver-site-verification" content="7fccc7599f015b17cda0f00b5575cd2d4c5777fd">
+
+        <link rel="canonical" href="https://docs.playentry.org/user/block_extn_guideline.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="확장 > 국민행동요령 블록 — Entry Docs">
+        <meta property="og:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta property="og:image" content="https://docs.playentry.org/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="확장 > 국민행동요령 블록 — Entry Docs">
+        <meta name="twitter:description" content="Entry Docs - 엔트리 개발 가이드&위키">
+        <meta name="twitter:image" content="https://docs.playentry.org/images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        
+<link rel="stylesheet" href="/css/page.css">
+
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script>window.PAGE_TYPE = "userGuide"</script>
+
+        <!-- ga -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-103554573-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "author": {
+            "@type": "Person",
+            "name": "Entrylabs"
+        },
+        "headline": "확장 &gt; 국민행동요령 블록",
+        "image": "https://docs.playentry.org/images/logo.png",
+        
+        
+        "datePublished": "2024-12-26",
+        "dateCreated": "2024-12-26",
+        "dateModified": "2025-01-16",
+        "url": "https://docs.playentry.org/user/block_extn_guideline.html",
+        "description": "Entry Docs - 엔트리 개발 가이드&위키",
+        "wordCount": "372",
+        "publisher": "Entrylabs",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://docs.playentry.org/user/block_extn_guideline.html"
+        }
+    }
+</script>
+    <meta name="generator" content="Hexo 5.4.2"></head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li class="search-query-nav-wrapper">
+  <div id="search-query-nav"></div>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li class="search-query-sidebar-wrapper">
+  <div id="search-query-sidebar"></div>
+</li>
+<li>
+  <a href="/entryjs/" class="nav-link" itemprop="url">개발 가이드</a>
+</li>
+<li>
+  <a href="/guide/" class="nav-link current" itemprop="url">하드웨어 가이드</a>
+</li>
+<li>
+    <a href="/user/" class="nav-link current" itemprop="url">사용자 위키</a>
+</li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link" itemprop="url" rel="external nofollow noopener noreferrer">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>작품</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/index.html" class="sidebar-link" itemprop="url">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/what-is-project.html" class="sidebar-link" itemprop="url">작품</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>화면의 구성 요소</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/header.html" class="sidebar-link" itemprop="url">상단 메뉴</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/screen.html" class="sidebar-link" itemprop="url">실행 화면</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/sub-space.html" class="sidebar-link" itemprop="url">보조 창</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_block.html" class="sidebar-link" itemprop="url">블록 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_shape.html" class="sidebar-link" itemprop="url">모양 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_sound.html" class="sidebar-link" itemprop="url">소리 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/tab_attribute.html" class="sidebar-link" itemprop="url">속성 탭</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/others.html" class="sidebar-link" itemprop="url">기타</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>블록</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/block_start.html" class="sidebar-link" itemprop="url">시작 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_flow.html" class="sidebar-link" itemprop="url">흐름 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_motion.html" class="sidebar-link" itemprop="url">움직임 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_looks.html" class="sidebar-link" itemprop="url">생김새 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_brush.html" class="sidebar-link" itemprop="url">붓 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_text.html" class="sidebar-link" itemprop="url">글상자 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_sound.html" class="sidebar-link" itemprop="url">소리 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_decision.html" class="sidebar-link" itemprop="url">판단 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_figures.html" class="sidebar-link" itemprop="url">계산 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_variable.html" class="sidebar-link" itemprop="url">자료 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_function.html" class="sidebar-link" itemprop="url">함수 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_table.html" class="sidebar-link" itemprop="url">데이터 분석 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/what-is-ai.html" class="sidebar-link" itemprop="url">인공지능(AI)이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_translate.html" class="sidebar-link" itemprop="url">AI 블록 > 번역</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_tts.html" class="sidebar-link" itemprop="url">AI 블록 > 읽어주기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_stt.html" class="sidebar-link" itemprop="url">AI 블록 > 음성 인식</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_human.html" class="sidebar-link" itemprop="url">AI 블록 > 사람 인식</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_face.html" class="sidebar-link" itemprop="url">AI 블록 > 얼굴 인식</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_object.html" class="sidebar-link" itemprop="url">AI 블록 > 사물 인식</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_ai_hand.html" class="sidebar-link" itemprop="url">AI 블록 > 손 인식</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/what-is-model.html" class="sidebar-link" itemprop="url">모델 학습이란?</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_model_image.html" class="sidebar-link" itemprop="url">AI 모델 > 분류 - 이미지 모델</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_model_text.html" class="sidebar-link" itemprop="url">AI 모델 > 분류 - 텍스트 모델</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_model_sound.html" class="sidebar-link" itemprop="url">AI 모델 > 분류 - 소리 모델</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_model_classification.html" class="sidebar-link" itemprop="url">AI 모델 > 분류 - 숫자 모델</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_model_prediction.html" class="sidebar-link" itemprop="url">AI 모델 > 예측 - 숫자 모델</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_model_clustering.html" class="sidebar-link" itemprop="url">AI 모델 > 군집 - 숫자 모델</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_extn_guideline.html" class="sidebar-link current" itemprop="url">확장 > 국민행동요령 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_extn_weather.html" class="sidebar-link" itemprop="url">확장 > 날씨 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_extn_alert.html" class="sidebar-link" itemprop="url">확장 > 재난문자 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_extn_festival.html" class="sidebar-link" itemprop="url">확장 > 행사 블록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/block_hardware.html" class="sidebar-link" itemprop="url">하드웨어 블록</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>팝업</h3></li>
+                    
+                
+                <li>
+                    <a href="/user/popup_object.html" class="sidebar-link" itemprop="url">오브젝트 추가하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/popup_table.html" class="sidebar-link" itemprop="url">테이블 불러오기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/user/popup_model.html" class="sidebar-link" itemprop="url">인공지능 모델 학습하기</a>
+                </li>
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+    
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content userGuide with-sidebar ">
+    
+      
+    
+    
+      <h1>확장 > 국민행동요령 블록</h1>
+    
+    <p><img src="images/card/guideline.png" alt="guideline"></p>
+<p>자연∙사회재난 및 생활안전 사고 발생 시 국민이 지켜야 하는 행동요령에 대한 블록 모음입니다. [행정안전부 제공]</p>
+<p>아래는 국민행동요령 확장 블록에서 선택할 수 있는 항목입니다.</p>
+<ul>
+<li><strong>자연재난</strong><ul>
+<li><code>태풍</code>, <code>홍수</code>, <code>호우</code>, <code>강풍</code>, <code>대설</code>, <code>한파</code>, <code>풍랑</code>, <code>황사</code>, <code>폭염</code>, <code>가뭄</code>, <code>지진</code>, <code>지진해일</code>, <code>해일</code>, <code>산사태</code>, <code>화산폭발</code></li>
+</ul>
+</li>
+<li><strong>사회재난</strong><ul>
+<li><code>해양오염</code>, <code>대규모 수질오염</code>, <code>식용수</code>, <code>공동구 재난</code>, <code>가축질병</code>, <code>감염병</code>, <code>철도·지하철</code>, <code>금융전산</code>, <code>원전사고</code>, <code>화학물질</code>, <code>화재</code>, <code>산불</code>, <code>건축물 붕괴</code>, <code>댐 붕괴</code>, <code>폭발</code>, <code>항공기</code>, <code>화생방</code>, <code>정전 및 전력부족</code>, <code>전기·가스</code>, <code>유도선</code>, <code>수난사고</code>, <code>테러</code>, <code>전력수급</code></li>
+</ul>
+</li>
+<li><strong>생활안전 사고</strong><ul>
+<li><code>응급처치</code>, <code>심폐소생술</code>, <code>소화기</code>, <code>식중독</code>, <code>산행</code>, <code>어린이 놀이시설</code>, <code>실종유괴</code>, <code>성폭력</code>, <code>학교 폭력</code>, <code>가정 폭력</code>, <code>억류 및 납치</code>, <code>교통사고</code>, <code>승강기</code>, <code>미세먼지</code>, <code>소화전</code>, <code>가정 안전점검</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="1-자연재난-태풍-태풍-예보-시-의-행동요령-수"><a href="#1-자연재난-태풍-태풍-예보-시-의-행동요령-수" class="headerlink" title="1. 자연재난 [태풍] [태풍 예보 시] 의 행동요령 수"></a>1. 자연재난 <code>[태풍]</code> <code>[태풍 예보 시]</code> 의 행동요령 수</h2><p><img src="images/block-extn-guideline-01.png" alt="block-extn-guideline"></p>
+<p>선택한 자연재난과 진행 정도에 따른 행동요령의 수를 가져오는 값 블록입니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 자연재난과 진행 정도를 선택할 수 있어요.</p>
+<h2 id="2-자연재난-태풍-태풍-예보-시-의-행동요령-1-번째-항목"><a href="#2-자연재난-태풍-태풍-예보-시-의-행동요령-1-번째-항목" class="headerlink" title="2. 자연재난 [태풍] [태풍 예보 시] 의 행동요령 (1) 번째 항목"></a>2. 자연재난 <code>[태풍]</code> <code>[태풍 예보 시]</code> 의 행동요령 <code>(1)</code> 번째 항목</h2><p><img src="images/block-extn-guideline-02.png" alt="block-extn-guideline"></p>
+<p>선택한 자연재난과 진행 정도에 따른 행동요령 중 입력한 순서(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)에 맞는 것을 가져오는 값 블록입니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 자연재난과 진행 정도를 선택할 수 있어요.  </p>
+<h2 id="3-사회재난-해양오염-발생-전-의-행동요령-수"><a href="#3-사회재난-해양오염-발생-전-의-행동요령-수" class="headerlink" title="3. 사회재난 [해양오염] [발생 전] 의 행동요령 수"></a>3. 사회재난 <code>[해양오염]</code> <code>[발생 전]</code> 의 행동요령 수</h2><p><img src="images/block-extn-guideline-03.png" alt="block-extn-guideline"></p>
+<p>선택한 사회재난과 진행 정도에 따른 행동요령의 수를 가져오는 값 블록입니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 사회재난과 진행 정도를 선택할 수 있어요.</p>
+<h2 id="4-사회재난-해양오염-발생-전-의-행동요령-1-번째-항목"><a href="#4-사회재난-해양오염-발생-전-의-행동요령-1-번째-항목" class="headerlink" title="4. 사회재난 [해양오염] [발생 전] 의 행동요령 (1) 번째 항목"></a>4. 사회재난 <code>[해양오염]</code> <code>[발생 전]</code> 의 행동요령 <code>(1)</code> 번째 항목</h2><p><img src="images/block-extn-guideline-04.png" alt="block-extn-guideline"></p>
+<p>선택한 사회재난과 진행 정도에 따른 행동요령 중 입력한 순서(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)에 맞는 것을 가져오는 값 블록입니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 사회재난과 진행 정도를 선택할 수 있어요.  
+　</p>
+<h2 id="5-생활안전-응급처치-일반-의-행동요령-수"><a href="#5-생활안전-응급처치-일반-의-행동요령-수" class="headerlink" title="5. 생활안전 [응급처치] [일반] 의 행동요령 수"></a>5. 생활안전 <code>[응급처치]</code> <code>[일반]</code> 의 행동요령 수</h2><p><img src="images/block-extn-guideline-05.png" alt="block-extn-guideline"></p>
+<p>선택한 생활안전 사고와 진행 정도에 따른 행동요령의 수를 가져오는 값 블록입니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 생활안전 사고와 진행 정도를 선택할 수 있어요.</p>
+<h2 id="6-생활안전-응급처치-일반-의-행동요령-1-번째-항목"><a href="#6-생활안전-응급처치-일반-의-행동요령-1-번째-항목" class="headerlink" title="6. 생활안전 [응급처치] [일반] 의 행동요령 (1) 번째 항목"></a>6. 생활안전 <code>[응급처치]</code> <code>[일반]</code> 의 행동요령 <code>(1)</code> 번째 항목</h2><p><img src="images/block-extn-guideline-06.png" alt="block-extn-guideline"></p>
+<p>선택한 생활안전 사고와 진행 정도에 따른 행동요령 중 입력한 순서(<img src="images/icon/value.png" alt="value" style="zoom:50%;">)에 맞는 것을 가져오는 값 블록입니다.</p>
+<p>목록 상자(<img src="images/icon/dropdown-extension.png" style="zoom:50%;">)를 클릭하면 생활안전 사고와 진행 정도를 선택할 수 있어요.
+　</p>
+
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/user/block_extn_guideline.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/user/block_extn_guideline.md" target="_blank" itemprop="url" rel="external nofollow noopener noreferrer">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- at the end of the HEAD -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+        <style>
+            :root {
+                --docsearch-primary-color: #42b983;
+            }
+            
+            .DocSearch-Button {
+                background: #ffffff;
+                border: 1px solid #e3e3e3;
+                height: 30px;
+                line-height: 30px;
+            }
+
+            .DocSearch-Button:active, .DocSearch-Button:focus, .DocSearch-Button:hover {
+                background: var(--docsearch-searchbox-focus-background);
+                box-shadow: var(--docsearch-searchbox-shadow);
+                color: #2c3e50;
+                outline: none;
+            }
+            .DocSearch-Button-Placeholder {
+                font-size: 0.9rem;
+            }
+            .search-query-nav-wrapper {
+
+                vertical-align: middle !important;
+            }
+        </style>
+        <!-- at the end of the BODY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+        <script>
+        [
+            '#search-query-nav',
+            '#search-query-sidebar',
+            '#search-query-menu'
+        ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+                var match = window.location.pathname.match(/^\/(v\d+)/)
+                var version = match ? match[1] : 'v2'
+                docsearch({
+                    container: selector,
+                    appId: 'SA68SZF1Z4',
+                    apiKey: '2148f56602c452593e686003893d065b',
+                    indexName: 'entrylabs',
+                    insights: true
+                });
+            })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

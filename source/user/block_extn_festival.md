@@ -4,7 +4,7 @@ title: 확장 > 행사 블록
 date: 2024-12-26 17:00:00
 type: userGuide
 category: "블록"
-order: 40
+order: 41
 ---
 
 

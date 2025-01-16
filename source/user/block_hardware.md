@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 하드웨어 블록
-date: 2024-12-26 18:00:00
+date: 2025-01-16 13:00:00
 type: userGuide
 category: "블록"
-order: 41
+order: 42
 description: "엔트리에서 하드웨어를 연결하는 방법을 알아봅시다."
 ---
 

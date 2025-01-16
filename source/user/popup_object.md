@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 오브젝트 추가하기
-date: 2024-12-26 17:00:00
+date: 2025-01-16 13:00:00
 type: userGuide
 category: "팝업"
-order: 42
+order: 43
 ---  
 
 ## 오브젝트 추가하기 팝업

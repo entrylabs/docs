@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 테이블 불러오기
-date: 2024-12-26 17:00:00
+date: 2025-01-16 13:00:00
 type: userGuide
 category: "팝업"
-order: 43
+order: 44
 ---
 
 ## 테이블 불러오기 팝업

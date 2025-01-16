@@ -40,7 +40,7 @@ order: 9
 
 ## 변수
 
-변수는 숫자나 문자 데이터를 저장할 수 있는 공간입니다. 필요할 때마다 찾아서 데이터를 넣고 뺄 수 있는 상자를 떠올려보세요.
+변수는 숫자나 문자 데이터를 저장할 수 있는 공간입니다. 필요할 때마다 찾아서 데이터를 넣고 뺄 수 있는 하나의 상자를 떠올려 보세요.
 변수에는 한 번에 한 가지 데이터만 저장할 수 있으며, 데이터는 언제든지 수정, 변경할 수 있습니다.
 
 
@@ -53,6 +53,7 @@ order: 9
 왼쪽의 아이콘으로 변수의 종류를 확인할 수 있어요.
 
 
+### 변수 추가하기
 
 '변수 추가하기' 버튼을 클릭하면 추가할 변수의 종류를 선택할 수 있어요.
 
@@ -67,14 +68,15 @@ order: 9
 + ![ic_attr_variable_local](images/icon/ic_attr_variable_local.svg) **이 오브젝트에서 사용** : 선택한 오브젝트에서만 사용하는 일반 변수입니다. 해당 오브젝트의 복제본도 다른 오브젝트가 사용할 수 없는 변수를 가집니다.
 
 
+### 변수 상세
+
+변수 목록 또는 역삼각형 버튼을 클릭하면 각 변수의 상세 내용이 표시됩니다.
 
 ![attr-variable-detail](images/tab/attr-variable-detail.png)
 
 
 
-역삼각형 버튼을 클릭하면 나타나는 각 변수의 설정입니다.
-
-+ **변수 속성**
+#### 변수 속성
 
   + **기본값** : 변수가 작품을 실행할 때부터 가질 값을 정합니다.
 
@@ -86,7 +88,8 @@ order: 9
 
 
 
-+ **사용된 오브젝트** : 어떤 오브젝트가 이 변수를 어떻게 사용하는지 확인합니다. 각 정보를 클릭하면, 이 변수를 사용하는 장면과 오브젝트를 선택하고 블록을 강조 표시합니다. 일일이 찾지 않아도 클릭 한 번으로 찾을 수 있어요.
+#### 사용된 오브젝트
+어떤 오브젝트가 이 변수를 어떻게 사용하는지 확인합니다. 각 정보를 클릭하면, 이 변수를 사용하는 장면과 오브젝트를 선택하고 블록을 강조 표시합니다. 일일이 찾지 않아도 클릭 한 번으로 찾을 수 있어요.
 
   + 변수 더하기 : 사용된 오브젝트에 변수를 더합니다.
   + 변수 정하기 : 사용된 오브젝트의 변수를 정합니다.
@@ -112,42 +115,43 @@ order: 9
 
 리스트의 종류는 네 가지고, 모든 오브젝트에서 사용하는 리스트와 특정 오브젝트에서만 사용하는 리스트로 분류합니다. 왼쪽의 아이콘으로 리스트의 종류를 확인할 수 있어요.
 
-
-
-<img src="images/window/lists-add.png" alt="lists-add" style="zoom:80%;" />
-
+### 리스트 추가하기
 
 
 '리스트 추가하기' 버튼을 클릭하면 추가할 리스트의 종류를 선택할 수 있어요.
 
+<img src="images/window/lists-add.png" alt="lists-add" style="zoom:50%;" />
+
 + **모든 오브젝트에 사용**
 
-  + <img src="images/icon/ic_attr_list_on.png" alt="ic_attr_list_on" style="zoom:50%;" /> **일반 리스트로 사용 (작품에 저장)** : 작품을 정지하면 기본값으로 초기화되는 리스트입니다.
+  + <img src="images/icon/ic_attr_list.svg" alt="ic_attr_list_on"  /> **일반 리스트로 사용 (작품에 저장)** : 작품을 정지하면 기본값으로 초기화되는 리스트입니다.
 
-  + <img src="images/icon/ic_attr_list_cloud_on.png" alt="ic_attr_list_cloud_on" style="zoom:50%;" /> **공유 리스트로 사용 (서버에 저장)** : 작품을 정지하면 서버에 저장되는 리스트입니다.
+  + <img src="images/icon/ic_attr_list_cloud.svg" alt="ic_attr_list_cloud_on" /> **공유 리스트로 사용 (서버에 저장)** : 작품을 정지하면 서버에 저장되는 리스트입니다.
 
-  + <img src="images/icon/ic_attr_list_real_time_on.png" alt="ic_attr_list_real_time_on" style="zoom:50%;" /> **실시간 리스트로 사용 (서버에 저장)** : 작품을 실행하는 도중에 실시간으로 서버에 저장되는 리스
+  + <img src="images/icon/ic_attr_list_real_time.svg" alt="ic_attr_list_real_time_on" /> **실시간 리스트로 사용 (서버에 저장)** : 작품을 실행하는 도중에 실시간으로 서버에 저장되는 리스
 
     트입니다.
 
 
-+ <img src="images/icon/ic_attr_list_local_on.png" alt="ic_attr_list_local_on" style="zoom:50%;" /> **이 오브젝트에서 사용** : 선택한 오브젝트에서만 사용하는 일반 리스트입니다. 해당 오브젝트의 복제본 역시 다른 오브젝트가 사용할 수 없는 리스트를 가집니다.
++ <img src="images/icon/ic_attr_list_local.svg" alt="ic_attr_list_local_on" /> **이 오브젝트에서 사용** : 선택한 오브젝트에서만 사용하는 일반 리스트입니다. 해당 오브젝트의 복제본 역시 다른 오브젝트가 사용할 수 없는 리스트를 가집니다.
 
 
 
-<img src="images/window/lists-attribute.png" alt="lists-attribute" style="zoom:80%;" />
 
 
+### 리스트 상세
 
-역삼각형 버튼을 클릭하면 나타나는 각 리스트의 설정입니다.
+리스트 목록 또는 역삼각형 버튼을 클릭하면 각 리스트의 상세 내용이 표시됩니다.
 
-+ **리스트 속성**
+<img src="images/window/lists-attribute.png" alt="lists-attribute" style="zoom:50%;" />
+
+#### 리스트 속성
 
 + **리스트 내보내기** : 이 버튼을 클릭하면 리스트 항목의 내용을 복사하거나, 엑셀로 내려받을 수 있는 팝업창이 나타납니다.
 
 
 
-  <img src="images/window/lists-attribute2.png" alt="lists-attribute2" style="zoom: 105%;" />
+  <img src="images/modal/export-list.png" alt="export-list" style="zoom: 50%;" />
 
 
 
@@ -157,22 +161,28 @@ order: 9
 
 
 
-  ![lists-attribute3](images/window/lists-attribute3.png)
+  <img src="images/modal/import-list.png" alt="import-list" style="zoom: 50%;" />
 
 
 
-+ **리스트 항목 수** : '-'와 '+'를 클릭하거나 직접 개수를 입력해서 리스트의 항목 수를 추가 또는 삭제합니다.
++ **리스트 항목 수** : '-'와 '+'를 클릭하거나 직접 개수를 입력해서 리스트의 항목 수를 추가 또는 삭제합니다.  
+<img src="images/window/lists-attribute1.png" alt="lists-attribute1" style="zoom:50%;" />
 
 
 
-  ​                                                     <img src="images/window/lists-attribute1.png" alt="lists-attribute1" style="zoom:110%;" />
+#### 사용된 오브젝트
 
+어떤 오브젝트가 이 리스트를 어떻게 사용하는지 확인할 수 있습니다. 각 정보를 클릭하면, 이 리스트를 사용하는 장면과 오브젝트를 선택하고 블록을 강조 표시합니다. 일일이 찾지 않아도 클릭 한 번으로 찾을 수 있어요.
 
-
-+ **사용된 오브젝트** : 어떤 오브젝트가 이 리스트를 어떻게 사용하는지 확인할 수 있습니다. 각 정보를 클릭하면, 이 리스트를 사용하는 장면과 오브젝트를 선택하고 블록을 강조 표시합니다. 일일이 찾지 않아도 클릭 한 번으로 찾을 수 있어요.
-
-
-
+  + 항목을 리스트에 추가하기
+  + 항목을 삭제하기
+  + 항목을 넣기
+  + 항목을 바꾸기
+  + 리스트의 길이
+  + 리스트에 포함되어 있는가?
+  + 리스트 항목의 값
+  + 리스트 보이기
+  + 리스트 숨기기
 
 
 ## 신호
@@ -231,3 +241,5 @@ order: 9
 
 
 역삼각형 버튼을 클릭하면 어떤 오브젝트가 이 함수를 사용하는지 확인할 수 있습니다.
+
+함수에 대한 더 자세한 설명은 '[함수 블록](https://docs.playentry.org/user/block_function.html)' 문서를 확인해 주세요.

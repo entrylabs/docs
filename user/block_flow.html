@@ -76,12 +76,12 @@
         "image": "https://docs.playentry.org/images/logo.png",
         
         
-        "datePublished": "2023-11-16",
-        "dateCreated": "2023-11-16",
-        "dateModified": "2025-01-16",
+        "datePublished": "2024-01-23",
+        "dateCreated": "2024-01-23",
+        "dateModified": "2025-01-24",
         "url": "https://docs.playentry.org/user/block_flow.html",
         "description": "Entry Docs - 엔트리 개발 가이드&위키",
-        "wordCount": "484",
+        "wordCount": "514",
         "publisher": "Entrylabs",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -598,15 +598,18 @@
 </ul>
 <h2 id="5-반복-중단하기"><a href="#5-반복-중단하기" class="headerlink" title="5. 반복 중단하기"></a>5. 반복 중단하기</h2><p><img src="images/block-flow-05.png" alt="block-flow"></p>
 <p>이 블록을 감싼 가장 가까운 반복 블록을 <strong>즉시</strong> 멈춥니다.</p>
-<p>이 블록이 조립되어 있는 블록 중 가장 가까이에 있는 반복 블록이 멈추게 됩니다.</p>
-<h2 id="6-만일-lt-참-gt-이라면"><a href="#6-만일-lt-참-gt-이라면" class="headerlink" title="6. 만일 &lt;참&gt; 이라면"></a>6. 만일 <code>&lt;참&gt;</code> 이라면</h2><p><img src="images/block-flow-06.png" alt="block-flow"></p>
+<p>이 블록 다음에 조립되어 있는 블록부터 동작하지 않고, 반복도 멈추게 됩니다.</p>
+<h2 id="6-이번-반복-건너뛰기"><a href="#6-이번-반복-건너뛰기" class="headerlink" title="6. 이번 반복 건너뛰기"></a>6. 이번 반복 건너뛰기</h2><p><img src="images/block-flow-06.png" alt="block-flow"></p>
+<p>이 블록을 감싼 가장 가까운 반복 블록의 이번 반복을 건너뛰고, 다음 반복의 처음부터 실행합니다.</p>
+<p>‘반복 중단하기’와 달리 반복 중의 이번 시행만 건너뛰어요.</p>
+<h2 id="7-만일-lt-참-gt-이라면"><a href="#7-만일-lt-참-gt-이라면" class="headerlink" title="7. 만일 &lt;참&gt; 이라면"></a>7. 만일 <code>&lt;참&gt;</code> 이라면</h2><p><img src="images/block-flow-07.png" alt="block-flow"></p>
 <p>만일 판단 블록(<img src="images/icon/decision.png" style="zoom:50%;">)이 참이라면, 감싸인 블록이 동작합니다. 거짓이라면, 감싸인 블록이 동작하지 않고 다음 블록이 동작합니다.</p>
-<h2 id="7-만일-lt-참-gt-이-라면-아니면"><a href="#7-만일-lt-참-gt-이-라면-아니면" class="headerlink" title="7. 만일 &lt;참&gt; (이)라면 아니면"></a>7. 만일 <code>&lt;참&gt;</code> (이)라면 아니면</h2><p><img src="images/block-flow-07.png" alt="block-flow"></p>
+<h2 id="8-만일-lt-참-gt-이-라면-아니면"><a href="#8-만일-lt-참-gt-이-라면-아니면" class="headerlink" title="8. 만일 &lt;참&gt; (이)라면 아니면"></a>8. 만일 <code>&lt;참&gt;</code> (이)라면 아니면</h2><p><img src="images/block-flow-08.png" alt="block-flow"></p>
 <p>만일 판단 블록(<img src="images/icon/decision.png" style="zoom:50%;">)이 참이라면, 위의 감싸인 블록이 동작합니다. 거짓이라면, 아래의 감싸인 블록이 동작합니다.</p>
 <p>‘만일 <code>&lt;참&gt;</code> 이라면’ 블록을 두 개 조립하는 것보다 판단 블록(<img src="images/icon/decision.png" style="zoom:50%;">)이 덜 필요하겠죠!</p>
-<h2 id="8-lt-참-gt-이-가-될-때까지-기다리기"><a href="#8-lt-참-gt-이-가-될-때까지-기다리기" class="headerlink" title="8. &lt;참&gt; 이(가) 될 때까지 기다리기"></a>8. <code>&lt;참&gt;</code> 이(가) 될 때까지 기다리기</h2><p><img src="images/block-flow-08.png" alt="block-flow"></p>
+<h2 id="9-lt-참-gt-이-가-될-때까지-기다리기"><a href="#9-lt-참-gt-이-가-될-때까지-기다리기" class="headerlink" title="9. &lt;참&gt; 이(가) 될 때까지 기다리기"></a>9. <code>&lt;참&gt;</code> 이(가) 될 때까지 기다리기</h2><p><img src="images/block-flow-09.png" alt="block-flow"></p>
 <p>판단 블록(<img src="images/icon/decision.png" style="zoom:50%;">)이 참이 될 때까지 기다렸다가, 참이 되면 다음 블록이 동작합니다.</p>
-<h2 id="9-모든-코드-멈추기"><a href="#9-모든-코드-멈추기" class="headerlink" title="9. [모든] 코드 멈추기"></a>9. <code>[모든]</code> 코드 멈추기</h2><p><img src="images/block-flow-09.png" alt="block-flow"></p>
+<h2 id="10-모든-코드-멈추기"><a href="#10-모든-코드-멈추기" class="headerlink" title="10. [모든] 코드 멈추기"></a>10. <code>[모든]</code> 코드 멈추기</h2><p><img src="images/block-flow-10.png" alt="block-flow"></p>
 <p>선택한 블록이 <strong>즉시</strong> 멈춥니다.</p>
 <p>목록 상자(<img src="images/icon/dropdown-flow.png" style="zoom:50%;">)를 클릭하면 멈출 블록을 선택할 수 있어요.</p>
 <ul>
@@ -620,18 +623,18 @@
 </li>
 </ul>
 <p>하지만 모든 코드를 멈추어도 작품을 중지하는 것은 아닙니다. 시작 블록은 여전히 작동하거든요.</p>
-<h2 id="10-처음부터-다시-실행하기"><a href="#10-처음부터-다시-실행하기" class="headerlink" title="10. 처음부터 다시 실행하기"></a>10. 처음부터 다시 실행하기</h2><p><img src="images/block-flow-10.png" alt="block-flow"></p>
+<h2 id="11-처음부터-다시-실행하기"><a href="#11-처음부터-다시-실행하기" class="headerlink" title="11. 처음부터 다시 실행하기"></a>11. 처음부터 다시 실행하기</h2><p><img src="images/block-flow-11.png" alt="block-flow"></p>
 <p>작품을 처음부터 다시 실행합니다.</p>
 <p>시작하기 버튼을 클릭했을 때와 똑같이 작품을 실행해요.</p>
-<h2 id="11-복제본이-처음-생성되었을-때"><a href="#11-복제본이-처음-생성되었을-때" class="headerlink" title="11. 복제본이 처음 생성되었을 때"></a>11. 복제본이 처음 생성되었을 때</h2><p><img src="images/block-flow-11.png" alt="block-flow"></p>
+<h2 id="12-복제본이-처음-생성되었을-때"><a href="#12-복제본이-처음-생성되었을-때" class="headerlink" title="12. 복제본이 처음 생성되었을 때"></a>12. 복제본이 처음 생성되었을 때</h2><p><img src="images/block-flow-12.png" alt="block-flow"></p>
 <p>오브젝트의 복제본이 새로 생성되었을 때, 해당 복제본에서만 이 블록에 조립된 블록이 동작합니다.</p>
 <p>다른 복제본과 원본 오브젝트는 이 시작 블록이 동작하지 않아요.</p>
-<h2 id="12-자신-의-복제본-만들기"><a href="#12-자신-의-복제본-만들기" class="headerlink" title="12. [자신] 의 복제본 만들기"></a>12. <code>[자신]</code> 의 복제본 만들기</h2><p><img src="images/block-flow-12.png" alt="block-flow"></p>
+<h2 id="13-자신-의-복제본-만들기"><a href="#13-자신-의-복제본-만들기" class="headerlink" title="13. [자신] 의 복제본 만들기"></a>13. <code>[자신]</code> 의 복제본 만들기</h2><p><img src="images/block-flow-13.png" alt="block-flow"></p>
 <p>오브젝트의 복제본을 생성합니다.</p>
 <p>목록 상자(<img src="images/icon/dropdown-flow.png" style="zoom:50%;">)를 클릭하면 자신(이 오브젝트) 또는 다른 오브젝트를 선택할 수 있어요.</p>
-<h2 id="13-이-복제본-삭제하기"><a href="#13-이-복제본-삭제하기" class="headerlink" title="13. 이 복제본 삭제하기"></a>13. 이 복제본 삭제하기</h2><p><img src="images/block-flow-13.png" alt="block-flow"></p>
+<h2 id="14-이-복제본-삭제하기"><a href="#14-이-복제본-삭제하기" class="headerlink" title="14. 이 복제본 삭제하기"></a>14. 이 복제본 삭제하기</h2><p><img src="images/block-flow-14.png" alt="block-flow"></p>
 <p>이 블록이 동작하는 해당 복제본을 삭제합니다.</p>
-<h2 id="14-모든-복제본-삭제하기"><a href="#14-모든-복제본-삭제하기" class="headerlink" title="14. 모든 복제본 삭제하기"></a>14. 모든 복제본 삭제하기</h2><p><img src="images/block-flow-14.png" alt="block-flow"></p>
+<h2 id="15-모든-복제본-삭제하기"><a href="#15-모든-복제본-삭제하기" class="headerlink" title="15. 모든 복제본 삭제하기"></a>15. 모든 복제본 삭제하기</h2><p><img src="images/block-flow-15.png" alt="block-flow"></p>
 <p>이 블록이 동작하는 오브젝트와 상관 없이, 작품에서 생성한 <strong>모든</strong> 복제본을 삭제합니다.</p>
 <p>복제본들이 가장 무서워하는 블록이에요.</p>
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 상단 메뉴
-date: 2023-11-28 15:11:00
+date: 2025-01-16 16:20:00
 type: userGuide
 category: "화면의 구성 요소"
 order: 3
@@ -9,7 +9,7 @@ order: 3
 
 
 
-![header](images/window/header.png)
+![header](images/header/header.png)
 
 
 
@@ -21,7 +21,7 @@ order: 3
 
 ## 엔트리 로고
 
-<img src="images/window/header-entry-tooltip.png" alt="header-entry-tooltip" style="zoom:50%;" />
+<img src="images/header/button-logo.png" alt="button-logo" style="zoom:50%;" />
 
 
 
@@ -33,7 +33,7 @@ order: 3
 
 ## 작품 제목
 
-<img src="images/window/header-title.png" alt="header-title" style="zoom:50%;" />
+<img src="images/header/title.png" alt="header-title" style="zoom:50%;" />
 
 
 
@@ -43,45 +43,9 @@ order: 3
 
 
 
-## 만들기 모드
-
-<img src="images/window/header-coding-mode.png" alt="header-coding-mode" style="zoom:50%;" />
-
-
-
-엔트리에서 작품을 만드는 방법을 선택합니다. 
-
-선택한 모드에 따라 블록 탭의 모양이 바뀌는데 블록을 조립해서 작품을 만들거나(블록 코딩), 텍스트를 직접 입력해 작품을 만드는(엔트리파이썬) 두 가지 모드가 있어요.
-
-
-
-#### ① 블록 코딩
-
-![main-block-mode](images/window/main-block-mode.png)
-
-
-
-기본적인 만들기 모드입니다.
-
-블록을 드래그해서 조립/결합하는 방식으로 코딩할 수 있어요.
-
-
-
-#### ② 엔트리파이썬
-
-![main-python](images/window/main-python.png)
-
-
-
-프로그래밍 언어 중 하나인 '파이썬(python)'과 같은 문법을 사용하는 엔트리의 텍스트 코딩 모드입니다.
-
-블록 꾸러미의 블록을 '텍스트 입력소'에 드래그하면 블록의 이름을 붙여넣거나 직접 입력하는 방식으로 코딩할 수 있어요.
-
-
-
 ## 새로 만들기/불러오기
 
-<img src="images/window/header-new-import.png" alt="header-new-import" style="zoom:50%;" />
+<img src="images/header/button-new.png" alt="button-new" style="zoom:50%;" />
 
 
 
@@ -140,8 +104,7 @@ order: 3
 
 ## 저장하기
 
-<img src="images/window/header-save.png" alt="header-save" style="zoom:50%;" />
-
+<img src="images/header/button-save.png" alt="button-save" style="zoom:50%;" />
 
 
 작품을 로그인한 계정의 '나의 작품'(서버) 또는 내 컴퓨터에 저장합니다.
@@ -156,7 +119,7 @@ order: 3
 
 ## 도움말
 
-<img src="images/window/header-help.png" alt="header-help" style="zoom:50%;" />
+<img src="images/header/button-help.png" alt="button-help" style="zoom:50%;" />
 
 
 
@@ -168,7 +131,7 @@ order: 3
 
 ## 출력하기
 
-<img src="images/window/header-print.png" alt="header-print" style="zoom:50%;" />
+<img src="images/header/button-print.png" alt="button-print" style="zoom:50%;" />
 
 
 
@@ -188,7 +151,7 @@ order: 3
 
 ## 되돌리기/되살리기
 
-<img src="images/window/header-undo-redo.png" alt="header-undo-redo" style="zoom:50%;" />
+<img src="images/header/button-undo-redo.png" alt="button-undo-redo" style="zoom:50%;" />
 
 
 
@@ -207,7 +170,7 @@ order: 3
 
 ## 기본형/교과형 선택
 
-<img src="images/window/header-make-mode.png" alt="header-make-mode" style="zoom:50%;" />
+<img src="images/header/button-mode.png" alt="button-mode" style="zoom:50%;" />
 
 
 
@@ -217,7 +180,7 @@ order: 3
 
 #### ① 기본형
 
-![header-edit-mode1](images/window/header-edit-mode1.png)
+![block](images/header/main-block.png)
 
 
 
@@ -227,7 +190,7 @@ order: 3
 
 #### ② 교과형
 
-![header-edit-mode2](images/window/header-edit-mode2.png)
+![block-pws](images/header/main-block-pws.png)
 
 
 
@@ -239,7 +202,7 @@ order: 3
 
 ## 로그인 메뉴
 
-<img src="images/window/header-user.png" alt="header-user" style="zoom:50%;" />
+<img src="images/header/button-user.png" alt="button-user" style="zoom:50%;" />
 
 
 
@@ -251,10 +214,44 @@ order: 3
 
 
 
+## 만들기 모드
+
+<img src="images/header/setting-block-ko.png" alt="setting-block-ko" style="zoom:33%;" />  <img src="images/header/setting-entrypython-ko.png" alt="setting-entrypython-ko" style="zoom:33%;" />
+
+
+엔트리에서 작품을 만드는 방법을 선택합니다. 
+
+선택한 모드에 따라 블록 탭의 모양이 바뀌는데 블록을 조립해서 작품을 만들거나(블록 코딩), 텍스트를 직접 입력해 작품을 만드는(엔트리파이썬) 두 가지 모드가 있어요.
+
+
+
+#### ① 블록 코딩
+
+![block-mode](images/header/main-block.png)
+
+
+
+기본적인 만들기 모드입니다.
+
+블록을 드래그해서 조립/결합하는 방식으로 코딩할 수 있어요.
+
+
+
+#### ② 엔트리파이썬
+
+![entrypython](images/header/main-entrypython.png)
+
+
+
+프로그래밍 언어 중 하나인 '파이썬(python)'과 같은 문법을 사용하는 엔트리의 텍스트 코딩 모드입니다.
+
+블록 꾸러미의 블록을 '텍스트 입력소'에 드래그하면 블록의 이름을 붙여넣거나 직접 입력하는 방식으로 코딩할 수 있어요.
+
+
+
 ## 언어 선택
 
-<img src="images/window/header-language.png" alt="header-language" style="zoom:50%;" />
-
+<img src="images/header/setting-block-ko.png" alt="setting-block-ko" style="zoom:33%;" />  <img src="images/header/setting-block-en.png" alt="setting-block-ko" style="zoom:33%;" />
 
 
 만들기 화면에서 표시되는 언어를 변경할 수 있습니다.

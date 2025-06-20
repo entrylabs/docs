@@ -76,12 +76,12 @@
         "image": "https://docs.playentry.org/images/logo.png",
         
         
-        "datePublished": "2025-01-24",
-        "dateCreated": "2025-01-24",
-        "dateModified": "2025-01-24",
+        "datePublished": "2025-06-20",
+        "dateCreated": "2025-06-20",
+        "dateModified": "2025-06-20",
         "url": "https://docs.playentry.org/guide/entry-hw/2024-07-03-entry_hw_web_connect.html",
         "description": "Entry Docs - 엔트리 개발 가이드&위키",
-        "wordCount": "3294",
+        "wordCount": "3960",
         "publisher": "Entrylabs",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -588,6 +588,19 @@
 <h3 id="Entry-hwLite-serial-handleConnectErrorInEngineRun"><a href="#Entry-hwLite-serial-handleConnectErrorInEngineRun" class="headerlink" title="Entry.hwLite.serial.handleConnectErrorInEngineRun"></a>Entry.hwLite.serial.handleConnectErrorInEngineRun</h3><p>연결중 기기가 멈추거나 화면이 멈추는 등, 강제종료가 필요한 상황에 사용하는 함수입니다.</p>
 <h3 id="Entry-hwLite-getConnectFailedMenu"><a href="#Entry-hwLite-getConnectFailedMenu" class="headerlink" title="Entry.hwLite.getConnectFailedMenu"></a>Entry.hwLite.getConnectFailedMenu</h3><p>연결실패화면을 출력해야 할 때 사용합니다.</p>
 <p><img src="/images/entry-hw/HwLite_failedMenu1.png" alt="HwLite_failedMenu1"></p>
+<br>
+
+<h2 id="커스텀-프롬프트-모달-사용하기"><a href="#커스텀-프롬프트-모달-사용하기" class="headerlink" title="커스텀 프롬프트 모달 사용하기"></a>커스텀 프롬프트 모달 사용하기</h2><p>기기를 연결하고 사용할때, 사용자로부터 입력값을 받아야 하는 경우가 있습니다.<br>하드웨어 웹연결에서는 커스텀 프롬프트 모달을 통해 기기연결전에 사용자로부터 입력값을 받아와 <code>Entry.hwLite.customPromptPayload</code>에 저장하고 언제든 읽어올 수 있습니다.</p>
+<h3 id="모듈클래스-파일에-설정값-추가하기"><a href="#모듈클래스-파일에-설정값-추가하기" class="headerlink" title="모듈클래스 파일에 설정값 추가하기"></a>모듈클래스 파일에 설정값 추가하기</h3><p>커스텀 프롬프트 모달을 사용하기 위해서는 모듈클래스.js 파일에 설정값을 추가해 주어야 합니다.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line">(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title class_">Entry</span>.<span class="property">ArduinoLite</span> = <span class="title function_">new</span> (<span class="keyword">class</span> <span class="title class_">ArduinoLite</span> &#123;</span><br><span class="line">        <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">id</span> = <span class="string">&#x27;010101&#x27;</span>; <span class="comment">// id는 6자리 모두 입력해야 합니다.</span></span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&#x27;ArduinoLite&#x27;</span>;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">title</span> = &#123;</span><br><span class="line">                <span class="attr">ko</span>: <span class="string">&#x27;핑퐁 G2&#x27;</span>,</span><br><span class="line">                <span class="attr">en</span>: <span class="string">&#x27;PingPong G2&#x27;</span>,</span><br><span class="line">            &#125;;</span><br><span class="line">            ...</span><br><span class="line">            <span class="comment">// INFO: 하드웨어 연결 전, 사용자에게 값을 받아올 커스텀 프롬프트 설정</span></span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">customPrompt</span> = &#123;</span><br><span class="line">                <span class="comment">// 모달의 상단 타이틀 문구</span></span><br><span class="line">                <span class="attr">title</span>: <span class="string">&#x27;그룹 번호 입력&#x27;</span>,</span><br><span class="line">                <span class="comment">// 모달의 중앙 콘텐츠 문구</span></span><br><span class="line">                <span class="attr">description</span>:</span><br><span class="line">                    <span class="string">&#x27;연결할 기기의 그룹 번호를 입력해 주세요.\n 별도로 지정하지 않았다면 00을 입력합니다.&#x27;</span>,</span><br><span class="line">                <span class="comment">// 기본값</span></span><br><span class="line">                <span class="attr">defaultValue</span>: <span class="string">&#x27;00&#x27;</span>,</span><br><span class="line">                <span class="comment">// 좌측 취소 버튼 문구</span></span><br><span class="line">                <span class="attr">negativeButtonText</span>: <span class="string">&#x27;취소&#x27;</span>,</span><br><span class="line">                <span class="comment">// 우측 확인 버튼 문구</span></span><br><span class="line">                <span class="attr">positiveButtonText</span>: <span class="string">&#x27;설정&#x27;</span>,</span><br><span class="line">            &#125;;</span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)();</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="title class_">Entry</span>.<span class="property">ArduinoLite</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>각 속성의 코드상 내용은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/entrylabs/entryjs/blob/bdd47a4d300a83d5ad70aba333e81eb61f088aba/types/index.d.ts#L217">customPropmt 타입 정의</a>에서 확인 할 수 있습니다.</p>
+<p>설정값을 추가한 뒤, 사용자가 모듈을 선택하고 나면 아래와 같은 프롬프트 창이 나타나게 됩니다.<br><img src="/images/entry-hw/HwLite_customPrompt1.png" alt="HwLite_customPrompt1"></p>
+<p>이 프롬프트에서 사용자에게 입력받은 값은 <code>Entry.hwLite.getCustomPromptPayload()</code>함수로 호출해서 불러올 수 있습니다.</p>
+<h3 id="entryjs-단독으로-테스트하기"><a href="#entryjs-단독으로-테스트하기" class="headerlink" title="entryjs 단독으로 테스트하기"></a>entryjs 단독으로 테스트하기</h3><p>이 프롬프트 모듈을 사용하기 위해선, entry-tool 라이브러리를 사용해야 합니다.<br>하지만 많은 하드웨어 개발사에서 entryjs만을 사용해 개발&amp;테스트를 진행하기에 좀 더 간단한 테스트방법이 있습니다.</p>
+<p>f12키로 브라우저 콘솔을 띄운 후, <code>Entry.hwLite.testCustomPromptPayload()</code> 함수를 호출하면 임시 프롬프트를 사용할 수 있습니다. 이 프롬프트에 입력한 값은 위와 동일하게 저장되어 <code>Entry.hwLite.getCustomPromptPayload()</code>함수로 호출할 수 있습니다.</p>
+<p><img src="/images/entry-hw/HwLite_customPrompt2.png" alt="HwLite_customPrompt2"></p>
+<p>실제 유저가 사용할때는, 모듈을 선택한 뒤 나타나는 창을 콘솔로 임의호출하는 것이기 때문에 <code>Entry.playground.addHardwareLiteModule(Entry.모듈클래스명)</code> 함수를 호출해 모듈설정을 완료한 후에 사용이 가능합니다.</p>
 <br>
 
 <h2 id="테스트하기"><a href="#테스트하기" class="headerlink" title="테스트하기"></a>테스트하기</h2><p>다음 2가지 방법으로 테스트하실수 있습니다.</p>

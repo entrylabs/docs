@@ -265,6 +265,68 @@ module.exports = Entry.ArduinoLite;
 
 <br>
 
+## 커스텀 프롬프트 모달 사용하기
+기기를 연결하고 사용할때, 사용자로부터 입력값을 받아야 하는 경우가 있습니다.
+하드웨어 웹연결에서는 커스텀 프롬프트 모달을 통해 기기연결전에 사용자로부터 입력값을 받아와 `Entry.hwLite.customPromptPayload`에 저장하고 언제든 읽어올 수 있습니다.
+
+### 모듈클래스 파일에 설정값 추가하기
+커스텀 프롬프트 모달을 사용하기 위해서는 모듈클래스.js 파일에 설정값을 추가해 주어야 합니다.
+
+``` javascript
+'use strict';
+
+(function () {
+    Entry.ArduinoLite = new (class ArduinoLite {
+        constructor() {
+            this.id = '010101'; // id는 6자리 모두 입력해야 합니다.
+            this.name = 'ArduinoLite';
+            this.title = {
+                ko: '핑퐁 G2',
+                en: 'PingPong G2',
+            };
+            ...
+            // INFO: 하드웨어 연결 전, 사용자에게 값을 받아올 커스텀 프롬프트 설정
+            this.customPrompt = {
+                // 모달의 상단 타이틀 문구
+                title: '그룹 번호 입력',
+                // 모달의 중앙 콘텐츠 문구
+                description:
+                    '연결할 기기의 그룹 번호를 입력해 주세요.\n 별도로 지정하지 않았다면 00을 입력합니다.',
+                // 기본값
+                defaultValue: '00',
+                // 좌측 취소 버튼 문구
+                negativeButtonText: '취소',
+                // 우측 확인 버튼 문구
+                positiveButtonText: '설정',
+            };
+            ...
+        }
+    })();
+})();
+
+module.exports = Entry.ArduinoLite;
+
+```
+
+각 속성의 코드상 내용은 [customPropmt 타입 정의](https://github.com/entrylabs/entryjs/blob/bdd47a4d300a83d5ad70aba333e81eb61f088aba/types/index.d.ts#L217)에서 확인 할 수 있습니다.
+
+설정값을 추가한 뒤, 사용자가 모듈을 선택하고 나면 아래와 같은 프롬프트 창이 나타나게 됩니다.
+![HwLite_customPrompt1](/images/entry-hw/HwLite_customPrompt1.png)
+
+이 프롬프트에서 사용자에게 입력받은 값은 `Entry.hwLite.getCustomPromptPayload()`함수로 호출해서 불러올 수 있습니다.
+
+### entryjs 단독으로 테스트하기
+이 프롬프트 모듈을 사용하기 위해선, entry-tool 라이브러리를 사용해야 합니다.
+하지만 많은 하드웨어 개발사에서 entryjs만을 사용해 개발&테스트를 진행하기에 좀 더 간단한 테스트방법이 있습니다.
+
+f12키로 브라우저 콘솔을 띄운 후, `Entry.hwLite.testCustomPromptPayload()` 함수를 호출하면 임시 프롬프트를 사용할 수 있습니다. 이 프롬프트에 입력한 값은 위와 동일하게 저장되어 `Entry.hwLite.getCustomPromptPayload()`함수로 호출할 수 있습니다.
+
+![HwLite_customPrompt2](/images/entry-hw/HwLite_customPrompt2.png)
+
+실제 유저가 사용할때는, 모듈을 선택한 뒤 나타나는 창을 콘솔로 임의호출하는 것이기 때문에 `Entry.playground.addHardwareLiteModule(Entry.모듈클래스명)` 함수를 호출해 모듈설정을 완료한 후에 사용이 가능합니다.
+
+<br>
+
 ## 테스트하기
 다음 2가지 방법으로 테스트하실수 있습니다.
 

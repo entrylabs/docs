@@ -2,7 +2,7 @@
     <%
         function makeList(category) {
         %>
-            <% type !== 'api' && site.pages.find({type: type, category: category}).sort('order').each(function (p) { %>
+            <% type !== 'api' && site.pages.find({type: type, category: category}).sort('order date source').each(function (p) { %>
                 <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
                 <% if (type === 'entryjs' || type === 'guide' || type==="userGuide") { %>
                     <%

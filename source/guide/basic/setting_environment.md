@@ -121,7 +121,7 @@ git clone https://github.com/[사용자명]/entryjs.git
 ---
 #### 브랜치 변경
 
-하드웨어 블록을 개발하는 경우 **`develop-hw`**라는 브랜치를 사용해야 합니다.  
+하드웨어 블록을 개발하는 경우 <strong>`develop-hw`</strong>라는 브랜치를 사용해야 합니다.  
 develop-hw 브랜치는 하드웨어 관련 PR 이 모여서, 배포전에 develop 에 merge 되는 용도로 사용 중입니다.  
 (**develop 브랜치는 엔트리 개발팀에서 이슈 처리를 하는 브랜치 입니다.**) 
 

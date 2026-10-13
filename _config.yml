@@ -83,6 +83,11 @@ markdown:
   smartLists: true
   smartypants: true
 
+# hexo-renderer-marked
+## 이미지 상대경로 앞에 root(/)를 붙이지 않음 (기본값 true면 user/ 하위 이미지 경로가 깨짐)
+marked:
+  prependRoot: false
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
